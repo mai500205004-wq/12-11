@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#ffdad4","on-surface-variant":"#e6bdb7","on-secondary-container":"#ffa58d","error":"#ffb4ab","surface-container-highest":"#343537","on-surface":"#e3e2e5","on-primary-container":"#5c0000","on-tertiary":"#31312c","inverse-on-surface":"#303033","surface-variant":"#343537","surface":"#121315","inverse-surface":"#e3e2e5","tertiary-fixed-dim":"#c9c6c0","outline":"#ad8882","on-error":"#690005","on-background":"#e3e2e5","on-tertiary-fixed-variant":"#474742","background":"#121315","on-tertiary-fixed":"#1c1c18","on-primary":"#690000","surface-bright":"#38393b","primary":"#ffb4a8","surface-dim":"#121315","outline-variant":"#5d403b","surface-container-lowest":"#0d0e10","on-secondary-fixed":"#3c0800","on-tertiary-container":"#2a2a25","primary-fixed-dim":"#ffb4a8","surface-container":"#1f2022","surface-tint":"#ffb4a8","secondary":"#ffb4a1","surface-container-high":"#292a2c","secondary-fixed":"#ffdbd2","inverse-primary":"#bf0904","on-secondary":"#611300","tertiary":"#c9c6c0","primary-container":"#ff5541","tertiary-container":"#92918b","on-primary-fixed":"#410000","tertiary-fixed":"#e5e2db","error-container":"#93000a","on-error-container":"#ffdad6","on-primary-fixed-variant":"#930000","secondary-fixed-dim":"#ffb4a1","surface-container-low":"#1b1c1e","on-secondary-fixed-variant":"#881f00","secondary-container":"#912100"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.25rem","margin":"2rem","space-xs":"0.25rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-lg":"3.5rem","space-md":"1rem","gutter-sm":"0.75rem","space-lg":"1.5rem","margin-sm":"1rem","gutter-lg":"2rem"},"fontFamily":{"body-sm":["Inter"],"headline-lg":["Playfair Display"],"headline-sm":["Inter"],"label-sm":["JetBrains Mono"],"label-lg":["Inter"],"body-lg":["Inter"],"display-md-mobile":["Playfair Display"],"code-timecode":["JetBrains Mono"],"headline-md":["Playfair Display"],"body-md":["Inter"],"label-md":["JetBrains Mono"],"display-md":["Playfair Display"],"display-lg":["Playfair Display"],"display-lg-mobile":["Playfair Display"]},"fontSize":{"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"display-md-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"code-timecode":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"display-md":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrAJ5JxpS8pCqVvXR9uCRPEPRgnXKA-OD1FY08i2r5NJeELl7cFloG7vRYatgUI3oTDjwE-0u4sSBbp05BAMVgeR0mWh7KzI-TQcYARSnIiIIjOKPhI8MNGXYl5vqpR_sxI45mrNAyGYK7XSY62WTLKmrt2ul3oGhiS8Nc1ec1P5Y2gFVE-ut_-TOMyRo4dXbkbfTN-QicxQ0pFUHl4M92xHDJn6r1I8rFtOPdqykWcgcw"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">FX2 // THE DESCENT</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">PROJECT 84: THE OBSIDIAN ARCHIVE</span></div><div class="hidden xl:flex items-center gap-space-xs ml-space-md px-space-sm py-space-xs bg-surface-container-low rounded"><span class="font-label-sm text-label-sm text-tertiary-container uppercase mr-space-xs">Z-AXIS</span><span class="font-label-sm text-label-sm text-on-surface px-space-xs py-0.5 rounded bg-surface-container">-01 LIGHT TABLE</span><span class="font-label-sm text-label-sm text-tertiary-container px-space-xs">-02 FRAMES</span><span class="font-label-sm text-label-sm text-tertiary-container px-space-xs">-03 FILM</span><span class="font-label-sm text-label-sm text-tertiary-container px-space-xs">-04 PAPER</span></div></div><div class="flex-1 max-w-xl mx-space-md hidden md:flex items-center bg-surface-container-low px-space-md py-space-xs rounded shadow-inner"><div class="flex items-center gap-space-xs text-on-surface-variant mr-space-sm"><span class="material-symbols-outlined text-primary text-base">adjust</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">APPLYING TO:</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">CONCEPT B / EMOTIONAL TRUTH</span></div><input class="flex-1 bg-transparent border-0 outline-none text-on-surface font-label-md text-label-md placeholder:text-tertiary-container" placeholder="EXECUTE SPATIAL PROMPT OR LATENT INTERPOLATION..." type="text"/><span class="font-code-timecode text-code-timecode text-tertiary-container text-xs">[SYM:98.4%]</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary uppercase">STABLE</span><span class="font-label-sm text-label-sm text-tertiary-container font-mono">14MS</span></div><div class="flex items-center gap-space-xs"><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-base">undo</span></button><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-base">redo</span></button></div><div class="px-space-sm py-space-xs bg-surface-container-low rounded font-label-sm text-label-sm text-tertiary font-mono">v4.2.1</div><button class="flex items-center gap-space-xs px-space-md py-space-xs bg-primary-container text-on-primary-container rounded font-label-lg text-label-lg uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors" type="button"><span class="material-symbols-outlined text-sm">center_focus_strong</span>CORE</button></div></div></header><main class="w-full pt-16 pb-20 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Spatial Stratum Telemetry & Breadcrumb HUD -->
+<section class="w-full px-gutter-lg py-space-md bg-surface-container-low shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<!-- Descent Elevation Level Indicator -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container rounded">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest">DESCENT HUD</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-space-sm text-tertiary font-label-md text-label-md">
+<span class="text-primary font-semibold">01 LIGHT TABLE</span>
+<span class="text-tertiary-container">/</span>
+<span class="hover:text-on-surface cursor-pointer transition-colors">02 FRAMES</span>
+<span class="text-tertiary-container">/</span>
+<span class="hover:text-on-surface cursor-pointer transition-colors">03 FILM</span>
+<span class="text-tertiary-container">/</span>
+<span class="hover:text-on-surface cursor-pointer transition-colors">04 PAPER</span>
+</div>
+</div>
+<!-- Real-time Synthesis & Spatial Coordinates Status -->
+<div class="flex items-center gap-space-lg">
+<div class="hidden sm:flex items-center gap-space-md text-tertiary font-label-sm text-label-sm">
+<span>LAT: <strong class="text-on-surface font-code-timecode text-code-timecode">-18.240°</strong></span>
+<span>DEPTH: <strong class="text-primary font-code-timecode text-code-timecode">00.00m (PLANE Z-0)</strong></span>
+<span>SMPTE: <strong class="text-on-surface font-code-timecode text-code-timecode">00:14:38:12</strong></span>
+</div>
+<div class="px-space-md py-space-xs bg-surface-container rounded shadow-inner flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">memory</span>
+<span class="font-label-sm text-label-sm text-on-surface tracking-wider">DUAL CORE AI: READY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contextual Target Bar -->
+<div class="w-full px-gutter-lg py-space-sm bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-space-md py-space-xs">
+<div class="flex items-center gap-space-sm overflow-hidden">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase">ACTIVE FOCUS</span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">CONCEPT 02: "THE ARCHITECTURE OF SILENCE" // EMOTIONAL TRUTH</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-label-sm text-label-sm text-tertiary uppercase hidden md:inline">PROMPT INJECTION:</span>
+<span class="font-code-timecode text-code-timecode text-primary-fixed-dim bg-surface-container-low px-space-sm py-0.5 rounded">MIX C-02 × C-04 [PRESERVE STILLNESS]</span>
+</div>
+</div>
+</div>
+<!-- DEPTH 01: DISCOVER — THE LIGHT TABLE (0m) -->
+<section class="relative w-full px-gutter-lg py-space-xl bg-surface-container-lowest overflow-hidden" id="depth-01">
+<!-- Faint Atmospheric Spatial Matrix Grid -->
+<div class="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="48" id="light-grid" patternunits="userSpaceOnUse" width="48">
+<circle cx="24" cy="24" fill="#e3e2e5" r="0.75"></circle>
+</pattern>
+</defs>
+<rect fill="url(#light-grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Depth Monolith Marker -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">filter_center_focus</span>
+<span>STRATUM 01 // LATENT SURVEY</span>
+</div>
+<h2 class="font-display-md text-display-md text-on-surface mt-space-xs">The Light Table</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-space-xs rounded bg-surface-container-low text-tertiary font-label-sm text-label-sm">DEPTH: 000.00m</span>
+<span class="px-space-sm py-space-xs rounded bg-surface-container text-on-surface font-label-sm text-label-sm">LENSES ENGAGED: 5/5</span>
+</div>
+</div>
+<!-- Bento Grid: Project Brief Core + Central Editorial Monolith -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-stretch">
+<!-- Brief Anchor Capsule (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-container-low rounded p-space-lg flex flex-col justify-between shadow-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">PROJECT MASTER DOSSIER</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">LEICA CINEMA</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">The Obsidian Horizon</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                A non-linear spatial film essay exploring architectural silence through 65mm monochromatic sensors, isolating human perception at the threshold of void.
+              </p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex justify-between items-center py-space-xs bg-surface-container px-space-sm rounded">
+<span class="font-label-sm text-label-sm text-tertiary">TARGET EMOTION</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Reverent Isolation</span>
+</div>
+<div class="flex justify-between items-center py-space-xs bg-surface-container px-space-sm rounded">
+<span class="font-label-sm text-label-sm text-tertiary">OPTICAL RATIO</span>
+<span class="font-label-sm text-label-sm text-primary font-code-timecode text-code-timecode">2.76:1 ULTRA PANAVISION</span>
+</div>
+<div class="flex justify-between items-center py-space-xs bg-surface-container px-space-sm rounded">
+<span class="font-label-sm text-label-sm text-tertiary">FORMAL CONSTRAINT</span>
+<span class="font-label-sm text-label-sm text-on-surface">Zero Dialogue in Act II</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md bg-surface-container-lowest p-space-sm rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">SYNTHESIS CONFIDENCE</span>
+<div class="flex items-center gap-space-xs">
+<div class="w-20 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[94%]"></div>
+</div>
+<span class="font-code-timecode text-code-timecode text-primary text-xs">94.8%</span>
+</div>
+</div>
+</div>
+<!-- Central Editorial Insight Light Monolith (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container rounded p-space-xl flex flex-col justify-between shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">flare</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">EDITORIAL INSIGHT CORE</span>
+</div>
+<span class="font-code-timecode text-code-timecode text-tertiary text-xs">FRAME-DISCOVERY // Z-0</span>
+</div>
+<div class="my-space-xl">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase block mb-space-sm">— ESSENCE FORMULA</span>
+<blockquote class="font-display-md text-display-md text-on-surface italic leading-snug">
+              “Silence is not the absence of sound, but the presence of acute perception.”
+            </blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-md max-w-2xl">
+              Spatial cinematography isolates structural acoustics. When ambient reverberation is reduced below 12dB, the retina begins to scan architectural mass for cadence, shifting narrative weight entirely onto material texture.
+            </p>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">AXIS: SENSORY RIGOR</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">POLARITY: INTELLECTUAL</span>
+</div>
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded hover:bg-primary transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">lock_open</span>
+              DEPLOY TO CANVASES
+            </button>
+</div>
+</div>
+</div>
+<!-- The 5 Tactile Creative Instruments (Lenses) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">CREATIVE INSTRUMENTS // 5 TACTILE LENSES</span>
+<span class="font-label-sm text-label-sm text-primary">SELECT TO INJECT LATENT PERTURBATION</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter-sm">
+<!-- Lens 01: Provocation -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-md rounded flex flex-col justify-between transition-all cursor-pointer group">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">view_in_ar</span>
+</span>
+<span class="font-label-sm text-label-sm text-tertiary">01</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Provocation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fractured prism that shatters surface assumptions and dissolves conventional framing.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between items-center text-tertiary font-label-sm text-label-sm">
+<span>DISRUPTION</span>
+<span class="text-primary font-mono">+84%</span>
+</div>
+</div>
+<!-- Lens 02: Analogy -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-md rounded flex flex-col justify-between transition-all cursor-pointer group">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-lg">grain</span>
+</span>
+<span class="font-label-sm text-label-sm text-tertiary">02</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Analogy</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Harmonic resonant filament connecting remote scientific and natural systems.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between items-center text-tertiary font-label-sm text-label-sm">
+<span>RESONANCE</span>
+<span class="text-secondary font-mono">1.618φ</span>
+</div>
+</div>
+<!-- Lens 03: Random -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-md rounded flex flex-col justify-between transition-all cursor-pointer group">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">bolt</span>
+</span>
+<span class="font-label-sm text-label-sm text-tertiary">03</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Random</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Stochastic celestial spark injecting quantum entropy into structural logic.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between items-center text-tertiary font-label-sm text-label-sm">
+<span>ENTROPY</span>
+<span class="text-on-surface font-mono">k=0.91</span>
+</div>
+</div>
+<!-- Lens 04: Opposite -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-md rounded flex flex-col justify-between transition-all cursor-pointer group">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-lg">swap_horiz</span>
+</span>
+<span class="font-label-sm text-label-sm text-tertiary">04</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Opposite</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inverted polarity monocle flipping positive physical mass into negative acoustic void.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between items-center text-tertiary font-label-sm text-label-sm">
+<span>POLARITY</span>
+<span class="text-primary font-mono">-180°</span>
+</div>
+</div>
+<!-- Lens 05: Constraint -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-md rounded flex flex-col justify-between transition-all cursor-pointer group">
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-tertiary group-hover:bg-surface-bright group-hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-lg">crop</span>
+</span>
+<span class="font-label-sm text-label-sm text-tertiary">05</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Constraint</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Geometric boundary cage forcing optical density through radical architectural limits.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between items-center text-tertiary font-label-sm text-label-sm">
+<span>LIMIT</span>
+<span class="text-tertiary font-mono">f/0.95</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DEPTH 02: INVENT — THE FRAMES (-120m) -->
+<section class="w-full px-gutter-lg py-space-xl bg-surface-container-low relative" id="depth-02">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Depth Monolith Marker -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">layers</span>
+<span>STRATUM 02 // SPATIAL ARCHITECTURE</span>
+</div>
+<h2 class="font-display-md text-display-md text-on-surface mt-space-xs">The Frames</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-space-xs rounded bg-surface-container text-tertiary font-label-sm text-label-sm">DEPTH: -120.00m</span>
+<span class="px-space-sm py-space-xs rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">SELECTED: CONCEPT 02</span>
+</div>
+</div>
+<!-- Floating Concepts Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg items-stretch">
+<!-- Concept 01: Chamber of Shadows -->
+<div class="bg-surface-container rounded p-space-lg flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">CONCEPT 01</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm">BRUTALISM</span>
+</div>
+<div class="h-44 w-full rounded overflow-hidden relative bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Monolithic concrete brutalist atrium bathed in high-contrast monochromatic sunlight with heavy angular shadows and film grain in Leica cinematographic monochrome." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALYktachG-Pnl9NtNsxRAUQdcLp71WucwmKhQFr86CJx4anT_jh1urjhqvfWRlF_IWhGbX3gI1Af_40skqCWWfZWbopJuJqyVNQ_EUDvsKiG5LuwKJaiqqkDGnlQ76Ol4fCUWsIETF4XzdiaVXwAKPpES60IG-1GCUXdxzjbOZ6FkPjHQYzpwSdlv5dYnNMoKWA-B0vo1KdUqfOs1yoL62F111iNyTuDpQfQTxSSLi"/>
+<div class="absolute bottom-2 left-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/80 text-primary font-code-timecode text-xs">
+                NODE_A // -120m
+              </div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Chamber of Shadows</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Raw architectural concrete blocks trapping ambient dusk. The subject navigates darkness as an impenetrable physical mass rather than a void.
+              </p>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">AFFINITY: 71.4%</span>
+<button class="px-space-sm py-space-xs rounded bg-surface-container-highest text-on-surface hover:text-primary font-label-sm text-label-sm uppercase transition-colors">INSPECT</button>
+</div>
+</div>
+<!-- Concept 02: The Architecture of Silence (ACTIVE & ILLUMINATED) -->
+<div class="bg-surface-container-high rounded p-space-lg flex flex-col justify-between shadow-2xl relative">
+<!-- Active Laser Glow Tag -->
+<div class="absolute -top-3 left-6 px-space-sm py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm tracking-wider font-semibold shadow-md">
+            ACTIVE TARGET // PRIMARY TRAJECTORY
+          </div>
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">CONCEPT 02</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">EMOTIONAL TRUTH</span>
+</div>
+<div class="h-44 w-full rounded overflow-hidden relative bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="A silent minimalist pavilion overlooking a dead-calm obsidian lake under heavy overcast skies shot on 65mm celluloid with stark optical clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIWy328WL_fU_Zn1YM6MllR4G5hNW-z1hokZc7Cl-R8CYF8ahTwATIa3mCTEJDGCHqeScG9EC2sUY4MC2PTJXZqUxWvzgHwI2n5uPNT_Hzi2Y_jubYlVUCkiSpWx9tqYFXJVks1C5qI3fkgsQIGUn2bRTORGDuAFL2HBHvmZquRWDVoC1n_nKISXyWLiTZJl5bcsnAAVC0pz3YKtVWJULBviz-jOb5X6ZQIBQlG-Y_"/>
+<div class="absolute bottom-2 left-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/80 text-primary font-code-timecode text-xs">
+                NODE_B // TARGET
+              </div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">The Architecture of Silence</h3>
+<p class="font-body-md text-body-md text-on-surface mt-space-xs">
+                Light as acoustic insulation. The cinematic lens captures micro-reflections across polished obsidian stone, evoking profound introspective pause.
+              </p>
+</div>
+<!-- Deep DNA Attributes Grid -->
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-lowest p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">CORE PARADOX</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Deafening Stillness</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">VISUAL METAPHOR</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Obsidian Plane</span>
+</div>
+<div class="flex flex-col mt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">BRAND ROLE</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">The Silent Observer</span>
+</div>
+<div class="flex flex-col mt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">FEASIBILITY</span>
+<span class="font-code-timecode text-code-timecode text-primary">HIGH // 98.2%</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-code-timecode text-code-timecode text-primary text-xs">STATUS: SYNTHESIZED</span>
+<button class="px-space-md py-space-xs rounded bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md font-semibold transition-colors">
+              EVOLVE IN FILM →
+            </button>
+</div>
+</div>
+<!-- Concept 03: Light Velocity -->
+<div class="bg-surface-container rounded p-space-lg flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">CONCEPT 03</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm">KINEMATIC PURITY</span>
+</div>
+<div class="h-44 w-full rounded overflow-hidden relative bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="High-speed kinetic light trails slashing across a dark reflective void with intense optical streak effects and hyper-refined cinematic grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_D08goyi-6JilGmcl-Prl8HWA9TCn3X8JV5xHbq9SJq2sVkxgMJsnL2hoT-DDMIQAHsdQWTpcF75AOpknL12V2LZ4zSfx3TDLNe9hj1R25qgWVHJLDvlmwtGoTNVpT5KeD-pT823g5VT4rGO1ctEX9WkPl__i_vutlhYo5OjfBabywxQDx62YXhwZ-0FzGx7kjv_zfK2tluQMerlHEwIG6KNA1HIr7mcsv0xKZnO2"/>
+<div class="absolute bottom-2 left-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/80 text-primary font-code-timecode text-xs">
+                NODE_C // -120m
+              </div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Light Velocity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Hyper-accelerated photonic streaks crossing still subterranean spaces, contrasting absolute inertia with instantaneous light transmission.
+              </p>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">AFFINITY: 63.8%</span>
+<button class="px-space-sm py-space-xs rounded bg-surface-container-highest text-on-surface hover:text-primary font-label-sm text-label-sm uppercase transition-colors">INSPECT</button>
+</div>
+</div>
+</div>
+<!-- Spatial DNA Vector Inspector Drawer Bar -->
+<div class="bg-surface-container p-space-md rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-inner">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary text-xl">share</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">DNA RELATIONSHIP VECTORS</span>
+<span class="font-label-md text-label-md text-on-surface">Proximity Link: Concept 02 × Concept 03 contains 88% harmonic resonance for ACT III crossover.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-sm py-space-xs rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm uppercase hover:text-on-surface transition-colors">VIEW LATENT GRAPH</button>
+<button class="px-space-md py-space-xs rounded bg-surface-container-high text-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors">FUSE CHROMOSOMES</button>
+</div>
+</div>
+</div>
+</section>
+<!-- DEPTH 03: EVOLVE — THE FILM (-240m) -->
+<section class="w-full px-gutter-lg py-space-xl bg-surface-container relative" id="depth-03">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Depth Monolith Marker -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">movie</span>
+<span>STRATUM 03 // CELLULOID MUTATION</span>
+</div>
+<h2 class="font-display-md text-display-md text-on-surface mt-space-xs">The Film Console</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-space-xs rounded bg-surface-container-low text-tertiary font-label-sm text-label-sm">DEPTH: -240.00m</span>
+<span class="px-space-sm py-space-xs rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm">BRANCH: v2.4-STABLE</span>
+</div>
+</div>
+<!-- Celluloid Split-Frame Strip & Machine Console Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Physical Filmstrip Preview Rack (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded p-space-lg flex flex-col gap-space-lg shadow-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">science</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">CELLULOID RECOMBINATION LAB</span>
+</div>
+<span class="font-code-timecode text-code-timecode text-primary text-xs">MUTATION ENGINE ACTIVE</span>
+</div>
+<!-- Celluloid Filmstrip Visual Representation -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-sm">
+<!-- Film Sprocket Top Line -->
+<div class="flex justify-between items-center px-space-xs opacity-40">
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+</div>
+<!-- Frames Split Comparison -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Frame A: Parent Concept 02 -->
+<div class="relative bg-surface-container-low rounded overflow-hidden">
+<img class="w-full h-48 object-cover" data-alt="Monochrome architectural study of light hitting matte black textured surface with smooth gradients and heavy 65mm celluloid grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTxdFs2jPzUlkP5bc9zSU6RMFooZsjwbnYcmdRv_8iZGukeBSDe2tPZqtZIPL-oEGxA09Lzp7rTCmPJUiQ-321B0G9mee35BXqSYxAEXhkxT3PycLOut7uk9LvKthQAGuBJLn6OZKSWPXuLyBfwp559BYtHMgXi0w_1xgeamUxU_XxpDkWQw4bbP_-U8NdQ9eEAQ0By0qsAi4OzIc_Pk2Yo7a86ydPLUKEI2BF4rnc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/80 text-tertiary font-label-sm text-label-sm">
+                  PARENT: CONCEPT 02
+                </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center text-xs font-code-timecode">
+<span class="text-on-surface">STILLNESS TRAIT</span>
+<span class="text-primary">[LOCKED]</span>
+</div>
+</div>
+<!-- Frame B: Evolved Hybrid Mutation -->
+<div class="relative bg-surface-container-low rounded overflow-hidden">
+<img class="w-full h-48 object-cover" data-alt="High-contrast motion blur of light tearing through a silent dark monolithic hall with atmospheric fog and subtle warm red rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqt5rKGVZ5DFSGSOLGcsRIkuhg27YF1nPpEIwfcknJsylD8D-TApuhqGTuIWYd-r3dzppU1fUyBIfmVXkqa6vJ4Naav570PJBfLG1ccEH9GvdlIrmDlsfaHkcCJ4T2d6zq2X84SZYMTSWyzjfBxOZuoc-_xKcuuBF_CdAN9Kjio8HphZl39zzM7MZPDJWA9RCfN0HlWnm3qXWnIltAXHYBLl_gi8FJfkUBbptMx6qg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">
+                  EVOLVED HYBRID: V2.4
+                </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center text-xs font-code-timecode">
+<span class="text-on-surface">C-02 × C-03 HYBRID</span>
+<span class="text-secondary">[92% FIT]</span>
+</div>
+</div>
+</div>
+<!-- Film Sprocket Bottom Line -->
+<div class="flex justify-between items-center px-space-xs opacity-40">
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+<div class="w-3 h-2 bg-on-surface rounded-xs"></div>
+</div>
+</div>
+<!-- Chromosome Lineage Badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase mr-space-xs">ACTIVE GENES:</span>
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-primary font-label-sm text-label-sm">CHROMO-02: ACOUSTIC VOID</span>
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-secondary font-label-sm text-label-sm">CHROMO-03: KINEMATIC STREAK</span>
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-tertiary font-label-sm text-label-sm">LENS: f/0.95 NOCTILUX</span>
+</div>
+</div>
+<!-- Physical Dials & Parameter Control Rack (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-low rounded p-space-lg flex flex-col justify-between shadow-xl">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">TACTILE PARAMETER CONSOLE</span>
+<span class="font-code-timecode text-code-timecode text-primary text-xs">CALIBRATED</span>
+</div>
+<!-- Dial 01: Radicalism -->
+<div class="bg-surface-container p-space-md rounded flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<!-- Machined Dial SVG Graphic -->
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center relative shadow-inner">
+<svg class="w-10 h-10 -rotate-90" viewbox="0 0 36 36">
+<circle class="stroke-surface-container-highest" cx="18" cy="18" fill="none" r="14" stroke-width="3"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="14" stroke-dasharray="88" stroke-dashoffset="19" stroke-width="3"></circle>
+</svg>
+<div class="absolute w-1 h-3 bg-primary top-1 rounded-full"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Radicalism</span>
+<span class="font-body-sm text-body-sm text-tertiary">Semantic deviation index</span>
+</div>
+</div>
+<span class="font-code-timecode text-code-timecode text-primary text-lg">78%</span>
+</div>
+<!-- Dial 02: Brand Fit -->
+<div class="bg-surface-container p-space-md rounded flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<!-- Machined Dial SVG Graphic -->
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center relative shadow-inner">
+<svg class="w-10 h-10 -rotate-90" viewbox="0 0 36 36">
+<circle class="stroke-surface-container-highest" cx="18" cy="18" fill="none" r="14" stroke-width="3"></circle>
+<circle class="stroke-secondary" cx="18" cy="18" fill="none" r="14" stroke-dasharray="88" stroke-dashoffset="7" stroke-width="3"></circle>
+</svg>
+<div class="absolute w-1 h-3 bg-secondary top-1 rounded-full"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Brand Fit</span>
+<span class="font-body-sm text-body-sm text-tertiary">Leica Cinema heritage integrity</span>
+</div>
+</div>
+<span class="font-code-timecode text-code-timecode text-secondary text-lg">92%</span>
+</div>
+<!-- Dial 03: Emotional Intensity -->
+<div class="bg-surface-container p-space-md rounded flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<!-- Machined Dial SVG Graphic -->
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center relative shadow-inner">
+<svg class="w-10 h-10 -rotate-90" viewbox="0 0 36 36">
+<circle class="stroke-surface-container-highest" cx="18" cy="18" fill="none" r="14" stroke-width="3"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="14" stroke-dasharray="88" stroke-dashoffset="13" stroke-width="3"></circle>
+</svg>
+<div class="absolute w-1 h-3 bg-primary top-1 rounded-full"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Emotional Intensity</span>
+<span class="font-body-sm text-body-sm text-tertiary">Affective resonance pull</span>
+</div>
+</div>
+<span class="font-code-timecode text-code-timecode text-primary text-lg">85%</span>
+</div>
+</div>
+<!-- Evolutionary Branch Tree Navigator -->
+<div class="mt-space-lg pt-space-md bg-surface-container-lowest p-space-sm rounded flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary">
+<span>ROOT v1.0</span>
+<span>→</span>
+<span>v2.0</span>
+<span>→</span>
+<span class="text-primary font-bold">v2.4-STABLE</span>
+</div>
+<button class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface hover:text-primary font-label-sm text-label-sm uppercase transition-colors">FORK BRANCH</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DEPTH 04: PRODUCE — THE PAPER (-360m) -->
+<section class="w-full px-gutter-lg py-space-xl bg-surface-container-low relative" id="depth-04">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Depth Monolith Marker -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">description</span>
+<span>STRATUM 04 // MASTER EXECUTION DRAFT</span>
+</div>
+<h2 class="font-display-md text-display-md text-on-surface mt-space-xs">The Paper</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-space-xs rounded bg-surface-container text-tertiary font-label-sm text-label-sm">DEPTH: -360.00m</span>
+<span class="px-space-sm py-space-xs rounded bg-surface-container text-on-surface font-label-sm text-label-sm">AVID XML READY</span>
+</div>
+</div>
+<!-- Tactile Master Production Script Sheet -->
+<div class="bg-surface-container-lowest rounded p-space-lg sm:p-space-xl shadow-2xl flex flex-col gap-space-lg relative">
+<!-- Paper Top Metadata Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">PRODUCTION SHOOTING SCRIPT // DRAFT 04.2</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">SCENE 04: THE THRESHOLD OF VISION</h3>
+<span class="font-label-md text-label-md text-tertiary">EXT. DUSK — ARCHITECTURAL VOID [LATENT ELEVATION -360m]</span>
+</div>
+<!-- Export Suite Dials -->
+<div class="flex items-center gap-space-xs self-start sm:self-auto">
+<button class="px-space-sm py-space-xs rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase transition-colors">PDF EXPORT</button>
+<button class="px-space-sm py-space-xs rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase transition-colors">FINAL DRAFT (.FDX)</button>
+<button class="px-space-md py-space-xs rounded bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-semibold hover:bg-primary transition-colors">DISPATCH TO CREW</button>
+</div>
+</div>
+<!-- Script Technical Segment Blocks -->
+<div class="flex flex-col gap-space-md">
+<!-- Shot Segment 01 -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col md:flex-row items-start gap-space-md">
+<!-- Timecode & Camera Marker -->
+<div class="md:w-48 shrink-0 flex flex-col gap-space-xs">
+<span class="font-code-timecode text-code-timecode text-primary">00:00:00 - 00:00:06</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase">SHOT 04-A // WIDE</span>
+<span class="font-label-sm text-label-sm text-tertiary">LEICA NOCTILUX 50MM @ T0.95</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm w-fit mt-space-xs">BEAT: STATIC TENSION</span>
+</div>
+<!-- Creative Script Columns -->
+<div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">VISUAL &amp; CAMERA LANGUAGE</span>
+<p class="font-body-md text-body-md text-on-surface mt-space-xs">
+                  Extreme wide perspective of the black basalt pavilion. The camera remains mechanically inert on a fluid tripod head. The mirror pool surface reflects no ripple. Zero camera pan.
+                </p>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">VOICEOVER / DIALOGUE</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic mt-space-xs">
+                  (V.O. - Muffled, intimate) “When the world stops transmitting, the eye becomes an instrument of excavation.”
+                </p>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">ACOUSTIC &amp; SOUND DESIGN</span>
+<p class="font-body-md text-body-md text-tertiary mt-space-xs">
+                  Absolute sub-bass room tone (-32dB at 28Hz). No Foley footsteps. Distant dry wind attenuated entirely past 400Hz.
+                </p>
+</div>
+</div>
+</div>
+<!-- Shot Segment 02 -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col md:flex-row items-start gap-space-md">
+<!-- Timecode & Camera Marker -->
+<div class="md:w-48 shrink-0 flex flex-col gap-space-xs">
+<span class="font-code-timecode text-code-timecode text-primary">00:00:06 - 00:00:14</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase">SHOT 04-B // MACRO TRACK</span>
+<span class="font-label-sm text-label-sm text-tertiary">LEICA SUMMILUX 35MM MACRO</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm w-fit mt-space-xs">BEAT: THE REVELATION</span>
+</div>
+<!-- Creative Script Columns -->
+<div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">VISUAL &amp; CAMERA LANGUAGE</span>
+<p class="font-body-md text-body-md text-on-surface mt-space-xs">
+                  Slow motorized dolly tracking right at 0.05m/sec across the obsidian boundary stone. A razor filament of warm tungsten light sweeps across the subject's pupil.
+                </p>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">VOICEOVER / DIALOGUE</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic mt-space-xs">
+                  (SILENCE. Breathing pulse barely perceived through lavalier condenser.)
+                </p>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">ACOUSTIC &amp; SOUND DESIGN</span>
+<p class="font-body-md text-body-md text-tertiary mt-space-xs">
+                  Resonant bow on titanium bar, swelling gently over 8 seconds. Sharp cut on the final optical flash.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Director's Annotations & Telemetry Note -->
+<div class="bg-surface-container p-space-md rounded flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">edit_note</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">DIRECTOR'S TAC NOTE</span>
+<span class="font-body-sm text-body-sm text-on-surface">Ensure shutter angle is locked precisely to 172.8° to eliminate artificial LED refresh flutter on the black stone.</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-mono shrink-0">AUTHENTICATED // AUTEUR OS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Depth Dock & Component System Inspector -->
+<section class="w-full px-gutter-lg py-space-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">SPECIFICATION &amp; STATE HARNESS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Creative Operating System State Standards</h3>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded">
+<button class="px-space-sm py-space-xs font-label-sm text-label-sm rounded bg-surface-container text-on-surface" onclick="switchState('all')">ALL STATES</button>
+<button class="px-space-sm py-space-xs font-label-sm text-label-sm rounded text-tertiary hover:text-on-surface" onclick="switchState('active')">ACTIVE</button>
+<button class="px-space-sm py-space-xs font-label-sm text-label-sm rounded text-tertiary hover:text-on-surface" onclick="switchState('processing')">PROCESSING</button>
+<button class="px-space-sm py-space-xs font-label-sm text-label-sm rounded text-tertiary hover:text-on-surface" onclick="switchState('alert')">ALERT</button>
+</div>
+</div>
+<!-- State Demonstration Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-sm">
+<!-- Default State -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col justify-between gap-space-md">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">STATE: DEFAULT</span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Standard resting smoked glass field with low-contrast neutral filament.</p>
+<button class="w-full py-space-xs bg-surface-container text-on-surface rounded font-label-sm text-label-sm uppercase hover:bg-surface-container-high transition-colors">RESTING BUTTON</button>
+</div>
+<!-- Active Focused State -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between gap-space-md shadow-lg">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">STATE: ACTIVE</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">High-contrast razor edge illuminated by Cinematic Red cue indicator.</p>
+<button class="w-full py-space-xs bg-primary-container text-on-primary-container rounded font-label-sm text-label-sm uppercase font-semibold hover:bg-primary transition-colors">ACTIVE TARGET</button>
+</div>
+<!-- Processing State -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col justify-between gap-space-md">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase">STATE: PROCESSING</span>
+<span class="material-symbols-outlined text-secondary text-sm animate-spin">sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dual Core neural interpolation calculating latent spatial tensors.</p>
+<div class="w-full py-space-xs bg-surface-container text-secondary text-center rounded font-label-sm text-label-sm uppercase">INTERPOLATING 14MS</div>
+</div>
+<!-- Alert / Collision State -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col justify-between gap-space-md">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-error uppercase font-semibold">STATE: ALERT</span>
+<span class="material-symbols-outlined text-error text-sm">warning</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Acoustic constraint collision: Dialogue detected in protected Act II.</p>
+<button class="w-full py-space-xs bg-error-container text-on-error-container rounded font-label-sm text-label-sm uppercase font-semibold">RESOLVE CLASH</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript Controller -->
+<script>
+    function switchState(stateName) {
+      console.log('Switched spatial OS inspect state to:', stateName);
+    }
+  </script>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.7)]"><div class="h-20 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">SPATIAL DESCENT CONTROLLER</span><span class="font-code-timecode text-code-timecode text-primary">DOLLY: 04.28m // LAT: -18.24°</span></div><div class="hidden sm:flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary font-mono"><span class="px-space-xs py-0.5 bg-surface-container rounded">X: 1042.88</span><span class="px-space-xs py-0.5 bg-surface-container rounded">Y: -840.12</span><span class="px-space-xs py-0.5 bg-surface-container rounded">Z: -03.00</span></div></div><nav class="flex items-center bg-surface-container-low p-space-xs rounded gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded shadow-[0_0_12px_rgba(255,85,65,0.35)]"><a aria-current="page" class="px-space-lg py-space-xs tracking-wider uppercase transition-all bg-primary-container text-on-primary-container font-semibold rounded shadow-[0_0_12px_rgba(255,85,65,0.35)]" data-path="discover" href="#">DISCOVER</a><a class="px-space-lg py-space-xs font-label-md text-label-md tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-all" data-path="invent" href="#">INVENT</a><a class="px-space-lg py-space-xs font-label-md text-label-md tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-all" data-path="evolve" href="#">EVOLVE</a><a class="px-space-lg py-space-xs font-label-md text-label-md tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-all" data-path="produce" href="#">PRODUCE</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-lg">grain</span></button><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-lg">foggy</span></button><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-lg">hdr_auto</span></button></div><div class="h-6 w-px bg-surface-container-high"></div><span class="font-label-sm text-label-sm text-tertiary tracking-widest uppercase">AMBIENT: OBSIDIAN VOID</span></div></div></footer></body></html>

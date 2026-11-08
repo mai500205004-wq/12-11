@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #090a0c;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Calibrated Haute Horlogerie Motion Curves */
+    :root {
+      --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-satin: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    @keyframes breatheGlow {
+      0%, 100% {
+        box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.9), 0 0 16px -4px rgba(255, 85, 65, 0.10);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+      50% {
+        box-shadow: 0 28px 65px -12px rgba(0, 0, 0, 0.96), 0 0 32px -2px rgba(255, 85, 65, 0.24);
+        border-color: rgba(255, 180, 168, 0.24);
+      }
+    }
+
+    @keyframes ambientAuraPulse {
+      0%, 100% {
+        opacity: 0.65;
+        transform: translate(-50%, 0) scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1.08);
+      }
+    }
+
+    @keyframes ambientDriftAmber {
+      0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.95);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.12);
+      }
+    }
+
+    .ambient-glow-primary {
+      animation: ambientAuraPulse 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+    }
+
+    .ambient-glow-secondary {
+      animation: ambientDriftAmber 12s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+    }
+
+    .card-breathing {
+      animation: breatheGlow 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+    }
+
+    /* Silky Satin Pill Transitions */
+    .lens-tab {
+      transition: background-color 700ms var(--ease-luxury),
+                  color 700ms var(--ease-luxury),
+                  border-color 700ms var(--ease-luxury),
+                  box-shadow 700ms var(--ease-luxury),
+                  transform 700ms var(--ease-luxury);
+      will-change: transform, box-shadow, border-color, background-color;
+    }
+
+    .lens-active {
+      background-color: rgba(255, 255, 255, 0.08) !important;
+      color: #f2f1f4 !important;
+      border-color: rgba(255, 180, 168, 0.45) !important;
+      box-shadow: 0 0 24px -3px rgba(242, 56, 39, 0.35) !important;
+      transform: scale(1.02);
+    }
+
+    .shimmer-layer {
+      background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.08) 50%, transparent 80%);
+      transform: translateX(-100%);
+      transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .shimmer-layer {
+      transform: translateX(100%);
+    }
+
+    /* Content Swap Kinetics */
+    .content-transition {
+      transition: opacity 650ms var(--ease-luxury),
+                  transform 650ms var(--ease-luxury),
+                  filter 650ms var(--ease-luxury);
+      will-change: opacity, transform, filter;
+    }
+    .content-fade-out {
+      opacity: 0;
+      transform: translateY(6px);
+      filter: blur(3px);
+    }
+
+    .telemetry-meta-transition {
+      transition: opacity 650ms var(--ease-luxury), transform 650ms var(--ease-luxury);
+    }
+
+    /* CTA Rim Flare Dynamics */
+    .cta-container {
+      transition: transform 700ms var(--ease-luxury), box-shadow 800ms var(--ease-luxury);
+    }
+    .cta-glow-rim {
+      transition: opacity 800ms var(--ease-luxury);
+    }
+    .cta-inner {
+      transition: background-color 800ms var(--ease-luxury);
+    }
+
+    /* Cinematic Parallax Container */
+    .parallax-viewport {
+      perspective: 1000px;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+    .parallax-img-canvas {
+      will-change: transform;
+      transform: translate3d(0, 0, 0) scale(1.15);
+      transform-origin: center center;
+    }
+
+    /* Modal Kinetics */
+    #lens-modal-overlay {
+      transition: opacity 600ms var(--ease-luxury), visibility 600ms var(--ease-luxury);
+    }
+    #lens-modal-sheet {
+      transition: transform 700ms var(--ease-luxury), opacity 700ms var(--ease-luxury);
+    }
+
+    /* Matrix Lens Interactive Switching */
+    .matrix-tab-btn {
+      transition: all 450ms var(--ease-luxury);
+      position: relative;
+    }
+    .matrix-tab-btn.active {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border-color: rgba(255, 180, 168, 0.45);
+      box-shadow: 0 0 20px -3px rgba(255, 85, 65, 0.28);
+      transform: scale(1.02);
+    }
+    .matrix-fade-node {
+      transition: opacity 350ms var(--ease-luxury), transform 350ms var(--ease-luxury);
+      will-change: opacity, transform;
+    }
+    .matrix-fade-out {
+      opacity: 0 !important;
+      transform: translateY(5px) scale(0.98);
+    }
+    .matrix-metric-bar {
+      transition: width 600ms var(--ease-luxury);
+      will-change: width;
+    }
+  </style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Geist:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;family=Syne:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#090a0c",
+            "surface-low": "#111215",
+            "surface-card": "#15161a",
+            primary: "#ffb4a8",
+            "primary-container": "#ff5541",
+            secondary: "#ffb59a",
+            "secondary-amber": "#ff9254",
+            "on-surface": "#f2f1f4",
+            "on-surface-subtle": "#8f9098",
+            "on-surface-muted": "#565860",
+            border: "rgba(255, 255, 255, 0.06)",
+            "border-glow": "rgba(255, 85, 65, 0.25)"
+          },
+          fontFamily: {
+            serif: ["'Cormorant Garamond'", "serif"],
+            headline: ["Syne", "sans-serif"],
+            body: ["Geist", "sans-serif"],
+            mono: ["'JetBrains Mono'", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-[#090a0c] font-body text-on-surface antialiased selection:bg-primary-container/30">
+<!-- Subtle Atmospheric Noir Glows with Meditative Whisper-Quiet Motion -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="ambient-glow-primary absolute -top-32 left-1/2 -translate-x-1/2 w-[460px] h-[340px] bg-gradient-to-b from-[#ff5541]/12 via-[#ff9254]/5 to-transparent rounded-full blur-[110px] will-change-transform"></div><div class="absolute top-[28%] left-1/2 -translate-x-1/2 w-80 h-48 bg-[#ff5541]/5 rounded-full blur-[90px]"></div><div class="ambient-glow-secondary absolute top-[48%] -right-28 w-80 h-80 bg-[#cd4700]/7 rounded-full blur-[120px] will-change-transform"></div><div class="ambient-glow-primary absolute bottom-16 -left-20 w-72 h-72 bg-[#ff5541]/6 rounded-full blur-[100px] will-change-transform"></div></div>
+<!-- Ultra-Minimalist Top Bar -->
+<header class="fixed top-0 w-full z-40 pt-safe bg-[#090a0c]/70 backdrop-blur-2xl border-b border-white/[0.04] transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<div class="h-16 px-6 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline tracking-[0.22em] text-sm text-on-surface font-semibold">FX2</span>
+<span class="w-[1px] h-3 bg-white/10"></span>
+<span class="font-mono text-[10px] tracking-[0.25em] text-on-surface-subtle uppercase">DR KAIF</span>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Settings" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-subtle hover:text-on-surface transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<span class="material-symbols-outlined text-[17px] font-light">tune</span>
+</button>
+<div class="w-7 h-7 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-on-surface-subtle text-[11px] font-mono">
+          K
+        </div>
+</div>
+</div>
+</header>
+<!-- Main Scroll View -->
+<main class="relative z-10 w-full min-h-screen pt-20 pb-28 flex flex-col"><div class="flex flex-col w-full text-on-surface px-margin-mobile gap-space-lg select-none pb-8">
+<!-- Status & Engine Meta Header -->
+<div class="flex flex-col gap-space-xs pt-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container shadow-sm"></span>
+<span class="font-label-xs text-primary tracking-[0.28em] uppercase">FX2 // DR KAIF — EVOLUTION ENGINE</span>
+</div>
+<span class="font-label-xs text-secondary px-2 py-0.5 rounded bg-surface-container-high font-medium">GEN 03 LIVE</span>
+</div>
+<h1 class="font-headline-lg-mobile text-on-surface tracking-tight uppercase mt-1">
+      EVOLUTION MATRIX
+    </h1>
+<div class="flex items-center gap-2 text-secondary font-label-md">
+<span class="material-symbols-outlined text-[15px] text-primary-container">cyclone</span>
+<span class="tracking-wider">STATUS: 3 VECTORS EVOLVING // CONVERGENCE INDEX 96.8%</span>
+</div>
+<p class="font-body-md text-on-surface-variant/80 mt-1">
+      Algorithmic synthesis mutating tactical concepts into scalable enterprise IP and flagship assets.
+    </p>
+</div>
+<!-- Vector Selector Tabs (Horizontal Scrollable Pill Bar) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="vector-tab-btn active px-3.5 py-2 rounded-full bg-surface-container-highest text-on-surface font-label-xs uppercase tracking-wider whitespace-nowrap flex items-center gap-2 transition-all shadow-sm" data-vector="all">
+<span class="tab-pip w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_#ff5541]"></span>
+<span>SYNTHESIS OVERVIEW (ALL)</span>
+</button>
+<button class="vector-tab-btn px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-xs uppercase tracking-wider whitespace-nowrap flex items-center gap-2 transition-all" data-vector="v1">
+<span class="tab-pip hidden w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>V-01 SPATIAL CORE</span>
+</button>
+<button class="vector-tab-btn px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-xs uppercase tracking-wider whitespace-nowrap flex items-center gap-2 transition-all" data-vector="v2">
+<span class="tab-pip hidden w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>V-02 HARDWARE SCALING</span>
+</button>
+<button class="vector-tab-btn px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-xs uppercase tracking-wider whitespace-nowrap flex items-center gap-2 transition-all" data-vector="v3">
+<span class="tab-pip hidden w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>V-03 CINEMATIC ROLLOUT</span>
+</button>
+</div>
+<!-- Evolutionary Trajectory Engine (Primary Matrix Card) -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-md flex flex-col gap-space-md shadow-xl">
+<div class="absolute -top-16 -right-16 w-44 h-44 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-primary tracking-[0.24em] uppercase">TRAJECTORY CALIBRATION</span>
+<span class="font-title-md text-on-surface font-semibold" id="trajectory-scope-title">TRIPARTITE SYMBIOSIS RUN</span>
+</div>
+<button class="flex items-center gap-1 text-primary hover:text-primary-fixed bg-surface-container-high px-2.5 py-1 rounded-full font-label-xs tracking-wider transition-colors" id="open-evo-log-btn">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span>EVO LOG</span>
+</button>
+</div>
+<!-- Generation Stepper Indicator -->
+<div class="grid grid-cols-3 gap-2 p-1.5 rounded-lg bg-surface-container-lowest">
+<div class="flex flex-col items-center py-1.5 rounded bg-surface-container-high text-on-surface-variant">
+<span class="font-label-xs opacity-60">GEN 01</span>
+<span class="font-label-md font-semibold text-on-surface">PROTOTYPE</span>
+</div>
+<div class="flex flex-col items-center py-1.5 rounded bg-surface-container-high text-on-surface-variant">
+<span class="font-label-xs opacity-60">GEN 02</span>
+<span class="font-label-md font-semibold text-on-surface">REFINED</span>
+</div>
+<div class="flex flex-col items-center py-1.5 rounded bg-gradient-to-r from-primary-container/30 to-secondary-container/30 text-on-surface shadow-inner">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-xs text-primary font-bold">GEN 03</span>
+</div>
+<span class="font-label-md font-bold text-on-surface">PROD IP</span>
+</div>
+</div>
+<!-- Comparative Progress Gauges with Dynamic Feed -->
+<div class="flex flex-col gap-3 pt-1">
+<!-- Metric 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-xs">
+<span class="text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">spatial_audio</span>
+            Sensory Penetration
+          </span>
+<span class="text-primary font-semibold" id="score-sensory">98.2% <span class="text-[9px] text-tertiary-fixed-dim">(+14% uplift)</span></span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container to-secondary rounded-full transition-all duration-700" id="bar-sensory" style="width: 98.2%;"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-xs">
+<span class="text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">finance</span>
+            Capital Efficiency
+          </span>
+<span class="text-secondary font-semibold" id="score-capital">91.5% <span class="text-[9px] text-on-surface-variant">(Tier-2 Opt)</span></span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary-container to-secondary rounded-full transition-all duration-700" id="bar-capital" style="width: 91.5%;"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-xs">
+<span class="text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">shield_with_heart</span>
+            Cultural Virality &amp; IP Moat
+          </span>
+<span class="text-tertiary font-semibold" id="score-cultural">95.8% <span class="text-[9px] text-tertiary-fixed-dim">(Proprietary)</span></span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary-container to-tertiary rounded-full transition-all duration-700" id="bar-cultural" style="width: 95.8%;"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-xs">
+<span class="text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary-fixed">vital_signs</span>
+            Biological Retention
+          </span>
+<span class="text-primary-fixed font-semibold" id="score-biological">94.0% <span class="text-[9px] text-on-surface-variant">(Dwell 14m)</span></span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container via-secondary-container to-primary rounded-full transition-all duration-700" id="bar-biological" style="width: 94.0%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Flagship Evolved Deliverables (3 Rich Cards) -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-on-surface text-lg font-semibold tracking-tight uppercase">EVOLVED IP DELIVERABLES</span>
+<span class="font-label-xs text-on-surface-variant">BATCH: FX2-DK-03</span>
+</div>
+<!-- Deliverable 01: The Modular Acoustic Altar -->
+<div class="vector-card v1-card rounded-xl bg-surface-container-low overflow-hidden shadow-md flex flex-col group transition-all duration-300">
+<div class="relative w-full h-44 overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Monolithic brutalist coffee altar made of textured black volcanic basalt stone, illuminated by warm precision amber lighting strips inside an ultra quiet minimalist architecture sanctuary in Riyadh, cinematic editorial photography, moody dark atmospheric noir, 8k resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-BE3jruW_HizTtkO2Os9EadM6JMGPHkWc35_omOMmG9BPDNOdz5sGp2g_3HjO_taoy1LnyQQ4WehtojP30T1tswD2iZfGE8ll2ld8Ljz16eZ2yhaaiWUxPaPbosYy1zWuXNZWKjsOEPX4HvD-ekM9hzaxvGaYURs94zP7VCEY_r3oLktKQ5qkq93uu_hENpmpetQZ6Nf1Lh8t8jY7qmoyTEqb-vEz9C2PA5-iX_E5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-xs text-primary font-semibold">DEPLOYMENT READY</span>
+</div>
+<span class="absolute top-3 right-3 font-label-xs text-on-surface-variant/80 bg-surface-container-lowest/60 px-2 py-0.5 rounded">V-01 // SPATIAL</span>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-baseline justify-between">
+<h3 class="font-title-lg text-on-surface text-base">The Modular Acoustic Altar</h3>
+<span class="font-label-xs text-secondary tracking-widest">GEN 03</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-xs leading-relaxed">
+          Scalable prefabricated basalt monoliths engineered with somatosensory perimeter silencing. Reduces physical buildout lead time from 6 months down to 18 days across 12 flagship metropolises.
+        </p>
+<div class="grid grid-cols-2 gap-2 mt-2 pt-2 border-none bg-surface-container rounded-lg p-2">
+<div class="flex flex-col">
+<span class="font-label-xs text-on-surface-variant">DEPLOYMENT SPEED</span>
+<span class="font-label-md text-on-surface font-semibold">18 Days / Flagship</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-on-surface-variant">ACOUSTIC ATTENUATION</span>
+<span class="font-label-md text-primary font-semibold">-34dB Spatial Void</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Deliverable 02: Obsidian Core Series 01 -->
+<div class="vector-card v2-card rounded-xl bg-surface-container-low overflow-hidden shadow-md flex flex-col group transition-all duration-300">
+<div class="relative w-full h-44 overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Macro luxury product photograph of a weighted obsidian black ceramic coffee vessel with laser etched serial typography, glowing warm ember baseline rim, sitting on dark titanium tray with subtle steam rising, dramatic high end industrial design lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8A2Pq5jlP9bLoLAz10T599bbJR3es4IcmgqmzsUyPcj0YGKw_SqrrJ3Urv8Xg1c13STaAhHrzfZOshkPjb6WwjDGpPySPWWlPsRFkn5aQP_LTsLyV6HlVgrFkTO0VxFPYt9rmYc-q-FctfJipUIBqi7oxROv7LDzggr8Ib-b7Hc3171eb2ROBN3qsu1KspD66yp99bfnWsTrWs-b8BjoqObNSWocibBVRofn3TClm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-xs text-secondary font-semibold">PILOT RUN V1.0</span>
+</div>
+<span class="absolute top-3 right-3 font-label-xs text-on-surface-variant/80 bg-surface-container-lowest/60 px-2 py-0.5 rounded">V-02 // HARDWARE</span>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-baseline justify-between">
+<h3 class="font-title-lg text-on-surface text-base">Obsidian Core Series 01</h3>
+<span class="font-label-xs text-secondary tracking-widest">5,000 PCS</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-xs leading-relaxed">
+          First production run of high-density volcanic ceramic vessels with embedded micro NFC telemetry. Each vessel tracks temperature holding cycles and unlocks encrypted digital access to Dr. Kaif reserves.
+        </p>
+<div class="grid grid-cols-2 gap-2 mt-2 pt-2 border-none bg-surface-container rounded-lg p-2">
+<div class="flex flex-col">
+<span class="font-label-xs text-on-surface-variant">BATCH SIZE</span>
+<span class="font-label-md text-on-surface font-semibold">5,000 Numbered Units</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-on-surface-variant">THERMAL CORE</span>
+<span class="font-label-md text-secondary font-semibold">68°C Plateau / 14m</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Deliverable 03: Phantom Echo Campaign -->
+<div class="vector-card v3-card rounded-xl bg-surface-container-low overflow-hidden shadow-md flex flex-col group transition-all duration-300">
+<div class="relative w-full h-44 overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Cinematic high contrast film still of an executive cradling a dark heavy coffee chalice in a dimly lit glass boardroom at dusk, slow motion mist atmosphere, glowing crimson studio lighting accents, haute couture aesthetic, 35mm film grain texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGqtIvFq1eCNQI6z2YK6v2msc-qgmXQCy-jQwebp8hBpnuCfvO1dy5NFUi1hP8F2O6yCsSCZdqNSUETKMmF3ef6obBqYuwXx6TBK6GFX-TV2O3chne0pZy2DYkhcTxWpQgRqV8ur95CGnmFS-o9KxEx8pi7JiZGCqREwYfEsjxOtlv9HFIWSAATRWavfz4FFPRRVRQ3cTCmBUCe6yp_3-wXUN-iVBcHSIZfLDrJdTH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-xs text-tertiary font-semibold">DISTRIBUTION LOCKED</span>
+</div>
+<span class="absolute top-3 right-3 font-label-xs text-on-surface-variant/80 bg-surface-container-lowest/60 px-2 py-0.5 rounded">V-03 // CINEMA</span>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-baseline justify-between">
+<h3 class="font-title-lg text-on-surface text-base">Phantom Echo Campaign</h3>
+<span class="font-label-xs text-secondary tracking-widest">6 EPISODES</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-xs leading-relaxed">
+          Transmedia episodic narrative rollout timed to coincide with physical architectural drops. Shot on Arri Alexa 65mm capturing the ritual silence of coffee as an antidote to hyper-connected exhaustion.
+        </p>
+<div class="grid grid-cols-2 gap-2 mt-2 pt-2 border-none bg-surface-container rounded-lg p-2">
+<div class="flex flex-col">
+<span class="font-label-xs text-on-surface-variant">MEDIA REACH</span>
+<span class="font-label-md text-on-surface font-semibold">4.8M Targeted Reach</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-on-surface-variant">EPISODIC CADENCE</span>
+<span class="font-label-md text-tertiary font-semibold">Synchronized 14-Day Drop</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tactical Simulation Sandbox (Interactive Parameter Tuning) -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-4 shadow-lg border border-white/[0.05] relative overflow-hidden" id="tactical-sandbox-root">
+<div class="absolute -right-20 -top-20 w-44 h-44 bg-[#ff5541]/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header & Live Preset Bar -->
+<div class="flex items-center justify-between border-b border-white/[0.04] pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container animate-pulse">tune</span>
+<div>
+<h4 class="font-title-md text-on-surface font-semibold text-sm tracking-wide">TACTICAL SIMULATION SANDBOX</h4>
+<p class="font-label-xs text-on-surface-variant/80 text-[10px]">ALGORITHMIC PARAMETER TUNING // REAL-TIME RECALCULATION</p>
+</div>
+</div>
+<button class="flex items-center gap-1 font-label-xs text-primary bg-[#ff5541]/10 hover:bg-[#ff5541]/20 border border-primary/30 px-2.5 py-1 rounded-full transition-all active:scale-95" id="open-monte-carlo-btn">
+<span>MONTE CARLO</span>
+<span class="material-symbols-outlined text-[13px]">north_east</span>
+</button>
+</div>
+<!-- Quick-Scenario Presets -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-xs text-on-surface-variant uppercase tracking-wider text-[10px]">PRESET SIMULATION ARCHETYPES:</span>
+<div class="grid grid-cols-3 gap-1.5">
+<button class="scenario-preset-btn px-2 py-1.5 rounded-lg bg-surface-container-high border border-white/[0.04] text-[10.5px] font-label-xs text-on-surface-variant hover:text-white transition-all text-center leading-tight hover:border-primary/40" data-horizon="30" data-name="Aggressive Blitz" data-split="25" type="button">
+<span class="font-semibold block text-primary">BLITZ (25/75)</span>
+<span class="text-[9px] opacity-70">30D Media Halo</span>
+</button>
+<button class="scenario-preset-btn active px-2 py-1.5 rounded-lg bg-[#cd4700]/15 border border-[#cd4700]/40 text-[10.5px] font-label-xs text-white transition-all text-center leading-tight shadow-[0_0_12px_rgba(205,71,0,0.25)]" data-horizon="90" data-name="Balanced Symbiosis" data-split="50" type="button">
+<span class="font-semibold block text-secondary">BALANCED (50/50)</span>
+<span class="text-[9px] opacity-70">90D Core Scale</span>
+</button>
+<button class="scenario-preset-btn px-2 py-1.5 rounded-lg bg-surface-container-high border border-white/[0.04] text-[10.5px] font-label-xs text-on-surface-variant hover:text-white transition-all text-center leading-tight hover:border-primary/40" data-horizon="180" data-name="Fortress Moat" data-split="80" type="button">
+<span class="font-semibold block text-tertiary">MOAT (80/20)</span>
+<span class="text-[9px] opacity-70">180D Physical CapEx</span>
+</button>
+</div>
+</div>
+<!-- Parameter 1: Interactive Capital Allocation Bias Slider -->
+<div class="flex flex-col gap-2 bg-surface-container-lowest p-3 rounded-lg border border-white/[0.04]">
+<div class="flex justify-between items-center font-label-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="text-on-surface-variant uppercase tracking-wider text-[11px]">CAPITAL ALLOCATION BIAS</span>
+</div>
+<span class="text-primary font-semibold text-[11.5px] font-mono" id="allocation-ratio-display">SPATIAL 50% / CINEMA 50%</span>
+</div>
+<!-- Slider Range Input -->
+<div class="relative flex items-center py-1">
+<input aria-label="Capital Allocation Bias Slider" class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container transition-all" id="allocation-slider" max="100" min="0" type="range" value="50"/>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-label-xs pt-0.5">
+<button class="alloc-quick-snap hover:text-primary transition-colors text-left" data-val="80" type="button">◀ 80% Spatial Moat</button>
+<button class="alloc-quick-snap hover:text-secondary transition-colors text-center" data-val="50" type="button">50/50 Parity</button>
+<button class="alloc-quick-snap hover:text-tertiary transition-colors text-right" data-val="20" type="button">80% Transmedia Reach ▶</button>
+</div>
+<!-- Live Dynamic Multi-Vector Capital Share Bars -->
+<div class="pt-2 border-t border-white/[0.04] flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-[10px] font-mono text-on-surface-variant">
+<span>VECTOR RATIO DISPERSION</span>
+<span class="text-secondary" id="dispersion-ratio-tag">ALTAR 50% · HW 25% · MEDIA 25%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden flex">
+<div class="h-full bg-primary-container transition-all duration-300" id="share-bar-spatial" style="width: 50%;"></div>
+<div class="h-full bg-secondary transition-all duration-300" id="share-bar-hardware" style="width: 25%;"></div>
+<div class="h-full bg-tertiary transition-all duration-300" id="share-bar-cinema" style="width: 25%;"></div>
+</div>
+</div>
+</div>
+<!-- Parameter 2: Execution Horizon Segmented Control -->
+<div class="flex flex-col gap-2 bg-surface-container-lowest p-3 rounded-lg border border-white/[0.04]">
+<div class="flex justify-between items-center font-label-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="text-on-surface-variant uppercase tracking-wider text-[11px]">EXECUTION HORIZON</span>
+</div>
+<span class="text-secondary font-semibold text-[11.5px] font-mono" id="horizon-status">90 DAYS (BALANCED ACCELERATION)</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5 p-1 rounded-lg bg-surface-container font-label-xs">
+<button class="sim-horizon-btn py-2 rounded text-on-surface-variant hover:text-white font-medium transition-all text-center" data-horizon="30" type="button">
+<span class="block">30 DAYS</span>
+<span class="text-[9px] opacity-60 font-mono">COMPRESSED</span>
+</button>
+<button class="sim-horizon-btn active py-2 rounded bg-surface-container-high border border-primary/30 text-primary font-semibold shadow-sm transition-all text-center" data-horizon="90" type="button">
+<span class="block">90 DAYS</span>
+<span class="text-[9px] text-secondary font-mono">STAGED HALO</span>
+</button>
+<button class="sim-horizon-btn py-2 rounded text-on-surface-variant hover:text-white font-medium transition-all text-center" data-horizon="180" type="button">
+<span class="block">180 DAYS</span>
+<span class="text-[9px] opacity-60 font-mono">MAX FORTRESS</span>
+</button>
+</div>
+</div>
+<!-- Live Projected Simulation Output Cards (3 Real-time Metrics) -->
+<div class="grid grid-cols-3 gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.04] flex flex-col justify-between">
+<span class="font-label-xs text-on-surface-variant text-[9.5px] uppercase tracking-wider">SYNCHRONICITY</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-title-lg text-primary font-bold text-base font-mono" id="sim-sync-score">96.8%</span>
+<span class="text-[9px] text-primary/70 font-mono">▲</span>
+</div>
+<span class="text-[9px] text-on-surface-variant/70 font-mono mt-0.5" id="sim-sync-state">COHERENT</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.04] flex flex-col justify-between">
+<span class="font-label-xs text-on-surface-variant text-[9.5px] uppercase tracking-wider">VELOCITY DELTA</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-title-md text-tertiary font-bold text-base font-mono" id="sim-velocity-delta">+28.4%</span>
+<span class="text-[9px] text-tertiary/70 font-mono">ROI</span>
+</div>
+<span class="text-[9px] text-on-surface-variant/70 font-mono mt-0.5" id="sim-velocity-state">TIER-1 YIELD</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.04] flex flex-col justify-between">
+<span class="font-label-xs text-on-surface-variant text-[9.5px] uppercase tracking-wider">BREAK-EVEN PACE</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-title-md text-secondary font-bold text-base font-mono" id="sim-breakeven-metric">54 Days</span>
+<span class="text-[9px] text-secondary/70 font-mono">EST</span>
+</div>
+<span class="text-[9px] text-on-surface-variant/70 font-mono mt-0.5" id="sim-breakeven-state">OPTIMAL</span>
+</div>
+</div>
+</div>
+<!-- Monte Carlo Projection Modal Drawer -->
+<div aria-hidden="true" class="fixed inset-0 z-50 invisible opacity-0 pointer-events-none transition-all duration-300 flex items-end sm:items-center justify-center" id="monte-carlo-modal"><div class="absolute inset-0 bg-[#060708]/85 backdrop-blur-md transition-opacity duration-300" id="monte-carlo-scrim"></div><div class="relative w-full max-w-lg mx-auto bg-[#0d0e12]/95 border-t sm:border border-white/10 sm:rounded-2xl rounded-t-[28px] max-h-[880px] overflow-y-auto no-scrollbar shadow-[0_-25px_80px_rgba(0,0,0,0.95)] flex flex-col gap-4 transform translate-y-full sm:translate-y-8 transition-all duration-300 z-10 p-5 pb-10 text-on-surface" id="monte-carlo-sheet"><div class="flex items-start justify-between border-b border-white/[0.06] pb-3"><div class="flex flex-col gap-1"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-xs text-secondary tracking-[0.24em] uppercase font-semibold">TACTICAL PROBABILITY ENGINE</span></div><h3 class="font-title-md text-on-surface font-semibold text-sm sm:text-base tracking-wide flex items-center gap-2">MONTE CARLO ITERATION N=10,000<span class="font-label-xs text-primary bg-[#ff5541]/15 border border-primary/30 px-2 py-0.5 rounded-full font-mono text-[9.5px]">CONVERGENCE: 99.4%</span></h3></div><button aria-label="Close Monte Carlo Modal" class="w-8 h-8 rounded-full bg-white/[0.04] border border-white/10 hover:border-primary/40 flex items-center justify-center text-on-surface-subtle hover:text-white transition-all active:scale-90" id="close-monte-carlo-btn" type="button"><span class="material-symbols-outlined text-[17px]">close</span></button></div>
+<!-- Interactive Live Stress Intensity Multiplier (اختبار التحمل الحي) -->
+<div class="relative rounded-xl bg-surface-container-lowest p-3.5 border border-white/[0.07] flex flex-col gap-2.5 overflow-hidden transition-all duration-300" id="stress-intensity-card">
+<div class="absolute -right-12 -top-12 w-28 h-28 bg-[#ff5541]/10 rounded-full blur-2xl pointer-events-none transition-opacity duration-500" id="stress-glow-accent"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary transition-transform duration-300" id="stress-meter-icon">speed</span>
+<div>
+<span class="font-label-xs uppercase tracking-wider text-[10px] text-on-surface font-semibold block">STRESS INTENSITY MULTIPLIER</span>
+<span class="text-[9px] font-mono text-on-surface-variant">مضاعف شدة الإجهاد // LIVE BLACK SWAN TUNER</span>
+</div>
+</div>
+<!-- Dynamic Stress Value Badge with Reactive Glow -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#1b1c20] border border-white/10 transition-all duration-300 font-mono text-[10.5px] font-bold" id="stress-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2b99d3] transition-colors duration-300" id="stress-badge-pip"></span>
+<span class="text-on-surface transition-colors duration-300" id="stress-val-display">1.0x NOMINAL</span>
+</div>
+</div>
+<!-- Continuous Slider Range Component -->
+<div class="relative flex flex-col gap-1 py-1">
+<input aria-label="Stress Intensity Multiplier" class="w-full h-2.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container transition-all" id="stress-slider" max="2.5" min="0.5" step="0.05" type="range" value="1.0"/>
+<div class="flex justify-between items-center text-[8.5px] text-on-surface-variant font-mono px-0.5 pt-0.5">
+<span>0.5x BENIGN</span>
+<span>1.0x NOMINAL</span>
+<span>1.8x CRITICAL</span>
+<span>2.5x BLACK SWAN</span>
+</div>
+</div>
+<!-- Quick-Preset Buttons -->
+<div class="grid grid-cols-4 gap-1.5 pt-0.5">
+<button class="stress-preset-btn py-1 px-1 rounded-md bg-surface-container border border-white/[0.04] text-[9.5px] font-mono text-on-surface-variant hover:text-white transition-all text-center active:scale-95" data-stress="0.5" type="button">
+0.5x BASELINE
+</button>
+<button class="stress-preset-btn active py-1 px-1 rounded-md bg-[#ff5541]/15 border border-primary/40 text-[9.5px] font-mono text-primary font-semibold transition-all text-center active:scale-95 shadow-[0_0_8px_rgba(255,85,65,0.2)]" data-stress="1.0" type="button">
+1.0x NOMINAL
+</button>
+<button class="stress-preset-btn py-1 px-1 rounded-md bg-surface-container border border-white/[0.04] text-[9.5px] font-mono text-on-surface-variant hover:text-white transition-all text-center active:scale-95" data-stress="1.5" type="button">
+1.5x SHOCK
+</button>
+<button class="stress-preset-btn py-1 px-1 rounded-md bg-surface-container border border-white/[0.04] text-[9.5px] font-mono text-on-surface-variant hover:text-white transition-all text-center active:scale-95" data-stress="2.0" type="button">
+2.0x CRISIS
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2"><div class="p-2.5 rounded-xl bg-surface-container-lowest border border-white/[0.05] flex flex-col gap-0.5"><span class="font-label-xs text-on-surface-variant text-[9.5px] uppercase tracking-wider">MEAN NET YIELD</span><div class="flex items-baseline gap-1 mt-0.5"><span class="font-title-md text-primary font-bold text-base font-mono" id="mc-mean-yield">+32.8%</span><span class="text-[9px] text-primary/70 font-mono">ROI</span></div><span class="text-[9px] text-on-surface-variant font-mono">(P50 Baseline Target)</span></div><div class="p-2.5 rounded-xl bg-surface-container-lowest border border-white/[0.05] flex flex-col gap-0.5"><span class="font-label-xs text-on-surface-variant text-[9.5px] uppercase tracking-wider">DOWNSIDE FLOOR</span><div class="flex items-baseline gap-1 mt-0.5"><span class="font-title-md text-secondary font-bold text-base font-mono" id="mc-downside-floor">+14.2%</span><span class="text-[9px] text-secondary/70 font-mono">ROI</span></div><span class="text-[9px] text-on-surface-variant font-mono">(P95 Fortress Protection)</span></div><div class="p-2.5 rounded-xl bg-surface-container-lowest border border-white/[0.05] flex flex-col gap-0.5"><span class="font-label-xs text-on-surface-variant text-[9.5px] uppercase tracking-wider">BLUE-SKY UPSIDE</span><div class="flex items-baseline gap-1 mt-0.5"><span class="font-title-md text-tertiary font-bold text-base font-mono" id="mc-upside-yield">+58.4%</span><span class="text-[9px] text-tertiary/70 font-mono">ROI</span></div><span class="text-[9px] text-on-surface-variant font-mono">(P05 Viral Halo Spike)</span></div><div class="p-2.5 rounded-xl bg-surface-container-lowest border border-white/[0.05] flex flex-col gap-0.5"><span class="font-label-xs text-on-surface-variant text-[9.5px] uppercase tracking-wider">PROBABILITY OF PROFIT</span><div class="flex items-baseline gap-1 mt-0.5"><span class="font-title-md text-[#ffb59a] font-bold text-base font-mono" id="mc-profit-prob">98.7%</span><span class="text-[9px] text-secondary font-mono">CONF</span></div><span class="text-[9px] text-primary font-mono">(Positive Capital Moat)</span></div></div><div class="bg-surface-container-lowest p-3.5 rounded-xl border border-white/[0.05] flex flex-col gap-2 relative overflow-hidden"><div class="flex items-center justify-between font-mono text-[10px]"><span class="text-on-surface-variant uppercase tracking-wider">STOCHASTIC DENSITY DISTRIBUTION [GAUSSIAN P95]</span><span class="text-primary font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>N=10,000 RUNS</span></div><div class="relative w-full h-32 pt-2"><svg class="w-full h-full overflow-visible" id="mc-svg-curve" preserveaspectratio="none" viewbox="0 0 400 120"><defs><lineargradient id="mcBellGrad" x1="0%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#ff5541" stop-opacity="0.38"></stop><stop offset="50%" stop-color="#cd4700" stop-opacity="0.15"></stop><stop offset="100%" stop-color="#121315" stop-opacity="0.0"></stop></lineargradient></defs><line stroke="rgba(255,255,255,0.06)" stroke-dasharray="3,3" x1="20" x2="380" y1="30" y2="30"></line><line stroke="rgba(255,255,255,0.06)" stroke-dasharray="3,3" x1="20" x2="380" y1="65" y2="65"></line><line stroke="rgba(255,255,255,0.06)" stroke-dasharray="3,3" x1="20" x2="380" y1="100" y2="100"></line><rect fill="rgba(255,85,65,0.07)" height="100" id="mc-ci-band" width="210" x="105" y="10"></rect><line id="mc-p95-line" stroke="rgba(255,180,168,0.25)" stroke-dasharray="2,2" x1="105" x2="105" y1="10" y2="110"></line><line id="mc-p05-line" stroke="rgba(255,180,168,0.25)" stroke-dasharray="2,2" x1="315" x2="315" y1="10" y2="110"></line><path d="M 20 110 C 70 110, 110 102, 140 80 C 170 58, 190 14, 210 14 C 230 14, 250 58, 280 80 C 310 102, 345 110, 380 110 Z" fill="url(#mcBellGrad)" id="mc-curve-area"></path><path d="M 20 110 C 70 110, 110 102, 140 80 C 170 58, 190 14, 210 14 C 230 14, 250 58, 280 80 C 310 102, 345 110, 380 110" fill="none" id="mc-curve-stroke" stroke="#ff5541" stroke-linecap="round" stroke-width="2.2"></path><line id="mc-peak-line" stroke="#ffb4a8" stroke-dasharray="3,2" stroke-width="1.5" x1="210" x2="210" y1="14" y2="110"></line><circle cx="210" cy="14" fill="#ff5541" id="mc-peak-dot" r="3.5" stroke="#ffffff" stroke-width="1"></circle></svg><span class="absolute top-1 left-[52.5%] -translate-x-1/2 font-mono text-[9px] text-primary font-bold bg-[#090a0c]/80 px-1.5 py-0.5 rounded border border-primary/20" id="mc-badge-p50">P50: +32.8%</span><span class="absolute bottom-1 left-[26.25%] -translate-x-1/2 font-mono text-[8px] text-on-surface-variant" id="mc-badge-p95">P95: +14.2%</span><span class="absolute bottom-1 left-[78.75%] -translate-x-1/2 font-mono text-[8px] text-on-surface-variant" id="mc-badge-p05">P05: +58.4%</span></div><div class="flex justify-between text-[9px] text-on-surface-variant font-mono border-t border-white/[0.05] pt-1.5"><span>-10%</span><span>+15%</span><span class="text-primary font-semibold" id="mc-axis-median">+32% (Median)</span><span>+55%</span><span>+80%</span></div></div><div class="flex flex-col gap-2.5"><div class="flex items-center justify-between"><span class="font-label-xs text-on-surface-variant uppercase tracking-wider text-[10px] flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-primary">warning</span>STRESS-TEST SENSITIVITY MATRIX [N=6 SCENARIOS]:</span><span class="font-mono text-[9px] text-primary/80 bg-primary-container/10 border border-primary/20 px-2 py-0.5 rounded-full" id="stress-active-count">6 ACTIVE SCENARIOS</span></div><div class="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5" id="stress-filter-bar"><button class="stress-chip-btn active px-2.5 py-1 rounded-full bg-surface-container-high border border-primary/30 text-white font-mono text-[9px] uppercase tracking-wider whitespace-nowrap transition-all shadow-sm" data-cat="all" type="button">ALL RISKS (6)</button><button class="stress-chip-btn px-2.5 py-1 rounded-full bg-surface-container border border-white/[0.04] text-on-surface-variant hover:text-white font-mono text-[9px] uppercase tracking-wider whitespace-nowrap transition-all" data-cat="supply" type="button">SUPPLY &amp; HARDWARE (3)</button><button class="stress-chip-btn px-2.5 py-1 rounded-full bg-surface-container border border-white/[0.04] text-on-surface-variant hover:text-white font-mono text-[9px] uppercase tracking-wider whitespace-nowrap transition-all" data-cat="macro" type="button">MACRO &amp; GEOPOLITICAL (2)</button><button class="stress-chip-btn px-2.5 py-1 rounded-full bg-surface-container border border-white/[0.04] text-on-surface-variant hover:text-white font-mono text-[9px] uppercase tracking-wider whitespace-nowrap transition-all" data-cat="demand" type="button">DEMAND &amp; VIRALITY (2)</button></div><div class="p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.05] flex flex-col gap-1.5"><div class="flex items-center justify-between text-[9.5px] font-mono"><span class="text-on-surface-variant uppercase tracking-wider flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>COMPOUND SENSITIVITY DEFLECTION</span><span class="text-secondary font-bold font-mono" id="compound-risk-tag">-0.8% NET MARGIN ATTENUATION</span></div><div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden"><div class="h-full bg-gradient-to-r from-primary-container via-secondary-container to-tertiary rounded-full transition-all duration-500" id="compound-risk-bar" style="width: 68%;"></div></div></div><div class="flex flex-col gap-1.5 font-mono text-[10.5px]" id="stress-scenarios-container"><div class="stress-card p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.04] flex flex-col gap-1 transition-all duration-300" data-base-impact="-4.2" data-category="supply"><div class="flex items-center justify-between"><span class="font-semibold text-on-surface">SCENARIO A: SUPPLY CHAIN CRUNCH</span><span class="text-primary font-bold scenario-impact-val">-4.2% NET MARGIN</span></div><div class="flex items-center justify-between text-[9.5px] text-on-surface-variant"><span>Basalt extraction &amp; tooling +30% delay</span><span class="text-primary bg-primary-container/10 border border-primary/20 px-1.5 py-0.5 rounded font-medium">RESILIENCE: HIGH</span></div></div><div class="stress-card p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.04] flex flex-col gap-1 transition-all duration-300" data-base-impact="-6.8" data-category="macro"><div class="flex items-center justify-between"><span class="font-semibold text-on-surface">SCENARIO B: MACRO DOWNTURN</span><span class="text-secondary font-bold scenario-impact-val">-6.8% NET MARGIN</span></div><div class="flex items-center justify-between text-[9.5px] text-on-surface-variant"><span>Luxury retail footfall -25% retraction</span><span class="text-secondary bg-[#cd4700]/15 border border-[#cd4700]/30 px-1.5 py-0.5 rounded font-medium">CUSHION: TRANS-MEDIA</span></div></div><div class="stress-card p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.04] flex flex-col gap-1 transition-all duration-300" data-base-impact="28.6" data-category="demand"><div class="flex items-center justify-between"><span class="font-semibold text-on-surface">SCENARIO C: VIRAL CINEMA BREAKTHROUGH</span><span class="text-tertiary font-bold scenario-impact-val">+28.6% NET MARGIN</span></div><div class="flex items-center justify-between text-[9.5px] text-on-surface-variant"><span>Halo multiplier 3.2x organic reach</span><span class="text-tertiary bg-tertiary/10 border border-tertiary/20 px-1.5 py-0.5 rounded font-medium">SCALING: UNCONSTRAINED</span></div></div><div class="stress-card p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.04] flex flex-col gap-1 transition-all duration-300" data-base-impact="-3.1" data-category="macro"><div class="flex items-center justify-between"><span class="font-semibold text-on-surface">SCENARIO D: GEOPOLITICAL TARIFF &amp; BASALT RESTRICTION</span><span class="text-primary font-bold scenario-impact-val">-3.1% NET MARGIN</span></div><div class="flex items-center justify-between text-[9.5px] text-on-surface-variant"><span>+35% Raw Material CapEx import friction</span><span class="text-primary font-medium bg-primary-container/10 border border-primary/20 px-1.5 py-0.5 rounded">RESILIENCE: FORTIFIED (Domestic Quarry Pivot)</span></div></div><div class="stress-card p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.04] flex flex-col gap-1 transition-all duration-300" data-base-impact="-1.8" data-category="supply"><div class="flex items-center justify-between"><span class="font-semibold text-on-surface">SCENARIO E: NFC HARDWARE PROTOCOL FAILURE</span><span class="text-secondary font-bold scenario-impact-val">-1.8% NET MARGIN</span></div><div class="flex items-center justify-between text-[9.5px] text-on-surface-variant"><span>+45 Days hardware buffer validation delay</span><span class="text-secondary font-medium bg-[#cd4700]/15 border border-[#cd4700]/30 px-1.5 py-0.5 rounded">RESILIENCE: MODERATE (Firmware OTA Patch)</span></div></div><div class="stress-card p-2.5 rounded-lg bg-surface-container-lowest border border-white/[0.04] flex flex-col gap-1 transition-all duration-300" data-base-impact="19.4" data-category="demand"><div class="flex items-center justify-between"><span class="font-semibold text-on-surface">SCENARIO F: HYPER-INFLATIONARY DWELL DILATION</span><span class="text-tertiary font-bold scenario-impact-val">+19.4% NET YIELD</span></div><div class="flex items-center justify-between text-[9.5px] text-on-surface-variant"><span>+40% Footfall spike in high-stress metropolises</span><span class="text-tertiary font-medium bg-tertiary/10 border border-tertiary/20 px-1.5 py-0.5 rounded">RESILIENCE: EXPONENTIAL (Upside Elasticity)</span></div></div></div></div><button class="w-full py-2.5 rounded-lg bg-surface-container border border-primary/30 hover:border-primary/60 text-primary font-label-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#ff5541]/10 transition-all active:scale-[0.98]" id="recalc-monte-carlo-btn" type="button"><span class="material-symbols-outlined text-[15px] animate-spin" id="recalc-spinner" style="display: none;">sync</span><span class="material-symbols-outlined text-[15px]" id="recalc-icon">cached</span><span id="recalc-btn-text">RE-RUN 10,000 RUN ITERATIONS</span></button><div class="pt-1 flex flex-col sm:flex-row gap-2"><button class="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-primary-container via-secondary-container to-primary text-on-primary font-headline-md text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-1.5 shadow-[0_0_24px_rgba(255,85,65,0.3)] active:scale-[0.98] transition-all hover:opacity-95" id="confirm-scenario-btn" type="button"><span>COMMIT BALANCED CAPITAL TO MATRIX</span><span class="material-symbols-outlined text-[16px]">check_circle</span></button><button class="py-3 sm:py-3.5 px-4 rounded-xl bg-surface-container hover:bg-surface-container-highest border border-white/10 text-on-surface-variant hover:text-white font-label-xs uppercase tracking-wider transition-colors text-center" id="dismiss-monte-carlo-btn" type="button">DISMISS MODAL</button></div></div></div>
+<!-- Bottom Stage Advance Command Block -->
+<div class="flex flex-col gap-3 pt-2">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-xs text-secondary font-medium tracking-wider">STAGE 04 / 05 EVOLVED</span>
+</div>
+<span class="font-label-xs text-on-surface-variant tracking-wider">DR KAIF PORTFOLIO READY</span>
+</div>
+<!-- Radiant Advance CTA Button -->
+<button class="w-full py-4 rounded-xl bg-gradient-to-r from-primary-container via-secondary-container to-primary text-on-primary font-headline-md text-sm font-bold tracking-widest uppercase flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,85,65,0.4)] active:scale-[0.98] transition-all" id="advance-studio-btn">
+<span>ADVANCE TO FINAL STUDIO // STAGE 05</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Modal / Drawer: Deep Evolution Log -->
+<div class="fixed inset-0 z-50 invisible opacity-0 pointer-events-none transition-all duration-300 flex items-end justify-center" id="evo-log-modal">
+<div class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-md" id="evo-log-scrim"></div>
+<div class="relative w-full max-w-md bg-surface-container-high rounded-t-2xl p-space-md max-h-[707px] overflow-y-auto no-scrollbar flex flex-col gap-4 transform translate-y-full transition-transform duration-300 shadow-2xl z-10 pb-10" id="evo-log-sheet">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="font-label-md text-on-surface font-semibold tracking-wider">FX2 CONVERGENCE LOG [V04.9]</span>
+</div>
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="close-evo-log-btn">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 font-label-xs text-on-surface-variant leading-relaxed bg-surface-container-lowest p-3 rounded-lg font-mono">
+<p class="text-primary">&gt; INITIATING GEN 03 TRIPARTITE CONVERGENCE</p>
+<p>&gt; Spatial Sanctuary transformed into Basalt Pre-cast Monoliths.</p>
+<p>&gt; Lead-time compression verified: 180d -&gt; 18d per site.</p>
+<p>&gt; Obsidian Ballast serialized: 5,000 units assigned unique cryptographic ID.</p>
+<p>&gt; Cinema script treatment approved: 6-part high density vignettes.</p>
+<p class="text-tertiary">&gt; CONVERGENCE COEFFICIENT: 0.9682 [PASS]</p>
+<p class="text-secondary">&gt; PORTFOLIO READY FOR FINAL ASSET PIPELINE EXPORT.</p>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container text-on-surface font-label-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-colors" id="export-asset-spec-btn">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>EXPORT ASSET SPECIFICATION (JSON/GLTF)</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function initEvolutionMatrix() {
+    // Vector Filter Selector
+    const vectorTabs = document.querySelectorAll('.vector-tab-btn');
+    const cards = document.querySelectorAll('.vector-card');
+    const scopeTitle = document.getElementById('trajectory-scope-title');
+
+    const scoreSensory = document.getElementById('score-sensory');
+    const scoreCapital = document.getElementById('score-capital');
+    const scoreCultural = document.getElementById('score-cultural');
+    const scoreBiological = document.getElementById('score-biological');
+
+    const barSensory = document.getElementById('bar-sensory');
+    const barCapital = document.getElementById('bar-capital');
+    const barCultural = document.getElementById('bar-cultural');
+    const barBiological = document.getElementById('bar-biological');
+
+    const vectorMetrics = {
+      all: {
+        title: 'TRIPARTITE SYMBIOSIS RUN',
+        sensory: '98.2%', sensoryW: '98.2%',
+        capital: '91.5%', capitalW: '91.5%',
+        cultural: '95.8%', culturalW: '95.8%',
+        biological: '94.0%', biologicalW: '94.0%'
+      },
+      v1: {
+        title: 'V-01: ACOUSTIC ALTAR SPEC',
+        sensory: '99.4%', sensoryW: '99.4%',
+        capital: '86.0%', capitalW: '86.0%',
+        cultural: '91.2%', culturalW: '91.2%',
+        biological: '97.5%', biologicalW: '97.5%'
+      },
+      v2: {
+        title: 'V-02: OBSIDIAN HARDWARE SPEC',
+        sensory: '94.8%', sensoryW: '94.8%',
+        capital: '96.2%', capitalW: '96.2%',
+        cultural: '93.0%', culturalW: '93.0%',
+        biological: '91.8%', biologicalW: '91.8%'
+      },
+      v3: {
+        title: 'V-03: CINEMATIC ASSET SPEC',
+        sensory: '96.0%', sensoryW: '96.0%',
+        capital: '89.4%', capitalW: '89.4%',
+        cultural: '99.1%', culturalW: '99.1%',
+        biological: '88.5%', biologicalW: '88.5%'
+      }
+    };
+
+    vectorTabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const v = btn.dataset.vector;
+
+        // Tab styles
+        vectorTabs.forEach(b => {
+          b.classList.remove('bg-surface-container-highest', 'text-on-surface');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+          const pip = b.querySelector('.tab-pip');
+          if (pip) pip.classList.add('hidden');
+        });
+        btn.classList.add('bg-surface-container-highest', 'text-on-surface');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        const activePip = btn.querySelector('.tab-pip');
+        if (activePip) activePip.classList.remove('hidden');
+
+        // Card visibility filters
+        cards.forEach(card => {
+          if (v === 'all') {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = card.classList.contains(`${v}-card`) ? 'flex' : 'none';
+          }
+        });
+
+        // Metric adjustments
+        const m = vectorMetrics[v];
+        if (m) {
+          scopeTitle.textContent = m.title;
+          scoreSensory.childNodes[0].nodeValue = m.sensory + ' ';
+          scoreCapital.childNodes[0].nodeValue = m.capital + ' ';
+          scoreCultural.childNodes[0].nodeValue = m.cultural + ' ';
+          scoreBiological.childNodes[0].nodeValue = m.biological + ' ';
+
+          barSensory.style.width = m.sensoryW;
+          barCapital.style.width = m.capitalW;
+          barCultural.style.width = m.culturalW;
+          barBiological.style.width = m.biologicalW;
+        }
+      });
+    });
+
+    // Tactical Simulation Slider
+    const slider = document.getElementById('allocation-slider');
+    const allocationLabel = document.getElementById('allocation-ratio-display');
+    const syncScore = document.getElementById('sim-sync-score');
+    const velocityDelta = document.getElementById('sim-velocity-delta');
+    const shareSpatial = document.getElementById('share-bar-spatial');
+    const shareHw = document.getElementById('share-bar-hardware');
+    const shareCinema = document.getElementById('share-bar-cinema');
+    const dispersionTag = document.getElementById('dispersion-ratio-tag');
+
+    function updateAllocation(val) {
+      if (allocationLabel) {
+        allocationLabel.textContent = `SPATIAL ${val}% / CINEMA ${100 - val}%`;
+      }
+      if (syncScore) syncScore.textContent = (94.0 + (val * 0.05)).toFixed(1) + '%';
+      if (velocityDelta) velocityDelta.textContent = `+${(20.0 + (100 - val) * 0.16).toFixed(1)}%`;
+      
+      const sp = val;
+      const rem = 100 - val;
+      const hw = Math.round(rem * 0.5);
+      const cn = rem - hw;
+      if (shareSpatial) shareSpatial.style.width = `${sp}%`;
+      if (shareHw) shareHw.style.width = `${hw}%`;
+      if (shareCinema) shareCinema.style.width = `${cn}%`;
+      if (dispersionTag) dispersionTag.textContent = `ALTAR ${sp}% · HW ${hw}% · MEDIA ${cn}%`;
+    }
+
+    if (slider) {
+      slider.addEventListener('input', (e) => {
+        updateAllocation(parseInt(e.target.value, 10));
+      });
+    }
+
+    const snapBtns = document.querySelectorAll('.alloc-quick-snap');
+    snapBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const v = parseInt(btn.dataset.val, 10);
+        if (slider) slider.value = v;
+        updateAllocation(v);
+      });
+    });
+
+    // Scenario preset buttons in sandbox
+    const scenarioPresets = document.querySelectorAll('.scenario-preset-btn');
+    scenarioPresets.forEach(b => {
+      b.addEventListener('click', () => {
+        scenarioPresets.forEach(x => {
+          x.classList.remove('active', 'bg-[#cd4700]/15', 'border-[#cd4700]/40', 'text-white', 'shadow-[0_0_12px_rgba(205,71,0,0.25)]');
+          x.classList.add('bg-surface-container-high', 'border-white/[0.04]', 'text-on-surface-variant');
+        });
+        b.classList.add('active', 'bg-[#cd4700]/15', 'border-[#cd4700]/40', 'text-white', 'shadow-[0_0_12px_rgba(205,71,0,0.25)]');
+        b.classList.remove('bg-surface-container-high', 'border-white/[0.04]', 'text-on-surface-variant');
+        const splitVal = parseInt(b.dataset.split, 10);
+        if (slider) slider.value = splitVal;
+        updateAllocation(splitVal);
+      });
+    });
+
+    // Horizon segmented buttons
+    const horizonBtns = document.querySelectorAll('.sim-horizon-btn');
+    const horizonStatus = document.getElementById('horizon-status');
+    horizonBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        horizonBtns.forEach(b => {
+          b.classList.remove('active', 'bg-surface-container-high', 'border', 'border-primary/30', 'text-primary', 'font-semibold', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('active', 'bg-surface-container-high', 'border', 'border-primary/30', 'text-primary', 'font-semibold', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+
+        const days = btn.dataset.horizon;
+        if (days === '30') horizonStatus.textContent = '30 DAYS (COMPRESSED BLITZ)';
+        if (days === '90') horizonStatus.textContent = '90 DAYS (BALANCED ACCELERATION)';
+        if (days === '180') horizonStatus.textContent = '180 DAYS (MAX FORTRESS HOLD)';
+      });
+    });
+
+    // Modal Sheet Handlers
+    const openLogBtn = document.getElementById('open-evo-log-btn');
+    const closeLogBtn = document.getElementById('close-evo-log-btn');
+    const modal = document.getElementById('evo-log-modal');
+    const sheet = document.getElementById('evo-log-sheet');
+    const scrim = document.getElementById('evo-log-scrim');
+    const advanceBtn = document.getElementById('advance-studio-btn');
+
+    function openModal() {
+      modal.classList.remove('invisible', 'pointer-events-none', 'opacity-0');
+      modal.classList.add('pointer-events-auto', 'opacity-100');
+      setTimeout(() => {
+        sheet.classList.remove('translate-y-full');
+      }, 10);
+    }
+
+    function closeModal() {
+      sheet.classList.add('translate-y-full');
+      setTimeout(() => {
+        modal.classList.add('invisible', 'pointer-events-none', 'opacity-0');
+        modal.classList.remove('pointer-events-auto', 'opacity-100');
+      }, 300);
+    }
+
+    if (openLogBtn) openLogBtn.addEventListener('click', openModal);
+    if (closeLogBtn) closeLogBtn.addEventListener('click', closeModal);
+    if (scrim) scrim.addEventListener('click', closeModal);
+
+    if (advanceBtn) {
+      advanceBtn.addEventListener('click', () => {
+        advanceBtn.style.transform = 'scale(0.97)';
+        setTimeout(() => {
+          advanceBtn.style.transform = '';
+          openModal();
+        }, 150);
+      });
+    }
+  })();
+</script></main>
+<!-- Feather-Light Bottom Navigation Chrome -->
+<nav class="fixed bottom-0 w-full z-40 pb-safe bg-[#090a0c]/80 backdrop-blur-2xl border-t border-white/[0.04] transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<div class="h-16 px-8 flex items-center justify-between max-w-lg mx-auto">
+<!-- Discovery (Active) -->
+<a class="flex flex-col items-center gap-1 text-primary transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" href="#">
+<span class="material-symbols-outlined text-[20px] font-light">explore</span>
+<span class="font-mono text-[9px] tracking-[0.2em] uppercase font-medium">Discovery</span>
+</a>
+<!-- Concepts -->
+<a class="flex flex-col items-center gap-1 text-on-surface-muted hover:text-on-surface transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" href="#">
+<span class="material-symbols-outlined text-[20px] font-light">lightbulb</span>
+<span class="font-mono text-[9px] tracking-[0.2em] uppercase font-normal">Concepts</span>
+</a>
+<!-- Evolution -->
+<a class="flex flex-col items-center gap-1 text-on-surface-muted hover:text-on-surface transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" href="#">
+<span class="material-symbols-outlined text-[20px] font-light">grain</span>
+<span class="font-mono text-[9px] tracking-[0.2em] uppercase font-normal">Evolution</span>
+</a>
+<!-- Production -->
+<a class="flex flex-col items-center gap-1 text-on-surface-muted hover:text-on-surface transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" href="#">
+<span class="material-symbols-outlined text-[20px] font-light">precision_manufacturing</span>
+<span class="font-mono text-[9px] tracking-[0.2em] uppercase font-normal">Studio</span>
+</a>
+</div>
+</nav>
+<!-- Expanded Lens Modal (Haute Horlogerie Immersive Exploration View) -->
+<div aria-hidden="true" class="fixed inset-0 z-50 pointer-events-none opacity-0 invisible flex flex-col justify-end transition-all" id="lens-modal-overlay">
+<!-- Backdrop with Dark Blur & Atmospheric Ambient Ember Glow -->
+<div class="absolute inset-0 bg-[#060708]/85 backdrop-blur-2xl transition-opacity duration-700" id="modal-backdrop-tap">
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-gradient-to-b from-primary-container/15 via-[#cd4700]/8 to-transparent rounded-full blur-[130px] pointer-events-none"></div>
+</div>
+<!-- Modal Sheet Container -->
+<div class="relative w-full max-w-lg mx-auto h-[813px] max-h-[880px] bg-[#0d0e12]/95 border-t border-x border-white/10 rounded-t-[32px] shadow-[0_-25px_80px_rgba(0,0,0,0.95)] flex flex-col overflow-hidden transform translate-y-full will-change-transform pb-safe pointer-events-auto" id="lens-modal-sheet">
+<!-- Top Grab Bar & Luxury Close Action Header -->
+<div class="relative pt-3 pb-3 px-6 flex items-center justify-between border-b border-white/[0.05] shrink-0 bg-[#0d0e12]/90 backdrop-blur-xl z-20">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-mono text-[10px] tracking-[0.25em] text-secondary uppercase font-medium" id="modal-lens-telemetry">
+          LENS 02 / TACTICAL ARMOR
+        </span>
+</div>
+<!-- Handle bar indicator for mobile sheet -->
+<div class="absolute left-1/2 -translate-x-1/2 top-2.5 w-10 h-1 rounded-full bg-white/20"></div>
+<!-- Tactile Close Button -->
+<button aria-label="Close Modal" class="w-8 h-8 rounded-full bg-white/[0.04] border border-white/10 hover:border-primary/40 flex items-center justify-center text-on-surface-subtle hover:text-white transition-all duration-300 active:scale-90" id="modal-close-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Scrollable Deep-Dive Content -->
+<div class="flex-1 overflow-y-auto no-scrollbar px-6 pt-5 pb-8 flex flex-col gap-7">
+<!-- Hero Imagery Canvas with Cinematic Glow -->
+<div class="relative w-full h-64 rounded-2xl overflow-hidden border border-white/10 bg-black shadow-2xl shrink-0 group">
+<img alt="Cinematic lens breakdown" class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]" id="modal-hero-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT_NuDY0RCrX6Z_cAxMu7dMjCp0AUhUWu6Hc4-ZG6DaHJD2lkjod7jrg6unWbuF8l4vcoi7-wV424xoYHqu5En3ikwgun7Z2WMgRvUa9y0kooVCFr7BGl8pSTfrRxWMsiLxZanKDhAXsItzLgfFY2daVOZU00SLYZ2gHygI6BFJIIuCVKmCTWTQMeDQrZIGd1wepQr2xiYeMoObkK8wiWBQM5Ti7K-1Ei6kDdFjqlu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0d0e12] via-[#0d0e12]/30 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-4 left-5 right-5 flex items-end justify-between pointer-events-none">
+<div>
+<span class="inline-block font-mono text-[9px] tracking-[0.25em] text-primary uppercase px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10" id="modal-tag-badge">
+              TACTICAL ARMOR
+            </span>
+</div>
+<span class="font-mono text-[9px] tracking-[0.2em] text-white/50 uppercase">DEEP VECTOR INTEL</span>
+</div>
+</div>
+<!-- Provocation Core -->
+<div class="flex flex-col gap-2.5">
+<span class="font-mono text-[9px] tracking-[0.3em] uppercase text-secondary/80 font-medium">CORE PARADIGM SHIFT</span>
+<h2 class="font-serif italic text-3xl text-white font-normal leading-snug tracking-[-0.01em]" id="modal-headline">
+          "Coffee as personal armor."
+        </h2>
+<p class="font-body text-[14px] leading-relaxed text-on-surface-subtle font-light mt-1" id="modal-paradigm-text">
+          Holding the warm, weighted ceramic with both hands as a physical shield—carving out an unassailable ten-minute sanctuary in high-intensity corporate environments.
+        </p>
+</div>
+<!-- Behavioral Tension Breakdown -->
+<div class="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">balance</span>
+<span class="font-mono text-[10px] tracking-[0.25em] uppercase text-on-surface font-medium">BEHAVIORAL TENSION &amp; SHIFT</span>
+</div>
+<p class="font-body text-[13px] leading-relaxed text-on-surface-subtle font-light" id="modal-tension-text">
+          Modern professionals are constantly accessible, overstimulated, and stripped of boundaries. The coffee mug serves as a socially sanctioned fortress: you cannot interrupt someone while they are cradling a hot vessel with closed body posture.
+        </p>
+</div>
+<!-- Sensory Architecture Grid -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-mono text-[10px] tracking-[0.25em] uppercase text-on-surface-muted">SENSORY ARCHITECTURE</span>
+<span class="font-mono text-[9px] tracking-widest text-primary/70">STUDIO CALIBRATION</span>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Card 1: Tactile Ritual -->
+<div class="p-4 rounded-xl bg-white/[0.015] border border-white/[0.05] flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 border border-primary/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[17px]">pan_tool</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono text-[10px] tracking-wider text-on-surface uppercase font-medium">Tactile Ritual</span>
+<span class="font-body text-[12.5px] text-on-surface-subtle" id="modal-sensory-tactile">Two-Hand Ceramic Embrace: High thermal-mass textured porcelain with grounded weight distribution.</span>
+</div>
+</div>
+<!-- Card 2: Acoustic Signature -->
+<div class="p-4 rounded-xl bg-white/[0.015] border border-white/[0.05] flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-secondary-amber/10 border border-secondary-amber/20 flex items-center justify-center shrink-0 text-secondary-amber">
+<span class="material-symbols-outlined text-[17px]">graphic_eq</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono text-[10px] tracking-wider text-on-surface uppercase font-medium">Acoustic Signature</span>
+<span class="font-body text-[12.5px] text-on-surface-subtle" id="modal-sensory-acoustic">Null Coma / White Thermal Hiss: Damped solid resonance when placed on timber or slate table.</span>
+</div>
+</div>
+<!-- Card 3: Olfactory Demarcation -->
+<div class="p-4 rounded-xl bg-white/[0.015] border border-white/[0.05] flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-[#cd4700]/15 border border-[#cd4700]/30 flex items-center justify-center shrink-0 text-[#ffb59a]">
+<span class="material-symbols-outlined text-[17px]">air</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono text-[10px] tracking-wider text-on-surface uppercase font-medium">Olfactory Demarcation</span>
+<span class="font-body text-[12.5px] text-on-surface-subtle" id="modal-sensory-aroma">Deep roasted cacao and smoked cedar steam creating a 2-foot perimeter of contemplation.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Actionable Provocations for Dr. Kaif Studio -->
+<div class="p-5 rounded-2xl bg-gradient-to-b from-[#1a1b22] to-[#121318] border border-primary/20 flex flex-col gap-3 shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-mono text-[10px] tracking-[0.25em] uppercase text-white font-medium">CREATIVE SPARK PROVOCATION</span>
+</div>
+<p class="font-body text-[13px] leading-relaxed text-on-surface font-light italic" id="modal-spark-text">
+          "تصميم أواني وعبوات د. كيف بكتلة ووزن يشبهان الدروع التكتيكية الفاخرة لتعزيز شعور الأمان والسيطرة."
+        </p>
+<div class="pt-2 flex items-center justify-between border-t border-white/[0.06] text-on-surface-muted font-mono text-[9px] tracking-wider uppercase">
+<span>DR KAIF PIPELINE</span>
+<span class="text-secondary/90">STATUS : CALIBRATED</span>
+</div>
+</div>
+<!-- Modal Bottom Direct Actions -->
+<div class="pt-2 flex flex-col gap-2.5">
+<button class="w-full h-12 rounded-full bg-gradient-to-r from-primary-container to-secondary-amber text-white font-headline text-[12px] tracking-[0.22em] uppercase font-semibold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,85,65,0.3)] active:scale-[0.98] transition-transform" id="modal-commit-btn">
+<span>Inject Lens Into Concept Arena</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="w-full h-11 rounded-full bg-white/[0.03] border border-white/10 hover:border-white/20 text-on-surface-subtle hover:text-white font-mono text-[10px] tracking-[0.2em] uppercase transition-colors" id="modal-dismiss-btn">
+          Return to Overview
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function initMonteCarloEngine(){
+  const openBtn = document.getElementById('open-monte-carlo-btn');
+  const modal = document.getElementById('monte-carlo-modal');
+  const sheet = document.getElementById('monte-carlo-sheet');
+  const closeBtn = document.getElementById('close-monte-carlo-btn');
+  const dismissBtn = document.getElementById('dismiss-monte-carlo-btn');
+  const confirmBtn = document.getElementById('confirm-scenario-btn');
+  const scrim = document.getElementById('monte-carlo-scrim');
+
+  const recalcBtn = document.getElementById('recalc-monte-carlo-btn');
+  const recalcSpinner = document.getElementById('recalc-spinner');
+  const recalcIcon = document.getElementById('recalc-icon');
+  const recalcText = document.getElementById('recalc-btn-text');
+
+  // Metrics elements
+  const meanYield = document.getElementById('mc-mean-yield');
+  const downsideFloor = document.getElementById('mc-downside-floor');
+  const upsideYield = document.getElementById('mc-upside-yield');
+  const profitProb = document.getElementById('mc-profit-prob');
+
+  // Curve and SVG elements
+  const curveArea = document.getElementById('mc-curve-area');
+  const curveStroke = document.getElementById('mc-curve-stroke');
+  const peakLine = document.getElementById('mc-peak-line');
+  const peakDot = document.getElementById('mc-peak-dot');
+  const p95Line = document.getElementById('mc-p95-line');
+  const p05Line = document.getElementById('mc-p05-line');
+  const ciBand = document.getElementById('mc-ci-band');
+
+  // Badges over curve
+  const badgeP50 = document.getElementById('mc-badge-p50');
+  const badgeP95 = document.getElementById('mc-badge-p95');
+  const badgeP05 = document.getElementById('mc-badge-p05');
+  const axisMedian = document.getElementById('mc-axis-median');
+
+  // Stress Multiplier interactive controls
+  const stressSlider = document.getElementById('stress-slider');
+  const stressValDisplay = document.getElementById('stress-val-display');
+  const stressBadge = document.getElementById('stress-badge');
+  const stressBadgePip = document.getElementById('stress-badge-pip');
+  const stressMeterIcon = document.getElementById('stress-meter-icon');
+  const stressGlowAccent = document.getElementById('stress-glow-accent');
+  const stressPresetBtns = document.querySelectorAll('.stress-preset-btn');
+  const scenarioImpactVals = document.querySelectorAll('.scenario-impact-val');
+  const compoundRiskTag = document.getElementById('compound-risk-tag');
+  const compoundRiskBar = document.getElementById('compound-risk-bar');
+
+  // Baseline calibration values
+  const BASELINE = {
+    mean: 32.8,
+    downside: 14.2,
+    upside: 58.4,
+    profitProb: 98.7,
+    compoundDeflect: -0.8
+  };
+
+  let currentStress = 1.0;
+  let randomOffset = 0;
+
+  function recalculateWithStress(stress, offset = 0) {
+    currentStress = parseFloat(stress);
+
+    // Dynamic calculations responding to stress intensity
+    // P95 Downside Floor drops sharply under black-swan stress (down to +2.4% or +4.1%)
+    const downDelta = (currentStress - 1.0) * 11.2;
+    const calcDown = Math.max(1.8, (BASELINE.downside - downDelta + offset * 0.3)).toFixed(1);
+
+    // Mean net yield softens under high stress
+    const meanDelta = (currentStress - 1.0) * 8.4;
+    const calcMean = (BASELINE.mean - meanDelta + offset).toFixed(1);
+
+    // Upside dampens under extreme friction
+    const upDelta = (currentStress - 1.0) * 6.2;
+    const calcUp = (BASELINE.upside - upDelta + offset * 1.2).toFixed(1);
+
+    // Probability of profit
+    const probDelta = (currentStress - 1.0) * 5.8;
+    const calcProb = Math.min(99.8, Math.max(89.2, (BASELINE.profitProb - probDelta + offset * 0.1))).toFixed(1);
+
+    // Update DOM metrics
+    if (meanYield) meanYield.textContent = `+${calcMean}%`;
+    if (downsideFloor) downsideFloor.textContent = `+${calcDown}%`;
+    if (upsideYield) upsideYield.textContent = `+${calcUp}%`;
+    if (profitProb) profitProb.textContent = `${calcProb}%`;
+
+    // Dynamic Stress Badge & Styling
+    let badgeText = `${currentStress.toFixed(1)}x NOMINAL`;
+    let glowOpacity = '0.15';
+    let pipColor = '#2b99d3';
+    let badgeBorder = 'border-white/10';
+    let badgeTextColor = 'text-white';
+    let meterRotate = 'rotate-0';
+
+    if (currentStress < 0.8) {
+      badgeText = `${currentStress.toFixed(1)}x BENIGN`;
+      pipColor = '#88ceff';
+      glowOpacity = '0.08';
+      meterRotate = '-rotate-45';
+    } else if (currentStress <= 1.15) {
+      badgeText = `${currentStress.toFixed(1)}x NOMINAL`;
+      pipColor = '#2b99d3';
+      glowOpacity = '0.15';
+      meterRotate = 'rotate-0';
+    } else if (currentStress <= 1.7) {
+      badgeText = `${currentStress.toFixed(1)}x ELEVATED`;
+      pipColor = '#ff9254';
+      glowOpacity = '0.35';
+      badgeBorder = 'border-[#ff9254]/40';
+      badgeTextColor = 'text-[#ffb59a]';
+      meterRotate = 'rotate-45';
+    } else {
+      badgeText = `${currentStress.toFixed(1)}x BLACK SWAN`;
+      pipColor = '#ff5541';
+      glowOpacity = '0.65';
+      badgeBorder = 'border-[#ff5541]/60 shadow-[0_0_12px_rgba(255,85,65,0.4)]';
+      badgeTextColor = 'text-[#ff5541]';
+      meterRotate = 'rotate-90';
+    }
+
+    if (stressValDisplay) {
+      stressValDisplay.textContent = badgeText;
+      stressValDisplay.className = `${badgeTextColor} transition-colors duration-300`;
+    }
+    if (stressBadgePip) {
+      stressBadgePip.style.backgroundColor = pipColor;
+    }
+    if (stressBadge) {
+      stressBadge.className = `flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#1b1c20] ${badgeBorder} transition-all duration-300 font-mono text-[10.5px] font-bold`;
+    }
+    if (stressGlowAccent) {
+      stressGlowAccent.style.opacity = glowOpacity;
+    }
+    if (stressMeterIcon) {
+      stressMeterIcon.style.transform = meterRotate === 'rotate-0' ? 'rotate(0deg)' : meterRotate === '-rotate-45' ? 'rotate(-40deg)' : meterRotate === 'rotate-45' ? 'rotate(45deg)' : 'rotate(90deg)';
+      stressMeterIcon.style.color = pipColor;
+    }
+
+    // Dynamic Bell Curve adjustment
+    // High stress pushes peak leftward (lower yield) and flattens/stretches downside tail
+    const peakX = Math.round(210 - (currentStress - 1.0) * 35);
+    const p95X = Math.round(Math.max(40, 105 - (currentStress - 1.0) * 45));
+    const p05X = Math.round(Math.min(370, 315 - (currentStress - 1.0) * 15));
+    const peakY = Math.round(14 + (currentStress - 1.0) * 10); // slightly flatter peak
+
+    const pathD = `M 20 110 C 60 110, ${p95X} 102, ${peakX - 50} 78 C ${peakX - 25} 52, ${peakX - 12} ${peakY}, ${peakX} ${peakY} C ${peakX + 15} ${peakY}, ${peakX + 35} 58, ${p05X - 30} 82 C ${p05X} 102, 350 110, 380 110`;
+    const areaD = `${pathD} Z`;
+
+    if (curveStroke) curveStroke.setAttribute('d', pathD);
+    if (curveArea) curveArea.setAttribute('d', areaD);
+    if (peakLine) {
+      peakLine.setAttribute('x1', peakX);
+      peakLine.setAttribute('x2', peakX);
+      peakLine.setAttribute('y1', peakY);
+    }
+    if (peakDot) {
+      peakDot.setAttribute('cx', peakX);
+      peakDot.setAttribute('cy', peakY);
+    }
+    if (p95Line) {
+      p95Line.setAttribute('x1', p95X);
+      p95Line.setAttribute('x2', p95X);
+    }
+    if (p05Line) {
+      p05Line.setAttribute('x1', p05X);
+      p05Line.setAttribute('x2', p05X);
+    }
+    if (ciBand) {
+      ciBand.setAttribute('x', p95X);
+      ciBand.setAttribute('width', Math.max(20, p05X - p95X));
+    }
+
+    // Update curve label badges
+    if (badgeP50) {
+      badgeP50.textContent = `P50: +${calcMean}%`;
+      badgeP50.style.left = `${(peakX / 400) * 100}%`;
+    }
+    if (badgeP95) {
+      badgeP95.textContent = `P95: +${calcDown}%`;
+      badgeP95.style.left = `${(p95X / 400) * 100}%`;
+    }
+    if (badgeP05) {
+      badgeP05.textContent = `P05: +${calcUp}%`;
+      badgeP05.style.left = `${(p05X / 400) * 100}%`;
+    }
+    if (axisMedian) {
+      axisMedian.textContent = `+${Math.round(calcMean)}% (Median)`;
+    }
+
+    // Dynamic Scenario Impact Recalculation
+    const scenarioCards = document.querySelectorAll('.stress-card');
+    scenarioCards.forEach(card => {
+      const baseVal = parseFloat(card.dataset.baseImpact);
+      const valEl = card.querySelector('.scenario-impact-val');
+      if (valEl && !isNaN(baseVal)) {
+        if (baseVal < 0) {
+          // Negative shocks worsen with stress
+          const shock = (baseVal * currentStress).toFixed(1);
+          valEl.textContent = `${shock}% NET MARGIN`;
+        } else {
+          // Positive upside dampens under high friction or scales
+          const mult = currentStress > 1.0 ? Math.max(0.7, 1.0 - (currentStress - 1.0) * 0.25) : 1.1;
+          const upside = (baseVal * mult).toFixed(1);
+          valEl.textContent = `+${upside}% ${card.dataset.category === 'demand' ? 'NET YIELD' : 'NET MARGIN'}`;
+        }
+      }
+    });
+
+    // Compound Deflection calculation
+    const compoundDeflection = (BASELINE.compoundDeflect * currentStress * 1.35).toFixed(1);
+    if (compoundRiskTag) {
+      compoundRiskTag.textContent = `${compoundDeflection}% NET MARGIN ATTENUATION`;
+    }
+    if (compoundRiskBar) {
+      const riskBarWidth = Math.min(96, Math.max(25, 45 + currentStress * 22));
+      compoundRiskBar.style.width = `${riskBarWidth}%`;
+    }
+  }
+
+  // Slider event listener
+  if (stressSlider) {
+    stressSlider.addEventListener('input', (e) => {
+      const val = parseFloat(e.target.value);
+      // Unset preset buttons
+      stressPresetBtns.forEach(b => {
+        b.classList.remove('active', 'bg-[#ff5541]/15', 'border-primary/40', 'text-primary', 'font-semibold', 'shadow-[0_0_8px_rgba(255,85,65,0.2)]');
+        b.classList.add('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+      });
+      recalculateWithStress(val, randomOffset);
+    });
+  }
+
+  // Preset buttons
+  stressPresetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      stressPresetBtns.forEach(b => {
+        b.classList.remove('active', 'bg-[#ff5541]/15', 'border-primary/40', 'text-primary', 'font-semibold', 'shadow-[0_0_8px_rgba(255,85,65,0.2)]');
+        b.classList.add('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+      });
+      btn.classList.add('active', 'bg-[#ff5541]/15', 'border-primary/40', 'text-primary', 'font-semibold', 'shadow-[0_0_8px_rgba(255,85,65,0.2)]');
+      btn.classList.remove('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+
+      const presetStress = parseFloat(btn.dataset.stress);
+      if (stressSlider) stressSlider.value = presetStress;
+      recalculateWithStress(presetStress, randomOffset);
+    });
+  });
+
+  // Filter chips in stress test
+  const chipBtns = document.querySelectorAll('.stress-chip-btn');
+  const stressCards = document.querySelectorAll('.stress-card');
+  const activeCountTag = document.getElementById('stress-active-count');
+
+  chipBtns.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chipBtns.forEach(c => {
+        c.classList.remove('active', 'bg-surface-container-high', 'border-primary/30', 'text-white', 'shadow-sm');
+        c.classList.add('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+      });
+      chip.classList.add('active', 'bg-surface-container-high', 'border-primary/30', 'text-white', 'shadow-sm');
+      chip.classList.remove('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+
+      const cat = chip.dataset.cat;
+      let count = 0;
+      stressCards.forEach(card => {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = 'flex';
+          count++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (activeCountTag) {
+        activeCountTag.textContent = `${count} ACTIVE SCENARIO${count !== 1 ? 'S' : ''}`;
+      }
+    });
+  });
+
+  // Re-run Monte Carlo Simulation button
+  if (recalcBtn) {
+    recalcBtn.addEventListener('click', () => {
+      if (recalcSpinner) recalcSpinner.style.display = 'inline-block';
+      if (recalcIcon) recalcIcon.style.display = 'none';
+      if (recalcText) recalcText.textContent = 'SIMULATING 10,000 PATHWAYS...';
+      recalcBtn.classList.add('opacity-75');
+
+      setTimeout(() => {
+        randomOffset = parseFloat((Math.random() * 2.4 - 1.2).toFixed(1));
+        recalculateWithStress(currentStress, randomOffset);
+
+        if (recalcSpinner) recalcSpinner.style.display = 'none';
+        if (recalcIcon) recalcIcon.style.display = 'inline-block';
+        if (recalcText) recalcText.textContent = 'RE-RUN 10,000 RUN ITERATIONS';
+        recalcBtn.classList.remove('opacity-75');
+      }, 550);
+    });
+  }
+
+  // Modal open / close handlers
+  function openModal(e) {
+    if (e) e.stopPropagation();
+    modal.classList.remove('invisible', 'pointer-events-none', 'opacity-0');
+    modal.classList.add('pointer-events-auto', 'opacity-100');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => {
+      sheet.classList.remove('translate-y-full', 'sm:translate-y-8');
+      sheet.classList.add('translate-y-0');
+    });
+  }
+
+  function closeModal() {
+    sheet.classList.remove('translate-y-0');
+    sheet.classList.add('translate-y-full', 'sm:translate-y-8');
+    modal.classList.remove('opacity-100');
+    modal.classList.add('opacity-0');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      modal.classList.add('invisible', 'pointer-events-none');
+      modal.classList.remove('pointer-events-auto');
+    }, 300);
+  }
+
+  if (openBtn) openBtn.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (dismissBtn) dismissBtn.addEventListener('click', closeModal);
+  if (scrim) scrim.addEventListener('click', closeModal);
+
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', () => {
+      confirmBtn.classList.add('scale-95');
+      setTimeout(() => {
+        confirmBtn.classList.remove('scale-95');
+        closeModal();
+      }, 200);
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('invisible')) {
+      closeModal();
+    }
+  });
+
+  // Initial calculation run
+  recalculateWithStress(1.0, 0);
+})();
+</script>
+</body></html>

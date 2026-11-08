@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary":"#ffb4a1","on-background":"#e3e2e5","surface-bright":"#38393b","tertiary-fixed":"#e5e2db","on-secondary":"#611300","on-tertiary-container":"#2a2a25","on-secondary-fixed-variant":"#881f00","surface-variant":"#343537","on-surface-variant":"#e6bdb7","surface-tint":"#ffb4a8","on-primary-container":"#5c0000","surface-container-high":"#292a2c","outline":"#ad8882","on-primary":"#690000","background":"#121315","error-container":"#93000a","tertiary":"#c9c6c0","tertiary-fixed-dim":"#c9c6c0","inverse-on-surface":"#303033","surface":"#121315","primary":"#ffb4a8","tertiary-container":"#92918b","surface-dim":"#121315","on-secondary-fixed":"#3c0800","surface-container-low":"#1b1c1e","primary-fixed":"#ffdad4","inverse-primary":"#bf0904","on-primary-fixed-variant":"#930000","outline-variant":"#5d403b","on-tertiary-fixed-variant":"#474742","error":"#ffb4ab","on-error-container":"#ffdad6","on-secondary-container":"#ffa58d","on-error":"#690005","surface-container-lowest":"#0d0e10","on-primary-fixed":"#410000","primary-container":"#ff5541","inverse-surface":"#e3e2e5","secondary-fixed":"#ffdbd2","on-tertiary-fixed":"#1c1c18","primary-fixed-dim":"#ffb4a8","secondary-container":"#912100","on-tertiary":"#31312c","surface-container":"#1f2022","on-surface":"#e3e2e5","secondary-fixed-dim":"#ffb4a1","surface-container-highest":"#343537"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","margin-lg":"3.5rem","space-sm":"0.5rem","gutter-lg":"2rem","space-lg":"1.5rem","margin-sm":"1rem","gutter-sm":"0.75rem","margin":"2rem","gutter":"1.25rem"},"fontFamily":{"headline-md":["Playfair Display"],"display-lg":["Playfair Display"],"display-md":["Playfair Display"],"label-sm":["JetBrains Mono"],"label-md":["JetBrains Mono"],"label-lg":["Inter"],"display-md-mobile":["Playfair Display"],"headline-sm":["Inter"],"display-lg-mobile":["Playfair Display"],"body-lg":["Inter"],"code-timecode":["JetBrains Mono"],"headline-lg":["Playfair Display"],"body-md":["Inter"],"body-sm":["Inter"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"display-md":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-md-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"code-timecode":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/95 backdrop-blur-2xl z-50 flex flex-col shadow-[0_20px_48px_-8px_rgba(0,0,0,0.85)]"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 bg-primary rounded-none rotate-45"></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-headline-md">FX2 / DESCENT</span></div><span class="font-label-sm text-label-sm text-tertiary px-space-xs py-0.5 bg-surface-container-high rounded">V1.0</span></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Strata Traversal</div><nav class="space-y-1" data-active-classes="bg-surface-container-high text-primary font-semibold shadow-[inset_2px_0_0_0_#ffb4a8]"><a class="group flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="stratum-01-light-table" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline group-hover:text-tertiary">01</span><span class="font-label-md text-label-md">The Light Table</span></div><span class="font-code-timecode text-label-sm text-outline group-hover:text-tertiary">Z: 0.00m</span></a><a class="group flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="stratum-02-glass-frames" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline group-hover:text-tertiary">02</span><span class="font-label-md text-label-md">Glass Frames</span></div><span class="font-code-timecode text-label-sm text-outline group-hover:text-tertiary">Z: -120m</span></a><a class="group flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="stratum-03-film-hybrid" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline group-hover:text-tertiary">03</span><span class="font-label-md text-label-md">Film Hybrid</span></div><span class="font-code-timecode text-label-sm text-outline group-hover:text-tertiary">Z: -240m</span></a><a class="group flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="stratum-04-the-paper" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline group-hover:text-tertiary">04</span><span class="font-label-md text-label-md">The Paper</span></div><span class="font-code-timecode text-label-sm text-outline group-hover:text-tertiary">Z: -360m</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Inspection Modules</div><nav class="space-y-1" data-active-classes="bg-surface-container-high text-primary font-semibold shadow-[inset_2px_0_0_0_#ffb4a8]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="origin-root-audit" href="#"><span class="font-label-md text-label-md">Origin Root Audit</span><span class="w-1.5 h-1.5 bg-outline rounded-none rotate-45"></span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="evidence-trace" href="#"><span class="font-label-md text-label-md">Evidence Trace</span><span class="w-1.5 h-1.5 bg-outline rounded-none rotate-45"></span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="insight-territory-lineage" href="#"><span class="font-label-md text-label-md">Insight-Territory Lineage</span><span class="w-1.5 h-1.5 bg-outline rounded-none rotate-45"></span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="technical-reconciliation" href="#"><span class="font-label-md text-label-md">Technical Reconciliation</span><span class="w-1.5 h-1.5 bg-outline rounded-none rotate-45"></span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="quarantine-audit" href="#"><span class="font-label-md text-label-md">Quarantine Audit</span><span class="w-1.5 h-1.5 bg-outline rounded-none rotate-45"></span></a></nav></div></div><div class="p-space-md bg-surface-container-low/70"><div class="flex items-center justify-between text-on-surface-variant"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">SMPTE ENGINE</span><span class="font-code-timecode text-label-sm text-on-surface">24 FPS NDF MASTER</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-high text-primary rounded">LOCKED</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-sm font-label-md text-label-md" data-active-classes="text-primary font-semibold"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="stratum-01-light-table" href="#">Stratum 01</a><span class="text-outline font-label-sm text-label-sm">/</span><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="origin-root-audit" href="#">Origin Root</a><span class="text-outline font-label-sm text-label-sm">/</span><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="quarantine-audit" href="#">Console</a></nav><div class="hidden xl:flex items-center gap-space-md px-space-md py-1 bg-surface-container-low rounded-none"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-outline">VECTOR:</span><span class="font-code-timecode text-code-timecode text-on-surface">Z: 0.00m</span></div><div class="w-px h-3 bg-surface-container-high"></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-outline">SMPTE:</span><span class="font-code-timecode text-code-timecode text-secondary">00:00:11:04 NDF</span></div></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm px-space-sm py-1 bg-surface-container-lowest rounded"><div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div><span class="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">[7d18a4c COLD QUARANTINE]</span></div><div class="flex items-center gap-space-md"><button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">terminal</span></button><button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-background min-h-screen w-full px-space-lg"><div class="flex flex-col w-full pb-space-xl space-y-space-xl">
+<!-- Telemetry Sub-Header & Bedrock Spatial Anchor -->
+<div class="relative bg-surface-container-lowest p-space-lg rounded-none shadow-xl overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/10 via-transparent to-transparent pointer-events-none"></div>
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md relative z-10">
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-0.5 bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-widest">
+<span class="w-1.5 h-1.5 bg-primary animate-ping inline-block"></span>
+            RATIFIED &amp; EXPORT READY
+          </span>
+<span class="font-code-timecode text-label-sm text-outline">LOC: STRATUM 01 // ORIGIN BEDROCK (Z = 0.00m)</span>
+<span class="text-surface-container-highest">•</span>
+<span class="font-code-timecode text-label-sm text-tertiary">SUBSTRATE: FROSTED QUARTZ 5500K / 1800 cd/m²</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Final Technical Reconciliation &amp; Master Provenance Audit</h1>
+<p class="font-body-sm text-body-sm text-tertiary max-w-4xl">
+          Comprehensive parity lock between brief directive BRF-84-ALPHA, intermediate optical matrices, and canonical audio-visual commits. Traversal vector anchored at origin stage.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm bg-surface-container-low p-space-sm rounded-none">
+<div class="flex flex-col px-space-sm py-1 bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">INTERFACE STATE</span>
+<span class="font-label-md text-label-md text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+            ARMED // WRITE FORBIDDEN
+          </span>
+</div>
+<div class="flex flex-col px-space-sm py-1 bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">SMPTE NDF MASTER</span>
+<span class="font-code-timecode text-code-timecode text-secondary">00:00:11:04</span>
+</div>
+<button class="px-space-md py-2 bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-space-xs hover:bg-primary-container transition-all shadow-md" onclick="scrollToExport()">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+          Export Audit Staging
+        </button>
+</div>
+</div>
+<!-- Micro telemetry row -->
+<div class="mt-space-md pt-space-sm bg-surface-container-low/40 px-space-md py-space-xs flex flex-wrap items-center justify-between gap-space-md font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-space-md">
+<span>SECURITY SEAL: <strong class="text-on-surface font-code-timecode">ECDSA_SECP256K1_SIM</strong></span>
+<span>MERKLE ROOT: <strong class="text-secondary font-code-timecode">0x9a2f1c8...7d18a4c</strong></span>
+<span>INSPECTION PASS RATE: <strong class="text-primary font-code-timecode">10/10 (100.0%)</strong></span>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[13px] text-primary">warning</span>
+<span>NON-DESTRUCTIVE INTERFACE PREVIEW ONLY // PHYSICAL MUTATION RESTRICTED</span>
+</div>
+</div>
+</div>
+<!-- SECTION 01: Authoritative Delivery Standard & 4-Pillar Grid -->
+<section class="space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase">Pillar 01 / Architectural Mandate</span>
+<span class="text-outline">•</span>
+<span class="font-code-timecode text-label-sm text-outline">ISO/IEC DCI SCOPE SPEC</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Authoritative Primary Delivery Standard Reconciliation</h2>
+</div>
+<div class="inline-flex items-center gap-2 px-space-md py-1 bg-surface-container-high rounded-none">
+<span class="w-2 h-2 bg-primary rounded-none"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase">RATIFIED CONTAINER: <strong>2.39:1 CINEMASCOPE</strong> (BRF-84-ALPHA LOCKED)</span>
+</div>
+</div>
+<!-- 4-Pillar Strict Separation Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between space-y-space-md shadow-md relative group hover:bg-surface-container transition-colors">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>PILLAR 01</span>
+<span class="font-code-timecode">OPT-CAP-01</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Capture Format &amp; Lens</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Arri Alexa Mini LF Sensor Open Gate (36.70 x 25.54 mm) paired with Leica Noctilux 50mm T1.1 Spherical prime glass.</p>
+</div>
+<div class="space-y-1.5 pt-space-sm bg-surface-container-lowest/60 p-space-sm">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Optical Squeeze:</span>
+<span class="font-code-timecode text-on-surface">1.0x (Spherical)</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Circle of Confusion:</span>
+<span class="font-code-timecode text-on-surface">0.025mm Calibrated</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Lens Signature:</span>
+<span class="font-code-timecode text-secondary">Zero Anamorphic Vignette</span>
+</div>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between space-y-space-md shadow-md relative group hover:bg-surface-container transition-colors">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>PILLAR 02</span>
+<span class="font-code-timecode">PHY-GAUGE-65</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Physical Film Stock</h3>
+<p class="font-body-sm text-body-sm text-tertiary">65mm 5-Perf Intermediate Negative (48.59 x 22.10 mm native active gate). Strict physical intermediate medium, not projection standard.</p>
+</div>
+<div class="space-y-1.5 pt-space-sm bg-surface-container-lowest/60 p-space-sm">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Native Aperture Ratio:</span>
+<span class="font-code-timecode text-primary">2.20:1 Gate Native</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Perforation Pitch:</span>
+<span class="font-code-timecode text-on-surface">KS-1870 5-Perf</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Stock Conflation:</span>
+<span class="font-code-timecode text-on-surface-variant">0.00% Zero-Conflate</span>
+</div>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between space-y-space-md shadow-md relative group hover:bg-surface-container transition-colors">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>PILLAR 03</span>
+<span class="font-code-timecode">DST-DCI-SCOPE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Delivery Aspect Container</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Authoritative 2.39:1 Cinemascope container raster. Conforms unconditionally to ISO/DCI master digital cinema packages.</p>
+</div>
+<div class="space-y-1.5 pt-space-sm bg-surface-container-lowest/60 p-space-sm">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">2K Scope DCI:</span>
+<span class="font-code-timecode text-on-surface">2048 x 858 px</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">4K Scope DCI:</span>
+<span class="font-code-timecode text-secondary">4096 x 1716 px</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">UHD Archive:</span>
+<span class="font-code-timecode text-on-surface">3840 x 1608 (Letterbox)</span>
+</div>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between space-y-space-md shadow-md relative group hover:bg-surface-container transition-colors">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>PILLAR 04</span>
+<span class="font-code-timecode">COL-ACES-2383</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Color Pipeline &amp; LUT</h3>
+<p class="font-body-sm text-body-sm text-tertiary">ACEScc AP1 working color space with Kodak 2383 D65 print master emulation. Guaranteed theatrical parity with uncompromised dynamic headroom.</p>
+</div>
+<div class="space-y-1.5 pt-space-sm bg-surface-container-lowest/60 p-space-sm">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Working Primaries:</span>
+<span class="font-code-timecode text-on-surface">ACES AP1 Linear IDT</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Print Stock LUT:</span>
+<span class="font-code-timecode text-primary">Kodak 2383 Polyprint</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Global Contamination:</span>
+<span class="font-code-timecode text-on-surface-variant">0.00% Isolated</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Corrected Optical Extraction & Conversion Workflow Callout (Crucial Section) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-none shadow-xl space-y-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 bg-secondary rounded-none"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Geometric Optical Extraction Correction (65mm 5-Perf → 2.39:1 Scope)</span>
+</div>
+<span class="font-code-timecode text-label-sm px-space-sm py-1 bg-surface-container text-secondary">
+          MATHEMATICAL AUDIT RATIFICATION: RESOLVED
+        </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Interactive Geometric Diagram -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-md flex flex-col items-center justify-center relative">
+<div class="w-full text-center pb-2 font-label-sm text-label-sm text-outline flex items-center justify-between">
+<span>SCHEMATIC: EXTRACTION AXIS</span>
+<span class="text-secondary font-code-timecode">TOP/BOTTOM SHAVE</span>
+</div>
+<!-- SVG Diagram representing Vertical Extraction vs Invalid Horizontal Crop -->
+<svg class="w-full max-w-sm h-auto bg-surface-container-lowest p-2" fill="none" viewbox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+<!-- Native 65mm 5-perf 2.20:1 Outer Frame (48.59 x 22.10) scaled approx -->
+<rect fill="#1b1c1e" height="154.5" stroke="#ad8882" stroke-dasharray="3 3" stroke-width="1.5" width="340" x="30" y="30"></rect>
+<text fill="#ad8882" font-family="JetBrains Mono" font-size="10" x="35" y="45">Native 65mm Gate 2.20:1 (22.10mm)</text>
+<!-- Active 2.39:1 Extraction Aperture (48.59 x 20.33) -->
+<rect fill="#ffb4a8" fill-opacity="0.08" height="130" stroke="#ffb4a8" stroke-width="2" width="340" x="30" y="42.25"></rect>
+<text fill="#ffb4a8" font-family="JetBrains Mono" font-size="12" font-weight="600" x="35" y="110">Active 2.39:1 Scope Window (20.33mm)</text>
+<!-- Headroom crop indicator (top) -->
+<rect fill="#912100" fill-opacity="0.45" height="12.25" width="340" x="30" y="30"></rect>
+<text fill="#ffb4a1" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="200" y="39">▲ Top Crop: -3.975% (-0.885mm)</text>
+<!-- Footroom crop indicator (bottom) -->
+<rect fill="#912100" fill-opacity="0.45" height="12.25" width="340" x="30" y="172.25"></rect>
+<text fill="#ffb4a1" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="200" y="181">▼ Bottom Crop: -3.975% (-0.885mm)</text>
+<!-- Dimension callouts -->
+<line stroke="#c9c6c0" stroke-width="1" x1="30" x2="370" y1="200" y2="200"></line>
+<path d="M30 196v8M370 196v8" stroke="#c9c6c0" stroke-width="1"></path>
+<text fill="#c9c6c0" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="200" y="215">Full Horizontal Width Preserved: 48.59 mm (100.0%)</text>
+</svg>
+<div class="w-full text-center pt-2 font-code-timecode text-label-sm text-outline">
+            Active Extraction Area: <span class="text-on-surface">48.59 x 20.33 mm</span> (Total Vertical Trim: 7.95%)
+          </div>
+</div>
+<!-- Technical Description & Clarification Text -->
+<div class="lg:col-span-7 space-y-space-sm font-body-sm text-body-sm text-tertiary leading-relaxed">
+<div class="p-space-sm bg-surface-container-high rounded-none">
+<span class="font-label-md text-label-md text-primary uppercase block mb-1">Crucial Geometry Audit Resolution:</span>
+<p class="text-on-surface">
+              A <strong>2.20:1</strong> frame cannot become <strong>2.39:1</strong> through horizontal cropping. Because 2.20:1 is <em>taller and narrower</em> than 2.39:1 (ratio 2.20 &lt; 2.39), cropping the horizontal sides would increase vertical height proportionally, driving the ratio even narrower towards 1.85:1 or 1.43:1.
+            </p>
+</div>
+<p>
+            To fit a native 65mm 5-perf aperture (48.59 x 22.10 mm) into a DCI 2.39:1 Scope master, laboratory engineers must perform a <strong class="text-on-surface">TOP/BOTTOM VERTICAL EXTRACTION</strong>. This removes approximately <strong>7.95%</strong> total vertical height (symmetrical ~3.975% headroom and footroom trim) to yield an active photogram of <strong>48.59 x 20.33 mm</strong>.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-none text-outline font-code-timecode text-label-sm">
+<span class="text-secondary block font-semibold mb-0.5">HISTORICAL ERRATA NOTE // DRAFT V0.9 CORRECTION:</span>
+            "The previously drafted 1.086x crop was technically incomplete because it failed to specify the extraction axis: 65mm 5-perf (2.20:1) requires vertical top/bottom extraction (symmetrical headroom protect) or 1.086x anamorphic optical expansion along the horizontal axis in print transfer."
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02 & SECTION 03: Split Bento (Technicolor Isolation & Provenance DAG) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Section 02: Technicolor 3-Strip Disposition (5 cols) -->
+<section class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-none shadow-md space-y-space-md flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">PIPELINE CONFINEMENT</span>
+<span class="font-code-timecode text-label-sm text-outline">Z: -240.00m ONLY</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Technicolor 3-Strip Confinement Resolution</h2>
+<p class="font-body-sm text-body-sm text-tertiary">
+          Technicolor Process 4 dye-transfer split emulation is formally quarantined to <strong class="text-on-surface">Stratum 03 (Film Hybrid, Z = -240.00m)</strong>. It is strictly active during Vance subjective memory slips and synthetic hallucination sequences.
+        </p>
+<!-- Wavelength Emulsion Bar Breakdown -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="text-outline font-label-sm text-label-sm flex justify-between">
+<span>DYE MATRIX RECORDERS</span>
+<span class="font-code-timecode">3-STRIP PRISM BEAM SPLIT</span>
+</div>
+<div class="space-y-1.5 font-label-sm text-label-sm">
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs px-space-sm">
+<span class="text-primary flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-primary-container"></span>
+                Cyan Record Matrix (Red Filter)
+              </span>
+<span class="font-code-timecode text-outline">650 nm Peak</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs px-space-sm">
+<span class="text-secondary flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-secondary-container"></span>
+                Magenta Record Matrix (Green Filter)
+              </span>
+<span class="font-code-timecode text-outline">540 nm Peak</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs px-space-sm">
+<span class="text-tertiary-fixed flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-surface-bright"></span>
+                Yellow Record Matrix (Blue Filter)
+              </span>
+<span class="font-code-timecode text-outline">440 nm Peak</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-none space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface">Zero Global Contamination Ratified</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+          Primary delivery master renders unconditionally through standard ACEScc AP1 with Kodak 2383 D65 print LUT. Zero dye misregistration bleed permitted into Stratum 01.
+        </p>
+</div>
+</section>
+<!-- Section 03: Canonical Lineage & Take 04 Quarantine (7 cols) -->
+<section class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-none shadow-md space-y-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">CANONICAL PROVENANCE DAG</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Take 03 Canonical Lock vs. Take 04 Cold Quarantine</h2>
+</div>
+<span class="font-code-timecode text-label-sm px-space-xs py-0.5 bg-surface-container-high text-primary">IMMUTABLE LINEAGE</span>
+</div>
+<!-- Lineage Flow Diagram -->
+<div class="bg-surface-container-lowest p-space-md space-y-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-2 font-label-sm text-label-sm">
+<span class="px-2 py-1 bg-surface-container text-tertiary">BRF-84-ALPHA</span>
+<span class="text-outline">→</span>
+<span class="px-2 py-1 bg-surface-container text-tertiary">Concept B (Architecture of Silence)</span>
+<span class="text-outline">→</span>
+<span class="px-2 py-1 bg-surface-container text-tertiary">Scene 04</span>
+<span class="text-outline">→</span>
+<span class="px-2 py-1 bg-primary text-on-primary font-semibold">Take 03 [9a2f1c8]</span>
+</div>
+<!-- Comparative Disposition Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Take 03: Canonical -->
+<div class="bg-surface-container p-space-md space-y-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">CANONICAL PRINCIPAL CUT</span>
+<span class="font-code-timecode text-label-sm text-on-surface">Commit 9a2f1c8</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface italic leading-snug">
+              “We aren’t falling through space. We’re falling through memory.”
+            </div>
+<div class="space-y-1 font-label-sm text-label-sm pt-2 bg-surface-container-low/70 p-2">
+<div class="flex justify-between text-outline">
+<span>Vocal Formant Anchor:</span>
+<span class="font-code-timecode text-on-surface">435 Hz Grounded</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>Loudness Compliance:</span>
+<span class="font-code-timecode text-secondary">-28.4 LUFS BWF</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>Disposition:</span>
+<span class="font-code-timecode text-primary uppercase font-bold">Primary Master Locked</span>
+</div>
+</div>
+</div>
+<!-- Take 04: Quarantined -->
+<div class="bg-surface-container p-space-md space-y-space-sm relative opacity-90">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-semibold">PERMANENT COLD QUARANTINE</span>
+<span class="font-code-timecode text-label-sm text-outline">Commit 7d18a4c</span>
+</div>
+<div class="font-headline-md text-headline-md text-outline italic leading-snug">
+              “We aren’t descending through the dark. The dark is descending through us.”
+            </div>
+<div class="space-y-1 font-label-sm text-label-sm pt-2 bg-surface-container-low/70 p-2">
+<div class="flex justify-between text-outline">
+<span>Quarantine Sub-Vault:</span>
+<span class="font-code-timecode text-tertiary">Sub-Vault 02 Isolated</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>Mutation Protocol:</span>
+<span class="font-code-timecode text-primary">ZERO PURGE / ZERO MERGE</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>Historical Status:</span>
+<span class="font-code-timecode text-tertiary">Parallel Branch Intact</span>
+</div>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">
+          Strict non-destructive provenance rule enforced: Both audio takes exist simultaneously in repository storage. Take 04 draft 04.3 remains physically unpurged and auditable, but isolated from downstream theatrical DCP generation.
+        </p>
+</div>
+</section>
+</div>
+<!-- SECTION 04: Full Stratum 01 Audit Export Package (Dual MD & PDF) -->
+<section class="bg-surface-container-lowest p-space-lg rounded-none shadow-2xl space-y-space-lg" id="export-staging-section">
+<!-- Terminal Header & Export Actions -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container p-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="text-primary uppercase tracking-widest font-semibold">EXPORT STAGING TERMINAL</span>
+<span class="text-outline">/</span>
+<span class="text-tertiary font-code-timecode">TARGET: DUAL DISTRIBUTION PAYLOAD</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Audit Export Package: FX2_STRATUM01_AUDIT_REPORT_V1.0</h2>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-2 bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md uppercase tracking-wider flex items-center gap-2 transition-all" id="btn-download-md" onclick="downloadMarkdown()">
+<span class="material-symbols-outlined text-[16px] text-secondary">terminal</span>
+<span>Download Markdown (.md)</span>
+</button>
+<button class="px-space-md py-2 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider flex items-center gap-2 transition-all shadow-md" id="btn-download-pdf" onclick="generatePdfSimulation()">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Download Audit PDF (.pdf)</span>
+</button>
+</div>
+</div>
+<!-- Export Readiness Checklist -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-space-sm p-space-md bg-surface-container-low font-label-sm text-label-sm">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_box</span>
+<span>01. Bedrock Parity</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_box</span>
+<span>02. 2.39:1 Ratification</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_box</span>
+<span>03. Vertical Trim Check</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_box</span>
+<span>04. 3-Strip Quarantined</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_box</span>
+<span>05. Take 03 Anchor Locked</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_box</span>
+<span>06. Take 04 Cold-Stored</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_box</span>
+<span>07. DAG Cryptographic Proof</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_box</span>
+<span>08. SMPTE 24fps NDF Valid</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_box</span>
+<span>09. Non-Destructive Armed</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span>10/10 Readiness 100%</span>
+</div>
+</div>
+<!-- Complete In-Browser Document Inspector -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs text-outline font-label-sm text-label-sm">
+<span>AUTHORITATIVE IN-BROWSER DOCUMENT AUDIT INSPECTOR (LIVE EMBED)</span>
+<span class="font-code-timecode text-tertiary">CHECKSUM: SHA-256 [0x92f...a18c]</span>
+</div>
+<div class="bg-surface p-space-lg md:p-space-xl rounded-none shadow-inner max-h-[640px] overflow-y-auto space-y-space-lg">
+<!-- Document Title Block -->
+<div class="space-y-space-xs bg-surface-container-lowest p-space-md">
+<div class="font-code-timecode text-label-sm text-outline">DOCUMENT ID: FX2-STRATUM01-AUDIT-2025-V1.0</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">AUDIT REPORT: STRATUM 01 ORIGIN RECONCILIATION</h3>
+<div class="flex flex-wrap gap-x-space-md gap-y-1 font-label-sm text-label-sm text-tertiary pt-2">
+<span>DIRECTOR: J. VANCE</span>
+<span>SYSTEM: FX2 / DESCENT OS</span>
+<span>STATUS: CANONICAL RATIFIED</span>
+<span>DATE OF ARCHIVAL: 2025.10.14</span>
+</div>
+</div>
+<!-- Document Table of Contents -->
+<div class="p-space-md bg-surface-container-low space-y-2">
+<div class="font-label-sm text-label-sm text-primary uppercase font-bold">DOCUMENT STRUCTURE (8 AUDIT SECTIONS):</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-md gap-y-1 font-label-md text-label-md text-tertiary">
+<div>§ 1. Original Brief Thesis &amp; Verbatim Mandates</div>
+<div>§ 5. Canonical Provenance DAG &amp; Dialogue Archive</div>
+<div>§ 2. Root Preservation &amp; Downstream Drift</div>
+<div>§ 6. Technical Reconciliation: 4 Pillars &amp; Scope</div>
+<div>§ 3. Epistemological Research Tiers (A, B, C)</div>
+<div>§ 7. Creative Emulation Confinement</div>
+<div>§ 4. Insight-to-Territory Lineage Trace</div>
+<div>§ 8. Open Editorial Status &amp; Simulation Seal</div>
+</div>
+</div>
+<!-- Section 1 -->
+<div class="space-y-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">§ 1. Original Brief Thesis &amp; Verbatim Mandates 01–04</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Directive BRF-84-ALPHA establishes the foundational axiom: visual and acoustic descent across subterranean strata must represent cognitive compression rather than physical cartographic depth. Verbatim mandate 01 fixes sensor capture at full uncompressed raw resolution; mandate 02 establishes strict dynamic range allocation across highlights; mandate 03 enforces zero synthetic spatial interpolation between disparate physical film layers; mandate 04 ratifies 2.39:1 Cinemascope as the single delivery standard for archival theatrical projection.
+          </p>
+</div>
+<!-- Section 2 -->
+<div class="space-y-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">§ 2. Root Preservation &amp; Downstream Drift Analysis</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Continuous diagnostic scans of downstream branches flagged early conceptual divergence in Concept A (The Chasm), which conflated psychological weight with arbitrary camera velocity. Furthermore, dialogue revision draft 04.3 introduced speculative monologue ("The dark is descending through us") lacking acoustic anchorage. Both drift vectors were detected at Stratum 02 inspection checkpoints and quarantined prior to master integration.
+          </p>
+</div>
+<!-- Section 3 -->
+<div class="space-y-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">§ 3. Epistemological Research Tiers</h4>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold block">Tier A: Empirical</span>
+<p class="font-body-sm text-body-sm text-tertiary">Laboratory spectrophotometry, Arri Alexa LF photosite noise floors, and SMPTE BWF acoustic metadata.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold block">Tier B: Directorial</span>
+<p class="font-body-sm text-body-sm text-tertiary">Auteur notes regarding silence, temporal suspension, and Vance's interior mental landscape.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-tertiary-fixed uppercase font-bold block">Tier C: Hypotheses</span>
+<p class="font-body-sm text-body-sm text-tertiary">Speculative optical aberrations and dye bleed models explored in Stratum 03.</p>
+</div>
+</div>
+</div>
+<!-- Section 4 -->
+<div class="space-y-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">§ 4. Insight-to-Territory Lineage &amp; Diagnostic Trace</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Every artistic texture in the master assembly has been back-propagated to an attested historical physical specimen. Light table quartz diffusion characteristics match empirical measurements taken from the 1968 Technicolor laboratory staging tables in London, ensuring that tactile translucency is an archival reality rather than arbitrary UI skeuomorphism.
+          </p>
+</div>
+<!-- Section 5 -->
+<div class="space-y-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">§ 5. Canonical Provenance DAG &amp; Dialogue Archive</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            The Directed Acyclic Graph (DAG) confirms commit <span class="font-code-timecode text-primary">9a2f1c8</span> (Take 03) as the canonical cut. Its dialogue ("We aren't falling through space. We're falling through memory.") adheres precisely to the 435 Hz formant resonance target. Commit <span class="font-code-timecode text-secondary">7d18a4c</span> (Take 04) remains isolated in Cold Quarantine Sub-Vault 02 with full audit history preserved. Zero repository branch truncation occurred.
+          </p>
+</div>
+<!-- Section 6 -->
+<div class="space-y-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">§ 6. Technical Reconciliation: 4 Pillars &amp; Corrected Vertical Extraction Geometry</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Delivery standard is locked at 2.39:1 Cinemascope (DCI 4096x1716 / 2048x858). Crucially, the mathematical extraction from 65mm 5-perf (2.20:1) to 2.39:1 Scope is resolved as a <strong>top/bottom vertical extraction of 7.95%</strong> (48.59 x 20.33 mm active aperture). The previous draft's mention of a 1.086x crop has been ratified: any horizontal crop would improperly narrow the field, confirming vertical headroom extraction as the sole optically accurate workflow.
+          </p>
+</div>
+<!-- Section 7 -->
+<div class="space-y-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">§ 7. Creative Emulation Confinement</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Technicolor 3-Strip prism emulations (Cyan 650nm, Magenta 540nm, Yellow 440nm) are confirmed strictly non-global. They operate exclusively within Stratum 03 subjective sequences. The global delivery pipeline remains purely anchored in ACEScc AP1 with Kodak 2383 D65 print LUT for pristine dynamic reproduction.
+          </p>
+</div>
+<!-- Section 8 -->
+<div class="space-y-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">§ 8. Open Editorial Status &amp; Non-Destructive Simulation Disclaimer</h4>
+<div class="p-space-md bg-surface-container-low rounded-none space-y-2">
+<div class="font-label-sm text-label-sm text-primary uppercase font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>SIMULATION DISCLAIMER &amp; INTEGRITY ATTESTATION:</span>
+</div>
+<p class="font-code-timecode text-body-sm text-tertiary leading-relaxed">
+              “All metrics, sensitometry curves, and acoustic indicators presented within this report represent interface simulation states in accordance with the FX2/DESCENT design environment. They are non-destructive editorial representations and do not constitute physical wet-chemistry lab certificates, unverified sensor telemetry, or irrevocable file-system mutations.”
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Traversal Navigation Footer Controls -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md bg-surface-container-low/60 p-space-md">
+<div class="flex items-center gap-space-sm font-label-md text-label-md text-outline">
+<span class="material-symbols-outlined text-primary text-[18px]">alt_route</span>
+<span>TRAVERSAL READY: STRATUM 01 ORIGIN (Z: 0.00m)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 bg-surface-container text-tertiary font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-high transition-colors" onclick="simulateToast('Ascent unavailable: Origin Bedrock is master root.')">
+          ▲ Ascend (Root Anchor)
+        </button>
+<button class="px-space-md py-2 bg-secondary text-on-secondary font-label-md text-label-md uppercase tracking-wider hover:bg-secondary-fixed transition-colors flex items-center gap-1" onclick="simulateToast('Descending to Stratum 02: Glass Frames (Z: -120.00m)...')">
+<span>Descend to S-02 (Z: -120m)</span>
+<span class="material-symbols-outlined text-[16px]">south</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Export Notification Toast (Hidden by default) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-surface-container-highest p-space-md shadow-2xl flex items-center gap-space-sm text-on-surface font-label-md text-label-md" id="export-toast">
+<span class="material-symbols-outlined text-primary text-[20px]">task_alt</span>
+<span id="toast-message">Export package staged successfully.</span>
+</div>
+</div>
+<script>
+  function scrollToExport() {
+    const el = document.getElementById('export-staging-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function simulateToast(msg) {
+    const toast = document.getElementById('export-toast');
+    const msgEl = document.getElementById('toast-message');
+    if (!toast || !msgEl) return;
+    msgEl.innerText = msg;
+    toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+    }, 3800);
+  }
+
+  function downloadMarkdown() {
+    const markdownContent = `# FX2 / THE DESCENT — STRATUM 01 AUDIT REPORT V1.0
+**Location:** Stratum 01 — The Light Table (Z = 0.00m Origin Bedrock)  
+**Substrate:** Frosted Quartz 5500K / 1800 cd/m2  
+**Security Status:** RATIFIED // ARMED // WRITE FORBIDDEN  
+**Canonical Commit:** 9a2f1c8 (Take 03 Locked)  
+**Quarantine Commit:** 7d18a4c (Take 04 Sub-Vault 02)  
+
+---
+
+## 1. Authoritative Primary Delivery Standard Reconciliation
+- **Delivery Aspect Ratio:** 2.39:1 Cinemascope Container (4096x1716 DCI 4K Scope / 2048x858 DCI 2K Scope).
+- **Physical Negative Gauge:** 65mm 5-Perf Intermediate Negative (48.59 x 22.10 mm aperture). Strictly capture/intermediate stock; not conflated with delivery projection ratio.
+- **Color Pipeline:** ACEScc AP1 with Kodak 2383 D65 Print Master LUT.
+- **Vertical Extraction Geometry:** Native 65mm 5-perf (2.20:1) into 2.39:1 Scope requires symmetrical top/bottom vertical crop of 7.95% (active extraction window: 48.59 x 20.33 mm). A horizontal crop is geometrically invalid because 2.20:1 is narrower/taller than 2.39:1.
+
+## 2. Technicolor 3-Strip Confinement
+- Quarantined strictly to Stratum 03 Film Hybrid (-240.00m) memory sequences.
+- Cyan (650nm), Magenta (540nm), Yellow (440nm) dye matrices isolated with 0.00% global bleed.
+
+## 3. Canonical Lineage & Dialogue Disposition
+- **Take 03 [Commit 9a2f1c8]:** "We aren't falling through space. We're falling through memory." (-28.4 LUFS BWF, 435 Hz formant anchor).
+- **Take 04 [Commit 7d18a4c]:** "We aren't descending through the dark. The dark is descending through us." (Cold Quarantine Sub-Vault 02). Zero purge, zero synthetic merge.
+
+## 4. Simulation Disclaimer
+All metrics, sensitometry curves, and acoustic indicators represent interface simulation states. Not independently verified physical measurements, cryptographic proof, or repository mutations.
+`;
+    const blob = new Blob([markdownContent], { type: 'text/markdown;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'FX2_STRATUM01_AUDIT_REPORT_V1.0.md';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    simulateToast('Markdown Export: FX2_STRATUM01_AUDIT_REPORT_V1.0.md downloaded.');
+  }
+
+  function generatePdfSimulation() {
+    simulateToast('Compiling print-ready PDF package with embedded cryptographic hash...');
+    setTimeout(() => {
+      simulateToast('PDF Generated: FX2_STRATUM01_AUDIT_REPORT_V1.0.pdf ready.');
+    }, 1500);
+  }
+</script></main></div></body></html>

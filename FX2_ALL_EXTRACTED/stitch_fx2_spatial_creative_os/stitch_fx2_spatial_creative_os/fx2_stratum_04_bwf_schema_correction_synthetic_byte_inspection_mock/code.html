@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-container":"#2a2a25","outline":"#ad8882","error":"#ffb4ab","surface-container-high":"#292a2c","background":"#121315","on-tertiary":"#31312c","surface-dim":"#121315","on-primary":"#690000","primary-fixed":"#ffdad4","secondary-fixed-dim":"#ffb4a1","inverse-primary":"#bf0904","on-tertiary-fixed":"#1c1c18","on-secondary-container":"#ffa58d","surface-container-low":"#1b1c1e","on-tertiary-fixed-variant":"#474742","tertiary-fixed-dim":"#c9c6c0","tertiary":"#c9c6c0","on-secondary-fixed-variant":"#881f00","surface-container":"#1f2022","surface-container-lowest":"#0d0e10","primary":"#ffb4a8","on-primary-fixed":"#410000","on-error":"#690005","secondary-fixed":"#ffdbd2","on-primary-container":"#5c0000","inverse-surface":"#e3e2e5","on-surface":"#e3e2e5","tertiary-container":"#92918b","secondary-container":"#912100","on-secondary":"#611300","outline-variant":"#5d403b","on-background":"#e3e2e5","tertiary-fixed":"#e5e2db","surface-tint":"#ffb4a8","inverse-on-surface":"#303033","on-primary-fixed-variant":"#930000","on-surface-variant":"#e6bdb7","primary-fixed-dim":"#ffb4a8","primary-container":"#ff5541","surface-container-highest":"#343537","on-error-container":"#ffdad6","on-secondary-fixed":"#3c0800","secondary":"#ffb4a1","surface":"#121315","surface-variant":"#343537","surface-bright":"#38393b","error-container":"#93000a"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-lg":"2rem","space-md":"1rem","margin-lg":"3.5rem","gutter-sm":"0.75rem","space-xl":"2.5rem","margin-sm":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","gutter":"1.25rem","margin":"2rem","space-xs":"0.25rem"},fontFamily:{"headline-sm":["Inter"],"label-sm":["JetBrains Mono"],"display-md-mobile":["Playfair Display"],"headline-md":["Playfair Display"],"label-md":["JetBrains Mono"],"display-md":["Playfair Display"],"body-lg":["Inter"],"code-timecode":["JetBrains Mono"],"body-md":["Inter"],"body-sm":["Inter"],"display-lg":["Playfair Display"],"headline-lg":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-lg":["Inter"]},fontSize:{"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"display-md-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"display-md":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"code-timecode":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_20px_48px_-8px_rgba(0,0,0,0.75)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low/40"><div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface">FX2 STRATA</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Archival Telemetry</span></div></div><div class="px-space-md pt-space-md"><div class="px-space-sm pb-space-xs flex items-center justify-between text-outline"><span class="font-label-sm text-label-sm uppercase tracking-widest">Strata Traversal</span><span class="font-code-timecode text-label-sm text-tertiary">4 LOCI</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-headline-sm"><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stratum-01-light-table" href="#"><span class="flex items-center gap-space-sm font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">filter_frames</span>01 Light Table</span><span class="font-code-timecode text-label-sm text-tertiary">Z: 0.00m</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stratum-02-glass-frames" href="#"><span class="flex items-center gap-space-sm font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">layers</span>02 Glass Frames</span><span class="font-code-timecode text-label-sm text-tertiary">Z: -120.0m</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stratum-03-film-hybrid" href="#"><span class="flex items-center gap-space-sm font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">movie</span>03 Film Hybrid</span><span class="font-code-timecode text-label-sm text-tertiary">Z: -240.0m</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stratum-04-the-paper" href="#"><span class="flex items-center gap-space-sm font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] text-primary">description</span>04 The Paper</span><span class="font-code-timecode text-label-sm text-primary">-360.00m</span></a></nav></div><div class="px-space-md pt-space-lg"><div class="px-space-sm pb-space-xs flex items-center justify-between text-outline"><span class="font-label-sm text-label-sm uppercase tracking-widest">Inspection Modules</span><span class="font-code-timecode text-label-sm text-outline-variant">SYS-M</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-headline-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="bwf-sync-matrix" href="#"><span class="material-symbols-outlined text-[16px]">grid_view</span>BWF Sync Matrix</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="stem-topology" href="#"><span class="material-symbols-outlined text-[16px]">hub</span>Stem Topology</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="timereference-ledger" href="#"><span class="material-symbols-outlined text-[16px]">receipt_long</span>TimeReference Ledger</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="phase-subframe-drift" href="#"><span class="material-symbols-outlined text-[16px]">graphic_eq</span>Phase &amp; Sub-Frame Drift</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="take-quarantine-vault" href="#"><span class="material-symbols-outlined text-[16px]">shield_lock</span>Take Quarantine Vault</a></nav></div></div><div class="p-space-md bg-surface-container-lowest/80 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm uppercase">Master Ref</span><span class="font-code-timecode text-label-sm text-tertiary-fixed">48.000 kHz</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm uppercase">Pull-Down</span><span class="font-code-timecode text-label-sm text-tertiary-fixed">0.1% NTSC [OFF]</span></div><div class="pt-space-xs flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline">CLOCK: SMPTE ST 12-1</span><span class="h-1.5 w-1.5 rounded-full bg-primary animate-ping"></span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 z-40 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_20px_48px_-8px_rgba(0,0,0,0.75)] flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Core Engine</span><span class="font-code-timecode text-code-timecode font-semibold tracking-wider text-on-surface">FX2 CORE OS v4.0.2</span></div><div class="h-8 w-px bg-surface-container-highest"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Active Stratum</span><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-label-md text-on-surface">04 The Paper</span><span class="font-code-timecode text-label-sm text-secondary">(-360.00m)</span></div></div><div class="h-8 w-px bg-surface-container-highest"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Master Timecode</span><span class="font-code-timecode text-code-timecode font-semibold text-secondary-fixed tracking-widest">00:00:11:04 NDF</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-high"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">READ-ONLY AUDIT MODE // WRITE FORBIDDEN // REPOSITORY MUTATION LOCKED</span></div><div class="flex items-center gap-space-sm"><button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Audit Log Terminal"><span class="material-symbols-outlined text-[18px]">terminal</span></button><button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Telemetry Notifications"><span class="material-symbols-outlined text-[18px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Telemetry & Spatial Reference Header Block -->
+<div class="px-margin-lg pt-space-md pb-space-lg bg-surface-container-lowest">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-outline">
+<span class="font-label-sm text-label-sm tracking-widest uppercase">Archival Telemetry</span>
+<span class="font-label-sm text-label-sm text-outline-variant">/</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">S04 The Paper</span>
+<span class="font-code-timecode text-label-sm text-secondary bg-surface-container-high px-space-xs py-0.5 rounded ml-space-xs">[Z = -360.00m]</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-error uppercase font-medium">Repository Mutation Locked</span>
+</div>
+<div class="h-3 w-px bg-surface-container-highest"></div>
+<span class="font-code-timecode text-label-sm text-tertiary">SESSION ID: S04-BWF-SYNTH-9A2F</span>
+</div>
+</div>
+<div class="flex items-end justify-between mt-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Stratum 04 // Audio Engineering Dossier</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mt-0.5">BWF Schema Correction &amp; Synthetic Byte Inspection Mock</h1>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm uppercase text-outline">Canonical Anchor</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-timecode text-code-timecode text-primary font-semibold">Commit 9a2f1c8</span>
+<span class="font-label-sm text-label-sm text-on-surface px-1.5 py-0.5 rounded bg-surface-container">Take 03</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-high"></div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm uppercase text-outline">Cold Quarantine</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-timecode text-code-timecode text-secondary">Sub-Vault 02 [7d18a4c]</span>
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container">Draft 04.3</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Layout Grid -->
+<div class="p-margin-lg flex flex-col gap-space-xl">
+<!-- Section 01 // Standards Errata & Corrected Normative Framework -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-md text-primary font-bold">01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Standards Errata &amp; Corrected Normative Framework</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Normative Authority: EBU &amp; ITU-R Recs</span>
+</div>
+<!-- Errata Correction Hero Banner -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-xl">
+<div class="flex items-start gap-space-md">
+<div class="p-space-sm rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col flex-1 gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-error font-semibold">Prior Errata Disavowal Notice</span>
+<span class="font-code-timecode text-label-sm text-outline">AUDIT-REF: ERR-1387-REV2</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+<span class="text-error font-semibold font-code-timecode">CORRECTION:</span> Prior project documentation erroneously cited <span class="font-code-timecode text-tertiary underline">ITU-R BS.1387</span> as a Broadcast Wave Format encapsulation standard. <strong>ITU-R BS.1387 is strictly PEAQ</strong> (<em class="italic text-on-surface-variant">Method for Objective Measurements of Perceived Audio Quality</em>) and provides no file-level container definitions. All previous references to BS.1387 for container layout are null and void across Stratum 04.
+            </p>
+</div>
+</div>
+</div>
+<!-- Normative Matrix Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Spec Card 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Container Specification</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">EBU Tech 3285 v2</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The sole normative reference for BWF v2. Defines the mandatory RIFF/WAVE chunk layout and the fixed 602-byte <span class="font-code-timecode text-primary font-semibold">'bext'</span> header.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-code-timecode text-label-sm">
+<span>RIFF → fmt → bext → data</span>
+<span class="text-primary font-bold">CORE</span>
+</div>
+</div>
+<!-- Spec Card 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Channel Allocation</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">alt_route</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">EBU Tech 3285-s1</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Supplement 1 / ITU-R BS.2076-2. Governs the <span class="font-code-timecode text-secondary font-semibold">'chna'</span> chunk mapping file channels to Audio Definition Model (ADM) tracks.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-code-timecode text-label-sm">
+<span>ITU-R BS.2076-2 ADM</span>
+<span class="text-secondary font-bold">CHNA</span>
+</div>
+</div>
+<!-- Spec Card 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Audio XML Payload</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">code</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">EBU Tech 3285-s3</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Supplement 3 / ITU-R BS.2076. Houses the <span class="font-code-timecode text-tertiary font-semibold">'axml'</span> generic structured XML payload for complete ADM spatial definitions.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-code-timecode text-label-sm">
+<span>ITU-R BS.2076 Generic XML</span>
+<span class="text-tertiary font-bold">AXML</span>
+</div>
+</div>
+<!-- Spec Card 4: iXML Clarification -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Production Metadata</span>
+<span class="material-symbols-outlined text-[16px] text-outline">info</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">iXML Convention</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Optional production sound-report metadata chunk (Sound Devices/Aaton). <strong class="text-on-surface">Not an intrinsic or universal EBU BWF core chunk</strong>; strictly supplemental.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-code-timecode text-label-sm">
+<span>SOUND DEVICES / AATON</span>
+<span class="text-outline font-bold">OPTIONAL</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 02 // BWF 'bext' Payload Governance & Field Specification -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-md text-primary font-bold">02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">BWF 'bext' Payload Governance &amp; Field Specification</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Fixed Frame:</span>
+<span class="font-code-timecode text-label-sm text-primary font-bold bg-surface-container-high px-space-xs py-0.5 rounded">602 BYTES</span>
+<span class="font-label-sm text-label-sm text-outline">+ CodingHistory (Var ASCII)</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<p>
+            In <span class="font-code-timecode text-on-surface font-semibold">EBU Tech 3285 v2</span>, presence of every structural field below byte offset 602 is mandatory to adhere to the fixed 602-byte frame layout. Non-populated or unsupported fields must adhere to the standardized sentinels specified below.
+          </p>
+<div class="flex items-center gap-space-xs flex-shrink-0 ml-space-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-code-timecode text-label-sm text-secondary">0x7FFF = SENTINEL UNUSED LOUDNESS</span>
+</div>
+</div>
+<!-- Dense Data Specification Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Field Name</th>
+<th class="py-space-sm px-space-md">Offset Range</th>
+<th class="py-space-sm px-space-md">Length</th>
+<th class="py-space-sm px-space-md">Data Type</th>
+<th class="py-space-sm px-space-md">Governance / Population Rule</th>
+<th class="py-space-sm px-space-md text-right">Synthetic Value Mock</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-primary">Description</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">000..255</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">256 B</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">ASCII</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Free text summary of sound sequence; null-padded to 256 bytes.</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-on-surface truncate max-w-xs">"SC04_TK03_SPATIAL_VANCE_VOX"</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-primary">Originator</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">256..287</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">32 B</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">ASCII</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Name of originator or production agency; null-padded.</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-on-surface">"FX2_ARCHIVAL_S04"</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-primary">OriginatorReference</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">288..319</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">32 B</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">ASCII</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Unique identifier unambiguous within system; null-padded.</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-on-surface">"FX2-9A2F1C8-T03"</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-secondary">OriginationDate</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">320..329</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">10 B</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">ASCII</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">'YYYY-MM-DD' standardized format (or historical 'YYYY:MM:DD').</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-on-surface">"2024-10-18"</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-secondary">OriginationTime</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">330..337</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">8 B</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">ASCII</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">'HH:MM:SS' time of origination.</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-on-surface">"01:05:00"</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-primary">TimeReferenceLow</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">338..341</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">4 B</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">uint32_t LE</td>
+<td class="py-space-sm px-space-md text-on-surface-variant" rowspan="2">
+<div class="p-space-xs rounded bg-surface-container-high flex flex-col gap-0.5">
+<span class="text-primary font-semibold">Strict 64-bit uint64_t Little-Endian Sample Count</span>
+<span>Counts physical audio samples elapsed since midnight timecode epoch (00:00:00:00).</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-primary font-bold">0x0B287400</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-primary">TimeReferenceHigh</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">342..345</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">4 B</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">uint32_t LE</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-primary font-bold">0x00000000</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-on-surface">Version</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">346..347</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">2 B</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">uint16_t LE</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">BWF version descriptor. Version 2.0 = 0x0002.</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-secondary-fixed">0x0002</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-on-surface">UMID</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">348..411</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">64 B</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Binary (SMPTE 330M)</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Unique Material Identifier; 64 bytes of zeros if unassigned.</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-outline">[64 Bytes Null]</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-secondary">Loudness Parameters (x5)</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">412..421</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">10 B</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">5x int16_t LE</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+<span>LoudnessValue, Range, MaxTruePeak, MaxMomentary, MaxShortTerm.</span>
+<span class="block text-primary font-semibold mt-0.5">Sentinel: 0x7FFF (32767) indicates value unsupported/omitted.</span>
+</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-secondary">
+                  -2840, 0x7FFF, 0x7FFF...
+                </td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-outline">Reserved</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">422..601</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">180 B</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Binary Null</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Strictly reserved for future extensions; filled with 0x00.</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-outline">00 00 ... [180x]</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="py-space-sm px-space-md font-code-timecode font-semibold text-primary">CodingHistory</td>
+<td class="py-space-sm px-space-md font-code-timecode text-outline">602..end</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">Var</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">ASCII + CR/LF</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Processing chain history string. Each record terminated by CR/LF (\r\n).</td>
+<td class="py-space-sm px-space-md font-code-timecode text-right text-primary-fixed truncate max-w-xs">A=PCM,F=48000,W=24...</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Section 03 // Synthetic Byte Inspection Mock -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-md text-primary font-bold">03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Synthetic Byte Inspection Mock</h2>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-[14px] text-tertiary">memory</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Synthetic Spec Mock // No Physical Media Written</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Hex/ASCII Viewer Main Pane -->
+<div class="lg:col-span-8 p-space-md rounded-xl bg-surface-container-lowest shadow-2xl flex flex-col gap-space-md font-code-timecode">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Simulated Binary Hex &amp; ASCII Dissection Stream</span>
+<div class="flex items-center gap-space-sm text-label-sm text-tertiary">
+<span>VIEW: 16-BYTE ALIGNED</span>
+<span>ENDIAN: INTEL LITTLE-ENDIAN</span>
+</div>
+</div>
+<!-- Hex Lines -->
+<div class="flex flex-col gap-1 text-label-sm leading-relaxed overflow-x-auto text-on-surface">
+<!-- Line 00000000: RIFF WAVE -->
+<div class="flex items-center gap-space-md px-space-xs py-0.5 rounded hover:bg-surface-container-high transition-colors">
+<span class="text-outline select-none">00000000</span>
+<span class="text-primary font-bold">52 49 46 46</span>
+<span class="text-outline">44 74 28 0B</span>
+<span class="text-secondary font-bold">57 41 56 45</span>
+<span class="text-tertiary font-bold">66 6D 74 20</span>
+<span class="text-outline select-none">|</span>
+<span class="text-on-surface-variant">RIFFDt(.WAVEfmt </span>
+</div>
+<!-- Line 00000010: fmt chunk payload -->
+<div class="flex items-center gap-space-md px-space-xs py-0.5 rounded hover:bg-surface-container-high transition-colors">
+<span class="text-outline select-none">00000010</span>
+<span class="text-tertiary">10 00 00 00</span>
+<span class="text-on-surface">01 00 01 00</span>
+<span class="text-primary">80 BB 00 00</span>
+<span class="text-on-surface">80 32 02 00</span>
+<span class="text-outline select-none">|</span>
+<span class="text-on-surface-variant">.........2..</span>
+</div>
+<!-- Line 00000020: fmt tail & bext chunk header -->
+<div class="flex items-center gap-space-md px-space-xs py-0.5 rounded hover:bg-surface-container-high transition-colors">
+<span class="text-outline select-none">00000020</span>
+<span class="text-on-surface">03 00 18 00</span>
+<span class="text-primary font-bold">62 65 78 74</span>
+<span class="text-secondary font-bold">96 02 00 00</span>
+<span class="text-on-surface">53 43 30 34</span>
+<span class="text-outline select-none">|</span>
+<span class="text-on-surface-variant">....bext...SC04</span>
+</div>
+<!-- Ellipsis for bext description / originator null block -->
+<div class="flex items-center gap-space-md px-space-xs py-0.5 text-outline">
+<span class="select-none">........</span>
+<span class="italic text-label-sm">[ b e x t   p a y l o a d   b y t e s   0 0 4 . . 3 1 9   s k i p p e d ]</span>
+</div>
+<!-- Line: Origination Date/Time -->
+<div class="flex items-center gap-space-md px-space-xs py-0.5 rounded hover:bg-surface-container-high transition-colors">
+<span class="text-outline select-none">00000160</span>
+<span class="text-on-surface">32 30 32 34</span>
+<span class="text-on-surface">2D 31 30 2D</span>
+<span class="text-on-surface">31 38 30 31</span>
+<span class="text-on-surface">3A 30 35 3A</span>
+<span class="text-outline select-none">|</span>
+<span class="text-on-surface-variant">2024-10-1801:05:</span>
+</div>
+<!-- Line: TimeReference uint64_t Close-up (Highlighted) -->
+<div class="flex items-center gap-space-md px-space-xs py-1 rounded bg-secondary-container/40">
+<span class="text-primary select-none font-bold">00000170</span>
+<span class="text-on-surface">30 30 00 00</span>
+<span class="text-primary-container font-black bg-surface-container px-1 rounded">00 74 28 0B</span>
+<span class="text-primary-container font-black bg-surface-container px-1 rounded">00 00 00 00</span>
+<span class="text-secondary font-bold">02 00 00 00</span>
+<span class="text-outline select-none">|</span>
+<span class="text-primary font-bold">00..t(..........</span>
+</div>
+<!-- Line: Loudness Sentinel -->
+<div class="flex items-center gap-space-md px-space-xs py-0.5 rounded hover:bg-surface-container-high transition-colors">
+<span class="text-outline select-none">000001B0</span>
+<span class="text-secondary">E8 F4 FF 7F</span>
+<span class="text-secondary">FF 7F FF 7F</span>
+<span class="text-secondary">FF 7F 00 00</span>
+<span class="text-outline">00 00 00 00</span>
+<span class="text-outline select-none">|</span>
+<span class="text-on-surface-variant">................</span>
+</div>
+<!-- Line: CodingHistory CR/LF snippet -->
+<div class="flex items-center gap-space-md px-space-xs py-0.5 rounded bg-surface-container-high transition-colors">
+<span class="text-outline select-none">00000280</span>
+<span class="text-on-surface">41 3D 50 43</span>
+<span class="text-on-surface">4D 2C 46 3D</span>
+<span class="text-on-surface">34 38 30 30</span>
+<span class="text-on-surface">30 2C 57 3D</span>
+<span class="text-outline select-none">|</span>
+<span class="text-on-surface-variant">A=PCM,F=48000,W=</span>
+</div>
+<div class="flex items-center gap-space-md px-space-xs py-0.5 rounded bg-surface-container-high transition-colors">
+<span class="text-outline select-none">00000290</span>
+<span class="text-on-surface">32 34 2C 4D</span>
+<span class="text-on-surface">3D 6D 6F 6E</span>
+<span class="text-on-surface">6F 2C 54 3D</span>
+<span class="text-primary font-bold">46 58 32 0D 0A</span>
+<span class="text-outline select-none">|</span>
+<span class="text-on-surface-variant">24,M=mono,T=FX2\r\n</span>
+</div>
+</div>
+</div>
+<!-- Dissection Inspector Breakdown Card -->
+<div class="lg:col-span-4 p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-xl gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Bit-Field Analysis</span>
+<span class="font-code-timecode text-label-sm text-primary">OFFSETS 338..345</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">TimeReference uint64_t Join</h3>
+<div class="p-space-sm rounded bg-surface-container-lowest font-code-timecode flex flex-col gap-space-xs">
+<span class="text-label-sm text-outline">RAW BYTE SEQUENCE (LITTLE ENDIAN):</span>
+<span class="text-code-timecode text-primary font-bold tracking-widest">00 74 28 0B 00 00 00 00</span>
+</div>
+<div class="flex flex-col gap-space-xs text-body-sm">
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between">
+<span class="text-outline font-label-sm">TimeReferenceLow (338..341):</span>
+<span class="font-code-timecode text-on-surface font-semibold">0x0B287400 = 187,200,000</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between">
+<span class="text-outline font-label-sm">TimeReferenceHigh (342..345):</span>
+<span class="font-code-timecode text-on-surface font-semibold">0x00000000 = 0</span>
+</div>
+<div class="p-space-xs rounded bg-primary-container/20 flex flex-col gap-0.5 mt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Reconstructed Sample Count:</span>
+<span class="font-code-timecode text-code-timecode text-on-surface font-bold">187,200,000 Samples</span>
+<span class="font-code-timecode text-label-sm text-secondary-fixed">@ 48,000 Hz = 3,900.000 Seconds = 01:05:00:00 NDF</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">data_object</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">CodingHistory Line Termination</span>
+<span class="font-code-timecode text-label-sm text-on-surface-variant">0x0D, 0x0A strictly validates [CR/LF] RFC requirement per EBU Tech 3285 section 2.6.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 04 // ADM 'chna' & 'axml' Structural Definitions -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-md text-primary font-bold">04</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">ADM 'chna' &amp; 'axml' Structural Definitions</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">ITU-R BS.2076-2 Spatial Architecture</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- chna Chunk Mapping -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">schema</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">'chna' Channel Allocation Chunk</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-code-timecode">4 TRACK ALLOCATIONS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Maps physical BWF audio channels to Audio Definition Model (ADM) Track UIDs (<span class="font-code-timecode text-tertiary">ATU_xxxxxxxx</span>) and Audio Channel Formats (<span class="font-code-timecode text-tertiary">AC_xxxxxxxx</span>). Identifiers below are illustrative and unassigned.
+          </p>
+<div class="flex flex-col gap-space-xs font-code-timecode text-label-sm">
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-bold">TRK 1</span>
+<span class="text-on-surface">ATU_00000001</span>
+<span class="text-outline">→</span>
+<span class="text-secondary font-semibold">AC_00010001</span>
+</div>
+<span class="text-outline-variant font-sans text-label-sm">Vance Formant Principal Mic</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-bold">TRK 2</span>
+<span class="text-on-surface">ATU_00000002</span>
+<span class="text-outline">→</span>
+<span class="text-secondary font-semibold">AC_00010002</span>
+</div>
+<span class="text-outline-variant font-sans text-label-sm">Respiration Suit Interior</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-bold">TRK 3</span>
+<span class="text-on-surface">ATU_00000003</span>
+<span class="text-outline">→</span>
+<span class="text-secondary font-semibold">AC_00010003</span>
+</div>
+<span class="text-primary font-sans text-label-sm font-semibold">Thruster Micro-Vent (+12 smp)</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-bold">TRK 4</span>
+<span class="text-on-surface">ATU_00000004</span>
+<span class="text-outline">→</span>
+<span class="text-secondary font-semibold">AC_00010004</span>
+</div>
+<span class="text-outline-variant font-sans text-label-sm">Void Tone / Floor Rumble</span>
+</div>
+</div>
+</div>
+<!-- axml Metadata Definition Container -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-tertiary">code_blocks</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">'axml' Metadata Tree</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-code-timecode">EBU Tech 3285-s3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Generic structured XML chunk. Houses ITU-R BS.2076 ADM XML hierarchy: <span class="font-code-timecode text-on-surface">audioProgramme</span> → <span class="font-code-timecode text-on-surface">audioContent</span> → <span class="font-code-timecode text-on-surface">audioObject</span> → <span class="font-code-timecode text-on-surface">audioPackFormat</span>. Not restricted solely to proprietary Dolby Atmos metadata.
+          </p>
+<div class="p-space-sm rounded bg-surface-container-lowest font-code-timecode text-label-sm text-outline leading-snug overflow-x-auto">
+<span class="text-tertiary">&lt;ituADM:audioFormatExtended version="ITU-R_BS.2076-2"&gt;</span><br/>
+              <span class="text-primary">&lt;audioProgramme</span> audioProgrammeID="APR_1001" audioProgrammeName="STRATUM_04_CANONICAL"<span class="text-primary">&gt;</span><br/>
+                <span class="text-secondary">&lt;audioContent</span> audioContentID="ACO_1001" audioContentName="TAKE_03_STEMS"<span class="text-secondary">&gt;</span><br/>
+                  &lt;audioObjectIDRef&gt;AO_1001&lt;/audioObjectIDRef&gt; <span class="text-outline-variant">&lt;!-- Vance Lead Vox --&gt;</span><br/>
+                  &lt;audioObjectIDRef&gt;AO_1002&lt;/audioObjectIDRef&gt; <span class="text-outline-variant">&lt;!-- Thruster Phase Drift --&gt;</span><br/>
+                <span class="text-secondary">&lt;/audioContent&gt;</span><br/>
+              <span class="text-primary">&lt;/audioProgramme&gt;</span><br/>
+<span class="text-tertiary">&lt;/ituADM:audioFormatExtended&gt;</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 05 // Timing Continuity & Boundary Reconciliation -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-md text-primary font-bold">05</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Timing Continuity &amp; Boundary Reconciliation</h2>
+</div>
+<span class="font-code-timecode text-label-sm text-tertiary font-bold">48,000 Hz / 24.000 fps NDF ≡ 2,000.0000 smp/frame</span>
+</div>
+<!-- Dialogue Boundary Caution Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-[24px] text-secondary">warning</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Editorial Waveform Advisory</span>
+<span class="font-headline-sm text-label-md text-on-surface">DIALOGUE OUT BOUNDARY PENDING PHYSICAL WAVEFORM &amp; DAW ACOUSTIC CONFIRMATION</span>
+</div>
+</div>
+<span class="font-code-timecode text-label-sm text-outline bg-surface-container-lowest px-space-sm py-1 rounded">STAGE VERIFICATION QUEUED</span>
+</div>
+<!-- Chronometric Metrics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">Sound-Roll Epoch</span>
+<span class="font-code-timecode text-headline-sm text-on-surface">187,200,000 smp</span>
+<span class="font-code-timecode text-label-sm text-primary font-medium">01:05:00:00 NDF</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Original Scorpio recorder hardware timestamp baseline.</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">Sequence Timeline Delta</span>
+<span class="font-code-timecode text-headline-sm text-secondary">+186,664,000 smp</span>
+<span class="font-code-timecode text-label-sm text-secondary-fixed">+93,332 Frames NDF</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Chronometric offset mapping roll epoch to sequence hour 00.</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">Dialogue In Cut (Audio Start)</span>
+<span class="font-code-timecode text-headline-sm text-on-surface">Frame 1,068</span>
+<span class="font-code-timecode text-label-sm text-tertiary">00:00:44:12 NDF [2,136,000 smp]</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Pre-dialogue ambient vacuum duration: exactly 800 frames.</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">Dialogue Out Cut (Boundary)</span>
+<span class="font-code-timecode text-headline-sm text-primary">Frame 1,220 [Exclusive]</span>
+<span class="font-code-timecode text-label-sm text-primary">00:00:50:20 NDF [2,440,000 smp]</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Last audible frame: 1,219 (00:00:50:19 NDF / 2,438,000 smp).</span>
+</div>
+</div>
+<!-- Sub-Frame Drift & Stem Topology Table -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Stem Sub-Frame Phase Drift Ledger</span>
+<span class="font-label-sm text-label-sm text-tertiary">POLICY: PRESERVE WITHOUT EDITORIAL SLIP</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-xs px-space-md">Stem ID</th>
+<th class="py-space-xs px-space-md">Designation</th>
+<th class="py-space-xs px-space-md">Phase Offset</th>
+<th class="py-space-xs px-space-md">Time Equiv</th>
+<th class="py-space-xs px-space-md">Ingest Handling Directives</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-surface-container">
+<td class="py-space-sm px-space-md font-code-timecode text-primary font-bold">Stem A1</td>
+<td class="py-space-sm px-space-md text-on-surface">Vance Formant Principal</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">0 smp</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">0.000 ms</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Locked to master timeline grid.</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="py-space-sm px-space-md font-code-timecode text-primary font-bold">Stem A2</td>
+<td class="py-space-sm px-space-md text-on-surface">Respiration Internal</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">0 smp</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">0.000 ms</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Locked to master timeline grid.</td>
+</tr>
+<tr class="bg-surface-container">
+<td class="py-space-sm px-space-md font-code-timecode text-secondary font-bold">Stem A3</td>
+<td class="py-space-sm px-space-md text-secondary font-semibold">Thruster Micro-Vent</td>
+<td class="py-space-sm px-space-md font-code-timecode text-secondary font-bold">+12 smp</td>
+<td class="py-space-sm px-space-md font-code-timecode text-secondary">+0.250 ms</td>
+<td class="py-space-sm px-space-md text-on-surface">Strictly unshifted. Editorial micro-quantize forbidden. Phase audition pending Atmos stage.</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="py-space-sm px-space-md font-code-timecode text-primary font-bold">Stem A4</td>
+<td class="py-space-sm px-space-md text-on-surface">Void Tone Floor</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">0 smp</td>
+<td class="py-space-sm px-space-md font-code-timecode text-tertiary">0.000 ms</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Locked to master timeline grid.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Section 06 // Canonical Script & Quarantined Lineage -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-md text-primary font-bold">06</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Canonical Script &amp; Quarantined Lineage</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Linguistic Version Control</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Canonical Line: Take 03 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Canonical Master Anchor</span>
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm text-on-surface">
+<span class="bg-surface-container-high px-space-xs py-0.5 rounded">COMMIT: 9a2f1c8</span>
+<span class="bg-surface-container-high px-space-xs py-0.5 rounded text-primary">TAKE 03</span>
+</div>
+</div>
+<div class="my-space-md p-space-md rounded bg-surface-container-lowest flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Vance (Over Comms // 435 Hz Formant Peak)</span>
+<blockquote class="font-headline-md text-headline-md text-on-surface italic leading-snug">
+                “We aren’t falling through space. We’re falling through memory.”
+              </blockquote>
+</div>
+<div class="flex items-center justify-between font-code-timecode text-label-sm text-on-surface-variant">
+<span>INTEGRATED LOUDNESS: -28.4 LUFS</span>
+<span>LRA: 4.2 LU</span>
+<span>TRUE PEAK: -3.8 dBFS</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-sm">
+<span class="text-primary font-semibold">STATUS: PROMOTED CANONICAL // SIGN-OFF PENDING</span>
+<span>STRATUM 04 AUTHORITATIVE</span>
+</div>
+</div>
+<!-- Quarantined Line: Take 04 Draft 04.3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-error font-bold">Cold Quarantine: Sub-Vault 02</span>
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm text-outline">
+<span class="bg-surface-container px-space-xs py-0.5 rounded">COMMIT: 7d18a4c</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded text-error">DRAFT 04.3</span>
+</div>
+</div>
+<div class="my-space-md p-space-md rounded bg-surface-container flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Vance (Isolated Audio Track 04)</span>
+<blockquote class="font-headline-md text-headline-md text-outline italic leading-snug line-through opacity-75">
+                “We aren’t descending through the dark. The dark is descending through us.”
+              </blockquote>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Lineage diverged during second ADR run. Replaced due to cadence collision with the thruster vent crescendo. Preserved in cold quarantine sub-vault for archival completeness without mutation permissions.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-sm">
+<span class="text-error font-semibold">STATE: ISOLATED &amp; MUTATION LOCKED</span>
+<span>HISTORICAL LOG ENTRY 04-BASE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 07 // Corrected Discrepancy Ledger & Three-Tier Validation Status -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-md text-primary font-bold">07</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Three-Tier Validation Ledger &amp; Gate Review</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Auditing Matrix</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Tier 1: Specification Tier -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-xl flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Tier 01 // Structural Governance</span>
+<span class="material-symbols-outlined text-[20px] text-primary">check_circle</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Specification Tier</span>
+<div class="p-space-xs rounded bg-surface-container flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-timecode text-label-sm text-primary font-bold uppercase">Corrected &amp; Reviewable</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Incorporates ITU-R BS.1387 errata correction, EBU Tech 3285 v2 602-byte fixed bext schema definition, ADM channel allocations, and signed 16-bit loudness sentinels.
+            </p>
+</div>
+<div class="font-code-timecode text-label-sm text-outline pt-space-xs">
+            GATE: SPEC-REV-04-PASS
+          </div>
+</div>
+<!-- Tier 2: Physical File Ingest Tier -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-xl flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Tier 02 // Physical Ingest</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">pending</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Physical Ingest Tier</span>
+<div class="p-space-xs rounded bg-surface-container flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-code-timecode text-label-sm text-secondary font-bold uppercase">Pending Physical Roll</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Awaiting delivery of primary Scorpio CFexpress media. Physical raw byte validation, bitstream integrity checks, and authoritative SHA-256 generation deferred until ingest.
+            </p>
+</div>
+<div class="font-code-timecode text-label-sm text-outline pt-space-xs">
+            GATE: QUEUED-AWAIT-INGEST
+          </div>
+</div>
+<!-- Tier 3: Supervisor / DAW Sign-Off Tier -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-xl flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Tier 03 // Acoustic Validation</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">hourglass_top</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Supervisor Sign-Off Tier</span>
+<div class="p-space-xs rounded bg-surface-container flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-code-timecode text-label-sm text-secondary font-bold uppercase">Pending Stage Audition</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Awaiting Dolby Atmos dub stage playback for micro-vent (+12 sample) acoustic phasing audit and final dialogue reverberation tail decay validation before archival seal.
+            </p>
+</div>
+<div class="font-code-timecode text-label-sm text-outline pt-space-xs">
+            GATE: STAGE-B-SLOT-03
+          </div>
+</div>
+</div>
+</section>
+<!-- Bottom Read-Only Audit Signature Footer Ribbon -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-semibold">Repository State: Read-Only Audit</span>
+<span class="font-code-timecode text-label-sm text-outline">All mutation verbs forbidden. Direct memory writes disabled by FX2 Archival Kernel.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded bg-surface-container-high text-on-surface font-code-timecode text-label-md hover:bg-surface-bright transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+          Export Audit Manifest [.json]
+        </button>
+<button class="px-space-md py-space-sm rounded bg-primary text-on-primary font-code-timecode text-label-md hover:bg-primary-fixed transition-colors font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+          Seal Archival Record
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

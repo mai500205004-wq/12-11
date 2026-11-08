@@ -1,0 +1,646 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+/* Auto-dismiss banner animation & countdown progress */
+@keyframes dismissProgress {
+  0% { width: 100%; }
+  100% { width: 0%; }
+}
+@keyframes autoDismissBanner {
+  0% {
+    opacity: 1;
+    max-height: 160px;
+    margin-bottom: 0;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(-8px);
+    max-height: 160px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-width: 0;
+    transform: translateY(-12px);
+    visibility: hidden;
+  }
+}
+.banner-auto-dismiss {
+  animation: autoDismissBanner 0.5s cubic-bezier(0.4, 0, 0.2, 1) 5s forwards;
+}
+.banner-progress-bar {
+  animation: dismissProgress 5s linear forwards;
+}
+.banner-auto-dismiss:hover,
+.banner-auto-dismiss:hover .banner-progress-bar {
+  animation-play-state: paused;
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "inverse-primary": "#93ccff",
+          "tertiary-fixed-dim": "#68dba9",
+          "on-surface": "#0f172a",
+          "outline-variant": "#e2e8f0",
+          "surface-dim": "#f1f5f9",
+          "on-tertiary-fixed-variant": "#005137",
+          "primary": "#0284c7",
+          "on-tertiary": "#ffffff",
+          "on-surface-variant": "#64748b",
+          "surface-container-low": "#f8fafc",
+          "surface-bright": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-container": "#ffffff",
+          "secondary": "#0369a1",
+          "primary-container": "#0284c7",
+          "on-primary-fixed": "#0c4a6e",
+          "on-primary-fixed-variant": "#0369a1",
+          "tertiary-container": "#059669",
+          "on-background": "#0f172a",
+          "on-secondary": "#ffffff",
+          "background": "#f8fafc",
+          "on-primary-container": "#ffffff",
+          "on-error": "#ffffff",
+          "on-error-container": "#93000a",
+          "tertiary": "#059669",
+          "secondary-fixed-dim": "#bae6fd",
+          "on-primary": "#ffffff",
+          "tertiary-fixed": "#a7f3d0",
+          "surface-variant": "#f1f5f9",
+          "outline": "#94a3b8",
+          "on-tertiary-fixed": "#064e3b",
+          "primary-fixed": "#e0f2fe",
+          "inverse-surface": "#1e293b",
+          "surface-tint": "#0284c7",
+          "on-secondary-fixed-variant": "#075985",
+          "secondary-container": "#0284c7",
+          "error": "#dc2626",
+          "surface-container": "#ffffff",
+          "primary-fixed-dim": "#7dd3fc",
+          "on-tertiary-container": "#ffffff",
+          "surface-container-high": "#f1f5f9",
+          "error-container": "#fee2e2",
+          "secondary-fixed": "#e0f2fe",
+          "inverse-on-surface": "#f8fafc",
+          "surface": "#ffffff",
+          "surface-container-highest": "#e2e8f0",
+          "on-secondary-fixed": "#082f49"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-xl": "1.5rem",
+          "gutter": "1rem",
+          "space-xs": "0.25rem",
+          "margin": "1.5rem",
+          "space-lg": "1rem",
+          "space-md": "0.75rem",
+          "margin-mobile": "1rem",
+          "gutter-mobile": "0.75rem"
+        },
+        "fontFamily": {
+          "headline-lg": ["Geist", "sans-serif"],
+          "label-md": ["JetBrains Mono", "monospace"],
+          "label-sm": ["JetBrains Mono", "monospace"],
+          "label-xs": ["JetBrains Mono", "monospace"],
+          "body-md": ["Geist", "sans-serif"],
+          "headline-xl": ["Geist", "sans-serif"],
+          "headline-xl-mobile": ["Geist", "sans-serif"],
+          "body-lg": ["Geist", "sans-serif"],
+          "headline-md": ["Geist", "sans-serif"],
+          "body-sm": ["Geist", "sans-serif"]
+        },
+        "fontSize": {
+          "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+          "label-xs": ["10px", {"lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+          "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+          "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600"}],
+          "headline-xl-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+          "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+          "headline-md": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}]
+        }
+      }
+    }
+  };
+</script></head><body class="bg-[#F8FAFC] font-body-md text-[#0F172A] antialiased selection:bg-sky-100 selection:text-sky-900"><header class="fixed top-0 left-0 right-0 z-50 h-16 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm"><div class="w-full h-16 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="TextFX Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xp28OyPZcr8bl1ybnvviyAxlTUD6TExGaqXxeTeH3aWyD0fAR41LDBIx05yqmkwlvtrC4Mk2MGbJRH80cGErfK2Qq5O1cxayRtt9qNPzPjGEBT_paN3OuZPC2YMDuNgLSuzXhT1t0q45oLdlEBEJ7kuhmWjdPbeV-p8E-s0Kjeyy4HjFb6JzyVIKCD9xgwQ4EQYc35SwAJWESac57qXTFbJaxm_CN_nIsuwafldVEPwp0IToEzzP15JWY"><span class="font-headline-md text-slate-900 tracking-tight font-bold hidden sm:inline">TextFX</span></div><div class="h-4 w-px bg-slate-200 mx-space-xs hidden md:block"></div><div class="hidden md:flex items-center gap-space-xs bg-slate-50 px-space-sm py-1 rounded border border-slate-200"><span class="font-label-xs text-slate-500 uppercase tracking-wider font-semibold">ENV:</span><button class="font-label-sm text-sky-700 hover:text-sky-900 font-medium transition-colors flex items-center gap-1" type="button">Production v1.2<span class="material-symbols-outlined text-[14px]">expand_more</span></button></div><div class="hidden lg:flex items-center gap-space-sm bg-slate-50 px-space-sm py-1 rounded border border-slate-200"><div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] animate-pulse"></div><span class="font-label-sm text-slate-700 font-medium">OpenAI GPT-4</span><span class="font-label-xs px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200">24ms</span></div></div><nav class="hidden xl:flex items-center gap-space-xs h-16" data-active-classes="bg-sky-50 text-sky-700 border-b-2 border-sky-600 font-medium"><a aria-current="page" class="h-full flex items-center px-space-md font-body-sm transition-colors bg-sky-50 text-sky-700 border-b-2 border-sky-600 font-medium" data-path="creative-pipeline" href="#">Creative Pipeline</a><a class="h-full flex items-center px-space-md font-body-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors" data-path="lateral-engine" href="#">Lateral Engine</a><a class="h-full flex items-center px-space-md font-body-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors" data-path="trace-and-audit" href="#">Trace &amp; Audit</a><a class="h-full flex items-center px-space-md font-body-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors" data-path="provider-config" href="#">Provider Config</a><a class="h-full flex items-center px-space-md font-body-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors" data-path="api-docs" href="#">API Docs</a></nav><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-space-xs"><button class="px-space-sm py-1.5 rounded font-label-md text-slate-700 bg-white hover:bg-slate-50 transition-colors border border-slate-200 shadow-sm flex items-center gap-1.5 font-medium" type="button"><span class="material-symbols-outlined text-[16px] text-slate-500">file_download</span><span class="">Export Spec</span></button><button class="px-space-md py-1.5 rounded font-body-sm font-semibold text-white bg-sky-600 hover:bg-sky-700 shadow-sm hover:shadow transition-all flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">play_arrow</span><span class="">Run Pipeline</span></button></div><div aria-label="Select display theme (System, Light, Dark)" class="hidden sm:flex items-center bg-slate-100 p-0.5 rounded border border-slate-200 shadow-inner" role="group"><button aria-label="Light theme" class="p-1 px-1.5 rounded bg-white text-sky-700 shadow-sm flex items-center justify-center gap-1 transition-all" title="Light Mode" type="button"><span class="material-symbols-outlined text-[15px]">light_mode</span><span class="font-label-xs font-semibold">Light</span></button><button aria-label="Dark theme" class="p-1 px-1.5 rounded text-slate-500 hover:text-slate-800 transition-colors flex items-center justify-center gap-1" title="Dark Mode" type="button"><span class="material-symbols-outlined text-[15px]">dark_mode</span><span class="font-label-xs font-medium">Dark</span></button><button aria-label="System theme" class="p-1 px-1.5 rounded text-slate-500 hover:text-slate-800 transition-colors flex items-center justify-center gap-1 relative" title="System Preference (Auto)" type="button"><span class="material-symbols-outlined text-[15px]">desktop_windows</span><span class="font-label-xs font-medium">Auto</span><span class="w-1.5 h-1.5 rounded-full bg-emerald-500" title="System Active"></span></button></div><div class="h-4 w-px bg-slate-200 mx-space-xs hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col items-end hidden 2xl:flex"><span class="font-label-sm text-slate-800 leading-tight font-semibold">Elena Vance</span><span class="font-label-xs text-slate-500 tracking-wider uppercase font-medium">Creative Director</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-sky-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7uR4ILmqotpfJv8wzxAj3DY6x1khp9qvEtBdZJ7hoyA2cuTkT1tmj6_7cF53qAEidua15FpgH4pyHBvbaUmrWx8CYCRPZWObZGPGokkHfcmNCyZUkHZXkR8j1pIhRIT7cXGoIdi_E_5CMQDP5sh5zz5WRcbuEaDIAXHbsC9AIzVAGpxU26tpxgqbilYOLjI7vhA4xXTAvcjzMC0kO8zRI5igdgXxvt8C3yJiZEZvxXT_NNN1ZA80B"></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-white border-r border-slate-200 z-40 hidden md:flex flex-col justify-between py-space-md shadow-[1px_0_3px_rgba(0,0,0,0.02)]"><div class="flex flex-col gap-space-md px-space-sm"><div class="px-space-sm py-space-xs"><div class="font-label-xs text-slate-400 uppercase tracking-widest font-semibold">STUDIO WORKSPACES</div></div><nav class="flex flex-col gap-1" data-active-classes="bg-sky-50 text-sky-700 border-l-2 border-sky-600 font-medium"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-r transition-colors bg-sky-50 text-sky-700 border-l-2 border-sky-600 font-medium" data-path="creative-pipeline" href="#"><span class="material-symbols-outlined text-[18px] text-sky-600">schema</span><span class="font-body-sm text-body-sm">Creative Pipeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" data-path="lateral-engine" href="#"><span class="material-symbols-outlined text-[18px] text-slate-400">hub</span><span class="font-body-sm text-body-sm">Lateral Engine</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" data-path="trace-and-audit" href="#"><span class="material-symbols-outlined text-[18px] text-slate-400">analytics</span><span class="font-body-sm text-body-sm">Trace &amp; Audit</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" data-path="provider-config" href="#"><span class="material-symbols-outlined text-[18px] text-slate-400">settings_input_component</span><span class="font-body-sm text-body-sm">Provider Config</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" data-path="api-docs" href="#"><span class="material-symbols-outlined text-[18px] text-slate-400">code</span><span class="font-body-sm text-body-sm">API Docs</span></a></nav></div><div class="px-space-sm"><div class="bg-slate-50 p-space-sm rounded border border-slate-200 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-slate-600"><span class="font-label-xs uppercase font-semibold text-slate-500">Inference Burn</span><span class="font-label-md text-sky-700 font-semibold">42.4 t/s</span></div><div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden"><div class="bg-sky-500 h-full w-2/3 rounded-full"></div></div><div class="flex items-center justify-between font-label-xs text-slate-500"><span class="text-slate-500 font-medium">COST: $0.0412/run</span><span class="text-emerald-700 font-semibold bg-emerald-50 px-1 py-0.5 rounded border border-emerald-200">ONLINE</span></div></div></div></aside><div class="md:pl-64"><main class="relative w-full pt-16 bg-[#F8FAFC] min-h-screen text-[#0F172A]"><div class="flex flex-col w-full">
+<!-- TOP SUB-HEADER: RUNNER TELEMETRY & FAST ACTIONS -->
+<div class="w-full bg-white px-margin py-space-sm flex flex-wrap items-center justify-between gap-space-md border-b border-slate-200 shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+<div class="flex items-center flex-wrap gap-space-md">
+<div class="flex items-center gap-space-xs bg-sky-50 border border-sky-200 px-space-sm py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-sky-500 shadow-[0_0_6px_rgba(2,132,199,0.5)] animate-pulse"></span>
+<span class="font-label-xs text-sky-800 font-bold tracking-wide uppercase">AUTONOMOUS ORCHESTRATOR ACTIVE</span>
+<span class="font-label-xs px-1.5 py-0.5 bg-white text-sky-900 border border-sky-200 rounded font-semibold">LOOP 1/2</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs font-label-sm text-slate-500">
+<span class="font-medium text-slate-600">TARGET THRESHOLD:</span>
+<span class="font-label-sm text-slate-800 font-semibold">0.75</span>
+<span class="text-slate-300">/</span>
+<span class="font-medium text-slate-600">SYNTHESIS QUALITY:</span>
+<span class="font-label-sm text-sky-700 font-bold">0.82</span>
+<span class="font-label-xs bg-emerald-50 text-emerald-700 border border-emerald-200 px-1.5 py-0.5 rounded font-bold uppercase">APPROVED</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded font-body-sm text-slate-600 hover:text-slate-900 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition-colors flex items-center gap-1 font-medium" type="button">
+<span class="material-symbols-outlined text-[15px] text-slate-400">edit_document</span>
+<span class="hidden md:inline">New Brief</span>
+</button>
+<button class="px-space-sm py-1 rounded font-body-sm text-slate-600 hover:text-slate-900 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition-colors flex items-center gap-1 font-medium" type="button">
+<span class="material-symbols-outlined text-[15px] text-slate-400">alt_route</span>
+<span class="hidden md:inline">Fork Run</span>
+</button>
+<button class="px-space-sm py-1 rounded font-label-sm text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition-colors flex items-center gap-1 font-medium" id="btn-inspect-json" type="button">
+<span class="material-symbols-outlined text-[15px] text-sky-600">terminal</span>
+<span class="">Inspect JSON</span>
+</button>
+<div class="relative group">
+<button class="px-space-md py-1 rounded font-body-sm font-semibold text-white bg-sky-600 hover:bg-sky-700 shadow-sm transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span class="">Export Script</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MAIN TRI-COLUMN WORKSPACE -->
+<div class="w-full grid grid-cols-1 xl:grid-cols-12 gap-space-md p-space-md xl:p-gutter">
+<!-- LEFT COLUMN: COGNITIVE CONTROLS & TIMELINE (~320px / 3 cols) -->
+<section class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- BRIEF CONFIGURATION CARD -->
+<div class="bg-white rounded-xl p-space-md border border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sky-600 text-[18px]">psychology</span>
+<span class="font-label-sm text-slate-900 tracking-wider uppercase font-bold">Creative Brief Spec</span>
+</div>
+<span class="font-label-xs px-1.5 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-200 font-semibold">v3.4-LATERAL</span>
+</div>
+<div class="flex flex-col gap-1 bg-slate-50 p-space-sm rounded border border-slate-100">
+<span class="font-label-xs text-slate-500 uppercase font-semibold">Core Mandate</span>
+<p class="font-body-md text-slate-900 font-semibold leading-tight">Increase hydration for office workers</p>
+</div>
+<!-- PARAMETERS CLUSTER -->
+<div class="grid grid-cols-1 gap-space-sm font-body-sm">
+<div class="flex items-center justify-between bg-slate-50 border border-slate-100 p-space-xs rounded px-2">
+<span class="text-slate-500 font-label-xs font-medium uppercase">Archetype</span>
+<div class="flex items-center gap-1 text-sky-700 font-medium cursor-pointer hover:underline">
+<span class="">The Sage</span>
+<span class="material-symbols-outlined text-[14px]">tune</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-slate-50 border border-slate-100 p-space-xs rounded px-2">
+<span class="text-slate-500 font-label-xs font-medium uppercase">Brand Voice</span>
+<span class="text-slate-800 font-medium truncate max-w-[150px]">Empathetic &amp; Provocative</span>
+</div>
+<div class="flex items-center justify-between bg-slate-50 border border-slate-100 p-space-xs rounded px-2">
+<span class="text-slate-500 font-label-xs font-medium uppercase">Language Model</span>
+<span class="font-label-sm text-slate-800 font-medium">en-US (Direct)</span>
+</div>
+</div>
+<!-- MODE SELECTOR SLIDER -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-slate-500 uppercase font-semibold">Exploration Depth</span>
+<span class="font-label-xs text-sky-700 font-semibold">Radical (Active)</span>
+</div>
+<div class="grid grid-cols-3 gap-1 bg-slate-100 p-1 rounded border border-slate-200">
+<button class="py-1 rounded text-center font-label-xs text-slate-600 hover:text-slate-900 font-medium transition-colors" type="button">Safe</button>
+<button class="py-1 rounded text-center font-label-xs text-slate-600 hover:text-slate-900 font-medium transition-colors" type="button">Bold</button>
+<button class="py-1 rounded text-center font-label-xs text-white bg-sky-600 font-semibold shadow-sm" type="button">Radical</button>
+</div>
+</div>
+<div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-sky-500 via-sky-600 to-emerald-500 h-full w-full"></div>
+</div>
+</div>
+<!-- ORCHESTRATOR PIPELINE TIMELINE -->
+<div class="bg-white rounded-xl p-space-md border border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex flex-col gap-space-md flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sky-600 text-[18px]">account_tree</span>
+<span class="font-label-sm text-slate-900 uppercase tracking-wider font-bold">Execution Pipeline</span>
+</div>
+<span class="font-label-sm text-sky-700 font-semibold">3.59s Tot</span>
+</div>
+<!-- Sequential stages list -->
+<div class="flex flex-col gap-space-sm relative">
+<!-- Connector line -->
+<div class="absolute left-3.5 top-3 bottom-3 w-0.5 bg-slate-200"></div>
+<!-- Step 1 -->
+<div class="flex items-start gap-space-sm relative z-10">
+<div class="w-7 h-7 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col flex-1 bg-slate-50 border border-slate-100 p-space-xs rounded">
+<div class="flex items-center justify-between">
+<span class="font-body-sm font-semibold text-slate-800">1. Brief Ingestion</span>
+<span class="font-label-xs text-slate-500 font-medium">12ms</span>
+</div>
+<span class="font-label-xs text-slate-500">Deterministic validator: Valid</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-space-sm relative z-10">
+<div class="w-7 h-7 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col flex-1 bg-slate-50 border border-slate-100 p-space-xs rounded">
+<div class="flex items-center justify-between">
+<span class="font-body-sm font-semibold text-slate-800">2. Lateral Generator</span>
+<span class="font-label-xs text-slate-500 font-medium">1.4s</span>
+</div>
+<span class="font-label-xs text-slate-500">5 divergent paradigms synthesized</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-space-sm relative z-10">
+<div class="w-7 h-7 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col flex-1 bg-slate-50 border border-slate-100 p-space-xs rounded">
+<div class="flex items-center justify-between">
+<span class="font-body-sm font-semibold text-slate-800">3. Concept Mapper</span>
+<span class="font-label-xs text-slate-500 font-medium">980ms</span>
+</div>
+<span class="font-label-xs text-sky-700 font-medium">Selected: 'The Ritual Pause'</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-start gap-space-sm relative z-10">
+<div class="w-7 h-7 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col flex-1 bg-slate-50 border border-slate-100 p-space-xs rounded">
+<div class="flex items-center justify-between">
+<span class="font-body-sm font-semibold text-slate-800">4. Script Writer</span>
+<span class="font-label-xs text-slate-500 font-medium">1.2s</span>
+</div>
+<span class="font-label-xs text-slate-500">3-Beat cinematic arc structured</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex items-start gap-space-sm relative z-10">
+<div class="w-7 h-7 rounded-full bg-sky-600 flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-[15px] font-bold">verified</span>
+</div>
+<div class="flex flex-col flex-1 bg-sky-50/70 border border-sky-100 p-space-xs rounded">
+<div class="flex items-center justify-between">
+<span class="font-body-sm font-bold text-sky-900">5. Strategic Auditor</span>
+<span class="font-label-xs px-1.5 py-0.5 bg-emerald-600 text-white rounded font-bold">0.82 / 1.0</span>
+</div>
+<span class="font-label-xs text-slate-600">0 rework loops required - Quality passed</span>
+</div>
+</div>
+</div>
+<div class="mt-auto bg-slate-50 p-space-sm rounded border border-slate-200 flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-xs text-slate-600 font-semibold uppercase">AUTO-REVISION MONITOR</span>
+</div>
+<span class="font-label-xs text-emerald-700 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded font-bold uppercase">IDLE // STABLE</span>
+</div>
+</div>
+</section>
+<!-- CENTER COLUMN: WORKBENCH (INSIGHT -> CONCEPT -> SCRIPT) (~580px / 6 cols) -->
+<main class="xl:col-span-6 flex flex-col gap-space-md">
+<!-- STRATEGIC LATERAL INSIGHT HERO CARD -->
+<article class="relative overflow-hidden bg-gradient-to-br from-white via-sky-50/40 to-slate-50 rounded-xl p-space-lg border border-sky-100 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-sky-600"></span>
+<span class="font-label-xs tracking-widest uppercase text-sky-800 font-bold">Primary Strategic Insight</span>
+</div>
+<span class="font-label-xs bg-sky-100/80 text-sky-800 px-2 py-0.5 rounded font-bold uppercase border border-sky-200">LATERAL-PO SHIFT #4</span>
+</div>
+<blockquote class="font-headline-lg text-[#0F172A] font-semibold tracking-tight mb-space-md leading-relaxed">
+          “Hydration is not an administrative chore or productivity metric; it is an intimate daily ritual of self-respect in a hyper-digitized workplace.”
+        </blockquote>
+<div class="bg-white/90 border border-slate-200 rounded p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sky-600 text-[16px]">change_circle</span>
+<span class="font-label-xs text-slate-500 font-semibold uppercase">Cognitive Vector:</span>
+<span class="font-body-sm text-slate-800 font-medium">Utilitarian consumption → Sacred recalibration pause</span>
+</div>
+<button class="self-start sm:self-auto font-label-xs text-sky-700 hover:text-sky-900 font-bold uppercase tracking-wider flex items-center gap-0.5" type="button">
+<span class="">Trace Seed</span>
+<span class="material-symbols-outlined text-[12px]">north_east</span>
+</button>
+</div>
+</article>
+<!-- CONCEPT SHOWCASE: "THE RITUAL PAUSE" -->
+<section class="bg-white rounded-xl p-space-md border border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-xs px-2 py-0.5 rounded bg-sky-100 text-sky-800 uppercase font-bold border border-sky-200 tracking-wider">Concept Deck 01</span>
+<span class="font-headline-md text-slate-900 font-bold">The Ritual Pause</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+</button>
+<button class="w-7 h-7 rounded flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">share</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md items-center">
+<div class="md:col-span-1 rounded overflow-hidden relative shadow-sm aspect-video md:aspect-square bg-slate-100 border border-slate-200">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural glass bottle with pristine water resting beside a mechanical keyboard, captured in cinematic dramatic chiaroscuro studio lighting with cyan undertones and mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpfaCXjqP0yT3ECYQhP4A0MpjJJNqhBx8AluAkXpa48uoKNXV9eggmFVunwodjTIMurs3sljMoV5YnEYV-NzTUTYW_4PL3qQErWhn8MMWptRCj7bkuiSq_LJxLDLSRgIS-DEOuJeXc9k5rxRjUSHqfS3diaJTIZfCN_2f_hN3D1wWzgdJVRnPxpU68wns1_hMrKCqKJOJG6PWJuQlOG9W2h3bHA8DW3frDBWxOa4Kz4UhqXo_VhRcZ">
+<div class="absolute bottom-1 right-1 font-label-xs bg-slate-900/80 text-white px-1.5 py-0.5 rounded font-mono font-medium backdrop-blur-sm">KEYFRAME A</div>
+</div>
+<div class="md:col-span-2 flex flex-col justify-between h-full gap-space-xs">
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-sky-700 uppercase font-bold tracking-wide">Tagline Hypothesis</span>
+<p class="font-headline-md text-slate-900 font-bold tracking-tight">“Where water meets intention.”</p>
+<p class="font-body-md text-slate-600 leading-normal mt-1">
+                Reframing the act of standing up from the desk not as an interruption to work, but as the only legitimate defense against algorithmic mental exhaustion. Water becomes the kinetic boundary.
+              </p>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<span class="font-label-xs px-2 py-1 rounded bg-slate-100 text-slate-700 font-semibold border border-slate-200">EMOTIONAL HOOK: SANCTUARY</span>
+<span class="font-label-xs px-2 py-1 rounded bg-slate-100 text-slate-700 font-semibold border border-slate-200">TARGET: DESK CREATIVES</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SCRIPT PRODUCTION STUDIO (3-BEAT EMOTIONAL ARC) -->
+<section class="bg-white rounded-xl p-space-md border border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-sky-600 text-[20px]">movie_edit</span>
+<div>
+<h2 class="font-headline-md text-slate-900 font-bold">Production Script Draft</h2>
+<p class="font-label-xs text-slate-500 uppercase font-medium">3-Beat 45-Second Narrative Spec</p>
+</div>
+</div>
+<button class="font-label-sm text-sky-700 hover:text-sky-900 px-space-sm py-1 rounded bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center gap-1 transition-colors font-medium" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span class="">Copy Spec</span>
+</button>
+</div>
+<!-- BEATS STACK -->
+<div class="flex flex-col gap-space-md">
+<!-- BEAT 1 -->
+<div class="bg-slate-50 border border-slate-200 rounded-lg p-space-md flex flex-col gap-space-sm transition-all hover:border-slate-300">
+<div class="flex items-center justify-between">
+<span class="font-label-xs px-2 py-0.5 rounded bg-white text-slate-800 font-semibold border border-slate-200">BEAT 01: THE AMBIENT NOISE &amp; DISCONNECTION</span>
+<span class="font-label-xs text-slate-500 font-medium">00:00 - 00:14</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm text-body-sm mt-1">
+<div class="flex flex-col gap-1 bg-white p-space-sm rounded border border-slate-200/80 shadow-sm">
+<span class="font-label-xs text-slate-500 font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sky-600">visibility</span> VISUAL DIRECTION
+                </span>
+<p class="text-slate-700 leading-relaxed">
+                  Extreme close-up on dilated pupils reflecting the rapid cold strobe of Slack notifications and Figma cursor trails. Sterile blue light washes the room. Sudden hard freeze on typing fingers mid-keystroke.
+                </p>
+</div>
+<div class="flex flex-col gap-1 bg-white p-space-sm rounded border border-slate-200/80 shadow-sm">
+<span class="font-label-xs text-slate-500 font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sky-700">volume_up</span> AUDIO ARCHITECTURE
+                </span>
+<p class="text-slate-700 leading-relaxed">
+                  Low, oppressive 60Hz electronic hum under frantic mechanical clatter. At second 00:12, a high-frequency filter snaps shut. Complete vacuum of silence.
+                </p>
+</div>
+</div>
+<div class="bg-white p-space-xs rounded px-space-sm font-body-md text-slate-900 italic border border-slate-200">
+              VO (Deliberate, grounded): “You didn't notice the hour slip. But your body kept the score.”
+            </div>
+</div>
+<!-- BEAT 2 -->
+<div class="bg-slate-50 border border-slate-200 rounded-lg p-space-md flex flex-col gap-space-sm transition-all hover:border-slate-300">
+<div class="flex items-center justify-between">
+<span class="font-label-xs px-2 py-0.5 rounded bg-white text-slate-800 font-semibold border border-slate-200">BEAT 02: THE PHYSICAL AWAKENING</span>
+<span class="font-label-xs text-slate-500 font-medium">00:14 - 00:32</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm text-body-sm mt-1">
+<div class="flex flex-col gap-1 bg-white p-space-sm rounded border border-slate-200/80 shadow-sm">
+<span class="font-label-xs text-slate-500 font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sky-600">visibility</span> VISUAL DIRECTION
+                </span>
+<p class="text-slate-700 leading-relaxed">
+                  Slow-motion pour of crystal water into a heavy frosted vessel. Refracted warm light cuts through the cold workspace shadows. Condensation micro-droplets roll down the glass surface like a breath.
+                </p>
+</div>
+<div class="flex flex-col gap-1 bg-white p-space-sm rounded border border-slate-200/80 shadow-sm">
+<span class="font-label-xs text-slate-500 font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sky-700">volume_up</span> AUDIO ARCHITECTURE
+                </span>
+<p class="text-slate-700 leading-relaxed">
+                  Acoustic, crisp resonance of falling water. Sub-bass swell warmly re-enters the space, mimicking a slow heart rate decelerating from 110 to 65 bpm.
+                </p>
+</div>
+</div>
+<div class="bg-white p-space-xs rounded px-space-sm font-body-md text-slate-900 italic border border-slate-200">
+              VO: “Every glass is a boundary line. Between what demands you, and what restores you.”
+            </div>
+</div>
+<!-- BEAT 3 -->
+<div class="bg-slate-50 border border-slate-200 rounded-lg p-space-md flex flex-col gap-space-sm transition-all hover:border-slate-300">
+<div class="flex items-center justify-between">
+<span class="font-label-xs px-2 py-0.5 rounded bg-white text-slate-800 font-semibold border border-slate-200">BEAT 03: THE RENEWED MIND</span>
+<span class="font-label-xs text-slate-500 font-medium">00:32 - 00:45</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm text-body-sm mt-1">
+<div class="flex flex-col gap-1 bg-white p-space-sm rounded border border-slate-200/80 shadow-sm">
+<span class="font-label-xs text-slate-500 font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sky-600">visibility</span> VISUAL DIRECTION
+                </span>
+<p class="text-slate-700 leading-relaxed">
+                  Subject drinks with deliberate composure. Eyes open with renewed sharp focus. The workstation background remains, but now softly blurred, powerless to overwhelm. Tagline resolves in crisp white typography.
+                </p>
+</div>
+<div class="flex flex-col gap-1 bg-white p-space-sm rounded border border-slate-200/80 shadow-sm">
+<span class="font-label-xs text-slate-500 font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sky-700">volume_up</span> AUDIO ARCHITECTURE
+                </span>
+<p class="text-slate-700 leading-relaxed">
+                  A pure, resonant singing bowl chime decays gracefully into silence. Crisp audio click of glass meeting the wooden tabletop.
+                </p>
+</div>
+</div>
+<div class="bg-sky-50 border border-sky-200 p-space-xs rounded px-space-sm font-body-md text-sky-900 font-bold">
+              TAGLINE SUPER: “The Ritual Pause. Where water meets intention.”
+            </div>
+</div>
+</div>
+</section>
+</main>
+<!-- RIGHT COLUMN: LATERAL MATRIX & TRACE HUD (~360px / 3 cols) -->
+<aside class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- LATERAL THINKING TECHNIQUES MATRIX -->
+<div class="bg-white rounded-xl p-space-md border border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sky-600 text-[18px]">hub</span>
+<span class="font-label-sm text-slate-900 uppercase tracking-wider font-bold">Lateral Matrix</span>
+</div>
+<span class="font-label-xs text-slate-500 font-semibold">5 DIVERGENCES</span>
+</div>
+<p class="font-body-sm text-slate-600 leading-tight">
+          De Bono provocation algorithms deployed to puncture cliche hydration advertising:
+        </p>
+<!-- 5 Techniques Cards -->
+<div class="flex flex-col gap-space-xs">
+<!-- 1. Provocation (PO) -->
+<div class="bg-slate-50 border border-slate-100 p-space-sm rounded flex flex-col gap-1 hover:bg-slate-100/80 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-sky-700 font-bold">1. PROVOCATION (PO)</span>
+<span class="font-label-xs text-slate-500 font-medium">WEIGHT: 0.94</span>
+</div>
+<p class="font-body-sm text-slate-800 italic">“What if hydration stopped time instead of fueling hustle?”</p>
+<span class="font-label-xs text-slate-500 font-medium">Output → Temporal pause concept</span>
+</div>
+<!-- 2. Analogies -->
+<div class="bg-slate-50 border border-slate-100 p-space-sm rounded flex flex-col gap-1 hover:bg-slate-100/80 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-blue-700 font-bold">2. ANALOGIES</span>
+<span class="font-label-xs text-slate-500 font-medium">WEIGHT: 0.88</span>
+</div>
+<p class="font-body-sm text-slate-800 italic">“The Japanese Tea Ceremony meets the modern tech sprint.”</p>
+<span class="font-label-xs text-slate-500 font-medium">Output → Sacred ergonomics &amp; mindfulness</span>
+</div>
+<!-- 3. Random Stimulus -->
+<div class="bg-slate-50 border border-slate-100 p-space-sm rounded flex flex-col gap-1 hover:bg-slate-100/80 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-emerald-700 font-bold">3. RANDOM SEED: ‘OBELISK’</span>
+<span class="font-label-xs text-slate-500 font-medium">WEIGHT: 0.79</span>
+</div>
+<p class="font-body-sm text-slate-800 italic">“A solid, unmoving totem of quiet anchored on the desk.”</p>
+<span class="font-label-xs text-slate-500 font-medium">Output → Geometric vessel visual cue</span>
+</div>
+<!-- 4. Opposite Thinking -->
+<div class="bg-slate-50 border border-slate-100 p-space-sm rounded flex flex-col gap-1 hover:bg-slate-100/80 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-sky-700 font-bold">4. OPPOSITE THINKING</span>
+<span class="font-label-xs text-slate-500 font-medium">WEIGHT: 0.85</span>
+</div>
+<p class="font-body-sm text-slate-800 italic">“Instead of drinking to keep working, we work to earn the drink.”</p>
+<span class="font-label-xs text-slate-500 font-medium">Output → Hydration as summit reward</span>
+</div>
+<!-- 5. Constraint Reversal -->
+<div class="bg-slate-50 border border-slate-100 p-space-sm rounded flex flex-col gap-1 hover:bg-slate-100/80 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-slate-800 font-bold">5. CONSTRAINT REVERSAL</span>
+<span class="font-label-xs text-slate-500 font-medium">WEIGHT: 0.72</span>
+</div>
+<p class="font-body-sm text-slate-800 italic">“Eliminate the cup; water becomes the meeting itself.”</p>
+<span class="font-label-xs text-slate-500 font-medium">Output → Collective hydration stand-ups</span>
+</div>
+</div>
+</div>
+<!-- LIVE EXECUTION TRACE & TELEMETRY HUD -->
+<div class="bg-white rounded-xl p-space-md border border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex flex-col gap-space-sm flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sky-600 text-[18px]">terminal</span>
+<span class="font-label-sm text-slate-900 uppercase tracking-wider font-bold">Live Event Trace</span>
+</div>
+<span class="font-label-xs px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold border border-slate-200">1,420 TOKENS</span>
+</div>
+<!-- Telemetry stat pills -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-slate-50 border border-slate-100 p-space-xs rounded flex flex-col">
+<span class="font-label-xs text-slate-400 font-semibold uppercase">PRIMARY MODEL</span>
+<span class="font-label-sm text-slate-900 font-semibold truncate">GPT-4 Turbo</span>
+</div>
+<div class="bg-slate-50 border border-slate-100 p-space-xs rounded flex flex-col">
+<span class="font-label-xs text-slate-400 font-semibold uppercase">HOT STANDBY</span>
+<span class="font-label-sm text-slate-900 font-semibold truncate">Claude 3.5 Sonnet</span>
+</div>
+</div>
+<!-- Scrollable Monospace Logs Terminal -->
+<div class="bg-slate-900 text-slate-100 p-space-sm rounded font-label-xs flex flex-col gap-1.5 overflow-hidden shadow-inner">
+<div class="flex items-center gap-2">
+<span class="text-sky-400 font-mono">[00:00.012]</span>
+<span class="text-white font-semibold">LateralAgent::boot</span>
+<span class="ml-auto text-[10px] text-emerald-400 font-bold">OK</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sky-400 font-mono">[00:01.410]</span>
+<span class="text-slate-300">DeBono::spawn_provocations</span>
+<span class="ml-auto text-[10px] text-sky-400 font-medium">N=5</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sky-400 font-mono">[00:02.390]</span>
+<span class="text-slate-300">ConceptMapper::synthesize</span>
+<span class="ml-auto text-[10px] text-sky-300 font-medium">0.912</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sky-400 font-mono">[00:03.590]</span>
+<span class="text-slate-300">ScriptWriter::render_3beat</span>
+<span class="ml-auto text-[10px] text-emerald-400 font-bold">DONE</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sky-400 font-mono">[00:03.602]</span>
+<span class="text-sky-300">Auditor::assert_brand_safety</span>
+<span class="ml-auto text-[10px] text-emerald-400 font-bold">PASSED</span>
+</div>
+</div>
+<!-- COLLAPSIBLE JSON VIEWER TOGGLE -->
+<div class="flex flex-col gap-space-xs mt-auto">
+<details class="group bg-slate-50 border border-slate-200 rounded p-space-xs cursor-pointer">
+<summary class="flex items-center justify-between font-label-xs text-slate-600 group-open:text-sky-700 font-semibold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">data_object</span>
+<span class="">Payload State Snapshot</span>
+</span>
+<span class="material-symbols-outlined text-[14px] transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<pre class="mt-2 p-2 bg-slate-900 text-sky-300 rounded font-label-xs overflow-x-auto text-[10px] leading-tight">{
+  "runId": "txfx_98f4a1c",
+  "archetype": "The Sage",
+  "temperature": 0.88,
+  "lateralSeed": "Obelisk",
+  "selectedParadigm": "PO_4_TEMPORAL_PAUSE",
+  "eval": {
+    "novelty": 0.86,
+    "feasibility": 0.84,
+    "emotionalResonance": 0.79
+  }
+}
+            </pre>
+</details>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for JSON inspection modal / focus
+  document.getElementById('btn-inspect-json')?.addEventListener('click', () => {
+    const details = document.querySelector('details');
+    if (details) {
+      details.open = !details.open;
+      details.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  // Clean dismiss listener ensuring smooth removal on animation completion
+  const banner = document.getElementById('theme-cache-notification-banner');
+  if (banner) {
+    banner.addEventListener('animationend', (e) => {
+      if (e.animationName === 'autoDismissBanner') {
+        banner.remove();
+      }
+    });
+  }
+</script><div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none" id="toast-stack-container"><div class="pointer-events-auto bg-slate-50/90 backdrop-blur-md border border-slate-200/80 rounded-xl p-2 px-3 shadow-md flex items-center justify-between scale-[0.96] opacity-80"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-slate-500 text-[16px]">info</span><span class="font-label-xs text-slate-600 font-medium">1 earlier notification queued</span></div><span class="font-label-xs text-slate-400 font-semibold uppercase">View</span></div><div class="pointer-events-auto relative overflow-hidden bg-white/95 backdrop-blur-md rounded-xl border border-sky-200 shadow-xl p-space-md flex flex-col gap-2.5 transition-all text-[#0F172A]" id="toast-theme-cache"><div class="flex items-start justify-between gap-space-sm"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 shrink-0"><span class="material-symbols-outlined text-[16px]">sync_saved_locally</span></div><div><div class="flex items-center gap-1.5"><h4 class="font-label-sm font-bold text-slate-900 leading-tight">Theme Preference Cached</h4><span class="font-label-xs px-1.5 py-0.5 rounded bg-sky-100 text-sky-800 font-semibold border border-sky-200">Auto</span></div><span class="font-label-xs text-slate-400 font-medium">Just now • 1 of 2</span></div></div><button aria-label="Dismiss toast" class="text-slate-400 hover:text-slate-700 transition-colors p-0.5 rounded hover:bg-slate-100 flex items-center justify-center" onclick="const t=document.getElementById('toast-theme-cache');if(t){t.style.opacity='0';t.style.transform='translateY(8px)';setTimeout(()=&gt;t.remove(),200);}" type="button"><span class="material-symbols-outlined text-[16px]">close</span></button></div><p class="font-body-sm text-slate-600 leading-snug"><span class="font-mono font-medium text-slate-900 bg-slate-100 px-1 py-0.5 rounded text-[11px] border border-slate-200">textfx_theme_preference</span> persisted to localStorage. Synchronized with OS color scheme (Auto mode).</p><div class="flex items-center justify-between pt-1 border-t border-slate-100"><div class="flex items-center gap-3"><button class="font-label-xs text-sky-700 hover:text-sky-900 font-bold uppercase tracking-wider hover:underline flex items-center gap-0.5" type="button"><span class="material-symbols-outlined text-[13px]">tune</span><span class="">Manage Storage</span></button><button class="font-label-xs text-slate-500 hover:text-slate-800 font-semibold uppercase tracking-wider hover:underline" type="button">Undo</button></div><span class="font-label-xs text-slate-400 font-medium">5s</span></div><div class="absolute bottom-0 left-0 right-0 h-1 bg-sky-100/70 overflow-hidden"><div class="banner-progress-bar h-full bg-gradient-to-r from-sky-400 via-sky-600 to-sky-500 origin-left"></div></div></div></div><div id="toast-stack" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 w-96 max-w-[calc(100vw-2rem)] select-none"><div class="flex items-center justify-between px-2 py-1 bg-slate-900/90 text-white rounded-lg backdrop-blur-md shadow-sm border border-slate-700"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span class="font-label-xs font-semibold uppercase tracking-wider text-slate-200">Toast Stack</span><span class="font-label-xs px-1.5 py-0.2 bg-slate-800 text-sky-300 rounded border border-slate-600 font-mono">3 Active</span></div><div class="flex items-center gap-2"><button type="button" onclick="const s=document.getElementById('toast-stack');if(s)s.style.display='none';" class="font-label-xs text-slate-400 hover:text-white transition-colors flex items-center gap-0.5 hover:underline"><span class="material-symbols-outlined text-[13px]">clear_all</span><span class="">Clear All</span></button></div></div><div class="relative bg-white rounded-xl border border-red-200 shadow-[0_4px_16px_rgba(220,38,38,0.12)] p-space-sm flex flex-col gap-2 overflow-hidden ring-1 ring-red-100" id="toast-error-429"><div class="flex items-start justify-between gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-red-50 border border-red-200 flex items-center justify-center text-red-600 flex-shrink-0"><span class="material-symbols-outlined text-[18px]">error</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5 flex-wrap"><span class="font-body-sm font-bold text-slate-900 leading-tight">Pipeline Execution Blocked</span></div><span class="font-label-xs text-red-700 font-semibold bg-red-50 px-1.5 py-0.2 rounded border border-red-200 w-fit mt-0.5">Step 3 • HTTP 429</span></div></div><button type="button" onclick="document.getElementById('toast-error-429')?.remove();" class="text-slate-400 hover:text-slate-700 p-0.5 rounded transition-colors" aria-label="Dismiss toast"><span class="material-symbols-outlined text-[16px]">close</span></button></div><p class="font-body-sm text-slate-600 leading-snug pl-9">Claude 3.5 Sonnet endpoint rate limit exceeded on Step 3 (Concept Mapper). Retrying in 4s (Attempt 2/3).</p><div class="flex items-center justify-between gap-2 pl-9 pt-1 border-t border-slate-100"><div class="flex items-center gap-1.5"><button type="button" class="px-2.5 py-1 rounded bg-red-600 hover:bg-red-700 text-white font-label-xs font-semibold shadow-xs transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">refresh</span><span class="">Retry Now</span></button><button type="button" class="px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-label-xs font-medium border border-slate-200 transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">troubleshoot</span><span class="">View Trace</span></button></div><span class="font-label-xs font-mono text-slate-400">auto-retry</span></div></div><div class="relative bg-white rounded-xl border border-emerald-200 shadow-[0_4px_16px_rgba(5,150,105,0.12)] p-space-sm flex flex-col gap-2 overflow-hidden ring-1 ring-emerald-100" id="toast-success-webhook"><div class="flex items-start justify-between gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 flex-shrink-0"><span class="material-symbols-outlined text-[18px]">cloud_done</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-body-sm font-bold text-slate-900 leading-tight">Webhook Sync Dispatched</span></div><span class="font-label-xs text-emerald-700 font-medium">Just now • 200 OK</span></div></div><button type="button" onclick="document.getElementById('toast-success-webhook')?.remove();" class="text-slate-400 hover:text-slate-700 p-0.5 rounded transition-colors" aria-label="Dismiss toast"><span class="material-symbols-outlined text-[16px]">close</span></button></div><p class="font-body-sm text-slate-600 leading-snug pl-9">Generated 3-beat script manifest delivered to Postgres &amp; Slack webhook <span class="font-mono font-medium text-slate-800 bg-slate-100 px-1 py-0.2 rounded text-[11px]">#creative-review</span> (Payload 4.2 KB).</p><div class="flex items-center justify-between gap-2 pl-9 pt-1"><button type="button" class="px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-label-xs font-semibold border border-slate-200 transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-emerald-600">code</span><span class="">Inspect JSON</span></button><span class="font-label-xs text-slate-400 font-mono">4.2 KB</span></div><div class="h-[2px] w-full bg-slate-100 mt-1 overflow-hidden rounded-full"><div class="h-full bg-emerald-500 rounded-full w-2/3"></div></div></div><div class="relative bg-white rounded-xl border border-sky-200 shadow-[0_4px_16px_rgba(2,132,199,0.1)] p-space-sm flex flex-col gap-2 overflow-hidden ring-1 ring-sky-100" id="toast-info-theme"><div class="flex items-start justify-between gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 flex-shrink-0"><span class="material-symbols-outlined text-[18px]">sync_saved_locally</span></div><div class="flex flex-col"><span class="font-body-sm font-bold text-slate-900 leading-tight">Theme Preference Cached</span><span class="font-label-xs text-slate-500 font-medium">Persistent Local Storage</span></div></div><button type="button" onclick="document.getElementById('toast-info-theme')?.remove();" class="text-slate-400 hover:text-slate-700 p-0.5 rounded transition-colors" aria-label="Dismiss toast"><span class="material-symbols-outlined text-[16px]">close</span></button></div><p class="font-body-sm text-slate-600 leading-snug pl-9"><span class="font-mono font-medium text-slate-800 bg-slate-100 px-1 py-0.2 rounded text-[11px]">textfx_theme_preference</span> synced across browser sessions and active workspaces.</p></div></div></main></div>
+
+
+</body></html>

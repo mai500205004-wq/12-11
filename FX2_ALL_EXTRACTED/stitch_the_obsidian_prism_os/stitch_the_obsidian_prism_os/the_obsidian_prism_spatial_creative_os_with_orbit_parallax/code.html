@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#93000a","secondary-container":"#af8d11","primary-fixed":"#ffdad4","surface-container-high":"#292a2c","surface-container-lowest":"#0d0e10","inverse-primary":"#bf0904","on-background":"#e3e2e5","secondary-fixed-dim":"#e9c349","outline-variant":"#5d403b","on-secondary-fixed":"#241a00","on-error":"#690005","tertiary-fixed":"#4ffeb9","primary-fixed-dim":"#ffb4a8","primary-container":"#ff5541","tertiary":"#1ce19f","on-secondary-container":"#342800","on-surface":"#e3e2e5","surface-tint":"#ffb4a8","on-primary":"#690000","surface-container":"#1f2022","on-tertiary":"#003824","inverse-on-surface":"#303033","surface-variant":"#343537","tertiary-container":"#00a572","on-secondary":"#3c2f00","tertiary-fixed-dim":"#1ce19f","background":"#121315","surface-container-low":"#1b1c1e","on-tertiary-fixed-variant":"#005237","inverse-surface":"#e3e2e5","surface-dim":"#121315","primary":"#ffb4a8","secondary-fixed":"#ffe088","on-tertiary-container":"#00311f","on-primary-fixed":"#410000","on-primary-fixed-variant":"#930000","surface-bright":"#38393b","error":"#ffb4ab","secondary":"#e9c349","surface":"#121315","outline":"#ad8882","on-primary-container":"#5c0000","on-surface-variant":"#e6bdb7","on-error-container":"#ffdad6","surface-container-highest":"#343537","on-secondary-fixed-variant":"#574500","on-tertiary-fixed":"#002114"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter-mobile":"0.75rem","space-lg":"1.5rem","margin":"2.5rem","margin-mobile":"1rem","gutter":"1.5rem"},fontFamily:{"body-sm":["Space Mono"],"display-xl-mobile":["Playfair Display"],"body-md":["Space Mono"],"headline-lg-mobile":["Playfair Display"],"label-sm":["Space Mono"],"title-lg":["Playfair Display"],"display-xl":["Playfair Display"],"headline-md":["Playfair Display"],"label-md":["Space Mono"],"headline-lg":["Playfair Display"],"code-sm":["Space Mono"],"body-lg":["Space Mono"]},fontSize:{"body-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"400"}],"display-xl-mobile":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"700"}],"title-lg":["22px",{"lineHeight":"30px","letterSpacing":"0.01em","fontWeight":"600"}],"display-xl":["64px",{"lineHeight":"72px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.015em","fontWeight":"600"}],"code-sm":["11px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/20"><div class="h-14 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">REC 00:14:28:12</span></div><span class="text-outline-variant font-label-sm text-label-sm">//</span><span class="font-title-lg text-title-lg text-on-surface tracking-tight">The Obsidian Prism</span><span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-space-xs py-0.5 rounded">WAR-ROOM v4.2</span></div><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-xs bg-surface-container-low px-space-xs py-1 rounded"><button class="px-space-sm py-0.5 rounded font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" id="nav-btn-void"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span>[L1: VOID]</button><button class="px-space-sm py-0.5 rounded font-label-sm text-label-sm uppercase text-on-surface font-bold bg-primary-container/20 transition-colors flex items-center gap-1.5" id="nav-btn-prism"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>[L2: PRISM]</button><button class="px-space-sm py-0.5 rounded font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" id="nav-btn-forge"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>[L3: FORGE]</button></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-1 bg-surface-container-lowest px-space-sm py-1.5 rounded border border-outline-variant/30"><span class="font-label-sm text-label-sm text-outline">SPEC:</span><div class="flex items-end gap-0.5 h-3.5 w-12"><span class="w-1 h-1.5 bg-tertiary rounded-xs"></span><span class="w-1 h-3 bg-tertiary rounded-xs"></span><span class="w-1 h-2 bg-tertiary rounded-xs"></span><span class="w-1 h-3.5 bg-primary rounded-xs"></span><span class="w-1 h-2 bg-tertiary rounded-xs"></span><span class="w-1 h-1 bg-tertiary rounded-xs"></span></div></div><div class="flex items-center gap-1.5 bg-surface-container-lowest px-space-sm py-1.5 rounded border border-outline-variant/30"><span class="font-label-sm text-label-sm text-outline">FREQ:</span><span class="font-code-sm text-code-sm text-secondary">432.8 THz</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:ring-2 ring-primary/40 transition-all"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-surface-container-lowest min-h-screen cursor-crosshair"><div class="flex flex-col w-full relative select-none overflow-hidden" id="spatial-viewport">
+<!-- Ambient Glow Gradients -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] rounded-full bg-gradient-to-tr from-primary-container/10 via-primary/5 to-transparent blur-[140px]" id="ambient-glow-a"></div>
+<div class="absolute -bottom-32 right-12 w-[540px] h-[540px] rounded-full bg-gradient-to-bl from-tertiary-container/10 via-secondary/5 to-transparent blur-[120px]" id="ambient-glow-b"></div>
+</div>
+<!-- Embedded ThreeJS Spatial Engine Background -->
+
+<!-- Interactive Coordinate Reticle Overlay & Orbit Pitch/Yaw Telemetry -->
+<div class="fixed top-16 right-6 pointer-events-none z-40 hidden md:flex items-center gap-space-sm bg-surface-container-lowest/80 border border-outline-variant/30 px-space-md py-1.5 rounded shadow-xl backdrop-blur-md" id="reticle-hud">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">X:</span>
+<span class="font-code-sm text-code-sm text-on-surface w-10" id="coord-x">0412</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Y:</span>
+<span class="font-code-sm text-code-sm text-on-surface w-10" id="coord-y">0789</span>
+<span class="text-outline-variant font-label-sm text-label-sm">|</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">PITCH:</span>
+<span class="font-code-sm text-code-sm text-primary w-11" id="telemetry-pitch">+00.0°</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">YAW:</span>
+<span class="font-code-sm text-code-sm text-secondary w-11" id="telemetry-yaw">+00.0°</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary ml-1.5 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>ORBIT TILT: ACTIVE</span>
+</div>
+<!-- Perspective 3D Canvas Rig -->
+<div class="relative w-full min-h-[calc(100vh-3.5rem)] [perspective:1200px] flex items-center justify-center overflow-hidden py-space-xl" id="canvas-perspective-stage">
+<div class="relative w-full max-w-7xl min-h-[900px] transition-transform duration-100 ease-out [transform-style:preserve-3d] flex items-center justify-center will-change-transform" id="spatial-world">
+<!-- ============================================================ -->
+<!-- LAYER 1: THE VOID (BACKGROUND NODES - translateZ: -200px) -->
+<!-- ============================================================ -->
+<div class="absolute inset-0 pointer-events-auto [transform:translateZ(-200px)] z-10 transition-[opacity,filter] duration-700 will-change-transform" id="layer-void">
+<!-- Ambient Laser Grid Lines (SVG) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20 stroke-outline-variant" xmlns="http://www.w3.org/2000/svg">
+<line stroke-dasharray="3 3" stroke-width="1" x1="12%" x2="48%" y1="18%" y2="48%"></line>
+<line stroke-dasharray="3 3" stroke-width="1" x1="88%" x2="52%" y1="22%" y2="48%"></line>
+<line stroke-dasharray="3 3" stroke-width="1" x1="18%" x2="46%" y1="78%" y2="52%"></line>
+<line stroke-dasharray="3 3" stroke-width="1" x1="82%" x2="54%" y1="74%" y2="52%"></line>
+<circle cx="50%" cy="50%" fill="none" r="320" stroke-dasharray="4 8" stroke-width="0.5"></circle>
+</svg>
+<!-- Constellation Node A -->
+<div class="group absolute top-[10%] left-[6%] w-72 bg-surface-container-low/60 backdrop-blur-xl p-space-md rounded shadow-xl border border-outline-variant/30 transition-all duration-300 hover:bg-surface-container/90 hover:scale-105 cursor-pointer">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm uppercase text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              NODE // 01-A
+            </span>
+<span class="font-code-sm text-code-sm text-secondary">420ms</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-1">Neuro-Aesthetics</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Dopaminergic spike triggered on chromatic fracture under sub-second perceptual cadence.</p>
+<div class="mt-space-sm pt-space-xs flex justify-between items-center text-outline border-t border-outline-variant/20">
+<span class="font-label-sm text-label-sm">VARIANCE: +38.4%</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">bubble_chart</span>
+</div>
+</div>
+<!-- Constellation Node B -->
+<div class="group absolute top-[14%] right-[8%] w-72 bg-surface-container-low/60 backdrop-blur-xl p-space-md rounded shadow-xl border border-outline-variant/30 transition-all duration-300 hover:bg-surface-container/90 hover:scale-105 cursor-pointer">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm uppercase text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              NODE // 02-B
+            </span>
+<span class="font-code-sm text-code-sm text-on-surface">GEN-Z CORPUS</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-1">Anthropological Index</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Mass collective revolt against algorithmic symmetry; high-friction glitch aesthetics favored.</p>
+<div class="mt-space-sm pt-space-xs flex justify-between items-center text-outline border-t border-outline-variant/20">
+<span class="font-label-sm text-label-sm">TENSION: SATURATED</span>
+<span class="material-symbols-outlined text-[14px] text-primary">psychology</span>
+</div>
+</div>
+<!-- Constellation Node C -->
+<div class="group absolute bottom-[22%] left-[4%] w-80 bg-surface-container-low/60 backdrop-blur-xl p-space-md rounded shadow-xl border border-outline-variant/30 transition-all duration-300 hover:bg-surface-container/90 hover:scale-105 cursor-pointer">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm uppercase text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              NODE // 03-C
+            </span>
+<span class="font-code-sm text-code-sm text-primary">LUX-ANOMALY</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-1">Market Anomaly</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Prestige fragrance category over-saturated with white marble sterility. Dark visceral mysticism vacant.</p>
+<div class="mt-space-sm pt-space-xs flex justify-between items-center text-outline border-t border-outline-variant/20">
+<span class="font-label-sm text-label-sm">ALPHA CAPTURE: 91%</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">radar</span>
+</div>
+</div>
+<!-- Constellation Node D -->
+<div class="group absolute bottom-[18%] right-[6%] w-72 bg-surface-container-low/60 backdrop-blur-xl p-space-md rounded shadow-xl border border-outline-variant/30 transition-all duration-300 hover:bg-surface-container/90 hover:scale-105 cursor-pointer">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm uppercase text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              NODE // 04-D
+            </span>
+<span class="font-code-sm text-code-sm text-tertiary">34.2 Hz</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-1">Sonic Resonance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Continuous 34Hz sub-bass drone elevates recall retention by 28% without visual cognitive overload.</p>
+<div class="mt-space-sm pt-space-xs flex justify-between items-center text-outline border-t border-outline-variant/20">
+<span class="font-label-sm text-label-sm">ACOUSTIC LOCK: TRUE</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">graphic_eq</span>
+</div>
+</div>
+<!-- Constellation Node E -->
+<div class="group absolute top-[44%] left-[2%] w-64 bg-surface-container-low/50 backdrop-blur-md p-space-sm rounded shadow-lg border border-outline-variant/20 transition-all duration-300 hover:bg-surface-container/80 cursor-pointer hidden lg:block">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase text-outline">NODE // 05-E</span>
+<span class="font-code-sm text-code-sm text-outline">MONOLITH</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">Visual Archetype: Brutalist sanctum juxtaposed with soft volumetric luminescence.</p>
+</div>
+<!-- Constellation Node F -->
+<div class="group absolute top-[48%] right-[2%] w-64 bg-surface-container-low/50 backdrop-blur-md p-space-sm rounded shadow-lg border border-outline-variant/20 transition-all duration-300 hover:bg-surface-container/80 cursor-pointer hidden lg:block">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase text-outline">NODE // 06-F</span>
+<span class="font-code-sm text-code-sm text-outline">KINETIC</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">Cultural Drift: Neo-baroque optical kineticism superseding static flat minimalism.</p>
+</div>
+</div>
+<!-- ============================================================ -->
+<!-- LAYER 2: THE PRISM (MIDGROUND CORE - translateZ: 0px) -->
+<!-- ============================================================ -->
+<div class="relative z-20 [transform:translateZ(0px)] flex flex-col items-center justify-center w-full px-space-md transition-[opacity,filter] duration-700 will-change-transform" id="layer-prism">
+<!-- Laser Ray Canvas Connection (Animated SVG) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-10 overflow-visible" id="laser-svg-canvas" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter height="200%" id="laser-glow" width="200%" x="-50%" y="-50%">
+<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<path class="transition-all duration-500" d="" fill="none" filter="url(#laser-glow)" id="active-laser-beam" stroke="#ff5541" stroke-width="2.5"></path>
+</svg>
+<!-- Lens Selector Orbital Array (Surrounding 5 Lenses) -->
+<div class="w-full max-w-4xl flex flex-wrap items-center justify-center gap-space-sm mb-space-lg z-20">
+<button class="lens-btn group relative px-space-md py-2 rounded bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant/20 shadow-md hover:bg-surface-container-high transition-all duration-200 flex items-center gap-space-sm" data-lens="1">
+<span class="w-2 h-2 rounded-full bg-primary-container transition-transform group-hover:scale-125"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">1. Anarchic Brutalism</span>
+<span class="font-code-sm text-code-sm text-outline ml-1">#A1</span>
+</button>
+<button class="lens-btn group relative px-space-md py-2 rounded bg-primary-container/20 border border-primary/40 backdrop-blur-xl shadow-xl transition-all duration-200 flex items-center gap-space-sm" data-active="true" data-lens="2">
+<span class="w-2 h-2 rounded-full bg-primary transition-transform group-hover:scale-125 animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-bold">2. Ethereal Nihilism</span>
+<span class="font-code-sm text-code-sm text-primary ml-1">#E0</span>
+</button>
+<button class="lens-btn group relative px-space-md py-2 rounded bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant/20 shadow-md hover:bg-surface-container-high transition-all duration-200 flex items-center gap-space-sm" data-lens="3">
+<span class="w-2 h-2 rounded-full bg-secondary transition-transform group-hover:scale-125"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">3. Chromatic Noir</span>
+<span class="font-code-sm text-code-sm text-outline ml-1">#C9</span>
+</button>
+<button class="lens-btn group relative px-space-md py-2 rounded bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant/20 shadow-md hover:bg-surface-container-high transition-all duration-200 flex items-center gap-space-sm" data-lens="4">
+<span class="w-2 h-2 rounded-full bg-tertiary transition-transform group-hover:scale-125"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">4. Sacred Distortion</span>
+<span class="font-code-sm text-code-sm text-outline ml-1">#S4</span>
+</button>
+<button class="lens-btn group relative px-space-md py-2 rounded bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant/20 shadow-md hover:bg-surface-container-high transition-all duration-200 flex items-center gap-space-sm" data-lens="5">
+<span class="w-2 h-2 rounded-full bg-outline transition-transform group-hover:scale-125"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">5. Cyber-Velvet</span>
+<span class="font-code-sm text-code-sm text-outline ml-1">#V8</span>
+</button>
+</div>
+<!-- Central Monolith Slabs -->
+<div class="relative w-full max-w-4xl bg-surface-container-lowest/85 backdrop-blur-2xl p-space-xl rounded shadow-2xl border border-outline-variant/30 transition-all duration-500" id="monolith-core">
+<!-- Monolith Ambient Edge Illumination Strip -->
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+<!-- Top Meta Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-primary uppercase">TERRITORY DISCOVERY</span>
+<span class="text-outline font-label-sm text-label-sm">//</span>
+<span class="font-code-sm text-code-sm text-secondary" id="territory-code">ARCHETYPE ID: 08-ETH-NIH</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary inline-block"></span>
+<span>HARMONIC COHERENCE:</span>
+<span class="font-code-sm text-code-sm text-on-surface font-bold" id="coherence-metric">96.4%</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">verified</span>
+</div>
+</div>
+<!-- Dynamic Territory Headline & Subtitle -->
+<div class="mb-space-lg">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary-fixed-dim block mb-space-xs" id="territory-pretitle">CULTURAL PROVOCATION NO. 04</span>
+<h1 class="font-display-xl text-display-xl text-on-surface tracking-tight leading-none mb-space-sm" id="territory-headline">THE COLD SACRAMENT</h1>
+<p class="font-headline-md text-headline-md italic text-primary font-normal tracking-wide" id="territory-subtitle">TRANSGRESSION AS LUXURY RITUAL</p>
+</div>
+<!-- Editorial Manifest Text & Visual Framing -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center mb-space-xl">
+<div class="md:col-span-7">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed" id="territory-manifest">
+                In an era dominated by hyper-optimized wellness and sanitized affirmations, true devotion requires severity. We strip away the pastel veneers of consumer happiness to forge an uncompromising black-granite altar: razor-sharp precision, low-frequency atmospheric dread, and the quiet ecstasy of sovereign detachment.
+              </p>
+<!-- Mood & Tone Matrix Tags -->
+<div class="flex flex-wrap gap-space-xs mt-space-md" id="territory-tags">
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface">OBSIDIAN REFLECTION</span>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface">ANNIHILATION LUXE</span>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface">LITURGICAL SYNTH</span>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary">TENSION: 0.94</span>
+</div>
+</div>
+<!-- Stylized Hologram Media Frame -->
+<div class="md:col-span-5 relative group overflow-hidden rounded bg-surface-container-high aspect-video md:aspect-square flex items-center justify-center border border-outline-variant/30">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="High-contrast cinematic obsidian crystal monolith floating in dark liquid nitrogen mist, lit by a razor-thin single red laser line slicing through pitch black darkness, hyper-detailed architectural fine art cinematography, 8k luxury editorial lighting with subtle amber edge refraction" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJROT8EbnKUB8NkK_5HgJJ-YKEzMTKLcj5rVkaqM6oUnMTkbhDyK3CNWzUyBF9cakdTV_98gIjUVgFNVi4dP57huQ772kAaE_27TBy47HS-iqSnq76Oxha_8XXJLnXbFugZp92rroHqIlkbuHGmw1PrVP8SIplJPOlUQOorwCgsVzp54pdlAsRlIqw0Sw99TZNB7bblZwGHPQLyx-zhgq9tAlM1HcgT1iZ4NHS_gew')"></div>
+<!-- Reticle Corner Accents -->
+<div class="absolute top-2 left-2 text-primary font-label-sm text-label-sm">⌜</div>
+<div class="absolute top-2 right-2 text-primary font-label-sm text-label-sm">⌝</div>
+<div class="absolute bottom-2 left-2 text-primary font-label-sm text-label-sm">⌞</div>
+<div class="absolute bottom-2 right-2 text-primary font-label-sm text-label-sm">⌟</div>
+<div class="absolute bottom-2 left-3 bg-surface-container-lowest/80 px-space-xs py-0.5 rounded font-code-sm text-code-sm text-on-surface border border-outline-variant/30">
+                CAM_A // SHOT_084
+              </div>
+</div>
+</div>
+<!-- Bottom Action Deck -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-md border-t border-outline-variant/20">
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded bg-surface-container font-label-sm text-label-sm uppercase tracking-wider text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1.5 border border-outline-variant/20" id="quick-telemetry-btn">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<span>METRIC TELEMETRY</span>
+</button>
+<button class="px-space-md py-2 rounded bg-surface-container font-label-sm text-label-sm uppercase tracking-wider text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1.5 border border-outline-variant/20" id="cycle-lens-btn">
+<span class="material-symbols-outlined text-[16px] text-tertiary">autorenew</span>
+<span>CYCLE LENS [L]</span>
+</button>
+</div>
+<!-- Primary Forge Initializer Button -->
+<button class="px-space-lg py-3 rounded bg-primary-container text-on-primary-container font-label-md text-label-md uppercase tracking-widest shadow-2xl hover:bg-primary hover:text-on-primary transition-all duration-300 flex items-center gap-space-sm group cursor-pointer" id="initialize-forge-btn">
+<span>CAPTURE TERRITORY → INITIALIZE FORGE</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ============================================================ -->
+<!-- LAYER 3: THE FORGE (FOREGROUND DRILLDOWN - translateZ: 250px) -->
+<!-- ============================================================ -->
+<div class="absolute inset-0 pointer-events-none opacity-0 [transform:translateZ(250px)] z-30 transition-[opacity,filter] duration-700 flex flex-col items-center justify-center p-space-md will-change-transform" id="layer-forge">
+<div class="w-full max-w-5xl bg-surface-container-lowest/95 backdrop-blur-3xl p-space-xl rounded shadow-2xl border border-outline-variant/30 pointer-events-auto">
+<!-- Top Forge Control Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-title-lg text-title-lg text-on-surface">THE EVOLUTION FORGE</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-container/20 font-code-sm text-code-sm text-primary">REALTIME SYNTHESIS ACTIVE</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-1.5 rounded bg-surface-container font-label-sm text-label-sm uppercase text-on-surface hover:bg-surface-container-high flex items-center gap-1 border border-outline-variant/20" id="forge-close-btn">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>CLOSE [ESC]</span>
+</button>
+</div>
+</div>
+<!-- Glass Sliders Section for Idea Mutation -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl">
+<!-- Slider 1: Radicalism Gauge -->
+<div class="bg-surface-container-low/80 p-space-md rounded shadow-md border border-outline-variant/20">
+<div class="flex justify-between items-center mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">MUTATION 01</span>
+<span class="font-code-sm text-code-sm text-primary font-bold" id="radicalism-val">78%</span>
+</div>
+<h5 class="font-title-lg text-title-lg text-on-surface text-base mb-1">Radicalism Gauge</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">From Polite Utility to Cultural Sabotage</p>
+<input class="w-full accent-primary bg-surface-container-high h-1.5 rounded cursor-pointer" id="slider-radicalism" max="100" min="0" type="range" value="78"/>
+<div class="flex justify-between text-outline font-label-sm text-label-sm mt-1">
+<span>BENIGN</span>
+<span>SUBVERSIVE</span>
+</div>
+</div>
+<!-- Slider 2: Tension Index -->
+<div class="bg-surface-container-low/80 p-space-md rounded shadow-md border border-outline-variant/20">
+<div class="flex justify-between items-center mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">MUTATION 02</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold" id="tension-val">92%</span>
+</div>
+<h5 class="font-title-lg text-title-lg text-on-surface text-base mb-1">Tension Index</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">High Volatility archetype clash</p>
+<input class="w-full accent-secondary bg-surface-container-high h-1.5 rounded cursor-pointer" id="slider-tension" max="100" min="0" type="range" value="92"/>
+<div class="flex justify-between text-outline font-label-sm text-label-sm mt-1">
+<span>EQUILIBRIUM</span>
+<span>COMBUSTION</span>
+</div>
+</div>
+<!-- Slider 3: Sonic Density -->
+<div class="bg-surface-container-low/80 p-space-md rounded shadow-md border border-outline-variant/20">
+<div class="flex justify-between items-center mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">MUTATION 03</span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold" id="sonic-val">84 dB</span>
+</div>
+<h5 class="font-title-lg text-title-lg text-on-surface text-base mb-1">Sonic Density</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Atmospheric low-frequency saturation</p>
+<input class="w-full accent-tertiary bg-surface-container-high h-1.5 rounded cursor-pointer" id="slider-sonic" max="120" min="20" type="range" value="84"/>
+<div class="flex justify-between text-outline font-label-sm text-label-sm mt-1">
+<span>ANECDOTAL</span>
+<span>VISCERAL</span>
+</div>
+</div>
+</div>
+<!-- Deconstruct to Script Interactive Action -->
+<div class="flex items-center justify-between p-space-md rounded bg-surface-container mb-space-lg border border-outline-variant/20">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary text-[28px]">movie_filter</span>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface text-lg">Directorial Script Transmutation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Shatter conceptual territory into a frame-accurate 3-column audiovisual manifesto.</p>
+</div>
+</div>
+<button class="px-space-lg py-2.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest shadow-xl hover:bg-primary-fixed transition-colors flex items-center gap-1.5 cursor-pointer" id="deconstruct-script-btn">
+<span class="material-symbols-outlined text-[16px]">view_timeline</span>
+<span>DECONSTRUCT TO SCRIPT [S]</span>
+</button>
+</div>
+<!-- Shattered Holographic Script Table Layout -->
+<div class="transition-all duration-500 overflow-hidden" id="script-container">
+<div class="grid grid-cols-12 gap-space-sm p-space-xs font-label-sm text-label-sm uppercase tracking-widest text-outline bg-surface-container-high rounded mb-space-xs border border-outline-variant/20">
+<div class="col-span-2">TIMECODE</div>
+<div class="col-span-5">VISUAL DIRECTIVE [CAM &amp; ACTION]</div>
+<div class="col-span-5">VO &amp; SONIC ARCHITECTURE</div>
+</div>
+<!-- Script Row 1 -->
+<div class="grid grid-cols-12 gap-space-sm p-space-md rounded bg-surface-container-low/60 hover:bg-surface-container-low transition-colors mb-space-xs items-start border border-outline-variant/20">
+<div class="col-span-2 font-code-sm text-code-sm text-primary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                00:00 - 00:04
+              </div>
+<div class="col-span-5 font-body-sm text-body-sm text-on-surface leading-relaxed">
+                Extreme macro of obsidian glass monolith shivering under sub-harmonic vibrations. 1000fps tungsten beam refracts through pitch darkness in reverse.
+              </div>
+<div class="col-span-5 font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+                [Whispered dry baritone]: <span class="text-on-surface">"Perfection is a cemetery. We do not polish the lens."</span> Continuous 34Hz sinus drone fades in.
+              </div>
+</div>
+<!-- Script Row 2 -->
+<div class="grid grid-cols-12 gap-space-sm p-space-md rounded bg-surface-container-low/60 hover:bg-surface-container-low transition-colors mb-space-xs items-start border border-outline-variant/20">
+<div class="col-span-2 font-code-sm text-code-sm text-secondary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                00:04 - 00:12
+              </div>
+<div class="col-span-5 font-body-sm text-body-sm text-on-surface leading-relaxed">
+                Camera violently whips 180° into an empty brutalist chapel. A single drop of crimson mercury impacts the obsidian floor, bursting into geometric micro-crystals.
+              </div>
+<div class="col-span-5 font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+                [VO]: <span class="text-on-surface">"We fracture the light. Devotion has never been clean."</span> Deep cathedral reverb swell, sudden snare transient snap.
+              </div>
+</div>
+<!-- Script Row 3 -->
+<div class="grid grid-cols-12 gap-space-sm p-space-md rounded bg-surface-container-low/60 hover:bg-surface-container-low transition-colors items-start border border-outline-variant/20">
+<div class="col-span-2 font-code-sm text-code-sm text-tertiary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                00:12 - 00:22
+              </div>
+<div class="col-span-5 font-body-sm text-body-sm text-on-surface leading-relaxed">
+                Silhouetted figure steps through volumetric laser curtain. The frame dissolves into monochromatic static leaving only the typography inscribed onto negative space.
+              </div>
+<div class="col-span-5 font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+                [Dead silence for 1.8 seconds]: Then an abrasive analog synth blast at 432.8 THz. Brand insignia flashes for three frames only.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Spatial Depth Dock & Director HUD -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-space-md max-w-[95vw] overflow-x-auto">
+<!-- Depth Nav Switcher -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-2xl p-1.5 rounded-xl border border-outline-variant/30 shadow-2xl flex items-center gap-1">
+<button class="dock-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase transition-all flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="dock-btn-void">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>1. THE VOID</span>
+</button>
+<button class="dock-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase transition-all flex items-center gap-1.5 bg-primary-container text-on-primary-container font-bold shadow-md" id="dock-btn-prism">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span>
+<span>2. THE PRISM</span>
+</button>
+<button class="dock-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase transition-all flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="dock-btn-forge">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>3. THE FORGE</span>
+</button>
+</div>
+<!-- Interactive Orbit Cam Sensitivity & Inertia HUD Pill -->
+<div class="hidden md:flex items-center gap-space-xs bg-surface-container-lowest/90 backdrop-blur-2xl px-space-md py-1.5 rounded-xl border border-outline-variant/30 text-outline font-label-sm text-label-sm shadow-2xl">
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors cursor-pointer" id="toggle-damping-btn" title="Toggle Orbit Inertia / Sensitivity">
+<span class="material-symbols-outlined text-primary text-[15px]">videocam</span>
+<span class="uppercase tracking-wider">CAM SENS:</span>
+<span class="font-code-sm text-code-sm text-on-surface" id="sens-label">1.0x</span>
+</button>
+<span class="text-outline-variant">·</span>
+<span class="font-code-sm text-code-sm text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+LERP 60FPS
+</span>
+</div>
+<!-- Hotkeys Legend Pills -->
+<div class="hidden xl:flex items-center gap-space-xs bg-surface-container-lowest/70 backdrop-blur-md px-space-md py-2 rounded-xl border border-outline-variant/20 text-outline font-label-sm text-label-sm shadow-xl">
+<span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface border border-outline-variant/20">Z</kbd> ZOOM</span>
+<span class="text-outline-variant">·</span>
+<span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface border border-outline-variant/20">L</kbd> LENS</span>
+<span class="text-outline-variant">·</span>
+<span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface border border-outline-variant/20">S</kbd> SCRIPT</span>
+<span class="text-outline-variant">·</span>
+<span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface border border-outline-variant/20">DRAG</kbd> TILT</span>
+<span class="text-outline-variant">·</span>
+<span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface border border-outline-variant/20">ESC</kbd> RESET</span>
+</div>
+</div>
+<!-- Audio Waveform Telemetry Mini-Strip (Bottom Right) -->
+<div class="fixed bottom-6 right-6 hidden md:flex items-center gap-2 bg-surface-container-lowest/80 border border-outline-variant/30 backdrop-blur-lg px-space-md py-2 rounded shadow-xl z-40">
+<span class="material-symbols-outlined text-primary text-[16px] animate-pulse">graphic_eq</span>
+<span class="font-label-sm text-label-sm text-outline">SUB-BASS:</span>
+<div class="flex items-end gap-0.5 h-4 w-14">
+<span class="w-1 bg-primary h-2 animate-bounce"></span>
+<span class="w-1 bg-primary h-3.5 animate-pulse"></span>
+<span class="w-1 bg-primary h-1.5 animate-bounce"></span>
+<span class="w-1 bg-primary h-4 animate-pulse"></span>
+<span class="w-1 bg-primary h-2.5 animate-bounce"></span>
+<span class="w-1 bg-primary h-1 animate-pulse"></span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface" id="live-hz">34.0 Hz</span>
+</div>
+<!-- Client-Side Smooth Camera Orbit & Parallax Interactive Engine -->
+<script>
+    (function initObsidianPrism() {
+      // Depth State Management (1: Void, 2: Prism, 3: Forge)
+      let currentDepth = 2;
+      let activeLensId = 2;
+
+      // 60fps Smooth Camera Orbit State
+      let targetRotX = 0;
+      let targetRotY = 0;
+      let currentRotX = 0;
+      let currentRotY = 0;
+      let baseTranslateZ = 0;
+      let targetBaseTranslateZ = 0;
+      let currentBaseTranslateZ = 0;
+
+      // Mouse Drag & Tilt Sensitivity
+      let isMouseDown = false;
+      let dragStartX = 0;
+      let dragStartY = 0;
+      let dragRotStartX = 0;
+      let dragRotStartY = 0;
+      let mouseSensitivity = 1.0;
+      const sensitivityLevels = [0.5, 1.0, 1.6];
+      let sensIndex = 1;
+
+      // Target Parallax Dampening (lerp factor)
+      const LERP_FACTOR = 0.08;
+
+      // Lens Database
+      const lensDatabase = {
+        1: {
+          code: "ARCHETYPE ID: 01-ANR-BRT",
+          pretitle: "CULTURAL PROVOCATION NO. 01",
+          headline: "ANARCHIC BRUTALISM",
+          subtitle: "RAW CONCRETE & UNCHECKED TRUTH",
+          manifest: "Exposing the structural skeleton without apologies. Heavy industrial textures, monolithic proportions, and unapologetic anti-ergonomic elegance meant to defy disposable convenience.",
+          tags: ["RAW REBAR", "EXPOSED ARMATURE", "HEAVY IMPACT", "TENSION: 0.98"],
+          metric: "91.2%",
+          themeColor: "#ffdad4"
+        },
+        2: {
+          code: "ARCHETYPE ID: 08-ETH-NIH",
+          pretitle: "CULTURAL PROVOCATION NO. 04",
+          headline: "THE COLD SACRAMENT",
+          subtitle: "TRANSGRESSION AS LUXURY RITUAL",
+          manifest: "In an era dominated by hyper-optimized wellness and sanitized affirmations, true devotion requires severity. We strip away the pastel veneers of consumer happiness to forge an uncompromising black-granite altar.",
+          tags: ["OBSIDIAN REFLECTION", "ANNIHILATION LUXE", "LITURGICAL SYNTH", "TENSION: 0.94"],
+          metric: "96.4%",
+          themeColor: "#ff5541"
+        },
+        3: {
+          code: "ARCHETYPE ID: 14-CHR-NOI",
+          pretitle: "CULTURAL PROVOCATION NO. 02",
+          headline: "CHROMATIC NOIR",
+          subtitle: "NEON CORROSION & LOW FREQUENCY",
+          manifest: "A relentless night-shift aesthetic where high-end tailoring collides with decaying cinematic back-alleys. Spectral refraction slicing through liquid asphalt.",
+          tags: ["PITCH ASPHALT", "SPECTRAL DECAY", "340NM UV", "TENSION: 0.88"],
+          metric: "94.0%",
+          themeColor: "#e9c349"
+        },
+        4: {
+          code: "ARCHETYPE ID: 19-SAC-DST",
+          pretitle: "CULTURAL PROVOCATION NO. 05",
+          headline: "SACRED DISTORTION",
+          subtitle: "THE GLITCH AS TRANSCENDENCE",
+          manifest: "Digital artifacts treated as sacred relics. When high-bandwidth data pipelines tear apart under sublime creative pressure, we celebrate the shattered geometry.",
+          tags: ["COMPRESSION ARTIFACT", "DIVINE VOID", "PIXEL DRIFT", "TENSION: 0.99"],
+          metric: "97.8%",
+          themeColor: "#1ce19f"
+        },
+        5: {
+          code: "ARCHETYPE ID: 22-CYB-VLV",
+          pretitle: "CULTURAL PROVOCATION NO. 03",
+          headline: "CYBER-VELVET",
+          subtitle: "SYNTHETIC FLESH & ORGANIC MONOLITH",
+          manifest: "Sensory hyper-touch tactile interface wrapped in bio-luminescent moss and velvet polymers. A fusion of cold machinery and breathless organic warmth.",
+          tags: ["POLYMER FLESH", "CHLOROPHYLL CIRCUIT", "BIO-GLOW", "TENSION: 0.82"],
+          metric: "89.7%",
+          themeColor: "#ffdad4"
+        }
+      };
+
+      // Elements
+      const spatialWorld = document.getElementById("spatial-world");
+      const layerVoid = document.getElementById("layer-void");
+      const layerPrism = document.getElementById("layer-prism");
+      const layerForge = document.getElementById("layer-forge");
+      const threeScene = document.getElementById("three-spatial-scene");
+      const ambientGlowA = document.getElementById("ambient-glow-a");
+      const ambientGlowB = document.getElementById("ambient-glow-b");
+
+      const dockBtnVoid = document.getElementById("dock-btn-void");
+      const dockBtnPrism = document.getElementById("dock-btn-prism");
+      const dockBtnForge = document.getElementById("dock-btn-forge");
+      const navBtnVoid = document.getElementById("nav-btn-void");
+      const navBtnPrism = document.getElementById("nav-btn-prism");
+      const navBtnForge = document.getElementById("nav-btn-forge");
+
+      const territoryCode = document.getElementById("territory-code");
+      const territoryPretitle = document.getElementById("territory-pretitle");
+      const territoryHeadline = document.getElementById("territory-headline");
+      const territorySubtitle = document.getElementById("territory-subtitle");
+      const territoryManifest = document.getElementById("territory-manifest");
+      const territoryTags = document.getElementById("territory-tags");
+      const coherenceMetric = document.getElementById("coherence-metric");
+
+      const laserPath = document.getElementById("active-laser-beam");
+      const monolithCore = document.getElementById("monolith-core");
+      const lensBtns = document.querySelectorAll(".lens-btn");
+
+      const coordX = document.getElementById("coord-x");
+      const coordY = document.getElementById("coord-y");
+      const telemetryPitch = document.getElementById("telemetry-pitch");
+      const telemetryYaw = document.getElementById("telemetry-yaw");
+      const sensLabel = document.getElementById("sens-label");
+      const toggleDampingBtn = document.getElementById("toggle-damping-btn");
+
+      // Draw Laser Beam from Selected Lens to Monolith Center
+      function updateLaserBeam(targetBtn) {
+        if (!targetBtn || !laserPath) return;
+        const svgCanvas = document.getElementById("laser-svg-canvas");
+        if (!svgCanvas) return;
+        const svgRect = svgCanvas.getBoundingClientRect();
+        const btnRect = targetBtn.getBoundingClientRect();
+        const monoRect = monolithCore.getBoundingClientRect();
+
+        const startX = btnRect.left + btnRect.width / 2 - svgRect.left;
+        const startY = btnRect.bottom - svgRect.top;
+
+        const targetX = monoRect.left + monoRect.width / 2 - svgRect.left;
+        const targetY = monoRect.top - svgRect.top + 20;
+
+        const midY = (startY + targetY) / 2;
+        const pathData = `M ${startX} ${startY} C ${startX} ${midY}, ${targetX} ${midY}, ${targetX} ${targetY}`;
+        laserPath.setAttribute("d", pathData);
+      }
+
+      // Switch Active Lens
+      function applyLens(lensId, triggerElement) {
+        activeLensId = lensId;
+        const data = lensDatabase[lensId];
+        if (!data) return;
+
+        lensBtns.forEach(btn => {
+          btn.classList.remove("bg-primary-container/20", "border-primary/40", "shadow-xl");
+          btn.classList.add("bg-surface-container-low/80", "border-outline-variant/20");
+          btn.removeAttribute("data-active");
+          const tag = btn.querySelector('.font-bold');
+          if (tag) tag.classList.remove('font-bold');
+        });
+
+        if (triggerElement) {
+          triggerElement.classList.add("bg-primary-container/20", "border-primary/40", "shadow-xl");
+          triggerElement.classList.remove("bg-surface-container-low/80", "border-outline-variant/20");
+          triggerElement.setAttribute("data-active", "true");
+          const titleSpan = triggerElement.querySelector('.font-label-sm');
+          if (titleSpan) titleSpan.classList.add('font-bold');
+          updateLaserBeam(triggerElement);
+        }
+
+        monolithCore.style.opacity = "0.4";
+        monolithCore.style.transform = "scale(0.99)";
+        
+        setTimeout(() => {
+          territoryCode.textContent = data.code;
+          territoryPretitle.textContent = data.pretitle;
+          territoryHeadline.textContent = data.headline;
+          territorySubtitle.textContent = data.subtitle;
+          territoryManifest.textContent = data.manifest;
+          coherenceMetric.textContent = data.metric;
+
+          territoryTags.innerHTML = "";
+          data.tags.forEach((tag, idx) => {
+            const span = document.createElement("span");
+            span.className = "px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm " + (idx === 3 ? "text-primary" : "text-on-surface");
+            span.textContent = tag;
+            territoryTags.appendChild(span);
+          });
+
+          monolithCore.style.opacity = "1";
+          monolithCore.style.transform = "scale(1)";
+        }, 160);
+      }
+
+      // Update Nav buttons styling
+      function updateNavStyling(level) {
+        const topNavBtns = [navBtnVoid, navBtnPrism, navBtnForge];
+        topNavBtns.forEach(btn => {
+          if (btn) {
+            btn.classList.remove("bg-primary-container/20", "text-on-surface", "font-bold");
+            btn.classList.add("text-on-surface-variant");
+          }
+        });
+        if (level === 1 && navBtnVoid) navBtnVoid.classList.add("bg-primary-container/20", "text-on-surface", "font-bold");
+        if (level === 2 && navBtnPrism) navBtnPrism.classList.add("bg-primary-container/20", "text-on-surface", "font-bold");
+        if (level === 3 && navBtnForge) navBtnForge.classList.add("bg-primary-container/20", "text-on-surface", "font-bold");
+
+        const allDockBtns = [dockBtnVoid, dockBtnPrism, dockBtnForge];
+        allDockBtns.forEach(btn => {
+          btn.className = "dock-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase transition-all flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface";
+        });
+      }
+
+      // Depth Layer Camera Navigation with spring targets
+      function setSpatialDepth(level) {
+        currentDepth = level;
+        updateNavStyling(level);
+
+        if (level === 1) {
+          // LAYER 1: VOID FOCUS
+          targetBaseTranslateZ = 180;
+          layerVoid.style.filter = "blur(0px)";
+          layerVoid.style.opacity = "1";
+          layerPrism.style.filter = "blur(12px)";
+          layerPrism.style.opacity = "0.3";
+          layerForge.style.opacity = "0";
+          layerForge.style.pointerEvents = "none";
+          
+          dockBtnVoid.className = "dock-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase transition-all flex items-center gap-1.5 bg-primary-container text-on-primary-container font-bold shadow-md";
+        } else if (level === 2) {
+          // LAYER 2: PRISM FOCUS (CENTER)
+          targetBaseTranslateZ = 0;
+          layerVoid.style.filter = "blur(1px)";
+          layerVoid.style.opacity = "0.85";
+          layerPrism.style.filter = "blur(0px)";
+          layerPrism.style.opacity = "1";
+          layerForge.style.opacity = "0";
+          layerForge.style.pointerEvents = "none";
+
+          dockBtnPrism.className = "dock-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase transition-all flex items-center gap-1.5 bg-primary-container text-on-primary-container font-bold shadow-md";
+          
+          const activeBtn = document.querySelector('.lens-btn[data-active="true"]');
+          setTimeout(() => updateLaserBeam(activeBtn), 200);
+        } else if (level === 3) {
+          // LAYER 3: FORGE FOCUS (FOREGROUND ZOOM)
+          targetBaseTranslateZ = -260;
+          layerVoid.style.filter = "blur(20px)";
+          layerVoid.style.opacity = "0.15";
+          layerPrism.style.filter = "blur(16px)";
+          layerPrism.style.opacity = "0.2";
+          layerForge.style.opacity = "1";
+          layerForge.style.pointerEvents = "auto";
+
+          dockBtnForge.className = "dock-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase transition-all flex items-center gap-1.5 bg-tertiary-container text-on-tertiary-container font-bold shadow-md";
+        }
+      }
+
+      // 60FPS Orbit Animation Loop with Lerp & Multi-layer Differential Parallax
+      function renderOrbitFrame() {
+        // Interpolate rotX, rotY, baseTranslateZ
+        currentRotX += (targetRotX - currentRotX) * LERP_FACTOR;
+        currentRotY += (targetRotY - currentRotY) * LERP_FACTOR;
+        currentBaseTranslateZ += (targetBaseTranslateZ - currentBaseTranslateZ) * LERP_FACTOR;
+
+        // Apply primary camera stage transform
+        spatialWorld.style.transform = `translateZ(${currentBaseTranslateZ}px) rotateX(${currentRotX}deg) rotateY(${currentRotY}deg)`;
+
+        // Differential Multi-layer Parallax
+        // 1. Layer Void (Deep background): subtle counter-parallax & slight inverted translation
+        const voidCounterX = -currentRotY * 1.8;
+        const voidCounterY = currentRotX * 1.5;
+        layerVoid.style.transform = `translateZ(-200px) translate3d(${voidCounterX}px, ${voidCounterY}px, 0px) rotateY(${-currentRotY * 0.3}deg)`;
+
+        // 2. Layer Prism (Midground): Direct responsive depth tilt
+        const prismOffsetX = currentRotY * 0.8;
+        const prismOffsetY = -currentRotX * 0.8;
+        layerPrism.style.transform = `translateZ(0px) translate3d(${prismOffsetX}px, ${prismOffsetY}px, 0px)`;
+
+        // 3. Layer Forge (Foreground): Floating responsive tilt
+        if (currentDepth === 3) {
+          layerForge.style.transform = `translateZ(250px) rotateX(${-currentRotX * 0.5}deg) rotateY(${-currentRotY * 0.5}deg)`;
+        }
+
+        // 4. Background ThreeJS Canvas & Ambient glow reactive sync
+        if (threeScene) {
+          const threeTiltX = currentRotY * 1.2;
+          const threeTiltY = -currentRotX * 1.2;
+          threeScene.style.transform = `translate3d(${threeTiltX}px, ${threeTiltY}px, 0px) scale(1.04)`;
+        }
+        if (ambientGlowA && ambientGlowB) {
+          ambientGlowA.style.transform = `translate(calc(-50% + ${currentRotY * 2.5}px), calc(-50% + ${-currentRotX * 2.5}px))`;
+          ambientGlowB.style.transform = `translate(${currentRotY * -2}px, ${currentRotX * -2}px)`;
+        }
+
+        // Update Live Telemetry in HUD
+        if (telemetryPitch && telemetryYaw) {
+          const pitchSigned = (currentRotX >= 0 ? "+" : "") + currentRotX.toFixed(1) + "°";
+          const yawSigned = (currentRotY >= 0 ? "+" : "") + currentRotY.toFixed(1) + "°";
+          telemetryPitch.textContent = pitchSigned;
+          telemetryYaw.textContent = yawSigned;
+        }
+
+        requestAnimationFrame(renderOrbitFrame);
+      }
+      requestAnimationFrame(renderOrbitFrame);
+
+      // Mouse Move Tracking for Tilt
+      window.addEventListener("mousemove", (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        coordX.textContent = String(x).padStart(4, '0');
+        coordY.textContent = String(y).padStart(4, '0');
+
+        if (isMouseDown) {
+          const deltaX = e.clientX - dragStartX;
+          const deltaY = e.clientY - dragStartY;
+          targetRotY = dragRotStartY + (deltaX * 0.08 * mouseSensitivity);
+          targetRotX = Math.max(-18, Math.min(18, dragRotStartX - (deltaY * 0.08 * mouseSensitivity)));
+          return;
+        }
+
+        // Centered normalized coordinates [-1, 1]
+        const normX = (x / window.innerWidth) - 0.5;
+        const normY = (y / window.innerHeight) - 0.5;
+
+        // Dynamic tilt targets based on sensitivity
+        const maxTiltY = 8.5 * mouseSensitivity;
+        const maxTiltX = 7.0 * mouseSensitivity;
+
+        targetRotY = normX * maxTiltY;
+        targetRotX = -normY * maxTiltX;
+      });
+
+      // Mouse Drag Orbit Inertia Interactions
+      window.addEventListener("mousedown", (e) => {
+        if (e.target.closest('button') || e.target.closest('input') || e.target.closest('nav')) return;
+        isMouseDown = true;
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
+        dragRotStartX = targetRotX;
+        dragRotStartY = targetRotY;
+      });
+
+      window.addEventListener("mouseup", () => {
+        isMouseDown = false;
+      });
+
+      // Sensitivity Cycle Toggle
+      if (toggleDampingBtn) {
+        toggleDampingBtn.addEventListener("click", () => {
+          sensIndex = (sensIndex + 1) % sensitivityLevels.length;
+          mouseSensitivity = sensitivityLevels[sensIndex];
+          sensLabel.textContent = mouseSensitivity.toFixed(1) + "x";
+        });
+      }
+
+      // Event Listeners for Lenses
+      lensBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = parseInt(btn.getAttribute("data-lens"));
+          applyLens(id, btn);
+        });
+      });
+
+      // Navigation Dock Clicks
+      dockBtnVoid.addEventListener("click", () => setSpatialDepth(1));
+      dockBtnPrism.addEventListener("click", () => setSpatialDepth(2));
+      dockBtnForge.addEventListener("click", () => setSpatialDepth(3));
+
+      if (navBtnVoid) navBtnVoid.addEventListener("click", () => setSpatialDepth(1));
+      if (navBtnPrism) navBtnPrism.addEventListener("click", () => setSpatialDepth(2));
+      if (navBtnForge) navBtnForge.addEventListener("click", () => setSpatialDepth(3));
+
+      // Action Deck Buttons
+      document.getElementById("initialize-forge-btn").addEventListener("click", () => setSpatialDepth(3));
+      document.getElementById("forge-close-btn").addEventListener("click", () => setSpatialDepth(2));
+
+      document.getElementById("cycle-lens-btn").addEventListener("click", () => {
+        let nextLens = (activeLensId % 5) + 1;
+        const targetBtn = document.querySelector(`.lens-btn[data-lens="${nextLens}"]`);
+        applyLens(nextLens, targetBtn);
+      });
+
+      // Quick Telemetry Toggle
+      document.getElementById("quick-telemetry-btn").addEventListener("click", () => {
+        const hud = document.getElementById("reticle-hud");
+        hud.classList.toggle("hidden");
+      });
+
+      // Directorial Script Shatter Trigger
+      const scriptBtn = document.getElementById("deconstruct-script-btn");
+      const scriptContainer = document.getElementById("script-container");
+      scriptBtn.addEventListener("click", () => {
+        scriptContainer.classList.add("scale-[1.02]", "bg-primary-container/5");
+        setTimeout(() => {
+          scriptContainer.classList.remove("scale-[1.02]", "bg-primary-container/5");
+        }, 300);
+      });
+
+      // Sliders Live Numeric Update
+      const sRad = document.getElementById("slider-radicalism");
+      const sRadVal = document.getElementById("radicalism-val");
+      sRad.addEventListener("input", (e) => {
+        sRadVal.textContent = e.target.value + "%";
+      });
+
+      const sTen = document.getElementById("slider-tension");
+      const sTenVal = document.getElementById("tension-val");
+      sTen.addEventListener("input", (e) => {
+        sTenVal.textContent = e.target.value + "%";
+      });
+
+      const sSon = document.getElementById("slider-sonic");
+      const sSonVal = document.getElementById("sonic-val");
+      const liveHz = document.getElementById("live-hz");
+      sSon.addEventListener("input", (e) => {
+        sSonVal.textContent = e.target.value + " dB";
+        liveHz.textContent = (30 + (e.target.value * 0.1)).toFixed(1) + " Hz";
+      });
+
+      // Hotkeys Keyboard Listener
+      window.addEventListener("keydown", (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+        const key = e.key.toUpperCase();
+        if (key === 'Z') {
+          setSpatialDepth(currentDepth === 3 ? 2 : 3);
+        } else if (key === 'L') {
+          let nextLens = (activeLensId % 5) + 1;
+          const targetBtn = document.querySelector(`.lens-btn[data-lens="${nextLens}"]`);
+          applyLens(nextLens, targetBtn);
+        } else if (key === 'S') {
+          setSpatialDepth(3);
+          scriptBtn.click();
+        } else if (key === 'ESCAPE') {
+          setSpatialDepth(2);
+          targetRotX = 0;
+          targetRotY = 0;
+        }
+      });
+
+      // Window resize re-draws laser
+      window.addEventListener("resize", () => {
+        const activeBtn = document.querySelector('.lens-btn[data-active="true"]');
+        updateLaserBeam(activeBtn);
+      });
+
+      // Initial laser draw
+      setTimeout(() => {
+        const activeBtn = document.querySelector('.lens-btn[data-active="true"]');
+        updateLaserBeam(activeBtn);
+      }, 300);
+
+    })();
+  </script>
+</div></main></body></html>

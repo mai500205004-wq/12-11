@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#303033", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#474742", "surface-bright": "#38393b", "secondary-fixed": "#ffdbd2", "surface": "#121315", "surface-container": "#1f2022", "tertiary": "#c9c6c0", "on-tertiary": "#31312c", "outline-variant": "#5d403b", "tertiary-fixed": "#e5e2db", "secondary-fixed-dim": "#ffb4a1", "on-surface-variant": "#e6bdb7", "primary-fixed-dim": "#ffb4a8", "on-background": "#e3e2e5", "on-secondary-container": "#ffa58d", "surface-container-highest": "#343537", "primary": "#ffb4a8", "on-primary-fixed": "#410000", "secondary": "#ffb4a1", "background": "#121315", "inverse-primary": "#bf0904", "tertiary-container": "#92918b", "on-primary-fixed-variant": "#930000", "on-tertiary-fixed": "#1c1c18", "on-secondary-fixed-variant": "#881f00", "on-primary": "#690000", "secondary-container": "#912100", "surface-tint": "#ffb4a8", "on-surface": "#e3e2e5", "inverse-surface": "#e3e2e5", "surface-container-lowest": "#0d0e10", "tertiary-fixed-dim": "#c9c6c0", "surface-variant": "#343537", "outline": "#ad8882", "surface-container-high": "#292a2c", "surface-dim": "#121315", "on-tertiary-container": "#2a2a25", "error-container": "#93000a", "on-secondary-fixed": "#3c0800", "on-error": "#690005", "primary-container": "#ff5541", "on-secondary": "#611300", "primary-fixed": "#ffdad4", "error": "#ffb4ab", "surface-container-low": "#1b1c1e", "on-primary-container": "#5c0000" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-lg": "2rem", "margin-sm": "1rem", "gutter-sm": "0.75rem", "margin": "2rem", "space-xl": "2.5rem", "margin-lg": "3.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.25rem", "space-md": "1rem" }, "fontFamily": { "label-md": [ "JetBrains Mono" ], "label-sm": [ "JetBrains Mono" ], "display-lg": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "body-sm": [ "Inter" ], "body-lg": [ "Inter" ], "headline-sm": [ "Inter" ], "code-timecode": [ "JetBrains Mono" ], "display-md-mobile": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "label-lg": [ "Inter" ], "display-md": [ "Playfair Display" ], "body-md": [ "Inter" ], "display-lg-mobile": [ "Playfair Display" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "display-lg": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "code-timecode": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "display-md-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" } ], "label-lg": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-md": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md shadow-[0_20px_48px_-8px_rgba(0,0,0,0.75)]"><div class="flex flex-col gap-space-lg"><div class="px-space-md"><div class="flex items-center gap-space-sm mb-space-xs"><div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div><span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">FX2 Descent Matrix</span></div><div class="font-headline-md text-headline-md text-on-surface tracking-tight">OBSIDIAN HORIZON</div><div class="font-label-sm text-label-sm text-tertiary-container mt-space-xs">PROJECT 84 // MASTER HARNESS</div></div><div class="px-space-md flex flex-col gap-space-xs"><div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs">Stratum Traversal Vectors</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stratum-01-light-table" href="#"><span class="font-label-md text-label-md">S-01 Light Table</span><span class="font-code-timecode text-label-sm text-tertiary-container">0.00m</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stratum-02-glass-frames" href="#"><span class="font-label-md text-label-md">S-02 Glass Frames</span><span class="font-code-timecode text-label-sm text-tertiary-container">-120.00m</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stratum-03-film-hybrid" href="#"><span class="font-label-md text-label-md">S-03 Film Hybrid</span><span class="font-code-timecode text-label-sm text-tertiary-container">-240.00m</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs rounded transition-colors bg-surface-container text-primary font-semibold" data-path="optical-grain-split-inspection" href="#"><span class="font-label-md text-label-md">S-04 The Paper</span><span class="font-code-timecode text-label-sm text-primary">-360.00m</span></a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs">Scene Inspection Modules</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded transition-colors bg-surface-container-high text-primary" data-path="optical-grain-split-inspection" href="#"><span class="material-symbols-outlined text-[16px]">flip_camera_ios</span><span class="font-label-md text-label-md">Optical Grain A/B</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="quarantined-branch-manifest" href="#"><span class="material-symbols-outlined text-[16px]">lock</span><span class="font-label-md text-label-md">Branch Quarantine</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="spatial-vector-diagnostics" href="#"><span class="material-symbols-outlined text-[16px]">explore</span><span class="font-label-md text-label-md">Vector Diagnostics</span></a></nav></div></div><div class="px-space-md flex flex-col gap-space-sm"><div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline">BRANCH ISOLATION</span><span class="px-space-xs py-[2px] rounded bg-error-container text-error font-label-sm text-label-sm">COLD LOCK</span></div><div class="font-code-timecode text-label-sm text-on-surface">7d18a4c:quarantine</div><div class="font-body-sm text-body-sm text-tertiary-container">Origin: Node S-04-Delta</div></div><div class="flex items-center justify-between text-outline"><span class="font-label-sm text-label-sm">CANON VER: 04.9.2</span><span class="font-code-timecode text-label-sm">SHA-256 VALID</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter-lg shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="flex items-center gap-gutter"><div class="flex flex-col"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline"><a class="hover:text-on-surface transition-colors" data-path="stratum-03-film-hybrid" href="#">S-03 FILM HYBRID (-240M)</a><span>/</span><span class="text-primary">S-04 THE PAPER MANUSCRIPT</span></div><div class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Scene 04 Optical Grain Inspection</div></div><div class="hidden xl:flex items-center gap-space-sm px-space-sm py-space-xs rounded bg-surface-container-low"><span class="font-label-sm text-label-sm text-outline uppercase">Z-Terminus</span><span class="font-code-timecode text-label-sm text-primary">-360.00m</span><span class="text-surface-variant">|</span><span class="font-label-sm text-label-sm text-outline uppercase">Dolly</span><span class="font-code-timecode text-label-sm text-on-surface">04.28m</span><span class="text-surface-variant">|</span><span class="font-label-sm text-label-sm text-outline uppercase">Lat</span><span class="font-code-timecode text-label-sm text-on-surface">-18.24°</span></div></div><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-md"><div class="flex flex-col items-end"><span class="font-label-sm text-label-sm text-outline">MASTER SMPTE</span><span class="font-code-timecode text-code-timecode text-primary">00:00:11:04</span></div><div class="h-6 w-[1px] bg-surface-variant"></div><div class="flex flex-col items-end"><span class="font-label-sm text-label-sm text-outline">BASELINE TAKE</span><span class="font-code-timecode text-label-sm text-on-surface">Take 03 [9a2f1c8]</span></div><div class="px-space-xs py-space-xs rounded bg-surface-container-high font-label-sm text-label-sm text-on-secondary-container">Branch [7d18a4c]</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 pb-12 w-full min-h-screen bg-background px-gutter-lg"><div class="flex flex-col w-full gap-space-lg pb-12">
+<!-- TOP INSPECTION CONTROL BAR & MODE SWITCHER -->
+<section class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-xl shadow-xl relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary-container/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-lowest">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Status:</span>
+<span class="font-code-timecode text-label-sm text-on-surface">A/B SPLIT COMPARATOR // LIVE EPHEMERAL BUFFER</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">TRANSIENT PREVIEW LAYER — ZERO MANUSCRIPT OVERWRITE // ZERO RASTER COMMIT</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-sm py-space-xs rounded bg-surface-container text-on-surface hover:bg-surface-container-highest transition-colors font-label-sm text-label-sm flex items-center gap-space-xs" id="btn-lock-split">
+<span class="material-symbols-outlined text-[14px] text-tertiary">lock_reset</span>
+<span>LOCK SPLIT 50%</span>
+</button>
+<button class="px-space-sm py-space-xs rounded bg-surface-container text-on-surface hover:bg-surface-container-highest transition-colors font-label-sm text-label-sm flex items-center gap-space-xs" id="btn-reset-base">
+<span class="material-symbols-outlined text-[14px] text-primary">restart_alt</span>
+<span>RESET TO BASE 5219</span>
+</button>
+<button class="px-space-md py-space-xs rounded bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center gap-space-xs shadow-md hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>EXIT COMPARISON</span>
+</button>
+</div>
+</div>
+<!-- Mode Selector Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container-lowest p-space-xs rounded-lg">
+<button class="mode-tab px-space-md py-space-xs rounded font-label-md text-label-md bg-surface-container-highest text-primary shadow-sm flex items-center gap-space-xs transition-all" data-mode="split">
+<span class="material-symbols-outlined text-[15px]">flip_camera_ios</span>
+<span>SPLIT WIPE (50/50)</span>
+</button>
+<button class="mode-tab px-space-md py-space-xs rounded font-label-md text-label-md text-tertiary hover:text-on-surface transition-all flex items-center gap-space-xs" data-mode="dual">
+<span class="material-symbols-outlined text-[15px]">view_column</span>
+<span>SIDE-BY-SIDE DUAL</span>
+</button>
+<button class="mode-tab px-space-md py-space-xs rounded font-label-md text-label-md text-tertiary hover:text-on-surface transition-all flex items-center gap-space-xs" data-mode="full-a">
+<span class="material-symbols-outlined text-[15px]">looks_one</span>
+<span>FULL A (BASE 5219)</span>
+</button>
+<button class="mode-tab px-space-md py-space-xs rounded font-label-md text-label-md text-tertiary hover:text-on-surface transition-all flex items-center gap-space-xs" data-mode="full-b">
+<span class="material-symbols-outlined text-[15px]">looks_two</span>
+<span>FULL B (PUSH +2)</span>
+</button>
+<button class="mode-tab px-space-md py-space-xs rounded font-label-md text-label-md text-tertiary hover:text-on-surface transition-all flex items-center gap-space-xs" data-mode="diff">
+<span class="material-symbols-outlined text-[15px]">difference</span>
+<span>DIFFERENCE MATTE (Δ INSPECT)</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>OPTICAL ENGINE: KODAK 500T 5219 EMULSION KERNEL 04.2</span>
+</div>
+</div>
+</section>
+<!-- CENTRAL OPTICAL COMPARATOR VIEWPORT -->
+<section class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-xl relative select-none">
+<!-- Viewport Header HUD -->
+<div class="px-space-md py-space-xs bg-surface-container-low flex items-center justify-between z-20">
+<div class="flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SCENE 04 VIEWPORT</span>
+<span class="px-space-xs py-[2px] rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">FRAME #0264</span>
+<span class="font-code-timecode text-label-sm text-primary">SMPTE 00:00:11:04</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline">
+<span class="font-code-timecode text-on-surface" id="split-pos-readout">SPLIT X: 50.0% // SYNCED 1:1 FRAME LOCK</span>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">crop_free</span>
+<span>RETICLE 2.39:1 ANAMORPHIC</span>
+</div>
+</div>
+</div>
+<!-- Comparative Screen Stage -->
+<div class="relative w-full aspect-[2.39/1] min-h-[460px] bg-background overflow-hidden cursor-ew-resize" id="viewport-stage">
+<!-- SIDE A: Canonical Base 5219 (Background Layer) -->
+<div class="absolute inset-0 w-full h-full pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="Cinematic shot of astronaut Vance helmet visor in dark obsidian outer space, fine velvety Kodak 500T 5219 35mm film grain, delicate subtle crimson halation ring reflecting faint distant star cluster, rich dark blacks with smooth natural tonal roll-off, ultra-high dynamic range 2.39:1 anamorphic frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDooAhXl83M3oLFV4244LegqxyMjynAFQIC2uNJBFwYFCglnWM-sgLsijcJY8Mb8ApxftOfNIpSeDjy2GXXcOHBDcdifEF2IQQjmqsm5e1pYYeOgTabVWWcf2FPShSFOTYckeIIknutI4Lh0bcoXRZznefHuiwil-DAYa4f3hmIC_aXGl7bcbX8ClqPlVcme_QilWbi9N-jB9932okQ6yPSoDQYJObHp-JzR-lcaPfl"/>
+<!-- Side A HUD telemetry overlay -->
+<div class="absolute top-space-md left-space-md flex flex-col gap-space-xs p-space-sm rounded bg-surface-container-lowest/80 backdrop-blur-md max-w-xs shadow-md">
+<div class="flex items-center justify-between gap-space-sm">
+<span class="font-label-md text-label-md text-primary font-semibold">A // BASE 5219 CANONICAL</span>
+<span class="px-space-xs py-[2px] rounded bg-surface-container font-label-sm text-label-sm text-tertiary">REF SPEC</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface leading-tight">
+            Grain 1.42 µm | Density 0.68 | Halation 3.84 px | Gamma 0.82γ | Specular Bloom 22.4%
+          </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Kodak Vision3 500T Organic Halide Clustered Scan</span>
+</div>
+</div>
+</div>
+<!-- SIDE B: Experimental Push +2 (Foreground Layer with Clip) -->
+<div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden" id="split-layer-b" style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);">
+<img class="w-full h-full object-cover" data-alt="High-contrast pushed film frame of Vance helmet visor in outer space, coarse gritty silver halide film grain pushed plus two stops, glowing hot red and amber halation bleed wrapping the gold visor edge, aggressive contrast with deep dense obsidian blacks and piercing starlight reflections, tactile cinematic celluloid texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjHv3SLz4F1QxSnZTUDjrz9z3ANYeU4LLJibfGyzoByTsycYjier6yCE79H_2pYorfP_CmUIHdELmRPg9kqnAV74bdyEJ03_36CtboGlu9X2S__bNCiVt2iLsbud2vEpZCX2KrxRQjOkpWr565cPgrHhNlotN6X4wv3hIdIoeleV0UxmAiEZg2v8WwgzuTBml_Hocct0cuSYKA4z2L-DVNYaWtEaJLlWIRK2UTEoKj"/>
+<!-- Difference Mode Overlay (Toggled via JS) -->
+<div class="hidden absolute inset-0 w-full h-full bg-surface/85 backdrop-blur-sm mix-blend-difference flex flex-col items-center justify-center p-space-lg text-center" id="diff-matte-canvas">
+<div class="p-space-md bg-surface-container-highest/90 rounded-lg shadow-xl max-w-md">
+<span class="material-symbols-outlined text-[32px] text-primary mb-space-xs">4k</span>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">DIFFERENCE MATTE PASS (Δ = |A - B| * 2.0)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Highlighting intense particle deviation around visor perimeter (+2.36 px radial remjet bleed) and shadow silver grain agglomeration in -3.5 EV toe zones.
+            </p>
+</div>
+</div>
+<!-- Side B HUD telemetry overlay -->
+<div class="absolute top-space-md right-space-md flex flex-col items-end gap-space-xs p-space-sm rounded bg-surface-container-lowest/80 backdrop-blur-md max-w-xs shadow-md text-right">
+<div class="flex items-center justify-between w-full gap-space-sm">
+<span class="px-space-xs py-[2px] rounded bg-primary-container text-on-primary font-label-sm text-label-sm">PUSH +2 EXP</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">B // VARIANT CANDIDATE</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface leading-tight" id="profile-b-readout-hud">
+            Grain 3.00 µm (+111%) | Density 0.94 (+38%) | Halation 6.20 px (+61%) | Gamma 1.15γ | Specular Bloom 46.0%
+          </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline">
+<span>Coarse halide clustering / Toe compression</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+</div>
+</div>
+<!-- Synchronized Vertical Split Line Divider -->
+<div class="absolute top-0 bottom-0 z-30 w-1 bg-primary cursor-ew-resize -translate-x-1/2 shadow-[0_0_12px_rgba(242,56,39,0.8)]" id="split-handle" style="left: 50%;">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-12 rounded bg-surface-container-highest shadow-xl flex flex-col items-center justify-center gap-1 cursor-ew-resize">
+<span class="w-1 h-3 bg-primary rounded-full"></span>
+<span class="font-code-timecode text-[8px] text-on-surface select-none">A|B</span>
+<span class="w-1 h-3 bg-primary rounded-full"></span>
+</div>
+</div>
+<!-- Center Crosshair & Alignment Markers -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-30">
+<div class="w-6 h-6 border-t border-b border-l border-r border-tertiary"></div>
+</div>
+</div>
+<!-- Bottom Viewport Telemetry Bar -->
+<div class="px-space-md py-space-xs bg-surface-container-low flex flex-wrap items-center justify-between text-outline font-label-sm text-label-sm z-20">
+<div class="flex flex-wrap items-center gap-space-md">
+<span class="font-code-timecode text-on-surface">TC 00:00:11:04</span>
+<span class="text-surface-variant">/</span>
+<span class="text-on-surface">LEICA NOCTILUX 50mm f/0.95 @ T1.1</span>
+<span class="text-surface-variant">/</span>
+<span class="text-on-surface">2.39:1 ANAMORPHIC</span>
+<span class="text-surface-variant">/</span>
+<span class="text-on-surface">ARRI LogC4 to ACEScc 1.3</span>
+</div>
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>SYNCHRONIZED ZERO-JITTER RASTER</span>
+</div>
+</div>
+</section>
+<!-- DUAL INDEPENDENT PARAMETER CALIBRATION DECKS -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Panel A: Profile A (Locked Reference) -->
+<div class="flex flex-col gap-space-sm p-space-md bg-surface-container-low rounded-xl shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">lock</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">PROFILE A: BASE 5219</span>
+</div>
+<span class="px-space-sm py-space-xs rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm">BASE SPEC IMMUTABLE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Standard Kodak Vision3 500T 35mm stock rated at EI 500. Canonical physical reference scan with unpushed ECN-2 chemistry.
+      </p>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">Halide Grain Size</span>
+<span class="font-code-timecode text-label-sm text-on-surface">1.42 µm [Nominal 500T]</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">Midtone Density</span>
+<span class="font-code-timecode text-label-sm text-on-surface">0.68 D-max</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">Halation Radius</span>
+<span class="font-code-timecode text-label-sm text-on-surface">3.84 px (Remjet Core)</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">Contrast Gamma</span>
+<span class="font-code-timecode text-label-sm text-on-surface">0.82 γ (Linearized Toe)</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">Highlight Diffusion</span>
+<span class="font-code-timecode text-label-sm text-on-surface">22.4% (Standard Roll-off)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm pt-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Hardware Densitometer Calibrated: 2024-10-18T04:12Z</span>
+</div>
+</div>
+<!-- Panel B: Profile B (Interactive Sandbox) -->
+<div class="flex flex-col gap-space-sm p-space-md bg-surface-container rounded-xl shadow-lg relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">PROFILE B: PUSH +2 EXPERIMENTAL</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-primary-container/20 text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span>INTERACTIVE SANDBOX</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Simulated +2 Stop laboratory push processing in developer tank. Emphasizes micro-acutance, coarse crystal growth, and explosive halo rings.
+      </p>
+<!-- Interactive Controls -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- Grain Slider -->
+<div class="flex flex-col gap-space-xs p-space-xs rounded bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Halide Grain Size</span>
+<span class="font-code-timecode text-label-sm text-secondary" id="val-grain">3.00 µm (+111%)</span>
+</div>
+<input class="w-full h-1 bg-surface-variant rounded accent-primary-container cursor-pointer" id="input-grain" max="4.8" min="1.4" step="0.05" type="range" value="3.0"/>
+</div>
+<!-- Halation Slider -->
+<div class="flex flex-col gap-space-xs p-space-xs rounded bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Halation Radius Bleed</span>
+<span class="font-code-timecode text-label-sm text-secondary" id="val-halation">6.20 px (+61%)</span>
+</div>
+<input class="w-full h-1 bg-surface-variant rounded accent-primary-container cursor-pointer" id="input-halation" max="10.0" min="3.0" step="0.1" type="range" value="6.2"/>
+</div>
+<!-- Gamma Slider -->
+<div class="flex flex-col gap-space-xs p-space-xs rounded bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Contrast Gamma (Toe/Shoulder)</span>
+<span class="font-code-timecode text-label-sm text-secondary" id="val-gamma">1.15 γ</span>
+</div>
+<input class="w-full h-1 bg-surface-variant rounded accent-primary-container cursor-pointer" id="input-gamma" max="1.50" min="0.50" step="0.01" type="range" value="1.15"/>
+</div>
+<!-- Highlight Diffusion Slider -->
+<div class="flex flex-col gap-space-xs p-space-xs rounded bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Highlight Specular Bloom</span>
+<span class="font-code-timecode text-label-sm text-secondary" id="val-diffusion">46.0%</span>
+</div>
+<input class="w-full h-1 bg-surface-variant rounded accent-primary-container cursor-pointer" id="input-diffusion" max="100" min="0" step="0.5" type="range" value="46"/>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-primary">memory</span>
+<span>Non-Destructive Memory Buffer [ENGAGED]</span>
+</div>
+<span class="font-code-timecode text-primary">GPU ACCELERATED</span>
+</div>
+</div>
+</section>
+<!-- OPTICAL DIFFERENCE & ARTIFACT ANALYSIS DECK -->
+<section class="flex flex-col gap-space-md p-space-md bg-surface-container-low rounded-xl shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">OPTICAL DIFFERENCE &amp; ARTIFACT ANALYSIS DECK</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Spatial Dispersion Matrix</span>
+</div>
+<!-- Difference Metrics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Grain Visibility Delta</span>
+<span class="font-code-timecode text-label-sm text-primary">+1.58 µm</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">Particle enlargement in low-frequency obsidian gradients (zero-lux vacuum).</div>
+<div class="w-full h-1 bg-surface-variant rounded mt-space-xs overflow-hidden">
+<div class="w-[74%] h-full bg-primary-container"></div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Shadow Clumping</span>
+<span class="font-code-timecode text-label-sm text-primary">-3.5 EV Toe</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">Extreme silver halide clump density across astronaut outer torso silhouette.</div>
+<div class="w-full h-1 bg-surface-variant rounded mt-space-xs overflow-hidden">
+<div class="w-[88%] h-full bg-secondary"></div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Halation Dispersion</span>
+<span class="font-code-timecode text-label-sm text-primary">+2.36 px</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">Radial remjet bleed wrapping Vance's gold-plated curvature perimeter.</div>
+<div class="w-full h-1 bg-surface-variant rounded mt-space-xs overflow-hidden">
+<div class="w-[62%] h-full bg-primary-container"></div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Specular Micro-Acutance</span>
+<span class="font-code-timecode text-label-sm text-primary">High Bite</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">Pronounced edge biting and halation fringe along starlight glints.</div>
+<div class="w-full h-1 bg-surface-variant rounded mt-space-xs overflow-hidden">
+<div class="w-[82%] h-full bg-secondary"></div>
+</div>
+</div>
+</div>
+<!-- Difference Note Callout -->
+<div class="p-space-sm rounded bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary mt-0.5">info</span>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Differential Mode Formulation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Differential mode renders simulated pixel subtraction (<span class="font-code-timecode text-on-surface">Δ = |Profile A - Profile B| * 2.0</span>). All values are interface simulation metrics without physical densitometry scan data.
+        </p>
+</div>
+</div>
+</section>
+<!-- SCENE 04 CANONICAL MANUSCRIPT ANCHOR & SAFETY ENFORCEMENT -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Script Excerpt Card -->
+<div class="lg:col-span-2 flex flex-col gap-space-sm p-space-md bg-surface-container-low rounded-xl shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">description</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">SCENE 04 MANUSCRIPT EXCERPT</span>
+</div>
+<span class="px-space-xs py-[2px] rounded bg-surface-container-highest font-code-timecode text-label-sm text-primary">IN: 00:00:10:14 / OUT: 00:00:14:00</span>
+</div>
+<div class="p-space-md rounded bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">EXT. OBSIDIAN VOID - CONTINUOUS</div>
+<p class="font-display-md text-headline-md text-on-surface italic leading-snug">
+          “We aren’t falling through space. We’re falling through memory.”
+        </p>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-space-xs">
+<span>CHARACTER: ASTRONAUT VANCE</span>
+<span class="font-code-timecode text-primary">RESTORED TAKE 03 // CANONICAL CUT</span>
+</div>
+</div>
+<!-- Comparative Draft Lineage -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">CANONICAL HEAD [ACTIVE]</span>
+<span class="font-code-timecode text-label-sm text-primary">9a2f1c8</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Editorial Cut Take 03 (Vance Cut, Seed #4120). Unchallenged canonical spine.</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">QUARANTINED TAKE 04</span>
+<span class="px-space-xs py-[2px] rounded bg-error-container text-error font-code-timecode text-[10px]">COLD LOCK</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary-container italic">“We aren't descending through the dark...”</span>
+<span class="font-label-sm text-label-sm text-outline">Hash 7d18a4c — Isolated via Node S-04-Delta</span>
+</div>
+</div>
+</div>
+<!-- Safety & Audit Lock Deck -->
+<div class="flex flex-col justify-between gap-space-sm p-space-md bg-surface-container-low rounded-xl shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">SAFETY SYSTEM</span>
+<span class="px-space-xs py-[2px] rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">ARMED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Strict guard preventing experimental color grade parameters from committing into the main timeline ledger without physical film master signoff.
+        </p>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">STAGING STATUS</span>
+<span class="font-code-timecode text-label-sm text-primary">TRANSIENT COMPARATOR ACTIVE</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">COMMIT GUARD</span>
+<span class="font-code-timecode text-label-sm text-error">DISARMED // WRITE FORBIDDEN</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-outline">CANON VERIFICATION</span>
+<span class="font-code-timecode text-label-sm text-on-surface">S-04-THE-PAPER DIRECT</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Audit Hash</span>
+<div class="font-code-timecode text-[11px] text-tertiary break-all">
+          SHA: 9a2f1c8::SC04-SPLIT-INSPECT-EPHEMERAL
+        </div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function initInspector() {
+    const stage = document.getElementById('viewport-stage');
+    const splitLayerB = document.getElementById('split-layer-b');
+    const splitHandle = document.getElementById('split-handle');
+    const readout = document.getElementById('split-pos-readout');
+    const btnLock = document.getElementById('btn-lock-split');
+    const btnReset = document.getElementById('btn-reset-base');
+    const modeTabs = document.querySelectorAll('.mode-tab');
+    const diffMatte = document.getElementById('diff-matte-canvas');
+
+    const inGrain = document.getElementById('input-grain');
+    const inHalation = document.getElementById('input-halation');
+    const inGamma = document.getElementById('input-gamma');
+    const inDiffusion = document.getElementById('input-diffusion');
+
+    const valGrain = document.getElementById('val-grain');
+    const valHalation = document.getElementById('val-halation');
+    const valGamma = document.getElementById('val-gamma');
+    const valDiffusion = document.getElementById('val-diffusion');
+    const hudB = document.getElementById('profile-b-readout-hud');
+
+    let currentSplitX = 50.0;
+    let isDragging = false;
+    let isLocked = false;
+    let currentMode = 'split';
+
+    function setSplit(pct) {
+      if (isLocked) return;
+      currentSplitX = Math.max(0, Math.min(100, pct));
+      if (currentMode === 'split') {
+        splitLayerB.style.clipPath = `polygon(${currentSplitX}% 0, 100% 0, 100% 100%, ${currentSplitX}% 100%)`;
+        splitHandle.style.left = `${currentSplitX}%`;
+        splitHandle.style.display = 'block';
+      }
+      readout.textContent = `SPLIT X: ${currentSplitX.toFixed(1)}% // SYNCED 1:1 FRAME LOCK`;
+    }
+
+    function onPointerMove(e) {
+      if (!isDragging || isLocked || currentMode !== 'split') return;
+      const rect = stage.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      setSplit(x);
+    }
+
+    stage.addEventListener('mousedown', (e) => {
+      if (currentMode !== 'split') return;
+      isDragging = true;
+      onPointerMove(e);
+    });
+
+    window.addEventListener('mousemove', onPointerMove);
+    window.addEventListener('mouseup', () => { isDragging = false; });
+
+    // Mode Selector Switching
+    modeTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        modeTabs.forEach(t => {
+          t.classList.remove('bg-surface-container-highest', 'text-primary');
+          t.classList.add('text-tertiary');
+        });
+        tab.classList.add('bg-surface-container-highest', 'text-primary');
+        tab.classList.remove('text-tertiary');
+
+        currentMode = tab.getAttribute('data-mode');
+
+        // Reset overlays
+        diffMatte.classList.add('hidden');
+
+        if (currentMode === 'split') {
+          splitHandle.style.display = 'block';
+          setSplit(currentSplitX);
+        } else if (currentMode === 'full-a') {
+          splitHandle.style.display = 'none';
+          splitLayerB.style.clipPath = 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)';
+          readout.textContent = 'MODE: FULL FRAME 100% PROFILE A [BASE 5219]';
+        } else if (currentMode === 'full-b') {
+          splitHandle.style.display = 'none';
+          splitLayerB.style.clipPath = 'polygon(0 0, 100% 0, 100% 100%, 0 100%)';
+          readout.textContent = 'MODE: FULL FRAME 100% PROFILE B [PUSH +2]';
+        } else if (currentMode === 'diff') {
+          splitHandle.style.display = 'none';
+          splitLayerB.style.clipPath = 'polygon(0 0, 100% 0, 100% 100%, 0 100%)';
+          diffMatte.classList.remove('hidden');
+          readout.textContent = 'MODE: DIFFERENCE MATTE INSPECTION PASS (Δ)';
+        } else if (currentMode === 'dual') {
+          splitHandle.style.display = 'block';
+          setSplit(50.0);
+          readout.textContent = 'MODE: SIDE-BY-SIDE DUAL INSPECTION (50/50 ANCHOR)';
+        }
+      });
+    });
+
+    btnLock.addEventListener('click', () => {
+      isLocked = !isLocked;
+      btnLock.classList.toggle('bg-primary-container', isLocked);
+      btnLock.classList.toggle('text-on-primary', isLocked);
+      if (isLocked) {
+        setSplit(50.0);
+        btnLock.querySelector('span:last-child').textContent = 'SPLIT LOCKED (50%)';
+      } else {
+        btnLock.querySelector('span:last-child').textContent = 'LOCK SPLIT 50%';
+      }
+    });
+
+    btnReset.addEventListener('click', () => {
+      inGrain.value = 3.0;
+      inHalation.value = 6.2;
+      inGamma.value = 1.15;
+      inDiffusion.value = 46.0;
+      updateParameters();
+      setSplit(50.0);
+    });
+
+    function updateParameters() {
+      const g = parseFloat(inGrain.value).toFixed(2);
+      const h = parseFloat(inHalation.value).toFixed(2);
+      const gm = parseFloat(inGamma.value).toFixed(2);
+      const d = parseFloat(inDiffusion.value).toFixed(1);
+
+      valGrain.textContent = `${g} µm (+${Math.round(((g - 1.42) / 1.42) * 100)}%)`;
+      valHalation.textContent = `${h} px (+${Math.round(((h - 3.84) / 3.84) * 100)}%)`;
+      valGamma.textContent = `${gm} γ`;
+      valDiffusion.textContent = `${d}%`;
+
+      hudB.textContent = `Grain ${g} µm | Halation ${h} px | Gamma ${gm}γ | Specular Bloom ${d}%`;
+    }
+
+    [inGrain, inHalation, inGamma, inDiffusion].forEach(slider => {
+      slider.addEventListener('input', updateParameters);
+    });
+
+    // Keyboard controls for micro-step split adjustment
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT') return;
+      if (e.key === 'ArrowLeft') {
+        setSplit(currentSplitX - 2.5);
+      } else if (e.key === 'ArrowRight') {
+        setSplit(currentSplitX + 2.5);
+      }
+    });
+  })();
+</script></main><footer class="fixed bottom-0 left-72 right-0 h-10 bg-surface-container-lowest/90 backdrop-blur-md z-30 flex items-center justify-between px-gutter-lg shadow-[0_-1px_6px_rgba(0,0,0,0.5)]"><div class="flex items-center gap-gutter font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="text-outline">VECTOR 04:</span><span class="text-on-surface">STABILIZED</span></div><div class="flex items-center gap-space-xs"><span class="text-outline">PRESSURE:</span><span class="font-code-timecode text-on-surface">42.8 BAR</span></div><div class="flex items-center gap-space-xs"><span class="text-outline">LUMINESCENCE:</span><span class="font-code-timecode text-primary">12.4%</span></div><div class="flex items-center gap-space-xs"><span class="text-outline">CANON LOCK:</span><span class="text-on-surface">1:1 DIRECT</span></div></div><div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline"><span class="font-code-timecode">WATERMARK SIM: SHA-256 [04-A7E9-C883]</span><span class="text-surface-variant">•</span><span>FX2 REVISION 2.4</span></div></footer></div></body></html>

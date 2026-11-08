@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#111318","surface-container-low":"#1a1b21","secondary":"#d3fbff","tertiary":"#fff3f2","on-tertiary":"#68001a","secondary-fixed-dim":"#00dbe9","surface-container-highest":"#33353a","surface-container-lowest":"#0c0e13","outline":"#849585","on-surface":"#e2e2e9","on-primary-container":"#006e36","on-primary-fixed-variant":"#005227","on-tertiary-container":"#bf0037","secondary-fixed":"#7df4ff","on-secondary":"#00363a","on-secondary-fixed-variant":"#004f54","outline-variant":"#3b4b3d","surface-dim":"#111318","on-secondary-fixed":"#002022","on-secondary-container":"#00686f","tertiary-fixed-dim":"#ffb3b6","on-primary":"#003919","error-container":"#93000a","primary-fixed-dim":"#00e477","surface-container":"#1e1f25","background":"#111318","surface-tint":"#00e477","surface-container-high":"#282a2f","on-tertiary-fixed-variant":"#920028","on-error":"#690005","tertiary-container":"#ffcdce","primary-fixed":"#61ff98","primary":"#dbffde","primary-container":"#10f984","error":"#ffb4ab","on-error-container":"#ffdad6","surface-bright":"#37393f","on-surface-variant":"#b9cbb9","surface-variant":"#33353a","inverse-primary":"#006d36","on-background":"#e2e2e9","inverse-on-surface":"#2e3036","on-primary-fixed":"#00210c","inverse-surface":"#e2e2e9","secondary-container":"#00eefc","on-tertiary-fixed":"#40000c","tertiary-fixed":"#ffdada"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","space-md":"1rem","space-lg":"1.5rem","space-2xl":"4rem","gutter":"1.25rem","space-xl":"2.5rem","margin-tablet":"2rem","margin-desktop":"3.5rem","gutter-desktop":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"mono-metric":["JetBrains Mono"],"mono-code":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Space Grotesk"],"display-hero":["Space Grotesk"],"headline-md":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"headline-sm":["Space Grotesk"],"label-caps":["JetBrains Mono"]},"fontSize":{"mono-metric":["1.5rem",{"lineHeight":"1.75rem","letterSpacing":"-0.02em","fontWeight":"600"}],"mono-code":["0.875rem",{"lineHeight":"1.375rem","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["2rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"display-hero":["4.5rem",{"lineHeight":"4.75rem","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-md":["1.75rem",{"lineHeight":"2.125rem","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["3rem",{"lineHeight":"3.25rem","letterSpacing":"-0.03em","fontWeight":"600"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.625rem","letterSpacing":"-0.01em","fontWeight":"500"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.14em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface select-none"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 flex items-center justify-between px-space-md bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 bg-primary-container animate-pulse"></div><span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest">FX2 // TELEMETRY RAIL</span></div><span class="font-mono-code text-label-tag text-on-surface-variant">v4.8.2</span></div><div class="p-space-md"><div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-space-sm">LATERAL PIPELINE STAGES</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary-container font-semibold shadow-[0_0_12px_rgba(16,249,132,0.1)]"><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stage-01-inception-brief" href="#"><span class="font-label-tag text-label-tag">01 // INCEPTION BRIEF</span><span class="w-1.5 h-1.5 bg-primary-container"></span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stage-02-neural-insight" href="#"><span class="font-label-tag text-label-tag">02 // NEURAL INSIGHT</span><span class="w-1.5 h-1.5 bg-secondary-fixed-dim"></span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stage-03-concept-synthesis" href="#"><span class="font-label-tag text-label-tag">03 // CONCEPT SYNTHESIS</span><span class="w-1.5 h-1.5 bg-surface-container-highest"></span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stage-04-script-matrix" href="#"><span class="font-label-tag text-label-tag">04 // SCRIPT MATRIX</span><span class="w-1.5 h-1.5 bg-surface-container-highest"></span></a></nav></div><div class="px-space-md py-space-sm"><div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-space-sm">LATERAL ENGINES TELEMETRY</div><div class="bg-surface-container-low p-space-sm flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant">LATERAL DIVERGENCE</span><span class="font-mono-code text-label-tag text-secondary-fixed">94.2%</span></div><div class="w-full bg-surface-container-highest h-1"><div class="bg-secondary-fixed h-1 w-[94%]"></div></div><div class="flex items-center justify-between mt-space-xs"><span class="font-label-tag text-label-tag text-on-surface-variant">SYNAPTIC FLUX</span><span class="font-mono-code text-label-tag text-primary-fixed-dim">184.6 T/s</span></div><div class="w-full bg-surface-container-highest h-1"><div class="bg-primary-container h-1 w-[78%]"></div></div></div></div><div class="px-space-md py-space-sm"><div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-space-sm">ACTIVE EXPERIMENT PARAMS</div><div class="bg-surface-container-low p-space-sm font-mono-code text-label-tag text-on-surface-variant flex flex-col gap-space-xs"><div class="flex justify-between"><span>TEMP_LATERAL</span><span class="text-on-surface">1.38</span></div><div class="flex justify-between"><span>ENTROPY_DEPTH</span><span class="text-on-surface">0.82</span></div><div class="flex justify-between"><span>ATTENTION_SPAN</span><span class="text-on-surface">128k</span></div></div></div></div><div class="p-space-md bg-surface-container-low"><div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-space-xs">QUANTUM MEMORY STACK</div><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 bg-secondary-fixed-dim"></span><span class="font-mono-code text-label-tag text-on-surface">1.24 GB / 4.0 GB</span></div><span class="font-label-caps text-label-caps text-secondary-fixed">COHERENT</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-3 h-3 bg-primary-container"></div><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">FX2 NEURAL LAB</span></div><div class="flex items-center bg-surface-container-low p-1 gap-1"><span class="font-label-caps text-label-caps px-space-sm py-1 text-on-surface-variant">NOIR 2026</span><span class="font-label-caps text-label-caps px-space-sm py-1 text-on-surface-variant">ATELIER CINEMA</span><span class="font-label-caps text-label-caps px-space-sm py-1 bg-surface-container-high text-primary-container font-semibold shadow-[0_0_8px_rgba(16,249,132,0.15)]">RADICAL LAB // 03</span><span class="font-label-caps text-label-caps px-space-sm py-1 text-on-surface-variant">HUMAN STAGE</span></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary-container font-semibold"><a class="font-label-tag text-label-tag text-on-surface-variant hover:text-on-surface transition-colors" data-path="stage-01-inception-brief" href="#">01 INCEPTION/BRIEF</a><span class="text-outline-variant font-mono-code text-xs">&gt;</span><a class="font-label-tag text-label-tag text-on-surface-variant hover:text-on-surface transition-colors" data-path="stage-02-neural-insight" href="#">02 NEURAL INSIGHT</a><span class="text-outline-variant font-mono-code text-xs">&gt;</span><a class="font-label-tag text-label-tag text-on-surface-variant hover:text-on-surface transition-colors" data-path="stage-03-concept-synthesis" href="#">03 CONCEPT SYNTHESIS</a><span class="text-outline-variant font-mono-code text-xs">&gt;</span><a class="font-label-tag text-label-tag text-on-surface-variant hover:text-on-surface transition-colors" data-path="stage-04-script-matrix" href="#">04 SCRIPT MATRIX</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs bg-surface-container px-space-sm py-1"><div class="w-1.5 h-1.5 bg-secondary-fixed-dim animate-ping"></div><span class="font-mono-code text-label-tag text-secondary-fixed">GEMINI 2.5 PRO (QUANTUM NEURAL BUS)</span></div><div class="hidden lg:flex items-center gap-space-xs font-mono-code text-label-tag text-on-surface-variant"><span>LATENCY:</span><span class="text-primary-container">14.2ms</span></div><button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-caps text-label-caps tracking-wider transition-colors">RTL // AR</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface select-none" dir="rtl">
+<!-- TOP CONTEXT HUD & LATERAL PIPELINE TELEMETRY -->
+<div class="w-full bg-surface-container-lowest px-gutter-desktop py-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Stage Breadcrumb & Title -->
+<div class="flex items-start lg:items-center gap-space-md">
+<div class="w-2.5 h-10 bg-primary-container shrink-0"></div>
+<div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-widest">// STAGE 04_ACTIVE</span>
+<span class="font-mono-code text-label-tag text-on-surface-variant">NODE::SYNAPSE_FINAL_RENDER</span>
+<span class="bg-surface-container px-space-xs py-0.5 font-label-caps text-label-caps text-secondary-fixed">GEMINI 2.5 PRO BUS [118ms]</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-0.5 font-semibold">
+            المرحلة 04: غرفة السيناريو العصبي ومصفوفة الإنتاج الجذري
+          </h1>
+<p class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase font-mono-code">
+            RADICAL SCRIPT MATRIX &amp; SCREENPLAY PRODUCTION CHAMBER
+          </p>
+</div>
+</div>
+<!-- Stage Step Matrix -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1.5 self-start lg:self-auto">
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-caps text-label-caps">01 الإيجاز (BRIEF)</span>
+</div>
+<span class="text-outline-variant font-mono-code text-xs px-0.5">/</span>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-caps text-label-caps">02 الاستبصار (INSIGHT)</span>
+</div>
+<span class="text-outline-variant font-mono-code text-xs px-0.5">/</span>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-caps text-label-caps">03 المفهوم (CONCEPT)</span>
+</div>
+<span class="text-outline-variant font-mono-code text-xs px-0.5">/</span>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high text-primary-container font-semibold shadow-sm">
+<span class="w-1.5 h-1.5 bg-primary-container animate-pulse"></span>
+<span class="font-label-caps text-label-caps">04 السيناريو (SCRIPT)</span>
+</div>
+</div>
+</div>
+<!-- Live Telemetry Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-space-xs pt-space-xs font-mono-code text-label-tag">
+<div class="bg-surface-container-low px-space-sm py-1 flex items-center justify-between">
+<span class="text-on-surface-variant">التماسك المعرفي:</span>
+<span class="text-primary-container font-bold">99.1%</span>
+</div>
+<div class="bg-surface-container-low px-space-sm py-1 flex items-center justify-between">
+<span class="text-on-surface-variant">مؤشر الاستفزاز:</span>
+<span class="text-secondary-fixed font-bold">9.6 / 10</span>
+</div>
+<div class="bg-surface-container-low px-space-sm py-1 flex items-center justify-between">
+<span class="text-on-surface-variant">التحول الإدراكي:</span>
+<span class="text-primary-container font-bold">مكتمل (SHIFTED)</span>
+</div>
+<div class="bg-surface-container-low px-space-sm py-1 flex items-center justify-between">
+<span class="text-on-surface-variant">زمن الإعلان المتوقع:</span>
+<span class="text-on-surface font-bold">00:60 ثانية</span>
+</div>
+<div class="bg-surface-container-low px-space-sm py-1 flex items-center justify-between">
+<span class="text-on-surface-variant">تزامن النبض السينمائي:</span>
+<span class="text-secondary-fixed-dim font-bold">120 FPS // AR</span>
+</div>
+<div class="bg-surface-container-low px-space-sm py-1 flex items-center justify-between">
+<span class="text-on-surface-variant">حالة التأمين العصبي:</span>
+<span class="text-primary-container font-bold">LOCKED • ENCRYPTED</span>
+</div>
+</div>
+</div>
+<!-- PERSISTENT LOCKED BRIEF DRAWER (THE ANCHOR) -->
+<div class="w-full px-gutter-desktop pt-space-md">
+<details class="group bg-surface-container-lowest p-space-md shadow-md transition-all duration-200" open="">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-space-md">
+<div class="w-3 h-3 bg-primary-container flex items-center justify-center">
+<div class="w-1 h-1 bg-surface-container-lowest"></div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-widest">
+              [مرساة البريف الدائمة // PERSISTENT RADICAL BRIEF ANCHOR]
+            </span>
+<span class="bg-surface-container-high px-space-xs py-0.5 font-label-tag text-label-tag text-secondary-fixed">
+              التوتر المصرفي الموثق #082
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-mono-code text-label-tag text-on-surface-variant group-open:hidden">انقر للتوسيع</span>
+<span class="font-mono-code text-label-tag text-primary-container hidden group-open:inline">مفتوح ومثبت</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</div>
+</summary>
+<div class="pt-space-md mt-space-sm grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-8 bg-surface-container-low p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">النص التأسيسي للتحدي الجذري</span>
+<span class="font-mono-code text-label-tag text-primary-container font-semibold">TENSION_VECTOR // ACTIVE</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              «إطلاق منصة تكنولوجية مصرفية جديدة في الشرق الأوسط تستهدف جيلاً ملّ من الوعود البنكية التقليدية والادخار الصارم. التوتر: الشباب يريدون العيش اليوم بشغف دون أن يُقال لهم "احرم نفسك عشان المستقبل". نريد فكرة حملة تصدم الناس بصدقها، وتجعل مفهوم الأمان المالي تحرراً ومتعة وليس سجناً أخلاقياً.»
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-lg font-mono-code text-label-tag text-on-surface-variant">
+<span>الجمهور: <strong class="text-on-surface">Gen-Z &amp; Early Millennials (19–34)</strong></span>
+<span>القطاع: <strong class="text-on-surface">FinTech / Neo-Banking</strong></span>
+<span>نبرة الخطاب: <strong class="text-primary-container">استفزازية صادمة، محررة، حيوية</strong></span>
+</div>
+</div>
+<div class="lg:col-span-4 bg-surface-container-low p-space-md flex flex-col justify-between">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-space-xs">
+            الاستخلاص الاستراتيجي (STRATEGIC ANCHOR)
+          </div>
+<div class="space-y-space-sm">
+<div class="p-space-sm bg-surface-container">
+<div class="font-label-tag text-label-tag text-error mb-0.5">السردية التقليدية السائدة:</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">«احرم نفسك اليوم لتبني أماناً باهتاً بعد أربعين عاماً.»</div>
+</div>
+<div class="p-space-sm bg-surface-container-high">
+<div class="font-label-tag text-label-tag text-primary-container mb-0.5">الانقلاب الجذري للعلامة:</div>
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">«الأمان المالي ليس سجناً.. هو بنزين لشغفك اللحظي.»</div>
+</div>
+</div>
+<div class="mt-space-sm font-mono-code text-label-tag text-secondary-fixed flex items-center justify-between">
+<span>التوثيق في العقد:</span>
+<span class="bg-surface-container px-space-xs py-0.5 font-bold">LOCKED // TRUTHFUL</span>
+</div>
+</div>
+</div>
+</details>
+</div>
+<!-- MAIN SCRIPT WORKBENCH: DUAL SPLIT ASYMMETRIC GRID -->
+<div class="w-full px-gutter-desktop py-space-lg grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT/MAIN COLUMN (8 COLS): SCRIPT PLAYBOOK -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Script Master Container -->
+<div class="bg-surface-container-lowest shadow-xl">
+<!-- Script Header Bar -->
+<div class="p-space-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-caps text-label-caps bg-primary-container text-on-primary font-bold px-space-xs py-0.5">
+                MASTER COMMERCIAL SPEC // 60s TVC &amp; DIGITAL
+              </span>
+<span class="font-mono-code text-label-tag text-secondary-fixed">DRAFT_REV_04.8</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1 font-semibold">
+              حكاية القرش الأبيض.. كذبة الستين سنة
+            </h2>
+<div class="font-mono-code text-label-tag text-on-surface-variant mt-0.5">
+              TITLE: "THE MYTH OF THE WHITE PENNY" // RADICAL FILM TREATMENT
+            </div>
+</div>
+<div class="flex items-center gap-space-xs self-start md:self-auto">
+<button class="px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-bright text-primary-container font-label-caps text-label-caps transition-colors flex items-center gap-1" id="btn-mode-confront">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+              وضع المواجهة الصادمة
+            </button>
+<button class="px-space-sm py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps transition-colors flex items-center gap-1" id="btn-copy-script">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+              نسخ النص
+            </button>
+</div>
+</div>
+<!-- Visual Film Montage Anchor Frame -->
+<div class="relative w-full h-56 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Cinematic neo-noir film frame inside a vintage sterile bank vault contrasting suddenly with vivid cyberpunk neon youth recording music in Cairo and Riyadh, anamorphic lens flare with 35mm grain, color graded in deep cyan and phosphor lime tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwK5Fn3Tl9DfXphaHPbr3WxfroDso0tNrSpLhCBaX9LNURp6CN1KWiuBnYhPkjch8Mcu1f9UYzCyul0pTNQrcuu7jfr6w36ScA0E3uqs3UVjHQXNSL-IupL7pIQECdBH5XTxMU4FtFHo2rn8ivo8CoQJmXwK43NC5NR8Huh54zlrkH4t8T-AhmbumummjvKKliBcWvjU1gyP_Dof6ZWhz8B4ynwulpNfBT0yOW2qpH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent flex flex-col justify-end p-space-md">
+<div class="flex items-center justify-between text-on-surface font-mono-code text-label-tag">
+<span class="bg-surface-container-lowest/90 px-space-sm py-0.5 text-primary-container font-bold">
+                CAM_A // ALEXA 35 24mm ANAMORPHIC T1.9 // ISO 800
+              </span>
+<span class="bg-surface-container-lowest/90 px-space-sm py-0.5 text-secondary-fixed">
+                LUT: RADICAL_NEON_CONTRAST_v4
+              </span>
+</div>
+</div>
+</div>
+<!-- SCENE BREAKDOWN MATRIX -->
+<div class="p-space-lg flex flex-col gap-space-xl">
+<!-- SCENE 01 -->
+<article class="bg-surface-container p-space-lg relative shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono-metric text-mono-metric text-primary-container">01</span>
+<div>
+<span class="font-label-caps text-label-caps text-error uppercase font-bold tracking-wider">المشهد الأول: الصدمة البنكية والمصيدة الرمادية</span>
+<div class="font-mono-code text-label-tag text-on-surface-variant">EXT/INT - OLD STERILE BANK CORRIDOR - DAY [120 FPS]</div>
+</div>
+</div>
+<div class="font-mono-code text-label-tag bg-surface-container-lowest px-space-sm py-1 text-on-surface-variant self-start sm:self-auto">
+                TIMECODE: 00:00 — 00:15
+              </div>
+</div>
+<!-- Scene Visual Direction -->
+<div class="bg-surface-container-low p-space-md mb-space-md">
+<div class="font-label-caps text-label-caps text-secondary-fixed uppercase mb-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+                توجيه الكاميرا والتكوين البصري (VISUAL BEAT)
+              </div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                حركة كاميرا Dolly-in مسرعة تقتحم ممر بنك تقليدي بارد، خالي من أي دفء بشري. جدران رمادية خرسانية باهتة، إضاءة فلورسنت طنانة ترمش بعصبية. طابور طويل من الشباب يقفون بتيبس كأنهم تماثيل شمعية، وجوههم محاطة بظلال كئيبة، وشاشات رقمية عتيقة معلقة تعرض لافتات تحذيرية مرعبة: <strong class="text-error">"احرم نفسك عشان المستقبل"</strong>، <strong class="text-error">"القرش الأبيض لليوم الأسود"</strong>.
+              </p>
+</div>
+<!-- Audio & Dialogue Track -->
+<div class="bg-surface-container-lowest p-space-md space-y-space-md">
+<div class="flex items-center justify-between font-mono-code text-label-tag text-on-surface-variant">
+<span class="text-primary-container font-semibold">الصوت والحوار // AUDIO &amp; SFX TRACK</span>
+<span>CH: DUAL STEREO MIX</span>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="w-16 shrink-0 font-label-caps text-label-caps text-secondary-fixed-dim pt-1">المؤثرات:</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  صوت طنين مصابيح فلورسنت صناعية مزعجة يتداخل مع صوت عدّاد نقود ميكانيكي قديم يدق كقنبلة موقوتة. وتيرة دقات قلب متسارعة تصنع توتراً خانقاً.
+                </div>
+</div>
+<div class="flex items-start gap-space-md bg-surface-container-low p-space-sm">
+<div class="w-16 shrink-0 font-label-caps text-label-caps text-primary-container font-bold pt-1">صوت الراوي (V.O):</div>
+<div class="font-body-lg text-body-lg text-on-surface font-semibold leading-relaxed">
+                  «ستين سنة وبيقولولك نفس الكلمة: استنى.. اجّل متعتك.. اضغط على نفسك النهاردة عشان ترتاح وإنت عندك ستين سنة. مين قال إنك لازم تعيش حياتك بروفة لمستقبل باهت؟»
+                </div>
+</div>
+</div>
+</article>
+<!-- SCENE 02 -->
+<article class="bg-surface-container p-space-lg relative shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono-metric text-mono-metric text-secondary-fixed">02</span>
+<div>
+<span class="font-label-caps text-label-caps text-secondary-fixed uppercase font-bold tracking-wider">المشهد الثاني: كسر الإيقاع والانفجار النيوني</span>
+<div class="font-mono-code text-label-tag text-on-surface-variant">EXT - CAIRO / RIYADH / DOHA URBAN NIGHT - HANDHELD [24 FPS]</div>
+</div>
+</div>
+<div class="font-mono-code text-label-tag bg-surface-container-lowest px-space-sm py-1 text-on-surface-variant self-start sm:self-auto">
+                TIMECODE: 00:16 — 00:38
+              </div>
+</div>
+<!-- Scene Visual Direction -->
+<div class="bg-surface-container-low p-space-md mb-space-md">
+<div class="font-label-caps text-label-caps text-secondary-fixed uppercase mb-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+                توجيه الكاميرا والتكوين البصري (VISUAL BEAT)
+              </div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                تحول حاد ومفاجئ (Smash Cut): تتبدد الرمادية تماماً ليحل مكانها انفجار ألوان نيون مشبعة (Phosphor Green &amp; Cyan). لقطات متتالية ديناميكية وسريعة: شابة تدير استوديو تصميم مستقل وسط أجهزة ماك وتضحك مع فريقها، شاب يضبط إيقاع جهاز Synthesizer في مقهى موسيقي صاخب بالرياض، ومبرمجة شابة تحتفل بإطلاق مشروعها في المعادي تحت أضواء الشارع الحية. طاقة الشباب هنا تفيض حيوية، حركة، وإنفاقاً على شغف حقيقي يصنع القيمة.
+              </p>
+</div>
+<!-- Audio & Dialogue Track -->
+<div class="bg-surface-container-lowest p-space-md space-y-space-md">
+<div class="flex items-center justify-between font-mono-code text-label-tag text-on-surface-variant">
+<span class="text-primary-container font-semibold">الصوت والحوار // AUDIO &amp; SFX TRACK</span>
+<span>CH: BASS DROP + SYNTH GLITCH</span>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="w-16 shrink-0 font-label-caps text-label-caps text-secondary-fixed-dim pt-1">الموسيقى:</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  انقطاع الصمت الصناعي فجأة ودخول Bass Drop عميق وقوي، متبوعاً بإيقاع إلكتروني عربي عصري مفعم بالحياة (Modern Neo-Tarab Bassline) يضخ الأدرينالين.
+                </div>
+</div>
+<div class="flex items-start gap-space-md bg-surface-container-low p-space-sm">
+<div class="w-16 shrink-0 font-label-caps text-label-caps text-primary-container font-bold pt-1">صوت الراوي (V.O):</div>
+<div class="font-body-lg text-body-lg text-on-surface font-semibold leading-relaxed">
+                  «أنت مش بتصرف عشان تبذّر.. أنت بتستثمر في شغفك، في خبرتك، في اللحظة اللي بتعيشها دلوقتي. الفلوس مش سلاسل تحبسك في قفص الذنب.. الفلوس أداة لحريتك.»
+                </div>
+</div>
+</div>
+</article>
+<!-- SCENE 03 -->
+<article class="bg-surface-container p-space-lg relative shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono-metric text-mono-metric text-primary-container">03</span>
+<div>
+<span class="font-label-caps text-label-caps text-primary-container uppercase font-bold tracking-wider">المشهد الثالث: المعجزة التكنولوجية والنمو اللحظي</span>
+<div class="font-mono-code text-label-tag text-on-surface-variant">INT - MACRO SCREEN INTERFACE / MOBILE UI GRAPHICS - 4K</div>
+</div>
+</div>
+<div class="font-mono-code text-label-tag bg-surface-container-lowest px-space-sm py-1 text-on-surface-variant self-start sm:self-auto">
+                TIMECODE: 00:39 — 00:50
+              </div>
+</div>
+<!-- Scene Visual Direction -->
+<div class="bg-surface-container-low p-space-md mb-space-md">
+<div class="font-label-caps text-label-caps text-secondary-fixed uppercase mb-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+                توجيه الكاميرا والتكوين البصري (VISUAL BEAT)
+              </div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                لقطة ماكرو مقربة لهاتف ذكي: واجهة المنصة التكنولوجية تظهر بتصميم مستقبلي داكن مع تفاصيل خضراء متوهجة. ليست هناك رسوم بيانية معقدة ولا إنذارات بالتقشف. كل دفعة يقوم بها البطل (فنجان قهوة مختصة، دورة تدريبية، تذكرة سفر) تولد نبضة ضوئية فورية في التطبيق: خوارزمية ذكية تقوم باستثمار الكاش باك والباقي التلقائي فوراً في أصول حقيقية نامية. الشاشة لا تقول "لقد أنفقت"، بل تبتسم: <strong class="text-primary-container">«أنت نميت محفظتك بنسبة +4.8% أثناء عيشك اللحظة»</strong>.
+              </p>
+</div>
+<!-- Audio & Dialogue Track -->
+<div class="bg-surface-container-lowest p-space-md space-y-space-md">
+<div class="flex items-center justify-between font-mono-code text-label-tag text-on-surface-variant">
+<span class="text-primary-container font-semibold">الصوت والحوار // AUDIO &amp; SFX TRACK</span>
+<span>CH: DIGITAL SYNAPSE CHIME</span>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="w-16 shrink-0 font-label-caps text-label-caps text-secondary-fixed-dim pt-1">المؤثرات:</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  نغمات رقمية ناعمة توحي بالسهولة والأمان، خالية من صفارات الإنذار المصرفية الجافة، تتصاعد مع دقات الموسيقى.
+                </div>
+</div>
+<div class="flex items-start gap-space-md bg-surface-container-low p-space-sm">
+<div class="w-16 shrink-0 font-label-caps text-label-caps text-primary-container font-bold pt-1">صوت الراوي (V.O):</div>
+<div class="font-body-lg text-body-lg text-on-surface font-semibold leading-relaxed">
+                  «تطبيق مالي ما بيحاسبكش.. بيكبر معاك. كل قرش بتعيش بيه شغفك، محفظتك بتتعلم تستثمر قصاده بذكاء تلقائي كامل.»
+                </div>
+</div>
+</div>
+</article>
+<!-- SCENE 04 (FINALE) -->
+<article class="bg-surface-container-high p-space-lg relative shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono-metric text-mono-metric text-primary-fixed">04</span>
+<div>
+<span class="font-label-caps text-label-caps text-primary-container uppercase font-bold tracking-wider">المشهد الرابع: القفل الإعلاني الصادم والبيان الختامي</span>
+<div class="font-mono-code text-label-tag text-on-surface-variant">FULL CANVAS // BRAND MANIFESTO SLAM // 60s CLOSE</div>
+</div>
+</div>
+<div class="font-mono-code text-label-tag bg-surface-container-lowest px-space-sm py-1 text-primary-container font-bold self-start sm:self-auto">
+                TIMECODE: 00:51 — 00:60
+              </div>
+</div>
+<!-- Scene Visual Direction -->
+<div class="bg-surface-container-low p-space-md mb-space-md">
+<div class="font-label-caps text-label-caps text-secondary-fixed uppercase mb-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+                توجيه الكاميرا والتكوين البصري (VISUAL BEAT)
+              </div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                تتلاشى المشاهد لتجتمع كل شخصيات الإعلان في لقطة واسعة سينمائية ينظرون فيها مباشرة إلى عدسة الكاميرا بنظرات واثقة وجريئة. تظهر الحروف الكبيرة للعلامة التجارية باللون الأخضر المشبع، تليها العبارة المركزية بخط عربي عريض ومصقول.
+              </p>
+</div>
+<!-- Audio & Dialogue Track -->
+<div class="bg-surface-container-lowest p-space-md space-y-space-md">
+<div class="flex items-start gap-space-md bg-surface-container-low p-space-sm">
+<div class="w-20 shrink-0 font-label-caps text-label-caps text-primary-container font-bold pt-1">صوت الراوي V.O:</div>
+<div class="font-body-lg text-body-lg text-on-surface font-semibold leading-relaxed">
+                  «ما قالولكش تحرم نفسك عشان تعيش بكرة؟ إحنا بنقولك: عيش النهاردة.. وخلي فلوسك تتعلم تكبر معاك.»
+                </div>
+</div>
+<!-- Slam Tagline -->
+<div class="p-space-lg bg-surface-container flex flex-col items-center justify-center text-center gap-space-xs shadow-md">
+<span class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase">
+                  الشعار الإعلاني الختامي (THE RADICAL SLOGAN)
+                </span>
+<div class="font-headline-lg text-headline-lg text-primary-container font-bold tracking-tight py-space-xs">
+                  «أمانك المالي.. حريتك مش سجنك»
+                </div>
+<div class="font-mono-code text-label-tag text-on-surface-variant">
+                  [FINTECH_PLATFORM] // حمل التطبيق الآن وابدأ عيش بكرامة شغفك
+                </div>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- RADICAL EDITING & LATERAL VARIATION CONTROLS (TABS/ENGINES) -->
+<div class="bg-surface-container-lowest p-space-lg shadow-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 bg-secondary-fixed"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              أدوات التحرير الجذري وبدائل التوجيه السينمائي
+            </h3>
+</div>
+<span class="font-mono-code text-label-tag text-on-surface-variant">ENGINE: NEURAL_BRANCH_SELECT</span>
+</div>
+<!-- Mode Selectors -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-xs bg-surface-container-low p-1 mb-space-md">
+<button class="p-space-sm text-right bg-surface-container text-primary-container font-label-caps text-label-caps transition-colors" id="tab-btn-alt-endings">
+            01 بدائل القفلات (2 TAKES)
+          </button>
+<button class="p-space-sm text-right hover:bg-surface-container text-on-surface-variant font-label-caps text-label-caps transition-colors" id="tab-btn-sentiment">
+            02 مقياس التأثير الجيلي
+          </button>
+<button class="p-space-sm text-right hover:bg-surface-container text-on-surface-variant font-label-caps text-label-caps transition-colors" id="tab-btn-directors">
+            03 رؤية المخرج (VISION)
+          </button>
+<button class="p-space-sm text-right hover:bg-surface-container text-on-surface-variant font-label-caps text-label-caps transition-colors" id="tab-btn-legal">
+            04 السلامة والامتثال المصرفي
+          </button>
+</div>
+<!-- Tab Content 01: Alternative Endings -->
+<div class="space-y-space-md" id="tab-content-alt">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Ending Option A -->
+<div class="bg-surface-container p-space-md flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-secondary-fixed font-bold">الخيار (أ): الختام الساخر الذكي (WITTY SHOCK)</span>
+<span class="font-mono-code text-label-tag text-on-surface-variant">TAKE_A</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+                  يظهر رجل مسن يرتدي بدلة بنكية قديمة ويحاول إغلاق خزنة حديدية عملاقة باليد، لكن شاباً يمر بجواره ويفتح قفل هاتفه بابتسامة سريعة في ثانية واحدة، فيلتفت المسن قائلاً بدهشة: «طب والقرش الأبيض؟» فيرد الشاب: «القرش اتعلم يشتغل بنفسه ياعمي».
+                </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-mono-code text-label-tag">
+<span class="text-on-surface-variant">نبرة الحوار: <strong class="text-secondary-fixed">كوميديا غير متوقعة</strong></span>
+<button class="text-primary-container hover:underline font-label-tag">تطبيق هذا الخيار</button>
+</div>
+</div>
+<!-- Ending Option B -->
+<div class="bg-surface-container p-space-md flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-primary-container font-bold">الخيار (ب): الختام الملحمي التمكيني (MANIFESTO ANTHEM)</span>
+<span class="font-mono-code text-label-tag text-on-surface-variant">TAKE_B</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+                  تتسارع الكاميرا نحو سماء مدينة عربية مضاءة، بينما ترتفع أصوات العشرات من رواد الأعمال والمبدعين الشباب معاً في كورال صوتي واحد قوي: «إحنا مش جيل التأجيل.. إحنا جيل اللي بيصنع مستقبله وهو عايش نهاره كاملاً».
+                </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-mono-code text-label-tag">
+<span class="text-on-surface-variant">نبرة الحوار: <strong class="text-primary-container">ملحمية وجدانية</strong></span>
+<button class="text-primary-container hover:underline font-label-tag">تطبيق هذا الخيار</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT/SECONDARY COLUMN (4 COLS): PRODUCTION BREAKDOWN & NARRATIVE INTELLIGENCE -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Card: Emotional Turning Point Meter -->
+<div class="bg-surface-container-lowest p-space-lg shadow-xl">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider">
+            منحنى التحول العاطفي // NARRATIVE ARC
+          </span>
+<span class="material-symbols-outlined text-primary-container text-[18px]">show_chart</span>
+</div>
+<div class="space-y-space-md">
+<!-- Timeline SVG Graph -->
+<div class="bg-surface-container p-space-sm">
+<svg class="w-full h-28 overflow-visible" viewbox="0 0 300 100">
+<path class="text-primary-container" d="M 10 80 Q 70 85 100 70 T 180 30 T 290 10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<circle class="text-error" cx="10" cy="80" fill="currentColor" r="4"></circle>
+<circle class="text-secondary-fixed" cx="100" cy="70" fill="currentColor" r="4"></circle>
+<circle class="text-primary-container" cx="180" cy="30" fill="currentColor" r="4"></circle>
+<circle class="text-primary-container" cx="290" cy="10" fill="currentColor" r="5"></circle>
+<!-- Labels in SVG -->
+<text class="text-[9px] fill-on-surface-variant font-mono-code" x="15" y="94">00s الذنب والخوف</text>
+<text class="text-[9px] fill-secondary-fixed font-mono-code" x="90" y="85">20s الصدمة والتمرد</text>
+<text class="text-[9px] fill-primary-container font-mono-code" x="190" y="24">60s التمكين المطلق</text>
+</svg>
+</div>
+<div class="space-y-space-xs font-mono-code text-label-tag">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<span class="text-on-surface-variant">نقطة الانطلاق (00:00):</span>
+<span class="text-error font-semibold">عقدة ذنب الصرف والتردد</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<span class="text-on-surface-variant">الشرارة المحررة (00:25):</span>
+<span class="text-secondary-fixed font-semibold">الاعتراف بقيمة الشغف اللحظي</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<span class="text-on-surface-variant">الاستقرار الإدراكي (00:60):</span>
+<span class="text-primary-container font-semibold">الأمان كأداة تحرر وتوسع</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card: Camera, Lighting & Sensory Spec -->
+<div class="bg-surface-container-lowest p-space-lg shadow-xl">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-wider">
+            المواصفات البصرية والحسية // SENSORY SPEC
+          </span>
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">camera</span>
+</div>
+<div class="space-y-space-sm font-body-sm text-body-sm">
+<div class="p-space-sm bg-surface-container">
+<div class="font-label-tag text-label-tag text-primary-container mb-0.5 font-mono-code">تدرج العدسات (LENS MATRIX):</div>
+<div class="text-on-surface">
+              الانتقال من عدسات Ultra-Wide 24mm ذات التشويه الخانق في مشهد البنك، إلى عدسات Anamorphic 50mm ذات العمق السينمائي والـ Flares الحية في مشاهد الشوارع.
+            </div>
+</div>
+<div class="p-space-sm bg-surface-container">
+<div class="font-label-tag text-label-tag text-secondary-fixed mb-0.5 font-mono-code">هندسة الإضاءة (LIGHTING PALETTE):</div>
+<div class="text-on-surface">
+              تباين متطرف: العالم القديم مضاء بـ 4000K فلورسنت باهت منعدم الحيوية، بينما العالم الجديد مضاء بمزيج الـ Neo-Noir المشبع بـ Lime-Green (#10F984) و Phosphor Cyan.
+            </div>
+</div>
+<div class="p-space-sm bg-surface-container">
+<div class="font-label-tag text-label-tag text-on-surface mb-0.5 font-mono-code">الهندسة الصوتية (SOUND DESIGN):</div>
+<div class="text-on-surface">
+              المؤثرات تبدأ بإيقاع صناعي مكتوم ثم تنفتح على ستيريو كامل مع طبلة إلكترونية عربية حية تعطي إحساساً بالفخر والانتصار.
+            </div>
+</div>
+</div>
+</div>
+<!-- Card: Target Audience Sentiment Simulation -->
+<div class="bg-surface-container-lowest p-space-lg shadow-xl">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider">
+            محاكاة الصدى النفسي لدى GEN-Z
+          </span>
+<span class="font-mono-code text-label-tag text-secondary-fixed">N=1,420 VIRTUAL NODES</span>
+</div>
+<div class="space-y-space-md">
+<div>
+<div class="flex justify-between font-mono-code text-label-tag mb-1">
+<span class="text-on-surface-variant">معدل التصديق ومقاومة النفاق الإعلاني:</span>
+<span class="text-primary-container font-bold">94.8%</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-primary-container h-2 w-[95%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-code text-label-tag mb-1">
+<span class="text-on-surface-variant">التحفيز لتجربة التطبيق فوراً (CTA PULL):</span>
+<span class="text-secondary-fixed font-bold">89.2%</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-secondary-fixed h-2 w-[89%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-code text-label-tag mb-1">
+<span class="text-on-surface-variant">مستوى كسر الملل والجمود المصرفي:</span>
+<span class="text-primary-fixed font-bold">98.5%</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-primary-fixed h-2 w-[98%]"></div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low font-mono-code text-label-tag text-on-surface-variant leading-relaxed">
+            &gt;&gt; استنتاج المحاكي: النص يتجنب فخ الوعظ الأخلاقي البنكي الكلاسيكي بنسبة 100%، ويضرب مباشرة في صميم قلق الجيل الشاب حيال فقدان سنوات حياتهم في التقشف المفرط.
+          </div>
+</div>
+</div>
+<!-- Production Checklist Deck -->
+<div class="bg-surface-container-lowest p-space-lg shadow-xl">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">
+            جاهزية غرفة الإنتاج الميداني
+          </span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">verified</span>
+</div>
+<div class="space-y-space-xs font-mono-code text-label-tag">
+<label class="flex items-center justify-between p-space-xs bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<span class="flex items-center gap-space-sm text-on-surface">
+<span class="w-3.5 h-3.5 bg-primary-container text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">✓</span>
+              لوحات القصة والمشاهد (Storyboards)
+            </span>
+<span class="text-primary-container">جاهز (4/4)</span>
+</label>
+<label class="flex items-center justify-between p-space-xs bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<span class="flex items-center gap-space-sm text-on-surface">
+<span class="w-3.5 h-3.5 bg-primary-container text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">✓</span>
+              كاستينغ الشخصيات الرئيسية (Gen-Z Voices)
+            </span>
+<span class="text-primary-container">محدد</span>
+</label>
+<label class="flex items-center justify-between p-space-xs bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<span class="flex items-center gap-space-sm text-on-surface">
+<span class="w-3.5 h-3.5 bg-primary-container text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">✓</span>
+              تصاريح التصوير (الرياض والقاهرة)
+            </span>
+<span class="text-secondary-fixed">قيد التأكيد</span>
+</label>
+<label class="flex items-center justify-between p-space-xs bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<span class="flex items-center gap-space-sm text-on-surface">
+<span class="w-3.5 h-3.5 bg-primary-container text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">✓</span>
+              الموسيقى التصويرية وتراخيص الصوت
+            </span>
+<span class="text-primary-container">مكتمل</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- FIXED/STICKY BOTTOM ACTIONS BAR -->
+<div class="sticky bottom-0 z-30 w-full bg-surface-container-lowest/95 backdrop-blur-md px-gutter-desktop py-space-md shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<!-- Left Navigation Back -->
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<button class="px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps transition-colors flex items-center gap-space-xs" onclick="history.back()">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        الرجوع للمفهوم // 03 CONCEPT
+      </button>
+<div class="hidden md:flex items-center gap-space-xs font-mono-code text-label-tag text-on-surface-variant">
+<span>الحالة:</span>
+<span class="text-primary-container font-semibold">جاهز للتنفيذ والتعميد النهائي</span>
+</div>
+</div>
+<!-- Right Primary Action Launchers -->
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end flex-wrap">
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-caps text-label-caps transition-colors flex items-center gap-space-xs" id="btn-export-pdf">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+        تصدير ملف السيناريو (PDF)
+      </button>
+<button class="px-space-lg py-space-sm bg-primary-container hover:bg-secondary-container text-on-primary-container font-label-caps text-label-caps font-bold transition-all shadow-md hover:-translate-x-0.5 flex items-center gap-space-xs" id="btn-deploy-production">
+<span class="material-symbols-outlined text-[18px]">movie_edit</span>
+        إرسال إلى غرفة المونتاج والإنتاج // DISPATCH TO SET
+      </button>
+</div>
+</div>
+<!-- INLINE CLIENT MICRO-INTERACTIONS -->
+<script>
+    // Copy Master Script functionality
+    const copyBtn = document.getElementById('btn-copy-script');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const scriptText = `إعلان: حكاية القرش الأبيض.. كذبة الستين سنة
+المشهد 01: [داخلي - بنك قديم رمادي] "ستين سنة وبيقولولك نفس الكلمة: استنى.. اجّل متعتك.. اضغط على نفسك النهاردة عشان ترتاح وإنت عندك ستين سنة..."
+المشهد 02: [خارجي - شوارع القاهرة والرياض ليل نيون] "أنت مش بتصرف عشان تبذّر.. أنت بتستثمر في شغفك..."
+المشهد 03: [داخلي - هاتف وتطبيق ذكي] "تطبيق مالي ما بيحاسبكش.. بيكبر معاك..."
+المشهد 04: [قفل إعلاني] "ما قالولكش تحرم نفسك عشان تعيش بكرة؟ إحنا بنقولك: عيش النهاردة.. وخلي فلوسك تتعلم تكبر معاك."
+الشعار: «أمانك المالي.. حريتك مش سجنك»`;
+        navigator.clipboard.writeText(scriptText).then(() => {
+          const originalHTML = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span> تم النسخ للحافظة';
+          copyBtn.classList.add('text-primary-container');
+          setTimeout(() => {
+            copyBtn.innerHTML = originalHTML;
+            copyBtn.classList.remove('text-primary-container');
+          }, 2500);
+        });
+      });
+    }
+
+    // Export PDF micro feedback
+    const pdfBtn = document.getElementById('btn-export-pdf');
+    if (pdfBtn) {
+      pdfBtn.addEventListener('click', () => {
+        const orig = pdfBtn.innerHTML;
+        pdfBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> جاري التجميع...';
+        setTimeout(() => {
+          pdfBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span> جرى التصدير بنجاح';
+          setTimeout(() => { pdfBtn.innerHTML = orig; }, 2000);
+        }, 800);
+      });
+    }
+
+    // Confrontation mode toggle feedback
+    const confrontBtn = document.getElementById('btn-mode-confront');
+    if (confrontBtn) {
+      confrontBtn.addEventListener('click', () => {
+        confrontBtn.classList.toggle('bg-primary-container');
+        confrontBtn.classList.toggle('text-on-primary-container');
+        confrontBtn.classList.toggle('text-primary-container');
+      });
+    }
+
+    // Dispatch to production trigger
+    const prodBtn = document.getElementById('btn-deploy-production');
+    if (prodBtn) {
+      prodBtn.addEventListener('click', () => {
+        alert('تم تعميد السيناريو بنجاح ونقله إلى غرفة الإنتاج واللوكيشن الميداني [STAGE_04_DISPATCHED]');
+      });
+    }
+  </script>
+</div></main></div></body></html>

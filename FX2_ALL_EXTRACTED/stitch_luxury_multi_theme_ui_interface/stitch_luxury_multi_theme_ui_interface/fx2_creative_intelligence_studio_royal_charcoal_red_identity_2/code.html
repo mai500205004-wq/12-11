@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TEXTFX — AI Creative Intelligence Platform</title>
+<!-- Google Fonts: Plus Jakarta Sans, IBM Plex Sans, Outfit -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#08080A',
+            baseblack: '#050507',
+            charcoal: '#0E0E11',
+            panel: '#121216',
+            cardbg: '#141418',
+            borderfx: '#222227',
+            fxred: {
+              DEFAULT: '#F23827',
+              neon: '#FF3B2F',
+              glow: 'rgba(255, 59, 47, 0.45)',
+              orange: '#FF7A18'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Tajawal"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: #08080A;
+      color: #E6E6EA;
+      font-family: 'Plus Jakarta Sans', 'Tajawal', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Cinematic Atmospheric Radial Glows */
+    .cinematic-glow {
+      background:
+        radial-gradient(1000px circle at 88% -8%, rgba(255, 59, 47, 0.12), transparent 60%),
+        radial-gradient(850px circle at 5% 105%, rgba(255, 122, 24, 0.08), transparent 55%),
+        radial-gradient(600px circle at 50% 30%, rgba(255, 59, 47, 0.03), transparent 75%),
+        #08080A;
+    }
+
+    /* Refined Animated Perimeter Filament (22-25% perimeter coverage, ultra-smooth) */
+    .filament-container {
+      position: relative;
+      border-radius: 20px;
+      background: #0E0E11;
+      border: 1px solid #222227;
+      box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        0 20px 50px -15px rgba(0, 0, 0, 0.85);
+      overflow: hidden;
+    }
+
+    .filament-border {
+      position: absolute;
+      inset: -1.5px;
+      border-radius: 21px;
+      pointer-events: none;
+      z-index: 10;
+      padding: 1.5px;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    .filament-border::before {
+      content: '';
+      position: absolute;
+      width: 260%;
+      height: 260%;
+      top: -80%;
+      left: -80%;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 285deg,
+        rgba(255, 122, 24, 0.45) 310deg,
+        rgba(255, 59, 47, 1) 338deg,
+        #FFF5F3 352deg,
+        rgba(255, 59, 47, 0.85) 359deg,
+        transparent 360deg
+      );
+      animation: rotateFilament 18s linear infinite;
+    }
+
+    @keyframes rotateFilament {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Subtle upper-right inner spot */
+    .spotlight-corner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 440px;
+      height: 220px;
+      background: radial-gradient(circle at 100% 0%, rgba(255, 59, 47, 0.16) 0%, rgba(255, 122, 24, 0.06) 40%, transparent 75%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Razor card styling */
+    .luxury-card {
+      background: #111115;
+      border: 1px solid #1E1E24;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .luxury-card:hover {
+      border-color: rgba(255, 59, 47, 0.4);
+      box-shadow: 0 14px 34px -10px rgba(255, 59, 47, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .luxury-pill {
+      background: #111115;
+      border: 1px solid #1F2026;
+      transition: all 0.2s ease;
+    }
+    .luxury-pill:hover {
+      border-color: rgba(255, 59, 47, 0.5);
+      background: #15151B;
+      color: #FFFFFF;
+    }
+
+    /* Red neon glow utilities */
+    .neon-text-gradient {
+      background: linear-gradient(100deg, #FF3B2F 0%, #FF7A18 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 35px rgba(255, 59, 47, 0.45);
+    }
+
+    .red-submit-glow {
+      box-shadow: 0 0 25px -2px rgba(242, 56, 39, 0.65);
+    }
+    .red-submit-glow:hover {
+      box-shadow: 0 0 35px 2px rgba(255, 59, 47, 0.85);
+    }
+
+    /* Custom thin scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #08080A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E1F25;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF3B2F;
+    }
+  </style>
+</head>
+<body class="cinematic-glow text-[#ECECEF] flex h-screen overflow-hidden antialiased">
+<!-- ========================================================================= -->
+<!-- 1. LEFT SLEEK NAVIGATION SIDEBAR (Luxury AI Studio)                      -->
+<!-- ========================================================================= -->
+<aside class="w-64 bg-[#09090C] border-r border-[#1B1B20] flex flex-col justify-between shrink-0 z-30 select-none">
+<div>
+<!-- Brand Header -->
+<div class="h-18 px-5 py-5 border-b border-[#18181D] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FF3B2F] to-[#D72B1F] flex items-center justify-center shadow-md shadow-[#FF3B2F]/30">
+<span class="font-black text-white text-xs tracking-wider font-mono">FX</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-extrabold text-sm tracking-wider text-white">TEXTFX</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF3B2F] shadow-[0_0_8px_#FF3B2F]"></span>
+</div>
+<p class="text-[9.5px] font-mono tracking-widest text-[#7B7B87] uppercase">AI Creative Platform</p>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="p-3 space-y-1 mt-2">
+<!-- Home (Active) -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[#141418] border-l-2 border-l-[#FF3B2F] border-y border-r border-transparent text-white font-medium text-xs shadow-sm transition-all group" href="#">
+<div class="flex items-center gap-3">
+<i class="w-4 h-4 text-[#FF3B2F]" data-lucide="home"></i>
+<span>Home</span>
+</div>
+<span class="text-[9px] font-mono text-[#FF3B2F]/80 px-1.5 py-0.5 rounded bg-[#FF3B2F]/10">CORE</span>
+</a>
+<!-- Create -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-medium text-[#8E8E9A] hover:text-white hover:bg-[#121216] transition-colors" href="#">
+<i class="w-4 h-4 text-[#757582] group-hover:text-white" data-lucide="sparkles"></i>
+<span>Create Studio</span>
+</a>
+<!-- Library -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-medium text-[#8E8E9A] hover:text-white hover:bg-[#121216] transition-colors" href="#">
+<i class="w-4 h-4 text-[#757582]" data-lucide="folder"></i>
+<span>Library &amp; Assets</span>
+</a>
+<!-- Templates -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-medium text-[#8E8E9A] hover:text-white hover:bg-[#121216] transition-colors" href="#">
+<i class="w-4 h-4 text-[#757582]" data-lucide="layout-grid"></i>
+<span>Templates</span>
+</a>
+<!-- Settings -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-medium text-[#8E8E9A] hover:text-white hover:bg-[#121216] transition-colors" href="#">
+<i class="w-4 h-4 text-[#757582]" data-lucide="settings"></i>
+<span>Settings</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Sidebar Section -->
+<div class="p-3.5 border-t border-[#18181D] space-y-3">
+<!-- Upgrade to Pro Card -->
+<div class="p-3.5 rounded-xl bg-gradient-to-b from-[#141419] to-[#0E0E12] border border-[#23232A] relative overflow-hidden group">
+<div class="absolute -right-6 -top-6 w-16 h-16 bg-[#FF3B2F]/10 rounded-full blur-xl group-hover:bg-[#FF3B2F]/20 transition-all"></div>
+<div class="flex items-center gap-2 mb-1.5">
+<i class="w-3.5 h-3.5 text-[#FF3B2F]" data-lucide="sparkle"></i>
+<span class="text-xs font-bold text-white">Upgrade to Pro</span>
+</div>
+<p class="text-[11px] text-[#868694] leading-relaxed mb-3">Unlock unlimited 4K generation, custom voices &amp; cinematic pipelines.</p>
+<button class="w-full py-1.5 px-3 rounded-lg bg-[#FF3B2F] hover:bg-[#D72B1F] text-white text-[11px] font-bold transition-all shadow-md shadow-[#FF3B2F]/25 flex items-center justify-center gap-1.5">
+<span>Upgrade Now</span>
+<i class="w-3 h-3" data-lucide="arrow-right"></i>
+</button>
+</div>
+<!-- System Online Telemetry -->
+<div class="flex items-center justify-between px-2 pt-1 text-[11px] font-mono text-[#787884]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34D399]"></span>
+<span class="text-[#A2A2AD] text-[10.5px]">System Online</span>
+</div>
+<span class="text-[10px] text-[#5A5A64]">v1.4.2</span>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- 2. MAIN WORKSPACE                                                        -->
+<!-- ========================================================================= -->
+<main class="flex-1 flex flex-col h-screen overflow-hidden bg-obsidian relative">
+<!-- TOP NAVIGATION BAR -->
+<header class="h-16 border-b border-[#18181E] bg-[#09090C]/85 backdrop-blur-md px-8 flex items-center justify-between shrink-0 z-20">
+<!-- Sub-tag Brand Pill -->
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded-md bg-[#16161C] border border-[#24242D] text-[10px] font-mono tracking-wider uppercase text-[#9C9CA9] font-medium">
+          AI CREATIVE PLATFORM
+        </span>
+<span class="text-xs text-[#52525E]">/</span>
+<span class="text-xs text-[#9E9EAA] font-medium">Workspace Active</span>
+</div>
+<!-- Right Header Controls -->
+<div class="flex items-center gap-3">
+<!-- Luxury Compact 4-World Identity Switcher (Requested) -->
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#131317] border border-[#25252E] hover:border-[#FF3B2F]/50 text-xs text-[#ECECEF] transition-all group" id="identity-btn" onclick="toggleIdentityMenu()">
+<span class="w-2 h-2 rounded-full bg-[#FF3B2F] shadow-[0_0_6px_#FF3B2F]"></span>
+<span class="font-medium text-[11.5px]" id="current-identity-label">السينمائي الملكي</span>
+<span class="text-[9.5px] font-mono px-1 py-0.5 rounded bg-white/[0.05] text-[#9A9AA6]">1 / 4</span>
+<i class="w-3.5 h-3.5 text-[#737380] group-hover:text-white transition-transform" data-lucide="chevron-down"></i>
+</button>
+<!-- Dropdown -->
+<div class="hidden absolute right-0 mt-2 w-72 rounded-xl bg-[#111116] border border-[#23232C] shadow-2xl p-2 z-50" id="identity-dropdown">
+<div class="px-2 py-1 text-[10px] font-mono uppercase tracking-wider text-[#696975] border-b border-white/[0.05] mb-1">
+              Creative Visual Realities
+            </div>
+<button class="w-full text-left px-2.5 py-2 rounded-lg text-xs hover:bg-[#181820] text-white flex items-center justify-between" onclick="setWorld('السينمائي الملكي', '1 / 4')">
+<span class="font-medium">01. السينمائي الملكي (Cinematic Red)</span>
+<span class="text-[9px] font-mono text-[#FF3B2F]">ACTIVE</span>
+</button>
+<button class="w-full text-left px-2.5 py-2 rounded-lg text-xs hover:bg-[#181820] text-[#9E9EAA] flex items-center justify-between" onclick="setWorld('المعماري الذهبي', '2 / 4')">
+<span>02. المعماري الذهبي (Atelier)</span>
+<span class="text-[9px] font-mono text-[#6A6A74]">SOON</span>
+</button>
+<button class="w-full text-left px-2.5 py-2 rounded-lg text-xs hover:bg-[#181820] text-[#9E9EAA] flex items-center justify-between" onclick="setWorld('النيورال السيبراني', '3 / 4')">
+<span>03. النيورال السيبراني (Matrix)</span>
+<span class="text-[9px] font-mono text-[#6A6A74]">SOON</span>
+</button>
+<button class="w-full text-left px-2.5 py-2 rounded-lg text-xs hover:bg-[#181820] text-[#9E9EAA] flex items-center justify-between" onclick="setWorld('الأدبي التحريري', '4 / 4')">
+<span>04. الأدبي التحريري (Monochrome)</span>
+<span class="text-[9px] font-mono text-[#6A6A74]">SOON</span>
+</button>
+</div>
+</div>
+<!-- Help Icon -->
+<button class="p-2 rounded-xl text-[#787885] hover:text-white hover:bg-[#141418] transition-colors" title="Documentation &amp; Help">
+<i class="w-4 h-4" data-lucide="help-circle"></i>
+</button>
+<!-- Theme / Light Icon -->
+<button class="p-2 rounded-xl text-[#787885] hover:text-white hover:bg-[#141418] transition-colors" title="Theme Mode">
+<i class="w-4 h-4" data-lucide="sun"></i>
+</button>
+<!-- Pro Badge Button -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-[#FF3B2F]/15 to-[#FF7A18]/15 border border-[#FF3B2F]/30 text-xs font-semibold text-white hover:border-[#FF3B2F]/60 transition-all">
+<span>👑</span>
+<span class="text-[11px] tracking-wide">Pro</span>
+</button>
+<!-- User Profile Avatar with Subtle Red Ring -->
+<div class="w-8 h-8 rounded-full p-[1.5px] bg-gradient-to-tr from-[#FF3B2F] via-[#FF7A18]/50 to-[#22222A] cursor-pointer hover:scale-105 transition-transform">
+<div class="w-full h-full rounded-full bg-[#111116] flex items-center justify-center text-[11px] font-bold text-white">
+            FX
+          </div>
+</div>
+</div>
+</header>
+<!-- WORKSPACE CANVAS BODY -->
+<div class="flex-1 overflow-y-auto px-6 lg:px-12 py-8 space-y-10 relative">
+<!-- =================================================================== -->
+<!-- 3. HERO SECTION (Dramatic Luxury Minimal)                           -->
+<!-- =================================================================== -->
+<div class="max-w-4xl mx-auto text-center pt-4 pb-2 space-y-3">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-sans">
+          Turn Your Ideas Into <br/>
+<span class="neon-text-gradient">Stunning Visuals</span>
+</h1>
+<p class="text-[#898997] text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed pt-1">
+          Describe your idea. We'll bring it to life with the power of AI.
+        </p>
+<!-- Quick Action Pills Above Brief Box (Matching Ref Images 4 & 5) -->
+<div class="flex items-center justify-center gap-2.5 pt-4 flex-wrap">
+<button class="luxury-pill px-4 py-2 rounded-xl text-xs text-[#B5B5C0] flex items-center gap-2 group cursor-pointer" onclick="applyPreset('Text to Image')">
+<i class="w-3.5 h-3.5 text-[#FF3B2F] group-hover:scale-110 transition-transform" data-lucide="image"></i>
+<span class="font-medium">Text to Image</span>
+<span class="text-[10px] text-[#696976]">Visualize your ideas</span>
+</button>
+<button class="luxury-pill px-4 py-2 rounded-xl text-xs text-[#B5B5C0] flex items-center gap-2 group cursor-pointer" onclick="applyPreset('Text to Video')">
+<i class="w-3.5 h-3.5 text-[#FF7A18] group-hover:scale-110 transition-transform" data-lucide="video"></i>
+<span class="font-medium">Text to Video</span>
+<span class="text-[10px] text-[#696976]">Bring stories to life</span>
+</button>
+<button class="luxury-pill px-4 py-2 rounded-xl text-xs text-[#B5B5C0] flex items-center gap-2 group cursor-pointer" onclick="applyPreset('Image to Image')">
+<i class="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 transition-transform" data-lucide="sparkles"></i>
+<span class="font-medium">Image to Image</span>
+<span class="text-[10px] text-[#696976]">Reimagine, transform</span>
+</button>
+<button class="luxury-pill px-4 py-2 rounded-xl text-xs text-[#B5B5C0] flex items-center gap-2 group cursor-pointer" onclick="applyPreset('Style Transfer')">
+<i class="w-3.5 h-3.5 text-purple-400 group-hover:scale-110 transition-transform" data-lucide="palette"></i>
+<span class="font-medium">Style Transfer</span>
+<span class="text-[10px] text-[#696976]">Apply unique styles</span>
+</button>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- 4. THE LOCKED BRIEF BOX (Exact Reproduction of Images 4, 5, 6)     -->
+<!-- =================================================================== -->
+<div class="max-w-3xl mx-auto">
+<div class="filament-container relative" id="brief-box-card">
+<!-- Traveling Glowing Filament (22% Perimeter) -->
+<div class="filament-border" id="brief-filament"></div>
+<!-- Upper-Right Corner Spotlight -->
+<div class="spotlight-corner"></div>
+<!-- Interior Box Content -->
+<div class="relative z-10 p-6 flex flex-col justify-between min-h-[175px]">
+<!-- Textarea Area with Subtle Placeholder -->
+<div class="w-full">
+<textarea class="w-full bg-transparent text-white placeholder-[#5A5A66] text-base leading-relaxed focus:outline-none resize-none font-sans font-normal" id="main-prompt-input" placeholder="Describe your idea..." rows="3"></textarea>
+</div>
+<!-- Bottom Action Toolbar (Exact Controls from References) -->
+<div class="pt-4 border-t border-[#1C1C23] flex items-center justify-between flex-wrap gap-3 mt-2">
+<!-- Left Controls: Add (+) & Model Selector -->
+<div class="flex items-center gap-2">
+<!-- Plus Button -->
+<button class="w-8 h-8 rounded-lg bg-[#16161B] hover:bg-[#1E1E26] border border-[#24242D] text-[#8C8C9A] hover:text-white flex items-center justify-center transition-all" title="Attach image or reference">
+<i class="w-4 h-4" data-lucide="plus"></i>
+</button>
+<!-- Model Picker (Standard / Gemini 1.5 Pro) -->
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#16161B] hover:bg-[#1E1E26] border border-[#24242D] text-xs font-medium text-[#C8C8D4] transition-all" id="model-btn" onclick="toggleModelSelect()">
+<span id="active-model-name">Standard</span>
+<i class="w-3 h-3 text-[#7B7B88]" data-lucide="chevron-down"></i>
+</button>
+<div class="hidden absolute left-0 bottom-full mb-2 w-48 rounded-xl bg-[#131317] border border-[#24242D] shadow-xl p-1.5 z-40" id="model-select-dropdown">
+<button class="w-full text-left px-2.5 py-1.5 rounded-lg text-xs hover:bg-[#1C1C24] text-white flex items-center justify-between" onclick="pickModel('Standard')">
+<span>Standard</span>
+<i class="w-3.5 h-3.5 text-[#FF3B2F]" data-lucide="check"></i>
+</button>
+<button class="w-full text-left px-2.5 py-1.5 rounded-lg text-xs hover:bg-[#1C1C24] text-[#A2A2B0] flex items-center justify-between" onclick="pickModel('Gemini 1.5 Pro')">
+<span>Gemini 1.5 Pro</span>
+<span class="text-[9px] font-mono text-emerald-400">Ultra</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Controls: Tools, Plan, Voice & Signature Red Submit Button -->
+<div class="flex items-center gap-2.5">
+<!-- Select Tool / Settings Pill -->
+<button class="px-2.5 py-1.5 rounded-lg bg-[#16161B] hover:bg-[#1E1E26] border border-[#24242D] text-xs font-medium text-[#8C8C9A] hover:text-white transition-all flex items-center gap-1.5">
+<i class="w-3 h-3" data-lucide="sliders-horizontal"></i>
+<span>Tool</span>
+</button>
+<!-- Plan Toggle Pill -->
+<button class="px-2.5 py-1.5 rounded-lg bg-[#16161B] hover:bg-[#1E1E26] border border-[#24242D] text-xs font-medium text-[#8C8C9A] hover:text-white transition-all flex items-center gap-1.5">
+<i class="w-3 h-3" data-lucide="compass"></i>
+<span>Plan</span>
+</button>
+<!-- Voice / Mic Button -->
+<button class="w-8 h-8 rounded-lg bg-[#16161B] hover:bg-[#1E1E26] border border-[#24242D] text-[#8C8C9A] hover:text-white flex items-center justify-center transition-all" title="Voice dictation">
+<i class="w-3.5 h-3.5" data-lucide="mic"></i>
+</button>
+<!-- SIGNATURE RED CIRCLE SUBMIT BUTTON (Arrow Up / Generate) -->
+<button class="w-9 h-9 rounded-full bg-[#F23827] hover:bg-[#FF3B2F] active:scale-95 text-white flex items-center justify-center red-submit-glow transition-all cursor-pointer group" id="submit-generate-btn" onclick="triggerCinematicGeneration()" title="Generate Visual (Ctrl + Enter)">
+<i class="w-4 h-4 group-hover:-translate-y-0.5 transition-transform stroke-[2.5]" data-lucide="arrow-up"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub-prompt Inspiration Notice -->
+<p class="text-center text-xs text-[#6A6A76] mt-3 flex items-center justify-center gap-1.5 font-normal">
+<i class="w-3 h-3 text-[#FF3B2F]" data-lucide="sparkles"></i>
+<span>The best results start with a great brief.</span>
+</p>
+</div>
+<!-- =================================================================== -->
+<!-- 5. FEATURED TEMPLATES (Exact Grid from Reference Images 4 & 5)      -->
+<!-- =================================================================== -->
+<div class="max-w-5xl mx-auto space-y-4 pt-2">
+<!-- Header Row -->
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold text-white tracking-wide">Featured Templates</h2>
+<a class="text-xs text-[#8A8A96] hover:text-white flex items-center gap-1 transition-colors font-medium" href="#">
+<span>View all</span>
+<i class="w-3 h-3" data-lucide="arrow-right"></i>
+</a>
+</div>
+<!-- 4 Razor-sharp Luxury Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1: Image Generator -->
+<div class="luxury-card rounded-2xl p-5 flex flex-col justify-between h-[180px] group cursor-pointer">
+<div>
+<div class="w-9 h-9 rounded-xl bg-[#1C1C24] border border-[#272733] flex items-center justify-center mb-3 group-hover:border-[#FF3B2F]/40 transition-colors">
+<i class="w-4 h-4 text-[#FF3B2F]" data-lucide="image"></i>
+</div>
+<h3 class="text-xs font-bold text-white mb-1">Image Generator</h3>
+<p class="text-[11px] text-[#7A7A88] leading-relaxed">Create stunning images from your description</p>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-semibold text-[#8C8C9A] group-hover:text-white transition-colors pt-2">
+<span>Use Template</span>
+<i class="w-3 h-3 group-hover:translate-x-1 transition-transform" data-lucide="arrow-right"></i>
+</div>
+</div>
+<!-- Card 2: Video Generator -->
+<div class="luxury-card rounded-2xl p-5 flex flex-col justify-between h-[180px] group cursor-pointer">
+<div>
+<div class="w-9 h-9 rounded-xl bg-[#1C1C24] border border-[#272733] flex items-center justify-center mb-3 group-hover:border-[#FF7A18]/40 transition-colors">
+<i class="w-4 h-4 text-[#FF7A18]" data-lucide="video"></i>
+</div>
+<h3 class="text-xs font-bold text-white mb-1">Video Generator</h3>
+<p class="text-[11px] text-[#7A7A88] leading-relaxed">Turn your ideas into engaging videos</p>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-semibold text-[#8C8C9A] group-hover:text-white transition-colors pt-2">
+<span>Use Template</span>
+<i class="w-3 h-3 group-hover:translate-x-1 transition-transform" data-lucide="arrow-right"></i>
+</div>
+</div>
+<!-- Card 3: Style Transfer -->
+<div class="luxury-card rounded-2xl p-5 flex flex-col justify-between h-[180px] group cursor-pointer">
+<div>
+<div class="w-9 h-9 rounded-xl bg-[#1C1C24] border border-[#272733] flex items-center justify-center mb-3 group-hover:border-purple-500/40 transition-colors">
+<i class="w-4 h-4 text-purple-400" data-lucide="palette"></i>
+</div>
+<h3 class="text-xs font-bold text-white mb-1">Style Transfer</h3>
+<p class="text-[11px] text-[#7A7A88] leading-relaxed">Apply artistic styles to your images</p>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-semibold text-[#8C8C9A] group-hover:text-white transition-colors pt-2">
+<span>Use Template</span>
+<i class="w-3 h-3 group-hover:translate-x-1 transition-transform" data-lucide="arrow-right"></i>
+</div>
+</div>
+<!-- Card 4: Text to Image -->
+<div class="luxury-card rounded-2xl p-5 flex flex-col justify-between h-[180px] group cursor-pointer">
+<div>
+<div class="w-9 h-9 rounded-xl bg-[#1C1C24] border border-[#272733] flex items-center justify-center mb-3 group-hover:border-amber-500/40 transition-colors">
+<i class="w-4 h-4 text-amber-400" data-lucide="wand-2"></i>
+</div>
+<h3 class="text-xs font-bold text-white mb-1">Text to Image</h3>
+<p class="text-[11px] text-[#7A7A88] leading-relaxed">Convert text into visuals instantly</p>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-semibold text-[#8C8C9A] group-hover:text-white transition-colors pt-2">
+<span>Use Template</span>
+<i class="w-3 h-3 group-hover:translate-x-1 transition-transform" data-lucide="arrow-right"></i>
+</div>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- 6. BOTTOM BANNER STRIP (Featured Announcements)                    -->
+<!-- =================================================================== -->
+<div class="p-3.5 rounded-xl bg-[#0E0E12] border border-[#1E1E26] flex items-center justify-between flex-wrap gap-2 text-xs">
+<div class="flex items-center gap-2.5">
+<span class="w-6 h-6 rounded-lg bg-[#FF3B2F]/15 flex items-center justify-center text-[#FF3B2F]">
+<i class="w-3.5 h-3.5" data-lucide="flame"></i>
+</span>
+<span class="text-[#9999A6]">
+<strong class="text-white">New:</strong> Try our latest AI models for even more creative possibilities.
+            </span>
+</div>
+<a class="text-xs font-medium text-[#FF3B2F] hover:text-[#FF7A18] flex items-center gap-1 transition-colors" href="#">
+<span>Explore Now</span>
+<i class="w-3 h-3" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+<!-- Clean Minimal Footer Padding -->
+<div class="h-6"></div>
+</div>
+</main>
+<!-- ========================================================================= -->
+<!-- CLIENT LOGIC & INTERACTIONS                                               -->
+<!-- ========================================================================= -->
+<script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // 1. Identity Switcher Dropdown
+    function toggleIdentityMenu() {
+      const dd = document.getElementById('identity-dropdown');
+      dd.classList.toggle('hidden');
+    }
+
+    function setWorld(name, num) {
+      document.getElementById('current-identity-label').innerText = name;
+      document.getElementById('identity-dropdown').classList.add('hidden');
+    }
+
+    // 2. Model Selection Dropdown
+    function toggleModelSelect() {
+      const dd = document.getElementById('model-select-dropdown');
+      dd.classList.toggle('hidden');
+    }
+
+    function pickModel(name) {
+      document.getElementById('active-model-name').innerText = name;
+      document.getElementById('model-select-dropdown').classList.add('hidden');
+    }
+
+    // 3. Quick Action Pill Preset Handlers
+    function applyPreset(type) {
+      const input = document.getElementById('main-prompt-input');
+      if (type === 'Text to Image') {
+        input.value = "Cinematic aerial 8k shot of a futuristic cybernetic oasis in the desert at twilight, volumetric lighting, hyperdetailed.";
+      } else if (type === 'Text to Video') {
+        input.value = "Slow tracking camera dolly in on a luxury hypercar speeding silently across a neon-lit rain highway, 60fps.";
+      } else if (type === 'Image to Image') {
+        input.value = "Reimagine this architectural space with raw brutalist marble and glowing amber skylights, cinematic mood.";
+      } else if (type === 'Style Transfer') {
+        input.value = "Transform the visual style into Japanese Ukiyo-e woodblock print meets dark Blade Runner cyber-noir.";
+      }
+      input.focus();
+    }
+
+    // 4. Generation Pipeline Simulation
+    let isProcessing = false;
+    function triggerCinematicGeneration() {
+      if (isProcessing) return;
+      const input = document.getElementById('main-prompt-input');
+      const btn = document.getElementById('submit-generate-btn');
+      const filament = document.getElementById('brief-filament');
+
+      if (!input.value.trim()) {
+        input.placeholder = "Please enter an idea first...";
+        input.focus();
+        return;
+      }
+
+      isProcessing = true;
+      btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>`;
+      lucide.createIcons();
+
+      filament.style.filter = "drop-shadow(0 0 10px #FF3B2F)";
+
+      setTimeout(() => {
+        isProcessing = false;
+        btn.innerHTML = `<i data-lucide="check" class="w-4 h-4 text-white"></i>`;
+        filament.style.filter = "none";
+        lucide.createIcons();
+
+        setTimeout(() => {
+          btn.innerHTML = `<i data-lucide="arrow-up" class="w-4 h-4 group-hover:-translate-y-0.5 transition-transform stroke-[2.5]"></i>`;
+          lucide.createIcons();
+        }, 2200);
+      }, 1800);
+    }
+
+    // Shortcut: Ctrl + Enter / Cmd + Enter
+    document.getElementById('main-prompt-input').addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        triggerCinematicGeneration();
+      }
+    });
+
+    // Close Dropdowns on Click Outside
+    document.addEventListener('click', function(e) {
+      const idBtn = document.getElementById('identity-btn');
+      const idMenu = document.getElementById('identity-dropdown');
+      if (idMenu && idBtn && !idBtn.contains(e.target) && !idMenu.contains(e.target)) {
+        idMenu.classList.add('hidden');
+      }
+
+      const modelBtn = document.getElementById('model-btn');
+      const modelMenu = document.getElementById('model-select-dropdown');
+      if (modelMenu && modelBtn && !modelBtn.contains(e.target) && !modelMenu.contains(e.target)) {
+        modelMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</body></html>

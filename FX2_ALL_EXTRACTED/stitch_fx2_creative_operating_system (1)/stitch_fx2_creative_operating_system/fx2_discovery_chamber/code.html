@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#ffdbcf","on-surface-variant":"#e6bdb7","tertiary-container":"#92908d","on-error":"#690005","on-tertiary-fixed-variant":"#474744","background":"#121315","surface-tint":"#ffb4a8","surface-variant":"#343537","on-tertiary":"#31302e","on-primary-fixed-variant":"#930000","inverse-surface":"#e3e2e5","surface-container-highest":"#343537","on-primary-fixed":"#410000","secondary":"#ffb59a","primary":"#ffb4a8","inverse-on-surface":"#303033","on-surface":"#e3e2e5","on-secondary-fixed":"#380d00","primary-container":"#ff5541","primary-fixed-dim":"#ffb4a8","on-error-container":"#ffdad6","on-background":"#e3e2e5","surface-container-high":"#292a2c","on-secondary-container":"#fffbff","on-tertiary-fixed":"#1c1c19","on-primary":"#690000","error":"#ffb4ab","tertiary-fixed-dim":"#c9c6c2","tertiary-fixed":"#e5e2de","surface-container":"#1f2022","on-tertiary-container":"#2a2a27","surface-container-lowest":"#0d0e10","inverse-primary":"#bf0904","surface-bright":"#38393b","surface":"#121315","error-container":"#93000a","secondary-container":"#cd4700","surface-container-low":"#1b1c1e","outline-variant":"#5d403b","primary-fixed":"#ffdad4","surface-dim":"#121315","on-secondary-fixed-variant":"#802a00","outline":"#ad8882","on-secondary":"#5b1b00","secondary-fixed-dim":"#ffb59a","on-primary-container":"#5c0000","tertiary":"#c9c6c2"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.25rem","space-md":"1rem","margin":"2.5rem","space-xl":"2.5rem","margin-mobile":"1rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem"},"fontFamily":{"display-hero-mobile":["Syne"],"display-hero":["Syne"],"headline-lg":["Syne"],"headline-xl-mobile":["Syne"],"headline-xl":["Syne"],"lens-tag":["JetBrains Mono"],"body-lg":["Inter"],"headline-sm":["Syne"],"body-sm":["Inter"],"headline-md":["Syne"],"telemetry-code":["JetBrains Mono"],"label-caps":["JetBrains Mono"],"body-md":["Inter"]},"fontSize":{"display-hero-mobile":["40px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"800"}],"display-hero":["72px",{"lineHeight":"76px","letterSpacing":"-0.04em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"700"}],"lens-tag":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"telemetry-code":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl"><div class="h-24 w-full flex flex-col justify-between"><div class="h-14 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="FX2 Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WzqFdCgScox7yAibjRdxoZ5uoKqcr-P0zme2_9tEUc_8N1m3O_Fm1ff5m5Lpxdecp--GPKhcQRVghW6_whmYVEqEOMqmoE419hDcQlJ56YQ8u4GGeToF4k5ocfzHjrXu5M56xETfHxd5kYrK7Wfn22qEQubQB0N1YHzCG5wh8XbvkBDVCpxshJZaFWyougx-1BFvMQNpHuD99aMKMmFm442Bh7JfW28THnJUVNGRnVwg"/><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps text-primary-container tracking-wider uppercase">FX2 // OS</span><span class="font-telemetry-code text-telemetry-code text-on-surface-variant">DR KAIF COFFEE // Launch Campaign (v2.4)</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-md font-telemetry-code text-telemetry-code text-on-surface-variant"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low"><span class="text-primary">LOC</span><span>AR / EN</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low"><span class="text-primary">CORE</span><span>Claude 3.7 / FX-Kernel</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low"><span class="text-primary">MEM</span><span>34 Nodes</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low"><span class="text-primary">RES</span><span>12 Evidence</span></div></div><button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest hover:text-on-surface transition-colors cursor-pointer"><span class="font-label-caps text-label-caps uppercase">Brief Anchor</span><span class="font-telemetry-code text-telemetry-code text-primary">DR KAIF COFFEE | Launch Campaign | Young Professionals</span><span class="material-symbols-outlined text-primary text-[14px]">arrow_drop_down</span></button><button class="text-on-surface-variant hover:text-on-surface transition-colors p-space-xs"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-10 w-full px-gutter bg-surface-container-low/60 flex items-center justify-between"><nav class="flex items-center gap-space-xs h-full" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a aria-current="page" class="px-space-md py-space-xs uppercase transition-colors flex items-center gap-space-xs bg-primary-container text-on-primary-container font-semibold" data-path="chamber-discovery" href="#"><span class="font-telemetry-code text-[10px] opacity-60">01</span>DISCOVERY (Chamber)</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs" data-path="arena-concepts" href="#"><span class="font-telemetry-code text-[10px] opacity-60">02</span>CONCEPTS (Arena)</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs" data-path="lab-evolution" href="#"><span class="font-telemetry-code text-[10px] opacity-60">03</span>EVOLUTION (Lab)</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs" data-path="room-production" href="#"><span class="font-telemetry-code text-[10px] opacity-60">04</span>PRODUCTION (Room)</a></nav><div class="hidden md:flex items-center gap-space-md font-telemetry-code text-[11px] text-on-surface-variant"><span class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>SYSTEM SYNCHRONIZED</span><span class="font-lens-tag text-lens-tag text-on-surface-variant">// METABOLISM PIPELINE ACTIVE</span></div></div></div></header><main class="w-full pt-24 min-h-screen bg-surface-container-lowest text-on-surface"><div class="flex flex-col w-full">
+<!-- Discovery Chamber Master Surface -->
+<div class="w-full px-gutter py-space-xl relative overflow-hidden bg-surface-container-lowest">
+<!-- Ambient Optical Glow & Vector Mesh -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[980px] h-[520px] bg-primary-container/10 blur-[130px] rounded-full pointer-events-none"></div>
+<div class="absolute bottom-10 right-0 w-[480px] h-[480px] bg-secondary-container/10 blur-[140px] rounded-full pointer-events-none"></div>
+<!-- Chamber Telemetry HUD Bar -->
+<div class="w-full flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-high rounded text-primary-container font-label-caps text-label-caps tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+          PHASE 01 // DISCOVERY CHAMBER
+        </span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant/70">SPEC: COGNITIVE DEEP HARVEST</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span class="text-on-surface-variant/50">COGNITIVE COMPRESSION:</span>
+<span class="text-secondary font-semibold">94.2%</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container text-on-surface rounded font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[13px] text-primary">sensors</span>
+<span>STATE: ACTIVE HARVEST</span>
+</div>
+</div>
+</div>
+<!-- Monumental Editorial Core (Hero Statement) -->
+<section class="relative w-full my-space-lg">
+<div class="max-w-6xl mx-auto flex flex-col">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="font-lens-tag text-lens-tag text-primary tracking-widest uppercase">// SYNTHESIS NODE 01: CREATIVE BREAKTHROUGH</span>
+<div class="h-px flex-1 bg-gradient-to-r from-outline-variant/60 to-transparent"></div>
+</div>
+<!-- Monumental Text Block -->
+<h1 class="font-headline-xl text-headline-xl md:text-[54px] md:leading-[1.08] text-on-surface tracking-tight font-extrabold max-w-5xl">
+          “People don’t drink coffee for energy. <br class="hidden sm:block"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-fixed to-primary-container">
+            They drink it to regain control.”
+          </span>
+</h1>
+<!-- Emotional Truth Plaque -->
+<div class="mt-space-lg relative p-space-lg bg-surface-container-low rounded-lg shadow-xl overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-container via-secondary to-primary-container"></div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="max-w-3xl">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Sub-Surface Emotional Truth</span>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/60">#ET-092-ALPHA</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant text-balance leading-relaxed">
+                The modern professional feels held hostage by chaos, notifications, and borrowed schedules. The 8:30 AM espresso isn’t caffeine intake—it is their only non-negotiable territory of self-sovereignty.
+              </p>
+</div>
+<div class="flex flex-col sm:items-end gap-space-xs font-telemetry-code text-telemetry-code shrink-0">
+<span class="text-on-surface-variant/60">TENSION VECTOR</span>
+<span class="px-space-sm py-1 bg-surface-container-highest text-primary-fixed rounded text-center">SURRENDER ⇄ RESISTANCE</span>
+<span class="text-[10px] text-primary/80">RESONANCE METRIC: 98.7%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Cognitive Apparatus: The 5 Lenses Grid / Orbital Assembly -->
+<section class="w-full mt-space-xl pt-space-md">
+<div class="flex flex-col lg:flex-row items-start justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">adjust</span>
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider">APPARATUS: DISCOVERY RING</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-0.5">The Five Lenses of Cognitive Refraction</h2>
+</div>
+<!-- Mode Switcher -->
+<div class="flex items-center bg-surface-container-low p-1 rounded font-telemetry-code text-telemetry-code">
+<button class="px-space-md py-1 bg-surface-container-high text-on-surface rounded flex items-center gap-1 transition-all" id="viewRadialBtn">
+<span class="material-symbols-outlined text-[14px]">stream</span> Radial Deck
+          </button>
+<button class="px-space-md py-1 text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1" id="viewMatrixBtn">
+<span class="material-symbols-outlined text-[14px]">grid_view</span> Spec Grid
+          </button>
+</div>
+</div>
+<!-- Orbital / Interactive Dial Section -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left: Dial Apparatus Control Track (5 Nodes) -->
+<div class="xl:col-span-5 flex flex-col gap-space-sm">
+<!-- Lens 01: Provocation (Default Active) -->
+<div class="lens-trigger cursor-pointer p-space-md rounded-lg bg-surface-container relative transition-all duration-200 group" data-lens-id="1">
+<div class="lens-indicator absolute left-0 top-0 bottom-0 w-1 bg-primary-container rounded-l"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-primary-container tracking-wider">LENS 01 // PROVOCATION</span>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/70">HARVEST ANGLE: RADICAL</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-fixed transition-colors">
+              “What if coffee is an antidote to productivity rather than its catalyst?”
+            </p>
+<div class="mt-space-sm flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant/60">
+<span>SHIFT: FUEL ➔ SANCTUARY</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</div>
+<!-- Lens 02: Analogy -->
+<div class="lens-trigger cursor-pointer p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container relative transition-all duration-200 group" data-lens-id="2">
+<div class="lens-indicator hidden absolute left-0 top-0 bottom-0 w-1 bg-primary-container rounded-l"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant/80 tracking-wider">LENS 02 // ANALOGY</span>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/50">CYBERNETIC COUPLING</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+              “Coffee as personal firewall / tactical noise cancellation for the mind.”
+            </p>
+<div class="mt-space-sm flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant/40">
+<span>ANALOG: CYBERNETIC FORTRESS</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Lens 03: Random Collision -->
+<div class="lens-trigger cursor-pointer p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container relative transition-all duration-200 group" data-lens-id="3">
+<div class="lens-indicator hidden absolute left-0 top-0 bottom-0 w-1 bg-primary-container rounded-l"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant/80 tracking-wider">LENS 03 // RANDOM COLLISION</span>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/50">TACTILE CROSSOVER</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+              “Metabolic ritual meets brutalist architecture: The tactile density of ritual.”
+            </p>
+<div class="mt-space-sm flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant/40">
+<span>COLLISION: CONCRETE &amp; ESPRESSO CREMA</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Lens 04: Inversion -->
+<div class="lens-trigger cursor-pointer p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container relative transition-all duration-200 group" data-lens-id="4">
+<div class="lens-indicator hidden absolute left-0 top-0 bottom-0 w-1 bg-primary-container rounded-l"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant/80 tracking-wider">LENS 04 // OPPOSITE / INVERSION</span>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/50">VELOCITY REVERSAL</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+              “Anti-Hustle: The sacred pause that paralyzes toxic acceleration.”
+            </p>
+<div class="mt-space-sm flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant/40">
+<span>VECTOR: STATIC REVOLUTION</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Lens 05: Constraint -->
+<div class="lens-trigger cursor-pointer p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container relative transition-all duration-200 group" data-lens-id="5">
+<div class="lens-indicator hidden absolute left-0 top-0 bottom-0 w-1 bg-primary-container rounded-l"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant/80 tracking-wider">LENS 05 // RADICAL CONSTRAINT</span>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/50">SEMIOTIC REDUCTION</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+              “Zero words on packaging: Only raw intensity numbers and brewing duration.”
+            </p>
+<div class="mt-space-sm flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant/40">
+<span>OUTPUT: BRUTALIST INDEX PACKAGING</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Right: Expanded Cognitive Inspection Drawer -->
+<div class="xl:col-span-7 bg-surface-container p-space-lg rounded-xl relative shadow-2xl overflow-hidden min-h-[560px] flex flex-col justify-between">
+<div class="absolute -right-20 -top-20 w-72 h-72 bg-primary-container/10 blur-[100px] pointer-events-none"></div>
+<div>
+<!-- Header for Selected Lens -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 bg-primary-container/20 text-primary-container font-label-caps text-label-caps rounded" id="activeLensPill">
+                  ACTIVE LENS: 01 // PROVOCATION
+                </span>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/70">HARVEST MATURITY: OPTIMAL</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-caps text-[10px] rounded transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">bookmark_add</span> PIN TO ARENA
+                </button>
+<button class="px-space-sm py-1 bg-primary-container hover:bg-secondary-container text-on-primary-container font-label-caps text-[10px] font-bold rounded transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">bolt</span> FORWARD TO LAB
+                </button>
+</div>
+</div>
+<div class="mt-space-md">
+<h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" id="drawerHeadline">
+                “What if coffee is an antidote to productivity rather than its catalyst?”
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs" id="drawerSummary">
+                An intentional disruption of the Silicon Valley ‘fuel for output’ narrative. Instead of promising an extra two hours of spreadsheet throughput, DR KAIF becomes the deliberate wall that stops the office treadmill cold.
+              </p>
+</div>
+<!-- Deep Refraction Matrix (4 Pillars) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-lg">
+<!-- Block 1: Opportunity Matrix -->
+<div class="p-space-md bg-surface-container-low rounded-lg relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-primary mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">grid_4x4</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Opportunity Matrix</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="matrixOpportunity">
+                  High white-space against generic ‘hustle fuel’ RTD brands. Positions DR KAIF in high-end lifestyle &amp; executive recovery rituals instead of mid-day crash desperation.
+                </p>
+<div class="mt-space-sm pt-space-xs flex justify-between font-telemetry-code text-[10px] text-on-surface-variant/60 border-t border-outline-variant/20">
+<span>MARKET PENETRATION</span>
+<span class="text-primary-fixed">TIER 1 (METROPOLITAN)</span>
+</div>
+</div>
+<!-- Block 2: The Underlying Paradox -->
+<div class="p-space-md bg-surface-container-low rounded-lg relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">The Underlying Paradox</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="matrixParadox">
+                  Drinking a central nervous system stimulant in order to find existential stillness. The chemistry accelerates pulse while the psychology anchors sovereignty.
+                </p>
+<div class="mt-space-sm pt-space-xs flex justify-between font-telemetry-code text-[10px] text-on-surface-variant/60 border-t border-outline-variant/20">
+<span>TENSION INDEX</span>
+<span class="text-secondary-fixed">HIGH COGNITIVE DIVERGENCE</span>
+</div>
+</div>
+<!-- Block 3: Creative Metaphor -->
+<div class="p-space-md bg-surface-container-low rounded-lg relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-on-surface-variant mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">flare</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Creative Metaphor</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="matrixMetaphor">
+                  The ‘Blast Door’ that closes behind you. Dark liquid poured into a glass acting as a physical reset barrier between reactive chaos and conscious action.
+                </p>
+<div class="mt-space-sm pt-space-xs flex justify-between font-telemetry-code text-[10px] text-on-surface-variant/60 border-t border-outline-variant/20">
+<span>TACTILE WEIGHT</span>
+<span class="text-on-surface">HEAVY OBSIDIAN RESIN</span>
+</div>
+</div>
+<!-- Block 4: Unexpected Cultural Angle -->
+<div class="p-space-md bg-surface-container-low rounded-lg relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-primary mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Unexpected Cultural Angle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="matrixAngle">
+                  Modern corporate calendar fatigue has turned meetings into hostage situations. The coffee break is no longer social gossip—it is an unsanctioned strike against sync culture.
+                </p>
+<div class="mt-space-sm pt-space-xs flex justify-between font-telemetry-code text-[10px] text-on-surface-variant/60 border-t border-outline-variant/20">
+<span>BEHAVIORAL LOCUS</span>
+<span class="text-primary-fixed">DESK-DETACHMENT PROTOCOL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Visual Vignette inside Drawer -->
+<div class="mt-space-lg pt-space-sm flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-lowest/80 p-space-md rounded-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded overflow-hidden relative shrink-0">
+<img class="w-full h-full object-cover" data-alt="A dramatic cinematic close up of rich dark espresso liquid streaming into a heavy brutalist matte black stone cup against deep obsidian background, sharp volumetric rim lighting with vivid crimson highlights, editorial advertising aesthetic for luxury coffee brand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClCiQY-mqx1PVJKP1U5nJ71BtrnSYwXGpCLLo7Zaa5J0W6ajCCOwnwRoH71-sXNH2gOqKB5D_qUUHCFNnedm1LFSzhgB2xYQghCL2n-gUxvzQCRQ9ebutOR4NS1orq7130Yp1k1UYCerpKmKFTBhrKNj2xTDLhJis_5e2ikmlGkwcDUbL_xLUb2PpUkspsmHksHLcmEwR3UsYhBfScFoAO8CvczL-oMbvHj8oMxyE7"/>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-primary uppercase">VISUAL GENOME HARVEST</div>
+<div class="font-body-sm text-body-sm text-on-surface">Architectural ritual glassware + Zero-motion stillness photography</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/60">CANNES LIONS ARCHIVE SIMILARITY:</span>
+<span class="font-telemetry-code text-[11px] text-primary font-bold">0.14 (HIGH ORIGINALITY)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Supporting Intelligence Panels: Split Tactical Workbench -->
+<section class="w-full mt-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Floating Dock: Insight Evidence Browser (5 Cols) -->
+<div class="lg:col-span-6 bg-surface-container-low p-space-lg rounded-xl relative shadow-lg flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">travel_explore</span>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">INSIGHT EVIDENCE REPOSITORY</span>
+</div>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/60">NODE ID // EV-B34</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Empirical validation culled from browser research, biological research data, and digital ethnography.
+        </p>
+<!-- Evidence Items Accordion / Stack -->
+<div class="flex flex-col gap-space-sm flex-1">
+<!-- Evidence 1 -->
+<div class="p-space-md bg-surface-container rounded-lg transition-colors hover:bg-surface-container-high">
+<div class="flex items-center justify-between font-telemetry-code text-[11px] text-secondary mb-1">
+<span>[EVID:01 // BIO-METRICS]</span>
+<span>OCTOBER 2024</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Caffeine Kinetics &amp; Stress Gating Study</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 mt-1">
+              Adenosine receptor binding in high-cortisol states triggers a psychological "boundary illusion." Subjects reported a 42% subjective drop in ambient stress prior to physiological metabolic uptake.
+            </p>
+<div class="mt-space-xs flex items-center gap-space-xs text-primary font-telemetry-code text-[10px]">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+<span>NEURO-COGNITION RESEARCH VAULT // CONFIDENCE 99.1%</span>
+</div>
+</div>
+<!-- Evidence 2 -->
+<div class="p-space-md bg-surface-container rounded-lg transition-colors hover:bg-surface-container-high">
+<div class="flex items-center justify-between font-telemetry-code text-[11px] text-primary mb-1">
+<span>[EVID:02 // CROWD ETHNOGRAPHY]</span>
+<span>420K DATA POINTS</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Reddit Sentiment Cluster: r/workreform &amp; r/espresso</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 mt-1">
+              The phrase "my morning coffee is the only 15 minutes they can't take from me" appeared in over 1,200 variations across corporate professional sub-communities.
+            </p>
+<div class="mt-space-xs flex items-center gap-space-xs text-on-surface-variant/70 font-telemetry-code text-[10px]">
+<span class="material-symbols-outlined text-[12px]">forum</span>
+<span>SYNTACTIC RECURRENCE: "SOVEREIGNTY" "WALL" "SACRED"</span>
+</div>
+</div>
+<!-- Evidence 3 with Visual Artifact Thumbnail -->
+<div class="p-space-md bg-surface-container rounded-lg transition-colors hover:bg-surface-container-high flex flex-col sm:flex-row gap-space-md items-start">
+<div class="w-full sm:w-28 h-20 rounded bg-surface-container-lowest shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="High contrast monochromatic candid documentary photography of a lone professional standing by a skyscraper window at sunrise holding a heavy dark ceramic coffee cup, deep atmospheric shadows, subtle red interior accent reflection, architectural corporate isolation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Rm9b_uqYYplvxfZ9eDVSdW3En9OjSW_TPGqsDEXeA1wAH_SzZwcsGwmbluGNiexFyZQ3pSb65q3tKrK7TL-Hd0kLjkPdpxN6JgnxMfzZScDFAsnn7Xj6EwGZz5e7TcKhokyZof699MuFeUYFMl1irTRPcVm9jugUUpiAtsNs5Dn9QuvWi5Wuu87mrqGfIC1w-BxDoZSVV7QwLIWAaYx_XnSAOv5q-eIu2GwfT5ZC"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between font-telemetry-code text-[11px] text-secondary mb-1">
+<span>[EVID:03 // VIDEO LOG]</span>
+<span>RIYADH &amp; DUBAI FIELD</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Ethnographic Observation: The Desk Stare</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 mt-1">
+                Subjects deliberately refuse to open Slack until the last drop of coffee is consumed. The mug is a diplomatic shield against interruptions.
+              </p>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant/50">
+<span>SOURCE TELEMETRY STACK: 3/12 ACTIVE</span>
+<button class="text-primary hover:text-primary-fixed transition-colors flex items-center gap-1 font-label-caps text-label-caps">
+            EXPAND RAW SOURCES <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Right Floating Dock: Perspective Drawer - Dialectic Voices (6 Cols) -->
+<div class="lg:col-span-6 bg-surface-container-low p-space-lg rounded-xl relative shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">record_voice_over</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">DIALECTIC TRIAD: CONFLICT DEBATE</span>
+</div>
+<div class="flex items-center gap-space-xs font-telemetry-code text-[11px] text-primary-container">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>SYNAPSE ACTIVE</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Three adversarial personas stress-testing the cognitive validity of this breakthrough before arena pitch serialization.
+          </p>
+<!-- The 3 Dialectic Debaters -->
+<div class="flex flex-col gap-space-md">
+<!-- Voice 1: The Rebel Creative -->
+<div class="p-space-md bg-surface-container rounded-lg border-l-2 border-primary-container relative">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">The Rebel Creative</span>
+<span class="font-label-caps text-[10px] px-1.5 py-0.5 bg-primary-container/20 text-primary-container rounded">DISRUPTIVE INSTINCT</span>
+</div>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/60">BIAS: +88% VISCERAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                “Forget explaining it. If we make an ad showing productivity graphs, we belong in the dumpster. Make the whole film a silent, brutal 45-second standoff where an executive refuses to answer a phone call while pouring the roast. Let the silence terrify the client until they buy it.”
+              </p>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant/50 font-telemetry-code text-[10px]">
+<span>RECOMMENDED TONALITY: COLD REVOLT</span>
+<span class="text-primary font-semibold">CAMPAIGN ANCHOR: "DO NOT DISTURB"</span>
+</div>
+</div>
+<!-- Voice 2: The Behavioral Strategist -->
+<div class="p-space-md bg-surface-container rounded-lg border-l-2 border-secondary relative">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">The Behavioral Strategist</span>
+<span class="font-label-caps text-[10px] px-1.5 py-0.5 bg-secondary/20 text-secondary rounded">DECISION ARCHITECTURE</span>
+</div>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/60">BIAS: +94% CAUSAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                “The habit loop isn’t ‘need stimulant ➔ consume coffee’. It’s ‘feel overwhelm ➔ buy physical autonomy’. If DR KAIF positions itself as the literal gateway habit to regaining cognitive bandwidth, we capture the morning routine forever. Frame the product as an unbreachable time block.”
+              </p>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant/50 font-telemetry-code text-[10px]">
+<span>KEY FRICTION POINT: PRICE ELASTICITY</span>
+<span class="text-secondary font-semibold">VALUE MULTIPLIER: "TIME PURCHASE"</span>
+</div>
+</div>
+<!-- Voice 3: The Cultural Anthropologist -->
+<div class="p-space-md bg-surface-container rounded-lg border-l-2 border-outline relative">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">The Cultural Anthropologist</span>
+<span class="font-label-caps text-[10px] px-1.5 py-0.5 bg-surface-container-highest text-on-surface-variant rounded">SACRED MYTHOLOGY</span>
+</div>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant/60">BIAS: +91% MYTHIC</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                “In ancient Arabian coffee rituals, the pour was hospitality, boundary, and deliberate truce. We are resurrecting that ancestral authority in a world drained by ephemeral Slack notifications. It’s not a beverage; it’s a secular prayer.”
+              </p>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant/50 font-telemetry-code text-[10px]">
+<span>ORIGIN ANCHOR: ARABIC HOSPITALITY PROTOCOL</span>
+<span class="text-on-surface font-semibold">SEMANTIC CHARGE: "SACRED PAUSE"</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Consensus Barometer -->
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">handshake</span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">DIALECTIC CONSENSUS: 96.4% UNANIMOUS</span>
+</div>
+<button class="px-space-md py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-caps text-label-caps rounded transition-colors flex items-center gap-1 w-full sm:w-auto justify-center">
+<span class="material-symbols-outlined text-[14px]">tune</span> MODULATE PERSPECTIVE WEIGHTS
+          </button>
+</div>
+</div>
+</section>
+<!-- Bottom Action Console Bar -->
+<div class="mt-space-xl p-space-md bg-surface-container rounded-xl flex flex-col md:flex-row items-center justify-between gap-space-md shadow-2xl">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-primary-container tracking-wider uppercase">SYNTHESIS STATUS // CHAMBER TO ARENA PIPELINE</div>
+<div class="font-telemetry-code text-telemetry-code text-on-surface-variant">5 Refractions Validated • 3 Evidence Streams Synthesized • 0 Contradictions Unresolved</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<button class="flex-1 md:flex-none px-space-md py-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-caps text-label-caps uppercase transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span> REFRACT DEEPER
+        </button>
+<button class="flex-1 md:flex-none px-space-lg py-space-sm bg-primary-container hover:bg-secondary-container text-on-primary-container font-label-caps text-label-caps font-bold uppercase rounded shadow-lg transition-colors flex items-center justify-center gap-2">
+<span>ADVANCE TO ARENA</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript for Dynamic Lens Switcher -->
+<script>
+    (function initDiscoveryChamber() {
+      const lensesData = {
+        "1": {
+          pill: "ACTIVE LENS: 01 // PROVOCATION",
+          headline: "“What if coffee is an antidote to productivity rather than its catalyst?”",
+          summary: "An intentional disruption of the Silicon Valley ‘fuel for output’ narrative. Instead of promising an extra two hours of spreadsheet throughput, DR KAIF becomes the deliberate wall that stops the office treadmill cold.",
+          opportunity: "High white-space against generic ‘hustle fuel’ RTD brands. Positions DR KAIF in high-end lifestyle & executive recovery rituals instead of mid-day crash desperation.",
+          paradox: "Drinking a central nervous system stimulant in order to find existential stillness. The chemistry accelerates pulse while the psychology anchors sovereignty.",
+          metaphor: "The ‘Blast Door’ that closes behind you. Dark liquid poured into a glass acting as a physical reset barrier between reactive chaos and conscious action.",
+          angle: "Modern corporate calendar fatigue has turned meetings into hostage situations. The coffee break is no longer social gossip—it is an unsanctioned strike against sync culture."
+        },
+        "2": {
+          pill: "ACTIVE LENS: 02 // ANALOGY",
+          headline: "“Coffee as personal firewall / tactical noise cancellation for the mind.”",
+          summary: "Translates high-technology defense mechanics into an organic daily ritual. The ritual establishes an impenetrable perimeter against extraneous corporate entropy.",
+          opportunity: "Captures tech-elite and creative leadership audiences who despise wellness cliché terms like 'mindfulness' but respect tactical systems architecture.",
+          paradox: "An ingestible beverage operating as an external sensory blocker. Inward biological consumption creating outward situational defense.",
+          metaphor: "Active Noise Cancellation (ANC) frequencies. The cup absorbs external decibels and micro-demands, returning zero-latency cognitive bandwidth.",
+          angle: "In an era of hyper-accessibility where notifications breach personal borders 24/7, physical objects that mandate non-interactivity gain sacred luxury status."
+        },
+        "3": {
+          pill: "ACTIVE LENS: 03 // RANDOM COLLISION",
+          headline: "“Metabolic ritual meets brutalist architecture: The tactile density of ritual.”",
+          summary: "Collides monolithic architectural mass with dark, volcanic coffee extraction. Grounding intangible anxiety with immense structural weight.",
+          opportunity: "Spatial and packaging design language radically departs from soft craft paper or neon energy cans, deploying cast raw aggregate and matte gunmetal surfaces.",
+          paradox: "Fluid, ephemeral, consumable liquid expressed through rigid, eternal, immovable architectural stone forms.",
+          metaphor: "The Cast Monolith. Pouring a DR KAIF espresso resembles hot asphalt hardening into monolithic structural concrete.",
+          angle: "Young urban professionals in Riyadh and global hubs surrounded by rapid skyline construction intuitively connect with raw architectural density as permanence."
+        },
+        "4": {
+          pill: "ACTIVE LENS: 04 // OPPOSITE / INVERSION",
+          headline: "“Anti-Hustle: The sacred pause that paralyzes toxic acceleration.”",
+          summary: "Inverting the entire industrial category premise. We do not sell speed; we sell the courage to halt velocity while everyone around you is sprinting toward burnout.",
+          opportunity: "Preempts category burnout as 'grindset' fatigue sweeps Gen Z and senior Millennials. Turns DR KAIF into a manifesto for conscious refusal.",
+          paradox: "To gain complete competitive acceleration tomorrow, you must exhibit total stillness today.",
+          metaphor: "The Neutral Gear. A high-revving racing engine shifted instantly into zero engagement, letting the vehicle cool while competitors overheat.",
+          angle: "The cultural shift from 'grind culture' pride to 'strategic detachment' as the ultimate flex of true power and status."
+        },
+        "5": {
+          pill: "ACTIVE LENS: 05 // RADICAL CONSTRAINT",
+          headline: "“Zero words on packaging: Only raw intensity numbers and brewing duration.”",
+          summary: "Stripping away all marketing adjectives, flavor wheels, and lifestyle copy. Presenting coffee purely through cold, clinical telemetric metrics.",
+          opportunity: "Extreme typographic and packaging distinction on shelf. Total rejection of pretentious artisanal coffee poetry in favor of cold telemetry.",
+          paradox: "Saying nothing communicates supreme confidence; withholding information creates irresistible magnetic curiosity.",
+          metaphor: "The Black Box Flight Recorder. Unmarked, hyper-precise, dense with functional parameters, devoid of decorative nonsense.",
+          angle: "Consumer cynicism toward corporate storytelling is at an all-time peak. Raw data indexing feels like radical, untainted transparency."
+        }
+      };
+
+      const triggers = document.querySelectorAll('.lens-trigger');
+      const activePill = document.getElementById('activeLensPill');
+      const headline = document.getElementById('drawerHeadline');
+      const summary = document.getElementById('drawerSummary');
+      const opportunity = document.getElementById('matrixOpportunity');
+      const paradox = document.getElementById('matrixParadox');
+      const metaphor = document.getElementById('matrixMetaphor');
+      const angle = document.getElementById('matrixAngle');
+
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+          const id = this.getAttribute('data-lens-id');
+          if (!lensesData[id]) return;
+
+          // Reset all triggers
+          triggers.forEach(t => {
+            t.classList.remove('bg-surface-container');
+            t.classList.add('bg-surface-container-low');
+            const ind = t.querySelector('.lens-indicator');
+            if (ind) ind.classList.add('hidden');
+            const h = t.querySelector('p');
+            if (h) {
+              h.classList.remove('text-on-surface');
+              h.classList.add('text-on-surface-variant');
+            }
+          });
+
+          // Activate clicked trigger
+          this.classList.remove('bg-surface-container-low');
+          this.classList.add('bg-surface-container');
+          const activeIndicator = this.querySelector('.lens-indicator');
+          if (activeIndicator) activeIndicator.classList.remove('hidden');
+          const activeH = this.querySelector('p');
+          if (activeH) {
+            activeH.classList.add('text-on-surface');
+            activeH.classList.remove('text-on-surface-variant');
+          }
+
+          // Populate Drawer Content
+          const data = lensesData[id];
+          if (activePill) activePill.textContent = data.pill;
+          if (headline) headline.textContent = data.headline;
+          if (summary) summary.textContent = data.summary;
+          if (opportunity) opportunity.textContent = data.opportunity;
+          if (paradox) paradox.textContent = data.paradox;
+          if (metaphor) metaphor.textContent = data.metaphor;
+          if (angle) angle.textContent = data.angle;
+        });
+      });
+
+      // Simple View Switcher micro-toggle
+      const viewRadialBtn = document.getElementById('viewRadialBtn');
+      const viewMatrixBtn = document.getElementById('viewMatrixBtn');
+      if (viewRadialBtn && viewMatrixBtn) {
+        viewRadialBtn.addEventListener('click', () => {
+          viewRadialBtn.classList.add('bg-surface-container-high', 'text-on-surface');
+          viewRadialBtn.classList.remove('text-on-surface-variant');
+          viewMatrixBtn.classList.remove('bg-surface-container-high', 'text-on-surface');
+          viewMatrixBtn.classList.add('text-on-surface-variant');
+        });
+        viewMatrixBtn.addEventListener('click', () => {
+          viewMatrixBtn.classList.add('bg-surface-container-high', 'text-on-surface');
+          viewMatrixBtn.classList.remove('text-on-surface-variant');
+          viewRadialBtn.classList.remove('bg-surface-container-high', 'text-on-surface');
+          viewRadialBtn.classList.add('text-on-surface-variant');
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-md px-gutter mt-auto"><div class="w-full flex flex-col md:flex-row items-center justify-between gap-space-sm font-telemetry-code text-telemetry-code text-on-surface-variant"><div class="flex items-center gap-space-md"><span>FX2 CREATIVE OPERATING SYSTEM [KERNEL v2.4]</span><span>STATUS // 200 OK</span></div><div class="flex items-center gap-space-md"><span class="hover:text-on-surface transition-colors cursor-pointer">METABOLISM REPOSITORIES</span><span class="hover:text-on-surface transition-colors cursor-pointer">SYSTEM TELEMETRY</span><span>© 2025 FX2 WORKSPACE</span></div></div></footer></body></html>

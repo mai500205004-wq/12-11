@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#15130f", "primary": "#ffb59c", "surface-container-low": "#1e1b17", "on-primary-fixed-variant": "#822700", "secondary-fixed-dim": "#ffb961", "surface-container-high": "#2c2a24", "on-secondary-fixed-variant": "#663e00", "on-tertiary-container": "#501600", "on-tertiary-fixed": "#380d00", "on-primary": "#5c1900", "error-container": "#93000a", "secondary-fixed": "#ffddb9", "on-primary-fixed": "#390c00", "on-tertiary": "#591d04", "on-background": "#e8e1d9", "inverse-on-surface": "#33302b", "secondary-container": "#e89300", "tertiary-container": "#d17a59", "surface-variant": "#38342f", "surface-dim": "#15130f", "primary-fixed-dim": "#ffb59c", "on-surface": "#e8e1d9", "surface-tint": "#ffb59c", "secondary": "#ffb961", "on-secondary-fixed": "#2b1700", "inverse-primary": "#a33e16", "surface-container": "#221f1a", "background": "#15130f", "on-secondary-container": "#563400", "surface-bright": "#3c3933", "outline-variant": "#57423b", "surface-container-highest": "#38342f", "outline": "#a68b83", "tertiary-fixed-dim": "#ffb59b", "inverse-surface": "#e8e1d9", "on-error-container": "#ffdad6", "on-error": "#690005", "tertiary-fixed": "#ffdbcf", "on-secondary": "#472a00", "primary-fixed": "#ffdbcf", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#763218", "on-surface-variant": "#dec0b7", "surface-container-lowest": "#100e0a", "on-primary-container": "#511500", "tertiary": "#ffb59b", "primary-container": "#e56e43" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.375rem", "space-xl": "3.5rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-md": "1.25rem", "space-sm": "0.75rem", "space-lg": "2rem", "margin": "2.5rem", "gutter": "1.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Noto Serif"], "label-md": ["Plus Jakarta Sans"], "headline-xl": ["Noto Serif"], "title-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Noto Serif"], "title-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Noto Serif"], "headline-xl-mobile": ["Noto Serif"], "display-lg": ["Noto Serif"], "headline-md": ["Noto Serif"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "fontWeight": "500" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md px-space-md"><div class="flex items-center gap-space-xs py-space-xs px-space-xs"><div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div><span class="font-label-md text-label-md tracking-wider text-secondary uppercase">LIVE STAGE BUS // إشراف المسرح</span></div><div class="space-y-space-xs"><div class="px-space-xs py-1"><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">المراحل الدرامية // DRAMA STAGES</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stage-brief" href="#"><span class="font-label-md text-label-md">01 البريف (THE HERO)</span><span class="material-symbols-outlined text-[18px]">theater_comedy</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stage-insight" href="#"><span class="font-label-md text-label-md">02 الاستبصار (INSIGHT)</span><span class="material-symbols-outlined text-[18px]">psychology</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stage-concept" href="#"><span class="font-label-md text-label-md">03 المفهوم (CONCEPT)</span><span class="material-symbols-outlined text-[18px]">lightbulb</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stage-script" href="#"><span class="font-label-md text-label-md">04 السيناريو (STAGE SCRIPT)</span><span class="material-symbols-outlined text-[18px]">description</span></a></nav></div><div class="space-y-space-xs pt-space-xs"><div class="px-space-xs py-1"><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">أدوات المسرح الإنساني // TOOLS</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="interactive-theater" href="#"><span class="font-label-md text-label-md">المسرح التفاعلي</span><span class="material-symbols-outlined text-[18px]">groups</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="voices-of-the-street" href="#"><span class="font-label-md text-label-md">أصوات الشارع والناس</span><span class="material-symbols-outlined text-[18px]">record_voice_over</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="memory-decisions-log" href="#"><span class="font-label-md text-label-md">سجل القرارات والذاكرة</span><span class="material-symbols-outlined text-[18px]">history_edu</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="research-laboratory" href="#"><span class="font-label-md text-label-md">مختبر الأبحاث</span><span class="material-symbols-outlined text-[18px]">science</span></a></nav></div></div><div class="px-space-md pt-space-sm flex flex-col gap-space-xs"><div class="p-space-xs rounded bg-surface-container flex flex-col gap-1"><span class="font-label-sm text-label-sm text-outline">TELEMETRY SIGNAL</span><span class="font-label-md text-label-md text-secondary">24ms • MAJLIS SYNC ACTIVE</span></div><div class="flex items-center justify-between text-on-surface-variant text-label-sm px-1"><span>FX2 CREATIVE INTELLIGENCE</span><span>v2.5</span></div></div></aside><div class="pr-72"><header class="fixed top-0 left-0 right-72 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight">FX2 HUMAN STAGE</span><span class="font-label-sm text-label-sm text-on-surface-variant">المسرح الإنساني والتجربة الاجتماعية</span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="bg-surface-container px-space-sm py-1 rounded flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface">سردية الغد 2026 // إنتاج رقم 04</span></div></div><div class="flex items-center gap-space-md"><nav class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded"><a class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="frontend-noir-2026" href="#">01 NOIR 2026</a><a class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="frontend-atelier-cinema" href="#">02 ATELIER CINEMA</a><a class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="frontend-radical-lab" href="#">03 RADICAL LAB</a><a class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="frontend-human-stage" href="#">04 HUMAN STAGE</a></nav><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded text-label-sm"><span class="material-symbols-outlined text-secondary text-[16px]">terminal</span><span class="font-label-sm text-label-sm text-secondary uppercase">GEMINI 2.5 PRO ACTIVE // LIVE STAGE BUS</span></div><div class="flex items-center rounded bg-surface-container-low p-0.5 text-label-sm font-label-sm"><button class="px-2 py-0.5 rounded bg-surface-container text-primary" type="button">RTL</button><button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface" type="button">LTR</button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Persistent Brief Anchor locked banner -->
+<div class="sticky top-16 z-30 bg-surface-container-lowest px-space-md py-space-sm shadow-md">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">مثبت البريف الدرامي // PERSISTENT BRIEF ANCHOR</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1 max-w-4xl leading-relaxed">
+        «إطلاق منصة تكنولوجية مصرفية جديدة في الشرق الأوسط تستهدف جيلاً ملّ من الوعود البنكية التقليدية والادخار الصارم. التوتر: الشباب يريدون العيش اليوم بشغف دون أن يُقال لهم "احرم نفسك عشان المستقبل". نريد فكرة حملة تصدم الناس بصدقها، وتجعل مفهوم الأمان المالي تحرراً ومتعة وليس سجناً أخلاقياً.»
+      </p>
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-0.5 rounded">
+<span class="material-symbols-outlined text-[15px] text-primary">lock</span>
+<span class="font-label-sm text-label-sm text-primary">الميثاق الإبداعي مغلق</span>
+</div>
+</div>
+</div>
+<div class="px-space-md md:px-margin py-space-lg space-y-space-xl max-w-7xl mx-auto w-full">
+<!-- Screen Header & Stage Coordinates -->
+<header class="relative space-y-space-sm pb-space-md">
+<div class="flex flex-wrap items-center gap-space-xs text-on-surface-variant">
+<span class="bg-surface-container-high px-space-sm py-0.5 rounded font-label-sm text-label-sm text-secondary">
+          المسرح الإنساني والتجربة الاجتماعية
+        </span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-primary">التجربة 03 من 03: صالون البيت العائلي واختبار الحضانة</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">BLUEPRINT CANON §2.4</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-end">
+<div class="lg:col-span-8 space-y-space-xs">
+<h1 class="font-headline-xl text-headline-xl text-primary font-medium tracking-tight">
+            «احكيها تاني — اختبار الأصالة وسؤال الطفل»
+          </h1>
+<p class="font-title-md text-title-md text-on-surface-variant max-w-3xl leading-relaxed">
+            "إذا لم تستطع شرح فكرتك المالية لطفل في السابعة دون أن تتلعثم بالمصطلحات البنكية الجافة.. فإن فكرتك مجرد تمويه تسويقي فارغ."
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-between gap-space-xs">
+<div class="bg-surface-container-low px-space-md py-space-xs rounded-xl flex items-center gap-space-sm shadow-sm w-full lg:w-auto">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings: 'FILL' 1;">child_care</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">حالة الاختبار الميداني</span>
+<span class="font-title-md text-title-md text-secondary">الطفل يحيى (7 سنوات) يصغي</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">THE CHILD &amp; RETELLING VITALITY TEST</span>
+</div>
+</div>
+</header>
+<!-- SECTION 1: The Dramatic Arena (صالون البيت الدافئ) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden shadow-lg flex flex-col justify-between">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="space-y-space-md relative z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">living</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">الحلبة الدرامية // DRAMATIC ARENA</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline bg-surface-container px-space-xs py-0.5 rounded">موقع الحدث: صالون دافئ • 19:45</span>
+</div>
+<div class="space-y-space-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">صالون العائلة وجلسة الامتحان العفوي</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              طاولة الشاي بالنعناع، كراسي خشبية قديمة تعبق برائحة خشب السنديان ودفء البيوت الحقيقية، صوت التلفزيون الخافت في الخلفية يعرض نشرة أخبار المساء، والطفل <strong class="text-primary font-semibold">يحيى (7 سنوات)</strong> جالس على السجادة ممسكاً بمكعباته الملونة، يرمق الكبار بأعين متيقظة وهم يتجادلون في قلق عن أسعار الغد وتأمين المستقبل.
+            </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-title-md text-title-md">قاعدة الأصالة الحتمية (CORE RULE OF AUTHENTICITY)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              «اختبار انتقال الفكرة بين الألسن: هل تعيش الفكرة حين يعيد روايتها الطفل في الحضانة؟ إن سقطت الفكرة بين فكي الشرح التقني ومصطلحات خبراء الاقتصاد، ماتت قبل أن تلمس الشارع.»
+            </p>
+</div>
+</div>
+<div class="pt-space-md grid grid-cols-3 gap-space-xs relative z-10">
+<div class="bg-surface-container-high/60 p-space-xs rounded">
+<span class="font-label-sm text-label-sm text-outline block">مستوى التوتر الدرامي</span>
+<span class="font-title-md text-title-md text-primary">78% صمت عائلي</span>
+</div>
+<div class="bg-surface-container-high/60 p-space-xs rounded">
+<span class="font-label-sm text-label-sm text-outline block">زاوية الكاميرا</span>
+<span class="font-title-md text-title-md text-secondary">مستوى عين الطفل</span>
+</div>
+<div class="bg-surface-container-high/60 p-space-xs rounded">
+<span class="font-label-sm text-label-sm text-outline block">الصوت المحيطي</span>
+<span class="font-title-md text-title-md text-on-surface">ملعقة شاي وساعة حائط</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Visual Documentary Still Card -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-lg flex-1 flex flex-col">
+<div class="relative h-64 w-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A warm cinematic documentary photograph of an Egyptian family living room at dusk with tungsten lamp light, an antique wooden table with tea glasses, an elderly grandfather with prayer beads in an armchair, and a curious seven-year-old boy sitting on a patterned rug playing with colorful wooden building blocks looking upward with inquisitive eyes. Earthy terracotta and deep amber tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmWHMTzBbZCfaVdB64kNA9Fy8330zQeYmCKeyv8eOZorS-s2Y5Ilz7KYK9wSmL06ZY0YF50iK1dQjBauUfm8F-iwHwCQ3F11lOqvCcGk6GVCcGQWtCP7rLfXkPaSR_uITm8ddIWAe4O1WoN2652QXPGMA0pU1vVzRfcI5W2HTfnKjxRbCmyVrKImzMvtBnvEbrGT_399suRC7dnY4Nrlx37deVbwkvlr0ZMwpckxDd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<div class="absolute bottom-space-sm right-space-sm left-space-sm flex items-center justify-between">
+<span class="bg-surface-container-lowest/80 px-space-xs py-0.5 rounded font-label-sm text-label-sm text-primary">لقطة صالون البيت — مشهد 03</span>
+<span class="bg-surface-container-lowest/80 px-space-xs py-0.5 rounded font-label-sm text-label-sm text-secondary">35mm TUNGSTEN 3200K</span>
+</div>
+</div>
+<div class="p-space-md space-y-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase">المفارقة النفسية المسرحية</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              الطفل لا يملك حساباً بنكياً، لكنه يملك حساً رادارياً لا يخطئ في التقاط الخوف المتنكر في زي الحكمة. سؤاله البسيط يعرّي نصف قرن من التلقين المالي الموروث.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: The "Why?" Silence Meter & The Authenticity Compass -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block">قياس نبض الصدق // METRICS OF TRUTH</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">مؤشر صمت ما بعد «ليه؟» وبوصلة المصطلحات الزائفة</h2>
+</div>
+<span class="font-label-md text-label-md text-outline hidden md:block">SILENCE METRIC: 4.8 SECONDS GAP</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Silence Meter Left -->
+<div class="lg:col-span-4 bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">مؤشر الصمت الحرج</span>
+<span class="bg-primary/20 text-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">صمت محرج قاتل</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-primary font-semibold">4.8</span>
+<span class="font-headline-md text-headline-md text-secondary">ثانية</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              متوسط الفراغ الزمني والصمت المربك الذي يعقب سؤال الطفل يحيى العفوي «ليه؟»، حين يقف المنطق المصرفي التلقيني عاجزاً عن الدفاع عن فكرة الحرمان الذاتي.
+            </p>
+</div>
+<!-- SVG Visual Waveform of Silence -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline">تذبذب التردد الصوتي أثناء لحظة «ليه؟»</span>
+<div class="h-16 w-full flex items-center justify-center">
+<svg class="w-full h-full text-primary" fill="none" stroke="currentColor" viewbox="0 0 300 60">
+<!-- Dialogue chatter -->
+<path class="text-secondary opacity-70" d="M0,30 Q10,10 20,30 T40,30 T60,5 T80,30 T100,15 T120,30" stroke-width="2"></path>
+<!-- "Leih?" pulse -->
+<path class="text-primary" d="M120,30 L130,5 L135,55 L140,30" stroke-width="3"></path>
+<!-- Flatline of Silence: 4.8s -->
+<path class="text-outline" d="M140,30 L250,30" stroke-dasharray="3,3" stroke-width="1.5"></path>
+<!-- Recovery / Breakthrough -->
+<path class="text-primary" d="M250,30 Q260,20 270,30 T285,15 T300,30" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex justify-between text-label-sm font-label-sm text-outline">
+<span>الكلام المصرفي (صاخب)</span>
+<span class="text-primary font-semibold">ليه؟ (السؤال)</span>
+<span>الصمت (4.8 ث)</span>
+<span class="text-secondary">الصدق الجديد</span>
+</div>
+</div>
+</div>
+<!-- Comparative Breakdown Right -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Card 1: Dead Banking Jargon -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-sm shadow-md flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+<span class="font-title-md text-title-md">المصطلحات المصرفية الميتة</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">لغة المنظومة القديمة</span>
+<ul class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant pt-space-xs">
+<li class="bg-surface-container px-space-xs py-1 rounded">تجميد الودائع لأجل طويل</li>
+<li class="bg-surface-container px-space-xs py-1 rounded">العائد التراكمي المركب الخامل</li>
+<li class="bg-surface-container px-space-xs py-1 rounded">التقشف الوقائي وإلغاء الرغبات</li>
+<li class="bg-surface-container px-space-xs py-1 rounded">الحرمان الأخلاقي لمصلحة الغد</li>
+</ul>
+</div>
+<div class="bg-surface-container-high/40 p-space-xs rounded text-label-sm font-label-sm text-outline">
+              الحكم: تسبب ارتباكاً فكرياً ومقاومة لاواعية.
+            </div>
+</div>
+<!-- Card 2: The Innocent Child Response -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm shadow-md flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+<span class="font-title-md text-title-md">رد الطفل يحيى الفوري</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">السؤال المعرّي للبنوك</span>
+<blockquote class="font-body-md text-body-md text-on-surface bg-surface-container-high p-space-sm rounded leading-relaxed">
+                "يعني إيه أحرم نفسي عشان أكبر؟! طب لما أكبر هكون مبسوط إزاي وإنت بتقولي متلعبش ومتفرحش دلوقتي؟ هو أنتوا بتحوشوا عشان تعيشوا ولا عشان تخافوا؟"
+              </blockquote>
+</div>
+<div class="bg-secondary/10 text-secondary p-space-xs rounded text-label-sm font-label-sm font-semibold">
+              الأثر: إسقاط الحجج التسويقية بالضربة القاضية.
+            </div>
+</div>
+<!-- Card 3: The True Platform Translation -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-sm shadow-md flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">eco</span>
+<span class="font-title-md text-title-md">ترجمة المنصة الحقيقية</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">اللغة الإنسانية الحية</span>
+<div class="bg-surface-container-high p-space-sm rounded space-y-space-xs">
+<p class="font-body-md text-body-md text-primary font-medium leading-relaxed">
+                  "الفلوس صاحبك اللي بيساعدك تبني لعبتك، وتسافر، وتكبروا مع بعض.. مش سجان واقف بعصاية يمنعك تعيش!"
+                </p>
+<span class="font-label-sm text-label-sm text-outline block">شرح تفهمه الحضانة ويحترمه الشباب.</span>
+</div>
+</div>
+<div class="bg-primary-container/20 text-primary p-space-xs rounded text-label-sm font-label-sm font-bold">
+              معامل النجاح: 100% قابلية للنقل والتكرار.
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: The Retelling Journey Across 4 Circles -->
+<section class="space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">repeat</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">اختبار الانتقال بين الألسن // RETELLING PIPELINE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">مراحل انتقال الفكرة الأربعة: من البريف إلى الحضانة</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          تتبع مسار الفكرة عبر أربعة دوائر اجتماعية. هل تفقد روحها وتتحول إلى كليشيه، أم تزداد لمعاناً كلما بسطتها الألسن؟
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Circle 01 -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-sm flex flex-col justify-between shadow-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">الدائرة الأولى</span>
+<span class="bg-error-container text-on-error-container px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold">12% صدق</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">نسخة غرفة الاجتماعات</h3>
+<span class="font-label-sm text-label-sm text-outline block">BOARDROOM &amp; SLIDES</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              «نظام شامل يُمكّن الشرائح الجيلية من الاستدامة الادخارية عبر آليات التخصيص التلقائي ورفع مؤشرات الأمان المالي المستقبلي.»
+            </p>
+</div>
+<div class="bg-surface-container p-space-xs rounded flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span class="font-label-sm text-label-sm font-semibold">سقطت في الاختبار — ماتت على الشاشات</span>
+</div>
+</div>
+<!-- Circle 02 -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-sm flex flex-col justify-between shadow-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">الدائرة الثانية</span>
+<span class="bg-secondary-container/30 text-secondary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold">34% صدق</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">نسخة الأب التقليدي والجد</h3>
+<span class="font-label-sm text-label-sm text-outline block">HERITAGE OF FEAR</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              «القرش الأبيض لليوم الأسود.. امسك إيدك ومتصرفش في الهوا.. الدنيا ملهاش أمان ولازم تدفن قرشك تحت البلاطة.»
+            </p>
+</div>
+<div class="bg-surface-container p-space-xs rounded flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span class="font-label-sm text-label-sm">وصاية موروثة تخنق الرغبة في التطور</span>
+</div>
+</div>
+<!-- Circle 03 -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-sm flex flex-col justify-between shadow-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">الدائرة الثالثة</span>
+<span class="bg-primary/20 text-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-bold">96% صدق</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary">نسخة الأخ الأكبر (25 سنة)</h3>
+<span class="font-label-sm text-label-sm text-outline block">YOUTH BREAKTHROUGH</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+              «الأمان الحقيقي مش إنك تدفن نفسك حي.. الأمان إنك تدير فلوسك عشان تتعلم أكتر، تسافر، وتستثمر في شغفك من غير ما تتذل لحد.»
+            </p>
+</div>
+<div class="bg-surface-container-high p-space-xs rounded flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">لقطة الصدق البشري والتمكين الحي</span>
+</div>
+</div>
+<!-- Circle 04 -->
+<div class="bg-surface-container-high p-space-md rounded-xl space-y-space-sm flex flex-col justify-between shadow-xl">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">الدائرة الرابعة الفاصلة</span>
+<span class="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-bold">100% أصالة</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-secondary font-medium">نسخة الحضانة (ما قاله يحيى)</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">NURSERY PLAYGROUND ECHO</span>
+<blockquote class="font-body-md text-body-md text-on-surface font-semibold bg-surface-container-lowest p-space-sm rounded">
+              "الفلوس مش سجن ومحبس.. الفلوس جناح بيطير بيك ويكبر معاك لما تلعب!"
+            </blockquote>
+</div>
+<div class="bg-primary/10 text-primary p-space-xs rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">celebration</span>
+<span class="font-label-sm text-label-sm font-bold">عبرت اختبار الألسن — جاهزة للشوارع</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Characters of the Living Room Encounter -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block">طاقم المسرحية // ENSEMBLE CAST</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">شخصيات مواجهة الصالون</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">4 أجيال تحت سقف واحد</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Character 1: Yehia -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="h-44 w-full bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Intimate close-up portrait of a 7-year-old Egyptian boy with wide curious brown eyes, ruffled hair, holding a small toy airplane, sitting on a warm patterned rug with ambient warm amber lighting reflecting in his eyes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpjVqklNHFmWhl70njGiSI-l_BhTl_0QAqAwyu-CkrfK2RmCjXAe_qcSTXXFlBSKSIJz8DIXdUutld3aJQbEdaPWK9BZDGlJRuAjLpY96yeGpdPFIEqirYVPKn4TjbjefSII6F_D13moFGAv_vJzwRWO-9SkyiTFauKT6vjZU1rzlv4zjlI3HPioa9j2taxFespQTW7DXx8PZd8Y3PBSk7lXf7cl-XIT4Rlqqn1Jq1"/>
+<span class="absolute top-2 right-2 bg-primary text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">مسبار الحقيقة</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<h3 class="font-title-md text-title-md text-primary">الطفل يحيى (7 سنوات)</h3>
+<span class="font-label-sm text-label-sm text-secondary block">صوت البراءة الراديكالية</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                لا يعرف التضخم ولا الفوائد المركبة، لكنه يعرف متى يكون الكبار خائفين حقاً ومتى يكذبون لتهدئة روعهم.
+              </p>
+</div>
+<div class="bg-surface-container p-space-xs rounded text-label-sm font-label-sm text-on-surface">
+              سلاح الدراما: سؤال «ليه؟» غير القابل للالتفاف.
+            </div>
+</div>
+</div>
+<!-- Character 2: Grandfather Shaker -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="h-44 w-full bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Portrait of an elderly 68-year-old Middle Eastern grandfather with deep laugh lines, wearing a soft grey cardigan over a traditional galabeya, holding prayer beads in his weathered hands with a stern yet caring expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIaFHrftAFBi-3nK7aZ-fKFhQKUnBTwlF8UpHNW7grR9HZWjMsLvEVo4ePmQhfKieZe2V2Hn8PRQPo4zqjqIO69v2P63DsBLMqrFu510Vcv_XfdVCLd5XKmaIczxaEfJVBAl6g29W21AqPWJxpVFusX2L5fMNAgmcvFicSlTzylz1kzPOHDgID7Xfi0bW3kQdklSXBNcNmzHmHq6eFFEk00z4qufgM2_uFcmMFxOU_"/>
+<span class="absolute top-2 right-2 bg-surface-container-high text-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-semibold">حارس الخوف القديم</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">الجد / الحاج شاكر (68 سنة)</h3>
+<span class="font-label-sm text-label-sm text-outline block">عقيدة التوفير والرهبة</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                قضى عمره موظفاً يخشى الغد. المال بالنسبة له درع ضد نوائب الزمان، وتصريفه على الشغف يعتبره «سفهاً وانتحاراً».
+              </p>
+</div>
+<div class="bg-surface-container p-space-xs rounded text-label-sm font-label-sm text-secondary">
+              العبارة الأثيرة: "امسك إيدك على المليم.. الزمان غدار."
+            </div>
+</div>
+</div>
+<!-- Character 3: Reem (Hero) -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="h-44 w-full bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Documentary style portrait of a 26-year-old vibrant Egyptian woman designer wearing a terracotta scarf, intelligent determined eyes, seated in a warm room with a notebook and drawing tablet nearby, looking gently toward a child." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgWYpQrcqaYCyyUoRhzEvP0x0akocPOnS-O5n5X9FzWSsCEKAZ607aRSy7C3rzWCWt_x8Fgw7N91QzwqZ9N4aTS8mlAp99uytocqZ7FgIltwenId1q5PfxtE9I5HIWfqF7VckXqxH3MT4y7_0rRXKhoCPfiZ-XCTpV7p7uddqhTGaO4gP7Cs4_lY2VlYdaPqJacXpOitrqNTbpd3y3--J1wjqlkNWw4jbBocpvJ2CR"/>
+<span class="absolute top-2 right-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">بطلة الفكرة والتمكين</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<h3 class="font-title-md text-title-md text-primary">ريم (26 سنة — الأخت الكبرى)</h3>
+<span class="font-label-sm text-label-sm text-secondary block">مصممة ومستقلة مالياً</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                ترفض منطق الحرمان وتعتبر الأمان الحقيقي هو المهارة والحرية. تواجه الجد بلطف وتترجم المفهوم ليحيى ببساطة.
+              </p>
+</div>
+<div class="bg-surface-container p-space-xs rounded text-label-sm font-label-sm text-primary">
+              الرهان: جعل الأمان ممكناً للمتعة والكرامة معاً.
+            </div>
+</div>
+</div>
+<!-- Character 4: The Mother -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="h-44 w-full bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Cinematic portrait of a 52-year-old Egyptian mother sitting quietly with a warm smile, pouring mint tea from a vintage silver pot, thoughtful eyes observing a family discussion with deep emotional empathy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE4a2MZqLIGM9tuy4A8TtfSMn5Y8KzglbDxXWzoXS4xgfCmkv6MkPNeuFtOImWuH1gXmxUAXl3aYESQ5MaJ_qDG2WerMH1ekRzdHxfk7_i4yYj6TBbLEdmxCJtLpEtHBp4t4FwulsqakHOPy_yUJTB18pFCz9oYYizAzBJJAfe6QgMJcquGiiAGtvctSy7288KPzBhIh5SXUnt2iKBoBbKyLiOHKAiTMqpbhXbBGN8"/>
+<span class="absolute top-2 right-2 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded">ميزان الصدق العاطفي</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between space-y-space-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">الأم (52 سنة)</h3>
+<span class="font-label-sm text-label-sm text-outline block">شاهدة الحقيقة الصامتة</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                تدرك ثمن الحرمان الذي عاشه الجيل القديم، وتتمنى بقلبها ألا يدفع أولادها نفس الضريبة من أعصابهم وأحلامهم.
+              </p>
+</div>
+<div class="bg-surface-container p-space-xs rounded text-label-sm font-label-sm text-on-surface">
+              الدور: المرجعية التي تحسم صدق النبرة من زيفها.
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: The Interactive Script Cockpit (نص المشهد التفاعلي الكامل) -->
+<section class="bg-surface-container-low rounded-xl p-space-lg shadow-xl space-y-space-md">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">movie_edit</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">غرفة قيادة السيناريو الحية // DRAMATIC SCRIPT COCKPIT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">حوار الصالون وسؤال «ليه؟» — المشهد الكامل</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-space-sm py-1.5 rounded flex items-center gap-space-xs transition-colors" id="copyScriptBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span class="font-label-md text-label-md">نسخ نص السيناريو العائلي</span>
+</button>
+<button class="bg-primary-container hover:bg-primary-container/90 text-on-primary-container px-space-md py-1.5 rounded flex items-center gap-space-xs shadow-md transition-colors" id="adoptSceneBtn" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+<span class="font-label-md text-label-md">اعتماد المشهد واكتمال الثلاثية</span>
+</button>
+</div>
+</div>
+<!-- Script Lines Container -->
+<div class="space-y-space-md bg-surface-container-lowest p-space-md rounded-lg" id="scriptContent">
+<!-- Cue 01 -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="font-mono text-secondary">00:30 • SCENE START</span>
+<span>لقطة متوسطة (Medium Shot) — زاوية الحاج شاكر وطاولة الشاي</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-secondary">الجد (الحاج شاكر):</span>
+<span class="font-label-sm text-label-sm text-outline">[يضع كوب الشاي بحزم، مشيراً بسبابته نحو جهاز ريم الرقمي]</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              "يا بنتي الفلوس مبتجيش بسهولة عشان تبعزقيها على أجهزة وكورسات في الهوا! الفلوس مكانها البوسطة أو تحت البلاطة.. كل قرش تطلعيه من جيبك دلوقتي هتندمي عليه بكرة لما الزمان يدور!"
+            </p>
+</div>
+</div>
+<!-- Cue 02 (The Question) -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="font-mono text-primary">01:15 • THE RUPTURE POINT</span>
+<span>لقطة مقربة سفلية (Low Angle Close-up) — عينا يحيى على السجادة</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">يحيى (الطفل):</span>
+<span class="font-label-sm text-label-sm text-primary">[يتوقف عن بناء البرج الخشبي، يرفع عينيه ببراءة مباغتة دون تردد]</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed font-semibold">
+              "يا جدو.. هو أنت حوشت طول عمرك عشان تفضل قاعد زعلان وخايف؟! وليه كل ما نفرح بحاجة تقولوا لنا استنوا بكرة؟!"
+            </p>
+</div>
+</div>
+<!-- Dramatic Direction: Silence note -->
+<div class="bg-surface-container-high/60 p-space-xs rounded flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">graphic_eq</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">
+            [إرشادات الإخراج: صمت تام يخيم على الصالون لمدة 4.8 ثوانٍ — صوت تكتكة ساعة الحائط القديمة يصبح مدوياً في المكان — الأم تنظر للأرض، والجد يتصلب في كرسيه عاجزاً عن الرد]
+          </span>
+</div>
+<!-- Cue 03 (The Resolution & Metaphor) -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="font-mono text-secondary">02:10 • THE NEW TRUTH</span>
+<span>لقطة واسعة ثنائية (Two-Shot) — ريم تنزل لمستوى يحيى على السجادة</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-secondary">ريم (الأخت الكبرى):</span>
+<span class="font-label-sm text-label-sm text-outline">[تبتسم له بدفء وتضع مكعباً صغيراً فوق برجه لتكمله]</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              "الفلوس زي الشجرة يا يحيى.. لو خبيتها في الظلمة تحت البلاطة هتموت وتصفر، لكن لو سقيتها وعلمتك إزاي تبني بيها لعبتك وتشتغل على شغفك.. هتكبر وتعمل ضل كبير تلعب تحته وإنت مبسوط وحر."
+            </p>
+</div>
+</div>
+<!-- Climax Statement & Manifesto -->
+<div class="p-space-md rounded bg-primary-container/20 space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">لحظة التحول والمانيفستو الختامي // THE CLIMAX MANIFESTO</span>
+</div>
+<blockquote class="font-headline-md text-headline-md text-on-surface font-medium leading-relaxed">
+            «احكيها لأي حد.. لو مفهمهاش بقلبه يبقى كدب!.. الأمان المالي مش وصية بالخوف ولا سجن للأحلام.. الأمان المالي إنك تعيش رحلتك وشغفك بكرامة وحرية، والفلوس هي شريكك مش سجانك!»
+          </blockquote>
+<div class="flex items-center justify-between pt-space-xs text-label-sm font-label-sm text-outline">
+<span>صوت النهاية: يحيى يبتسم ويعود للعبته مطمئناً</span>
+<span class="text-primary font-semibold">ختام المشهد الثالث</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: Complete Trilogy Continuum Navigation -->
+<nav class="space-y-space-sm pt-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block">ثلاثية التجارب الدرامية المصرفية // TRILOGY ROADMAP</span>
+<span class="font-label-sm text-label-sm text-outline">مكتملة 3 / 3</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Screen 01 Card -->
+<a class="bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all block group" href="#">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">التجربة 01</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-secondary group-hover:text-primary transition-colors">مكتمل</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">ليلة العزاء: «الله يرحمه... بس»</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              تفكيك إرث الخوف المالي والمحاسبة غير المعلنة في سرادق العزاء الشعبي.
+            </p>
+</div>
+</a>
+<!-- Screen 02 Card -->
+<a class="bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all block group" href="#">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">التجربة 02</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-secondary group-hover:text-primary transition-colors">مكتمل</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">على جنب يا أسطى: تاكسي العاصمة</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              استبصار الشارع العفوي ونبض الاقتصاد الميداني في زحام شوارع القاهرة.
+            </p>
+</div>
+</a>
+<!-- Screen 03 Card (Active) -->
+<div class="bg-surface-container-high p-space-md rounded-xl shadow-lg relative overflow-hidden">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">التجربة 03 (النشطة الآن)</span>
+<span class="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-bold">قيد البث</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary">احكيها تاني: اختبار الأصالة والطفل</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              امتحان الصالون الحقيقي: انتقال الفكرة وسؤال يحيى الذي أسقط لغة البنوك الميتة.
+            </p>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<script>
+  // Micro-interactions for interactive dramatic cockpit
+  document.getElementById('copyScriptBtn')?.addEventListener('click', function() {
+    const scriptEl = document.getElementById('scriptContent');
+    if (scriptEl) {
+      navigator.clipboard?.writeText(scriptEl.innerText).then(() => {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span class="font-label-md text-label-md">تم نسخ النص بنجاح!</span>';
+        setTimeout(() => {
+          this.innerHTML = originalText;
+        }, 2400);
+      });
+    }
+  });
+
+  document.getElementById('adoptSceneBtn')?.addEventListener('click', function() {
+    this.classList.remove('bg-primary-container');
+    this.classList.add('bg-secondary');
+    this.innerHTML = '<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: \'FILL\' 1;">verified</span><span class="font-label-md text-label-md text-on-secondary">تم اعتماد المشهد الثالث واكتمال الثلاثية ✓</span>';
+  });
+</script></main></div></body></html>

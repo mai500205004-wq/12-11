@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-container":"#ffa58d","surface-container-high":"#292a2c","tertiary-fixed":"#e5e2db","outline":"#ad8882","on-background":"#e3e2e5","on-primary-fixed":"#410000","inverse-on-surface":"#303033","tertiary":"#c9c6c0","tertiary-fixed-dim":"#c9c6c0","on-tertiary-container":"#2a2a25","secondary-fixed-dim":"#ffb4a1","inverse-surface":"#e3e2e5","primary-fixed-dim":"#ffb4a8","surface-tint":"#ffb4a8","on-error-container":"#ffdad6","background":"#121315","surface-container":"#1f2022","surface-dim":"#121315","surface-variant":"#343537","on-primary-fixed-variant":"#930000","secondary":"#ffb4a1","surface-container-lowest":"#0d0e10","on-secondary":"#611300","on-primary-container":"#5c0000","secondary-container":"#912100","tertiary-container":"#92918b","secondary-fixed":"#ffdbd2","on-surface-variant":"#e6bdb7","outline-variant":"#5d403b","primary-container":"#ff5541","on-tertiary-fixed-variant":"#474742","on-secondary-fixed":"#3c0800","primary":"#ffb4a8","surface-container-highest":"#343537","surface-bright":"#38393b","surface-container-low":"#1b1c1e","inverse-primary":"#bf0904","on-error":"#690005","error":"#ffb4ab","surface":"#121315","on-tertiary":"#31312c","on-tertiary-fixed":"#1c1c18","error-container":"#93000a","primary-fixed":"#ffdad4","on-primary":"#690000","on-secondary-fixed-variant":"#881f00","on-surface":"#e3e2e5"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","margin":"2rem","margin-sm":"1rem","space-md":"1rem","gutter":"1.25rem","space-lg":"1.5rem","margin-lg":"3.5rem","space-xs":"0.25rem","gutter-lg":"2rem","gutter-sm":"0.75rem","space-xl":"2.5rem"},"fontFamily":{"headline-lg":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-sm":["JetBrains Mono"],"label-lg":["Inter"],"headline-sm":["Inter"],"display-md-mobile":["Playfair Display"],"body-lg":["Inter"],"headline-md":["Playfair Display"],"display-lg":["Playfair Display"],"label-md":["JetBrains Mono"],"code-timecode":["JetBrains Mono"],"body-md":["Inter"],"body-sm":["Inter"],"display-md":["Playfair Display"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-md-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"code-timecode":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"display-md":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}]}}}};</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">FX2 Descent</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Project 84 / Harness</span></div></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-primary tracking-wider">REC</span></div></div><div class="px-space-lg py-space-sm"><div class="px-space-sm py-space-xs bg-surface-container-low rounded flex items-center justify-between"><span class="font-label-sm text-label-sm text-tertiary uppercase">Base Commit</span><span class="font-label-sm text-label-sm text-on-surface">9a2f1c8 <span class="text-secondary">(Tk 03)</span></span></div></div><div class="mt-space-md px-space-sm"><span class="px-space-md font-label-sm text-label-sm uppercase tracking-widest text-tertiary-container block mb-space-xs">Stratum Traversal Vectors</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_16px_rgba(242,56,39,0.35)]"><a class="group flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="s-01-light-table" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-primary">01</span><span class="font-body-md text-body-md tracking-tight">Light Table</span></div><span class="font-label-sm text-label-sm text-tertiary group-hover:text-on-surface">Z = +0.00m</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="s-02-glass-frames" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-primary">02</span><span class="font-body-md text-body-md tracking-tight">Glass Frames</span></div><span class="font-label-sm text-label-sm text-tertiary group-hover:text-on-surface">Z = -120.00m</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="s-03-film-hybrid" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-primary">03</span><span class="font-body-md text-body-md tracking-tight">Film Hybrid</span></div><span class="font-label-sm text-label-sm text-tertiary group-hover:text-on-surface">Z = -240.00m</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="s-04-the-paper" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-primary">04</span><span class="font-body-md text-body-md tracking-tight">The Paper</span></div><span class="font-label-sm text-label-sm text-tertiary group-hover:text-on-surface">Z = -360.00m</span></a></nav></div><div class="mt-space-lg px-space-sm"><span class="px-space-md font-label-sm text-label-sm uppercase tracking-widest text-tertiary-container block mb-space-xs">Inspection Modules</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_16px_rgba(242,56,39,0.35)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dolly-telemetry-engine" href="#"><span class="font-body-md text-body-md tracking-tight">Dolly Telemetry</span><span class="font-label-sm text-label-sm px-space-xs rounded bg-surface-container-low text-secondary">6-AXIS</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stage-quarantine-matrix" href="#"><span class="font-body-md text-body-md tracking-tight">Branch Quarantine</span><span class="font-label-sm text-label-sm text-error">7d18a4c</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="spatial-light-array" href="#"><span class="font-body-md text-body-md tracking-tight">Spatial Optics</span><span class="font-label-sm text-label-sm text-tertiary">RAW</span></a></nav></div></div><div class="p-space-md bg-surface-container-lowest/60 m-space-sm rounded"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-tertiary uppercase">Vector Engine Status</span><span class="font-label-sm text-label-sm text-primary">LOCKED</span></div><div class="w-full h-1 bg-surface-container-high rounded overflow-hidden"><div class="w-3/4 h-full bg-primary-container"></div></div><div class="flex justify-between items-center mt-space-xs font-label-sm text-label-sm text-tertiary"><span class="font-code-timecode text-code-timecode">35mm f/1.4</span><span>T-STOP 1.8</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded"><span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wide">Active Breadcrumb:</span><span class="font-label-sm text-label-sm text-on-surface">S-04 The Paper [Z: -360.00m]</span><span class="font-label-sm text-label-sm text-primary">▲</span><span class="font-label-sm text-label-sm text-on-surface-variant">S-03 Film Hybrid [Z: -240.00m]</span></div><div class="hidden xl:flex items-center gap-space-sm px-space-sm py-1 bg-surface-container-low rounded"><span class="font-label-sm text-label-sm text-tertiary uppercase">Dolly Vector:</span><span class="font-label-sm text-label-sm text-secondary font-code-timecode text-code-timecode">X:+12.42 Y:-08.10 Z:-310.22</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim">SPD: 0.84m/s</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-high/80 px-space-md py-1 rounded"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-code-timecode text-code-timecode text-on-surface tracking-wider">SMPTE: 00:00:11:04</span></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm"><span class="font-mono">BRANCH</span><span class="font-mono font-bold">7d18a4c [QUARANTINE]</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 min-h-screen bg-background w-full"><div class="flex flex-col w-full">
+<!-- Telemetry Stratum Banner & Z-Vector Depth HUD -->
+<div class="px-margin-lg pt-space-md pb-space-sm bg-surface-container-lowest/90 backdrop-blur-md">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-primary-container/20 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-semibold">Stratum Settled // Z: -240.00m</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high text-on-surface">
+<span class="font-label-sm text-label-sm text-tertiary">SUBSTRATE:</span>
+<span class="font-code-timecode text-code-timecode text-secondary font-bold">NITROCELLULOSE 65MM</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high text-on-surface">
+<span class="font-label-sm text-label-sm text-tertiary">BASE:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wider">EASTMAN 5219</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low text-tertiary">
+<span class="font-label-sm text-label-sm">η = 1.490 [GELATIN/HALIDE]</span>
+</div>
+</div>
+<!-- Vector Traversal Ascent/Descent Quick Bar -->
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-tertiary mr-space-xs hidden md:inline">Vectors:</span>
+<a class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1 font-label-sm text-label-sm" href="#">
+<span class="text-primary font-bold">▲</span> S-02 [-120m]
+        </a>
+<a class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1 font-label-sm text-label-sm" href="#">
+<span class="text-primary font-bold">↑↑</span> S-01 [0.00m]
+        </a>
+<a class="px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-semibold transition-all flex items-center gap-1 font-label-sm text-label-sm shadow-[0_0_12px_rgba(255,85,65,0.3)]" href="#">
+<span class="font-bold">▼</span> S-04 THE PAPER [-360m]
+        </a>
+</div>
+</div>
+<!-- Fine Spatial Coordinates Array -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs text-tertiary font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span>DOLLY POS: <strong class="text-on-surface font-code-timecode text-code-timecode">X:+12.42 Y:-08.10 Z:-240.00</strong></span>
+<span>PITCH: <strong class="text-secondary">12.40° TILT</strong></span>
+<span>OPTICAL APERTURE: <strong class="text-on-surface">35mm f/1.4 @ T/1.8</strong></span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>HEAD: <span class="text-primary-container font-mono">9a2f1c8 (Tk 03 Canonical)</span></span>
+<span>FRAME: <strong class="text-on-surface font-code-timecode text-code-timecode">#0264</strong> [SMPTE 00:00:11:04]</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-bright text-on-surface">65MM 5-PERF</span>
+</div>
+</div>
+</div>
+<!-- Primary Workstage: 2-Column Responsive Spatial Canvas -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg px-margin-lg py-space-md">
+<!-- LEFT COLUMN: Optical Emulsion Projection, Channel Tri-Color Separation, & Manuscript Lineage (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Film Emulsion Projection Aperture Reticle -->
+<div class="relative bg-surface-container-lowest rounded overflow-hidden shadow-2xl flex flex-col">
+<!-- Overlay HUD Reticle Header -->
+<div class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-space-sm bg-gradient-to-b from-surface-container-lowest/90 via-surface-container-lowest/40 to-transparent">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold tracking-wider">CANONICAL TK 03</span>
+<span class="font-code-timecode text-code-timecode text-on-surface text-xs tracking-wider">PROJECTION APERTURE: 2.20:1 65MM INTERMEDIATE</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-tertiary">SPECULAR BLOOM:</span>
+<span class="text-primary font-code-timecode text-code-timecode font-bold">22.4% PEAK</span>
+</div>
+</div>
+<!-- 65mm Filmstrip Stage Canvas with Halide Grain Emulation -->
+<div class="relative w-full aspect-[2.20/1] bg-surface-container-low flex items-center justify-center overflow-hidden">
+<!-- Film Negative Simulation Frame -->
+<div class="absolute inset-0 bg-cover bg-center transition-all duration-500" data-alt="Dark, atmospheric cinematic frame of an astronaut Vance inside zero-lux deep space chamber, reflection of light table vectors faintly glowing against the gold-tinted reflective glass visor, photographic 65mm film grain, remjet red halation bleed, deep obsidian voids, cinematic lighting in primary red and cool cyan tones, hyper-tactile celluloid texture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGkCkP0WiioUFAzwmOaqlYEoIgP-3l57rsjQxz6dasaKdk1LlGeAMTYXnQiPa_vL80QZ9DrrsY1eGvyITGlD3tLA5dygcEiN5fGcs1bSXpWwOBYeZ6MtkrHsMMGwV4iEiWLl8Tg19uBOENejfDkno1XpQkye2b-lKvrim3AGnQG1h3n2yN25zKhaSjB-i17MTm_0MhGDhJ1-T8ROm2S56jcqfGbqLZsXIayqgcTjVW')">
+<!-- Simulated Optical Halation Glow Layer -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/15 via-transparent to-secondary-container/10 mix-blend-screen pointer-events-none"></div>
+</div>
+<!-- Alignment Convergence Crosshair Reticle & 5-Perf Frame Lines -->
+<div class="absolute inset-0 pointer-events-none flex flex-col justify-between p- space-md">
+<!-- Top Crosshairs & Edge Numbers -->
+<div class="flex justify-between items-start">
+<span class="font-code-timecode text-[11px] text-tertiary-fixed-dim bg-surface-container-lowest/80 px-1 py-0.5 rounded">EASTMAN-5219-482-1984</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">filter_center_focus</span>
+<span class="font-label-sm text-label-sm">CONVERGENCE: 100.0%</span>
+</div>
+<span class="font-code-timecode text-[11px] text-tertiary-fixed-dim bg-surface-container-lowest/80 px-1 py-0.5 rounded">PERF 04/05</span>
+</div>
+<!-- Optical Center Reticle -->
+<div class="self-center flex items-center justify-center">
+<div class="w-16 h-16 rounded-full border border-primary/20 flex items-center justify-center">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-primary-container rounded-full shadow-[0_0_8px_#ff5541]"></div>
+</div>
+</div>
+</div>
+<!-- Bottom Sprocket Reference and Timecode Stamp -->
+<div class="flex justify-between items-end">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary bg-surface-container-lowest/85 px-space-sm py-0.5 rounded">
+<span>T-STOP: T/1.8</span>
+<span class="text-tertiary">|</span>
+<span>35MM PRIME LEICA-R</span>
+</div>
+<div class="font-code-timecode text-code-timecode text-on-surface bg-surface-container-lowest/90 px-space-sm py-0.5 rounded shadow">
+                SMPTE: 00:00:11:04.264
+              </div>
+</div>
+</div>
+</div>
+<!-- Celluloid Channel Emulation Switcher Ribbon -->
+<div class="p-space-sm bg-surface-container-low flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 sm:pb-0">
+<button class="px-space-sm py-1 bg-primary-container text-on-primary-container font-label-sm text-label-sm rounded font-bold shadow-[0_0_12px_rgba(255,85,65,0.35)] whitespace-nowrap">
+              CANONICAL 5219 FULL
+            </button>
+<button class="px-space-sm py-1 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm rounded transition-all whitespace-nowrap">
+              3-STRIP COMPOSITE
+            </button>
+<button class="px-space-sm py-1 bg-surface-container hover:bg-surface-container-high text-red-400 font-label-sm text-label-sm rounded transition-all whitespace-nowrap">
+              RED [CYAN DYE]
+            </button>
+<button class="px-space-sm py-1 bg-surface-container hover:bg-surface-container-high text-green-400 font-label-sm text-label-sm rounded transition-all whitespace-nowrap">
+              GREEN [MAGENTA]
+            </button>
+<button class="px-space-sm py-1 bg-surface-container hover:bg-surface-container-high text-yellow-300 font-label-sm text-label-sm rounded transition-all whitespace-nowrap">
+              BLUE [YELLOW]
+            </button>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary shrink-0">
+<span class="material-symbols-outlined text-sm text-secondary">tune</span>
+<span class="font-label-sm text-label-sm">DYE REGISTER: LOCKED</span>
+</div>
+</div>
+<!-- Strict Non-Destructive Emulation Notice Banner -->
+<div class="px-space-md py-space-xs bg-surface-container-lowest text-center">
+<p class="font-label-sm text-[10px] text-tertiary-container uppercase tracking-wider">
+            SIMULATED CREATIVE REFERENCE EMULATION // NOT A VERIFIED PHYSICAL TECHNICOLOR OR DYE-TRANSFER SCAN // ZERO MEASURED PHOTOCHEMICAL RESPONSE
+          </p>
+</div>
+</div>
+<!-- Technicolor 3-Strip Dye Separation Analysis Matrix -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-primary rounded-sm"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">Technicolor 3-Strip Dye Separation Analysis</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary px-space-xs py-0.5 rounded bg-surface-container">PRISM BEAMSPLITTER MODEL 1932</span>
+</div>
+<!-- 3-Strip Separation Visual Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<!-- Record 1: Red Separation (Cyan Printing Dye) -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-red-400 uppercase">Red Record</span>
+<span class="font-label-sm text-[10px] px-1 py-0.5 rounded bg-red-950/60 text-red-200">CYAN DYE</span>
+</div>
+<div class="relative aspect-video w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover filter grayscale contrast-125" data-alt="Monochrome Red separation record from Technicolor camera depicting high-contrast deep shadow skin tones of an astronaut helmet in deep space, filtered through red gelatin filter, dense optical silver halide granules visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzc3ek_3p1LN4M-vuHwm8p44xFxeWnzWbOZV_jB_uKyjzWiHTZs2hpV6JcRqyhdj8P3EgdUQ29byKNW2K6XtytPHSBIsdNAJFfxZpQjUEHbWOcO29BV38MWibIMjI5EffQotgw2huXHkyPyV1Yuwvyx0Hu_dTAgTUPzwjxEjq-UKV6xAYBv7eXR9JVU7I7AU2fb7l4oNqanjlIpjt3mu0vFBaOQ_nNydVLaYrwYOYv"/>
+<div class="absolute bottom-1 right-1 px-1 bg-surface-container-lowest/90 text-[10px] font-code-timecode text-red-300 rounded">λ 650nm</div>
+</div>
+<div class="flex flex-col gap-0.5 text-[11px] font-label-sm text-tertiary mt-1">
+<div class="flex justify-between"><span>Toe Density:</span><span class="text-on-surface">0.14 D</span></div>
+<div class="flex justify-between"><span>Gamma (γ):</span><span class="text-on-surface">0.84</span></div>
+<div class="flex justify-between"><span>Acutance:</span><span class="text-secondary">48 lp/mm</span></div>
+</div>
+</div>
+<!-- Record 2: Green Separation (Magenta Printing Dye) -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-green-400 uppercase">Green Record</span>
+<span class="font-label-sm text-[10px] px-1 py-0.5 rounded bg-green-950/60 text-green-200">MAGENTA DYE</span>
+</div>
+<div class="relative aspect-video w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover filter grayscale brightness-110" data-alt="Monochrome Green separation record representing the key luminance channel of an astronaut helmet visor reflection, high sharpness, balanced midtone curve, optical photochemical emulsion negative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCORn-2wtXqBODo4ozcQotmymNxjd1EblnIj8nzgnxiiACBOy1sbTU-5UwhwvSa3BTNY2I56UbyPH9ACd31egHxNAYnJ4MsBLLbE5ZORg29Tf3zZCX8nvj5-jTm03bgXGJ09VANilHwpI83bWalGzt5PIJF2JwyUsbY3Z8CkoZOYlLe0f5KS7cec35G07u6oGCJI8tBYfiod5mbgG1lg43HQtpnbPZG-H2SnYBJ_qgY"/>
+<div class="absolute bottom-1 right-1 px-1 bg-surface-container-lowest/90 text-[10px] font-code-timecode text-green-300 rounded">λ 540nm</div>
+</div>
+<div class="flex flex-col gap-0.5 text-[11px] font-label-sm text-tertiary mt-1">
+<div class="flex justify-between"><span>Key Luminance:</span><span class="text-on-surface">62.8%</span></div>
+<div class="flex justify-between"><span>Gamma (γ):</span><span class="text-on-surface">0.86</span></div>
+<div class="flex justify-between"><span>Acutance:</span><span class="text-secondary">54 lp/mm</span></div>
+</div>
+</div>
+<!-- Record 3: Blue Separation (Yellow Printing Dye) -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-yellow-400 uppercase">Blue Record</span>
+<span class="font-label-sm text-[10px] px-1 py-0.5 rounded bg-amber-950/60 text-yellow-200">YELLOW DYE</span>
+</div>
+<div class="relative aspect-video w-full rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover filter grayscale contrast-90" data-alt="Monochrome Blue separation record showing diffused atmospheric scatter and subtle micro-grain dispersion across deep shadow voids, soft toe and highlight roll off." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwLi4FddCCNcJYopQTlC4os0XYLzjCcQtdkj4-GZ0rk8RSGJ3HTB2FAdS8XAxKVgRwG1csr0CD5a0eSWsk9dE0UCI3suq0_Etl9s-q75uWahefFRsajtulJCyflSG-eNGeNFVvzvP_eQYcSYLZOhndmfx2Y4GuQf9vlHTbLEnEihjPkolzYloBp6jXY1c-xh6qHNtXNWbifcxj-PbI8YdXT6bQL3reichrubdMc4oo"/>
+<div class="absolute bottom-1 right-1 px-1 bg-surface-container-lowest/90 text-[10px] font-code-timecode text-yellow-300 rounded">λ 440nm</div>
+</div>
+<div class="flex flex-col gap-0.5 text-[11px] font-label-sm text-tertiary mt-1">
+<div class="flex justify-between"><span>Halide Grain:</span><span class="text-on-surface">1.88 µm</span></div>
+<div class="flex justify-between"><span>Gamma (γ):</span><span class="text-on-surface">0.78</span></div>
+<div class="flex justify-between"><span>Acutance:</span><span class="text-secondary">39 lp/mm</span></div>
+</div>
+</div>
+</div>
+<!-- Registration Status Table -->
+<div class="p-space-sm bg-surface-container-lowest rounded flex flex-wrap items-center justify-between gap-space-sm mt-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base">layers</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Tri-Pack Optical Alignment</span>
+<span class="font-label-sm text-[10px] text-tertiary">Zero lateral aberration // Orthogonal shift ΔX: 0.000, ΔY: 0.000</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">CONVERGENCE: <strong class="text-secondary">100.0%</strong></span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">NO FRINGE</span>
+</div>
+</div>
+</div>
+<!-- Canonical Manuscript Excerpt & Lineage Lock -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">description</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Manuscript Lineage &amp; Script Anchor</h3>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container/40 text-on-secondary-container">BRF-84-ALPHA ORIGIN [Z: 0.00m]</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded flex flex-col gap-space-sm shadow-inner">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm pb-space-xs">
+<span>SCENE 04 // THE ARCHITECTURE OF SILENCE</span>
+<span>TAKE 03 [MASTER CANONICAL HEAD]</span>
+</div>
+<div class="pl-space-md py-space-xs">
+<p class="font-headline-md text-headline-md text-on-surface italic leading-relaxed">
+              “We aren't falling through space. We're falling through memory.”
+            </p>
+<span class="block mt-space-xs font-label-md text-label-md uppercase tracking-widest text-primary">— Vance [00:00:11:04]</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs text-xs font-label-sm text-tertiary">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>CANONICAL HEAD: <strong class="text-on-surface font-mono">9a2f1c8</strong> (Vance Cut / Take 03)</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded bg-error-container/30 text-error">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>QUARANTINE BRANCH: <strong class="font-mono">7d18a4c</strong> (Draft 04.3 Cold Isolation)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sensitometric D-Log E Curve Deck & Optical Specs (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Sensitometric D-Log E Curve Deck (Primary Interactive Focal Point) -->
+<div class="bg-surface-container-low p-space-md rounded shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">Sensitometric D-Log E Inspection</h2>
+<span class="font-label-sm text-label-sm text-tertiary">Density vs Log Relative Exposure Response</span>
+</div>
+<div class="flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            ACTIVE DECK
+          </div>
+</div>
+<!-- Master 3-Strip Response Overlay Control Button -->
+<button class="w-full py-space-xs px-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-between transition-all group shadow-sm" id="toggle-overlay-btn">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">filter_vintage</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider uppercase">TOGGLE 3-STRIP DYE RESPONSE OVERLAY</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">ACTIVE</span>
+</button>
+<!-- SVG Sensitometric D-Log E Multi-Layer Graph -->
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded p-space-sm overflow-hidden flex flex-col justify-between shadow-inner">
+<!-- Graph Grid Overlay -->
+<svg class="w-full h-full" fill="none" viewbox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="toeGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ff5541" stop-opacity="0.12"></stop>
+<stop offset="100%" stop-color="#ff5541" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Coordinate Grid Lines -->
+<line stroke="#343537" stroke-dasharray="2 2" stroke-width="1" x1="45" x2="45" y1="20" y2="225"></line>
+<line stroke="#343537" stroke-dasharray="2 2" stroke-width="1" x1="110" x2="110" y1="20" y2="225"></line>
+<line stroke="#343537" stroke-dasharray="2 2" stroke-width="1" x1="180" x2="180" y1="20" y2="225"></line>
+<line stroke="#343537" stroke-dasharray="2 2" stroke-width="1" x1="250" x2="250" y1="20" y2="225"></line>
+<line stroke="#343537" stroke-dasharray="2 2" stroke-width="1" x1="320" x2="320" y1="20" y2="225"></line>
+<line stroke="#343537" stroke-dasharray="2 2" stroke-width="1" x1="45" x2="360" y1="40" y2="40"></line>
+<line stroke="#343537" stroke-dasharray="2 2" stroke-width="1" x1="45" x2="360" y1="95" y2="95"></line>
+<line stroke="#343537" stroke-dasharray="2 2" stroke-width="1" x1="45" x2="360" y1="150" y2="150"></line>
+<line stroke="#343537" stroke-dasharray="2 2" stroke-width="1" x1="45" x2="360" y1="205" y2="205"></line>
+<!-- Highlighted Shoulder & Toe Shaded Volumes -->
+<!-- Toe Shading (-3.5 to -1.5 EV) -->
+<rect class="text-surface-container-high/40" fill="currentColor" height="55" width="75" x="45" y="170"></rect>
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" letter-spacing="0.06em" x="50" y="220">TOE (SHADOWS)</text>
+<!-- Straight Line Region (Linear Gamma γ 0.82) -->
+<rect class="text-surface-container/20" fill="currentColor" height="100" width="140" x="120" y="70"></rect>
+<text fill="#ffb4a1" font-family="JetBrains Mono" font-size="8" letter-spacing="0.08em" x="145" y="80">STRAIGHT LINE (γ 0.82)</text>
+<!-- Shoulder Shading (D-Max 2.44) -->
+<rect class="text-surface-container-high/40" fill="currentColor" height="45" width="95" x="260" y="25"></rect>
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" letter-spacing="0.06em" x="270" y="36">SHOULDER (ROLL-OFF)</text>
+<!-- 1. BASELINE KODAK VISION3 5219 CURVE (Amber/Orange Solid) -->
+<path d="M 45 208 C 85 206, 115 192, 145 160 C 185 116, 230 72, 275 48 C 305 38, 335 36, 360 36" fill="none" stroke="#ffb4a8" stroke-linecap="round" stroke-width="3"></path>
+<!-- 2. OVERLAID 3-STRIP DYE SEPARATION CURVES -->
+<!-- Red/Cyan Record (Red Dashed) - High toe punch -->
+<path d="M 45 212 C 85 210, 110 196, 142 162 C 182 118, 226 70, 270 45 C 302 34, 335 32, 360 32" fill="none" id="curve-red" opacity="0.9" stroke="#f87171" stroke-dasharray="4 3" stroke-linecap="round" stroke-width="1.8"></path>
+<!-- Green/Magenta Record (Green Dashed) - Steepest midtone gamma -->
+<path d="M 45 206 C 88 204, 118 190, 146 156 C 187 110, 232 66, 278 44 C 308 35, 338 34, 360 34" fill="none" id="curve-green" opacity="0.9" stroke="#4ade80" stroke-dasharray="4 3" stroke-linecap="round" stroke-width="1.8"></path>
+<!-- Blue/Yellow Record (Blue/Yellow Dashed) - Flatter toe and atmospheric lift -->
+<path d="M 45 198 C 85 196, 112 186, 140 164 C 180 126, 228 82, 272 56 C 305 46, 335 44, 360 44" fill="none" id="curve-blue" opacity="0.9" stroke="#fde047" stroke-dasharray="4 3" stroke-linecap="round" stroke-width="1.8"></path>
+<!-- Reticle Crosshair Pin on Key Skin Tone Midtone -->
+<circle cx="180" cy="120" fill="#ff5541" r="4"></circle>
+<circle cx="180" cy="120" r="8" stroke="#ff5541" stroke-dasharray="2 2" stroke-width="1"></circle>
+<line stroke="#ff5541" stroke-opacity="0.6" stroke-width="0.75" x1="180" x2="180" y1="20" y2="225"></line>
+<line stroke="#ff5541" stroke-opacity="0.6" stroke-width="0.75" x1="45" x2="360" y1="120" y2="120"></line>
+<text fill="#ffdad4" font-family="JetBrains Mono" font-size="9" font-weight="600" x="186" y="116">MIDTONE 0.68 D</text>
+<!-- Axis Labels & Values -->
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" x="45" y="240">-3.5 EV</text>
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" x="110" y="240">-1.5 EV</text>
+<text fill="#ffdad4" font-family="JetBrains Mono" font-size="8" x="180" y="240">0.0 (18% G)</text>
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" x="250" y="240">+2.0 EV</text>
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" x="320" y="240">+4.5 EV</text>
+<!-- Y Axis Density Markers -->
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" x="15" y="42">D:2.44</text>
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" x="15" y="98">D:1.80</text>
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" x="15" y="153">D:1.00</text>
+<text fill="#92918b" font-family="JetBrains Mono" font-size="8" x="15" y="208">D:0.14</text>
+</svg>
+<!-- Graph Footer Legend -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-1 border-none bg-surface-container-lowest/80 text-[10px] font-label-sm">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="w-3 h-1 bg-primary rounded-full"></span>
+<span>Kodak 5219 (γ 0.82)</span>
+</div>
+<div class="flex items-center gap-1 text-red-400">
+<span class="w-3 h-0.5 border-t border-dashed border-red-400"></span>
+<span>Red/Cyan (0.84γ)</span>
+</div>
+<div class="flex items-center gap-1 text-green-400">
+<span class="w-3 h-0.5 border-t border-dashed border-green-400"></span>
+<span>Green/Mag (0.86γ)</span>
+</div>
+<div class="flex items-center gap-1 text-yellow-300">
+<span class="w-3 h-0.5 border-t border-dashed border-yellow-300"></span>
+<span>Blue/Yel (0.78γ)</span>
+</div>
+</div>
+</div>
+<!-- Sensitometric Zones Readout Bar -->
+<div class="grid grid-cols-3 gap-space-xs text-center font-label-sm text-label-sm">
+<div class="p-space-xs bg-surface-container rounded flex flex-col">
+<span class="text-tertiary text-[10px] uppercase">Toe Region</span>
+<span class="text-on-surface font-code-timecode text-code-timecode font-bold">D-Min 0.14</span>
+<span class="text-[9px] text-tertiary">-3.5 to -1.5 EV</span>
+</div>
+<div class="p-space-xs bg-surface-container rounded flex flex-col">
+<span class="text-tertiary text-[10px] uppercase">Straight Line</span>
+<span class="text-secondary font-code-timecode text-code-timecode font-bold">Γ = 0.82 SLOPE</span>
+<span class="text-[9px] text-tertiary">Linear Contrast</span>
+</div>
+<div class="p-space-xs bg-surface-container rounded flex flex-col">
+<span class="text-tertiary text-[10px] uppercase">Shoulder</span>
+<span class="text-primary font-code-timecode text-code-timecode font-bold">D-Max 2.44</span>
+<span class="text-[9px] text-tertiary">+2.5 to +4.5 EV</span>
+</div>
+</div>
+</div>
+<!-- Optical Emulsion Calibration Specs (Retained & Immutable) -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">Optical Emulsion Calibration Specs</span>
+<span class="font-label-sm text-label-sm text-primary px-space-xs py-0.5 rounded bg-surface-container">IMMUTABLE BASE</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs font-label-sm text-label-sm">
+<div class="p-space-xs bg-surface-container-lowest rounded flex justify-between items-center">
+<span class="text-tertiary">Halide Grain:</span>
+<span class="text-on-surface font-code-timecode text-code-timecode">1.42 µm</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded flex justify-between items-center">
+<span class="text-tertiary">Midtone Density:</span>
+<span class="text-on-surface font-code-timecode text-code-timecode">0.68 D</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded flex justify-between items-center">
+<span class="text-tertiary">Remjet Halation:</span>
+<span class="text-secondary font-code-timecode text-code-timecode">3.84 px</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded flex justify-between items-center">
+<span class="text-tertiary">Gamma Slope (Γ):</span>
+<span class="text-on-surface font-code-timecode text-code-timecode">0.82 γ</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded flex justify-between items-center col-span-2">
+<span class="text-tertiary">Visor Bloom Specular:</span>
+<span class="text-primary font-code-timecode text-code-timecode">22.4% PEAK</span>
+</div>
+</div>
+</div>
+<!-- Isolated Candidate Push +2 Buffer Status -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">archive</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider">Candidate Buffer State</span>
+</div>
+<span class="font-label-sm text-[10px] px-space-xs py-0.5 rounded bg-secondary-container/40 text-on-secondary-container font-mono">ISOLATED // RECOVERABLE</span>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex flex-col gap-1 text-xs">
+<div class="flex justify-between items-center text-tertiary font-label-sm text-label-sm">
+<span>Buffer Tag:</span>
+<span class="font-mono text-on-surface">PUSH +2 STOP RECOVERY</span>
+</div>
+<div class="flex justify-between items-center text-tertiary font-label-sm text-label-sm">
+<span>Parameters:</span>
+<span class="text-secondary font-mono">3.00µm / 0.94 D-max / 6.20px / 1.15γ</span>
+</div>
+<div class="flex items-center gap-space-xs pt-1 text-[11px] text-tertiary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Untampered candidate held in cold storage cache.</span>
+</div>
+</div>
+</div>
+<!-- Traversal Controls & Safety Guard Action Deck -->
+<div class="bg-surface-container-low p-space-md rounded shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">security</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold tracking-wider uppercase">Stratum Safety System</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-code-timecode text-code-timecode font-bold">ARMED // WRITE FORBIDDEN</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<button class="w-full py-space-sm px-space-md rounded bg-primary-container hover:bg-secondary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs transition-all shadow-[0_0_16px_rgba(255,85,65,0.35)]">
+<span class="material-symbols-outlined text-lg">south</span>
+<span class="tracking-tight uppercase">Descend to S-04 The Paper [-360.00m]</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs mt-1">
+<button class="py-space-xs px-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-1 font-label-sm text-label-sm transition-all">
+<span class="material-symbols-outlined text-sm text-primary">north</span>
+<span>Ascend S-02 [-120m]</span>
+</button>
+<button class="py-space-xs px-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-1 font-label-sm text-label-sm transition-all">
+<span class="material-symbols-outlined text-sm text-primary">keyboard_double_arrow_up</span>
+<span>Direct S-01 [0.00m]</span>
+</button>
+</div>
+<button class="w-full py-1.5 mt-1 rounded bg-surface-container-lowest hover:bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-xs">restart_alt</span>
+<span>RESET TO BASE 5219 CALIBRATION</span>
+</button>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-[10px] font-label-sm text-tertiary-container">
+<span>DESCENT HARNESS: FX2-TK03-CANONICAL</span>
+<span>OPTICAL LOCK: ACTIVE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client Behavior for Overlay Toggle -->
+<script>
+    (function initOverlayInteractions() {
+      const toggleBtn = document.getElementById('toggle-overlay-btn');
+      const redCurve = document.getElementById('curve-red');
+      const greenCurve = document.getElementById('curve-green');
+      const blueCurve = document.getElementById('curve-blue');
+
+      if (!toggleBtn || !redCurve || !greenCurve || !blueCurve) return;
+
+      let isOverlayActive = true;
+
+      toggleBtn.addEventListener('click', () => {
+        isOverlayActive = !isOverlayActive;
+        const statusSpan = toggleBtn.querySelector('span:last-child');
+        
+        if (isOverlayActive) {
+          redCurve.style.display = 'block';
+          greenCurve.style.display = 'block';
+          blueCurve.style.display = 'block';
+          if (statusSpan) {
+            statusSpan.textContent = 'ACTIVE';
+            statusSpan.className = 'px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold';
+          }
+        } else {
+          redCurve.style.display = 'none';
+          greenCurve.style.display = 'none';
+          blueCurve.style.display = 'none';
+          if (statusSpan) {
+            statusSpan.textContent = 'MUTED';
+            statusSpan.className = 'px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-label-sm text-[10px] font-bold';
+          }
+        }
+      });
+    })();
+  </script>
+</div></main></div></body></html>

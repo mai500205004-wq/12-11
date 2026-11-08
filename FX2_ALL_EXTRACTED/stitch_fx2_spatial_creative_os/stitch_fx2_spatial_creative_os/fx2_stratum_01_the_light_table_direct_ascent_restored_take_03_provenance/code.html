@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#343537","error":"#ffb4ab","on-error-container":"#ffdad6","primary-fixed-dim":"#ffb4a8","outline-variant":"#5d403b","background":"#121315","on-surface":"#e3e2e5","inverse-primary":"#bf0904","on-secondary-fixed":"#3c0800","on-tertiary-container":"#2a2a25","surface-tint":"#ffb4a8","surface-container-lowest":"#0d0e10","outline":"#ad8882","tertiary-fixed-dim":"#c9c6c0","on-error":"#690005","on-primary-fixed-variant":"#930000","surface-container-highest":"#343537","inverse-on-surface":"#303033","surface":"#121315","surface-container-low":"#1b1c1e","on-primary-fixed":"#410000","surface-container":"#1f2022","surface-dim":"#121315","tertiary":"#c9c6c0","on-secondary":"#611300","on-tertiary-fixed-variant":"#474742","on-primary-container":"#5c0000","on-tertiary-fixed":"#1c1c18","on-tertiary":"#31312c","primary-container":"#ff5541","primary":"#ffb4a8","on-background":"#e3e2e5","on-primary":"#690000","tertiary-fixed":"#e5e2db","primary-fixed":"#ffdad4","error-container":"#93000a","on-secondary-container":"#ffa58d","on-secondary-fixed-variant":"#881f00","inverse-surface":"#e3e2e5","tertiary-container":"#92918b","on-surface-variant":"#e6bdb7","secondary-fixed":"#ffdbd2","surface-container-high":"#292a2c","secondary-fixed-dim":"#ffb4a1","surface-bright":"#38393b","secondary":"#ffb4a1","secondary-container":"#912100"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-md":"1rem","gutter-sm":"0.75rem","margin-sm":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter-lg":"2rem","margin-lg":"3.5rem","space-xl":"2.5rem","margin":"2rem","gutter":"1.25rem"},fontFamily:{"body-sm":["Inter"],"label-sm":["JetBrains Mono"],"label-md":["JetBrains Mono"],"body-lg":["Inter"],"code-timecode":["JetBrains Mono"],"display-lg":["Playfair Display"],"body-md":["Inter"],"display-lg-mobile":["Playfair Display"],"headline-md":["Playfair Display"],"display-md":["Playfair Display"],"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Playfair Display"],"display-md-mobile":["Playfair Display"]},fontSize:{"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"500"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"400"}],"code-timecode":["14px",{lineHeight:"18px",letterSpacing:"0.08em",fontWeight:"600"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"0em",fontWeight:"500"}],"display-md":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}],"label-lg":["13px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-sm":["18px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-md-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md text-primary tracking-wider uppercase">PROJECT 84</span></div><span class="font-body-sm text-body-sm text-tertiary-fixed-dim tracking-tight">THE OBSIDIAN ARCHIVE</span></div><div class="h-6 w-px bg-surface-variant"></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary-container font-medium rounded" data-path="stratum-01-the-light-table" href="#">01 / The Light Table (Z: 0.00m)</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="stratum-02-glass-frames" href="#">02 / Glass Frames (-120m)</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="stratum-03-film-hybrid" href="#">03 / Film Hybrid (-240m)</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="stratum-04-the-paper" href="#">04 / The Paper (-360m)</a></nav></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-space-xs rounded border border-surface-variant/40"><div class="flex flex-col items-end"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SMPTE TIMECODE</span><span class="font-code-timecode text-code-timecode text-on-surface">02:14:38:19</span></div><div class="h-5 w-px bg-surface-variant"></div><div class="hidden md:flex flex-col text-right"><div class="flex items-center gap-space-xs justify-end"><span class="w-1 h-1 rounded-full bg-secondary-fixed"></span><span class="font-label-sm text-label-sm text-secondary-fixed">Take 03 Active</span></div><span class="font-label-sm text-label-sm text-tertiary-container">Avid 03 ACK Pending</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 pb-28 bg-surface-dim min-h-screen"><div class="flex flex-col w-full">
+<!-- 1. ASCENT FLIGHT TRAJECTORY & ARRIVAL TELEMETRY BAR -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-sm shadow-xl relative z-30">
+<div class="w-full flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<!-- Vector & Strata Descent Metas -->
+<div class="flex flex-wrap items-center gap-space-lg">
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">ARRIVAL CONFIRMED</span>
+<span class="font-code-timecode text-code-timecode text-on-surface">STRATUM 01 // THE LIGHT TABLE</span>
+<span class="font-label-sm text-label-sm text-primary px-space-xs py-0.5 bg-primary-container/20 rounded">Z: 0.00m</span>
+</div>
+<div class="flex items-center gap-space-md text-tertiary-fixed-dim font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="text-outline uppercase">Ascent Vector:</span>
+<span class="text-on-surface font-code-timecode text-code-timecode text-primary">ΔZ +360.00m</span>
+</div>
+<span class="text-surface-variant font-code-timecode">|</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-outline uppercase">Lineage Status:</span>
+<span class="text-tertiary-fixed font-code-timecode text-code-timecode">RETROGRADE ANCHORED</span>
+</div>
+<span class="text-surface-variant font-code-timecode">|</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-outline uppercase">Through:</span>
+<span class="text-on-surface-variant">S-04 (-360m) → S-03 (-240m) → S-02 (-120m)</span>
+</div>
+</div>
+</div>
+<!-- Flight Actions & Quick Dolly Selector -->
+<div class="flex items-center gap-space-sm self-end xl:self-auto">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm transition-all" id="reduced-motion-btn" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">speed</span>
+<span id="motion-mode-text">REDUCED MOTION: ARMED / ACCELERATED TELEPORT</span>
+</button>
+<!-- Dropdown vector descent selector -->
+<div class="relative group">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-primary hover:bg-primary-fixed-dim text-on-primary font-label-md text-label-md rounded shadow-md transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">south</span>
+<span>QUICK-DESCEND VECTOR</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-64 bg-surface-container-highest/95 backdrop-blur-md rounded shadow-2xl p-space-xs hidden group-hover:flex flex-col gap-1 z-50">
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm" href="#">
+<span>02 / Glass Frames</span>
+<span class="font-code-timecode text-outline text-[11px]">-120.00m</span>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm" href="#">
+<span>03 / Film Hybrid</span>
+<span class="font-code-timecode text-outline text-[11px]">-240.00m</span>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm bg-surface-container/40" href="#">
+<span class="text-primary font-medium">04 / The Paper Manuscript</span>
+<span class="font-code-timecode text-primary text-[11px]">-360.00m</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. PERSISTENT CONTEXT & HEAD HUD ANCHOR -->
+<section class="w-full px-gutter py-space-md bg-surface-container-low shadow-sm relative z-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-center">
+<!-- Baseline Information -->
+<div class="lg:col-span-4 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">PROJECT 84: CORE BRIEF</span>
+<span class="font-code-timecode text-[11px] text-tertiary-fixed-dim bg-surface-container px-space-xs py-0.5 rounded">ID: BRF-84-ALPHA</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">RESTORED CANON // TAKE 03</span>
+<span class="font-code-timecode text-code-timecode text-primary">COMMIT: 9a2f1c8</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline">
+<span>SEED #4120</span>
+<span>•</span>
+<span>HUMAN EDITORIAL (VANCE CUT)</span>
+<span>•</span>
+<span class="text-tertiary-fixed">LOCKED 23:40 UTC</span>
+</div>
+</div>
+<!-- Verbatim Preserved Lineage Callout -->
+<div class="lg:col-span-5 bg-surface-container-lowest/80 p-space-md rounded shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm mb-1">
+<span class="tracking-widest uppercase">Verbatim Preserved Lineage Anchor</span>
+<span class="font-code-timecode text-primary">SMPTE: 00:00:11:04</span>
+</div>
+<p class="font-display-md-mobile text-display-md-mobile italic text-on-surface leading-snug">
+          “We aren’t falling through space. We’re falling through memory.”
+        </p>
+<div class="mt-1 flex items-center justify-between text-tertiary-container font-label-sm text-label-sm">
+<span>SCENE 04 // THE THRESHOLD OF VISION</span>
+<span class="text-tertiary">Take 03 Conformed</span>
+</div>
+</div>
+<!-- Quarantined Branch & AAF Sync Status -->
+<div class="lg:col-span-3 flex flex-col gap-space-xs bg-surface-container p-space-sm rounded">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Cold Branch Quarantined</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim bg-surface-container-high px-1 py-0.5 rounded">0 DATA LOSS</span>
+</div>
+<div class="font-code-timecode text-[11px] text-tertiary truncate">
+          DETACHED/VANCE-TAKE04-DRAFT04.3 [7d18a4c]
+        </div>
+<div class="h-px bg-surface-variant my-1"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary-fixed">AAF 03.1 PENDING AVID ACK</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant font-code-timecode truncate">
+          TOKEN: SUPERSEDE_04.3_TO_03.1 (POLL 08s)
+        </span>
+</div>
+</div>
+</section>
+<!-- 3. STRATUM 01 MAIN LIGHT TABLE SURFACE WORKSPACE -->
+<div class="w-full px-gutter py-space-xl relative">
+<!-- Background Light Table Grid & Subtle Amber-Red Glow -->
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-surface-container-lowest/90 to-surface-dim pointer-events-none -z-10"></div>
+<div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ff5541_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none -z-10"></div>
+<div class="grid grid-cols-1 xl:grid-cols-16 gap-space-lg items-start">
+<!-- LEFT FLANK: MASTER BRIEF CARD & DIRECTIONAL SYNTHESIS (Columns 1-6) -->
+<div class="xl:col-span-6 flex flex-col gap-space-lg">
+<!-- The Master Brief Core Document (Paper & Smoked Glass Hybrid) -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl rounded-xl p-space-lg shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 transform translate-x-4 -translate-y-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-widest">FOUNDATIONAL CREATIVE CORE</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-code-timecode">STRATUM 01 // ROOT</span>
+</div>
+<div class="space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">ORIGIN MANIFESTO</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mt-1">THE ARCHITECTURE OF SILENCE</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                An exploration of post-orbital memory retention. Human consciousness suspended within zero-point isolation, stripped of terrestrial chronological anchors. Every frame exists as an artifact of irreversible temporal compression.
+              </p>
+</div>
+<!-- Master Axioms -->
+<div class="space-y-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">CORE AESTHETIC AXIOMS</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs pt-1">
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col justify-between">
+<span class="font-label-sm text-[10px] text-primary">AXIOM 01</span>
+<span class="font-label-md text-label-md text-on-surface mt-2 font-semibold">Gravitational Nihilism</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 text-[10px]">Unanchored camera velocity</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col justify-between">
+<span class="font-label-sm text-[10px] text-primary">AXIOM 02</span>
+<span class="font-label-md text-label-md text-on-surface mt-2 font-semibold">Zero-Point Introspection</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 text-[10px]">Sub-perceptual ocular shift</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col justify-between">
+<span class="font-label-sm text-[10px] text-primary">AXIOM 03</span>
+<span class="font-label-md text-label-md text-on-surface mt-2 font-semibold">Acoustic Sub-Harmonics</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 text-[10px]">28Hz room-tone foundation</span>
+</div>
+</div>
+</div>
+<!-- Vance's Preserved Editorial Intent Annotations -->
+<div class="bg-surface-container-lowest/90 p-space-md rounded relative">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span class="uppercase tracking-wider">RESTORED DIRECTOR ANNOTATION — VANCE</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary italic">
+                “Take 04 leaned too far into algorithmic pace. In Take 03 we hold on the reflection in the visor for 4 extra seconds before the flare. Do not let the automated conforment cut this breath. The silence is the narrative engine.”
+              </p>
+<div class="mt-space-sm flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Verified Author Signature: V. KAUFMAN</span>
+<span class="font-code-timecode">HASH: 9a2f1c8d</span>
+</div>
+</div>
+<!-- Optical & Tone Parameters Deck -->
+<div class="grid grid-cols-2 gap-space-sm font-label-sm text-label-sm">
+<div class="bg-surface-container p-space-sm rounded">
+<span class="text-outline uppercase text-[10px] block">Atmospheric Density</span>
+<span class="font-code-timecode text-code-timecode text-on-surface">0.014 kg/m³ (Vacuum)</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<span class="text-outline uppercase text-[10px] block">Chromatic Target</span>
+<span class="font-code-timecode text-code-timecode text-secondary">Kodak 5219 / 500T Halation</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Light Table Exploration Evidence Tiles 1 & 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Optical Still Reference Tile -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-lg">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase">EVIDENCE NODE 01</span>
+<span class="font-code-timecode text-[11px] text-outline">OPTICAL STILL</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Leica Noctilux Profile</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">50mm f/0.95 spherical roll-off with extreme edge vignette mimicking hyper-shallow focal isolation.</p>
+</div>
+<div class="mt-space-md overflow-hidden rounded relative">
+<img class="w-full h-36 object-cover" data-alt="A moody, high contrast cinematographic still of an astronaut helmet in deep obsidian void, edge illuminated with razor sharp warm amber and signal red rim lighting, ultra shallow depth of field, 35mm film grain, editorial auteur film style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv6pr-WeDdC8UWbnRNuKh7fhL_AcmMVy2y6QFZto956p0X4QT3RbHFm8fRPITSQRXcthAuortt7P-kCwmwO4Max7SjndcT4X-nd59P8WrWdDIzbTieNRkqjVfA76XdSrtUfxo9Dw-MyHPDSCJBYtTHjtb7mJm4LsAcxnUlSTLqWeB0N_GjoTJS-DO8tWRGRU9_9dyYBo8Ij9BmesxL0K4SZSfA7P1Wzrzu61muHmtN"/>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-code-timecode text-[10px] text-primary">
+                F0.95 // ISO 800
+              </div>
+</div>
+</div>
+<!-- Acoustic Spectrum Tile -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-lg">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase">EVIDENCE NODE 02</span>
+<span class="font-code-timecode text-[11px] text-outline">ACOUSTIC DYNAMICS</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">435Hz / 28Hz Split</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Resonance envelope isolating the internal breathing cadence from external void silence.</p>
+</div>
+<!-- Inline SVG Frequency Curve -->
+<div class="mt-space-md bg-surface-container-lowest p-space-sm rounded flex flex-col justify-end h-36 relative">
+<svg class="w-full h-24 text-primary" fill="none" viewbox="0 0 200 80">
+<path d="M0 70 Q 20 68, 40 40 T 80 50 T 120 15 T 160 65 T 200 68" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path d="M0 70 Q 20 68, 40 40 T 80 50 T 120 15 T 160 65 T 200 68 L 200 80 L 0 80 Z" fill="currentColor" fill-opacity="0.08"></path>
+<!-- 28Hz resonance marker -->
+<circle cx="40" cy="40" fill="#ff5541" r="3"></circle>
+<!-- 435Hz harmonic marker -->
+<circle cx="120" cy="15" fill="#ffb4a1" r="3"></circle>
+</svg>
+<div class="flex items-center justify-between font-code-timecode text-[10px] text-outline mt-1">
+<span>SUB-BASS 28Hz</span>
+<span class="text-primary font-bold">VOCAL 435Hz</span>
+<span>12.5kHz AIR</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER & RIGHT: COMPLETE RETROGRADE LINEAGE MAP (Columns 7-16) -->
+<div class="xl:col-span-10 flex flex-col gap-space-lg">
+<!-- Interactive Retrograde Lineage Topology Canvas -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-2xl relative">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">RETROGRADE ASCENT GENETIC MAP</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Lineage Graph: S-04 Manuscript to S-01 Root</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-code-timecode text-primary bg-primary-container/10 px-space-sm py-1 rounded">
+                VALIDATED HASH: 9a2f1c8
+              </span>
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div>
+</div>
+</div>
+<!-- Topological Tree / Interactive Filaments -->
+<div class="space-y-space-md py-space-sm">
+<!-- NODE 1: Stratum 01 (0.00m) Current Settled Anchor -->
+<div class="bg-surface-container-highest/60 p-space-md rounded-lg shadow-md relative group transition-all hover:bg-surface-container-highest">
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded bg-primary flex items-center justify-center text-[10px] text-on-primary font-bold">1</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pl-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-bold">STRATUM 01 // THE LIGHT TABLE</span>
+<span class="font-code-timecode text-[11px] text-tertiary-fixed bg-surface-container-lowest px-1.5 py-0.5 rounded">Z: 0.00m (CURRENT PLANE)</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1">Brief Core &amp; Master Axiom Origin Anchor</p>
+<p class="font-body-sm text-body-sm text-outline">Authoritative root prompt: "The Architecture of Silence" (BRF-84-ALPHA)</p>
+</div>
+<div class="text-right flex md:flex-col items-center md:items-end justify-between gap-1">
+<span class="font-code-timecode text-code-timecode text-primary">02:14:38:19</span>
+<span class="font-label-sm text-label-sm text-secondary px-2 py-0.5 bg-surface-container-lowest rounded">ACTIVE ANCHOR</span>
+</div>
+</div>
+</div>
+<!-- Filament Vector 1 to 2 -->
+<div class="flex items-center gap-space-md px-space-lg">
+<div class="w-px h-6 bg-gradient-to-b from-primary to-surface-variant"></div>
+<span class="font-code-timecode text-[10px] text-outline">RETROGRADE TRACE: ΔZ -120m</span>
+</div>
+<!-- NODE 2: Stratum 02 (-120.00m) Concept Frames -->
+<div class="bg-surface-container/70 p-space-md rounded-lg shadow-md relative group transition-all hover:bg-surface-container">
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded bg-surface-variant flex items-center justify-center text-[10px] text-on-surface font-bold">2</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pl-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">STRATUM 02 // GLASS FRAMES</span>
+<span class="font-code-timecode text-[11px] text-outline bg-surface-container-lowest px-1.5 py-0.5 rounded">Z: -120.00m</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1">Concept Frames &amp; Territory Clustered Groupings</p>
+<p class="font-body-sm text-body-sm text-outline">Smoked glass spatial compositions; Concept B narrative tension locks.</p>
+</div>
+<div class="text-right flex md:flex-col items-center md:items-end justify-between gap-1">
+<span class="font-code-timecode text-code-timecode text-tertiary-fixed-dim">01:58:12:04</span>
+<span class="font-label-sm text-label-sm text-outline px-2 py-0.5 bg-surface-container-lowest rounded">RESTORED COMPONENT</span>
+</div>
+</div>
+</div>
+<!-- Filament Vector 2 to 3 -->
+<div class="flex items-center gap-space-md px-space-lg">
+<div class="w-px h-6 bg-surface-variant"></div>
+<span class="font-code-timecode text-[10px] text-outline">RETROGRADE TRACE: ΔZ -120m</span>
+</div>
+<!-- NODE 3: Stratum 03 (-240.00m) Celluloid Film Hybrid -->
+<div class="bg-surface-container/70 p-space-md rounded-lg shadow-md relative group transition-all hover:bg-surface-container">
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded bg-surface-variant flex items-center justify-center text-[10px] text-on-surface font-bold">3</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pl-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">STRATUM 03 // FILM HYBRID</span>
+<span class="font-code-timecode text-[11px] text-outline bg-surface-container-lowest px-1.5 py-0.5 rounded">Z: -240.00m</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1">Visual Tone Nodes &amp; Celluloid Optical Stills</p>
+<p class="font-body-sm text-body-sm text-outline">16:9 Anamorphic grain calibration, 3-strip color saturation falloff.</p>
+</div>
+<div class="text-right flex md:flex-col items-center md:items-end justify-between gap-1">
+<span class="font-code-timecode text-code-timecode text-tertiary-fixed-dim">00:44:09:12</span>
+<span class="font-label-sm text-label-sm text-outline px-2 py-0.5 bg-surface-container-lowest rounded">RESTORED COMPONENT</span>
+</div>
+</div>
+</div>
+<!-- Filament Vector 3 to 4 -->
+<div class="flex items-center gap-space-md px-space-lg">
+<div class="w-px h-6 bg-surface-variant"></div>
+<span class="font-code-timecode text-[10px] text-outline">RETROGRADE TRACE: ΔZ -120m</span>
+</div>
+<!-- NODE 4: Stratum 04 (-360.00m) The Paper & Conformed Manuscript -->
+<div class="bg-surface-container-low p-space-md rounded-lg shadow-md relative group transition-all hover:bg-surface-container-high">
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded bg-primary-container flex items-center justify-center text-[10px] text-on-primary-container font-bold">4</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pl-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary">STRATUM 04 // THE PAPER MANUSCRIPT</span>
+<span class="font-code-timecode text-[11px] text-primary bg-primary-container/10 px-1.5 py-0.5 rounded">Z: -360.00m (ORIGIN POINT OF ASCENT)</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1">Scene 04 Conformation &amp; Take 03 Canon Lock</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Conformed manuscript leaf; detached branch Take 04 [7d18a4c] severed and preserved.</p>
+</div>
+<div class="text-right flex md:flex-col items-center md:items-end justify-between gap-1">
+<span class="font-code-timecode text-code-timecode text-primary">00:00:11:04</span>
+<span class="font-label-sm text-label-sm text-primary px-2 py-0.5 bg-surface-container-lowest rounded">CANON LOCKED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Visual Verification Bar -->
+<div class="mt-space-md pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between text-outline font-label-sm text-label-sm gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>PROVENANCE VALIDATION HASH CONFIRMED: SHA256//9A2F1C8401</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>ZERO SYNTHETIC DRIFT</span>
+<span class="text-primary font-bold">100% CANON COMPLIANCE</span>
+</div>
+</div>
+</div>
+<!-- TWO CLUSTERED TILES: CHARACTER PSYCHOLOGY & SEQUENCE REEL STATUS -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Character Psychological Profile -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm mb-space-xs">
+<span class="text-primary uppercase tracking-widest">EVIDENCE NODE 03</span>
+<span class="font-code-timecode">ACTOR // Vance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Psychological Trajectory</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                The tension between biological terror and aesthetic resignation. Vance’s gaze transitions from searching the void to acknowledging the glass visor reflection.
+              </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Take 03 Performance Locked</span>
+</div>
+<span class="font-code-timecode text-[11px] text-outline">Score: 98.4% Raw Intimacy</span>
+</div>
+</div>
+<!-- Scene 04 Sequence Reel Status -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm mb-space-xs">
+<span class="text-primary uppercase tracking-widest">EVIDENCE NODE 04</span>
+<span class="font-code-timecode">CONFORM 04.1</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Scene 04 Sequence Reel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                Restored canonical cuts: 14 optical frames re-injected. Splice points aligned with sub-bass frequency dips at seconds 04, 07, and 11.
+              </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">movie_filter</span>
+<span class="font-label-sm text-label-sm text-on-surface">4K ProRes 4444 XQ Conformed</span>
+</div>
+<span class="font-code-timecode text-[11px] text-primary">9a2f1c8 COMMIT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. AVID STATION 03 INTERCHANGE LIVE TELEMETRY DOCK -->
+<div class="mt-space-lg w-full bg-surface-container-lowest/95 backdrop-blur-2xl rounded-xl p-space-lg shadow-2xl relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">cast_connected</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">AVID INTERCHANGE TELEMETRY</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="font-code-timecode text-[11px] text-secondary-fixed">STATION 03 (SYMPHONY WEST) ACTIVE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Broadcasting Token: AAF_REV_SUPERSEDE_04.3_TO_03.1</h3>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">
+              Physical cutting suite is awaiting master acknowledgment. Ingest buffer active at 10Gbps SDI pipe. Current polling tick: 08s.
+            </p>
+</div>
+</div>
+<!-- Telemetry Actions -->
+<div class="flex flex-wrap items-center gap-space-sm self-end lg:self-auto">
+<button class="px-space-md py-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors" id="rebroadcast-btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span>
+<span>RE-BROADCAST SUPERSEDE TOKEN</span>
+</button>
+<button class="px-space-md py-space-xs rounded bg-primary hover:bg-primary-fixed-dim text-on-primary font-label-md text-label-md flex items-center gap-space-xs transition-colors shadow-lg" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>INSPECT ATOMIC CONFORMANCE LEDGER</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Progress & Metric Line -->
+<div class="mt-space-md pt-space-sm grid grid-cols-2 md:grid-cols-4 gap-space-md font-label-sm text-label-sm">
+<div>
+<span class="text-outline uppercase text-[10px] block">AVID Suite Pipe</span>
+<span class="font-code-timecode text-code-timecode text-on-surface">FibreChannel 03 // Online</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[10px] block">Detached Assets</span>
+<span class="font-code-timecode text-code-timecode text-tertiary-fixed">Take 04 Preserved (Cold)</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[10px] block">Supersede Payload</span>
+<span class="font-code-timecode text-code-timecode text-primary">2.84 GB Conformance XML</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[10px] block">Sync Latency</span>
+<span class="font-code-timecode text-code-timecode text-secondary">0.042 ms (Direct Local Bus)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Logic -->
+<script>
+    // Reduced motion toggle micro-interaction
+    const motionBtn = document.getElementById('reduced-motion-btn');
+    const motionText = document.getElementById('motion-mode-text');
+    let isReducedMotion = true;
+
+    if (motionBtn && motionText) {
+      motionBtn.addEventListener('click', () => {
+        isReducedMotion = !isReducedMotion;
+        if (isReducedMotion) {
+          motionText.textContent = 'REDUCED MOTION: ARMED / ACCELERATED TELEPORT';
+          motionBtn.classList.remove('text-primary');
+        } else {
+          motionText.textContent = 'FLUID CINEMATIC DOLLY: ACTIVE';
+          motionBtn.classList.add('text-primary');
+        }
+      });
+    }
+
+    // Re-broadcast token micro-interaction
+    const rebroadcastBtn = document.getElementById('rebroadcast-btn');
+    if (rebroadcastBtn) {
+      rebroadcastBtn.addEventListener('click', () => {
+        const originalText = rebroadcastBtn.innerHTML;
+        rebroadcastBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary animate-spin">autorenew</span><span>TRANSMITTING TOKEN...</span>';
+        setTimeout(() => {
+          rebroadcastBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-secondary">check</span><span>ACK SIGNAL RE-SENT (08s)</span>';
+          setTimeout(() => {
+            rebroadcastBtn.innerHTML = originalText;
+          }, 2400);
+        }, 900);
+      });
+    }
+  </script>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.85)] border-t border-surface-variant/30"><div class="h-20 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">tune</span><span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Descent Controller</span></div><div class="h-6 w-px bg-surface-variant"></div><div class="flex items-center gap-space-md font-label-sm text-label-sm text-tertiary"><div class="flex items-center gap-space-xs"><span class="text-outline">DOLLY:</span><span class="text-on-surface font-code-timecode text-code-timecode">X +042.80</span></div><div class="flex items-center gap-space-xs"><span class="text-outline">AXIS:</span><span class="text-on-surface font-code-timecode text-code-timecode">Y -018.15</span></div><div class="flex items-center gap-space-xs"><span class="text-primary">Z-PLANE:</span><span class="text-primary font-code-timecode text-code-timecode">0.00m (SURFACE)</span></div></div></div><nav class="flex items-center gap-space-xs bg-surface-container-low px-space-xs py-space-xs rounded" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase" data-path="stage-discover" href="#">Discover</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase" data-path="stage-invent" href="#">Invent</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase" data-path="stage-evolve" href="#">Evolve</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase" data-path="stage-produce" href="#">Produce</a></nav><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded text-outline font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px] text-primary">vertical_align_bottom</span><span>STRATUM 01 LOCKED</span></div><button class="px-space-md py-space-xs rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-colors flex items-center gap-space-xs" type="button"><span class="material-symbols-outlined text-[16px]">unfold_more</span><span>ASCEND / DESCEND</span></button></div></div></footer></body></html>

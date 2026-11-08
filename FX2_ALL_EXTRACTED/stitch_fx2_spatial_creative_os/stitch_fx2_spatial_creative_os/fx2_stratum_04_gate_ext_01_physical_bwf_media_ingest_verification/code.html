@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ffb4ab", "inverse-on-surface": "#303033", "on-tertiary": "#31312c", "tertiary-fixed-dim": "#c9c6c0", "on-primary-container": "#5c0000", "on-primary-fixed": "#410000", "on-primary": "#690000", "surface-bright": "#38393b", "primary-fixed-dim": "#ffb4a8", "on-secondary-fixed-variant": "#881f00", "surface-container-lowest": "#0d0e10", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#930000", "inverse-primary": "#bf0904", "primary": "#ffb4a8", "on-secondary-container": "#ffa58d", "surface-variant": "#343537", "on-secondary-fixed": "#3c0800", "surface-container": "#1f2022", "outline-variant": "#5d403b", "tertiary-fixed": "#e5e2db", "surface-container-high": "#292a2c", "surface-container-highest": "#343537", "surface-tint": "#ffb4a8", "tertiary-container": "#92918b", "secondary": "#ffb4a1", "on-surface-variant": "#e6bdb7", "secondary-container": "#912100", "secondary-fixed-dim": "#ffb4a1", "tertiary": "#c9c6c0", "primary-container": "#ff5541", "background": "#121315", "error-container": "#93000a", "on-tertiary-fixed": "#1c1c18", "inverse-surface": "#e3e2e5", "on-surface": "#e3e2e5", "on-tertiary-fixed-variant": "#474742", "on-tertiary-container": "#2a2a25", "secondary-fixed": "#ffdbd2", "on-error": "#690005", "surface": "#121315", "on-background": "#e3e2e5", "outline": "#ad8882", "surface-container-low": "#1b1c1e", "on-secondary": "#611300", "primary-fixed": "#ffdad4", "surface-dim": "#121315" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-lg": "3.5rem", "gutter-lg": "2rem", "space-sm": "0.5rem", "margin": "2rem", "space-md": "1rem", "gutter": "1.25rem", "margin-sm": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter-sm": "0.75rem", "space-lg": "1.5rem" }, "fontFamily": { "code-timecode": [ "JetBrains Mono" ], "display-lg": [ "Playfair Display" ], "label-lg": [ "Inter" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Playfair Display" ], "display-md": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "display-md-mobile": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "headline-sm": [ "Inter" ], "label-md": [ "JetBrains Mono" ], "label-sm": [ "JetBrains Mono" ], "body-sm": [ "Inter" ] }, "fontSize": { "code-timecode": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "display-lg": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-lg": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "display-md": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" } ], "display-md-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-xs"><div class="w-2.5 h-2.5 bg-primary-container rounded-[1px]"></div><span class="font-code-timecode text-code-timecode uppercase tracking-widest text-on-surface">FX2 STRATA</span></div><span class="font-label-sm text-label-sm px-space-xs py-[2px] bg-surface-container-highest text-tertiary rounded-DEFAULT tracking-wider">CORE v4.0.2</span></div><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-widest font-semibold">Strata Traversal</span></div><nav class="flex flex-col gap-y-[1px] px-space-xs" data-active-classes="bg-surface-container-high text-primary font-code-timecode border-l-2 border-primary"><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md rounded-DEFAULT" data-path="stratum-01-light-table" href="#"><span class="flex items-center gap-space-xs"><span class="text-tertiary-container">01</span><span>Light Table</span></span><span class="font-code-timecode text-label-sm text-tertiary-container">Z: 0.00m</span></a><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md rounded-DEFAULT" data-path="stratum-02-glass-frames" href="#"><span class="flex items-center gap-space-xs"><span class="text-tertiary-container">02</span><span>Glass Frames</span></span><span class="font-code-timecode text-label-sm text-tertiary-container">Z: -120.00m</span></a><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md rounded-DEFAULT" data-path="stratum-03-film-hybrid" href="#"><span class="flex items-center gap-space-xs"><span class="text-tertiary-container">03</span><span>Film Hybrid</span></span><span class="font-code-timecode text-label-sm text-tertiary-container">Z: -240.00m</span></a><a class="flex items-center justify-between px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md rounded-DEFAULT" data-path="stratum-04-the-paper" href="#"><span class="flex items-center gap-space-xs"><span class="text-tertiary-container">04</span><span>The Paper</span></span><span class="font-code-timecode text-label-sm text-tertiary-container">Z: -360.00m</span></a></nav><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-widest font-semibold">Inspection Modules</span></div><nav class="flex flex-col gap-y-[1px] px-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-DEFAULT"><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md rounded-DEFAULT" data-path="bwf-sync-matrix" href="#"><span class="material-symbols-outlined text-[16px]">grid_4x4</span><span>BWF Sync Matrix</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md rounded-DEFAULT" data-path="stem-topology" href="#"><span class="material-symbols-outlined text-[16px]">account_tree</span><span>Stem Topology</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md rounded-DEFAULT" data-path="timereference-ledger" href="#"><span class="material-symbols-outlined text-[16px]">receipt_long</span><span>TimeReference Ledger</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md rounded-DEFAULT" data-path="phase-subframe-drift" href="#"><span class="material-symbols-outlined text-[16px]">graphic_eq</span><span>Phase &amp; Sub-Frame Drift</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md rounded-DEFAULT" data-path="take-quarantine-vault" href="#"><span class="material-symbols-outlined text-[16px]">lock_clock</span><span>Take Quarantine Vault</span></a></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Sample Rate Clock</span><div class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></div></div><div class="flex items-baseline justify-between"><span class="font-code-timecode text-code-timecode text-on-surface">48.000 kHz</span><span class="font-code-timecode text-label-sm text-secondary">24.000 FPS</span></div><div class="font-label-sm text-label-sm text-tertiary-container tracking-wider">NDF SMPTE ST 12-1</div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)] z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-DEFAULT"><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-container">Active Stratum</span><span class="font-code-timecode text-label-md text-primary font-semibold">04 The Paper [-360.00m]</span></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-high px-space-sm py-space-xs rounded-DEFAULT"><span class="font-label-sm text-label-sm text-tertiary-container uppercase">Anchor</span><span class="font-code-timecode text-label-sm text-on-surface">Commit 9a2f1c8 [Tk-03]</span></div><div class="hidden 2xl:flex items-center gap-space-xs bg-secondary-container/40 text-on-secondary-container px-space-sm py-space-xs rounded-DEFAULT"><span class="material-symbols-outlined text-[14px]">lock</span><span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Read-Only Audit Mode // Mutation Locked</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-DEFAULT"><span class="material-symbols-outlined text-[16px] text-primary-container">timer</span><span class="font-code-timecode text-code-timecode text-on-surface">00:00:11:04</span><span class="font-label-sm text-label-sm text-tertiary-container uppercase">NDF</span></div><div class="flex items-center gap-space-sm"><button aria-label="Telemetry Notifications" class="w-8 h-8 rounded-DEFAULT bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background px-space-md"><div class="flex flex-col w-full pb-margin-lg">
+<!-- Stratum Overhead Telemetry Ribbon -->
+<div class="w-full bg-surface-container-lowest shadow-2xl p-space-md mb-gutter">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded-DEFAULT">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-code-timecode text-label-sm text-error uppercase tracking-widest font-semibold">BUS OFFLINE</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">GATE EXT-01</span>
+<span class="text-on-surface-variant font-code-timecode text-label-md">:: BWF Ingest &amp; Bitstream Verification</span>
+</div>
+<span class="hidden sm:inline-block font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container text-tertiary rounded-DEFAULT tracking-wider">STRATUM 04 // THE PAPER [-360.00m]</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock</span>
+<span class="font-code-timecode text-label-sm text-on-surface-variant">WRITE-BLOCK:</span>
+<span class="font-code-timecode text-label-sm text-primary font-semibold">ENGAGED (HARDWARE DIODE)</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-[15px] text-error">sd_card_alert</span>
+<span class="font-code-timecode text-label-sm text-on-surface-variant">HOST PORT:</span>
+<span class="font-code-timecode text-label-sm text-error font-semibold">UNRESOLVED eSATAp/NVMe</span>
+</div>
+</div>
+</div>
+<!-- Authoritative Blocker Banner (Severe Obsidian & Red Tone) -->
+<div class="mt-space-md p-space-md bg-surface-container-low shadow-inner">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 flex-shrink-0 bg-primary-container/20 flex items-center justify-center rounded-DEFAULT text-primary-container">
+<span class="material-symbols-outlined text-[24px]">do_not_disturb_on</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-code-timecode text-primary-container font-bold tracking-wider">STATUS: BLOCKED — AWAITING PHYSICAL MEDIA</span>
+<span class="px-space-xs py-0.5 bg-error-container text-on-error-container font-label-sm text-label-sm uppercase font-semibold rounded-DEFAULT">CRITICAL HARDWARE AUDIT STOP</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed max-w-4xl">
+              Physical Scorpio multi-track cartridge / Dante SSD bus (SN: <span class="font-code-timecode text-on-surface">SC-98842-X</span>) is unmounted. Hardware handshake awaiting physical courier transit from Soundstage 04. No synthetic media, mock bytecounts, or speculative SHA-256 digests permitted within this ledger.
+            </p>
+</div>
+</div>
+<div class="flex lg:flex-col items-end justify-between lg:justify-center gap-space-xs flex-shrink-0 bg-surface-container-lowest px-space-md py-space-sm rounded-DEFAULT">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary-container">EXT-01 AUDIT VERDICT</span>
+<span class="font-code-timecode text-headline-sm text-error font-bold tracking-wider">PENDING — INCOMPLETE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Asymmetric Technical Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- Left Column: Media Interface & Awaiting Bitstream Matrix (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col gap-gutter">
+<!-- Section 01: Intake Physical Terminal State -->
+<section class="bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm px-space-xs py-0.5 bg-surface-container text-tertiary rounded-DEFAULT">SEC 01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Physical Media Intake Status</h2>
+</div>
+<span class="font-code-timecode text-label-sm text-tertiary-container uppercase">BUS LISTENER: PASSIVE</span>
+</div>
+<!-- Metric Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col justify-between h-24">
+<span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Target Hardware</span>
+<div>
+<div class="font-code-timecode text-code-timecode text-on-surface font-semibold">Sound Devices Scorpio</div>
+<div class="font-code-timecode text-label-sm text-tertiary">SN: SC-98842-X</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col justify-between h-24">
+<span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Physical Interface</span>
+<div>
+<div class="font-code-timecode text-code-timecode text-on-surface font-semibold">eSATAp / NVMe Bay</div>
+<div class="font-code-timecode text-label-sm text-error">NO CARRIER DETECTED</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col justify-between h-24">
+<span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Write Protection</span>
+<div>
+<div class="font-code-timecode text-code-timecode text-primary font-semibold">Hardware Diode Locked</div>
+<div class="font-code-timecode text-label-sm text-tertiary">PHY-LEVEL READ-ONLY</div>
+</div>
+</div>
+</div>
+<!-- Hardware Signal Reticle & Telemetry Terminal -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-tertiary-container">
+<span class="font-code-timecode text-label-sm tracking-wider uppercase">INGRESS BUS POLLING STREAM</span>
+<span class="font-code-timecode text-label-sm text-primary">SCAN FREQ: 1000ms</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-DEFAULT font-code-timecode text-label-sm text-tertiary flex flex-col gap-y-1">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">[00:00:11:00] INT-BUS-SCORPIO::POLL_CARRIER</span>
+<span class="text-error font-semibold">ERR_CARRIER_ABSENT</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">[00:00:11:01] PHY_DIODE::VOLTAGE_SENSE</span>
+<span class="text-tertiary">0.00V (OPEN_CIRCUIT)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">[00:00:11:02] FS_MOUNT::LOOKUP_UUID</span>
+<span class="text-error font-semibold">DEV_NODE_NULL</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">[00:00:11:04] AUDIT_GATE_GUARD::HOLD_STATE</span>
+<span class="text-primary-container font-semibold">MUTATION_LOCKED // AWAITING_COURIER</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 02: BWF Structural Inspection Specification -->
+<section class="bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm px-space-xs py-0.5 bg-surface-container text-tertiary rounded-DEFAULT">SEC 02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">EBU Tech 3285 Inspection Pipeline</h2>
+</div>
+<span class="font-code-timecode text-label-sm text-primary">ARMED &amp; WAITING</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          The extraction parser is loaded in runtime memory. As soon as the Scorpio physical NVMe is mounted via the write-block diode, the following zero-bypass validation pipeline executes instantly against the raw binary stream:
+        </p>
+<!-- Inspection Pipeline Matrix Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-md text-on-surface font-semibold">01. RIFF Header Validation</span>
+<span class="font-code-timecode text-label-sm text-tertiary-container">OFFSET: 0x00</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Asserts FourCC <span class="font-code-timecode text-on-surface">0x52494646</span> ('RIFF') and Format <span class="font-code-timecode text-on-surface">'WAVE'</span>. Integrity test halts on byte mismatch.</span>
+<div class="mt-space-xs font-code-timecode text-label-sm text-secondary font-semibold">STATUS: READY FOR STREAM</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-md text-on-surface font-semibold">02. bext Chunk Envelope</span>
+<span class="font-code-timecode text-label-sm text-tertiary-container">EBU 3285 v2</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Exact 602-byte fixed broadcast extension frame. Confirms Version=0x0002 and parses EBU UMID 64-byte block.</span>
+<div class="mt-space-xs font-code-timecode text-label-sm text-secondary font-semibold">STATUS: READY FOR STREAM</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-md text-on-surface font-semibold">03. TimeReference Extractor</span>
+<span class="font-code-timecode text-label-sm text-tertiary-container">OFFSET: 338-345</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Unpacks 64-bit unsigned integer (Little-Endian) representing sample count since midnight SMPTE anchor.</span>
+<div class="mt-space-xs font-code-timecode text-label-sm text-secondary font-semibold">STATUS: READY FOR STREAM</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-md text-on-surface font-semibold">04. Modulation &amp; CodingHistory</span>
+<span class="font-code-timecode text-label-sm text-tertiary-container">PCM LINEAR</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Verifies 48,000 Hz, 24-bit mono channel mapping and parses CRLF-terminated ASCII equipment chain records.</span>
+<div class="mt-space-xs font-code-timecode text-label-sm text-secondary font-semibold">STATUS: READY FOR STREAM</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-high rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Synthetics Policy:</span>
+<span class="font-code-timecode text-label-sm text-on-surface">ZERO-SYNTHETIC DATA GUARANTEE ACTIVE</span>
+</div>
+<span class="font-code-timecode text-label-sm text-primary">BITSTREAM UNLOADED</span>
+</div>
+</section>
+<!-- Section 03: Target TimeReference Matrix vs Expected Design Benchmarks -->
+<section class="bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm px-space-xs py-0.5 bg-surface-container text-tertiary rounded-DEFAULT">SEC 03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Expected TimeReference Benchmarks</h2>
+</div>
+<span class="font-code-timecode text-label-sm text-secondary">CALIBRATED: 48kHz</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-code-timecode text-label-md border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest text-tertiary-container font-label-sm uppercase">
+<th class="py-space-xs px-space-sm">Stem Track ID</th>
+<th class="py-space-xs px-space-sm">Expected Samples</th>
+<th class="py-space-xs px-space-sm">Expected TC (NDF)</th>
+<th class="py-space-xs px-space-sm">Invariance Spec</th>
+<th class="py-space-xs px-space-sm text-right">Physical Status</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="py-space-xs px-space-sm font-semibold flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span>A1 Vance Principal</span>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">187,200,000</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">01:05:00:00</td>
+<td class="py-space-xs px-space-sm text-tertiary">0 sample offset</td>
+<td class="py-space-xs px-space-sm text-right text-error font-semibold">PENDING MEDIA</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="py-space-xs px-space-sm font-semibold flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span>A2 Respiration</span>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">187,200,000</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">01:05:00:00</td>
+<td class="py-space-xs px-space-sm text-tertiary">0 sample offset</td>
+<td class="py-space-xs px-space-sm text-right text-error font-semibold">PENDING MEDIA</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="py-space-xs px-space-sm font-semibold flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="text-primary">A3 Thrusters (Cold-Gas)</span>
+</td>
+<td class="py-space-xs px-space-sm text-primary font-bold">187,200,012</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">01:05:00:00+12</td>
+<td class="py-space-xs px-space-sm text-primary-fixed-dim font-semibold">+12 smp (+0.25ms) LOCKED</td>
+<td class="py-space-xs px-space-sm text-right text-error font-semibold">PENDING MEDIA</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="py-space-xs px-space-sm font-semibold flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span>A4 Void Tone</span>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">187,200,000</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">01:05:00:00</td>
+<td class="py-space-xs px-space-sm text-tertiary">0 sample offset</td>
+<td class="py-space-xs px-space-sm text-right text-error font-semibold">PENDING MEDIA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-xs bg-surface-container-lowest text-tertiary-container font-label-sm text-label-sm">
+          NOTE: A3 hardware offset invariance (+12 samples / +0.25ms DSP buffer delay) is preserved intact per sound designer master sheet. Verification awaiting physical bitstream.
+        </div>
+</section>
+</div>
+<!-- Right Column: Cryptographic Ledger & Audit Lineage (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col gap-gutter">
+<!-- Section 04: Cryptographic Zero-Hallucination Ledger -->
+<section class="bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm px-space-xs py-0.5 bg-surface-container text-tertiary rounded-DEFAULT">SEC 04</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Cryptographic Ledger</h2>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-highest text-tertiary-fixed font-label-sm uppercase rounded-DEFAULT">SHA-256 ZERO RULE</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT border-l-2 border-primary-container">
+<div class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Mandate 404-CHKSUM</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+            Under no circumstances are simulated hashes or placeholder digests generated. Bitstream digests are computed only when physical IO buffers yield real bytes through the kernel driver.
+          </p>
+</div>
+<!-- Stem Hash Table -->
+<div class="flex flex-col gap-space-xs font-code-timecode">
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm">
+<span class="text-on-surface font-semibold">A1_VANCE_PRINCIPAL.BWF</span>
+<span class="text-error font-bold">UNRESOLVED</span>
+</div>
+<div class="text-label-sm text-tertiary-container break-all">
+              AWAITING BITSTREAM EXTRACTION — NO HASH FABRICATION
+            </div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm">
+<span class="text-on-surface font-semibold">A2_RESPIRATION.BWF</span>
+<span class="text-error font-bold">UNRESOLVED</span>
+</div>
+<div class="text-label-sm text-tertiary-container break-all">
+              AWAITING BITSTREAM EXTRACTION — NO HASH FABRICATION
+            </div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm">
+<span class="text-primary font-semibold">A3_THRUSTERS_COLDGAS.BWF</span>
+<span class="text-error font-bold">UNRESOLVED</span>
+</div>
+<div class="text-label-sm text-tertiary-container break-all">
+              AWAITING BITSTREAM EXTRACTION — NO HASH FABRICATION
+            </div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm">
+<span class="text-on-surface font-semibold">A4_VOID_TONE.BWF</span>
+<span class="text-error font-bold">UNRESOLVED</span>
+</div>
+<div class="text-label-sm text-tertiary-container break-all">
+              AWAITING BITSTREAM EXTRACTION — NO HASH FABRICATION
+            </div>
+</div>
+</div>
+</section>
+<!-- Section 05: Consolidated Gate EXT-01 Ledger -->
+<section class="bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm px-space-xs py-0.5 bg-surface-container text-tertiary rounded-DEFAULT">SEC 05</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Ingest Verification Matrix</h2>
+</div>
+<span class="w-2.5 h-2.5 bg-error-container rounded-full"></span>
+</div>
+<div class="space-y-space-xs font-code-timecode text-label-md">
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-DEFAULT">
+<span class="text-on-surface font-semibold">STEM A1 INGEST</span>
+<span class="text-error font-bold">BLOCKER (MEDIA ABSENT)</span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-DEFAULT">
+<span class="text-on-surface font-semibold">STEM A2 INGEST</span>
+<span class="text-error font-bold">BLOCKER (MEDIA ABSENT)</span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-DEFAULT">
+<span class="text-on-surface font-semibold">STEM A3 INGEST (+12 smp)</span>
+<span class="text-error font-bold">BLOCKER (MEDIA ABSENT)</span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-DEFAULT">
+<span class="text-on-surface font-semibold">STEM A4 INGEST</span>
+<span class="text-error font-bold">BLOCKER (MEDIA ABSENT)</span>
+</div>
+</div>
+<div class="mt-space-xs p-space-sm bg-surface-container-highest rounded-DEFAULT flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-container">AUDIT GATE SUMMARY</span>
+<div class="font-headline-sm text-headline-sm text-error">
+            GATE EXT-01: PENDING — PHYSICAL BWF INGEST INCOMPLETE
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Workflow execution blocked until courier delivery is received and Scorpio hardware controller is detected on bus SVA-04.
+          </p>
+</div>
+</section>
+<!-- Section 06: Canonical Lineage & Cold Quarantine Anchor -->
+<section class="bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm px-space-xs py-0.5 bg-surface-container text-tertiary rounded-DEFAULT">SEC 06</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Preserved Lineage Anchor</h2>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+</div>
+<!-- Take 03 Canonical Reference Card -->
+<div class="p-space-md bg-surface-container-lowest rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-container">CANONICAL ANCHOR (TAKE 03)</span>
+<span class="font-code-timecode text-label-sm text-primary">COMMIT: 9a2f1c8</span>
+</div>
+<p class="font-display-md text-headline-sm text-on-surface italic mt-space-xs">
+            "We aren't falling through space. We're falling through memory."
+          </p>
+<div class="mt-space-sm flex items-center justify-between text-tertiary-container font-code-timecode text-label-sm pt-space-xs border-t border-surface-container-high">
+<span>SPEAKER: VANCE (PRINCIPAL)</span>
+<span class="text-secondary">DESIGN FREEZE: IMMUTABLE</span>
+</div>
+</div>
+<!-- Quarantine Notice -->
+<div class="p-space-sm bg-surface-container-lowest rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">ac_unit</span>
+<div>
+<div class="font-code-timecode text-label-md text-on-surface">Sub-Vault 02 Cold Quarantine</div>
+<div class="font-body-sm text-body-sm text-tertiary">Take 04 Variants (tk04_altA, tk04_altB) Sealed</div>
+</div>
+</div>
+<span class="font-code-timecode text-label-sm px-space-xs py-0.5 bg-surface-container-high text-tertiary-container rounded-DEFAULT">LOCKED</span>
+</div>
+</section>
+</div>
+</div>
+<!-- Real-time Hardware Listener Terminal Bar -->
+<div class="mt-gutter p-space-md bg-surface-container-lowest shadow-2xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-error animate-pulse"></div>
+<div class="font-code-timecode text-label-md text-on-surface">
+        DAEMON LISTENER: <span class="text-on-surface-variant font-normal">/dev/scorpio_bus_04 listening for physical mount interrupt...</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-colors rounded-DEFAULT flex items-center gap-space-xs cursor-not-allowed opacity-60" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Re-Poll eSATAp Bus</span>
+</button>
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-lg text-label-lg transition-colors rounded-DEFAULT flex items-center gap-space-xs opacity-40 cursor-not-allowed" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Run EBU 3285 Ingest</span>
+</button>
+</div>
+</div>
+</div></main></div></body></html>
