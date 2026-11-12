@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#e3e2e5","surface-container-highest":"#343537","surface-variant":"#343537","on-secondary-fixed-variant":"#881f00","surface-dim":"#121315","surface-container":"#1f2022","on-primary-fixed-variant":"#930000","primary-fixed-dim":"#ffb4a8","primary-fixed":"#ffdad4","tertiary-fixed":"#e5e2db","outline-variant":"#5d403b","on-tertiary-fixed-variant":"#474742","tertiary":"#c9c6c0","surface-container-lowest":"#0d0e10","inverse-on-surface":"#303033","on-tertiary":"#31312c","error":"#ffb4ab","tertiary-fixed-dim":"#c9c6c0","surface-container-high":"#292a2c","primary-container":"#ff5541","on-surface-variant":"#e6bdb7","on-background":"#e3e2e5","on-primary-fixed":"#410000","on-surface":"#e3e2e5","on-primary-container":"#5c0000","on-error-container":"#ffdad6","inverse-primary":"#bf0904","primary":"#ffb4a8","on-tertiary-container":"#2a2a25","secondary-fixed":"#ffdbd2","on-error":"#690005","tertiary-container":"#92918b","secondary-fixed-dim":"#ffb4a1","background":"#121315","on-secondary":"#611300","on-primary":"#690000","secondary-container":"#912100","error-container":"#93000a","outline":"#ad8882","surface":"#121315","surface-tint":"#ffb4a8","surface-container-low":"#1b1c1e","secondary":"#ffb4a1","on-tertiary-fixed":"#1c1c18","on-secondary-container":"#ffa58d","on-secondary-fixed":"#3c0800","surface-bright":"#38393b"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-sm":"0.75rem","space-xs":"0.25rem","gutter":"1.25rem","margin":"2rem","margin-sm":"1rem","space-xl":"2.5rem","gutter-lg":"2rem","space-sm":"0.5rem","space-md":"1rem","space-lg":"1.5rem","margin-lg":"3.5rem"},"fontFamily":{"display-md-mobile":["Playfair Display"],"display-lg":["Playfair Display"],"display-md":["Playfair Display"],"body-md":["Inter"],"headline-md":["Playfair Display"],"label-md":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"display-lg-mobile":["Playfair Display"],"label-lg":["Inter"],"code-timecode":["JetBrains Mono"],"headline-sm":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-lg":["Playfair Display"]},"fontSize":{"display-md-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"display-md":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"code-timecode":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm bg-surface-container-low"><div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">FX2 Core OS</span><span class="ml-auto font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-tertiary">v4.0.2</span></div><div class="px-gutter pt-space-lg pb-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Strata Traversal</span></div><nav class="flex flex-col gap-0.5 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_16px_rgba(242,56,39,0.2)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stratum-01-light-table" href="#"><span class="font-label-md text-label-md text-outline">01</span><span class="font-body-md text-body-md flex-1">Light Table</span><span class="font-label-sm text-label-sm text-tertiary">-090m</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stratum-02-glass-frames" href="#"><span class="font-label-md text-label-md text-outline">02</span><span class="font-body-md text-body-md flex-1">Glass Frames</span><span class="font-label-sm text-label-sm text-tertiary">-180m</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stratum-03-film-hybrid" href="#"><span class="font-label-md text-label-md text-outline">03</span><span class="font-body-md text-body-md flex-1">Film Hybrid</span><span class="font-label-sm text-label-sm text-tertiary">-270m</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_16px_rgba(242,56,39,0.2)]" data-path="stratum-04-the-paper" href="#"><span class="font-label-md text-label-md text-outline">04</span><span class="font-body-md text-body-md flex-1">The Paper</span><span class="font-label-sm text-label-sm text-primary">-360m</span></a></nav><div class="px-gutter pt-space-lg pb-space-sm mt-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Inspection Modules</span></div><nav class="flex flex-col gap-0.5 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="celluloid-registry" href="#"><span class="material-symbols-outlined text-[18px] text-tertiary">cloud_download</span><span class="font-body-md text-body-md flex-1">Celluloid Registry</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="spatial-stage-telemetry" href="#"><span class="material-symbols-outlined text-[18px] text-tertiary">layers</span><span class="font-body-md text-body-md flex-1">Stage Telemetry</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="script-node-manifest" href="#"><span class="material-symbols-outlined text-[18px] text-tertiary">article</span><span class="font-body-md text-body-md flex-1">Script Manifest</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-security-vault" href="#"><span class="material-symbols-outlined text-[18px] text-tertiary">security</span><span class="font-body-md text-body-md flex-1">Vault Ledger</span></a></nav></div><div class="p-gutter bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm">SEC INTEGRITY</span><span class="font-label-sm text-label-sm text-primary">ENFORCED</span></div><div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden"><div class="w-full h-full bg-primary"></div></div><div class="flex items-center justify-between pt-space-xs text-outline"><span class="font-label-sm text-label-sm">Z-AXIS LOCK</span><span class="font-code-timecode text-code-timecode text-on-surface">-360.00m</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">archive</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">FX2 Archival Suite</span></div><div class="hidden xl:flex items-center gap-space-sm px-space-md py-1 bg-surface-container rounded"><span class="font-label-sm text-label-sm text-tertiary">SMPTE</span><span class="font-code-timecode text-code-timecode text-primary tracking-widest">00:00:11:04 NDF</span></div><div class="hidden md:flex items-center gap-space-xs px-space-md py-1 bg-surface-container rounded"><span class="font-label-sm text-label-sm text-outline">STRATUM:</span><span class="font-label-md text-label-md text-on-surface font-semibold">04 The Paper</span><span class="font-code-timecode text-code-timecode text-secondary">(-360.00m)</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-1 bg-secondary-container/30 rounded shadow-[0_0_8px_rgba(145,33,0,0.25)]"><span class="material-symbols-outlined text-primary text-[16px]">lock</span><span class="font-label-sm text-label-sm text-primary font-semibold tracking-wide uppercase">Read-Only Audit Mode</span><span class="font-label-sm text-label-sm text-outline px-1">|</span><span class="font-label-sm text-label-sm text-on-secondary-container">Write Forbidden</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Micro Ambient Aura -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 right-12 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-96 -left-20 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="p-gutter-lg max-w-[1720px] mx-auto flex flex-col gap-space-xl relative z-10">
+<!-- 1. HERO AUDIT HEADER & STRATUM BANNER -->
+<section class="flex flex-col gap-space-md">
+<!-- Safety & Quarantine Ribbon -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm p-space-sm bg-surface-container-lowest rounded shadow-sm">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-secondary-container/40 text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              READ-ONLY AUDIT MODE // WRITE FORBIDDEN // REPOSITORY MUTATION LOCKED
+            </span>
+<span class="text-tertiary font-label-sm text-label-sm">|</span>
+<span class="font-label-sm text-label-sm text-tertiary tracking-wider">CANONICAL HASH: <span class="text-on-surface font-code-timecode text-code-timecode">9a2f1c8::v4.2</span></span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[14px] text-primary">gavel</span>
+<span>SUB-VAULT 02 COLD QUARANTINE: <span class="text-primary font-code-timecode text-code-timecode">7d18a4c</span></span>
+</div>
+</div>
+<!-- Stratum Breadcrumb & Editorial Header -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg pt-space-xs">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="flex items-center gap-space-xs text-outline font-label-md text-label-md uppercase tracking-widest">
+<span>Terminus Plane</span>
+<span>//</span>
+<span class="text-secondary">Z = -360.00m</span>
+<span>//</span>
+<span class="text-tertiary">Substrate: 100% Cotton Rag Manuscript v4.2</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+              Scene 04 Dialogue Timing &amp; Frame Boundary Audit
+            </h1>
+<p class="font-body-md text-body-md text-tertiary leading-relaxed">
+              Rigorous mathematical verification of SMPTE 24.000 fps NDF timecode boundaries, Out-point inclusive/elapsed delta disambiguation, 800-frame dialogue offset, and sample-accurate A/V synchronization contracts.
+            </p>
+</div>
+<!-- Quick Telemetry Badge Deck -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm p-space-sm bg-surface-container-low rounded shadow-md">
+<div class="flex flex-col px-space-sm py-1 bg-surface-container rounded">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Timebase</span>
+<span class="font-code-timecode text-code-timecode text-on-surface">24.000 fps NDF</span>
+</div>
+<div class="flex flex-col px-space-sm py-1 bg-surface-container rounded">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Elapsed Delta</span>
+<span class="font-code-timecode text-code-timecode text-primary">2,198 f <span class="text-tertiary text-label-sm">(91.5833s)</span></span>
+</div>
+<div class="flex flex-col px-space-sm py-1 bg-surface-container rounded">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Inclusive Count</span>
+<span class="font-code-timecode text-code-timecode text-secondary">2,199 f <span class="text-tertiary text-label-sm">(91.6250s)</span></span>
+</div>
+<div class="flex flex-col px-space-sm py-1 bg-surface-container rounded">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Offset Pad</span>
+<span class="font-code-timecode text-code-timecode text-tertiary-fixed">+800 f <span class="text-tertiary text-label-sm">(33.3333s)</span></span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. CORE MATHEMATICAL TIMING VERIFICATION (SIDE-BY-SIDE LEDGER) -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Card 1: Timecode to Frame Arithmetic -->
+<div class="flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">calculate</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Timecode to Frame Arithmetic</span>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> PASS — Recalculated
+            </span>
+</div>
+<div class="space-y-space-sm text-body-sm text-tertiary pt-space-xs">
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-outline">Scene In Point</span>
+<span class="font-code-timecode text-code-timecode text-on-surface">00:00:11:04</span>
+</div>
+<p class="font-label-sm text-label-sm text-tertiary">
+                (11 sec × 24 fps) + 4 frames = 264 + 4 = <span class="text-primary font-semibold">268 Frames</span> from origin (00:00:00:00).
+              </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-outline">Scene Out Point</span>
+<span class="font-code-timecode text-code-timecode text-on-surface">00:01:42:18</span>
+</div>
+<p class="font-label-sm text-label-sm text-tertiary">
+                (1 min × 1,440f) + (42 sec × 24f) + 18f = 1,440 + 1,008 + 18 = <span class="text-primary font-semibold">2,466 Frames</span> from origin.
+              </p>
+</div>
+<div class="p-space-sm bg-surface-container-highest rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Elapsed Mathematical Delta</span>
+<span class="font-code-timecode text-code-timecode text-primary font-semibold">2,198 Frames</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                2,466 − 268 = <span class="font-code-timecode text-code-timecode text-primary">2,198 Frames</span> = exactly 91.5833 seconds (91s 14 frames).
+              </p>
+</div>
+<div class="mt-space-xs p-space-sm bg-surface-container-lowest rounded flex gap-space-xs items-start">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5">history_toggle_off</span>
+<p class="font-label-sm text-label-sm text-outline leading-tight">
+<strong class="text-tertiary uppercase">Historical Discrepancy Rectified:</strong> Prior editorial cutsheet mislabeled elapsed duration as 2,194 frames (91.42s) by dropping the 4-frame remainder. Validated and certified at 2,198 frames.
+              </p>
+</div>
+</div>
+</div>
+<!-- Card 2: Out-Point Inclusive vs Elapsed Convention -->
+<div class="flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">straighten</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Out-Point Metric Disambiguation</span>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> PASS — Formalized
+            </span>
+</div>
+<div class="space-y-space-sm text-body-sm text-tertiary pt-space-xs">
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Elapsed Difference</span>
+<span class="font-code-timecode text-code-timecode text-on-surface font-semibold text-[16px]">2,198 Frames</span>
+<span class="font-label-sm text-label-sm text-tertiary">91.5833 seconds</span>
+<p class="font-body-sm text-body-sm text-outline text-[11px] pt-1 leading-snug">
+                  Formula: Out − In (2,466 − 268). Used for sequence length, track gap calculations, and audio sync offsets.
+                </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Inclusive Render Count</span>
+<span class="font-code-timecode text-code-timecode text-secondary font-semibold text-[16px]">2,199 Frames</span>
+<span class="font-label-sm text-label-sm text-tertiary">91.6250 seconds</span>
+<p class="font-body-sm text-body-sm text-outline text-[11px] pt-1 leading-snug">
+                  Formula: (Out − In) + 1. Represents the absolute rendered celluloid/DCP frame count inclusive of boundary tail.
+                </p>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface">SMPTE 12M &amp; NLE Standard Resolution</span>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+                Avid Media Composer and SMPTE 12M treat the recorded Out-point as a playhead boundary anchor (non-inclusive cut cursor). Therefore, the timeline elapsed clip duration is definitively settled at <span class="font-code-timecode text-code-timecode text-primary font-semibold">2,198 Frames</span>. Both standards are archived side-by-side to prevent render pipeline misalignments.
+              </p>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded font-label-sm text-label-sm">
+<span class="text-tertiary">CONVENTION SPECIFICATION:</span>
+<span class="text-on-surface font-code-timecode text-code-timecode">ISO/SMPTE-12M-24NDF-LATCH</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. FRAME-BY-FRAME DIALOGUE PLACEMENT & INTAKE ANALYSIS -->
+<section class="flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">view_timeline</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Spatial Frame-by-Frame Sequence &amp; Dialogue Intake</h2>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Scene In Frame 268 through Scene Out Frame 2,466 with exact 800-frame pre-dialogue silence cavity</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded bg-surface-container font-code-timecode text-code-timecode text-tertiary">1 px ≈ 2.2 Frames</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded bg-secondary-container/30 text-primary font-label-sm text-label-sm uppercase font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> BOUNDARY VERIFIED
+            </span>
+</div>
+</div>
+<!-- Master Interactive Visual Bar Component -->
+<div class="flex flex-col gap-space-xs p-space-md bg-surface-container-lowest rounded-lg shadow-inner">
+<!-- Frame Ruler Markers -->
+<div class="flex justify-between items-center text-outline font-code-timecode text-code-timecode text-[11px] px-1">
+<span>F: 0268 [00:00:11:04]</span>
+<span class="text-secondary">F: 1022 [Vent 03]</span>
+<span class="text-primary font-semibold">F: 1068 [Dialogue In 00:00:44:12]</span>
+<span class="text-tertiary">F: 1212 [Dialogue Est Out]</span>
+<span>F: 2466 [00:01:42:18]</span>
+</div>
+<!-- Multi-Segment Visual Timeline Strip -->
+<div class="relative w-full h-12 bg-surface-container rounded overflow-hidden flex shadow-sm">
+<!-- Segment 1: Pre-Dialogue Silence Pad (800 Frames) -> 800 / 2198 ≈ 36.4% -->
+<div class="h-full bg-surface-container-high relative group flex items-center justify-center cursor-help transition-colors hover:bg-surface-container-highest" style="width: 36.3967%;">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase truncate px-2">Pre-Dialogue Vacuum (800f / 33.33s)</span>
+<!-- Vent 03 Indicator Line @ frame 1022 (754 frames into the 800 frame pad) = 754/800 = 94.25% -->
+<div class="absolute top-0 bottom-0 w-0.5 bg-secondary right-[5.75%]" title="Thruster Vent 03 @ F:1022">
+<span class="absolute -top-1 -left-1 w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- Segment 2: Dialogue Cadence Spoken Window (~144 Frames) -> 144 / 2198 ≈ 6.55% -->
+<div class="h-full bg-primary-container text-on-primary-container relative group flex flex-col items-center justify-center px-1 shadow-[0_0_12px_rgba(255,85,65,0.35)]" style="width: 6.5514%;">
+<span class="font-code-timecode text-code-timecode font-semibold text-[11px] truncate">144f (~6.0s)</span>
+<span class="font-label-sm text-label-sm text-[9px] uppercase tracking-tighter truncate">SPOKEN CUE</span>
+</div>
+<!-- Segment 3: Post-Dialogue Tail Vacuum (1254 Frames) -> 1254 / 2198 ≈ 57.05% -->
+<div class="h-full bg-surface-container-low relative flex items-center justify-center" style="width: 57.0519%;">
+<span class="font-label-sm text-label-sm text-tertiary tracking-wider uppercase truncate px-2">Post-Dialogue Tail Vacuum (1,254f / 52.25s)</span>
+<!-- Vent 04 Indicator Line @ frame 1363 (151 frames into 1254 tail) = 151/1254 = 12% -->
+<div class="absolute top-0 bottom-0 w-0.5 bg-outline-variant left-[12.04%]" title="Thruster Vent 04 @ F:1363"></div>
+</div>
+<!-- Absolute Scrub Reticle Head (Simulated At Dialogue Intake: 36.4%) -->
+<div class="absolute top-0 bottom-0 w-0.5 bg-primary left-[36.3967%] pointer-events-none shadow-[0_0_8px_#ff5541]">
+<div class="w-3 h-3 bg-primary rotate-45 -top-1.5 -left-1.25 absolute"></div>
+</div>
+</div>
+<!-- Timecode & Spatial Telemetry Sub-row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs font-label-sm text-label-sm">
+<div class="p-space-sm bg-surface-container rounded">
+<span class="text-outline uppercase">Intake Point Verification:</span>
+<p class="text-on-surface font-code-timecode text-code-timecode pt-0.5">
+                00:00:44:12 = (44s × 24f) + 12f = <span class="text-primary font-semibold">1,068 Frames</span>
+</p>
+</div>
+<div class="p-space-sm bg-surface-container rounded">
+<span class="text-outline uppercase">Calculated Pre-Roll Offset:</span>
+<p class="text-on-surface font-code-timecode text-code-timecode pt-0.5">
+                1,068 − 268 = <span class="text-primary font-semibold">Exactly 800 Frames</span> (33.3333s)
+              </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded">
+<span class="text-outline uppercase">Boundary Confinement Assertion:</span>
+<p class="text-on-surface font-code-timecode text-code-timecode pt-0.5">
+                Frame 268 &lt; <span class="text-primary font-semibold">1,068</span> &lt; Frame 2,466 [VALID]
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. DIALOGUE METADATA & FIELD AUDIT (CANONICAL TAKE 03 VS COLD QUARANTINE TAKE 04) -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- Left Column: Immutable Canon Take 03 (Col 7) -->
+<div class="xl:col-span-7 flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Authoritative Manuscript</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Canonical Take 03 // Commit 9a2f1c8</h3>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase font-semibold">
+              ACTIVE CANON
+            </span>
+</div>
+<!-- Manuscript Block Display -->
+<div class="p-gutter bg-surface-container rounded-lg shadow-sm flex flex-col gap-space-sm relative">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">Verbatim Spoken Dialogue (Actor: Vance // Internal Transduction)</span>
+<blockquote class="font-headline-md text-headline-md text-on-surface italic pl-space-md leading-snug">
+              “We aren’t falling through space. We’re falling through memory.”
+            </blockquote>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs font-label-sm text-label-sm text-outline">
+<span>CHARACTER: <strong class="text-on-surface font-normal">COMMANDER VANCE</strong></span>
+<span>DELIVERY: <strong class="text-on-surface font-normal">RESTRAINED / GLOTTAL DECEL</strong></span>
+<span>EST. SYLLABLE COUNT: <strong class="text-on-surface font-normal">18</strong></span>
+</div>
+</div>
+<!-- Metadata Discrepancy & Timing Hole Warning -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+                AUDIT FINDING: Out-Point TC Absent from Primary Sheet
+              </span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm uppercase font-semibold">
+                FIX REQUIRED
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+              Dialogue In is strictly pegged to <span class="font-code-timecode text-code-timecode text-on-surface">00:00:44:12</span> (Frame 1,068), but Dialogue Out / Duration is currently unquantified in cuts-register metadata. Estimated cadence length is <span class="font-code-timecode text-code-timecode text-primary font-semibold">144 frames (6.00s)</span> ending at <span class="font-code-timecode text-code-timecode text-on-surface">00:00:50:12</span> (Frame 1,212). Cutsheet must be amended with authoritative release TC.
+            </p>
+<div class="p-space-sm bg-surface-container rounded flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">graphic_eq</span>
+<span class="font-label-sm text-label-sm text-outline">
+<strong class="text-on-surface">Production Note Disambiguation:</strong> 435 Hz formant anchor and -28.4 LUFS are acoustic timbre and BWF loudness targets, <span class="text-secondary font-semibold">NOT</span> substitutes for frame duration bounds.
+              </span>
+</div>
+</div>
+</div>
+<!-- Right Column: Quarantined Take 04 & Visual Dolly Inspection (Col 5) -->
+<div class="xl:col-span-5 flex flex-col gap-gutter">
+<!-- Quarantined Variant Card -->
+<div class="flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px]">lock</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Cold Quarantine Take 04</span>
+</div>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-error font-label-sm text-label-sm font-semibold uppercase">
+                MUTATION LOCKED
+              </span>
+</div>
+<p class="font-label-sm text-label-sm text-outline">Commit 7d18a4c // Sub-Vault 02 // Draft 04.3</p>
+<div class="p-space-md bg-surface-container-lowest rounded flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Rejected Script String</span>
+<blockquote class="font-headline-sm text-headline-sm text-tertiary italic pl-space-sm">
+                “We aren’t descending through the dark. The dark is descending through us.”
+              </blockquote>
+</div>
+<div class="p-space-sm bg-surface-container rounded text-body-sm text-tertiary">
+<p class="font-label-sm text-label-sm text-outline leading-relaxed">
+                Variant permanently isolated due to semantic divergence with Stratum 01 master themes. Merging to canonical branch prohibited by repository audit lock.
+              </p>
+</div>
+</div>
+<!-- Visual Camera Dolly & Helmet Cell Card -->
+<div class="flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Spatial Staging Cell</span>
+<span class="font-code-timecode text-code-timecode text-tertiary">Z = -360.00m</span>
+</div>
+<div class="relative w-full h-36 rounded overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="High contrast cinematic celluloid frame of astronaut helmet reflection in deep obsidian descent, monochromatic grain, warm amber edge-lit dial accents, film gate sprockets on side, archival dark room aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9hxMJwV7wKVdX7iexIWp5Jpfb8vcVZTyUnYqxkIcXlLHzqEO4NlmaiQ-RU8h74nfzmcgUw-MGT1vvJZCLwpkzQ4Iv8qcyizo60k5m1--eYh-7k6SBnnS9aXloiXIjEVSsYiwAMDC_leXzQZvIqm41jGC3YMdk1O4mY9QY2s6x_VfSHP1_uXgFstRmrm1w0-Lb7EXE_3j0o02nmzt1GbqqBowaNhaRtx6dTjOPtQko"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-code-timecode text-code-timecode text-[11px] text-primary">CAM A // VERTICAL DOLLY</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-label-sm text-label-sm text-tertiary">DECELERATION CURVE: ZERO CUTS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. TIMELINE CONCURRENCY & OVERLAP CHECK (SCENE 04 CONTINUOUS CUT) -->
+<section class="flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">layers</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Continuous Cut Concurrency &amp; Thruster Micro-Vent Cycle</h2>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Verification of optical stability and acoustic event clearance against dialogue frequency spectrum</p>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> CADENCE CLEAR
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-sm">
+<!-- Vent 01 -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Vent 01 Exhaust</span>
+<span class="font-code-timecode text-code-timecode text-tertiary">Frame 341</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">T = 14.2s (00:00:14:05)</span>
+<p class="font-body-sm text-body-sm text-tertiary text-[12px] pt-1 leading-snug">
+              Offset: +73 frames from Scene In. Far ahead of vocal envelope. Transduction level: -34 dB.
+            </p>
+</div>
+<!-- Vent 02 -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Vent 02 Exhaust</span>
+<span class="font-code-timecode text-code-timecode text-tertiary">Frame 682</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">T = 28.4s (00:00:28:10)</span>
+<p class="font-body-sm text-body-sm text-tertiary text-[12px] pt-1 leading-snug">
+              Offset: +414 frames from Scene In. Mid-vacuum baseline pad. Pure silence maintained.
+            </p>
+</div>
+<!-- Vent 03 (Critical Check) -->
+<div class="p-space-md bg-surface-container-highest rounded-lg flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Vent 03 Exhaust [FLAG]</span>
+<span class="font-code-timecode text-code-timecode text-primary font-semibold">Frame 1,022</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">T = 42.6s (00:00:42:14)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] pt-1 leading-snug">
+              Occurs exactly <strong class="text-on-surface">46 frames (1.92s)</strong> prior to vocal intake at Frame 1,068. Acoustic decay finishes in 18 frames. Zero formant collision.
+            </p>
+</div>
+<!-- Vent 04 -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Vent 04 Exhaust</span>
+<span class="font-code-timecode text-code-timecode text-tertiary">Frame 1,363</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">T = 56.8s (00:00:56:19)</span>
+<p class="font-body-sm text-body-sm text-tertiary text-[12px] pt-1 leading-snug">
+              Occurs +151 frames after dialogue release. Post-dialogue tail vacuum absorbs shock wave cleanly.
+            </p>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between text-label-sm font-label-sm text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lens_blur</span>
+<span>CAMERA BEHAVIOR: Continuous Vertical Dolly Deceleration (No optical cuts or dissolves across 2,198 frames)</span>
+</div>
+<span class="text-tertiary font-code-timecode text-code-timecode">ACOUSTIC CAVITY: HELMET TRANSDUCTION ONLY</span>
+</div>
+</section>
+<!-- 6. AUDIO/VIDEO SYNCHRONIZATION & SAMPLE-ACCURACY CONTRACT -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left: Sample Arithmetic Ledger (Col 7) -->
+<div class="lg:col-span-7 flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">equalizer</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sample-Accuracy Verification Contract</h3>
+</div>
+<span class="font-code-timecode text-code-timecode text-tertiary text-label-md">48.000 kHz // 24.000 fps</span>
+</div>
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Exact Sample Clock Ratio</span>
+<p class="font-body-md text-body-md text-on-surface">
+              48,000 Samples/sec ÷ 24 Frames/sec = <span class="font-code-timecode text-code-timecode text-primary font-semibold">Exactly 2,000.00 Samples per Video Frame</span>
+</p>
+<span class="font-label-sm text-label-sm text-tertiary">Integer relationship guarantees drift-free SMPTE NDF synchronization.</span>
+</div>
+<!-- Discrete Sample Coordinate Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-highest text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="p-space-sm">Timeline Marker</th>
+<th class="p-space-sm">SMPTE TC</th>
+<th class="p-space-sm">Video Frame</th>
+<th class="p-space-sm text-right">Discrete Audio Sample</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest text-tertiary">
+<tr class="bg-surface-container/50">
+<td class="p-space-sm text-on-surface font-semibold">Scene In</td>
+<td class="p-space-sm font-code-timecode text-code-timecode">00:00:11:04</td>
+<td class="p-space-sm font-code-timecode text-code-timecode">268</td>
+<td class="p-space-sm text-right font-code-timecode text-code-timecode text-primary">536,000</td>
+</tr>
+<tr class="bg-surface-container">
+<td class="p-space-sm text-on-surface font-semibold">Vent 03 Shock</td>
+<td class="p-space-sm font-code-timecode text-code-timecode">00:00:42:14</td>
+<td class="p-space-sm font-code-timecode text-code-timecode">1,022</td>
+<td class="p-space-sm text-right font-code-timecode text-code-timecode text-secondary">2,044,000</td>
+</tr>
+<tr class="bg-surface-container/50">
+<td class="p-space-sm text-on-surface font-semibold">Dialogue Intake</td>
+<td class="p-space-sm font-code-timecode text-code-timecode">00:00:44:12</td>
+<td class="p-space-sm font-code-timecode text-code-timecode">1,068</td>
+<td class="p-space-sm text-right font-code-timecode text-code-timecode text-primary font-semibold">2,136,000</td>
+</tr>
+<tr class="bg-surface-container">
+<td class="p-space-sm text-on-surface font-semibold">Scene Out</td>
+<td class="p-space-sm font-code-timecode text-code-timecode">00:01:42:18</td>
+<td class="p-space-sm font-code-timecode text-code-timecode">2,466</td>
+<td class="p-space-sm text-right font-code-timecode text-code-timecode text-on-surface">4,932,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Right: Audio Header Schema & Sub-frame Slip Warning (Col 5) -->
+<div class="lg:col-span-5 flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md gap-space-md justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">BWF bext Chunks &amp; Slip Specs</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm uppercase font-semibold">
+                FIX REQUIRED
+              </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Sub-Frame Latch Definition</h4>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+              While the <span class="font-code-timecode text-code-timecode text-on-surface">TimeReference</span> sample count and Broadcast Wave Format <span class="font-code-timecode text-code-timecode text-on-surface">CodingHistory</span> are valid at the manifest level, physical sub-frame audio slip offset (<span class="font-code-timecode text-code-timecode text-secondary">±0.25 frame / 500 samples</span>) lacks an automated hardware validation latch.
+            </p>
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex flex-col gap-space-xs font-label-sm text-label-sm">
+<div class="flex justify-between text-outline">
+<span>TOTAL ELAPSED SAMPLES:</span>
+<span class="text-on-surface font-code-timecode text-code-timecode">4,396,000 (2,198f)</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>INCLUSIVE SAMPLES:</span>
+<span class="text-tertiary font-code-timecode text-code-timecode">4,398,000 (2,199f)</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>SLIP TOLERANCE:</span>
+<span class="text-secondary font-code-timecode text-code-timecode">&lt; 10.4 ms (0.25 frame)</span>
+</div>
+</div>
+</div>
+<!-- Micro Action Bar -->
+<div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">HARDWARE CLOCK LOCK:</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">WORD CLOCK 48 kHz LOCKED</span>
+</div>
+</div>
+</section>
+<!-- 7. AUDIT FINDINGS MATRIX (PASS / FIX / BLOCKER SCORECARD) -->
+<section class="flex flex-col p-gutter bg-surface-container-low rounded-lg shadow-md gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">checklist</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Stratum 04 Timing &amp; Boundary Findings Matrix</h2>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Formal validation rubric of all 8 timing parameters for Scene 04</p>
+</div>
+<!-- Aggregate Scorecard Pill Deck -->
+<div class="flex items-center gap-space-xs">
+<span class="px-space-md py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">6 PASS</span>
+<span class="px-space-md py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">2 FIX</span>
+<span class="px-space-md py-1 rounded bg-surface-container text-outline font-label-sm text-label-sm font-semibold">0 BLOCKER</span>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-highest text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="p-space-sm w-12 text-center">#</th>
+<th class="p-space-sm">Checkpoint Description</th>
+<th class="p-space-sm">Mathematical / Telemetry Value</th>
+<th class="p-space-sm">Confinement Rule</th>
+<th class="p-space-sm text-right">Audit Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest text-tertiary">
+<tr class="bg-surface-container/50">
+<td class="p-space-sm text-center font-code-timecode text-code-timecode text-outline">01</td>
+<td class="p-space-sm text-on-surface font-semibold">SMPTE NDF Timecode Recalculation</td>
+<td class="p-space-sm font-code-timecode text-code-timecode text-tertiary">00:00:11:04 → 00:01:42:18 (2,198f)</td>
+<td class="p-space-sm text-outline">Corrects prior typo of 2,194 frames</td>
+<td class="p-space-sm text-right">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">PASS</span>
+</td>
+</tr>
+<tr class="bg-surface-container">
+<td class="p-space-sm text-center font-code-timecode text-code-timecode text-outline">02</td>
+<td class="p-space-sm text-on-surface font-semibold">Elapsed vs. Inclusive Out-Point Standard</td>
+<td class="p-space-sm font-code-timecode text-code-timecode text-tertiary">2,198 f (Elapsed) / 2,199 f (Inclusive)</td>
+<td class="p-space-sm text-outline">Avid / SMPTE 12M non-inclusive cursor latch</td>
+<td class="p-space-sm text-right">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">PASS</span>
+</td>
+</tr>
+<tr class="bg-surface-container/50">
+<td class="p-space-sm text-center font-code-timecode text-code-timecode text-outline">03</td>
+<td class="p-space-sm text-on-surface font-semibold">Dialogue Intake Boundary Confinement</td>
+<td class="p-space-sm font-code-timecode text-code-timecode text-tertiary">Frame 1,068 (00:00:44:12)</td>
+<td class="p-space-sm text-outline">Strict interior bound: 268 &lt; 1,068 &lt; 2,466</td>
+<td class="p-space-sm text-right">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">PASS</span>
+</td>
+</tr>
+<tr class="bg-surface-container">
+<td class="p-space-sm text-center font-code-timecode text-code-timecode text-outline">04</td>
+<td class="p-space-sm text-on-surface font-semibold">800-Frame Exact Dialogue Offset</td>
+<td class="p-space-sm font-code-timecode text-code-timecode text-tertiary">1,068 − 268 = Exactly 800 frames</td>
+<td class="p-space-sm text-outline">Absolute 33.3333s pre-dialogue vacuum confirmed</td>
+<td class="p-space-sm text-right">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">PASS</span>
+</td>
+</tr>
+<tr class="bg-surface-container/50">
+<td class="p-space-sm text-center font-code-timecode text-code-timecode text-outline">05</td>
+<td class="p-space-sm text-on-surface font-semibold">Dialogue Tail Timecode / Duration Metadata</td>
+<td class="p-space-sm font-code-timecode text-code-timecode text-secondary font-semibold">Dialogue Out TC Missing in Cutsheet</td>
+<td class="p-space-sm text-outline">Est. 144 frames (6.0s) requires explicit metadata line</td>
+<td class="p-space-sm text-right">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm font-semibold">FIX REQUIRED</span>
+</td>
+</tr>
+<tr class="bg-surface-container">
+<td class="p-space-sm text-center font-code-timecode text-code-timecode text-outline">06</td>
+<td class="p-space-sm text-on-surface font-semibold">Acoustic Metatags vs. Timing Disambiguation</td>
+<td class="p-space-sm font-code-timecode text-code-timecode text-tertiary">435 Hz Formant / -28.4 LUFS</td>
+<td class="p-space-sm text-outline">Acoustic specs separated from temporal bounds</td>
+<td class="p-space-sm text-right">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">PASS</span>
+</td>
+</tr>
+<tr class="bg-surface-container/50">
+<td class="p-space-sm text-center font-code-timecode text-code-timecode text-outline">07</td>
+<td class="p-space-sm text-on-surface font-semibold">Timeline Action &amp; Thruster Vent Overlap</td>
+<td class="p-space-sm font-code-timecode text-code-timecode text-tertiary">Vent 03 @ Frame 1,022 (T = 42.6s)</td>
+<td class="p-space-sm text-outline">46 frame gap (1.92s) clear of vocal intake</td>
+<td class="p-space-sm text-right">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">PASS</span>
+</td>
+</tr>
+<tr class="bg-surface-container">
+<td class="p-space-sm text-center font-code-timecode text-code-timecode text-outline">08</td>
+<td class="p-space-sm text-on-surface font-semibold">BWF Sample-Clock &amp; Subframe Sync Definition</td>
+<td class="p-space-sm font-code-timecode text-code-timecode text-secondary font-semibold">2,000.00 Samples/frame nominal</td>
+<td class="p-space-sm text-outline">Sub-frame slip validation latching needed in export</td>
+<td class="p-space-sm text-right">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm font-semibold">FIX / EXTERNAL</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 8. SIMULATION DISCLAIMER & SAFETY FOOTER -->
+<footer class="flex flex-col gap-space-md p-gutter bg-surface-container-lowest rounded-lg shadow-sm mb-gutter">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm max-w-3xl">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">policy</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">
+                Read-Only Audit Mode // Zero Timeline Mutation Assurance
+              </span>
+<p class="font-label-sm text-label-sm text-outline leading-relaxed">
+                Explicit Simulation Disclaimer: All timeline visualizations, frame counts, sample coordinates, and acoustic boundaries presented in this terminal are interface-level simulation states for archival audit compliance and do not represent active NLE timeline compilation, disk writes, or physical tape playout.
+              </p>
+</div>
+</div>
+<!-- Master Action Navigation Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span>Ascend to S03 Film Hybrid (-270m)</span>
+</button>
+<button class="px-space-md py-space-sm rounded bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Review S04 Cutsheet Ledger</span>
+</button>
+<button class="px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-space-xs shadow-md" type="button">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<span>Inspect AAF Media Contract</span>
+</button>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-space-xs text-outline font-label-sm text-label-sm">
+<span>CANONICAL LEDGER ID: FX2-STRATUM04-MANUSCRIPT-9A2F1C8</span>
+<span class="font-code-timecode text-code-timecode text-tertiary">SHA256: 7e2d901f4c81a980b3dc44ea193f2824901</span>
+</div>
+</footer>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for hover feedback on frame ruler
+  document.addEventListener('DOMContentLoaded', () => {
+    const timelineStrip = document.querySelector('.relative.w-full.h-12');
+    if (timelineStrip) {
+      timelineStrip.addEventListener('mousemove', (e) => {
+        const rect = timelineStrip.getBoundingClientRect();
+        const percent = Math.min(Math.max(0, (e.clientX - rect.left) / rect.width), 1);
+        const frameOffset = Math.round(268 + percent * 2198);
+      });
+    }
+  });
+</script></main></div></body></html>

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FX2 — Creative Intelligence Environment</title>
+  <!-- Google Fonts for Cinematic Editorial Hierarchy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Cinzel:wght@500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#08090B',
+            canvasDeep: '#050607',
+            surface: '#131417',
+            surfaceSubtle: '#181A1F',
+            surfaceBorder: '#23262D',
+            brandRed: '#F23827',
+            brandOrange: '#FF5722',
+            brandEmber: '#D73B00',
+            warmWhite: '#E8E5E1',
+            mutedText: '#8E8A85',
+            goldAccent: '#C99E55'
+          },
+          fontFamily: {
+            arabic: ['Cairo', 'sans-serif'],
+            display: ['Cinzel', 'serif'],
+            syne: ['Syne', 'sans-serif'],
+            grotesk: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Cinematic FX2 styling according to Blueprint v1.3 */
+    :root {
+      --canvas: #08090B;
+      --surface: #131417;
+      --red: #F23827;
+      --red-glow: rgba(242, 56, 39, 0.4);
+      --warm-white: #E8E5E1;
+    }
+
+    body {
+      background-color: #08090B;
+      color: #E8E5E1;
+      font-family: 'Cairo', 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+      letter-spacing: -0.01em;
+      selection-background-color: #F23827;
+      selection-color: #ffffff;
+    }
+
+    ::selection {
+      background: #F23827;
+      color: #ffffff;
+    }
+
+    /* Grain and atmospheric subtle texture */
+    .cinematic-vignette {
+      background: radial-gradient(circle at 50% 10%, rgba(242, 56, 39, 0.04) 0%, transparent 65%),
+                  radial-gradient(circle at 90% 90%, rgba(215, 59, 0, 0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* LOCKED BRIEF BOX SPECIFICATION (Section 3):
+       Near-black/charcoal surface, restrained inner spotlight from upper right (red to orange to black),
+       traveling filament around 22-25% perimeter, motion 18-22s */
+    .locked-brief-surface {
+      background: #101114;
+      position: relative;
+    }
+
+    /* Inner directional corner spotlight */
+    .brief-inner-spotlight {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 420px;
+      height: 380px;
+      background: radial-gradient(circle at 100% 0%, rgba(242, 56, 39, 0.28) 0%, rgba(255, 87, 34, 0.12) 35%, rgba(16, 17, 20, 0.0) 75%);
+      pointer-events: none;
+      border-top-right-radius: 1.25rem;
+    }
+
+    /* Luminous Perimeter Filament: 22-25% of perimeter, subtle sub-pixel glow */
+    .filament-track {
+      position: absolute;
+      inset: -1px;
+      border-radius: 1.35rem;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .filament-glow {
+      position: absolute;
+      inset: -2px;
+      border-radius: 1.35rem;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 270deg,
+        rgba(255, 87, 34, 0.4) 310deg,
+        #F23827 340deg,
+        #FF7A60 355deg,
+        transparent 360deg
+      );
+      animation: rotateFilament 20s linear infinite;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1.2px;
+    }
+
+    @keyframes rotateFilament {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Pulse animation for active creative stage */
+    @keyframes emberPulse {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.08); }
+    }
+    .ember-pulse {
+      animation: emberPulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    /* Identity Realm Transition styling */
+    .identity-pill.active {
+      background: rgba(242, 56, 39, 0.15);
+      border-color: rgba(242, 56, 39, 0.6);
+      color: #FFF;
+      box-shadow: 0 0 15px rgba(242, 56, 39, 0.2);
+    }
+
+    /* Subtle grid pattern for precision lab feeling */
+    .studio-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    }
+
+    /* Custom thin cinematic scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #08090B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #252830;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F23827;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-warmWhite studio-grid relative selection:bg-brandRed selection:text-white">
+  <!-- Atmospheric vignette layers -->
+  <div class="fixed inset-0 cinematic-vignette z-0"></div>
+
+  <!-- MAIN PERSISTENT APP SHELL CONTAINER -->
+  <div class="relative z-10 flex flex-col min-h-screen">
+
+    <!-- 1. TOP GLOBAL BAR (Unified Persistent Workspace Header) -->
+    <header class="border-b border-surfaceBorder/80 bg-canvas/90 backdrop-blur-xl sticky top-0 z-50 px-5 lg:px-8 py-3.5 transition-all">
+      <div class="max-w-[1720px] mx-auto flex items-center justify-between gap-4">
+        
+        <!-- Left: Brand Identity & Active Project Anchor -->
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-3 group cursor-pointer">
+            <div class="relative w-9 h-9 rounded-lg bg-surfaceSubtle border border-surfaceBorder flex items-center justify-center overflow-hidden shadow-inner">
+              <span class="font-syne font-black text-lg tracking-wider text-warmWhite group-hover:text-brandRed transition-colors">FX</span>
+              <div class="absolute bottom-0 right-0 w-2 h-2 bg-brandRed rounded-tl-sm shadow-[0_0_8px_#F23827]"></div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-syne font-extrabold text-sm tracking-widest text-warmWhite">FX2</span>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-brandRed/15 text-brandRed font-semibold tracking-wider border border-brandRed/30">STUDIO CORE</span>
+              </div>
+              <div class="text-[11px] font-mono text-mutedText flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+                <span>مشروع: <strong class="text-warmWhite/90 font-medium">سردية الغد — الحملة الإقليمية 2026</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="h-5 w-px bg-surfaceBorder hidden md:block"></div>
+
+          <!-- Active Production Stages Rail Indicator (Brief → Insight → Concept → Script) -->
+          <nav class="hidden lg:flex items-center gap-1 bg-[#0D0E11] p-1 rounded-xl border border-surfaceBorder/70 text-xs">
+            <button id="stage-tab-brief" onclick="switchStage('brief')" class="stage-nav-item flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-surface text-warmWhite font-medium border border-brandRed/40 shadow-[0_0_12px_rgba(242,56,39,0.15)] transition-all">
+              <span class="w-2 h-2 rounded-full bg-brandRed shadow-[0_0_6px_#F23827]"></span>
+              <span>1. البريف</span>
+              <span class="text-[10px] font-mono text-mutedText">The Hero</span>
+            </button>
+            <span class="text-surfaceBorder text-xs">←</span>
+            <button id="stage-tab-insight" onclick="switchStage('insight')" class="stage-nav-item flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-mutedText hover:text-warmWhite font-medium hover:bg-surface/50 transition-all">
+              <span class="w-1.5 h-1.5 rounded-full bg-surfaceBorder"></span>
+              <span>2. الاستبصار</span>
+              <span class="text-[10px] font-mono text-mutedText">Insight</span>
+            </button>
+            <span class="text-surfaceBorder text-xs">←</span>
+            <button id="stage-tab-concept" onclick="switchStage('concept')" class="stage-nav-item flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-mutedText hover:text-warmWhite font-medium hover:bg-surface/50 transition-all">
+              <span class="w-1.5 h-1.5 rounded-full bg-surfaceBorder"></span>
+              <span>3. المفهوم</span>
+              <span class="text-[10px] font-mono text-mutedText">Concept</span>
+            </button>
+            <span class="text-surfaceBorder text-xs">←</span>
+            <button id="stage-tab-script" onclick="switchStage('script')" class="stage-nav-item flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-mutedText hover:text-warmWhite font-medium hover:bg-surface/50 transition-all">
+              <span class="w-1.5 h-1.5 rounded-full bg-surfaceBorder"></span>
+              <span>4. السيناريو</span>
+              <span class="text-[10px] font-mono text-mutedText">Script Room</span>
+            </button>
+          </nav>
+        </div>
+
+        <!-- Center: 4 INTERACTION IDENTITIES (الهويات التفاعلية الأربع — ليست صفحات بل أوضاع تفاعلية) -->
+        <div class="hidden xl:flex items-center gap-1.5 bg-[#0C0D10] border border-surfaceBorder/90 rounded-full px-2 py-1 shadow-lg shadow-black/40">
+          <span class="text-[10px] font-mono text-mutedText px-2 border-l border-surfaceBorder/80">وضع التفكير:</span>
+          
+          <button onclick="setIdentity('confrontation', this)" class="identity-pill active text-xs px-3.5 py-1 rounded-full border border-transparent font-medium transition-all flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-brandRed"></span>
+            <span>المواجهة</span>
+            <span class="text-[9px] font-mono opacity-70">Confrontation</span>
+          </button>
+
+          <button onclick="setIdentity('possibilities', this)" class="identity-pill text-xs px-3 py-1 rounded-full border border-transparent text-mutedText hover:text-warmWhite transition-all flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-500/70"></span>
+            <span>الاحتمالات</span>
+            <span class="text-[9px] font-mono opacity-70">Possibilities</span>
+          </button>
+
+          <button onclick="setIdentity('theatre', this)" class="identity-pill text-xs px-3 py-1 rounded-full border border-transparent text-mutedText hover:text-warmWhite transition-all flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/70"></span>
+            <span>المسرح</span>
+            <span class="text-[9px] font-mono opacity-70">Theatre</span>
+          </button>
+
+          <button onclick="setIdentity('editing', this)" class="identity-pill text-xs px-3 py-1 rounded-full border border-transparent text-mutedText hover:text-warmWhite transition-all flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/70"></span>
+            <span>التحرير</span>
+            <span class="text-[9px] font-mono opacity-70">Editing</span>
+          </button>
+        </div>
+
+        <!-- Right: THE 4 VISUAL REALMS SWITCHER (الهويات الأربعة للتصميم: بدالة العوالم الفخمة) + Telemetry -->
+        <div class="flex items-center gap-3">
+          
+          <!-- Identity Style Switcher Dropdown / Mode -->
+          <div class="relative">
+            <div class="flex items-center gap-2 bg-[#121317] border border-brandRed/30 hover:border-brandRed/60 px-3 py-1.5 rounded-xl transition-all cursor-pointer group shadow-[0_0_15px_rgba(242,56,39,0.08)]" id="realmSelectorBtn" onclick="toggleRealmMenu()">
+              <div class="w-2 h-2 rounded-full bg-brandRed animate-ping"></div>
+              <div class="text-right">
+                <div class="text-[9px] font-mono text-mutedText uppercase tracking-wider">الهوية البصرية الحالية</div>
+                <div class="text-xs font-bold text-warmWhite flex items-center gap-1.5">
+                  <span id="currentRealmName">الملكية التأسيسية (Noir Red)</span>
+                  <svg class="w-3.5 h-3.5 text-brandRed transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Realm Dropdown Menu for the 4 Frontends (نفس الباك إند - 4 هويات تصميمية مختلفة جذرياً) -->
+            <div id="realmMenu" class="hidden absolute left-0 mt-2 w-72 bg-[#101115] border border-surfaceBorder rounded-2xl shadow-2xl p-2 z-50 backdrop-blur-2xl">
+              <div class="px-3 py-2 border-b border-surfaceBorder/60">
+                <span class="text-[10px] font-mono text-brandRed font-semibold tracking-wider">تبديل هوية الفرونت إند (4 عوالم)</span>
+                <p class="text-[11px] text-mutedText mt-0.5">تبديل التجربة الكاملة مع بقاء نفس العقل ومحرك البيانات</p>
+              </div>
+              <div class="space-y-1 mt-1">
+                <!-- Realm 1: Current Active -->
+                <button onclick="selectRealm(1, 'الملكية التأسيسية (Noir Red)')" class="w-full text-right px-3 py-2.5 rounded-xl bg-brandRed/10 border border-brandRed/40 text-warmWhite text-xs flex items-center justify-between group">
+                  <div>
+                    <div class="font-bold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-brandRed"></span>
+                      1. الملكية الفاحمة (Noir Editorial)
+                    </div>
+                    <div class="text-[10px] text-mutedText mt-0.5 font-mono">Stitch 2026 • الشعيرة الحمراء • البريف كبطل</div>
+                  </div>
+                  <span class="text-[10px] font-mono text-brandRed bg-brandRed/20 px-1.5 py-0.5 rounded">نشط</span>
+                </button>
+                <!-- Realm 2 -->
+                <button onclick="selectRealm(2, 'غرفة الكتابة السينمائية (Atelier Cine)')" class="w-full text-right px-3 py-2.5 rounded-xl hover:bg-surface text-mutedText hover:text-warmWhite text-xs flex items-center justify-between transition-colors">
+                  <div>
+                    <div class="font-semibold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                      2. غرفة الكتّاب (Atelier Cinema)
+                    </div>
+                    <div class="text-[10px] text-mutedText mt-0.5 font-mono">طراز هوليوودي • لوحة المشاهد • دافنشي</div>
+                  </div>
+                  <span class="text-[9px] font-mono text-mutedText">هوية 2</span>
+                </button>
+                <!-- Realm 3 -->
+                <button onclick="selectRealm(3, 'مختبر الابتكار الجذري (Radical Inception)')" class="w-full text-right px-3 py-2.5 rounded-xl hover:bg-surface text-mutedText hover:text-warmWhite text-xs flex items-center justify-between transition-colors">
+                  <div>
+                    <div class="font-semibold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                      3. مختبر التفكير الجذري (Neural Lab)
+                    </div>
+                    <div class="text-[10px] text-mutedText mt-0.5 font-mono">خرائط المفاهيم • تفكيك التوترات الخمس</div>
+                  </div>
+                  <span class="text-[9px] font-mono text-mutedText">هوية 3</span>
+                </button>
+                <!-- Realm 4 -->
+                <button onclick="selectRealm(4, 'المسرح الدرامي الحواري (Dramatic Stage)')" class="w-full text-right px-3 py-2.5 rounded-xl hover:bg-surface text-mutedText hover:text-warmWhite text-xs flex items-center justify-between transition-colors">
+                  <div>
+                    <div class="font-semibold flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                      4. المسرح الإنساني (The Dramatic World)
+                    </div>
+                    <div class="text-[10px] text-mutedText mt-0.5 font-mono">ليلة العزاء • على جنب يا أسطى • احكيها تاني</div>
+                  </div>
+                  <span class="text-[9px] font-mono text-mutedText">هوية 4</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Provider Connection Truthful Badge (Gemini Connected as per Blueprint 6.1) -->
+          <div class="hidden md:flex items-center gap-2 bg-[#0E0F12] border border-surfaceBorder px-2.5 py-1.5 rounded-xl">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <div class="text-[11px] font-mono leading-tight">
+              <span class="text-mutedText">المحرك:</span> <span class="text-warmWhite font-medium">Gemini 2.5 Pro</span>
+            </div>
+          </div>
+
+          <!-- Language toggle (Arabic RTL / English LTR First-Class) -->
+          <button onclick="toggleLang()" class="px-2.5 py-1 rounded-lg border border-surfaceBorder hover:border-warmWhite/30 text-xs font-mono text-mutedText hover:text-warmWhite transition-all">
+            <span id="langDisplay">EN</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. SUB-BANNER / IDENTITY NOTIFICATION (Live Mode Indicator) -->
+    <div id="identityBanner" class="bg-gradient-to-r from-brandRed/10 via-surface/40 to-transparent border-b border-surfaceBorder/60 px-6 py-1.5 text-xs flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="font-mono text-[10px] uppercase tracking-wider text-brandRed font-bold bg-brandRed/20 px-2 py-0.5 rounded">الوضعية الحالية: المواجهة</span>
+        <span class="text-warmWhite/80 text-[11px]">مواجهة الفرضيات المسلّم بها، كشف التناقضات الإعلانية، واختبار المنطق الضعيف في البريف قبل التوليد.</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] font-mono text-mutedText">
+        <span>العوالم الفكرية:</span>
+        <span class="hover:text-brandRed cursor-pointer transition-colors" title="استكشاف الحوافز الدفينة">بطن الرغبة</span>
+        <span class="text-surfaceBorder">•</span>
+        <span class="hover:text-brandRed cursor-pointer transition-colors" title="تفكيك القناعات المزيفة">كوكب الجاذبية الكاذبة</span>
+        <span class="text-surfaceBorder">•</span>
+        <span class="hover:text-brandRed cursor-pointer transition-colors" title="إحياء الأفكار المستقبلية">متحف الغد الضائع</span>
+      </div>
+    </div>
+
+    <!-- 3. MAIN WORKSPACE CONTAINER -->
+    <main class="flex-1 max-w-[1720px] w-full mx-auto p-4 lg:p-8 grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+
+      <!-- LEFT / MAIN COLUMN: The Hero Stage Viewport (8 Columns on desktop) -->
+      <section class="xl:col-span-8 flex flex-col gap-6">
+
+        <!-- STAGE 1: BRIEF — THE HERO (Active by default, strictly following Blueprint Section 3) -->
+        <div id="stage-brief-view" class="space-y-6">
+          
+          <!-- Editorial Intro Header -->
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-surfaceBorder/40 pb-4">
+            <div>
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="font-mono text-xs text-brandRed font-bold tracking-widest uppercase">المرحلة الأولى: نقطة الانطلاق</span>
+                <span class="text-xs text-mutedText">/</span>
+                <span class="text-xs text-mutedText font-mono">Production Stage 01</span>
+              </div>
+              <h1 class="text-2xl lg:text-3xl font-black text-warmWhite tracking-tight">البريف هو البطل — The Brief is the Hero</h1>
+              <p class="text-sm text-mutedText mt-1 max-w-2xl leading-relaxed">
+                FX2 لا يصنع روبوت دردشة ساذج، بل بيئة ذكاء إبداعي تستكشف التوتر الإنساني، الغاية، والطموح الكامن داخل البريف، تمهيداً لصياغة استبصار غير مسبوق.
+              </p>
+            </div>
+            
+            <!-- Quick Context Drawer Trigger -->
+            <div class="flex items-center gap-2">
+              <button onclick="toggleCreativeSettings()" class="text-xs font-mono px-3 py-1.5 rounded-xl bg-surface border border-surfaceBorder hover:border-brandRed/40 text-warmWhite flex items-center gap-2 transition-all">
+                <svg class="w-3.5 h-3.5 text-brandRed" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                <span>محددات الصوت الإبداعي (Creative Tone)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- THE LOCKED BRIEF BOX (Decision Status: LOCKED as per Blueprint Section 3) -->
+          <div class="relative rounded-2xl p-1 group">
+            
+            <!-- Filament Track: 22-25% perimeter moving filament with 20s cycle -->
+            <div class="filament-track">
+              <div class="filament-glow"></div>
+            </div>
+
+            <!-- Box Container -->
+            <div class="locked-brief-surface rounded-2xl border border-surfaceBorder/90 p-6 lg:p-8 relative overflow-hidden shadow-2xl">
+              
+              <!-- Directional Inner Spotlight (Upper inner-right corner moving red into orange dissolving into charcoal) -->
+              <div class="brief-inner-spotlight"></div>
+
+              <!-- Top Controls within Brief Box -->
+              <div class="relative z-10 flex items-center justify-between mb-4 border-b border-white/[0.06] pb-3">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-brandRed shadow-[0_0_8px_#F23827]"></span>
+                  <span class="text-xs font-mono font-bold tracking-wider text-warmWhite">نواة البريف الإعلاني (Creative Brief Source)</span>
+                  <span class="text-[10px] font-mono bg-white/[0.05] text-mutedText px-2 py-0.5 rounded border border-white/5">مرخص للإبداع الاستراتيجي</span>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                  <!-- Provider / Engine Selector (Separate from file upload per 3.3) -->
+                  <div class="flex items-center gap-1 text-[11px] font-mono text-mutedText bg-[#0D0E11] px-2.5 py-1 rounded-lg border border-surfaceBorder">
+                    <span class="text-warmWhite font-semibold">Gemini 2.5 Pro</span>
+                    <span class="text-[10px] text-brandRed font-mono">(المفعل)</span>
+                  </div>
+
+                  <!-- Attachment trigger (Separate entry point per Blueprint Section 3) -->
+                  <button class="text-xs font-mono text-mutedText hover:text-warmWhite px-2 py-1 rounded hover:bg-white/5 transition-all flex items-center gap-1" title="إرفاق وثيقة مرجعية أو أبحاث">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
+                    <span>إرفاق</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Textarea: The Brief Writing Canvas -->
+              <div class="relative z-10 mb-4">
+                <textarea 
+                  id="briefInputText"
+                  rows="6"
+                  class="w-full bg-transparent text-warmWhite placeholder:text-mutedText/60 text-base lg:text-lg focus:outline-none resize-none leading-relaxed font-normal"
+                  placeholder="اكتب أو ألصق بريفك هنا بحرية كاملة... ما هو التوتر الإنساني الحقيقي؟ من هو العميل؟ ما المعتقد السائد الذي نريد نسفه؟ ما اللحظة العاطفية التي يجب أن تُبكي أو تُدهش الجمهور؟"
+                >إطلاق منصة تكنولوجية مصرفية جديدة في الشرق الأوسط تستهدف جيلاً ملّ من الوعود البنكية التقليدية والادخار الصارم. التوتر: الشباب يريدون العيش اليوم بشغف دون أن يُقال لهم «احرم نفسك عشان المستقبل». نريد فكرة حملة تصدم الناس بصدقها، وتجعل مفهوم الأمان المالي تحرراً ومتعة وليس سجناً أخلاقياً.</textarea>
+              </div>
+
+              <!-- Bottom Bar: Status, Word Count, Submission Action -->
+              <div class="relative z-10 pt-4 border-t border-white/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex items-center gap-4 text-xs font-mono text-mutedText">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brandRed"></span>
+                    <span id="briefWordCount">54 كلمة • جاهز للاستكشاف</span>
+                  </div>
+                  <span class="hidden md:inline text-surfaceBorder">|</span>
+                  <span class="hidden md:inline text-[11px] text-mutedText/70">اضغط Ctrl + Enter للتوليد الفوري</span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <button 
+                    onclick="resetBrief()" 
+                    class="px-4 py-2 rounded-xl text-xs font-mono text-mutedText hover:text-warmWhite hover:bg-white/5 transition-all">
+                    مسح
+                  </button>
+                  
+                  <!-- Primary Action: LOCKED RED GENERATION BUTTON (Section 3) -->
+                  <button 
+                    id="generateInsightBtn"
+                    onclick="triggerGeneration('insight')"
+                    class="relative group overflow-hidden px-6 py-2.5 rounded-xl bg-brandRed hover:bg-[#ff4332] text-white font-bold text-sm shadow-[0_0_20px_rgba(242,56,39,0.4)] transition-all flex items-center gap-2.5 active:scale-95">
+                    <span class="relative z-10 flex items-center gap-2">
+                      <span>توليد الاستبصار الإبداعي (Generate Insight)</span>
+                      <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-brandOrange to-brandRed opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- OPTIONAL CREATIVE CONTROLS DRAWER (Archetype & Voice Sliders moved contextually per Blueprint 5.1 & 8.1) -->
+          <div id="creativeSettingsDrawer" class="bg-surfaceSubtle border border-surfaceBorder rounded-2xl p-5 space-y-4">
+            <div class="flex items-center justify-between border-b border-surfaceBorder/60 pb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span class="text-xs font-mono font-bold text-warmWhite">المحددات الإبداعية ونبرة الصوت (Brand Voice & Archetype)</span>
+                <span class="text-[10px] font-mono text-mutedText bg-surface px-2 py-0.5 rounded">إعدادات سياقية اختيارية</span>
+              </div>
+              <span class="text-xs text-mutedText font-mono">لا تعطل انطلاق البريف</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- Archetype Selector -->
+              <div class="space-y-1.5">
+                <label class="text-xs text-mutedText font-mono block">النمط الإرشادي (Creative Archetype):</label>
+                <select class="w-full bg-[#0D0E11] border border-surfaceBorder rounded-xl px-3 py-2 text-xs text-warmWhite focus:border-brandRed outline-none font-medium">
+                  <option selected>The Rebel / المتمرد (كسر القوالب السائدة)</option>
+                  <option>The Creator / المبتكر (صناعة عوالم بصرية جديدة)</option>
+                  <option>The Sage / الحكيم (استخلاص الحقيقة الإنسانية العميقة)</option>
+                  <option>The Magician / الساحر (تحويل المألوف إلى لحظة إعجاز)</option>
+                </select>
+              </div>
+
+              <!-- Sliders for Voice -->
+              <div class="space-y-2">
+                <div class="flex justify-between text-xs font-mono">
+                  <span class="text-mutedText">الجرأة والاستفزاز:</span>
+                  <span class="text-brandRed font-bold">85% (عالية)</span>
+                </div>
+                <input type="range" min="0" max="100" value="85" class="w-full accent-brandRed bg-surface h-1.5 rounded-lg cursor-pointer">
+              </div>
+
+              <div class="space-y-2">
+                <div class="flex justify-between text-xs font-mono">
+                  <span class="text-mutedText">العمق العاطفي:</span>
+                  <span class="text-brandOrange font-bold">90% (سينمائي)</span>
+                </div>
+                <input type="range" min="0" max="100" value="90" class="w-full accent-brandOrange bg-surface h-1.5 rounded-lg cursor-pointer">
+              </div>
+            </div>
+          </div>
+
+          <!-- THE 5 LATERAL THINKING ENGINES PREVIEW (Blueprint 8.2) -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono text-mutedText uppercase tracking-wider">محركات التفكير الجانبي الخمسة</span>
+                <span class="text-[10px] font-mono text-brandRed bg-brandRed/10 border border-brandRed/30 px-2 py-0.5 rounded">Five Thinking Engines</span>
+              </div>
+              <span class="text-[11px] text-mutedText">عدسات استكشاف تفكك البريف بطرق غير خطية</span>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
+              <div class="p-3 rounded-xl bg-surface/70 border border-surfaceBorder/80 hover:border-brandRed/40 transition-all cursor-pointer">
+                <div class="text-[10px] font-mono text-brandRed font-bold">01 • الاستفزاز</div>
+                <div class="text-xs font-semibold text-warmWhite mt-1">Provocation</div>
+                <div class="text-[10px] text-mutedText mt-0.5">صدم المعتقد السائد</div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-surface/70 border border-surfaceBorder/80 hover:border-brandRed/40 transition-all cursor-pointer">
+                <div class="text-[10px] font-mono text-amber-400 font-bold">02 • التناظر</div>
+                <div class="text-xs font-semibold text-warmWhite mt-1">Analogies</div>
+                <div class="text-[10px] text-mutedText mt-0.5">استعارة من عوالم أخرى</div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-surface/70 border border-surfaceBorder/80 hover:border-brandRed/40 transition-all cursor-pointer">
+                <div class="text-[10px] font-mono text-cyan-400 font-bold">03 • المثير العشوائي</div>
+                <div class="text-xs font-semibold text-warmWhite mt-1">Random Stimulus</div>
+                <div class="text-[10px] text-mutedText mt-0.5">ربط عناصر غير متوقعة</div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-surface/70 border border-surfaceBorder/80 hover:border-brandRed/40 transition-all cursor-pointer">
+                <div class="text-[10px] font-mono text-purple-400 font-bold">04 • التفكير العكسي</div>
+                <div class="text-xs font-semibold text-warmWhite mt-1">Opposite Thinking</div>
+                <div class="text-[10px] text-mutedText mt-0.5">عكس المعادلة البنكية</div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-surface/70 border border-surfaceBorder/80 hover:border-brandRed/40 transition-all cursor-pointer col-span-2 sm:col-span-1">
+                <div class="text-[10px] font-mono text-emerald-400 font-bold">05 • قلب القيود</div>
+                <div class="text-xs font-semibold text-warmWhite mt-1">Constraint Reversal</div>
+                <div class="text-[10px] text-mutedText mt-0.5">تحويل العيب لميزة</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- STAGE 2: INSIGHT VIEW (Initially Hidden / Toggleable) -->
+        <div id="stage-insight-view" class="hidden space-y-6">
+          <div class="border-b border-surfaceBorder pb-4 flex items-center justify-between">
+            <div>
+              <span class="font-mono text-xs text-amber-500 font-bold tracking-widest uppercase">المرحلة الثانية: غرفة الاكتشاف</span>
+              <h2 class="text-2xl font-black text-warmWhite mt-1">الاستبصار الإبداعي — The Creative Insight</h2>
+            </div>
+            <button onclick="triggerGeneration('concept')" class="px-5 py-2 rounded-xl bg-brandRed hover:bg-[#ff4332] text-white font-bold text-xs flex items-center gap-2">
+              <span>تطوير إلى مفهوم إعلاني (Evolve to Concept)</span>
+              <span>←</span>
+            </button>
+          </div>
+
+          <!-- Central Truth Callout -->
+          <div class="p-6 rounded-2xl bg-surfaceSubtle border border-amber-500/30 relative overflow-hidden">
+            <div class="text-xs font-mono text-amber-500 font-bold mb-2">الحقيقة الإنسانية الاستراتيجية (The Human Tension):</div>
+            <div class="text-xl font-bold text-warmWhite leading-relaxed">
+              «الشباب لا يخافون من المستقبل لأنهم مستهترون، بل لأن الإعلانات البنكية تصور المستقبل كوحش يبتلع شبابهم اليوم. عندما تجعل الادخار أداة مغامرة لا صوم، سينضمون إليك فوراً.»
+            </div>
+          </div>
+
+          <!-- Three Perspectives (Labelled model lenses per Blueprint 6.2 - NOT fake multi-agents) -->
+          <div class="space-y-3">
+            <div class="text-xs font-mono text-mutedText">ثلاثة أصوات نقدية (Three Strategic Perspectives):</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="p-4 rounded-xl bg-surface border border-surfaceBorder">
+                <div class="text-xs font-mono text-brandRed font-bold">المتمرد الإبداعي (Creative Rebel)</div>
+                <p class="text-xs text-mutedText mt-2 leading-relaxed">«دعنا نلغي كلمة "حساب بنكي" تماماً، ونطلق عليه "محفظة الهروب إلى الحياة"!»</p>
+              </div>
+              <div class="p-4 rounded-xl bg-surface border border-surfaceBorder">
+                <div class="text-xs font-mono text-cyan-400 font-bold">خبير الاستراتيجية (Strategy Master)</div>
+                <p class="text-xs text-mutedText mt-2 leading-relaxed">«النمو الحقيقي سيأتي من إعادة صياغة الإيداع كجرعة أدرينالين فورية تفتح مكافأة.»</p>
+              </div>
+              <div class="p-4 rounded-xl bg-surface border border-surfaceBorder">
+                <div class="text-xs font-mono text-amber-400 font-bold">العميل الصعب (Picky Client)</div>
+                <p class="text-xs text-mutedText mt-2 leading-relaxed">«فكرة عبقرية، لكن بشرط ألا يفقد البنك هيبته التنظيمية والامتثال المالي.»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 3: CONCEPT VIEW (Initially Hidden / Toggleable) -->
+        <div id="stage-concept-view" class="hidden space-y-6">
+          <div class="border-b border-surfaceBorder pb-4 flex items-center justify-between">
+            <div>
+              <span class="font-mono text-xs text-cyan-400 font-bold tracking-widest uppercase">المرحلة الثالثة: فضاء الابتكار</span>
+              <h2 class="text-2xl font-black text-warmWhite mt-1">المفهوم الإبداعي — The Creative Concept</h2>
+            </div>
+            <button onclick="triggerGeneration('script')" class="px-5 py-2 rounded-xl bg-brandRed hover:bg-[#ff4332] text-white font-bold text-xs flex items-center gap-2">
+              <span>الانتقال لغرفة السيناريو (Script Production)</span>
+              <span>←</span>
+            </button>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-[#0F1014] border border-brandRed/40 relative shadow-2xl">
+            <div class="text-xs font-mono text-brandRed font-bold mb-1">العنوان والمفهوم المركزي:</div>
+            <div class="text-3xl font-black text-warmWhite">«ما تستناش لما تكبر عشان تعيش»</div>
+            <div class="text-base text-brandOrange font-mono mt-1">Creative Device: مرآة الزمن المعكوسة (The Reverse Chrono Mirror)</div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-surfaceBorder">
+              <div>
+                <span class="text-xs font-mono text-mutedText">القوس العاطفي (Emotional Arc):</span>
+                <p class="text-sm text-warmWhite mt-1">من الشعور بالذنب المالي إلى البهجة والسيطرة المطلقة على القرار.</p>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-mutedText">الملاحظات البصرية (Visual Notes):</span>
+                <p class="text-sm text-warmWhite mt-1">إضاءة نوار سينمائية عالية التباين، كاميرا محمولة تتبع حركة البطل بسلاسة 24fps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 4: SCRIPT PRODUCTION ROOM (Initially Hidden / Toggleable) -->
+        <div id="stage-script-view" class="hidden space-y-6">
+          <div class="border-b border-surfaceBorder pb-4 flex items-center justify-between">
+            <div>
+              <span class="font-mono text-xs text-emerald-400 font-bold tracking-widest uppercase">المرحلة الرابعة: غرفة الإنتاج</span>
+              <h2 class="text-2xl font-black text-warmWhite mt-1">السيناريو السينمائي — Script Room</h2>
+            </div>
+            <div class="flex items-center gap-2">
+              <button class="px-3 py-1.5 rounded-lg border border-surfaceBorder text-xs font-mono text-mutedText hover:text-warmWhite">نسخ النص</button>
+              <button class="px-3 py-1.5 rounded-lg bg-surface border border-surfaceBorder text-xs font-mono text-warmWhite">تصدير PDF</button>
+            </div>
+          </div>
+
+          <!-- Script Editor View (Text is Hero, no fake timeline per Blueprint 6.6 & 8.4) -->
+          <div class="p-6 rounded-2xl bg-[#0A0B0E] border border-surfaceBorder font-mono text-sm leading-relaxed space-y-4">
+            <div class="text-xs text-brandRed font-bold">المشهد الأول: خارجي / ليل — شوارع القاهرة الصاخبة</div>
+            <div class="text-mutedText">الكاميرا تتسلل من زاوية منخفضة للغاية. نرى شاباً في أواخر العشرينات يرتدي معطفاً كلاسيكياً خفيفاً، يقف أمام واجهة متجر مضاءة بنيون أحمر خافت.</div>
+            <div class="text-warmWhite">
+              <strong>الصوت الداخلي (V.O):</strong><br>
+              «قالولك: احوش عشان لما تكبر ترتاح... بس ما حدش قالك إن الراحة وأنت مش قادر تمشي ملهاش طعم.»
+            </div>
+            <div class="text-mutedText">قطع سريع — عدسة ماكرو على تطبيق الهاتف المحمول وهو يفتح بلمسة إبهام انسيابية، ليتحول الشارع فوراً إلى مهرجان من الإضاءة الحية.</div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- RIGHT COLUMN: PERSISTENT BRIEF ANCHOR & CONTEXTUAL RAIL (4 Columns on desktop) -->
+      <aside class="xl:col-span-4 flex flex-col gap-6">
+
+        <!-- PERSISTENT BRIEF ANCHOR (Section 7: Constant anchor throughout downstream stages) -->
+        <div class="bg-surfaceSubtle border border-surfaceBorder rounded-2xl p-5 relative overflow-hidden shadow-lg">
+          <div class="flex items-center justify-between border-b border-surfaceBorder/60 pb-3 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-brandRed"></span>
+              <span class="text-xs font-mono font-bold text-warmWhite">مرساة البريف الدائمة (Brief Anchor)</span>
+            </div>
+            <span class="text-[10px] font-mono text-mutedText">v1.2 Active</span>
+          </div>
+
+          <p class="text-xs text-mutedText leading-relaxed line-clamp-3" id="anchorBriefText">
+            إطلاق منصة تكنولوجية مصرفية جديدة في الشرق الأوسط تستهدف جيلاً ملّ من الوعود البنكية التقليدية والادخار الصارم...
+          </p>
+
+          <div class="mt-4 pt-3 border-t border-surfaceBorder/40 flex items-center justify-between text-xs font-mono">
+            <button onclick="switchStage('brief')" class="text-brandRed hover:underline text-[11px] font-bold">
+              تعديل البريف الأصلي ↗
+            </button>
+            <span class="text-[10px] text-mutedText">التعديل يحفظ تفرعاً جديداً</span>
+          </div>
+        </div>
+
+        <!-- 3 NAMED THINKING WORLDS (العوالم الفكرية الثلاثة — Blueprint Section 2.3) -->
+        <div class="bg-surfaceSubtle border border-surfaceBorder rounded-2xl p-5 space-y-4">
+          <div class="flex items-center justify-between border-b border-surfaceBorder/60 pb-2">
+            <span class="text-xs font-mono font-bold text-warmWhite">العوالم الفكرية الثلاثة (Thinking Worlds)</span>
+            <span class="text-[10px] font-mono text-brandRed">بيئات إبداعية</span>
+          </div>
+
+          <div class="space-y-2.5">
+            <!-- World 1 -->
+            <div class="p-3 rounded-xl bg-surface border border-surfaceBorder hover:border-brandRed/40 transition-all cursor-pointer group">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-warmWhite group-hover:text-brandRed transition-colors">1. بطن الرغبة</span>
+                <span class="text-[9px] font-mono text-mutedText">Desire Core</span>
+              </div>
+              <p class="text-[11px] text-mutedText mt-1">كشف الدوافع الحقيقية غير المعلنة وراء سلوك الشراء والانتماء.</p>
+            </div>
+
+            <!-- World 2 -->
+            <div class="p-3 rounded-xl bg-surface border border-surfaceBorder hover:border-brandRed/40 transition-all cursor-pointer group">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-warmWhite group-hover:text-brandRed transition-colors">2. كوكب الجاذبية الكاذبة</span>
+                <span class="text-[9px] font-mono text-mutedText">False Gravity</span>
+              </div>
+              <p class="text-[11px] text-mutedText mt-1">تفكيك المسلّمات الصناعية التي تقيد أفكار الوكالات الإعلانية.</p>
+            </div>
+
+            <!-- World 3 -->
+            <div class="p-3 rounded-xl bg-surface border border-surfaceBorder hover:border-brandRed/40 transition-all cursor-pointer group">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-warmWhite group-hover:text-brandRed transition-colors">3. متحف الغد الضائع</span>
+                <span class="text-[9px] font-mono text-mutedText">Lost Tomorrow</span>
+              </div>
+              <p class="text-[11px] text-mutedText mt-1">استحضار الأفكار التي كانت ستبهر العالم لو لم يتم وأدها مبكراً.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DRAMATIC EXPERIENCE CONCEPTS (Blueprint Section 2.4) -->
+        <div class="bg-surfaceSubtle border border-surfaceBorder rounded-2xl p-5 space-y-3">
+          <div class="flex items-center justify-between border-b border-surfaceBorder/60 pb-2">
+            <span class="text-xs font-mono font-bold text-warmWhite">المفاهيم الدرامية (Dramatic Concepts)</span>
+            <span class="text-[10px] font-mono text-amber-500">مختبر التجريب</span>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="flex items-center justify-between p-2 rounded-lg bg-surface/50 border border-surfaceBorder/60">
+              <span class="font-medium text-warmWhite">ليلة العزاء («الله يرحمه... بس»)</span>
+              <span class="text-[10px] font-mono text-mutedText">كشف المجاملات</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-surface/50 border border-surfaceBorder/60">
+              <span class="font-medium text-warmWhite">على جنب يا أسطى</span>
+              <span class="text-[10px] font-mono text-mutedText">اختبار الضغط</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-surface/50 border border-surfaceBorder/60">
+              <span class="font-medium text-warmWhite">احكيها تاني</span>
+              <span class="text-[10px] font-mono text-mutedText">بقاء السردية</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SYSTEM DIAGNOSTICS & TELEMETRY SUMMARY (Gateway Status as per Blueprint 5.2 & 6.5) -->
+        <div class="bg-[#0B0C0E] border border-surfaceBorder/80 rounded-2xl p-4 text-xs font-mono space-y-2">
+          <div class="flex items-center justify-between text-mutedText border-b border-surfaceBorder/40 pb-1.5">
+            <span class="text-[10px] uppercase font-bold text-warmWhite">حالة النظام التزامنية (Telemetry)</span>
+            <span class="text-emerald-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> مباشر</span>
+          </div>
+          <div class="flex justify-between text-mutedText text-[11px]">
+            <span>بوابة الاستجابة (Gateway):</span>
+            <span class="text-warmWhite font-semibold">142ms • صحي</span>
+          </div>
+          <div class="flex justify-between text-mutedText text-[11px]">
+            <span>التكامل النشط:</span>
+            <span class="text-brandRed font-semibold">Gemini API Connected</span>
+          </div>
+          <div class="flex justify-between text-mutedText text-[11px]">
+            <span>دقة التوليد الإبداعي:</span>
+            <span class="text-warmWhite">درجة سينمائية (Agency Level)</span>
+          </div>
+        </div>
+
+      </aside>
+
+    </main>
+
+    <!-- 4. BOTTOM PERSISTENT FOOTER BAR -->
+    <footer class="border-t border-surfaceBorder/80 bg-canvasDeep px-6 py-4 mt-auto">
+      <div class="max-w-[1720px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-mutedText">
+        <div class="flex items-center gap-4">
+          <span class="text-warmWhite font-bold">FX2 Creative Intelligence</span>
+          <span>•</span>
+          <span>Blueprint Architecture v1.3</span>
+          <span>•</span>
+          <span class="text-brandRed">The Brief is the Hero</span>
+        </div>
+        <div class="flex items-center gap-6 text-[11px]">
+          <span class="hover:text-warmWhite cursor-pointer">سجل القرارات (Decision Ledger)</span>
+          <span class="hover:text-warmWhite cursor-pointer">مختبر الأبحاث (Research Workspace)</span>
+          <span class="hover:text-warmWhite cursor-pointer">أرشيف التكرارات (Archive 10)</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- INTERACTIVE CLIENT SCRIPTS FOR STAGES, REALM SWITCHING, AND NOTIFICATIONS -->
+  <script>
+    // Stage switching logic preserving data
+    function switchStage(stageName) {
+      // Hide all stages
+      document.getElementById('stage-brief-view').classList.add('hidden');
+      document.getElementById('stage-insight-view').classList.add('hidden');
+      document.getElementById('stage-concept-view').classList.add('hidden');
+      document.getElementById('stage-script-view').classList.add('hidden');
+
+      // Reset tabs styling
+      document.querySelectorAll('.stage-nav-item').forEach(el => {
+        el.className = 'stage-nav-item flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-mutedText hover:text-warmWhite font-medium hover:bg-surface/50 transition-all';
+      });
+
+      // Show selected
+      const targetView = document.getElementById('stage-' + stageName + '-view');
+      const targetTab = document.getElementById('stage-tab-' + stageName);
+      
+      if (targetView && targetTab) {
+        targetView.classList.remove('hidden');
+        targetTab.className = 'stage-nav-item flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-surface text-warmWhite font-medium border border-brandRed/40 shadow-[0_0_12px_rgba(242,56,39,0.15)] transition-all';
+      }
+    }
+
+    // Interactive Identity switching
+    function setIdentity(mode, btn) {
+      document.querySelectorAll('.identity-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const banner = document.getElementById('identityBanner');
+      const messages = {
+        confrontation: 'الوضعية الحالية: المواجهة — كشف التناقضات ومحاكمة المنطق الضعيف في البريف.',
+        possibilities: 'الوضعية الحالية: الاحتمالات — فتح مسارات بديلة وبدائل إبداعية دون خسارة المسار الأصلي.',
+        theatre: 'الوضعية الحالية: المسرح — التعبير عن الفكرة كمشهد درامي، موقف، أو استعارة سينمائية حية.',
+        editing: 'الوضعية الحالية: التحرير — صقل وتدقيق الاتجاه المختار مع حفظ أصل القرار وتاريخه.'
+      };
+      banner.querySelector('span:first-child').innerText = 'الوضعية: ' + btn.querySelector('span:nth-child(2)').innerText;
+      banner.querySelector('span:nth-child(2)').innerText = messages[mode] || '';
+    }
+
+    // The 4 Visual Realms Switcher (Frontend Identity Switcher)
+    function toggleRealmMenu() {
+      const menu = document.getElementById('realmMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    function selectRealm(realmId, name) {
+      document.getElementById('currentRealmName').innerText = name;
+      document.getElementById('realmMenu').classList.add('hidden');
+      
+      // Real-time atmospheric styling cues based on chosen realm
+      const body = document.body;
+      if (realmId === 1) {
+        // Royal Noir Red (Current)
+        document.documentElement.style.setProperty('--red', '#F23827');
+        alert('تم تفعيل الهوية 1: الملكية التأسيسية الفاحمة (Noir Editorial). نفس الباك إند النشط مع المظهر الإعلاني الملوكي.');
+      } else if (realmId === 2) {
+        // Atelier Cinema
+        alert('تم اختيار الهوية 2: غرفة الكتّاب (Atelier Cinema). واجهة الإنتاج السينمائي والتحكم في المشاهد.');
+      } else if (realmId === 3) {
+        // Neural Lab
+        alert('تم اختيار الهوية 3: مختبر التفكير الجذري (Neural Lab). واجهة التفكيك المنطقي والاستبصار المعرفي.');
+      } else if (realmId === 4) {
+        // Dramatic World
+        alert('تم اختيار الهوية 4: المسرح الإنساني (The Dramatic World). واجهة التجارب الدرامية الثلاث.');
+      }
+    }
+
+    // Creative Settings Drawer toggle
+    function toggleCreativeSettings() {
+      const drawer = document.getElementById('creativeSettingsDrawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    // Generation trigger simulator with real state transition
+    function triggerGeneration(nextStage) {
+      const btn = document.getElementById('generateInsightBtn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="animate-pulse">جاري التحليل المعرفي للبريف...</span>';
+      btn.classList.add('opacity-80', 'pointer-events-none');
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('opacity-80', 'pointer-events-none');
+        switchStage(nextStage);
+        // Sync brief anchor
+        const briefVal = document.getElementById('briefInputText').value;
+        if (briefVal) {
+          document.getElementById('anchorBriefText').innerText = briefVal;
+        }
+      }, 1100);
+    }
+
+    function resetBrief() {
+      document.getElementById('briefInputText').value = '';
+      document.getElementById('briefWordCount').innerText = '0 كلمة';
+    }
+
+    function toggleLang() {
+      const current = document.documentElement.getAttribute('dir');
+      if (current === 'rtl') {
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.setAttribute('lang', 'en');
+        document.getElementById('langDisplay').innerText = 'AR';
+      } else {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.setAttribute('lang', 'ar');
+        document.getElementById('langDisplay').innerText = 'EN';
+      }
+    }
+
+    // Update word count on typing
+    document.getElementById('briefInputText').addEventListener('input', function(e) {
+      const words = e.target.value.trim().split(/\s+/).filter(Boolean).length;
+      document.getElementById('briefWordCount').innerText = words + ' كلمة • جاهز للاستكشاف';
+      document.getElementById('anchorBriefText').innerText = e.target.value || 'لا يوجد بريف مكتوب حالياً...';
+    });
+  </script>
+</body>
+</html>

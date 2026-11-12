@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#121315;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Syne:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#343537","secondary-fixed":"#ffdbcf","inverse-on-surface":"#303033","surface-bright":"#38393b","on-primary-container":"#5c0000","on-tertiary-fixed":"#001e2e","surface-dim":"#121315","surface-container-highest":"#343537","primary-fixed":"#ffdad4","error":"#ffb4ab","on-surface":"#e3e2e5","on-primary":"#690000","on-error-container":"#ffdad6","on-tertiary-fixed-variant":"#004c6d","on-secondary-fixed":"#380d00","surface-container-high":"#292a2c","on-secondary":"#5b1b00","surface-container-low":"#1b1c1e","background":"#121315","on-secondary-fixed-variant":"#802a00","primary":"#ffb4a8","on-secondary-container":"#fffbff","on-tertiary-container":"#002d43","tertiary-fixed":"#c8e6ff","tertiary-container":"#2b99d3","outline":"#ad8882","on-surface-variant":"#e6bdb7","error-container":"#93000a","outline-variant":"#5d403b","surface":"#121315","inverse-surface":"#e3e2e5","on-tertiary":"#00344d","primary-fixed-dim":"#ffb4a8","on-background":"#e3e2e5","secondary-container":"#cd4700","secondary-fixed-dim":"#ffb59a","secondary":"#ffb59a","on-primary-fixed-variant":"#930000","primary-container":"#ff5541","inverse-primary":"#bf0904","on-primary-fixed":"#410000","tertiary":"#88ceff","tertiary-fixed-dim":"#88ceff","surface-container":"#1f2022","surface-container-lowest":"#0d0e10","on-error":"#690005","surface-tint":"#ffb4a8"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","margin-mobile":"1rem","margin":"2rem","gutter":"1.25rem","space-xl":"2.5rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem"},"fontFamily":{"label-lg":["JetBrains Mono"],"headline-lg-mobile":["Syne"],"label-xs":["JetBrains Mono"],"body-md":["Geist"],"body-lg":["Geist"],"label-md":["JetBrains Mono"],"title-md":["Geist"],"headline-lg":["Syne"],"headline-md":["Syne"],"headline-xl":["Syne"],"title-lg":["Geist"],"headline-xl-mobile":["Syne"]},"fontSize":{"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-xs":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["11px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"500"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"500"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"title-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["38px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="h-24 px-margin-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="FX2 Monogram" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDsPi5CWKSLbGbQn7aa6jC-v6bS5mgLfZdgCUOmXJG4-uGLaJL20TVV7H5oYZk_c4xSQrM0xRJgjWWUun1VcrS8gmyPH_cbPkir13sRSO0Dhw_MLKbgUkmJ5pXLnfVEgy3pCU59OZaYO6USaT1IRSxWT9y7FRdDQndgU0fMPwv6hdxB4TZYAc1qEmX7Gag51aXDmnjBlhZukB2ckEsYXRF99mXm7vdH5wyRFHIvlL5DFA"/><div class="flex flex-col"><span class="font-headline-md text-title-md tracking-wider text-on-surface leading-none">FX2</span><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-widest">STUDIO OS</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded bg-surface-container-low shadow-[0_0_12px_rgba(255,85,65,0.15)]"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-xs text-label-xs text-secondary-fixed-dim uppercase tracking-wider">DR KAIF COFFEE</span></div><button class="min-w-[44px] min-h-[44px] flex items-center justify-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface active:scale-95 transition-transform">AR</button><button class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-[18px]">memory</span></button><button class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-on-surface active:scale-95"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between px-space-xs py-1 rounded bg-surface-container/60"><div class="flex items-center gap-space-xs overflow-hidden"><span class="material-symbols-outlined text-[14px] text-primary-container">token</span><span class="font-label-xs text-label-xs text-on-surface-variant truncate">DR KAIF COFFEE • Launch Campaign • Young Professionals</span></div><span class="material-symbols-outlined text-[14px] text-on-surface-variant">arrow_drop_down</span></div></div></header><main class="flex flex-col relative w-full pt-24 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full relative overflow-hidden px-margin-mobile py-space-sm gap-space-lg">
+<!-- Ambient Cinematic Volumetric Glows -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-80 h-64 bg-primary-container/20 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="absolute top-72 -right-16 w-60 h-60 bg-secondary-container/15 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="absolute bottom-20 -left-12 w-72 h-72 bg-primary-container/10 rounded-full blur-[90px] pointer-events-none"></div>
+<!-- Chamber Telemetry & Header -->
+<section class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low shadow-[0_0_12px_rgba(255,85,65,0.18)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-xs text-label-xs text-primary tracking-widest uppercase">ENGINE // DISCOVERY PROTOCOL 01</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[13px] text-secondary">flare</span>
+<span>DR KAIF OS v3.2</span>
+</div>
+</div>
+<!-- Editorial Provocation Statement -->
+<div class="relative mt-space-xs rounded-xl bg-surface-container-low/75 p-space-md shadow-[0_16px_40px_rgba(0,0,0,0.85)] backdrop-blur-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-xs text-label-xs text-secondary-fixed-dim uppercase tracking-wider">THESIS // BREAKTHROUGH ANGLE</span>
+<div class="flex items-center gap-1 text-secondary font-label-xs text-label-xs">
+<span>حقيقة شعورية</span>
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span>
+</div>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-tight">
+        People don't drink coffee for energy. They drink it to <span class="text-primary underline decoration-primary-container/50 underline-offset-4 decoration-2">regain control</span>.
+      </h1>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-lowest/80 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container shrink-0 mt-0.5">psychology_alt</span>
+<div class="flex flex-col gap-0.5 min-w-0">
+<span class="font-label-xs text-label-xs text-secondary-fixed-dim uppercase tracking-wider">EMOTIONAL TRUTH // كسر النمط السائد</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+            "In an uninterrupted, chaotic workday, the sacred ritual of the porcelain cup is the solitary negotiated peace."
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Lens Canvas Visualizer / Mood Node -->
+<section class="relative z-10 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">filter_center_focus</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">5 DISCOVERY LENSES</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">ACTIVE: LENS 02</span>
+</div>
+<!-- Hero Aesthetic Stage / Speculative Canvas -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden shadow-[0_18px_36px_rgba(0,0,0,0.9)] bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-60 mix-blend-screen" data-alt="Cinematic high contrast dark studio photograph of obsidian ceramic cup with steaming dark roast coffee, volumetric warm orange crimson light leaks from behind, dramatic silhouette, noir minimalism, film grain luxury haute horlogerie composition, subtle glowing amber mist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT_NuDY0RCrX6Z_cAxMu7dMjCp0AUhUWu6Hc4-ZG6DaHJD2lkjod7jrg6unWbuF8l4vcoi7-wV424xoYHqu5En3ikwgun7Z2WMgRvUa9y0kooVCFr7BGl8pSTfrRxWMsiLxZanKDhAXsItzLgfFY2daVOZU00SLYZ2gHygI6BFJIIuCVKmCTWTQMeDQrZIGd1wepQr2xiYeMoObkK8wiWBQM5Ti7K-1Ei6kDdFjqlu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<!-- Overlay Lens Telemetry HUD -->
+<div class="absolute inset-0 p-space-md flex flex-col justify-between pointer-events-none">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-secondary bg-surface-container-lowest/90 px-space-xs py-0.5 rounded">
+            SPECULATIVE COLLISION // عدسة الاستكشاف
+          </span>
+<div class="flex items-center gap-1 font-label-xs text-label-xs text-primary-fixed-dim">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>SYNTHESIS READY</span>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">CURRENT DOMAIN</span>
+<span class="font-title-md text-title-md text-on-surface font-headline-md">TACTICAL ARMOR &amp; RITUAL</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">NODE REF: #FX2-L2</span>
+</div>
+</div>
+</div>
+</section>
+<!-- The 5 Discovery Lenses Deck -->
+<section class="relative z-10 flex flex-col gap-space-sm" id="lensDeck">
+<!-- Lens 01 -->
+<div class="lens-card group transition-all duration-300 rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer shadow-[0_4px_16px_rgba(0,0,0,0.5)]" data-lens="1">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary-container px-space-xs py-0.5 rounded bg-surface-container-lowest">01</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">PROVOCATION // الاستفزاز</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary-fixed-dim tracking-wider">PARADOX TRIGGER</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-1 font-headline-md">"What if coffee was forbidden?"</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Transform the beverage into a contraband moment of clandestine rebellion inside sterile corporate cubicles. It shifts from utility to forbidden indulgence.
+      </p>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-secondary-fixed-dim font-label-xs text-label-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-primary">warning</span> High Tension Strategy</span>
+<span class="text-primary-container">Explore Vector →</span>
+</div>
+</div>
+<!-- Lens 02 (Active Showcase) -->
+<div class="lens-card transition-all duration-300 rounded-xl p-space-md bg-surface-container shadow-[0_0_28px_rgba(255,85,65,0.22)] relative overflow-hidden" data-lens="2">
+<!-- Active Top Accent Line -->
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-container via-secondary-container to-secondary"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-primary px-space-xs py-0.5 rounded bg-primary-container font-bold">02</span>
+<span class="font-label-md text-label-md text-primary tracking-wider uppercase">ANALOGY // الاستعارة والتطابق</span>
+</div>
+<div class="flex items-center gap-1 font-label-xs text-label-xs text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>DOMINANT ANGLE</span>
+</div>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-1 font-headline-md">"Coffee as a tactical pause and personal armor."</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Viewing the warm heavy ceramic mug not as fuel, but as a physical shield held with two hands—creating an unassailable 10-minute micro-sanctuary during peak corporate warfare.
+      </p>
+<!-- Micro Sparks Matrix -->
+<div class="mt-space-sm grid grid-cols-2 gap-space-xs">
+<div class="p-space-xs rounded bg-surface-container-lowest/80 flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">TACTICAL VISUAL</span>
+<span class="font-body-md text-body-md text-on-surface text-sm truncate">Two-handed ceramic hold</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest/80 flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant">SOUND DESIGN</span>
+<span class="font-body-md text-body-md text-on-surface text-sm truncate">Deafening office fades to null</span>
+</div>
+</div>
+</div>
+<!-- Lens 03 -->
+<div class="lens-card group transition-all duration-300 rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer shadow-[0_4px_16px_rgba(0,0,0,0.5)]" data-lens="3">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary-container px-space-xs py-0.5 rounded bg-surface-container-lowest">03</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">RANDOM COLLISION // الصدام العشوائي</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary-fixed-dim tracking-wider">HYBRID CONCEPT</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-1 font-headline-md">"Brutalist architecture meets delicate roasted steam."</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Contrasting heavy monolithic concrete surfaces and relentless glass towers with the fragile, organic swirl of single-origin steam. Monolith versus ephemeral spirit.
+      </p>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-secondary-fixed-dim font-label-xs text-label-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">architecture</span> Architectural Contrast</span>
+<span class="text-primary-container">Explore Vector →</span>
+</div>
+</div>
+<!-- Lens 04 -->
+<div class="lens-card group transition-all duration-300 rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer shadow-[0_4px_16px_rgba(0,0,0,0.5)]" data-lens="4">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary-container px-space-xs py-0.5 rounded bg-surface-container-lowest">04</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">THE OPPOSITE // التناقض المعاكس</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary-fixed-dim tracking-wider">VALUE INVERSION</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-1 font-headline-md">"Selling radical stillness in a hyper-speed era."</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        While the market races toward instantaneous espresso pods and 2-minute drive-thrus, DR KAIF promotes the slow, deliberate, unhurried 8-minute pour over as ultimate luxury.
+      </p>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-secondary-fixed-dim font-label-xs text-label-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-tertiary">timer</span> Deceleration Angle</span>
+<span class="text-primary-container">Explore Vector →</span>
+</div>
+</div>
+<!-- Lens 05 -->
+<div class="lens-card group transition-all duration-300 rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer shadow-[0_4px_16px_rgba(0,0,0,0.5)]" data-lens="5">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary-container px-space-xs py-0.5 rounded bg-surface-container-lowest">05</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">CREATIVE CONSTRAINT // القيد الإبداعي</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary-fixed-dim tracking-wider">AESTHETIC VOW</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-1 font-headline-md">"Never depict the liquid. Only the silence after."</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        A radical production mandate: Zero typical coffee commercial tropes. No close-up brown liquid cascades, no beans pouring. Only empty rooms and the exhaled breath of calm.
+      </p>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-secondary-fixed-dim font-label-xs text-label-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-error">block</span> Zero Tropes Rule</span>
+<span class="text-primary-container">Explore Vector →</span>
+</div>
+</div>
+</section>
+<!-- Evidence & Research Vault Connection -->
+<section class="relative z-10 p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between shadow-[0_8px_20px_rgba(0,0,0,0.6)]">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary-container shadow-inner">
+<span class="material-symbols-outlined text-[18px]">database</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface">EVIDENCE MATRIX</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">4 Research Vaults Linked • Field Interviews &amp; Ethno-Data</span>
+</div>
+</div>
+<button class="px-space-xs py-1 rounded bg-surface-container text-secondary text-label-xs font-label-xs active:scale-95 transition-transform">
+      VERIFY
+    </button>
+</section>
+<!-- Drawer Triggers & Kinetic Synthesis Command Bar -->
+<section class="relative z-10 flex flex-col gap-space-xs pt-space-xs">
+<!-- Secondary Perspective Expander -->
+<button class="w-full h-11 px-space-md rounded-lg bg-surface-container-high/80 hover:bg-surface-container-highest text-on-surface flex items-center justify-between transition-all active:scale-[0.99] shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">group_work</span>
+<span class="font-label-md text-label-md tracking-wider">EXPAND PERSPECTIVES (3 CREATIVE VOICES)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
+<span>K. KAIF • S. NOIR • M. AD</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</button>
+<!-- Master Action CTA (Kinetic Crimson-Amber Ember Pulse) -->
+<button class="w-full h-12 rounded-lg bg-primary-container hover:bg-secondary-container text-on-primary flex items-center justify-center gap-space-xs font-label-lg text-label-lg tracking-wider font-semibold shadow-[0_0_28px_rgba(255,85,65,0.45)] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>SYNTHESIZE INTO CONCEPT ARENA</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Context Telemetry Footer Indicator -->
+<div class="flex items-center justify-center gap-space-xs py-space-xs text-on-surface-variant font-label-xs text-label-xs">
+<span class="w-1 h-1 rounded-full bg-primary-container"></span>
+<span>STUDIO DISCOVERY CHAMBER • READY FOR RENDER PIPELINE</span>
+<span class="w-1 h-1 rounded-full bg-primary-container"></span>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for Lens Card Focus selection
+  document.querySelectorAll('.lens-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.lens-card').forEach(c => {
+        c.classList.remove('bg-surface-container', 'shadow-[0_0_28px_rgba(255,85,65,0.22)]');
+        c.classList.add('bg-surface-container-low');
+      });
+      card.classList.remove('bg-surface-container-low');
+      card.classList.add('bg-surface-container', 'shadow-[0_0_28px_rgba(255,85,65,0.22)]');
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-8px_28px_rgba(0,0,0,0.7)]" data-active-classes="text-primary-container bg-surface-container-high/80 shadow-[0_0_16px_rgba(255,85,65,0.25)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><a aria-current="page" class="flex-1 min-h-[44px] py-1 px-space-xs rounded flex flex-col items-center justify-center gap-0.5 transition-all text-primary-container bg-surface-container-high/80 shadow-[0_0_16px_rgba(255,85,65,0.25)]" data-path="discovery" href="#"><span class="material-symbols-outlined text-[18px]">explore</span><span class="font-label-xs text-label-xs tracking-wider">DISCOVERY</span></a><a class="flex-1 min-h-[44px] py-1 px-space-xs rounded flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-all" data-path="concepts" href="#"><span class="material-symbols-outlined text-[18px]">lightbulb</span><span class="font-label-xs text-label-xs tracking-wider">CONCEPTS</span></a><a class="flex-1 min-h-[44px] py-1 px-space-xs rounded flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-all" data-path="evolution" href="#"><span class="material-symbols-outlined text-[18px]">grain</span><span class="font-label-xs text-label-xs tracking-wider">EVOLUTION</span></a><a class="flex-1 min-h-[44px] py-1 px-space-xs rounded flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-all" data-path="production" href="#"><span class="material-symbols-outlined text-[18px]">precision_manufacturing</span><span class="font-label-xs text-label-xs tracking-wider">PRODUCTION</span></a></div></nav></body></html>

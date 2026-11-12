@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary":"#ffb59c","primary-fixed-dim":"#ffb59c","tertiary-fixed":"#ffdbcf","on-secondary":"#472a00","surface-container-lowest":"#100e0a","surface-container-highest":"#38342f","on-primary-fixed-variant":"#822700","primary-fixed":"#ffdbcf","on-secondary-fixed-variant":"#663e00","tertiary":"#ffb59b","on-secondary-container":"#563400","on-primary-fixed":"#390c00","error":"#ffb4ab","inverse-primary":"#a33e16","surface-variant":"#38342f","background":"#15130f","surface-bright":"#3c3933","tertiary-fixed-dim":"#ffb59b","secondary-container":"#e89300","on-secondary-fixed":"#2b1700","inverse-surface":"#e8e1d9","on-background":"#e8e1d9","outline":"#a68b83","tertiary-container":"#d17a59","on-tertiary-fixed":"#380d00","secondary-fixed-dim":"#ffb961","on-tertiary":"#591d04","surface-tint":"#ffb59c","secondary-fixed":"#ffddb9","surface":"#15130f","surface-container-high":"#2c2a24","on-primary":"#5c1900","on-tertiary-fixed-variant":"#763218","on-error-container":"#ffdad6","primary-container":"#e56e43","on-surface-variant":"#dec0b7","on-error":"#690005","inverse-on-surface":"#33302b","outline-variant":"#57423b","secondary":"#ffb961","surface-dim":"#15130f","on-tertiary-container":"#501600","on-primary-container":"#511500","error-container":"#93000a","surface-container-low":"#1e1b17","surface-container":"#221f1a","on-surface":"#e8e1d9"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"2.5rem","space-xs":"0.375rem","gutter-mobile":"1rem","space-sm":"0.75rem","gutter":"1.5rem","space-xl":"3.5rem","space-lg":"2rem","margin-mobile":"1.25rem","space-md":"1.25rem"},"fontFamily":{"body-md":["Plus Jakarta Sans"],"display-lg":["Noto Serif"],"title-lg":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"display-lg-mobile":["Noto Serif"],"headline-lg":["Noto Serif"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Noto Serif"],"headline-lg-mobile":["Noto Serif"],"body-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-xl":["Noto Serif"],"headline-xl-mobile":["Noto Serif"],"label-sm":["Plus Jakarta Sans"]},"fontSize":{"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"600"}],"title-lg":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"18px","letterSpacing":"0.05em","fontWeight":"600"}],"display-lg-mobile":["38px",{"lineHeight":"46px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"500"}],"body-lg":["17px",{"lineHeight":"28px","fontWeight":"400"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"500"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm bg-surface-container-lowest/60 backdrop-blur-xl"><span class="material-symbols-outlined text-primary text-[24px]">theater_comedy</span><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight">FX2 Human Stage</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Production Suite</span></div></div><div class="px-gutter pt-space-md pb-space-sm"><div class="bg-surface-container px-space-sm py-space-xs rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[16px]">verified</span><span class="font-label-sm text-label-sm text-on-surface-variant">حالة الفحص</span></div><span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-space-xs py-0.5 rounded">100%</span></div></div><div class="px-gutter py-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">وحدات المطبعة المسرحية</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="final-manifesto" href="#"><span class="font-label-lg text-label-lg">المانيفستو النهائي</span><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">article</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="cmyk-calibration" href="#"><span class="font-label-lg text-label-lg">معايرة الألوان CMYK</span><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">palette</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-sm transition-all group bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="preflight-press-report" href="#"><span class="font-label-lg text-label-lg">تقرير الفحص الطباعي</span><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">fact_check</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="press-archive" href="#"><span class="font-label-lg text-label-lg">أرشيف المطبعة</span><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">history_edu</span></a></nav></div><div class="p-gutter bg-surface-container-lowest/80 flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">print</span><span class="font-label-sm text-label-sm">Preflight PDF Engine v4.8</span></div><span class="font-label-sm text-label-sm text-outline">Direct-to-Plate Press Spec 2025</span></div></aside><div class="pr-72"><header class="fixed top-0 right-72 left-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface font-display-lg">FX2 Human Stage — تقرير الفحص الطباعي والمطبعة</span><span class="font-label-sm text-label-sm text-outline-variant font-body-sm">Preflight Press Pass PDF Export Stage Calibration</span></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-high/80 px-space-sm py-space-xs rounded-full"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary font-medium">جاهز للطباعة والتصدير 100%</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-primary">picture_as_pdf</span><span class="font-label-sm text-label-sm">ISO 12647-2 Coated</span></div><button class="px-space-sm py-1.5 bg-primary-container hover:bg-tertiary-container text-on-primary-container rounded-lg font-label-md text-label-md flex items-center gap-space-xs transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">download</span><span>تصدير PDF</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface w-full px-gutter min-h-screen"><div class="flex flex-col w-full">
+<!-- Banner / Studio Control Header -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-gutter mb-space-lg shadow-xl">
+<div class="absolute -left-12 -top-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/4 -bottom-16 w-80 h-80 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">Direct-to-Plate Studio Certification</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Heidelberg Speedmaster XL 106 Profile Ready</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          استوديو تصدير تقرير الفحص الطباعي المسبق
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          وثيقة الاعتماد الفني والهندسي لماكينات الطباعة الأوفست الاحترافية طبقاً للمعيار الدولي 
+          <span class="text-primary font-medium">ISO 12647-2:2013</span> وتوصيف الألوان المعياري 
+          <span class="text-secondary font-medium">FOGRA39 (ECI Coated v2)</span>.
+        </p>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm">
+<button class="px-space-sm py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors" id="modeSwitchBtn" type="button">
+<span class="material-symbols-outlined text-secondary text-[18px]">contrast</span>
+<span id="modeSwitchLabel">نمط المطبعة الورقي (Archival Paper)</span>
+</button>
+<button class="px-space-sm py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors" onclick="navigator.clipboard.writeText('SHA256:7F8B992CFX2PRESSPASSVALIDATED2026'); alert('تم نسخ بصمة التحقق الرقمي SHA-256 بنجاح');" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">fingerprint</span>
+<span>نسخ كود SHA-256</span>
+</button>
+<button class="px-space-sm py-2 rounded-lg bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">local_printshop</span>
+<span>طباعة فورية A4</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary-container font-label-lg text-label-lg font-semibold flex items-center gap-space-xs shadow-md transition-all" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+<span>تحميل تقرير الفحص المعتمد (PDF)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Asymmetric Workspace Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Sticky Technical Rail (4 Cols on Desktop) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md sticky top-20">
+<!-- Primary Status Capsule -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<span class="font-title-md text-title-md text-on-surface">حالة التدقيق الهندسي</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container/20 text-secondary font-label-md text-label-md font-bold">Passed 100%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          تم اجتياز جميع متطلبات معالجة ألوان RIP دون أي تحذيرات حرجة أو عناصر مفقودة. الملف معتمد للإرسال المباشر لألواح CTP.
+        </p>
+<!-- Ink Density Metric Gauge Visual -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">إجمالي تغطية الحبر (TAC)</span>
+<span class="font-semibold text-primary">292% / الحد الأقصى 300%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-primary-container rounded-full" style="width: 97.3%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline text-left ltr">Safe Zone • Fast Drying Guaranteed</span>
+</div>
+</div>
+<!-- Quick Technical Parameter Stack -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs pb-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-title-md text-title-md text-on-surface">معايير ملف التصدير (PDF/X-4)</span>
+</div>
+<dl class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container/60">
+<dt class="text-on-surface-variant">أبعاد اللوح والشيت</dt>
+<dd class="font-semibold text-on-surface">A4 (210×297 mm) + 3mm Bleed</dd>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container/60">
+<dt class="text-on-surface-variant">توصيف الألوان المعتمد</dt>
+<dd class="font-semibold text-primary">ISO Coated v2 (FOGRA39)</dd>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container/60">
+<dt class="text-on-surface-variant">معيار التصدير القياسي</dt>
+<dd class="font-semibold text-on-surface">PDF/X-4:2010 (ISO 15930-7)</dd>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container/60">
+<dt class="text-on-surface-variant">تراكب الحبر والتربيط</dt>
+<dd class="font-semibold text-secondary">K-100% Overprint + 0.05pt Trap</dd>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container/60">
+<dt class="text-on-surface-variant">الخطوط والطباعة</dt>
+<dd class="font-semibold text-on-surface">100% Outlines (Vector Curves)</dd>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container/60">
+<dt class="text-on-surface-variant">دقة الصور المضمنة</dt>
+<dd class="font-semibold text-on-surface">380 - 450 DPI (Lossless TIFF)</dd>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container/60">
+<dt class="text-on-surface-variant">فصل الصبغات الموضعية</dt>
+<dd class="font-semibold text-on-surface-variant">0 Spot Colors (CMYK Process Only)</dd>
+</div>
+</dl>
+</div>
+<!-- Plate Micro-Inspection Photo Preview -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">biotech</span>
+<span class="font-title-md text-title-md text-on-surface">الفحص الميكروسكوبي للوح (CTP)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">50x Zoom</span>
+</div>
+<div class="relative rounded-lg overflow-hidden h-40 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A macroscopic high-resolution documentary close-up of printing press aluminum CTP plate halftone dots, showing razor-sharp cyan magenta yellow rosette screen angles under warm workshop tungsten lighting, with subtle specular reflections and ink density registration targets in dramatic theatrical chiaroscuro." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ2APqYEJbn8zCMlrWYHskcFFwknjHZ7JOeqkZQR4VKLGDm-gXdsBgDYyLR0I_TrezGL3eSl3OeL4_ndloa7A-ARcvgpjIpNFDGFxg3J_IjgU11jnwjFS9KqRdN29x58j_Y_UTZM4Bw0YwNDaXWnAGNKkN3P6N60ftuQSxbMY1MhKI6tXtLjO96f2mR_OElmHnuJ7wNY6RyYS2i-rpDY03hfslOhbrdkEajuqhQKhz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-space-xs">
+<div class="flex items-center justify-between w-full font-label-sm text-label-sm">
+<span class="text-on-surface font-mono">175 LPI AM Rosette Structure</span>
+<span class="text-secondary font-semibold">Zero Slur / Perfect Dot</span>
+</div>
+</div>
+</div>
+<div class="p-space-xs bg-surface-container rounded font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+<span>بصمة الشهادة المشفرة:</span>
+<span class="font-mono text-primary font-semibold">7F8B-992C-PASS</span>
+</div>
+</div>
+</aside>
+<!-- Center/Main Document: Authentic Printable Press Pass A4 Sheet (8 Cols on Desktop) -->
+<div class="lg:col-span-8 flex flex-col items-center">
+<!-- Document Wrapper Styled with Printable Registration Target & Slug Marks -->
+<div class="w-full bg-[#1b1713] text-[#ede5dc] rounded-xl p-6 sm:p-10 shadow-2xl relative transition-all duration-300" id="pressDocument">
+<!-- Registration Target Marks (Top & Corners) -->
+<div class="hidden sm:flex justify-between items-center pb-6 opacity-60">
+<!-- Crosshair Left -->
+<div class="flex items-center gap-2">
+<svg class="w-6 h-6 text-[#d9653b]" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="7"></circle>
+<line x1="12" x2="12" y1="1" y2="23"></line>
+<line x1="1" x2="23" y1="12" y2="12"></line>
+</svg>
+<span class="font-label-sm text-label-sm tracking-widest text-[#a89f91] uppercase">BLEED +3.0mm</span>
+</div>
+<!-- Color Density Control Wedge (Top Bar) -->
+<div class="flex items-center gap-1 bg-[#26201b] p-1 rounded">
+<span class="w-4 h-3 bg-[#009ee0] rounded-xs" title="100% C"></span>
+<span class="w-4 h-3 bg-[#e5007d] rounded-xs" title="100% M"></span>
+<span class="w-4 h-3 bg-[#fff100] rounded-xs" title="100% Y"></span>
+<span class="w-4 h-3 bg-[#1a1714] rounded-xs" title="100% K"></span>
+<span class="w-4 h-3 bg-[#d9653b] rounded-xs" title="Terracotta Warm"></span>
+<span class="w-4 h-3 bg-[#f39c12] rounded-xs" title="Golden Tungsten"></span>
+<span class="w-4 h-3 bg-[#ede5dc] rounded-xs" title="Substrate White"></span>
+</div>
+<!-- Crosshair Right -->
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm tracking-widest text-[#a89f91] uppercase">ISO 12647-2</span>
+<svg class="w-6 h-6 text-[#d9653b]" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="7"></circle>
+<line x1="12" x2="12" y1="1" y2="23"></line>
+<line x1="1" x2="12" y1="12" y2="23"></line>
+</svg>
+</div>
+</div>
+<!-- Official Header Block within Document -->
+<div class="bg-[#241e1a] rounded-lg p-space-md mb-space-md shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-[#d9653b] flex items-center justify-center text-[#1b1713]">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">theater_comedy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-title-lg text-[#ffb59c] font-bold">FX2 HUMAN STAGE — PRODUCTION SUITE</span>
+<span class="font-label-sm text-label-sm text-[#a89f91]">PREFLIGHT TECHNICAL INSPECTION &amp; PRESS CLEARANCE CERTIFICATE</span>
+</div>
+</div>
+<div class="flex flex-col text-left ltr bg-[#1b1713] px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-[#d9653b] font-mono font-semibold">JOB: 2026-FX2-STAGE-0889</span>
+<span class="font-label-sm text-label-sm text-[#a89f91]">DATE: 18 MAY 2026 | 08:30 EEST</span>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs pt-space-xs text-[#a89f91] font-label-sm text-label-sm">
+<div>
+<span class="block text-[#a89f91]/70">المشروع الفني:</span>
+<span class="text-[#ede5dc] font-medium">مانيفستو المسرح البشري</span>
+</div>
+<div>
+<span class="block text-[#a89f91]/70">الماكينة المسندة:</span>
+<span class="text-[#ede5dc] font-medium">Heidelberg XL 106 8-Col</span>
+</div>
+<div>
+<span class="block text-[#a89f91]/70">خامة الورق:</span>
+<span class="text-[#ede5dc] font-medium">Fedrigoni Materica 250gsm</span>
+</div>
+<div>
+<span class="block text-[#a89f91]/70">حالة الفحص العام:</span>
+<span class="text-[#f39c12] font-semibold">معتمد للطباعة الفورية (Passed)</span>
+</div>
+</div>
+</div>
+<!-- Section 1: CMYK Separation & Ink Density Breakdown -->
+<div class="mb-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<h2 class="font-title-md text-title-md text-[#ffb59c] flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+<span>مصفوفة فصل الألوان الأربعة ونسب التغطية (CMYK Density &amp; Dot Gain)</span>
+</h2>
+<span class="font-label-sm text-label-sm text-[#a89f91]">FOGRA39 Characterization Target</span>
+</div>
+<!-- 4-Color Grid Cards -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs mb-space-xs">
+<!-- Cyan -->
+<div class="bg-[#241e1a] p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-[#009ee0]">CYAN (سماوي)</span>
+<span class="font-mono font-semibold text-[#009ee0]">45%</span>
+</div>
+<div class="w-full bg-[#1b1713] h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#009ee0] h-full" style="width: 45%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-[#a89f91]">Dot Gain: +14% (Curve A)</span>
+</div>
+<!-- Magenta -->
+<div class="bg-[#241e1a] p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-[#e5007d]">MAGENTA (قرمزي)</span>
+<span class="font-mono font-semibold text-[#e5007d]">72%</span>
+</div>
+<div class="w-full bg-[#1b1713] h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#e5007d] h-full" style="width: 72%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-[#a89f91]">Terracotta Neutralized</span>
+</div>
+<!-- Yellow -->
+<div class="bg-[#241e1a] p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-[#fff100]">YELLOW (أصفر)</span>
+<span class="font-mono font-semibold text-[#fff100]">80%</span>
+</div>
+<div class="w-full bg-[#1b1713] h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#fff100] h-full" style="width: 80%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-[#a89f91]">Tungsten Stage Glow</span>
+</div>
+<!-- Key / Black -->
+<div class="bg-[#241e1a] p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-[#ede5dc]">BLACK (أسود 100K)</span>
+<span class="font-mono font-semibold text-[#ede5dc]">95%</span>
+</div>
+<div class="w-full bg-[#1b1713] h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#ede5dc] h-full" style="width: 95%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-[#a89f91]">Deep Shadow Contrast</span>
+</div>
+</div>
+<!-- Total TAC Banner -->
+<div class="bg-[#201a16] p-space-xs px-space-sm rounded-lg flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-[#a89f91]">إجمالي كمية ترسيب الحبر (Total Area Coverage - TAC):</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-mono text-[#f39c12] font-bold">292% TAC</span>
+<span class="text-[#ede5dc]">• خالي تماماً من مخاطر تلطيخ الورق (Zero Set-off risk)</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Critical Preflight Inspection 8-Point Checklist -->
+<div class="mb-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<h2 class="font-title-md text-title-md text-[#ffb59c] flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+<span>سجل فحص وتدقيق المعايير الحرجة للمطبعة (8-Point Checklist)</span>
+</h2>
+<span class="font-label-sm text-label-sm text-[#f39c12]">8 / 8 بنود معتمدة بنجاح</span>
+</div>
+<div class="bg-[#241e1a] rounded-lg overflow-hidden divide-y divide-[#332a24]">
+<!-- Row 1 -->
+<div class="p-space-xs px-space-sm flex items-center justify-between hover:bg-[#2b231e] transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#f39c12] text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-[#ede5dc]">1. دقة أبعاد القص والتسييل الميكانيكي (Trim 210×297 mm + 3.0mm Bleed)</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#f39c12] font-mono">مطابق 100%</span>
+</div>
+<!-- Row 2 -->
+<div class="p-space-xs px-space-sm flex items-center justify-between hover:bg-[#2b231e] transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#f39c12] text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-[#ede5dc]">2. كشف عناصر فضاء الألوان الضوئي (RGB / Lab Non-Converted Elements)</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#f39c12] font-mono">0 عناصر (CMYK حصراً)</span>
+</div>
+<!-- Row 3 -->
+<div class="p-space-xs px-space-sm flex items-center justify-between hover:bg-[#2b231e] transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#f39c12] text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-[#ede5dc]">3. تراكب الأسود الصافي وتلافي الهالات البيضاء (100% K Black Text Overprint)</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#f39c12] font-mono">مفعّل (0.05pt Trap)</span>
+</div>
+<!-- Row 4 -->
+<div class="p-space-xs px-space-sm flex items-center justify-between hover:bg-[#2b231e] transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#f39c12] text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-[#ede5dc]">4. فحص الخطوط المفقودة أو غير المدمجة (Font Embedding &amp; Outlines)</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#f39c12] font-mono">محول لمنحنيات هندسية</span>
+</div>
+<!-- Row 5 -->
+<div class="p-space-xs px-space-sm flex items-center justify-between hover:bg-[#2b231e] transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#f39c12] text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-[#ede5dc]">5. الحد الأدنى لسُمك الخطوط الشعرية والحدود الدقيقة (Hairlines &amp; Strokes)</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#f39c12] font-mono">لا يقل عن 0.28 pt</span>
+</div>
+<!-- Row 6 -->
+<div class="p-space-xs px-space-sm flex items-center justify-between hover:bg-[#2b231e] transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#f39c12] text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-[#ede5dc]">6. معايرة مطابقة الألوان الطيفية FOGRA39 (Spectrophotometric Delta E)</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#f39c12] font-mono">ΔE &lt; 1.15 (ممتاز)</span>
+</div>
+<!-- Row 7 -->
+<div class="p-space-xs px-space-sm flex items-center justify-between hover:bg-[#2b231e] transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#f39c12] text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-[#ede5dc]">7. سلاسة التدرجات اللونية المسرحية (Chiaroscuro 12-bit RIP Gradients)</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#f39c12] font-mono">خالٍ من التحزيز (No Banding)</span>
+</div>
+<!-- Row 8 -->
+<div class="p-space-xs px-space-sm flex items-center justify-between hover:bg-[#2b231e] transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#f39c12] text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-[#ede5dc]">8. قابلية قراءة الرموز الرقمية والباركود (ISO/IEC 15415 QR Printability)</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#f39c12] font-mono">تصنيف A (Grade A)</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Visual Plate & Script Typography Fragment Preview -->
+<div class="mb-space-md bg-[#241e1a] p-space-md rounded-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#d9653b] text-[20px]">layers</span>
+<span class="font-title-md text-title-md text-[#ffb59c]">معاينة تطابق اللوح الطباعي وسياق المانيفستو المعتمد</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#a89f91]">Plate Exposure: 2400 DPI CTP</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Stage Documentary Stills -->
+<div class="rounded-lg overflow-hidden bg-[#1b1713] relative h-48">
+<img class="w-full h-full object-cover" data-alt="A theatrical documentary stage scene of an ensemble Arabic theater performance in deep warm amber chiaroscuro lighting, actors in mid-dialogue in a courtyard setting, filmed on 35mm textured grain film with warm terracotta and charcoal shadow values." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Bvpmxn-DrlGw3XIioiE4fvKT0koTApAu3Dd-mTknmKLnrHQ3J2YRvQIDsWXkhX2_c-_Yi2eBDspPEi28kpc1_2ekmiXN2y-9DBIO5t9PnihUoW1asyj98y5jRu6b9dra-jW7fhs9qRkK1Ssm95-Dfz8aJefdezAekuHPgeVM_efh4WN2jKfq0AIQ0Jg2N-_JAYmViotqePWLs6hpFNGSb_nKrvyCKBomo384KS25"/>
+<div class="absolute bottom-2 right-2 bg-[#1b1713]/85 px-space-xs py-0.5 rounded text-[#ede5dc] font-label-sm text-label-sm">
+                نمط الضوء والظلال المسرحي • 420 DPI
+              </div>
+</div>
+<!-- Authentic Script Typographic Block -->
+<div class="bg-[#1b1713] p-space-sm rounded-lg flex flex-col justify-between font-body-sm text-body-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[#d9653b] font-label-sm text-label-sm">
+<span>المشهد الثالث — حوار الكورال</span>
+<span>Scene 03 • Act 01</span>
+</div>
+<p class="text-[#ede5dc] font-display-lg italic leading-relaxed pt-1">
+                  «الشارع ليس مجرد فضاء للعبور، بل هو خشبة المسرح الحقيقية التي تصنع أصواتنا دون أقنعة أو حيل اصطناعية.»
+                </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-[#a89f91] font-label-sm text-label-sm border-t border-[#332a24]">
+<span>المحاذاة البصرية: متطابقة 100%</span>
+<span class="text-[#f39c12] font-mono">100% Rich K-Overprint</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Press Clearance Sign-off, Stamps & Digital Verification -->
+<div class="pt-space-sm bg-[#201a16] p-space-md rounded-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md items-center">
+<!-- Lead Director Approval -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-[#a89f91]">مدير الإنتاج الفني والطباعي:</span>
+<span class="font-display-lg text-title-md text-[#ede5dc]">د. طارق الحكيم</span>
+<span class="font-label-sm text-label-sm text-[#d9653b]">Lead Production Director</span>
+<div class="mt-2 font-mono text-[#f39c12] text-label-sm tracking-wider uppercase">
+                [SIGNATURE VERIFIED • 2026-05-18]
+              </div>
+</div>
+<!-- Master Pressman Sign-off -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-[#a89f91]">كبير مهندسي تشغيل الماكينات:</span>
+<span class="font-display-lg text-title-md text-[#ede5dc]">م. حسام العبد</span>
+<span class="font-label-sm text-label-sm text-[#d9653b]">Master Pressman (Heidelberg Certified)</span>
+<div class="mt-2 font-mono text-[#f39c12] text-label-sm tracking-wider uppercase">
+                [COLOR BALANCE APPROVED • PASS]
+              </div>
+</div>
+<!-- QR Seal & Stamp Simulation -->
+<div class="flex items-center gap-space-sm justify-start md:justify-end">
+<div class="w-20 h-20 bg-[#ede5dc] p-1.5 rounded flex items-center justify-center">
+<!-- Inline QR Code SVG representation -->
+<svg class="w-full h-full text-[#1b1713]" fill="currentColor" viewbox="0 0 100 100">
+<path d="M10 10h30v30h-30z M15 15h20v20h-20z M20 20h10v10h-10z M60 10h30v30h-30z M65 15h20v20h-20z M70 20h10v10h-10z M10 60h30v30h-30z M15 65h20v20h-20z M20 70h10v10h-10z M45 10h10v20h-10z M45 40h20v10h-20z M10 45h20v10h-20z M70 45h20v20h-20z M45 60h10v30h-10z M60 70h15v10h-15z M80 75h10v15h-10z M60 85h15v5h-15z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-[#f39c12] font-bold">ختم الإفراج الطباعي الميداني</span>
+<span class="font-label-sm text-label-sm text-[#a89f91]">CERT: PASS-ISO12647-EG</span>
+<span class="font-mono text-label-sm text-[#a89f91]">FOGRA39 CERTIFIED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Document Slug Line / Trim Edge Footer -->
+<div class="flex flex-col sm:flex-row justify-between items-center pt-6 mt-space-md text-[#a89f91] opacity-75 font-label-sm text-label-sm border-t border-[#332a24]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#f39c12]"></span>
+<span>FX2-STAGE-2026-FINAL-PROOF-V4.8-PRESS-READY.PDF</span>
+</div>
+<div class="flex items-center gap-4 mt-2 sm:mt-0 font-mono">
+<span>PLATE 01/01</span>
+<span>175 LPI AM</span>
+<span>SCREEN: 75° / 15° / 0° / 45°</span>
+<span>CTP OK</span>
+</div>
+</div>
+</div>
+<!-- Action Ribbon Under Sheet -->
+<div class="w-full flex flex-col sm:flex-row items-center justify-between gap-space-sm mt-space-md p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span>شهادة التصدير صالحة لمدة 72 ساعة لجدولة تشغيل ماكينات الأوفست.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container rounded-lg font-label-md text-label-md font-semibold transition-colors flex items-center gap-space-xs" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>أمر تشغيل المطبعة</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const modeBtn = document.getElementById('modeSwitchBtn');
+    const doc = document.getElementById('pressDocument');
+    const label = document.getElementById('modeSwitchLabel');
+    let isPaperMode = false;
+
+    if (modeBtn && doc && label) {
+      modeBtn.addEventListener('click', function() {
+        isPaperMode = !isPaperMode;
+        if (isPaperMode) {
+          // Archival Paper Mode (Warm White Press Proof style)
+          doc.style.backgroundColor = '#f6f2ec';
+          doc.style.color = '#1f1b18';
+          label.textContent = 'النمط الرقمي المظلم (Dark Noir)';
+          
+          // Adjust nested cards for contrast on light sheet
+          doc.querySelectorAll('.bg-\\[\\#241e1a\\], .bg-\\[\\#201a16\\]').forEach(el => {
+            el.style.backgroundColor = '#e9e3da';
+          });
+          doc.querySelectorAll('.text-\\[\\#ffb59c\\]').forEach(el => {
+            el.style.color = '#b8441f';
+          });
+          doc.querySelectorAll('.text-\\[\\#ede5dc\\]').forEach(el => {
+            el.style.color = '#1b1713';
+          });
+        } else {
+          // Dark Noir Mode
+          doc.style.backgroundColor = '#1b1713';
+          doc.style.color = '#ede5dc';
+          label.textContent = 'نمط المطبعة الورقي (Archival Paper)';
+
+          doc.querySelectorAll('.bg-\\[\\#241e1a\\], .bg-\\[\\#201a16\\]').forEach(el => {
+            el.style.backgroundColor = '';
+          });
+          doc.querySelectorAll('.text-\\[\\#ffb59c\\]').forEach(el => {
+            el.style.color = '';
+          });
+          doc.querySelectorAll('.text-\\[\\#ede5dc\\]').forEach(el => {
+            el.style.color = '';
+          });
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>

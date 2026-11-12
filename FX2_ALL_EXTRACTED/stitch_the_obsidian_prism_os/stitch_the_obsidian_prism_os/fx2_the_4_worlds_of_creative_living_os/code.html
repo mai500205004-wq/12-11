@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_blank" name="shell-type"/>
+<title>The Obsidian Prism — FX2 Living Creative OS</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Noto+Kufi+Arabic:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin:0; padding:0; background:#08090b; }
+      body { overscroll-behavior:none; }
+      main>:first-child { margin-top:0!important; }
+      main>:last-child { margin-bottom:0!important; }
+    }
+    ::-webkit-scrollbar { display:none; }
+    .font-arabic { font-family: 'Noto+Kufi+Arabic', sans-serif; }
+    .laser-glow { filter: drop-shadow(0 0 8px rgba(242,56,39,0.7)); }
+    .glass-slab {
+      background: rgba(18, 19, 21, 0.78);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(173, 136, 130, 0.18);
+    }
+    .glass-slab-active {
+      background: rgba(26, 27, 30, 0.9);
+      backdrop-filter: blur(32px);
+      border: 1px solid rgba(255, 85, 65, 0.5);
+      box-shadow: 0 0 35px -5px rgba(255, 85, 65, 0.2);
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#08090b",
+            "surface-dim": "#08090b",
+            "surface-container-lowest": "#050607",
+            "surface-container-low": "#111215",
+            "surface-container": "#18191d",
+            "surface-container-high": "#222429",
+            "surface-container-highest": "#2d3036",
+            "on-surface": "#e5e3e8",
+            "on-surface-variant": "#b8a8a4",
+            "primary": "#ff7a66",
+            "primary-container": "#f23827",
+            "on-primary-container": "#fff0ed",
+            "secondary": "#e9c349",
+            "secondary-container": "#af8d11",
+            "tertiary": "#1ce19f",
+            "tertiary-container": "#00a572",
+            "outline": "#8e706b",
+            "outline-variant": "#3a2d2a"
+          },
+          fontFamily: {
+            "headline": ["Playfair Display", "serif"],
+            "mono": ["Space Mono", "monospace"],
+            "arabic": ["Noto Kufi Arabic", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface font-mono text-on-surface antialiased selection:bg-primary-container selection:text-white">
+<!-- TOP GLOBAL NAVIGATION & HUD -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#08090b]/85 backdrop-blur-2xl border-b border-outline-variant/30">
+<div class="h-14 w-full px-4 lg:px-8 flex items-center justify-between">
+<!-- Branding & Live Status -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1 rounded border border-outline-variant/40">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-mono text-[10px] uppercase tracking-widest text-primary">FX2-OS v5.0</span>
+</div>
+<span class="text-outline-variant text-[11px] hidden sm:inline">//</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline font-semibold text-lg text-on-surface tracking-tight">The Obsidian Prism</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider hidden md:inline font-mono">[LIVING CREATIVE OS]</span>
+</div>
+<!-- Campaign Pill -->
+<div class="hidden xl:flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high border border-outline-variant/30 text-[10px] text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>BRIEF: Dr Kaif Coffee — Young Pros Launch</span>
+</div>
+</div>
+<!-- 4-WORLD GLOBAL SPATIAL SWITCHER (Central Hero Tabs) -->
+<nav class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-lg border border-outline-variant/40 shadow-inner">
+<button class="world-tab-btn px-3 py-1 rounded font-mono text-[11px] uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5" data-world="1" id="tab-w1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline indicator-dot"></span>
+<span>01. DISCOVERY</span>
+<span class="text-[9px] opacity-60 hidden lg:inline font-arabic">كشف</span>
+</button>
+<button class="world-tab-btn px-3 py-1 rounded font-mono text-[11px] uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5" data-world="2" id="tab-w2">
+<span class="w-1.5 h-1.5 rounded-full bg-outline indicator-dot"></span>
+<span>02. CONCEPTS</span>
+<span class="text-[9px] opacity-60 hidden lg:inline font-arabic">ساحة</span>
+</button>
+<button class="world-tab-btn px-3 py-1 rounded font-mono text-[11px] uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5" data-world="3" id="tab-w3">
+<span class="w-1.5 h-1.5 rounded-full bg-outline indicator-dot"></span>
+<span>03. EVOLUTION</span>
+<span class="text-[9px] opacity-60 hidden lg:inline font-arabic">معمل</span>
+</button>
+<button class="world-tab-btn px-3 py-1 rounded font-mono text-[11px] uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5" data-world="4" id="tab-w4">
+<span class="w-1.5 h-1.5 rounded-full bg-outline indicator-dot"></span>
+<span>04. PRODUCTION</span>
+<span class="text-[9px] opacity-60 hidden lg:inline font-arabic">تنفيذ</span>
+</button>
+</nav>
+<!-- Right Telemetry Strip -->
+<div class="flex items-center gap-3">
+<div class="hidden md:flex items-center gap-2 bg-surface-container-lowest px-2.5 py-1 rounded border border-outline-variant/30 text-[10px]">
+<span class="text-outline">GENOME:</span>
+<span class="text-tertiary font-bold" id="telemetry-genome">CR-94 [STABLE]</span>
+</div>
+<div class="hidden lg:flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded border border-outline-variant/30 text-[10px]">
+<span class="text-outline">RESONANCE:</span>
+<span class="text-secondary" id="telemetry-hz">38.4 Hz</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center cursor-pointer hover:ring-2 ring-primary/50 transition-all" title="Directorial Account: War-Room Chief">
+<span class="material-symbols-outlined text-white text-[16px]">psychology</span>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN SPATIAL VIEWPORT -->
+<main class="w-full pt-14 bg-[#08090b] min-h-screen cursor-crosshair overflow-hidden relative select-none">
+<!-- Ambient Cinematic Glows -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] rounded-full bg-gradient-to-tr from-primary-container/15 via-primary/5 to-transparent blur-[160px] transition-all duration-1000" id="ambient-glow-core"></div>
+<div class="absolute -bottom-24 right-10 w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-tertiary-container/10 via-secondary/5 to-transparent blur-[130px]" id="ambient-glow-sec"></div>
+<div class="absolute inset-0 bg-[radial-gradient(#222429_1px,transparent_1px)] [background-size:32px_32px] opacity-25"></div>
+</div>
+<!-- Realtime Telemetry Orbit Reticle (Top-Right HUD) -->
+<div class="fixed top-16 right-6 pointer-events-none z-40 hidden md:flex items-center gap-3 bg-[#0c0d10]/90 border border-outline-variant/40 px-3.5 py-1.5 rounded-lg shadow-2xl backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="text-[10px] text-outline uppercase tracking-wider">WORLD:</span>
+<span class="text-[11px] text-primary font-bold w-20" id="hud-world-name">01 // DISCOVERY</span>
+<span class="text-outline-variant text-[10px]">|</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">TILT:</span>
+<span class="text-[11px] text-on-surface w-14" id="telemetry-tilt">+0.0° / +0.0°</span>
+<span class="text-outline-variant text-[10px]">|</span>
+<span class="text-[10px] text-tertiary flex items-center gap-1 font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+      ORGANISM: LIVING
+    </span>
+</div>
+<!-- PERSPECTIVE 3D WORLD RIG -->
+<div class="relative w-full min-h-[calc(100vh-3.5rem)] [perspective:1400px] flex items-center justify-center p-3 sm:p-6 lg:p-10" id="stage-viewport">
+<div class="relative w-full max-w-7xl min-h-[820px] transition-transform duration-150 ease-out [transform-style:preserve-3d] flex items-center justify-center will-change-transform" id="spatial-world">
+<!-- ========================================================================= -->
+<!-- WORLD 01: DISCOVERY CHAMBER (كشف حقيقة غير مرئية)                        -->
+<!-- ========================================================================= -->
+<div class="world-chamber w-full flex flex-col items-center justify-center transition-all duration-700 ease-out" id="world-01">
+<!-- Header Monolith for Discovery -->
+<div class="text-center max-w-3xl mb-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/30 text-[10px] text-primary uppercase tracking-widest mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>WORLD 01: DISCOVERY CHAMBER // كشف حقيقة غير مرئية</span>
+</div>
+<h2 class="font-headline text-3xl sm:text-4xl lg:text-5xl font-semibold text-on-surface tracking-tight mb-2">
+            The Breakthrough Horizon
+          </h2>
+<p class="text-[12px] sm:text-[13px] text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+            Deconstructing <span class="text-primary font-bold">Dr Kaif Coffee</span>. Where consumer routine collides with hidden existential anxiety. Unearthing what the market is afraid to say.
+          </p>
+</div>
+<!-- Central Emotional Truth Organism Core -->
+<div class="relative w-full max-w-5xl glass-slab-active p-6 sm:p-8 rounded-xl mb-8 transition-all">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-outline-variant/30 pb-4 mb-6">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-container text-white text-[10px] font-bold tracking-wider uppercase">CORE BREAKTHROUGH</span>
+<span class="text-[11px] text-secondary font-mono">INSIGHT #09-DKC</span>
+</div>
+<div class="flex items-center gap-3 text-[11px]">
+<span class="text-outline">TARGET:</span>
+<span class="text-on-surface font-semibold">Ambitious Saudi Young Professionals (22-34)</span>
+<span class="text-outline-variant">//</span>
+<span class="text-tertiary">COHERENCE: 98.2%</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+<div class="lg:col-span-8">
+<span class="text-[11px] uppercase tracking-widest text-primary font-bold block mb-1">THE EMOTIONAL TRUTH // الحقيقة العاطفية الصادمة</span>
+<h3 class="font-headline italic text-2xl sm:text-3xl text-on-surface leading-tight mb-4">
+                "The illusion of control is our modern tranquilizer. We drink coffee not to wake up, but to regain sovereignty over 15 minutes of an outsourced life."
+              </h3>
+<p class="text-[12px] text-on-surface-variant leading-relaxed mb-4">
+                Young professionals aren’t fatigued by lack of caffeine; they are suffocated by corporate surrender, calendar hijacking, and polite compliance. Dr Kaif isn’t just roasted beans; it’s an act of sovereign mutiny.
+              </p>
+<div class="flex flex-wrap gap-2 text-[10px]">
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface border border-outline-variant/30">PARADOX: Exhausted Yet Wired</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface border border-outline-variant/30">UNEXPECTED ANGLE: Ritual as Defiance</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-primary border border-primary/30">LATENT DESIRE: Micro-Independence</span>
+</div>
+</div>
+<!-- Visual Metaphor Portal -->
+<div class="lg:col-span-4 relative rounded-lg overflow-hidden border border-outline-variant/40 bg-surface-container-lowest aspect-video lg:aspect-square flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJROT8EbnKUB8NkK_5HgJJ-YKEzMTKLcj5rVkaqM6oUnMTkbhDyK3CNWzUyBF9cakdTV_98gIjUVgFNVi4dP57huQ772kAaE_27TBy47HS-iqSnq76Oxha_8XXJLnXbFugZp92rroHqIlkbuHGmw1PrVP8SIplJPOlUQOorwCgsVzp54pdlAsRlIqw0Sw99TZNB7bblZwGHPQLyx-zhgq9tAlM1HcgT1iZ4NHS_gew')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 text-left">
+<span class="text-[9px] text-primary uppercase font-bold tracking-widest">METAPHOR</span>
+<p class="text-[11px] text-white font-headline leading-tight mt-0.5">The Obsidian Cup that breaks the corporate calendar glass.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 5 DISCOVERY ENGINES ORBIT GRID -->
+<div class="w-full max-w-5xl">
+<div class="flex items-center justify-between mb-3 px-1">
+<span class="text-[11px] text-outline uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">hub</span>
+              THE 5 DISCOVERY ENGINES (محركات الاستكشاف الخمسة)
+            </span>
+<span class="text-[10px] text-secondary font-mono">ALL ENGINES SYNCHRONIZED</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+<!-- Engine 1 -->
+<div class="engine-card glass-slab p-3.5 rounded-lg border-l-2 border-l-primary hover:border-primary transition-all cursor-pointer group">
+<div class="flex items-center justify-between text-[10px] mb-2 text-outline">
+<span class="text-primary font-bold">01 // PROVOCATION</span>
+<span class="material-symbols-outlined text-[13px] group-hover:rotate-45 transition-transform text-primary">bolt</span>
+</div>
+<h4 class="font-headline font-semibold text-sm text-on-surface mb-1">The Coffee Strike</h4>
+<p class="text-[10px] text-on-surface-variant leading-snug">What if morning caffeine wasn't fuel for your boss, but armor against their agenda?</p>
+<div class="mt-2 text-[9px] text-outline-variant group-hover:text-primary transition-colors">STIMULUS SCORE: 94%</div>
+</div>
+<!-- Engine 2 -->
+<div class="engine-card glass-slab p-3.5 rounded-lg border-l-2 border-l-secondary hover:border-secondary transition-all cursor-pointer group">
+<div class="flex items-center justify-between text-[10px] mb-2 text-outline">
+<span class="text-secondary font-bold">02 // ANALOGY</span>
+<span class="material-symbols-outlined text-[13px] group-hover:rotate-45 transition-transform text-secondary">swap_horiz</span>
+</div>
+<h4 class="font-headline font-semibold text-sm text-on-surface mb-1">Formula 1 Pitstop</h4>
+<p class="text-[10px] text-on-surface-variant leading-snug">A 1.8-second tire change isn't resting; it's calibration for extreme velocity.</p>
+<div class="mt-2 text-[9px] text-outline-variant group-hover:text-secondary transition-colors">CROSS-DOMAIN: MOTORSPORT</div>
+</div>
+<!-- Engine 3 -->
+<div class="engine-card glass-slab p-3.5 rounded-lg border-l-2 border-l-tertiary hover:border-tertiary transition-all cursor-pointer group">
+<div class="flex items-center justify-between text-[10px] mb-2 text-outline">
+<span class="text-tertiary font-bold">03 // RANDOM STIMULUS</span>
+<span class="material-symbols-outlined text-[13px] group-hover:rotate-45 transition-transform text-tertiary">shuffle</span>
+</div>
+<h4 class="font-headline font-semibold text-sm text-on-surface mb-1">Black Hole Horizon</h4>
+<p class="text-[10px] text-on-surface-variant leading-snug">Time dilates inside the density of high extraction. 10 minutes feels like hours.</p>
+<div class="mt-2 text-[9px] text-outline-variant group-hover:text-tertiary transition-colors">ASTRO-PHYSICS COLLISION</div>
+</div>
+<!-- Engine 4 -->
+<div class="engine-card glass-slab p-3.5 rounded-lg border-l-2 border-l-primary hover:border-primary transition-all cursor-pointer group">
+<div class="flex items-center justify-between text-[10px] mb-2 text-outline">
+<span class="text-primary font-bold">04 // OPPOSITE THINKING</span>
+<span class="material-symbols-outlined text-[13px] group-hover:rotate-45 transition-transform text-primary">flip</span>
+</div>
+<h4 class="font-headline font-semibold text-sm text-on-surface mb-1">Slow Down To Win</h4>
+<p class="text-[10px] text-on-surface-variant leading-snug">Invert the hustle culture. The fastest person in the room is the one who stops first.</p>
+<div class="mt-2 text-[9px] text-outline-variant group-hover:text-primary transition-colors">ANTITHESIS VALIDATION</div>
+</div>
+<!-- Engine 5 -->
+<div class="engine-card glass-slab p-3.5 rounded-lg border-l-2 border-l-secondary hover:border-secondary transition-all cursor-pointer group">
+<div class="flex items-center justify-between text-[10px] mb-2 text-outline">
+<span class="text-secondary font-bold">05 // CONSTRAINT REVERSAL</span>
+<span class="material-symbols-outlined text-[13px] group-hover:rotate-45 transition-transform text-secondary">lock_open</span>
+</div>
+<h4 class="font-headline font-semibold text-sm text-on-surface mb-1">Zero Meeting Cup</h4>
+<p class="text-[10px] text-on-surface-variant leading-snug">The coffee cup itself is a physical 'Do Not Disturb' firewall recognized by peers.</p>
+<div class="mt-2 text-[9px] text-outline-variant group-hover:text-secondary transition-colors">SOCIAL PROTOCOL REVERSAL</div>
+</div>
+</div>
+<!-- Bottom World Action -->
+<div class="mt-6 flex justify-end">
+<button class="px-5 py-2.5 rounded bg-primary-container text-white text-[11px] font-mono uppercase tracking-wider hover:bg-primary transition-all flex items-center gap-2 shadow-xl" onclick="switchWorld(2)">
+<span>ADVANCE DISCOVERY TO ARENA (الذهاب لساحة المواجهة)</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- WORLD 02: CONCEPT ARENA (ساحة مواجهة الأفكار الخمس)                       -->
+<!-- ========================================================================= -->
+<div class="world-chamber hidden w-full flex flex-col items-center justify-center transition-all duration-700 ease-out" id="world-02">
+<div class="text-center max-w-3xl mb-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/30 text-[10px] text-secondary uppercase tracking-widest mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>WORLD 02: CONCEPT ARENA // ساحة مواجهة الأفكار</span>
+</div>
+<h2 class="font-headline text-3xl sm:text-4xl lg:text-5xl font-semibold text-on-surface tracking-tight mb-2">
+            5 Monolith Territories Competing for Dominance
+          </h2>
+<p class="text-[12px] sm:text-[13px] text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+            Born from the 5 Discovery Engines. Select a philosophical vector to evolve into an advertising weapon.
+          </p>
+</div>
+<!-- 5 Arena Territory Monoliths (Side-by-side or Grid) -->
+<div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-5 gap-3.5 mb-6" id="arena-cards-container">
+<!-- Monolith A -->
+<div class="arena-monolith glass-slab p-4 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between group" data-territory="A" onclick="selectTerritory('A')">
+<div>
+<div class="flex items-center justify-between text-[10px] mb-3">
+<span class="text-primary font-bold">TERRITORY A</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-outline text-[9px]">ENG_01</span>
+</div>
+<h3 class="font-headline text-lg text-on-surface group-hover:text-primary transition-colors leading-snug mb-1">
+                The Restart Button
+              </h3>
+<p class="text-[9px] text-primary/80 font-arabic mb-2.5">زر إعادة التشغيل اليومي</p>
+<p class="text-[11px] text-on-surface-variant leading-relaxed mb-4">
+                Not a continuous fuel source, but a hard cognitive reboot. Drink, wipe cache, re-enter reality with clean RAM.
+              </p>
+</div>
+<div>
+<div class="border-t border-outline-variant/20 pt-2.5 text-[10px] space-y-1">
+<div class="flex justify-between text-outline">
+<span>TENSION:</span>
+<span class="text-primary font-bold">89%</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>VECTOR:</span>
+<span class="text-on-surface">Digital Detox</span>
+</div>
+</div>
+<button class="w-full mt-3 py-1.5 rounded bg-surface-container hover:bg-primary-container hover:text-white transition-all text-[10px] uppercase font-mono tracking-wider">
+                INSPECT VECTOR
+              </button>
+</div>
+</div>
+<!-- Monolith B (Active Champion by Default) -->
+<div class="arena-monolith glass-slab-active p-4 rounded-xl border border-primary/60 transition-all cursor-pointer flex flex-col justify-between group" data-territory="B" onclick="selectTerritory('B')">
+<div>
+<div class="flex items-center justify-between text-[10px] mb-3">
+<span class="text-primary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                  TERRITORY B [CHOSEN]
+                </span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-white text-[9px] font-bold">ALPHA</span>
+</div>
+<h3 class="font-headline text-lg text-on-surface text-primary leading-snug mb-1">
+                Control Returned
+              </h3>
+<p class="text-[9px] text-primary/80 font-arabic mb-2.5">استعادة السيطرة المسلوبة</p>
+<p class="text-[11px] text-on-surface-variant leading-relaxed mb-4">
+                You didn’t choose your 9 AM meeting, your KPIs, or your commute. But this cup? You dictate its exact ritual and presence.
+              </p>
+</div>
+<div>
+<div class="border-t border-outline-variant/20 pt-2.5 text-[10px] space-y-1">
+<div class="flex justify-between text-outline">
+<span>TENSION:</span>
+<span class="text-primary font-bold">96%</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>VECTOR:</span>
+<span class="text-tertiary">Sovereignty</span>
+</div>
+</div>
+<button class="w-full mt-3 py-1.5 rounded bg-primary-container text-white transition-all text-[10px] uppercase font-mono tracking-wider font-bold">
+                CHAMPION LOCKED
+              </button>
+</div>
+</div>
+<!-- Monolith C -->
+<div class="arena-monolith glass-slab p-4 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between group" data-territory="C" onclick="selectTerritory('C')">
+<div>
+<div class="flex items-center justify-between text-[10px] mb-3">
+<span class="text-secondary font-bold">TERRITORY C</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-outline text-[9px]">ENG_03</span>
+</div>
+<h3 class="font-headline text-lg text-on-surface group-hover:text-secondary transition-colors leading-snug mb-1">
+                The Missing Cup
+              </h3>
+<p class="text-[9px] text-secondary/80 font-arabic mb-2.5">الكوب الغائب عن الحضور</p>
+<p class="text-[11px] text-on-surface-variant leading-relaxed mb-4">
+                The phantom coffee you drank without tasting while reading corporate emails. Dr Kaif demands bodily presence.
+              </p>
+</div>
+<div>
+<div class="border-t border-outline-variant/20 pt-2.5 text-[10px] space-y-1">
+<div class="flex justify-between text-outline">
+<span>TENSION:</span>
+<span class="text-secondary font-bold">84%</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>VECTOR:</span>
+<span class="text-on-surface">Sensory Wake</span>
+</div>
+</div>
+<button class="w-full mt-3 py-1.5 rounded bg-surface-container hover:bg-secondary hover:text-black transition-all text-[10px] uppercase font-mono tracking-wider">
+                INSPECT VECTOR
+              </button>
+</div>
+</div>
+<!-- Monolith D -->
+<div class="arena-monolith glass-slab p-4 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between group" data-territory="D" onclick="selectTerritory('D')">
+<div>
+<div class="flex items-center justify-between text-[10px] mb-3">
+<span class="text-tertiary font-bold">TERRITORY D</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-outline text-[9px]">ENG_04</span>
+</div>
+<h3 class="font-headline text-lg text-on-surface group-hover:text-tertiary transition-colors leading-snug mb-1">
+                Morning Rebellion
+              </h3>
+<p class="text-[9px] text-tertiary/80 font-arabic mb-2.5">تمرد الصباح الصامت</p>
+<p class="text-[11px] text-on-surface-variant leading-relaxed mb-4">
+                Refusing to submit to the daily panic stampede. Walking into the office with deliberate, defiant calm.
+              </p>
+</div>
+<div>
+<div class="border-t border-outline-variant/20 pt-2.5 text-[10px] space-y-1">
+<div class="flex justify-between text-outline">
+<span>TENSION:</span>
+<span class="text-tertiary font-bold">93%</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>VECTOR:</span>
+<span class="text-on-surface">Quiet Mutiny</span>
+</div>
+</div>
+<button class="w-full mt-3 py-1.5 rounded bg-surface-container hover:bg-tertiary hover:text-black transition-all text-[10px] uppercase font-mono tracking-wider">
+                INSPECT VECTOR
+              </button>
+</div>
+</div>
+<!-- Monolith E -->
+<div class="arena-monolith glass-slab p-4 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between group" data-territory="E" onclick="selectTerritory('E')">
+<div>
+<div class="flex items-center justify-between text-[10px] mb-3">
+<span class="text-outline font-bold">TERRITORY E</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-outline text-[9px]">ENG_05</span>
+</div>
+<h3 class="font-headline text-lg text-on-surface group-hover:text-white transition-colors leading-snug mb-1">
+                The Pause That Wins
+              </h3>
+<p class="text-[9px] text-outline font-arabic mb-2.5">الوقفة المنتصرة</p>
+<p class="text-[11px] text-on-surface-variant leading-relaxed mb-4">
+                The tactical freeze before the counter-attack. A quiet sanctuary where the day is plotted, not suffered.
+              </p>
+</div>
+<div>
+<div class="border-t border-outline-variant/20 pt-2.5 text-[10px] space-y-1">
+<div class="flex justify-between text-outline">
+<span>TENSION:</span>
+<span class="text-on-surface font-bold">81%</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>VECTOR:</span>
+<span class="text-on-surface">Strategic Delay</span>
+</div>
+</div>
+<button class="w-full mt-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-highest transition-all text-[10px] uppercase font-mono tracking-wider">
+                INSPECT VECTOR
+              </button>
+</div>
+</div>
+</div>
+<!-- Arena Action Bar & Selected Summary -->
+<div class="w-full max-w-6xl glass-slab p-4 rounded-xl flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">flag</span>
+<div>
+<div class="text-[12px] text-on-surface font-semibold flex items-center gap-2">
+<span>ACTIVE VECTOR SELECTED:</span>
+<span class="text-primary font-bold font-mono" id="selected-vector-name">TERRITORY B: CONTROL RETURNED</span>
+</div>
+<p class="text-[10px] text-on-surface-variant">Ready to inject into Evolution Lab for genetic drift and mutation.</p>
+</div>
+</div>
+<button class="px-6 py-2.5 rounded bg-primary-container text-white text-[11px] font-mono uppercase tracking-wider hover:bg-primary transition-all flex items-center gap-2 shadow-2xl font-bold" onclick="switchWorld(3)">
+<span>SEND TO EVOLUTION LAB (نقل إلى معمل التكاثر والتحور)</span>
+<span class="material-symbols-outlined text-[16px]">dna</span>
+</button>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- WORLD 03: EVOLUTION LAB (معمل التكاثر والتحور الجيني للأفكار)              -->
+<!-- ========================================================================= -->
+<div class="world-chamber hidden w-full flex flex-col items-center justify-center transition-all duration-700 ease-out" id="world-03">
+<div class="text-center max-w-3xl mb-5">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/30 text-[10px] text-tertiary uppercase tracking-widest mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>WORLD 03: EVOLUTION LAB // معمل التكاثر والتحور الجيني للأفكار</span>
+</div>
+<h2 class="font-headline text-3xl sm:text-4xl lg:text-5xl font-semibold text-on-surface tracking-tight mb-2">
+            Genetic Mutation &amp; Territory Crossover
+          </h2>
+<p class="text-[12px] sm:text-[13px] text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+            Ideas are living biological entities. Sharpen their DNA through controlled genetic drift or cross-breed two territories into a lethal hybrid.
+          </p>
+</div>
+<!-- 3-Column Genetic Workbench -->
+<div class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-5 mb-5">
+<!-- LEFT FLANK: CROSSOVER CHAMBER (Splice Territory B + Territory D) -->
+<div class="lg:col-span-3 glass-slab p-4 rounded-xl border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-[10px] text-outline mb-3">
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">call_split</span>
+                  CROSSOVER [LEFT]
+                </span>
+<span class="font-arabic text-[9px]">تزاوج الأفكار</span>
+</div>
+<h4 class="font-headline text-base text-on-surface mb-2">Hybrid Splice</h4>
+<p class="text-[10px] text-on-surface-variant leading-relaxed mb-4">
+                Combining <strong>Territory B (Control Returned)</strong> with <strong>Territory D (Morning Rebellion)</strong>.
+              </p>
+<!-- Splice Organism Preview -->
+<div class="p-3 rounded-lg bg-surface-container-high/60 border border-tertiary/30 mb-3 space-y-2">
+<div class="text-[9px] uppercase tracking-wider text-tertiary font-bold">NEW GEN-02 ORGANISM:</div>
+<div class="font-headline text-sm text-on-surface">"The Sovereign Rebellion"</div>
+<div class="text-[10px] text-on-surface-variant leading-tight font-arabic">التمرد السيادي الصامت</div>
+<p class="text-[10px] text-on-surface-variant leading-snug">
+                  The cup becomes a silent badge of personal sovereignty that reframes office silence as psychological leverage.
+                </p>
+</div>
+<div class="space-y-1.5 text-[10px]">
+<div class="flex justify-between text-outline">
+<span>HYBRID VIGOR:</span>
+<span class="text-tertiary font-bold">97.4%</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>GENETIC NOVELTY:</span>
+<span class="text-primary font-bold">+42.1%</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 py-2 rounded bg-tertiary-container/30 border border-tertiary/40 text-tertiary hover:bg-tertiary hover:text-black transition-all text-[10px] uppercase font-mono tracking-wider font-bold" id="btn-apply-crossover">
+              APPLY HYBRID GENOME [X]
+            </button>
+</div>
+<!-- CENTER HERO: THE LIVING IDEA ORGANISM & LIVE REGULATORS -->
+<div class="lg:col-span-6 glass-slab-active p-6 rounded-xl border border-primary/50 relative flex flex-col justify-between">
+<div class="absolute top-3 right-4 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="text-[10px] font-mono text-primary uppercase font-bold" id="organism-generation">GENERATION // 3.4 ACTIVE</span>
+</div>
+<div>
+<div class="text-[10px] text-outline uppercase tracking-widest mb-1">INCUBATED ORGANISM</div>
+<h3 class="font-headline text-2xl sm:text-3xl text-on-surface mb-1" id="organism-title">
+                Control Returned Through Rituals
+              </h3>
+<p class="text-[11px] text-primary font-arabic mb-4" id="organism-arabic">استعادة السيطرة عبر طقس القهوة الصارم</p>
+<div class="p-4 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/30 mb-5">
+<p class="text-[12px] text-on-surface leading-relaxed" id="organism-body">
+                  "You cannot govern the economy, the traffic, or your executive committee. But in the four minutes you spend brewing Dr Kaif, you are absolute sovereign. Every drip is under your jurisdiction. Coffee is no longer liquid energy; it is your sanctuary of non-negotiable dominion."
+                </p>
+</div>
+<!-- Real-time Genetic Mutation Sliders -->
+<div class="space-y-3.5 mb-4">
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span class="text-outline uppercase">RADICALISM GAUGE (درجة الجرأة):</span>
+<span class="text-primary font-bold font-mono" id="val-radicalism">86%</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded accent-primary cursor-pointer" id="slider-radicalism" max="100" min="0" type="range" value="86"/>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span class="text-outline uppercase">GENETIC DRIFT (الانحراف الجيني):</span>
+<span class="text-secondary font-bold font-mono" id="val-drift">64%</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded accent-secondary cursor-pointer" id="slider-drift" max="100" min="0" type="range" value="64"/>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span class="text-outline uppercase">CULTURAL ENTROPY (تفكيك النمط):</span>
+<span class="text-tertiary font-bold font-mono" id="val-entropy">91%</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded accent-tertiary cursor-pointer" id="slider-entropy" max="100" min="0" type="range" value="91"/>
+</div>
+</div>
+</div>
+<!-- Organism Status Deck -->
+<div class="pt-3 border-t border-outline-variant/30 flex items-center justify-between text-[11px]">
+<span class="text-outline">MUTABILITY INDEX: <strong class="text-white" id="mutability-tag">HIGH VOLATILITY</strong></span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary border border-primary/30 text-[10px] uppercase font-mono tracking-wider flex items-center gap-1" id="btn-re-mutate">
+<span class="material-symbols-outlined text-[13px]">cyclone</span>
+                FORCE MUTATION PULSE [M]
+              </button>
+</div>
+</div>
+<!-- RIGHT FLANK: STEP MUTATIONS (Evolving / Sharpening Vector) -->
+<div class="lg:col-span-3 glass-slab p-4 rounded-xl border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-[10px] text-outline mb-3">
+<span class="text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                  MUTATIONS [RIGHT]
+                </span>
+<span class="font-arabic text-[9px]">تطور الفكرة</span>
+</div>
+<h4 class="font-headline text-base text-on-surface mb-2">Sharpened Branches</h4>
+<p class="text-[10px] text-on-surface-variant leading-relaxed mb-4">
+                Step mutations pushing the chosen territory into high-octane commercial propositions:
+              </p>
+<div class="space-y-2.5">
+<div class="p-2.5 rounded bg-surface-container-high/60 border border-outline-variant/30 hover:border-primary/50 transition-colors cursor-pointer mutation-option active" data-mut="1" onclick="applyMutation(1)">
+<div class="text-[9px] text-primary font-mono uppercase font-bold">MUTATION 01 // RITUAL SANCTUARY</div>
+<p class="text-[10px] text-on-surface mt-0.5">Control returned through private 4-minute sensory isolation booths.</p>
+</div>
+<div class="p-2.5 rounded bg-surface-container-high/60 border border-outline-variant/30 hover:border-primary/50 transition-colors cursor-pointer mutation-option" data-mut="2" onclick="applyMutation(2)">
+<div class="text-[9px] text-secondary font-mono uppercase font-bold">MUTATION 02 // TIME RECLAIMED</div>
+<p class="text-[10px] text-on-surface mt-0.5">Every coffee purchase logs 15 minutes of untracked personal freedom.</p>
+</div>
+<div class="p-2.5 rounded bg-surface-container-high/60 border border-outline-variant/30 hover:border-primary/50 transition-colors cursor-pointer mutation-option" data-mut="3" onclick="applyMutation(3)">
+<div class="text-[9px] text-tertiary font-mono uppercase font-bold">MUTATION 03 // THE REFUSAL CUP</div>
+<p class="text-[10px] text-on-surface mt-0.5">Matte black packaging carrying direct anti-compromise manifests.</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 text-center">
+<span class="text-[9px] text-outline uppercase">DNA MATURATION LEVEL: READY FOR SCREENPLAY</span>
+</div>
+</div>
+</div>
+<!-- Evolution World Next Action -->
+<div class="w-full max-w-6xl flex justify-between items-center glass-slab px-5 py-3 rounded-xl">
+<button class="text-[11px] text-outline-variant hover:text-on-surface transition-colors flex items-center gap-1 font-mono" onclick="switchWorld(2)">
+<span class="material-symbols-outlined text-[15px]">arrow_back</span>
+<span>BACK TO ARENA</span>
+</button>
+<button class="px-6 py-2.5 rounded bg-primary-container text-white text-[11px] font-mono uppercase tracking-wider hover:bg-primary transition-all flex items-center gap-2 shadow-2xl font-bold" onclick="switchWorld(4)">
+<span>INITIALIZE PRODUCTION ROOM (نقل إلى غرفة التنفيذ الإخراجي)</span>
+<span class="material-symbols-outlined text-[16px]">movie_filter</span>
+</button>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- WORLD 04: PRODUCTION ROOM (Directorial Execution & Holographic Script)    -->
+<!-- ========================================================================= -->
+<div class="world-chamber hidden w-full flex flex-col items-center justify-center transition-all duration-700 ease-out" id="world-04">
+<div class="text-center max-w-3xl mb-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/30 text-[10px] text-primary uppercase tracking-widest mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>WORLD 04: PRODUCTION ROOM // Directorial Execution</span>
+</div>
+<h2 class="font-headline text-3xl sm:text-4xl lg:text-5xl font-semibold text-on-surface tracking-tight mb-1">
+            The Holographic Script &amp; Directorial Blueprint
+          </h2>
+<p class="text-[12px] text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+            Transmuting the evolved organism into frame-accurate cinema. Real-time cinematic translation for Dr Kaif Coffee Launch.
+          </p>
+</div>
+<!-- Cinema-Grade Split: Left Flank (Strategic Directorial Architecture) + Center Hero (Script) -->
+<div class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-5 mb-5">
+<!-- LEFT FLANK: STRATEGIC & EMOTIONAL DIRECTIVES (3.5 cols) -->
+<div class="lg:col-span-4 space-y-3.5">
+<!-- Strategic Directive 1 -->
+<div class="glass-slab p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center justify-between text-[10px] text-primary uppercase tracking-wider font-bold mb-2">
+<span>01. EMOTIONAL TURN // التحول العاطفي</span>
+<span class="material-symbols-outlined text-[14px]">psychology_alt</span>
+</div>
+<p class="text-[11px] text-on-surface leading-relaxed">
+                From <strong>Numb Robotic Compliance</strong> (00:00 - 00:08) to <strong>Sudden Autonomic Awakening</strong> (00:15 - 00:30). The audience must feel their own posture straighten when the seal cracks.
+              </p>
+</div>
+<!-- Strategic Directive 2 -->
+<div class="glass-slab p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center justify-between text-[10px] text-secondary uppercase tracking-wider font-bold mb-2">
+<span>02. NARRATIVE STRATEGY // الاستراتيجية السردية</span>
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+</div>
+<p class="text-[11px] text-on-surface leading-relaxed">
+                No smiling baristas. No steaming latte art hearts. We treat Dr Kaif as an elite instrument of sovereign reclamation. The coffee shop is framed like a quiet, high-tech sanctuary.
+              </p>
+</div>
+<!-- Strategic Directive 3 -->
+<div class="glass-slab p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center justify-between text-[10px] text-tertiary uppercase tracking-wider font-bold mb-2">
+<span>03. SONIC &amp; VISUAL DIRECTION // الرؤية البصرية والصوتية</span>
+<span class="material-symbols-outlined text-[14px]">graphic_eq</span>
+</div>
+<p class="text-[11px] text-on-surface leading-relaxed">
+<strong>Visual:</strong> 35mm anamorphic, deep obsidian blacks, razor tungsten highlights, extreme 1000fps macro.<br/>
+<strong>Sonic:</strong> Dry whispers recorded at 0.5 inches, abrasive sub-bass drops (38Hz), sudden complete vacuum silences.
+              </p>
+</div>
+<!-- Arabic Directorial Mandate Card -->
+<div class="glass-slab p-4 rounded-xl border border-primary/40 bg-primary-container/10">
+<div class="text-[10px] text-primary uppercase font-bold tracking-wider mb-1">الرؤية الإخراجية باللغة العربية</div>
+<p class="text-[11px] text-on-surface font-arabic leading-relaxed">
+                "الدكتور كيف ليس محطة وقود للجسد المرهق، بل هو لحظة إعلان السيادة على الوقت. كل تفصيلة في الإعلان تعيد تعريف فنجان القهوة كحق أصيل في الخلوة والتركيز."
+              </p>
+</div>
+</div>
+<!-- CENTER/RIGHT HERO: THE FRAME-ACCURATE SCRIPT (8 cols) -->
+<div class="lg:col-span-8 glass-slab-active p-5 sm:p-6 rounded-xl border border-outline-variant/40 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-outline-variant/30 pb-3 mb-4">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="text-sm font-headline font-semibold text-on-surface">DR KAIF // FILM TREATMENT: "THE SOVEREIGN MINUTE"</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] px-2 py-0.5 rounded bg-surface-container font-mono text-tertiary">DURATION: 00:30</span>
+<span class="text-[10px] px-2 py-0.5 rounded bg-surface-container font-mono text-secondary">FORMAT: 2.39:1 CINEMASCOPE</span>
+</div>
+</div>
+<!-- Table Headers -->
+<div class="grid grid-cols-12 gap-2 text-[10px] uppercase tracking-wider text-outline px-2 py-1.5 bg-surface-container-high rounded mb-2">
+<div class="col-span-2">TIMECODE</div>
+<div class="col-span-5">VISUAL DIRECTIVE (CAM &amp; MIS-EN-SCÈNE)</div>
+<div class="col-span-5">VOICEOVER &amp; SONIC ARCHITECTURE</div>
+</div>
+<!-- Script Scene 01 -->
+<div class="grid grid-cols-12 gap-2 text-[11px] p-3 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/40 transition-colors mb-2 items-start">
+<div class="col-span-2 font-mono text-primary font-bold">
+                  00:00 - 00:06
+                  <span class="block text-[9px] text-outline font-normal">SCENE 01</span>
+</div>
+<div class="col-span-5 text-on-surface leading-relaxed">
+                  Ultra-wide anamorphic of Riyadh financial district tower at 7:14 AM. Fluorescent cold blues. 
+                  Cut inside: Young Saudi professional in sharp charcoal blazer staring at a frozen email cursor. The reflection reveals eyes exhausted by perpetual compliance.
+                </div>
+<div class="col-span-5 text-on-surface-variant leading-relaxed">
+<span class="italic text-white font-arabic">[صوت داخلي هادئ وقاطع]:</span> "ثمانية اجتماعات قبل الظهر. يومك ليس لك... إلا إذا قررت أنت."
+                  <span class="block text-[10px] text-outline mt-1 font-mono">[AUDIO]: Muffled corporate HVAC drone. Heartbeat pulse under-mixed at 40Hz.</span>
+</div>
+</div>
+<!-- Script Scene 02 -->
+<div class="grid grid-cols-12 gap-2 text-[11px] p-3 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/40 transition-colors mb-2 items-start">
+<div class="col-span-2 font-mono text-secondary font-bold">
+                  00:06 - 00:18
+                  <span class="block text-[9px] text-outline font-normal">SCENE 02</span>
+</div>
+<div class="col-span-5 text-on-surface leading-relaxed">
+                  Abrupt cut to Dr Kaif espresso bar. Ambient light shifts to deep obsidian granite. 
+                  Extreme 1000fps macro: Boiling black espresso crema cascading through pure crystal glass. 
+                  He places his smartphone face-down with decisive weight. The screen goes black.
+                </div>
+<div class="col-span-5 text-on-surface-variant leading-relaxed">
+<span class="italic text-white font-arabic">[صوت الراوي]:</span> "هنا، لا أحد يملك دقيقة واحدة منك. هنا تستعيد سلطتك."
+                  <span class="block text-[10px] text-outline mt-1 font-mono">[AUDIO]: Violent mechanical slam of portafilter. Sudden vacuum kill of all office audio. Euphoric cello drone rises.</span>
+</div>
+</div>
+<!-- Script Scene 03 -->
+<div class="grid grid-cols-12 gap-2 text-[11px] p-3 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/40 transition-colors items-start">
+<div class="col-span-2 font-mono text-tertiary font-bold">
+                  00:18 - 00:30
+                  <span class="block text-[9px] text-outline font-normal">SCENE 03</span>
+</div>
+<div class="col-span-5 text-on-surface leading-relaxed">
+                  He takes the first sip. His posture relaxes into sovereign calm. 
+                  He steps back into the sunlight outside. The busy city crowd rushes around him in hyper-lapse blur, while he walks in natural cinematic slow-motion.
+                </div>
+<div class="col-span-5 text-on-surface-variant leading-relaxed">
+<span class="text-primary font-bold font-arabic">[شعار الختام]:</span> "د. كيف. سيادتك اليومية."
+                  <span class="block text-white text-[10px] font-mono mt-0.5">DR KAIF // YOUR SOVEREIGN GROUND.</span>
+<span class="block text-[10px] text-outline mt-1 font-mono">[AUDIO]: Massive 38Hz resonant bass bloom. Warm analog tape hiss fades to silence.</span>
+</div>
+</div>
+</div>
+<!-- Script Tooldeck & Export -->
+<div class="mt-4 pt-3 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-[10px] font-mono uppercase tracking-wider flex items-center gap-1.5 border border-outline-variant/30">
+<span class="material-symbols-outlined text-[14px]">picture_as_pdf</span>
+<span>EXPORT TREATMENT PDF</span>
+</button>
+<button class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-[10px] font-mono uppercase tracking-wider flex items-center gap-1.5 border border-outline-variant/30">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>COPY A/V SCRIPT [S]</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] text-tertiary font-mono">STATUS: APPROVED FOR CLIENT PITCH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Production Room Back Navigation -->
+<div class="w-full max-w-6xl flex justify-between items-center glass-slab px-5 py-3 rounded-xl">
+<button class="text-[11px] text-outline-variant hover:text-on-surface transition-colors flex items-center gap-1 font-mono" onclick="switchWorld(3)">
+<span class="material-symbols-outlined text-[15px]">arrow_back</span>
+<span>BACK TO EVOLUTION LAB</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="text-[10px] text-outline uppercase font-mono">CYCLE COMPLETE</span>
+<button class="px-5 py-2 rounded bg-surface-container-highest hover:bg-primary-container text-white text-[11px] font-mono uppercase tracking-wider transition-all flex items-center gap-1.5" onclick="switchWorld(1)">
+<span class="material-symbols-outlined text-[15px]">restart_alt</span>
+<span>RESTART RUN // WORLD 01</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM FLOATING SPATIAL DOCK & CONTROLLER HUD -->
+<div class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 max-w-[96vw] overflow-x-auto">
+<!-- 4-Worlds Quick Nav Dock -->
+<div class="bg-[#0b0c0f]/95 backdrop-blur-2xl p-1 rounded-xl border border-outline-variant/40 shadow-2xl flex items-center gap-1">
+<button class="dock-btn px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase transition-all flex items-center gap-1.5 text-on-surface-variant hover:text-white" data-world="1" onclick="switchWorld(1)">
+<span class="w-1.5 h-1.5 rounded-full bg-outline dock-dot"></span>
+<span>01. DISCOVER</span>
+</button>
+<button class="dock-btn px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase transition-all flex items-center gap-1.5 text-on-surface-variant hover:text-white" data-world="2" onclick="switchWorld(2)">
+<span class="w-1.5 h-1.5 rounded-full bg-outline dock-dot"></span>
+<span>02. ARENA</span>
+</button>
+<button class="dock-btn px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase transition-all flex items-center gap-1.5 text-on-surface-variant hover:text-white" data-world="3" onclick="switchWorld(3)">
+<span class="w-1.5 h-1.5 rounded-full bg-outline dock-dot"></span>
+<span>03. EVOLVE</span>
+</button>
+<button class="dock-btn px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase transition-all flex items-center gap-1.5 text-on-surface-variant hover:text-white" data-world="4" onclick="switchWorld(4)">
+<span class="w-1.5 h-1.5 rounded-full bg-outline dock-dot"></span>
+<span>04. PRODUCE</span>
+</button>
+</div>
+<!-- Orbit Cam Sensitivity Toggle -->
+<div class="hidden md:flex items-center gap-2 bg-[#0b0c0f]/95 backdrop-blur-2xl px-3 py-1.5 rounded-xl border border-outline-variant/40 text-[10px] text-outline shadow-xl">
+<button class="flex items-center gap-1 hover:text-white transition-colors cursor-pointer" id="btn-toggle-sens" title="Cycle Camera Tilt Sensitivity">
+<span class="material-symbols-outlined text-primary text-[14px]">videocam</span>
+<span>CAM TILT:</span>
+<span class="text-white font-bold font-mono" id="label-cam-sens">1.0x</span>
+</button>
+<span class="text-outline-variant">·</span>
+<span class="text-tertiary font-mono">60FPS LERP</span>
+</div>
+<!-- Hotkeys Legend -->
+<div class="hidden xl:flex items-center gap-2 bg-[#0b0c0f]/80 backdrop-blur-md px-3 py-1.5 rounded-xl border border-outline-variant/30 text-[10px] text-outline shadow-lg">
+<span><kbd class="px-1 py-0.5 rounded bg-surface-container text-white border border-outline-variant/30">1-4</kbd> WORLDS</span>
+<span class="text-outline-variant">·</span>
+<span><kbd class="px-1 py-0.5 rounded bg-surface-container text-white border border-outline-variant/30">M</kbd> MUTATE</span>
+<span class="text-outline-variant">·</span>
+<span><kbd class="px-1 py-0.5 rounded bg-surface-container text-white border border-outline-variant/30">X</kbd> CROSSOVER</span>
+<span class="text-outline-variant">·</span>
+<span><kbd class="px-1 py-0.5 rounded bg-surface-container text-white border border-outline-variant/30">S</kbd> SCRIPT</span>
+<span class="text-outline-variant">·</span>
+<span><kbd class="px-1 py-0.5 rounded bg-surface-container text-white border border-outline-variant/30">ESC</kbd> RESET TILT</span>
+</div>
+</div>
+<!-- Bottom-Right Live Audio Sub-Bass Barometer -->
+<div class="fixed bottom-5 right-5 hidden lg:flex items-center gap-2.5 bg-[#0b0c0f]/90 border border-outline-variant/40 backdrop-blur-lg px-3 py-1.5 rounded-lg shadow-xl z-40">
+<span class="material-symbols-outlined text-primary text-[16px] animate-pulse">graphic_eq</span>
+<span class="text-[10px] text-outline uppercase font-mono">SUB-BASS:</span>
+<div class="flex items-end gap-0.5 h-3.5 w-12">
+<span class="w-1 bg-primary h-2 animate-bounce"></span>
+<span class="w-1 bg-primary h-3.5 animate-pulse"></span>
+<span class="w-1 bg-primary h-1.5 animate-bounce"></span>
+<span class="w-1 bg-primary h-3 animate-pulse"></span>
+<span class="w-1 bg-primary h-2 animate-bounce"></span>
+</div>
+<span class="text-[10px] text-on-surface font-mono" id="sub-bass-hz">38.4 Hz</span>
+</div>
+</main>
+<!-- LIVING SPATIAL ENGINE SCRIPT -->
+<script>
+  (function initFX2CreativeOS() {
+    // Current Active World (1, 2, 3, 4)
+    let activeWorld = 1;
+    let selectedTerritoryId = "B";
+
+    // 60FPS Orbit & Parallax System
+    let targetRotX = 0;
+    let targetRotY = 0;
+    let currentRotX = 0;
+    let currentRotY = 0;
+    const LERP = 0.08;
+    let mouseSensitivity = 1.0;
+    const sensSteps = [0.5, 1.0, 1.6];
+    let sensStepIndex = 1;
+
+    // Elements
+    const spatialWorld = document.getElementById("spatial-world");
+    const hudWorldName = document.getElementById("hud-world-name");
+    const telemetryTilt = document.getElementById("telemetry-tilt");
+    const ambientCore = document.getElementById("ambient-glow-core");
+    const labelSens = document.getElementById("label-cam-sens");
+    const selectedVectorName = document.getElementById("selected-vector-name");
+
+    const worldNames = {
+      1: "01 // DISCOVERY",
+      2: "02 // ARENA",
+      3: "03 // EVOLUTION",
+      4: "04 // PRODUCTION"
+    };
+
+    const territoryData = {
+      "A": {
+        title: "The Restart Button",
+        arabic: "زر إعادة التشغيل اليومي",
+        vector: "TERRITORY A: THE RESTART BUTTON",
+        organismBody: "In a world of perpetual data bombardment, coffee is a hard RAM clear. You do not consume caffeine to keep working; you consume it to purge cognitive clutter and restart clean."
+      },
+      "B": {
+        title: "Control Returned Through Rituals",
+        arabic: "استعادة السيطرة عبر طقس القهوة الصارم",
+        vector: "TERRITORY B: CONTROL RETURNED",
+        organismBody: "You cannot govern the economy, the traffic, or your executive committee. But in the four minutes you spend brewing Dr Kaif, you are absolute sovereign. Every drip is under your jurisdiction. Coffee is no longer liquid energy; it is your sanctuary of non-negotiable dominion."
+      },
+      "C": {
+        title: "The Missing Cup",
+        arabic: "الكوب الغائب عن الحضور",
+        vector: "TERRITORY C: THE MISSING CUP",
+        organismBody: "We drink hundreds of phantom cups while trapped in digital screens without experiencing a single note of flavor. Dr Kaif reclaims somatic presence, demanding your sensory arrival."
+      },
+      "D": {
+        title: "Morning Rebellion",
+        arabic: "تمرد الصباح الصامت",
+        vector: "TERRITORY D: MORNING REBELLION",
+        organismBody: "The alarm clock is corporate conscription. The intentional slow cup of coffee is the daily peaceful protest that refuses to sprint for another person's milestone."
+      },
+      "E": {
+        title: "The Pause That Wins",
+        arabic: "الوقفة المنتصرة",
+        vector: "TERRITORY E: THE PAUSE THAT WINS",
+        organismBody: "In high-stakes chess, the master takes the longest pause before the fatal move. Dr Kaif isn't hesitation; it is the strategic calibration that guarantees checkmate."
+      }
+    };
+
+    // WORLD SWITCHER FUNCTION
+    window.switchWorld = function(worldNumber) {
+      if (worldNumber < 1 || worldNumber > 4) return;
+      activeWorld = worldNumber;
+
+      // Update Navigation Tabs (Top & Dock)
+      for (let i = 1; i <= 4; i++) {
+        const topBtn = document.getElementById("tab-w" + i);
+        const dockBtn = document.querySelector(`.dock-btn[data-world="${i}"]`);
+        const chamber = document.getElementById("world-0" + i);
+
+        if (i === worldNumber) {
+          if (topBtn) {
+            topBtn.className = "world-tab-btn px-3 py-1 rounded font-mono text-[11px] uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5 bg-primary-container text-white font-bold shadow-lg";
+            const dot = topBtn.querySelector(".indicator-dot");
+            if (dot) dot.className = "w-1.5 h-1.5 rounded-full bg-white indicator-dot";
+          }
+          if (dockBtn) {
+            dockBtn.className = "dock-btn px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase transition-all flex items-center gap-1.5 bg-primary-container text-white font-bold shadow-md";
+            const dDot = dockBtn.querySelector(".dock-dot");
+            if (dDot) dDot.className = "w-1.5 h-1.5 rounded-full bg-white dock-dot";
+          }
+          if (chamber) {
+            chamber.classList.remove("hidden");
+            chamber.style.opacity = "0";
+            chamber.style.transform = "scale(0.97) translateZ(-40px)";
+            setTimeout(() => {
+              chamber.style.opacity = "1";
+              chamber.style.transform = "scale(1) translateZ(0px)";
+            }, 50);
+          }
+        } else {
+          if (topBtn) {
+            topBtn.className = "world-tab-btn px-3 py-1 rounded font-mono text-[11px] uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5 text-on-surface-variant hover:text-white";
+            const dot = topBtn.querySelector(".indicator-dot");
+            if (dot) dot.className = "w-1.5 h-1.5 rounded-full bg-outline indicator-dot";
+          }
+          if (dockBtn) {
+            dockBtn.className = "dock-btn px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase transition-all flex items-center gap-1.5 text-on-surface-variant hover:text-white";
+            const dDot = dockBtn.querySelector(".dock-dot");
+            if (dDot) dDot.className = "w-1.5 h-1.5 rounded-full bg-outline dock-dot";
+          }
+          if (chamber) {
+            chamber.classList.add("hidden");
+          }
+        }
+      }
+
+      // Update HUD World Name
+      hudWorldName.textContent = worldNames[worldNumber];
+
+      // Ambient Lighting Shift per World
+      if (worldNumber === 1) {
+        ambientCore.className = "absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] rounded-full bg-gradient-to-tr from-primary-container/15 via-primary/5 to-transparent blur-[160px] transition-all duration-1000";
+      } else if (worldNumber === 2) {
+        ambientCore.className = "absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] rounded-full bg-gradient-to-tr from-secondary-container/20 via-secondary/10 to-transparent blur-[160px] transition-all duration-1000";
+      } else if (worldNumber === 3) {
+        ambientCore.className = "absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] rounded-full bg-gradient-to-tr from-tertiary-container/20 via-tertiary/10 to-transparent blur-[160px] transition-all duration-1000";
+      } else if (worldNumber === 4) {
+        ambientCore.className = "absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] rounded-full bg-gradient-to-tr from-primary-container/25 via-primary/10 to-transparent blur-[160px] transition-all duration-1000";
+      }
+    };
+
+    // SELECT TERRITORY FUNCTION (In World 02)
+    window.selectTerritory = function(tId) {
+      selectedTerritoryId = tId;
+      const data = territoryData[tId];
+      if (!data) return;
+
+      document.querySelectorAll(".arena-monolith").forEach(el => {
+        el.className = "arena-monolith glass-slab p-4 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between group";
+        const btn = el.querySelector("button");
+        if (btn) {
+          btn.className = "w-full mt-3 py-1.5 rounded bg-surface-container hover:bg-primary-container hover:text-white transition-all text-[10px] uppercase font-mono tracking-wider";
+          btn.textContent = "INSPECT VECTOR";
+        }
+      });
+
+      const activeEl = document.querySelector(`.arena-monolith[data-territory="${tId}"]`);
+      if (activeEl) {
+        activeEl.className = "arena-monolith glass-slab-active p-4 rounded-xl border border-primary/60 transition-all cursor-pointer flex flex-col justify-between group";
+        const btn = activeEl.querySelector("button");
+        if (btn) {
+          btn.className = "w-full mt-3 py-1.5 rounded bg-primary-container text-white transition-all text-[10px] uppercase font-mono tracking-wider font-bold";
+          btn.textContent = "CHAMPION LOCKED";
+        }
+      }
+
+      if (selectedVectorName) {
+        selectedVectorName.textContent = data.vector;
+      }
+
+      // Propagate to Evolution Lab Organism
+      const oTitle = document.getElementById("organism-title");
+      const oArab = document.getElementById("organism-arabic");
+      const oBody = document.getElementById("organism-body");
+      if (oTitle) oTitle.textContent = data.title;
+      if (oArab) oArab.textContent = data.arabic;
+      if (oBody) oBody.textContent = `"${data.organismBody}"`;
+    };
+
+    // MUTATION APPLICATION (In World 03)
+    window.applyMutation = function(mutNum) {
+      document.querySelectorAll(".mutation-option").forEach(el => {
+        el.classList.remove("border-primary", "bg-primary-container/10");
+      });
+      const chosen = document.querySelector(`.mutation-option[data-mut="${mutNum}"]`);
+      if (chosen) {
+        chosen.classList.add("border-primary", "bg-primary-container/10");
+      }
+
+      const oGen = document.getElementById("organism-generation");
+      if (oGen) {
+        oGen.textContent = `GENERATION // 3.${mutNum + 4} MUTATED`;
+      }
+    };
+
+    // 60FPS Perspective Camera Lerp Loop
+    function renderFrame() {
+      currentRotX += (targetRotX - currentRotX) * LERP;
+      currentRotY += (targetRotY - currentRotY) * LERP;
+
+      spatialWorld.style.transform = `rotateX(${currentRotX}deg) rotateY(${currentRotY}deg)`;
+
+      if (telemetryTilt) {
+        const pStr = (currentRotX >= 0 ? "+" : "") + currentRotX.toFixed(1) + "°";
+        const yStr = (currentRotY >= 0 ? "+" : "") + currentRotY.toFixed(1) + "°";
+        telemetryTilt.textContent = `${pStr} / ${yStr}`;
+      }
+
+      requestAnimationFrame(renderFrame);
+    }
+    requestAnimationFrame(renderFrame);
+
+    // Mouse Movement for Perspective Tilt
+    window.addEventListener("mousemove", (e) => {
+      const normX = (e.clientX / window.innerWidth) - 0.5;
+      const normY = (e.clientY / window.innerHeight) - 0.5;
+      targetRotY = normX * (6.0 * mouseSensitivity);
+      targetRotX = -normY * (5.5 * mouseSensitivity);
+    });
+
+    // Sensitivity Toggle Click
+    const sensBtn = document.getElementById("btn-toggle-sens");
+    if (sensBtn) {
+      sensBtn.addEventListener("click", () => {
+        sensStepIndex = (sensStepIndex + 1) % sensSteps.length;
+        mouseSensitivity = sensSteps[sensStepIndex];
+        labelSens.textContent = mouseSensitivity.toFixed(1) + "x";
+      });
+    }
+
+    // Top Tabs Event Listeners
+    document.querySelectorAll(".world-tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const w = parseInt(btn.getAttribute("data-world"));
+        switchWorld(w);
+      });
+    });
+
+    // Sliders Live Numeric Feedback
+    const sRad = document.getElementById("slider-radicalism");
+    const vRad = document.getElementById("val-radicalism");
+    if (sRad) sRad.addEventListener("input", (e) => vRad.textContent = e.target.value + "%");
+
+    const sDrift = document.getElementById("slider-drift");
+    const vDrift = document.getElementById("val-drift");
+    if (sDrift) sDrift.addEventListener("input", (e) => vDrift.textContent = e.target.value + "%");
+
+    const sEnt = document.getElementById("slider-entropy");
+    const vEnt = document.getElementById("val-entropy");
+    if (sEnt) sEnt.addEventListener("input", (e) => vEnt.textContent = e.target.value + "%");
+
+    // Force Mutation Pulse button
+    const btnPulse = document.getElementById("btn-re-mutate");
+    if (btnPulse) {
+      btnPulse.addEventListener("click", () => {
+        const rndRad = Math.floor(Math.random() * 25) + 75;
+        if (sRad) sRad.value = rndRad;
+        if (vRad) vRad.textContent = rndRad + "%";
+        btnPulse.classList.add("scale-95");
+        setTimeout(() => btnPulse.classList.remove("scale-95"), 150);
+      });
+    }
+
+    // Hybrid Crossover Button
+    const btnCross = document.getElementById("btn-apply-crossover");
+    if (btnCross) {
+      btnCross.addEventListener("click", () => {
+        const oTitle = document.getElementById("organism-title");
+        const oArab = document.getElementById("organism-arabic");
+        const oBody = document.getElementById("organism-body");
+        if (oTitle) oTitle.textContent = "The Sovereign Rebellion (Hybrid Gen-02)";
+        if (oArab) oArab.textContent = "التمرد السيادي الصامت: الهجين المطور";
+        if (oBody) oBody.textContent = `"Coffee as personal armor. The refusal to compromise your first 20 minutes under corporate duress, reframing quiet presence as strategic psychological superiority."`;
+        btnCross.textContent = "HYBRID LOCKED IN CORE";
+        btnCross.classList.add("bg-tertiary", "text-black");
+      });
+    }
+
+    // Keyboard Hotkeys (1-4, M, X, S, ESC)
+    window.addEventListener("keydown", (e) => {
+      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+      const key = e.key.toUpperCase();
+
+      if (key === "1") switchWorld(1);
+      else if (key === "2") switchWorld(2);
+      else if (key === "3") switchWorld(3);
+      else if (key === "4") switchWorld(4);
+      else if (key === "M") {
+        switchWorld(3);
+        if (btnPulse) btnPulse.click();
+      } else if (key === "X") {
+        switchWorld(3);
+        if (btnCross) btnCross.click();
+      } else if (key === "S") {
+        switchWorld(4);
+      } else if (key === "ESCAPE") {
+        targetRotX = 0;
+        targetRotY = 0;
+      }
+    });
+
+    // Initialize Default World 1
+    switchWorld(1);
+
+  })();
+</script>
+</body></html>

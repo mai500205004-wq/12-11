@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#002109", "outline": "#ad887e", "inverse-on-surface": "#313033", "surface": "#131316", "secondary": "#4ae176", "on-error-container": "#ffdad6", "on-primary-container": "#531100", "secondary-fixed-dim": "#4ae176", "on-surface": "#e5e1e5", "primary": "#ffb5a0", "on-background": "#e5e1e5", "inverse-surface": "#e5e1e5", "on-error": "#690005", "surface-container-highest": "#353437", "surface-tint": "#ffb5a0", "error-container": "#93000a", "on-primary-fixed-variant": "#862200", "surface-variant": "#353437", "on-primary": "#5f1500", "secondary-container": "#00b954", "surface-container-low": "#1c1b1e", "primary-fixed-dim": "#ffb5a0", "on-primary-fixed": "#3b0900", "surface-container-lowest": "#0e0e10", "primary-container": "#ff5721", "secondary-fixed": "#6bff8f", "error": "#ffb4ab", "surface-dim": "#131316", "tertiary-fixed-dim": "#c7c7c0", "tertiary": "#c7c7c0", "tertiary-container": "#91918b", "on-secondary-container": "#004119", "background": "#131316", "surface-container": "#201f22", "primary-fixed": "#ffdbd1", "surface-bright": "#39393b", "on-secondary": "#003915", "tertiary-fixed": "#e4e3dc", "on-surface-variant": "#e6bdb2", "on-secondary-fixed-variant": "#005321", "outline-variant": "#5d4038", "on-tertiary": "#30312c", "inverse-primary": "#b02f00", "on-tertiary-fixed": "#1b1c18", "on-tertiary-fixed-variant": "#464742", "on-tertiary-container": "#292a26", "surface-container-high": "#2a2a2c" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin-desktop": "2.5rem", "gutter": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "body-script": [ "JetBrains Mono" ], "display-xl-mobile": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "display-xl": [ "Space Grotesk" ], "body-lg": [ "IBM Plex Sans" ], "label-caps": [ "Space Grotesk" ], "body-md": [ "IBM Plex Sans" ], "mono-telemetry": [ "JetBrains Mono" ], "title-sm": [ "Space Grotesk" ] }, "fontSize": { "body-script": [ "13px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-xl-mobile": [ "36px", { "lineHeight": "40px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "36px", { "lineHeight": "42px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-xl": [ "56px", { "lineHeight": "60px", "letterSpacing": "-0.04em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-caps": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "mono-telemetry": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" } ], "title-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-container-highest"><div class="h-16 w-full px-space-md flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-space-sm"><div class="h-8 w-8 bg-primary-container text-on-primary-container flex items-center justify-center font-label-caps text-label-caps font-bold tracking-widest">FX</div><div class="flex flex-col"><span class="font-mono-telemetry text-mono-telemetry text-on-surface tracking-wider uppercase">PRJ-8042 // SYNTHETIC DAWN</span><div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps text-on-surface-variant">V4.2.0</span><span class="text-surface-container-highest">/</span><span class="font-mono-telemetry text-mono-telemetry text-secondary flex items-center gap-1"><span class="inline-block w-1.5 h-1.5 bg-secondary"></span>ENGINE: LIVE (LATERAL 5/5)</span></div></div></div></div><nav class="hidden xl:flex items-center h-full" data-active-classes="bg-surface-container text-on-surface border-b-2 border-primary-container"><a class="h-full px-space-md flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="brief" href="#"><span class="text-primary font-bold">[01]</span><span>BRIEF / الملخص</span></a><span class="text-surface-container-highest font-mono-telemetry text-mono-telemetry">→</span><a class="h-full px-space-md flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="strategic-insight" href="#"><span class="text-primary font-bold">[02]</span><span>STRATEGIC INSIGHT / الرؤية</span></a><span class="text-surface-container-highest font-mono-telemetry text-mono-telemetry">→</span><a aria-current="page" class="h-full px-space-md flex items-center gap-space-xs font-mono-telemetry transition-colors bg-surface-container text-on-surface border-b-2 border-primary-container" data-path="creative-concept" href="#"><span class="text-primary font-bold">[03]</span><span>CONCEPT / المفهوم</span></a><span class="text-surface-container-highest font-mono-telemetry text-mono-telemetry">→</span><a class="h-full px-space-md flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="cinematic-script" href="#"><span class="text-primary font-bold">[04]</span><span>SCRIPT / السيناريو</span></a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden md:flex items-center bg-surface-container-low px-space-sm py-1 border border-surface-container-highest gap-space-xs"><span class="font-label-caps text-label-caps text-on-surface-variant">CHAOS DIAL</span><span class="font-mono-telemetry text-mono-telemetry text-primary font-bold">0.82</span><span class="w-1 h-3 bg-secondary"></span></div><button class="px-space-sm py-1 bg-surface-container-low text-on-surface font-mono-telemetry text-mono-telemetry border border-surface-container-highest hover:bg-surface-container hover:text-on-surface transition-colors" type="button">EN | عربي</button><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 border border-surface-container-highest"><span class="w-2 h-2 bg-secondary animate-pulse"></span><span class="font-mono-telemetry text-mono-telemetry text-on-surface">STREAM: ACTIVE</span></div><button class="bg-primary-container text-on-primary-container px-space-md py-1 font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-colors uppercase" type="button">EXPORT REEL</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 pb-12 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- TOP WORKSPACE HUD & STRATEGIC ANCHOR -->
+<section class="w-full px-margin-desktop py-space-xl bg-surface-container-lowest relative overflow-hidden">
+<!-- Ambient Noir Depth Glow -->
+<div class="absolute -top-32 right-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-lg">
+<!-- Breadcrumb / System Telemetry Banner -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-1.5 shadow-sm">
+<span class="inline-block w-2 h-2 bg-primary-container"></span>
+<span class="font-mono-telemetry text-mono-telemetry uppercase text-on-surface-variant tracking-wider">
+            SYSTEM TRACE: CR-DIR // LATERAL DEVIATION 88.4%
+          </span>
+<span class="text-surface-container-highest">/</span>
+<span class="font-mono-telemetry text-mono-telemetry text-secondary font-bold">STG-03 VERIFIED</span>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-high px-space-md py-1 text-on-surface shadow-sm">
+<span class="font-label-caps text-label-caps tracking-widest text-primary-container font-bold">RATING:</span>
+<span class="font-headline-md text-headline-md leading-none text-on-surface">A+</span>
+<span class="font-mono-telemetry text-mono-telemetry text-on-surface-variant">| 3 COMPETING NARRATIVES</span>
+</div>
+</div>
+<!-- Main Headline + Asymmetric Editorial Anchor -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry text-primary-container uppercase">
+<span>[ STAGE 03 ]</span>
+<span>::</span>
+<span>CREATIVE CONCEPTS &amp; CAMPAIGN NARRATIVES</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-on-surface tracking-tight uppercase">
+            CREATIVE CONCEPT WORKSPACE
+          </h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant tracking-normal">
+            مساحة المفهوم الإبداعي وصياغة السرديات السينمائية
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-xs bg-surface-container p-space-md shadow-md">
+<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant">
+<span>STRATEGIC FOUNDATION</span>
+<span class="text-secondary font-bold">LOCKED</span>
+</div>
+<div class="font-title-sm text-title-sm text-primary font-bold tracking-tight">
+            TERRITORY A — THE SANCTUARY OF SILENCE
+          </div>
+<div class="font-body-md text-body-md text-on-surface-variant leading-snug">
+            ملاذ الصمت المطلق. Transforming physical cabin acoustics into a ruthless existential sanctuary.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRIPTYCH CONCEPT DECK -->
+<section class="w-full px-margin-desktop py-space-xl bg-surface">
+<div class="flex flex-col gap-space-xl">
+<!-- Section Deck Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container">dashboard</span>
+<span class="font-label-caps text-label-caps tracking-widest text-on-surface uppercase">
+            PARALLEL NARRATIVE HYPOTHESES (توازي الفرضيات السردية)
+          </span>
+</div>
+<div class="font-mono-telemetry text-mono-telemetry text-on-surface-variant">
+          LATERAL DISPERSION: 3 NODES ACTIVE // SELECTION REQUIRED FOR STAGE 04
+        </div>
+</div>
+<!-- Triptych Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-desktop items-stretch">
+<!-- CONCEPT 01: RECOMMENDED -->
+<article class="flex flex-col bg-surface-container shadow-xl relative overflow-hidden group">
+<!-- Top Recommended Flag Ribbon -->
+<div class="w-full bg-primary-container text-on-primary-container px-space-md py-1 flex items-center justify-between font-label-caps text-label-caps font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span>
+              RECOMMENDED VECTOR // الرؤية الموصى بها
+            </span>
+<span class="font-mono-telemetry text-mono-telemetry tracking-widest text-on-primary-container">01 / 03</span>
+</div>
+<!-- Widescreen Visual Framing Component -->
+<div class="relative w-full h-72 overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Cinematic ultra-wide film frame, anamorphic low-key lighting. An austere, sharp-suited modern titan standing inside a bespoke stealth-black luxury vehicle cabin looking out through ultra-tinted privacy glass at the blinding neon pandemonium of Tokyo and Dubai. Deep obsidian chiaroscuro shadows, razor-sharp light rays slicing through dustless atmosphere, hyper-tactile interior surfaces with brushed titanium and matte black leather. Atmospheric, tension-filled cinematic noir aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFmmHuHoxWL_6D9jt5afkmB8UyCMB6XklJcc_wLrztW5GuK9D0Cwg0NcjJ-XxiofpTnQ4ZmeJnazzKsb-B3bfousaTrNLc8Spu0n1fJ1mdll9S8TpiJHoAfbfQ_kNbO31GLBtAI0ePViczZPPi9U3Ao6NJedieKpMqlLH0Dc1BXMqVILXAgaGRd-HO6F8ndhO1M8OZ9TStoUBk9YOYg-wHN_5Ju3ClEgSy-7cyYYO61E5Qe8sz35-UMA"/>
+<!-- Noir Framing Accents -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 px-2 py-0.5 font-mono-telemetry text-mono-telemetry text-primary">
+              ANAMORPHIC 2.39:1 // ARRI ALEXA 65
+            </div>
+<div class="absolute bottom-3 right-3 bg-primary-container text-on-primary-container px-2 py-0.5 font-label-caps text-label-caps font-bold">
+              SOUND: VACUUM DROP
+            </div>
+</div>
+<!-- Content Body -->
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div>
+<span class="font-mono-telemetry text-mono-telemetry text-primary uppercase">[ CONCEPT 01 ]</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+                  THE SOUND OF ABSENCE
+                </h2>
+<p class="font-title-sm text-title-sm text-on-surface-variant font-medium">
+                  صوت الغياب
+                </p>
+</div>
+<!-- Logline Hook -->
+<div class="bg-surface-container-low p-space-md shadow-sm">
+<span class="font-label-caps text-label-caps text-primary-container uppercase block mb-1">THE NARRATIVE HOOK</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                  A high-stakes corporate titan walks through the deafening, multi-layered roar of Tokyo and Dubai trading floors and roaring helipads, steps inside the vehicle, and the entire acoustic universe instantly collapses into a dead, pressurized vacuum.
+                </p>
+</div>
+<!-- Cinematic Audio & Visual Matrix -->
+<div class="flex flex-col gap-space-sm font-mono-telemetry text-mono-telemetry text-on-surface-variant">
+<div class="flex items-start gap-space-xs">
+<span class="text-primary-container font-bold">LIGHT:</span>
+<span>Chiaroscuro obsidian reflections, harsh midday sun slicing into sterile tinted solitude.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="text-secondary font-bold">AUDIO:</span>
+<span>Turbines &amp; screaming market tickers cut instantly to pure zero decibels. Only the visceral rhythmic thump of human pulse.</span>
+</div>
+</div>
+<!-- Killer Line (Bilingual Typography Anchor) -->
+<div class="bg-surface-container-highest p-space-md flex flex-col gap-space-xs shadow-inner">
+<span class="font-label-caps text-label-caps text-primary uppercase">THE KILLER LINE // السطر الحاسم</span>
+<p class="font-headline-md text-headline-md text-on-surface italic">
+                  “Let the world scream. You have already won.”
+                </p>
+<p class="font-title-sm text-title-sm text-on-surface-variant text-right" dir="rtl">
+                  «دع العالم يصرخ.. أنت بالفعل قد انتصرت.»
+                </p>
+</div>
+</div>
+<!-- Lateral DNA Badge & Selection Indicator -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs font-label-caps text-label-caps">
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-1">DNA: PROVOCATION + ZERO-SCORE</span>
+<span class="text-secondary font-bold">96% IMPACT SCORE</span>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-space-sm font-label-caps text-label-caps uppercase hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-space-xs shadow-md" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>ACTIVE CANDIDATE // تم الاختيار</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CONCEPT 02: THE LAST INVISIBLE KINGDOM -->
+<article class="flex flex-col bg-surface-container shadow-md relative overflow-hidden group">
+<!-- Top Tag -->
+<div class="w-full bg-surface-container-high text-on-surface px-space-md py-1 flex items-center justify-between font-label-caps text-label-caps">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+              CONTEMPLATIVE VECTOR // المسار التأملي
+            </span>
+<span class="font-mono-telemetry text-mono-telemetry tracking-widest text-on-surface-variant">02 / 03</span>
+</div>
+<!-- Widescreen Visual Framing -->
+<div class="relative w-full h-72 overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Wide cinematic 65mm IMAX landscape of the vast, monolithic Empty Quarter desert dunes under an ink-black nocturnal starfield. A single sleek vehicle cut out like a hyper-modern sculpture resting silently on pristine untouched sand ridges. Extreme minimalist Stanley Kubrick aesthetic, sterile and monumental scale, cool slate-grey tones with subtle warm rim illumination on the aerodynamic curves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFOpk7Xowa6jaZJ8mwSUqBlxjM_azbR4J8OiD3jVgCGlTaxMpImexECM2lYi0NvruD6gTjlRBScJFHK8ouvqK7G-uyhJchpj-WSAXs-wzG4Ii2NJ_1xFa9keWFHfwOs59oiBsZQI0fZYz4PyyPb29QzjD-9odZvxFo-DrnzEVP8QkjyRcW6wMDeW-_jcKw3Mp_zplQtdg6QHE-AwieiMyToPHITtB6iMbDi060dw6UN_pZKd8QfScU4Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 px-2 py-0.5 font-mono-telemetry text-mono-telemetry text-on-surface-variant">
+              IMAX 65MM // 1.43:1 RATIO
+            </div>
+<div class="absolute bottom-3 right-3 bg-surface-container-high text-on-surface px-2 py-0.5 font-label-caps text-label-caps">
+              SCALE: MONUMENTAL
+            </div>
+</div>
+<!-- Content Body -->
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div>
+<span class="font-mono-telemetry text-mono-telemetry text-on-surface-variant uppercase">[ CONCEPT 02 ]</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+                  THE LAST INVISIBLE KINGDOM
+                </h2>
+<p class="font-title-sm text-title-sm text-on-surface-variant font-medium">
+                  المملكة الخفية الأخيرة
+                </p>
+</div>
+<!-- Logline Hook -->
+<div class="bg-surface-container-low p-space-md shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block mb-1">THE NARRATIVE HOOK</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                  A nocturnal pilgrimage across the Empty Quarter where sound physically cannot propagate. Shot with the cold, imposing grandeur of a minimalist space odyssey, treating the sands as an interstellar void.
+                </p>
+</div>
+<!-- Cinematic Audio & Visual Matrix -->
+<div class="flex flex-col gap-space-sm font-mono-telemetry text-mono-telemetry text-on-surface-variant">
+<div class="flex items-start gap-space-xs">
+<span class="text-on-surface font-bold">LIGHT:</span>
+<span>Pure lunar backlight carving the vehicle's titanium silhouette against obsidian desert horizon.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="text-on-surface font-bold">AUDIO:</span>
+<span>Hypnotic infrasound frequencies; individual microscopic quartz crystals sliding against the windshield.</span>
+</div>
+</div>
+<!-- Killer Line -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs shadow-inner">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">THE KILLER LINE // السطر الحاسم</span>
+<p class="font-headline-md text-headline-md text-on-surface italic">
+                  “Empires end where silence begins.”
+                </p>
+<p class="font-title-sm text-title-sm text-on-surface-variant text-right" dir="rtl">
+                  «تنتهي الإمبراطوريات حيث يبدأ الصمت.»
+                </p>
+</div>
+</div>
+<!-- Lateral DNA Badge & Selection Indicator -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs font-label-caps text-label-caps">
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-1">DNA: SPACE-AGE MYTHOLOGY</span>
+<span class="text-on-surface-variant font-bold">89% IMPACT SCORE</span>
+</div>
+<button class="w-full bg-surface-container-high text-on-surface py-space-sm font-label-caps text-label-caps uppercase hover:bg-surface-bright transition-all flex items-center justify-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>INSPECT DECK // فحص المسار</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CONCEPT 03: DECIBEL NEGATIVE -->
+<article class="flex flex-col bg-surface-container shadow-md relative overflow-hidden group">
+<!-- Top Tag -->
+<div class="w-full bg-surface-container-high text-on-surface px-space-md py-1 flex items-center justify-between font-label-caps text-label-caps">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">graphic_eq</span>
+              EXPERIMENTAL VECTOR // المسار التجريبي
+            </span>
+<span class="font-mono-telemetry text-mono-telemetry tracking-widest text-on-surface-variant">03 / 03</span>
+</div>
+<!-- Widescreen Visual Framing -->
+<div class="relative w-full h-72 overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Experimental cybernetic brutalist cinema still. Long telephoto infrared capture of a high-tech vehicle cruising an elevated metropolis freeway at twilight. The surrounding skyline is distorted by sonic waveform heat-maps, while the vehicle remains sharp, matte, and immune to vibration. Kinetic noir mood with electric vermilion and phosphor lime data artifacts and typography superimposed on the image frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmDZ3llqDbfAiQLhB-ItgJiMAlE8CG3KPtuYd-0cShDtGYuYiW_9BOhDJvIM8aiyb9nQL_HbcYeJrNPoVRSnC5BsaH5ldb_2CArsbBez-oXlQ6w11gNoFzK5HUxgSfXw_71I1j3TG8KaVAG7nkKLH4GK9BEOwDosxsD-VkETIS9bbfARCJQLJh1VBvp081aCr2-fRYDzIbidLAeZ7SSKOvFtGkq6BQuIGwMjPTAOjlNJSNbggvnmXWJQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 px-2 py-0.5 font-mono-telemetry text-mono-telemetry text-on-surface-variant">
+              INFRARED SENSOR // 120 FPS
+            </div>
+<div class="absolute bottom-3 right-3 bg-surface-container-high text-on-surface px-2 py-0.5 font-label-caps text-label-caps">
+              AUDIO: BLACK HOLE
+            </div>
+</div>
+<!-- Content Body -->
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div>
+<span class="font-mono-telemetry text-mono-telemetry text-on-surface-variant uppercase">[ CONCEPT 03 ]</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+                  DECIBEL NEGATIVE
+                </h2>
+<p class="font-title-sm text-title-sm text-on-surface-variant font-medium">
+                  ديسيبل سالب
+                </p>
+</div>
+<!-- Logline Hook -->
+<div class="bg-surface-container-low p-space-md shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block mb-1">THE NARRATIVE HOOK</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                  A visceral, sound-design-first film where the vehicle acts as an active sonic black hole, physically absorbing sirens, crowd chants, and highway engine roars from the outside world as it passes.
+                </p>
+</div>
+<!-- Cinematic Audio & Visual Matrix -->
+<div class="flex flex-col gap-space-sm font-mono-telemetry text-mono-telemetry text-on-surface-variant">
+<div class="flex items-start gap-space-xs">
+<span class="text-on-surface font-bold">LIGHT:</span>
+<span>Rapid shutter, brutalist concrete shadows, jarring flashes of sodium-vapor motorway lighting.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="text-on-surface font-bold">AUDIO:</span>
+<span>Hyper-compressed sound collage that stutters, reverses, and is devoured into the vehicle's wake.</span>
+</div>
+</div>
+<!-- Killer Line -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs shadow-inner">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">THE KILLER LINE // السطر الحاسم</span>
+<p class="font-headline-md text-headline-md text-on-surface italic">
+                  “Sound is matter. Silence is power.”
+                </p>
+<p class="font-title-sm text-title-sm text-on-surface-variant text-right" dir="rtl">
+                  «الصوت مجرد مادة.. والصمت هو النفوذ.»
+                </p>
+</div>
+</div>
+<!-- Lateral DNA Badge & Selection Indicator -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs font-label-caps text-label-caps">
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-1">DNA: CYBERNETIC BRUTALISM</span>
+<span class="text-on-surface-variant font-bold">84% IMPACT SCORE</span>
+</div>
+<button class="w-full bg-surface-container-high text-on-surface py-space-sm font-label-caps text-label-caps uppercase hover:bg-surface-bright transition-all flex items-center justify-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>INSPECT DECK // فحص المسار</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- EVALUATION MATRIX & COMPARISON ENGINE -->
+<section class="w-full px-margin-desktop py-space-xl bg-surface-container-lowest">
+<div class="flex flex-col gap-space-lg">
+<!-- Section Title & Telemetry Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-mono-telemetry text-mono-telemetry text-primary-container uppercase">
+            // ARBITRATION BENCHMARK (مصفوفة تقييم المفاهيم)
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+            DIRECTOR EVALUATION MATRIX
+          </h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-caps text-label-caps bg-surface-container px-2 py-1 text-secondary">
+            ALGORITHM: CANNES LIONS PREDICTIVE MODEL V2.8
+          </span>
+</div>
+</div>
+<!-- Comparative Data Matrix Table -->
+<div class="overflow-x-auto bg-surface-container shadow-lg">
+<table class="w-full text-left font-mono-telemetry text-mono-telemetry min-w-[700px]">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant uppercase font-label-caps text-label-caps">
+<th class="p-space-md">EVALUATION VECTOR</th>
+<th class="p-space-md text-primary">C01: SOUND OF ABSENCE ★</th>
+<th class="p-space-md">C02: INVISIBLE KINGDOM</th>
+<th class="p-space-md">C03: DECIBEL NEGATIVE</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest">
+<tr class="bg-surface-container/60 hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-md font-bold text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary-container">bolt</span>
+                DISRUPTION INDEX (مؤشر الجرأة)
+              </td>
+<td class="p-space-md text-secondary font-bold">
+<div class="flex items-center gap-space-sm">
+<span>9.6 / 10</span>
+<div class="w-24 h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="w-[96%] h-full bg-secondary"></div>
+</div>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span>8.2 / 10</span>
+<div class="w-24 h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="w-[82%] h-full bg-primary"></div>
+</div>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span>8.8 / 10</span>
+<div class="w-24 h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="w-[88%] h-full bg-primary"></div>
+</div>
+</div>
+</td>
+</tr>
+<tr class="bg-surface-container/40 hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-md font-bold text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">engineering</span>
+                PRODUCTION FEASIBILITY (الجدوى الإنتاجية)
+              </td>
+<td class="p-space-md text-on-surface font-bold">
+                HIGH // 4 Principal Shoot Days (Dubai / Tokyo)
+              </td>
+<td class="p-space-md text-on-surface-variant">
+                MODERATE // Extreme Desert Logistics
+              </td>
+<td class="p-space-md text-on-surface-variant">
+                COMPLEX // VFX &amp; Multi-Pass Compositing
+              </td>
+</tr>
+<tr class="bg-surface-container/60 hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-md font-bold text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">military_tech</span>
+                FESTIVAL / LION POTENTIAL (فرص الجوائز)
+              </td>
+<td class="p-space-md text-primary-container font-bold flex items-center gap-1">
+<span>98% [GRAND PRIX PROBABILITY]</span>
+</td>
+<td class="p-space-md text-on-surface-variant">
+                85% [CINEMATOGRAPHY GOLD]
+              </td>
+<td class="p-space-md text-on-surface-variant">
+                79% [SOUND DESIGN SILVER]
+              </td>
+</tr>
+<tr class="bg-surface-container/40 hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-md font-bold text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">translate</span>
+                CULTURAL &amp; REGIONAL RESONANCE (العمق المحلي)
+              </td>
+<td class="p-space-md text-secondary font-bold">
+                UNANIMOUS // Recontextualizes Silence as Sovereign Mastery
+              </td>
+<td class="p-space-md text-on-surface-variant">
+                HIGH // Deep Arabian Landscape Heritage
+              </td>
+<td class="p-space-md text-on-surface-variant">
+                GLOBAL // Non-territorial Techno-Aesthetic
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CREATIVE DIRECTOR REVISION WORKBENCH -->
+<section class="w-full px-margin-desktop py-space-xl bg-surface">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Workbench Control Panel -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg bg-surface-container p-space-lg shadow-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-primary-container"></span>
+<span class="font-headline-md text-headline-md text-on-surface uppercase">
+              CREATIVE DIRECTOR REVISION TERMINAL
+            </span>
+</div>
+<span class="font-mono-telemetry text-mono-telemetry text-on-surface-variant">
+            TARGET: CONCEPT 01
+          </span>
+</div>
+<!-- Prompt Console Terminal -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase flex items-center justify-between">
+<span>PROMPT INJECTION CONSOLE // توجيه المحرك السردي</span>
+<span class="font-mono-telemetry text-mono-telemetry text-primary">TOKENS: 48 / 512</span>
+</label>
+<div class="relative bg-surface-container-lowest p-space-md shadow-inner">
+<div class="flex items-start gap-space-sm">
+<span class="text-primary-container font-mono-telemetry text-mono-telemetry select-none">▶</span>
+<textarea class="w-full bg-transparent font-body-script text-body-script text-on-surface focus:outline-none resize-none" id="revision-prompt" rows="3">Make Concept 01 darker, elevate the pacing of the sound transition, and add bilingual poetic voiceover.</textarea>
+</div>
+<!-- Telemetry Indicator Line -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-mono-telemetry text-mono-telemetry text-on-surface-variant">
+<span>ACTIVE LATENT RE-WEIGHTING</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full animate-ping"></span>
+                LATENT ENGINE: READY
+              </span>
+</div>
+</div>
+</div>
+<!-- Variation Actions & Mutation Triggers -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-space-sm font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">cyclone</span>
+<span>SPAWN 3 MORE RIFFS</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-space-sm font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">merge_type</span>
+<span>MELT WITH CONCEPT 02</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-space-sm font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary-container">swap_horiz</span>
+<span>INVERT NARRATIVE ARC</span>
+</button>
+</div>
+</div>
+<!-- Live Narrative Telemetry & Divergence Dial -->
+<div class="lg:col-span-4 flex flex-col gap-space-md bg-surface-container-low p-space-lg shadow-md">
+<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant">
+<span>CREATIVE VECTOR PARAMS</span>
+<span class="text-primary font-bold">TUNED</span>
+</div>
+<!-- Metric 1: Radical Contrast -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-mono-telemetry text-mono-telemetry">
+<span class="text-on-surface">ACOUSTIC VACUUM DROP</span>
+<span class="text-secondary font-bold">-64 dB INSTANT</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest">
+<div class="w-[92%] h-full bg-secondary"></div>
+</div>
+</div>
+<!-- Metric 2: Poetic Weight -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-mono-telemetry text-mono-telemetry">
+<span class="text-on-surface">BILINGUAL METAPHOR DENSITY</span>
+<span class="text-primary-container font-bold">HIGH (8.4/10)</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest">
+<div class="w-[84%] h-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Metric 3: Cinematic Pacing -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-mono-telemetry text-mono-telemetry">
+<span class="text-on-surface">RHYTHMIC DECELERATION</span>
+<span class="text-primary font-bold">4.2 SEC DURATION</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest">
+<div class="w-[76%] h-full bg-primary"></div>
+</div>
+</div>
+<!-- Verification Stamp Box -->
+<div class="bg-surface-container p-space-md mt-space-sm flex items-center gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[28px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-bold uppercase">READY FOR PRODUCTION SCRIPT</span>
+<span class="font-mono-telemetry text-mono-telemetry text-on-surface-variant">Stage 04 Screenplay Engine standing by.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PRIMARY FORWARD ACTION BAR -->
+<section class="w-full px-margin-desktop py-space-xl bg-surface-container-lowest">
+<div class="bg-surface-container-high p-space-lg shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-headline-md">
+          04
+        </div>
+<div class="flex flex-col">
+<div class="font-label-caps text-label-caps text-primary uppercase">NEXT OPERATIONAL PHASE</div>
+<div class="font-headline-md text-headline-md text-on-surface uppercase tracking-tight">
+            CINEMATIC SCRIPT &amp; AUDIO ARCHITECTURE // السيناريو السينمائي
+          </div>
+<div class="font-mono-telemetry text-mono-telemetry text-on-surface-variant">
+            Locking Concept 01 will synthesize scene-by-scene sluglines, bilingual voiceover tracks, and pacing ruler.
+          </div>
+</div>
+</div>
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<button class="w-full md:w-auto px-space-xl py-space-md bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-space-md shadow-xl" id="btn-lock-stage-04" type="button">
+<span class="font-bold">LOCK CONCEPT 01 &amp; GENERATE CINEMATIC SCRIPT →</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<script>
+    // Client-side interactions for Concept selection & feedback
+    document.addEventListener('DOMContentLoaded', () => {
+      const lockBtn = document.getElementById('btn-lock-stage-04');
+      const revisionPrompt = document.getElementById('revision-prompt');
+
+      if (lockBtn) {
+        lockBtn.addEventListener('click', () => {
+          lockBtn.classList.add('opacity-80');
+          lockBtn.innerHTML = `
+            <span class="inline-block w-3 h-3 bg-on-primary-container rounded-full animate-ping"></span>
+            <span>INITIALIZING STAGE 04 SCRIPT ENGINE...</span>
+          `;
+          setTimeout(() => {
+            const scriptTab = document.querySelector('a[data-path="cinematic-script"]');
+            if (scriptTab) {
+              scriptTab.click();
+            } else {
+              window.location.hash = '#cinematic-script';
+            }
+          }, 600);
+        });
+      }
+    });
+  </script>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl border-t border-surface-container-highest"><div class="h-10 w-full px-space-md flex items-center justify-between font-mono-telemetry text-mono-telemetry text-on-surface-variant"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="text-on-surface">LATENT TOKENS:</span><span class="text-secondary font-bold">142,890 / 2M</span></div><span class="text-surface-container-highest">|</span><div class="flex items-center gap-space-xs"><span class="text-on-surface">TEMP:</span><span class="text-primary font-bold">0.74 NOIR</span></div><span class="text-surface-container-highest">|</span><div class="hidden sm:flex items-center gap-space-xs text-on-surface-variant"><span>THREAD:</span><span class="text-on-surface truncate max-w-xs">#th-8042-cinematic-arc-divergence</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-sm font-label-caps text-label-caps"><span class="bg-surface-container-high px-1 py-0.5 text-on-surface">⌘K SWITCHER</span><span class="bg-surface-container-high px-1 py-0.5 text-on-surface">⌥R REGENERATE</span><span class="bg-surface-container-high px-1 py-0.5 text-on-surface">⇧SPACE NEXT</span></div><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 bg-secondary"></span><span>SYNCED</span></div></div></div></footer></body></html>

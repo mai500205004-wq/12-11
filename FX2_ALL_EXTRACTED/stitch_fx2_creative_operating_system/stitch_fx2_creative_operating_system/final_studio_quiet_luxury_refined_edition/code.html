@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<title>Executive Sanctum — Dr. Kaif</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          surface: "#111215",
+          "surface-container-lowest": "#0b0c0e",
+          "surface-container-low": "#15161a",
+          "surface-container": "#1a1c21",
+          "surface-container-high": "#22242a",
+          "surface-container-highest": "#2b2e35",
+          primary: "#f3e1bd",
+          "primary-container": "#d8c7a5",
+          secondary: "#ffb4a6",
+          "secondary-container": "#7a2216",
+          "on-surface": "#f5f3f0",
+          "on-surface-variant": "#b5b0a6",
+          "on-surface-subtle": "#807b73",
+          outline: "#42403b",
+          "outline-light": "rgba(255, 255, 255, 0.08)",
+          champagne: "#e8dcbc",
+          ember: "#d8624c"
+        },
+        fontFamily: {
+          serif: ["'Playfair Display'", "'Cormorant Garamond'", "Georgia", "serif"],
+          sans: ["'Plus Jakarta Sans'", "sans-serif"]
+        }
+      }
+    }
+  };
+</script>
+<style>
+  @layer base {
+    html, body {
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      background-color: #0b0c0e;
+      color: #f5f3f0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      overscroll-behavior: none;
+      min-height: 100dvh;
+    }
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 16px);
+    }
+    .pt-safe {
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .whisper-glow {
+    background: radial-gradient(circle at 50% 0%, rgba(216, 199, 165, 0.07) 0%, rgba(216, 98, 76, 0.04) 40%, transparent 75%);
+  }
+
+  .luxury-glass {
+    background: rgba(22, 23, 28, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .subtle-border {
+    border-color: rgba(255, 255, 255, 0.07);
+  }
+</style>
+</head>
+<body class="bg-[#0b0c0e] font-sans antialiased selection:bg-primary/20 selection:text-primary">
+<!-- Ultra-Subtle Ambient Champagne & Warm Ember Undercurrent -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[580px] h-[480px] bg-gradient-to-b from-[#d8c7a5]/[0.06] via-[#d8624c]/[0.03] to-transparent rounded-full blur-[140px]"></div>
+<div class="absolute top-[35%] -right-32 w-80 h-80 bg-[#d8c7a5]/[0.035] rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -left-32 w-80 h-80 bg-[#d8624c]/[0.03] rounded-full blur-[130px]"></div>
+</div>
+<!-- Header: Refined, Prestigious Minimalist Chrome -->
+<header class="fixed top-0 w-full z-40 pt-safe bg-[#0b0c0e]/85 backdrop-blur-xl border-b border-white/[0.06]">
+<div class="h-16 px-6 flex items-center justify-between max-w-xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="font-serif text-lg tracking-[0.2em] text-champagne font-semibold">FX2</span>
+<span class="w-[1px] h-3.5 bg-white/15"></span>
+<span class="font-sans text-[11px] tracking-[0.24em] text-on-surface-variant uppercase font-medium">Executive Sanctum</span>
+</div>
+<div class="flex items-center gap-3">
+<button aria-label="Settings" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-champagne transition-colors">
+<span class="material-symbols-outlined text-[19px]">tune</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-champagne/25 flex items-center justify-center text-champagne text-xs font-serif font-semibold shadow-sm">
+        K
+      </div>
+</div>
+</div>
+</header>
+<!-- Main Scroll Canvas -->
+<main class="relative z-10 w-full min-h-screen pt-24 pb-32 flex flex-col">
+<div class="w-full max-w-xl mx-auto px-5 sm:px-6 flex flex-col gap-9">
+<!-- 1. Executive Status & Coherence Summary -->
+<section class="flex flex-col gap-5 pt-1">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-champagne inline-block"></span>
+<span class="text-[11px] uppercase text-champagne font-medium tracking-[0.2em]">Stage 05 · Horizon Lock</span>
+</div>
+<span class="text-[10px] tracking-[0.16em] uppercase font-medium text-on-surface-variant px-2.5 py-1 rounded bg-white/[0.04] border border-white/[0.06]">
+          REV 4.9.1 MASTER
+        </span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h1 class="font-serif text-3xl sm:text-4xl text-white font-medium tracking-tight">Executive Command</h1>
+<p class="text-xs text-on-surface-variant tracking-wide font-normal">
+          Global Synchronization Matrix — <span class="text-champagne font-medium">T-Minus 18 Days</span>
+</p>
+</div>
+<!-- Coherence Panel (Decluttered, Spacious) -->
+<div class="p-6 rounded-2xl luxury-glass flex flex-col gap-5 shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-champagne text-[18px]">lock_open</span>
+<span class="text-xs uppercase tracking-[0.18em] text-champagne font-semibold">Executive Gating: Active</span>
+</div>
+<span class="text-[11px] tracking-wider uppercase text-on-surface-variant font-medium">Tokyo • Zurich • London</span>
+</div>
+<div class="flex flex-col gap-2.5 pt-1">
+<div class="flex items-baseline justify-between">
+<span class="text-xs tracking-wider text-on-surface-variant font-medium uppercase">Overall System Coherence</span>
+<span class="font-serif text-xl sm:text-2xl text-champagne font-medium tracking-wide">99.2%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-champagne via-[#ebd5b3] to-ember/80 rounded-full" style="width: 99.2%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-white/[0.05] text-xs">
+<span class="text-on-surface-subtle font-normal">Harmonic Phase: Sovereign Lock</span>
+<span class="text-champagne font-medium tracking-wider">3 of 3 Vectors Signed</span>
+</div>
+</div>
+</section>
+<!-- 2. Master Orchestration Roadmap -->
+<section class="flex flex-col gap-4">
+<div class="flex items-baseline justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-champagne text-[18px]">timeline</span>
+<h2 class="font-serif text-xl text-white font-medium tracking-wide">Master Orchestration</h2>
+</div>
+<span class="text-[11px] tracking-widest text-on-surface-variant font-medium uppercase">4 Phases Gated</span>
+</div>
+<div class="luxury-glass rounded-2xl divide-y divide-white/[0.05] overflow-hidden">
+<!-- Phase 01 -->
+<div class="p-4 sm:p-5 flex flex-col gap-2 hover:bg-white/[0.02] transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-champagne text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium text-white">Phase 01: 12 Basalt Altars Sculpted</span>
+</div>
+<span class="text-xs font-semibold text-champagne tracking-wider">100%</span>
+</div>
+<div class="pl-7 flex items-center justify-between text-xs text-on-surface-variant">
+<span>Acoustically tuned volcanic monoliths completed</span>
+<span class="text-[11px] font-medium text-champagne uppercase tracking-wider">Verified</span>
+</div>
+</div>
+<!-- Phase 02 -->
+<div class="p-4 sm:p-5 flex flex-col gap-2.5 hover:bg-white/[0.02] transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-champagne text-[18px]">radio_button_checked</span>
+<span class="text-sm font-medium text-white">Phase 02: Obsidian Vessel Calibration</span>
+</div>
+<span class="text-xs font-semibold text-champagne tracking-wider">94%</span>
+</div>
+<div class="pl-7 flex items-center justify-between text-xs text-on-surface-variant">
+<span>4,700 of 5,000 units thermally verified</span>
+<span class="text-[11px] font-medium text-champagne uppercase tracking-wider">In Progress</span>
+</div>
+<div class="ml-7 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-champagne rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<!-- Phase 03 -->
+<div class="p-4 sm:p-5 flex flex-col gap-2.5 hover:bg-white/[0.02] transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">hdr_auto</span>
+<span class="text-sm font-medium text-white">Phase 03: Phantom Echo Master Lock</span>
+</div>
+<span class="text-xs font-semibold text-on-surface-variant tracking-wider">88%</span>
+</div>
+<div class="pl-7 flex items-center justify-between text-xs text-on-surface-variant">
+<span>Episodic reel &amp; Dolby Atmos sound stems</span>
+<span class="text-[11px] font-medium text-on-surface-variant uppercase tracking-wider">Final Pass</span>
+</div>
+<div class="ml-7 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-on-surface-variant rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+<!-- Phase 04 -->
+<div class="p-4 sm:p-5 flex flex-col gap-2 opacity-75 hover:bg-white/[0.02] transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface-subtle text-[18px]">schedule</span>
+<span class="text-sm font-medium text-on-surface">Phase 04: Synchronized Quad-City Drop</span>
+</div>
+<span class="text-xs font-medium text-on-surface-subtle tracking-wider">T-18D</span>
+</div>
+<div class="pl-7 flex items-center justify-between text-xs text-on-surface-subtle">
+<span>Tokyo • Zurich • London • Dubai</span>
+<span class="text-[11px] font-medium uppercase tracking-wider">Gated Lock</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Tripartite Production Command Hub (Generous & Pristine) -->
+<section class="flex flex-col gap-5">
+<div class="flex items-baseline justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-champagne text-[18px]">hub</span>
+<h2 class="font-serif text-xl text-white font-medium tracking-wide">Tripartite Vectors</h2>
+</div>
+<span class="text-[11px] tracking-widest text-on-surface-variant font-medium uppercase">Release Suite</span>
+</div>
+<!-- Vector 01 -->
+<article class="luxury-glass rounded-2xl overflow-hidden flex flex-col transition-all">
+<div class="relative w-full h-48 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 hover:scale-105" data-alt="Monolithic volcanic basalt coffee altar in Tokyo minimalist gallery with warm amber spot lighting, clean architectural concrete voids, ultra high resolution luxury aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7n5SZTMPpBjq9I7A_r8kCSVtmOwpjHZaL1q0YY6lW3yzMqLepuhQ_dQ2Ugb2LhUlmptkOCDnTFKJNXmjn4pZ2vWxoCXKjixHEIwII6D3CvwEwNhSG3jOQ_2ilii07y7PHktAeZMWSp-_x_9BsDBtNDowi8GIVGBS2jqzjD4OS1D0r3Fotf5dmmYUOmG442M6N2emER4rCLAIYli_EGAgXmtZve07nLPY2FEWBqbu9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#15161a] via-[#15161a]/30 to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] tracking-widest uppercase font-semibold text-champagne">
+              Vector 01 · Architecture
+            </span>
+</div>
+<div class="absolute bottom-3 left-4 right-4">
+<h3 class="font-serif text-lg text-white font-medium">The Modular Acoustic Altar</h3>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div class="flex items-center justify-between text-xs">
+<span class="text-on-surface-variant">12 Flagship Shrines Prepped</span>
+<span class="text-champagne font-medium tracking-wide uppercase text-[11px]">Ready for Assembly</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider text-on-surface-subtle font-medium">Acoustic Damping</span>
+<span class="text-sm font-semibold text-white">-34 dB Calibrated</span>
+</div>
+<div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider text-on-surface-subtle font-medium">Thermal Substrate</span>
+<span class="text-sm font-semibold text-white">Basalt Monolith</span>
+</div>
+</div>
+<button class="flex items-center justify-between w-full px-4 py-3 rounded-xl bg-white/[0.03] hover:bg-white/[0.06] text-on-surface text-xs font-medium uppercase tracking-wider border border-white/[0.05] transition-all" onclick="toggleDrawer('drawer-vector-01')" type="button">
+<span>Inspect Schematics &amp; BIM</span>
+<span class="material-symbols-outlined text-[16px] text-champagne">expand_more</span>
+</button>
+<div class="hidden flex-col gap-2 p-4 rounded-xl bg-black/40 border border-white/[0.04] text-xs text-on-surface-variant" id="drawer-vector-01">
+<div class="flex items-center justify-between font-medium text-champagne text-[11px] uppercase tracking-wider">
+<span>Site Verification Status</span>
+<span>12 Nodes Online</span>
+</div>
+<p class="leading-relaxed font-normal">
+              Tokyo Ginza Sanctuary acoustic envelope sealed. Zurich Bahnhofstrasse spatial layout cleared with zero reflections at 120Hz resonance.
+            </p>
+</div>
+</div>
+</article>
+<!-- Vector 02 -->
+<article class="luxury-glass rounded-2xl overflow-hidden flex flex-col transition-all">
+<div class="relative w-full h-48 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 hover:scale-105" data-alt="Matte black obsidian ceramic double-walled smart vessel on a dark brushed titanium calibration stand with subtle glowing red LED edge reflection, high end industrial hardware studio photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZgQRaCnD3KxkFKhRDYgNyIptPV_myWZPrEpu9o0dGi19RzqcXF1LImkuRltEMZoErhxuj4VQAnxqV5KizDgp0-ZMarOSJSa-ppD0ZQPt0BEcEjDcHttqmjWt0ctiPzlB1GeFMYYThCxrbRitm084dd97kapMlbOE9m9rosT1j_9iJGMLckNluYh_G0BdjILKEMzP8OVVP4_ZB9ZODFE4y4I-uAxSRl-c4K_t6JtCx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#15161a] via-[#15161a]/30 to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] tracking-widest uppercase font-semibold text-champagne">
+              Vector 02 · Hardware
+            </span>
+</div>
+<div class="absolute bottom-3 left-4 right-4">
+<h3 class="font-serif text-lg text-white font-medium">Obsidian Core Series 01</h3>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div class="flex items-center justify-between text-xs">
+<span class="text-on-surface-variant">5,000 Serialized Units</span>
+<span class="text-champagne font-medium tracking-wide uppercase text-[11px]">94% Calibrated</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider text-on-surface-subtle font-medium">Thermal Lock</span>
+<span class="text-sm font-semibold text-white">68.0°C Plateau</span>
+</div>
+<div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider text-on-surface-subtle font-medium">Cryptographic NFC</span>
+<span class="text-sm font-semibold text-white">Dual ECD Proof</span>
+</div>
+</div>
+<button class="flex items-center justify-between w-full px-4 py-3 rounded-xl bg-white/[0.03] hover:bg-white/[0.06] text-on-surface text-xs font-medium uppercase tracking-wider border border-white/[0.05] transition-all" onclick="toggleDrawer('drawer-vector-02')" type="button">
+<span>Inspect Yield &amp; Batch QA</span>
+<span class="material-symbols-outlined text-[16px] text-champagne">expand_more</span>
+</button>
+<div class="hidden flex-col gap-2 p-4 rounded-xl bg-black/40 border border-white/[0.04] text-xs text-on-surface-variant" id="drawer-vector-02">
+<div class="flex items-center justify-between font-medium text-champagne text-[11px] uppercase tracking-wider">
+<span>Cryogenic Stress Report</span>
+<span>Batches #01 - #10 Passed</span>
+</div>
+<p class="leading-relaxed font-normal">
+              Zero micro-fissure rate recorded across exhaustive 12-hour thermal cycling tests. Dual NFC cryptographic pairings matched with individual receipts.
+            </p>
+</div>
+</div>
+</article>
+<!-- Vector 03 -->
+<article class="luxury-glass rounded-2xl overflow-hidden flex flex-col transition-all">
+<div class="relative w-full h-48 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 hover:scale-105" data-alt="Cinematic frame from high contrast dark film showing an actor holding a steaming black cup against dark rain washed architectural glass with amber neon glow, anamorphic lens flare" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB31GRBYeTNPqhzYyDUuc074_L6k71MSBkBgymbvolpRpyFjFFPt3_P7Ar8y7HJXMxtfCfMXxUW4k95SnYsa_s5nTnMlISR5oe-MqAXVuENYfKXN1O4ZexRdoHaHFJFk89bpdLmjewVeqXLJaKwB4Of5uL334knNdU9nCKjBuEoQv3B5sxOB0777Yxamq-2_Ml2cIT1XgBITM4M0SfJty7oZEp7KexZBHIBeE0mdcI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#15161a] via-[#15161a]/30 to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] tracking-widest uppercase font-semibold text-champagne">
+              Vector 03 · Cinema
+            </span>
+</div>
+<div class="absolute bottom-3 left-4 right-4">
+<h3 class="font-serif text-lg text-white font-medium">Phantom Echo (6-Part Archive)</h3>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div class="flex items-center justify-between text-xs">
+<span class="text-on-surface-variant">4K HDR Dolby Atmos Master</span>
+<span class="text-champagne font-medium tracking-wide uppercase text-[11px]">Color Locked</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider text-on-surface-subtle font-medium">Color Space</span>
+<span class="text-sm font-semibold text-white">DCI-P3 Arri RAW</span>
+</div>
+<div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider text-on-surface-subtle font-medium">Spatial Sound</span>
+<span class="text-sm font-semibold text-white">7.1.4 Void Stems</span>
+</div>
+</div>
+<button class="flex items-center justify-between w-full px-4 py-3 rounded-xl bg-white/[0.03] hover:bg-white/[0.06] text-on-surface text-xs font-medium uppercase tracking-wider border border-white/[0.05] transition-all" onclick="toggleDrawer('drawer-vector-03')" type="button">
+<span>Preview Metadata &amp; Sound</span>
+<span class="material-symbols-outlined text-[16px] text-champagne">expand_more</span>
+</button>
+<div class="hidden flex-col gap-2 p-4 rounded-xl bg-black/40 border border-white/[0.04] text-xs text-on-surface-variant" id="drawer-vector-03">
+<div class="flex items-center justify-between font-medium text-champagne text-[11px] uppercase tracking-wider">
+<span>Encoding Certification</span>
+<span>Apple TV 4K • IMAX Privé</span>
+</div>
+<p class="leading-relaxed font-normal">
+              Episode 01 ("The Silence of Roast") audio mastering passes verified. Zero clipping across full dynamic range void stems.
+            </p>
+</div>
+</div>
+</article>
+</section>
+<!-- 4. Sovereign Artifact Vault (Spacious, Elegant) -->
+<section class="flex flex-col gap-4">
+<div class="flex items-baseline justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-champagne text-[18px]">inventory_2</span>
+<h2 class="font-serif text-xl text-white font-medium tracking-wide">Sovereign Artifact Vault</h2>
+</div>
+<span class="text-[11px] tracking-widest text-on-surface-variant font-medium uppercase">4 Packages</span>
+</div>
+<div class="luxury-glass rounded-2xl divide-y divide-white/[0.05] overflow-hidden">
+<!-- Item 1 -->
+<div class="p-4 sm:p-5 flex items-center justify-between gap-3 hover:bg-white/[0.02] transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-champagne text-[20px]">apartment</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-medium text-white truncate">Architectural BIM Master</span>
+<span class="text-xs text-on-surface-variant">REVIT · 1.48 GB · SHA-256</span>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] text-champagne text-xs font-semibold uppercase tracking-wider border border-champagne/20 transition-all shrink-0" onclick="triggerDownload(this, 'BIM')" type="button">
+            SYNC
+          </button>
+</div>
+<!-- Item 2 -->
+<div class="p-4 sm:p-5 flex items-center justify-between gap-3 hover:bg-white/[0.02] transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-champagne text-[20px]">precision_manufacturing</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-medium text-white truncate">Hardware Tooling Spec (V2.4)</span>
+<span class="text-xs text-on-surface-variant">STEP / GD&amp;T · 840 MB</span>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] text-champagne text-xs font-semibold uppercase tracking-wider border border-champagne/20 transition-all shrink-0" onclick="triggerDownload(this, 'Hardware')" type="button">
+            SYNC
+          </button>
+</div>
+<!-- Item 3 -->
+<div class="p-4 sm:p-5 flex items-center justify-between gap-3 hover:bg-white/[0.02] transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-champagne text-[20px]">movie_filter</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-medium text-white truncate">DCI-P3 Color LUT &amp; Master Sound</span>
+<span class="text-xs text-on-surface-variant">ProRes 4444 XQ · 14.2 GB</span>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] text-champagne text-xs font-semibold uppercase tracking-wider border border-champagne/20 transition-all shrink-0" onclick="triggerDownload(this, 'LUT')" type="button">
+            SYNC
+          </button>
+</div>
+<!-- Item 4 -->
+<div class="p-4 sm:p-5 flex items-center justify-between gap-3 hover:bg-white/[0.02] transition-colors">
+<div class="flex items-center gap-3.5 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-champagne text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-medium text-white truncate">Executive CapEx &amp; Multi-Sig Memo</span>
+<span class="text-xs text-on-surface-variant">256-bit Encrypted PDF</span>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] text-champagne text-xs font-semibold uppercase tracking-wider border border-champagne/20 transition-all shrink-0" onclick="triggerDownload(this, 'Audit')" type="button">
+            SYNC
+          </button>
+</div>
+</div>
+</section>
+<!-- 5. Live Studio Telemetry -->
+<section class="luxury-glass rounded-2xl p-6 flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-champagne text-[18px]">monitor_heart</span>
+<h2 class="font-serif text-lg text-white font-medium">Studio Telemetry</h2>
+</div>
+<span class="flex items-center gap-1.5 text-[11px] text-champagne font-medium uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-champagne animate-pulse"></span>
+          Live Feed
+        </span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col gap-1">
+<span class="text-[10px] text-on-surface-subtle uppercase tracking-wider font-medium">Deployed</span>
+<span class="font-serif text-xl sm:text-2xl text-white font-medium mt-0.5">$1.84M</span>
+<span class="text-[11px] text-on-surface-variant">87% Allocated</span>
+</div>
+<div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col gap-1">
+<span class="text-[10px] text-on-surface-subtle uppercase tracking-wider font-medium">Brand Moat</span>
+<span class="font-serif text-xl sm:text-2xl text-champagne font-medium mt-0.5">98.4%</span>
+<span class="text-[11px] text-champagne/80 font-medium">Sovereign</span>
+</div>
+<div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] flex flex-col gap-1">
+<span class="text-[10px] text-on-surface-subtle uppercase tracking-wider font-medium">Desire Index</span>
+<span class="font-serif text-xl sm:text-2xl text-white font-medium mt-0.5">94.7%</span>
+<span class="text-[11px] text-on-surface-variant">Waitlist Peak</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] flex items-center justify-between text-xs">
+<span class="text-on-surface-variant font-normal">All release vectors synchronized &amp; locked</span>
+<span class="text-champagne font-semibold tracking-wider uppercase text-[11px]">Ignition Ready</span>
+</div>
+</section>
+<!-- 6. Authorize Ignition Capstone CTA -->
+<section class="flex flex-col gap-3 pt-2 pb-6">
+<button class="relative w-full py-4 px-6 rounded-2xl bg-[#d8c7a5] hover:bg-[#ebd5b3] text-[#111215] font-serif text-base sm:text-lg font-semibold tracking-wide shadow-md transition-all active:scale-[0.99] flex items-center justify-center gap-3" id="btn-authorize-ignition" onclick="openIgnitionConfirm()" type="button">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+<span>Authorize Global Ignition</span>
+</button>
+<p class="text-[11px] text-center text-on-surface-subtle tracking-wide font-normal">
+        Requires Executive ECD Multi-Sig Approval · Sovereign Quorum
+      </p>
+</section>
+</div>
+</main>
+<!-- Executive Multi-Sig Ignition Modal -->
+<div class="fixed inset-0 z-50 pointer-events-none opacity-0 invisible transition-all duration-300 flex items-center justify-center p-4 sm:p-6" id="modal-ignition">
+<div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeIgnitionConfirm()"></div>
+<div class="relative z-10 w-full max-w-lg bg-[#141519] border border-white/10 rounded-2xl p-6 sm:p-7 flex flex-col gap-5 text-on-surface shadow-2xl">
+<div class="flex items-start justify-between border-b border-white/[0.06] pb-4">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] text-champagne uppercase tracking-[0.2em] font-medium">Stage 05 · Protocol Multi-Sig</span>
+<h3 class="font-serif text-2xl text-white font-medium tracking-tight">Executive Ignition Verification</h3>
+</div>
+<button aria-label="Close" class="w-8 h-8 rounded-full bg-white/[0.04] hover:bg-white/[0.08] flex items-center justify-center text-on-surface-variant hover:text-white transition-colors" onclick="closeIgnitionConfirm()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] flex items-center justify-between text-xs">
+<div class="flex flex-col gap-0.5">
+<span class="text-[10px] text-on-surface-subtle uppercase tracking-wider">Release Target Vector</span>
+<span class="font-mono text-xs text-champagne">0x8F4E...7C29 // GLOBAL QUAD-CITY</span>
+</div>
+<span class="text-[10px] tracking-wider uppercase px-2.5 py-1 rounded bg-champagne/10 text-champagne font-medium" id="quorum-badge">
+        2 of 3 Keys Signed
+      </span>
+</div>
+<!-- Signers List -->
+<div class="flex flex-col gap-2.5">
+<!-- Key 1 -->
+<div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-champagne/10 text-champagne flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-medium text-white">Dr. Kaif — Creative Director</span>
+<span class="text-[11px] text-on-surface-subtle">Key 01 · Spatial Sanctuary Signed</span>
+</div>
+</div>
+<span class="text-[10px] text-champagne font-medium tracking-wider uppercase">Signed</span>
+</div>
+<!-- Key 2 -->
+<div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-champagne/10 text-champagne flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-medium text-white">Hardware &amp; Fabrication Lead</span>
+<span class="text-[11px] text-on-surface-subtle">Key 02 · Cryo Specs Verified</span>
+</div>
+</div>
+<span class="text-[10px] text-champagne font-medium tracking-wider uppercase">Signed</span>
+</div>
+<!-- Key 3 -->
+<div class="p-3.5 rounded-xl bg-white/[0.02] border border-champagne/25 flex items-center justify-between" id="key3-container">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-white/[0.05] text-on-surface-variant flex items-center justify-center" id="key3-icon">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-medium text-white">Executive Capital &amp; Distribution Lead</span>
+<span class="text-[11px] text-on-surface-subtle">Key 03 · Global Syndicate Lock</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-champagne text-[#111215] text-xs font-semibold tracking-wide hover:bg-[#ebd5b3] transition-all" id="btn-sign-key3" onclick="signKeyThree()" type="button">
+          Sign Key 03
+        </button>
+</div>
+</div>
+<div class="hidden p-3.5 rounded-xl bg-champagne/10 border border-champagne/20 text-center" id="ignition-broadcast-alert">
+<span class="text-xs text-champagne font-medium">Ignition protocol verified. All 3 sovereign vectors cleared.</span>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-2 pt-2 border-t border-white/[0.06]">
+<button class="w-full py-3.5 rounded-xl bg-white/[0.05] text-on-surface-subtle font-medium text-xs uppercase tracking-wider cursor-not-allowed transition-all" disabled="" id="btn-confirm-broadcast" onclick="confirmGlobalBroadcast()" type="button">
+        Confirm &amp; Broadcast Global Ignition
+      </button>
+<button class="w-full py-2.5 text-xs text-on-surface-variant hover:text-white uppercase tracking-wider font-medium transition-colors" onclick="closeIgnitionConfirm()" type="button">
+        Cancel Sequence
+      </button>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation: Pristine, Understated Elegance -->
+<nav class="fixed bottom-0 w-full z-40 pb-safe bg-[#0b0c0e]/90 backdrop-blur-xl border-t border-white/[0.06]">
+<div class="h-16 px-6 flex items-center justify-around max-w-md mx-auto">
+<!-- Discovery -->
+<a class="flex flex-col items-center gap-1 text-champagne" href="#">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span class="text-[10px] tracking-[0.16em] uppercase font-medium">Sanctum</span>
+</a>
+<!-- Concepts -->
+<a class="flex flex-col items-center gap-1 text-on-surface-subtle hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+<span class="text-[10px] tracking-[0.16em] uppercase font-normal">Concepts</span>
+</a>
+<!-- Evolution -->
+<a class="flex flex-col items-center gap-1 text-on-surface-subtle hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">grain</span>
+<span class="text-[10px] tracking-[0.16em] uppercase font-normal">Evolution</span>
+</a>
+<!-- Studio -->
+<a class="flex flex-col items-center gap-1 text-on-surface-subtle hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+<span class="text-[10px] tracking-[0.16em] uppercase font-normal">Studio</span>
+</a>
+</div>
+</nav>
+<script>
+  function toggleDrawer(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      }
+    }
+  }
+
+  function triggerDownload(btn, label) {
+    const original = btn.innerText;
+    btn.innerText = 'SYNCED';
+    btn.classList.add('bg-champagne', 'text-[#111215]');
+    btn.classList.remove('bg-white/[0.04]', 'text-champagne');
+    setTimeout(() => {
+      btn.innerText = original;
+      btn.classList.remove('bg-champagne', 'text-[#111215]');
+      btn.classList.add('bg-white/[0.04]', 'text-champagne');
+    }, 2200);
+  }
+
+  function openIgnitionConfirm() {
+    const modal = document.getElementById('modal-ignition');
+    if (modal) {
+      modal.classList.remove('invisible', 'pointer-events-none', 'opacity-0');
+      modal.classList.add('pointer-events-auto', 'opacity-100');
+    }
+  }
+
+  function closeIgnitionConfirm() {
+    const modal = document.getElementById('modal-ignition');
+    if (modal) {
+      modal.classList.add('invisible', 'pointer-events-none', 'opacity-0');
+      modal.classList.remove('pointer-events-auto', 'opacity-100');
+    }
+  }
+
+  function signKeyThree() {
+    const btn = document.getElementById('btn-sign-key3');
+    const icon = document.getElementById('key3-icon');
+    const badge = document.getElementById('quorum-badge');
+    const confirmBtn = document.getElementById('btn-confirm-broadcast');
+    const alertBox = document.getElementById('ignition-broadcast-alert');
+
+    if (btn) {
+      btn.innerText = 'SIGNED';
+      btn.disabled = true;
+      btn.className = 'px-3 py-1.5 rounded-lg bg-white/[0.05] text-champagne text-xs font-semibold cursor-default';
+    }
+    if (icon) {
+      icon.innerHTML = '<span class="material-symbols-outlined text-[16px] text-champagne">check</span>';
+      icon.className = 'w-8 h-8 rounded-full bg-champagne/10 flex items-center justify-center';
+    }
+    if (badge) {
+      badge.innerText = '3 of 3 Keys Verified';
+    }
+    if (alertBox) {
+      alertBox.classList.remove('hidden');
+      alertBox.classList.add('block');
+    }
+    if (confirmBtn) {
+      confirmBtn.disabled = false;
+      confirmBtn.className = 'w-full py-3.5 rounded-xl bg-champagne text-[#111215] font-serif text-sm font-semibold tracking-wider cursor-pointer hover:bg-[#ebd5b3] transition-all shadow-md';
+    }
+  }
+
+  function confirmGlobalBroadcast() {
+    const authBtn = document.getElementById('btn-authorize-ignition');
+    closeIgnitionConfirm();
+    if (authBtn) {
+      authBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Global Ignition Initiated</span>';
+      authBtn.classList.remove('bg-[#d8c7a5]', 'hover:bg-[#ebd5b3]');
+      authBtn.classList.add('bg-white/[0.08]', 'text-champagne', 'border', 'border-champagne/30');
+    }
+  }
+</script>
+</body></html>

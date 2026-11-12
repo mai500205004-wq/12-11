@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#15130f", "primary": "#ffb59c", "surface-container-low": "#1e1b17", "on-primary-fixed-variant": "#822700", "secondary-fixed-dim": "#ffb961", "surface-container-high": "#2c2a24", "on-secondary-fixed-variant": "#663e00", "on-tertiary-container": "#501600", "on-tertiary-fixed": "#380d00", "on-primary": "#5c1900", "error-container": "#93000a", "secondary-fixed": "#ffddb9", "on-primary-fixed": "#390c00", "on-tertiary": "#591d04", "on-background": "#e8e1d9", "inverse-on-surface": "#33302b", "secondary-container": "#e89300", "tertiary-container": "#d17a59", "surface-variant": "#38342f", "surface-dim": "#15130f", "primary-fixed-dim": "#ffb59c", "on-surface": "#e8e1d9", "surface-tint": "#ffb59c", "secondary": "#ffb961", "on-secondary-fixed": "#2b1700", "inverse-primary": "#a33e16", "surface-container": "#221f1a", "background": "#15130f", "on-secondary-container": "#563400", "surface-bright": "#3c3933", "outline-variant": "#57423b", "surface-container-highest": "#38342f", "outline": "#a68b83", "tertiary-fixed-dim": "#ffb59b", "inverse-surface": "#e8e1d9", "on-error-container": "#ffdad6", "on-error": "#690005", "tertiary-fixed": "#ffdbcf", "on-secondary": "#472a00", "primary-fixed": "#ffdbcf", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#763218", "on-surface-variant": "#dec0b7", "surface-container-lowest": "#100e0a", "on-primary-container": "#511500", "tertiary": "#ffb59b", "primary-container": "#e56e43" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.375rem", "space-xl": "3.5rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-md": "1.25rem", "space-sm": "0.75rem", "space-lg": "2rem", "margin": "2.5rem", "gutter": "1.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Noto Serif"], "label-md": ["Plus Jakarta Sans"], "headline-xl": ["Noto Serif"], "title-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Noto Serif"], "title-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Noto Serif"], "headline-xl-mobile": ["Noto Serif"], "display-lg": ["Noto Serif"], "headline-md": ["Noto Serif"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "fontWeight": "500" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md px-space-md"><div class="flex items-center gap-space-xs py-space-xs px-space-xs"><div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div><span class="font-label-md text-label-md tracking-wider text-secondary uppercase">LIVE STAGE BUS // إشراف المسرح</span></div><div class="space-y-space-xs"><div class="px-space-xs py-1"><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">المراحل الدرامية // DRAMA STAGES</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stage-brief" href="#"><span class="font-label-md text-label-md">01 البريف (THE HERO)</span><span class="material-symbols-outlined text-[18px]">theater_comedy</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stage-insight" href="#"><span class="font-label-md text-label-md">02 الاستبصار (INSIGHT)</span><span class="material-symbols-outlined text-[18px]">psychology</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stage-concept" href="#"><span class="font-label-md text-label-md">03 المفهوم (CONCEPT)</span><span class="material-symbols-outlined text-[18px]">lightbulb</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stage-script" href="#"><span class="font-label-md text-label-md">04 السيناريو (STAGE SCRIPT)</span><span class="material-symbols-outlined text-[18px]">description</span></a></nav></div><div class="space-y-space-xs pt-space-xs"><div class="px-space-xs py-1"><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">أدوات المسرح الإنساني // TOOLS</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="interactive-theater" href="#"><span class="font-label-md text-label-md">المسرح التفاعلي</span><span class="material-symbols-outlined text-[18px]">groups</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="voices-of-the-street" href="#"><span class="font-label-md text-label-md">أصوات الشارع والناس</span><span class="material-symbols-outlined text-[18px]">record_voice_over</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="memory-decisions-log" href="#"><span class="font-label-md text-label-md">سجل القرارات والذاكرة</span><span class="material-symbols-outlined text-[18px]">history_edu</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="research-laboratory" href="#"><span class="font-label-md text-label-md">مختبر الأبحاث</span><span class="material-symbols-outlined text-[18px]">science</span></a></nav></div></div><div class="px-space-md pt-space-sm flex flex-col gap-space-xs"><div class="p-space-xs rounded bg-surface-container flex flex-col gap-1"><span class="font-label-sm text-label-sm text-outline">TELEMETRY SIGNAL</span><span class="font-label-md text-label-md text-secondary">24ms • MAJLIS SYNC ACTIVE</span></div><div class="flex items-center justify-between text-on-surface-variant text-label-sm px-1"><span>FX2 CREATIVE INTELLIGENCE</span><span>v2.5</span></div></div></aside><div class="pr-72"><header class="fixed top-0 left-0 right-72 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight">FX2 HUMAN STAGE</span><span class="font-label-sm text-label-sm text-on-surface-variant">المسرح الإنساني والتجربة الاجتماعية</span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="bg-surface-container px-space-sm py-1 rounded flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface">سردية الغد 2026 // إنتاج رقم 04</span></div></div><div class="flex items-center gap-space-md"><nav class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded"><a class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="frontend-noir-2026" href="#">01 NOIR 2026</a><a class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="frontend-atelier-cinema" href="#">02 ATELIER CINEMA</a><a class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="frontend-radical-lab" href="#">03 RADICAL LAB</a><a class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="frontend-human-stage" href="#">04 HUMAN STAGE</a></nav><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded text-label-sm"><span class="material-symbols-outlined text-secondary text-[16px]">terminal</span><span class="font-label-sm text-label-sm text-secondary uppercase">GEMINI 2.5 PRO ACTIVE // LIVE STAGE BUS</span></div><div class="flex items-center rounded bg-surface-container-low p-0.5 text-label-sm font-label-sm"><button class="px-2 py-0.5 rounded bg-surface-container text-primary" type="button">RTL</button><button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface" type="button">LTR</button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- STAGE CUE TELEMETRY BAR & DRAMATIC BRIEF ANCHOR -->
+<section class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm shadow-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xs">
+<!-- Breadcrumb Bar & Status Matrix -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs px-2.5 py-1 bg-surface-container-high rounded text-secondary font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="tracking-wide">المسرح الإنساني // كود المشهد 02</span>
+</div>
+<span class="font-headline-md text-headline-md text-primary font-bold">«على جنب يا أسطى»</span>
+<span class="text-on-surface-variant font-label-md text-label-md hidden md:inline">| ضغط الميكروباص وصدمة القرار المالي في الشارع</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[15px] text-secondary">psychology</span>
+<span>GEMINI 2.5 PRO NEURAL SYNC: <strong class="text-secondary">ACTIVE (18ms)</strong></span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[15px] text-primary">favorite</span>
+<span>نبض الواقعية الخام: <strong class="text-primary">88.4%</strong></span>
+</div>
+</div>
+</div>
+<!-- Expandable Brief Anchor Accordion -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-2 transition-all duration-300">
+<div class="flex items-center justify-between cursor-pointer" onclick="document.getElementById('brief-details').classList.toggle('hidden');">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">push_pin</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">مرتكز البريف الإبداعي الإنساني (The Core Conflict Anchor)</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">
+<span>تفاصيل الرهان الإعلاني</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          إطلاق منصة تكنولوجية مصرفية جديدة في الشرق الأوسط. التوتر البشري الجوهري: <strong class="text-primary font-semibold">الشباب يريدون العيش اليوم بشغف دون أن يُقال لهم احرم نفسك عشان المستقبل...</strong> نريد فكرة تصدم الناس بصدقها، وتجعل الأمان المالي تحرراً ومتعة وليس سجناً أخلاقياً أو وصاية تقليدية.
+        </p>
+<div class="hidden pt-2 flex flex-wrap gap-space-md text-on-surface-variant font-body-sm text-body-sm bg-surface-container p-space-sm rounded-lg" id="brief-details">
+<div><strong class="text-secondary">المعضلة:</strong> الميكروباص يمثل النماذج القديمة، الحشر، جمع الفكة الإجبارية، ومجاملة الركاب على حساب الراحة الفردية.</div>
+<div><strong class="text-primary">الهدف الإعلاني:</strong> تحويل جملة «على جنب يا أسطى» من مجرد طلب نزول روتيني إلى إعلان استقلال مالي وشجاعة اتخاذ القرار.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MAIN THEATRICAL STAGE LAYOUT -->
+<main class="w-full max-w-7xl mx-auto px-space-md py-space-lg flex flex-col gap-space-lg">
+<!-- ROW 1: THE SALON / CABIN GRID & TENSION COCKPIT (Bento Split) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- Interactive Microbus Cabin Spatial Map (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-xl relative overflow-hidden">
+<!-- Ambient lighting glow -->
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">directions_bus</span>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">صالون الميكروباص الحي (Interactive Cabin)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">انقر على أي شخصية لاستدعاء صوتها وتوترها المباشر في مرآة الأسطى</span>
+</div>
+</div>
+<div class="bg-surface-container-highest px-space-xs py-1 rounded text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">grid_view</span>
+<span>توزيع المقاعد 14 راكب</span>
+</div>
+</div>
+<!-- Cabin Mockup Graphic Grid -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col gap-space-sm relative">
+<!-- Front Row: The Driver & Front Passenger -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- The Driver (أبو عبده) -->
+<div class="group cursor-pointer bg-surface-container p-space-sm rounded-lg hover:bg-surface-container-high transition-all duration-200 flex flex-col gap-1 relative overflow-hidden" id="seat-driver" onclick="selectCharacter('driver')">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-semibold">الأسطى // السائق</span>
+<span class="material-symbols-outlined text-primary text-[18px]">airline_seat_recline_extra</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">أبو عبده (المرآة والكاش)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">بيده الفلوس وعينه في المراية: «الأجرة زادت ومفيش حد بينزل ناقص قرش.. اخلصوا يا كباتن!»</p>
+<div class="flex items-center gap-1 text-primary text-label-sm font-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>المراقب الصارم • قوة الرفض</span>
+</div>
+</div>
+<!-- Front Passenger (الموظف القديم) -->
+<div class="group cursor-pointer bg-surface-container p-space-sm rounded-lg hover:bg-surface-container-high transition-all duration-200 flex flex-col gap-1" id="seat-officer" onclick="selectCharacter('officer')">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-semibold">المقعد الأمامي</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-secondary transition-colors">الموظف القديم (58 سنة)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">«زمان كنا بنحوش القرش على القرش ومحدش اشتكى.. جيل مش عاوز يتحمل!»</p>
+<div class="flex items-center gap-1 text-secondary text-label-sm font-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>صوت الأجيال السابقة والوصاية</span>
+</div>
+</div>
+</div>
+<!-- Middle Row: The Hero & The Freelancer -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- The Hero (الشاب الجامعي المستقل) -->
+<div class="group cursor-pointer bg-surface-container-high p-space-sm rounded-lg hover:bg-surface-bright transition-all duration-200 flex flex-col gap-1 shadow-md" id="seat-hero" onclick="selectCharacter('hero')">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary text-on-primary font-bold">بطل الفكرة (THE HERO)</span>
+<span class="material-symbols-outlined text-primary text-[18px]">smartphone</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">زياد (23 سنة - الشاب المستقل)</span>
+<p class="font-body-sm text-body-sm text-on-surface">يمسك هاتفه، ميزانيته لليوم محسوبة، يرفض وصاية الحرمان: «مش هستنى لما يعجز عمري عشان أعيش!»</p>
+<div class="flex items-center gap-1 text-primary-fixed-dim text-label-sm font-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>عقدة التمرد: لحظة طلب النزول</span>
+</div>
+</div>
+<!-- Freelancer (صانعة المحتوى) -->
+<div class="group cursor-pointer bg-surface-container p-space-sm rounded-lg hover:bg-surface-container-high transition-all duration-200 flex flex-col gap-1" id="seat-creator" onclick="selectCharacter('creator')">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-semibold">الكنبة الوسطى</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">laptop_mac</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-secondary transition-colors">مريم (27 سنة - عمل حر)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">«البنوك القديمة مش معترفة بدخل الفريلانسر، ولا بتفهم إني بستثمر في معداتي مش بلعب»</p>
+<div class="flex items-center gap-1 text-secondary text-label-sm font-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">insights</span>
+<span>اقتصاد المستقبل الحبيس</span>
+</div>
+</div>
+</div>
+<!-- Rear Row: The Elder (أم أحمد) & The Public Chorus -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Elder Mother (الحاجة أم أحمد) -->
+<div class="group cursor-pointer bg-surface-container p-space-sm rounded-lg hover:bg-surface-container-high transition-all duration-200 flex flex-col gap-1" id="seat-mother" onclick="selectCharacter('mother')">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-semibold">الكنبة الأخيرة</span>
+<span class="material-symbols-outlined text-outline text-[18px]">elderly</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-on-surface-variant transition-colors">الحاجة أم أحمد (الذاكرة الشعبية)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">«الله يعينكم يا بني، الدنيا غليت والفرحة بقت تتقسط بالقطارة.. ربنا يفك الضيقة»</p>
+<div class="flex items-center gap-1 text-outline text-label-sm font-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">sentiment_satisfied</span>
+<span>التعاطف الدافئ والشهادة على الغلاء</span>
+</div>
+</div>
+<!-- Public Passenger Chorus -->
+<div class="group cursor-pointer bg-surface-container p-space-sm rounded-lg hover:bg-surface-container-high transition-all duration-200 flex flex-col gap-1" id="seat-chorus" onclick="selectCharacter('chorus')">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-outline font-semibold">كورال الميكروباص</span>
+<span class="material-symbols-outlined text-outline text-[18px]">groups</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">جمهور الشارع والركاب</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">همهمات، نقود تتنقل من يد ليد، صوت الإذاعة القديمة، والضغط النفسي المتراكم.</p>
+<div class="flex items-center gap-1 text-on-surface-variant text-label-sm font-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">volume_up</span>
+<span>الضغط الاجتماعي المستمر</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Dynamic Character Spotlight Card -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col md:flex-row items-center gap-space-md" id="character-spotlight">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[32px]" id="spotlight-icon">smartphone</span>
+</div>
+<div class="flex flex-col gap-1 flex-1 text-right">
+<div class="flex items-center justify-between">
+<h4 class="font-title-lg text-title-lg text-primary font-bold" id="spotlight-name">زياد (بطل المشهد)</h4>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-primary-container text-on-primary-container rounded" id="spotlight-role">الصوت المحرك للإعلان</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic" id="spotlight-dialogue">
+              «أنا مش هفضل قاعد ساكت في زحمة الميكروباص بدفع الباقي لغيري وأحرم نفسي.. الأمان الحقيقي إني أقدر اشتري قهوتي الصبح وأنا عارف إن حسابي بكره بيكبر مش بينشف.»
+            </p>
+</div>
+</div>
+</div>
+<!-- FARE TENSION BOX & LIVE EMOTIONAL METER (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">payments</span>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">صندوق الأجرة والتوتر</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">حساب الفكة ومعضلة «القرش الأبيض»</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 bg-surface-container-high rounded text-primary">المعاملة #4029</span>
+</div>
+<!-- The Tension Dial Visual Meter -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col gap-space-sm items-center text-center relative overflow-hidden">
+<div class="w-full flex justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>راحة الاستسلام (الحرمان)</span>
+<span class="text-primary font-bold">قمة الانفجار (9.2 / 10)</span>
+<span>التحرر الكامل</span>
+</div>
+<!-- Dynamic SVG Radial Gauge -->
+<div class="relative w-48 h-28 flex items-center justify-center overflow-hidden">
+<svg class="w-48 h-48 -rotate-90 transform" viewbox="0 0 100 100">
+<circle class="text-surface-container-highest" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary transition-all duration-700" cx="50" cy="50" fill="transparent" id="tension-circle" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="60" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute bottom-2 flex flex-col items-center">
+<span class="font-headline-xl text-headline-xl text-primary font-bold" id="tension-number">9.2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">مؤشر الضغط النفسي</span>
+</div>
+</div>
+<div class="w-full bg-surface-container p-space-xs rounded-lg flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">سعر الأجرة الرسمية:</span>
+<span class="text-on-surface font-semibold">10.00 جنيه</span>
+<span class="text-on-surface-variant">تكلفة الحرمان العاطفي:</span>
+<span class="text-primary font-bold">عمر ضائع</span>
+</div>
+</div>
+<!-- Interactive Coin & Fare Thrower -->
+<div class="flex flex-col gap-space-sm bg-surface-container p-space-md rounded-xl">
+<span class="font-title-md text-title-md text-on-surface font-semibold">اختبار رد الفعل: ادفع الفكة أو اطلب النزول</span>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="flex items-center justify-center gap-1.5 py-space-sm px-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface rounded-lg font-label-md text-label-md transition-all" onclick="triggerFareAction('comply')" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">savings</span>
+<span>«خد يا أسطى ومسكتش» (استسلام)</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-space-sm px-space-xs bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md font-bold transition-all shadow-lg shadow-primary/20" onclick="triggerFareAction('rebel')" type="button">
+<span class="material-symbols-outlined text-[18px]">pan_tool</span>
+<span>«على جنب يا أسطى!» (مواجهة)</span>
+</button>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-secondary flex items-start gap-space-xs" id="fare-feedback">
+<span class="material-symbols-outlined text-[18px] shrink-0 text-primary">campaign</span>
+<span id="fare-text">اختر فعلاً لاختبار ارتداد الشارع وسيطرة السائق على الغرفة.</span>
+</div>
+</div>
+<!-- Street Ambient Noise Control Deck -->
+<div class="bg-surface-container p-space-sm rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">volume_up</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">شريط الضجيج الواقعي (Street Noise)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">كلاكسات كوبري 6 أكتوبر وزحام العصر</span>
+</div>
+</div>
+<button class="px-3 py-1 bg-surface-container-high hover:bg-primary hover:text-on-primary text-secondary rounded font-label-sm text-label-sm transition-colors" id="ambient-toggle" onclick="toggleStreetAudio()" type="button">
+            تشغيل المحاكاة 🔊
+          </button>
+</div>
+</div>
+</div>
+<!-- ROW 2: THE 4 DRAMATIC MODES (TABS & INTERACTIVE PLAYGROUND) -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-xl">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">theater_comedy</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">الأبعاد التفاعلية الأربعة للمشهد (Stage Modes)</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">استكشف المشهد من زوايا سينمائية، وثائقية، وتسويقية مختلفة</span>
+</div>
+</div>
+<!-- Mode Selectors -->
+<div class="flex flex-wrap gap-1 bg-surface-container p-1 rounded-xl">
+<button class="px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md transition-all" id="tab-confrontation" onclick="setStageMode('confrontation')" type="button">
+            01 المواجهة الحرة
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" id="tab-possibilities" onclick="setStageMode('possibilities')" type="button">
+            02 السيناريوهات الثلاثة
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" id="tab-street" onclick="setStageMode('street')" type="button">
+            03 مسرح الشارع الحي
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" id="tab-polish" onclick="setStageMode('polish')" type="button">
+            04 استخلاص السلوجان
+          </button>
+</div>
+</div>
+<!-- Mode Content Panels -->
+<!-- PANEL 1: CONFRONTATION -->
+<div class="flex flex-col gap-space-md" id="panel-confrontation">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-bold">اللحظة الصفرية: الصمت المفاجئ</span>
+<p class="font-body-md text-body-md text-on-surface">
+              حين ينطق الشاب بكلمة «على جنب»، يتوقف صخب الميكروباص. الأسطى يرفع حاجبه في المرآة. الركاب يلتفتون. إنها اللحظة التي يكسر فيها فرد واحد الإيقاع الرتيب للجماعة المقهورة.
+            </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary font-bold">تفكيك سردية «احرم نفسك»</span>
+<p class="font-body-md text-body-md text-on-surface">
+              المواجهة ليست على جنيه أو اثنين في الأجرة؛ المواجهة ضد فلسفة عاشت عليها أجيال ترى في الاستمتاع باليوم خطيئة وفي حرمان النفس فضيلة أبدية.
+            </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-outline font-bold">المغزى التسويقي للفنتك (Fintech Angle)</span>
+<p class="font-body-md text-body-md text-on-surface">
+              التطبيق المالي لا يطلب منك التوقف عن شرب القهوة مع أصحابك، بل يمنحك ذكاء الاستثمار الآلي والادخار اليومي الذكي دون شعور بالذنب.
+            </p>
+</div>
+</div>
+</div>
+<!-- PANEL 2: POSSIBILITIES (3 Scenarios) -->
+<div class="hidden flex-col gap-space-md" id="panel-possibilities">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Scenario 1 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary w-fit">السيناريو الساخر (Satirical)</span>
+<h5 class="font-title-md text-title-md text-on-surface font-semibold">«هات الباقي يا كابتن بالبيتكوين؟»</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                حوار كوميدي لاذع بين الأسطى الذي يرفض الفكة المقطوعة، والشاب الذي يطلب تحويل الباقي عبر محفظة إلكترونية، مما يثير ضحك الركاب ودهشتهم.
+              </p>
+</div>
+<button class="py-1.5 px-3 bg-surface-container-high hover:bg-surface-bright rounded text-primary font-label-sm text-label-sm text-right" onclick="loadScriptVariation('satire')" type="button">معاينة الحوار الساخر ←</button>
+</div>
+<!-- Scenario 2 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-primary w-fit">السيناريو العاطفي (Emotional)</span>
+<h5 class="font-title-md text-title-md text-on-surface font-semibold">«مش عاوز أموت في محطة الانتظار»</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                مونولوج داخلي مؤثر يربط بين كفاح والد الشاب الذي أفنى شبابه في تقليل اللقمة ولم يسافر قط، وقرار الابن بكسر هذه الدائرة التعيسة.
+              </p>
+</div>
+<button class="py-1.5 px-3 bg-surface-container-high hover:bg-surface-bright rounded text-primary font-label-sm text-label-sm text-right" onclick="loadScriptVariation('emotional')" type="button">معاينة الحوار العاطفي ←</button>
+</div>
+<!-- Scenario 3 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary w-fit">السيناريو الثوري الحاسم (Heroic Cut)</span>
+<h5 class="font-title-md text-title-md text-on-surface font-semibold">«أنا نازل من قطار التوفير بتاع زمان»</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                المواجهة الجريئة التي يقف فيها الشاب ويمسك بباب الميكروباص، ليوجه كلامه لجميع الركاب والأسطى، حاملاً شعار الحملة الرسمي.
+              </p>
+</div>
+<button class="py-1.5 px-3 bg-primary text-on-primary font-bold rounded font-label-sm text-label-sm text-right" onclick="loadScriptVariation('heroic')" type="button">معاينة الحوار البطولي الرئيسي ←</button>
+</div>
+</div>
+</div>
+<!-- PANEL 3: STREET THEATER VISUALS -->
+<div class="hidden flex-col gap-space-md" id="panel-street">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md items-center">
+<div class="rounded-xl overflow-hidden shadow-2xl relative h-64 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Cinematic wide 35mm film still of a crowded Cairo microbus interior during golden hour sunset on 6th of October bridge. Warm terracotta sunlight cutting through dusty windows, a young Egyptian man standing looking back at an expressive weathered Egyptian driver visible in the rear view mirror, moody chiaroscuro lighting, warm film grain and asphalt atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwfHNGDLjX5n7vQOQRbksRCyeTAigDzev0wc7jOQ8MVKbVTsG1d_OXlry5PaG6SVog8W2-PDicHUSK5BfY5AKl5FWVFXv1_hpKmxg_N2ntWJ3k5ZCfLp1ow51TMmPxhSXR7jdGaXPEEGZsuO6BL9zG52xxZBZNVL5cnDwjMLNV0eV-sjT6lu9vjirzkr2-bQekBCFmWeN6ztt0LdVjsJ3fuVbYWIGj2N8CLvg2D7oD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-md text-label-md text-primary bg-surface/80 px-space-xs py-1 rounded backdrop-blur">لقطة بصرية 01 // إضاءة الغروب على كوبري أكتوبر</span>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-2xl relative h-64 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Close up dramatic cinematic shot of hands counting worn Egyptian pound banknotes on the dashboard of a microbus with Arabic religious calligraphy stickers, warm amber tungsten lighting, documentary street realism style, high textural contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhH1930Nf1anpi-2ojWKe2ce7vb7r-447peDr7y4WRxNq7-HCG-we37k3sUNDEW1q6tDf_lOK1S4pIfAPFIN6r0gBKLVANYtzWKRp7jH6Me07T9ECP9ne73diUfUoRBpirUse8pcRVxffy9tzOidkJgXbNKKGTpMTV-P3rcClFR8-ET7JM6TX-qW375dwXfYqjdxWItH79U51ZOqnGOz3EQKC9VJTTCjujAhQLwk-O"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-md text-label-md text-secondary bg-surface/80 px-space-xs py-1 rounded backdrop-blur">لقطة بصرية 02 // طبلون العربية وتراكم الفكة</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PANEL 4: DIRECTOR'S POLISH & SLOGAN EXTRACTOR -->
+<div class="hidden flex-col gap-space-md" id="panel-polish">
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col items-center text-center gap-space-md relative overflow-hidden">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">stars</span>
+<span>الخلاصة الإعلانية الذهبية (THE HERO CAMPAIGN PUNCHLINE)</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-primary font-bold max-w-3xl leading-tight">
+            «أمانك المالي مش نزول على جنب.. أمانك المالي إنك تسوق رحلتك بإيدك»
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            هذه الجملة تُسقط وصاية القرش الأبيض، وتخلق هوية واضحة للتطبيق البنكي الجديد: التكنولوجيا ليست قيوداً بل دفة قيادة تسمح لك بأن تعيش حاضرك وتبني مستقبلك بالتوازي.
+          </p>
+<div class="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm bg-primary text-on-primary rounded-lg font-label-md text-label-md font-bold flex items-center gap-2 hover:bg-primary-container transition-all" onclick="copyPunchline()" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span id="copy-btn-label">نسخ الجملة للحملة الإعلانية</span>
+</button>
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>تصدير لمجلس إدارة البنك</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 3: THE SCRIPT & DIALOGUE COCKPIT (THEATRICAL FULL SCRIPT) -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-xl">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">description</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">نص السيناريو الحي والحوار الميداني (The Script Cockpit)</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">المشهد المسرحي الكامل مكتوباً وفق أرقى معايير السيناريو الواقعي العربي</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 bg-surface-container hover:bg-surface-container-high text-secondary rounded-lg font-label-sm text-label-sm flex items-center gap-1" onclick="toggleDirectorNotes()" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span id="notes-label">إظهار ملاحظات المخرج</span>
+</button>
+<button class="px-space-sm py-1.5 bg-surface-container hover:bg-surface-container-high text-primary rounded-lg font-label-sm text-label-sm flex items-center gap-1" onclick="downloadScript()" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>تحميل المسودة (PDF/Draft)</span>
+</button>
+</div>
+</div>
+<!-- Dialogue Cards Stream -->
+<div class="flex flex-col gap-space-md" id="script-container">
+<!-- Scene Cue 01 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs relative">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-secondary font-semibold font-title-md">الأسطى أبو عبده (وهو يرمي الفكة في الدرج وينظر في المرآة العلوية)</span>
+<span class="font-mono text-outline">00:14 // مشهد 02</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">
+            «الأجرة زادت جنيه ومفيش حد بينزل ناقص قرش.. واللي معاه ميتين جنيه يفكها برة قبل ما يركب ويزنق الناس.. اخلصوا يا شباب!»
+          </p>
+<div class="director-note bg-surface-container-highest p-space-xs rounded text-secondary font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">movie</span>
+<span>ملاحظة المخرج: الكاميرا تأخذ انعكاس عين الأسطى في المرآة المتصدعة. الصوت عالي وخشن ومكتوم بزحام العوادم.</span>
+</div>
+</div>
+<!-- Scene Cue 02 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs relative">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold font-title-md">الموظف القديم (يلتفت للشباب في الخلف بصوت ناصح ممتعض)</span>
+<span class="font-mono text-outline">00:32</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">
+            «يا بني ادفع واسكت.. جيلكم ده مستعجل وعاوز يصرف ويشرب قهوة على الصبح وميحرمش نفسه من حاجة.. إحنا قعدنا ثلاثين سنة بنحوش القرش على القرش ومرتاحينش إلا بعد ما طلعنا معاش!»
+          </p>
+<div class="director-note bg-surface-container-highest p-space-xs rounded text-secondary font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">movie</span>
+<span>ملاحظة المخرج: نبرة الوصاية الأبوية المألوفة. نظرة استعلاء أخلاقي تجعل الشباب يشعرون بالذنب الدائم.</span>
+</div>
+</div>
+<!-- Scene Cue 03: BREAKTHROUGH HERO MOMENT -->
+<div class="bg-surface-container-high p-space-lg rounded-xl flex flex-col gap-space-sm relative shadow-2xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="text-primary font-bold font-title-lg">زياد (يقف ممسكاً بعامود السقف، صوته هادئ، واثق، وحاسم)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">ذروة المشهد الإعلاني (THE CLIMAX)</span>
+</div>
+<blockquote class="font-headline-lg text-headline-lg text-primary font-bold leading-relaxed bg-surface-container-lowest p-space-md rounded-xl">
+            «على جنب يا أسطى!.. مش هنفضل طول الرحلة مزنوقين في كراسي الانتظار عشان لما نوصل للمحطة الأخيرة نكتشف إننا ضيعنا شبابنا في جمع الفكة.. إحنا عاوزين نعيش النهاردة بكرامة وشغف وفلوسنا تكبر معانا!»
+          </blockquote>
+<div class="director-note bg-surface-container p-space-xs rounded text-primary-fixed-dim font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">stars</span>
+<span>ملاحظة المخرج: الصمت التام يعم الميكروباص. الأسطى يضغط فرامل بهدوء. مريم تبتسم. أم أحمد تؤمّن برأسها. الموسيقى التصويرية تتصاعد من إيقاع شعبي إلى نغمة فنتك إلكترونية حديثة وملهمة.</span>
+</div>
+</div>
+<!-- Scene Cue 04: The Resolution & Outro -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs relative">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-secondary font-semibold font-title-md">الراوي الصوتي / الفويس أوفر الإعلاني (Voiceover)</span>
+<span class="font-mono text-outline">01:05 // الختام</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium">
+            (الشاب ينزل من الميكروباص إلى شمس القاهرة الساطعة، يفتح التطبيق في هاتفه، ويظهر رصيده الاستثماري ينمو بنقرة زر واحدة بينما يطلب قهوته المفضلة).
+          </p>
+<p class="font-title-md text-title-md text-primary font-bold mt-1">
+            «أمانك المالي مش نزول على جنب.. أمانك المالي إنك تسوق رحلتك بإيدك. حمّل التطبيق الآن.»
+          </p>
+</div>
+</div>
+</div>
+<!-- ROW 4: ACTION BOTTOM CALL-TO-ACTION (STUDIO FOOTER) -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">theater_comedy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">جاهز لنقل التجربة إلى مرحلة الإنتاج المرئي؟</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">تمت مراجعة السيناريو درامياً ومطابقته لبريف إطلاق منصة الفنتك لعام 2026.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface rounded-lg font-label-md text-label-md transition-all" onclick="alert('تم تفعيل وضع القراءة السينمائية الكاملة للمخرج والممثلين')" type="button">
+          عرض لوحة القصة (Storyboard Mode)
+        </button>
+<button class="px-space-md py-space-sm bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md font-bold transition-all shadow-lg shadow-primary/20" onclick="alert('تم إرسال السيناريو إلى استوديو التصوير والإنتاج التجاري بنجاح')" type="button">
+          اعتماد المشهد وبدء الكاستينج (Greenlight Scene)
+        </button>
+</div>
+</div>
+</main>
+</div>
+<!-- INLINE JAVASCRIPT FOR DYNAMIC STAGE INTERACTIONS -->
+<script>
+  // Character Data Store
+  const characters = {
+    driver: {
+      name: "أبو عبده (الأسطى)",
+      role: "سائق الميكروباص والمراقب الصارم",
+      icon: "airline_seat_recline_extra",
+      dialogue: "«الأجرة زادت جنيه ومفيش حد بينزل ناقص قرش.. واللي معاه ميتين جنيه يفكها برة قبل ما يركب ويزنق الناس.. اخلصوا يا شباب!»"
+    },
+    officer: {
+      name: "الموظف القديم (58 سنة)",
+      role: "رمز الوصاية وثقافة الحرمان السابقة",
+      icon: "badge",
+      dialogue: "«زمان كنا بنحوش القرش على القرش ومحدش اشتكى.. جيل مش عاوز يتحمل ولا يوفر، وعاوز يشرب قهوة على الصبح بفلوس أسبوع كامل!»"
+    },
+    hero: {
+      name: "زياد (23 سنة - بطل الفكرة)",
+      role: "الصوت المحرك والمتمرد على الحرمان",
+      icon: "smartphone",
+      dialogue: "«على جنب يا أسطى!.. مش هنفضل طول الرحلة مزنوقين في كراسي الانتظار عشان لما نوصل للمحطة الأخيرة نكتشف إننا ضيعنا شبابنا في جمع الفكة.. إحنا عاوزين نعيش النهاردة بكرامة وشغف وفلوسنا تكبر معانا!»"
+    },
+    creator: {
+      name: "مريم (27 سنة - صانعة محتوى ومستقلة)",
+      role: "اقتصاد العمل الحر غير المفهوم بنكياً",
+      icon: "laptop_mac",
+      dialogue: "«البنوك القديمة بتتعامل معايا كأني عاطلة عشان معنديش مفردات مرتب، ولا بيفهموا إن شراء كاميرا جديدة هو استثمار مش رفاهية!»"
+    },
+    mother: {
+      name: "الحاجة أم أحمد (الكنبة الأخيرة)",
+      role: "الذاكرة الشعبية والتعاطف الصادق",
+      icon: "elderly",
+      dialogue: "«الله يعينكم يا ولادي، أنتم جيل اتولد في الغلا.. الفرحة بقت غالية والحياة بتجري بسرعة، ربنا يرزقكم ولا يحوجكم لمذلة السلف.»"
+    },
+    chorus: {
+      name: "كورال ركاب الميكروباص",
+      role: "همهمات وضغط المجتمع الجمعي",
+      icon: "groups",
+      dialogue: "«(صوت نقود معدنية ترتطم، تنهيدات تعب، وأحدهم يقول: عدي الفلوس يا باشا اللي قدام ناقصة نص جنيه!)»"
+    }
+  };
+
+  // Character selection interaction
+  function selectCharacter(key) {
+    const char = characters[key];
+    if (!char) return;
+    document.getElementById('spotlight-name').innerText = char.name;
+    document.getElementById('spotlight-role').innerText = char.role;
+    document.getElementById('spotlight-dialogue').innerText = char.dialogue;
+    document.getElementById('spotlight-icon').innerText = char.icon;
+  }
+
+  // Interactive Fare Action
+  function triggerFareAction(type) {
+    const feedbackText = document.getElementById('fare-text');
+    const tensionNum = document.getElementById('tension-number');
+    const tensionCircle = document.getElementById('tension-circle');
+
+    if (type === 'comply') {
+      feedbackText.innerText = "الأسطى يأخذ النقود دون أن يلتفت: «تمام كدة.. بس المرة الجاية الفكة تكون جاهزة». التوتر ينخفض إلى رتابة خانقة (5.4 / 10). استسلمت لحسابات الحرمان.";
+      tensionNum.innerText = "5.4";
+      tensionCircle.style.strokeDashoffset = "130";
+      tensionCircle.classList.remove('text-primary');
+      tensionCircle.classList.add('text-secondary');
+    } else {
+      feedbackText.innerText = "«على جنب يا أسطى!».. صمت يضرب الصالون بالكامل. الأسطى ينظر بحدة في المرآة. الركاب يتنبهون. التوتر يقفز إلى ذروته (9.8 / 10). لحظة ولادة السلوجان!";
+      tensionNum.innerText = "9.8";
+      tensionCircle.style.strokeDashoffset = "20";
+      tensionCircle.classList.add('text-primary');
+      tensionCircle.classList.remove('text-secondary');
+    }
+  }
+
+  // Stage Mode Switcher
+  function setStageMode(mode) {
+    const modes = ['confrontation', 'possibilities', 'street', 'polish'];
+    modes.forEach(m => {
+      const panel = document.getElementById(`panel-${m}`);
+      const tab = document.getElementById(`tab-${m}`);
+      if (m === mode) {
+        panel.classList.remove('hidden');
+        panel.classList.add('flex');
+        tab.className = 'px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md transition-all';
+      } else {
+        panel.classList.add('hidden');
+        panel.classList.remove('flex');
+        tab.className = 'px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all';
+      }
+    });
+  }
+
+  // Load Script Variations
+  function loadScriptVariation(variant) {
+    const container = document.getElementById('script-container');
+    if (variant === 'satire') {
+      alert("تم تحميل السيناريو الساخر: التركيز على المفارقة بين الفكة التالفة وتطبيقات الجيل الرقمي.");
+    } else if (variant === 'emotional') {
+      alert("تم تحميل السيناريو العاطفي: التركيز على دموع الفرح وتكلفة الغربة والادخار القديم.");
+    } else {
+      alert("تم تثبيت السيناريو البطولي الحاسم كنسخة الإنتاج الرئيسية.");
+    }
+  }
+
+  // Toggle Director Notes Visibility
+  let notesVisible = true;
+  function toggleDirectorNotes() {
+    notesVisible = !notesVisible;
+    const notes = document.querySelectorAll('.director-note');
+    notes.forEach(note => {
+      note.style.display = notesVisible ? 'flex' : 'none';
+    });
+    document.getElementById('notes-label').innerText = notesVisible ? 'إخفاء ملاحظات المخرج' : 'إظهار ملاحظات المخرج';
+  }
+
+  // Audio simulation toggle
+  let audioPlaying = false;
+  function toggleStreetAudio() {
+    audioPlaying = !audioPlaying;
+    const btn = document.getElementById('ambient-toggle');
+    if (audioPlaying) {
+      btn.innerText = "إيقاف المحاكاة 🔇";
+      btn.className = "px-3 py-1 bg-primary text-on-primary rounded font-label-sm text-label-sm transition-colors";
+    } else {
+      btn.innerText = "تشغيل المحاكاة 🔊";
+      btn.className = "px-3 py-1 bg-surface-container-high hover:bg-primary hover:text-on-primary text-secondary rounded font-label-sm text-label-sm transition-colors";
+    }
+  }
+
+  // Copy campaign punchline
+  function copyPunchline() {
+    const text = "أمانك المالي مش نزول على جنب.. أمانك المالي إنك تسوق رحلتك بإيدك";
+    navigator.clipboard.writeText(text).then(() => {
+      const label = document.getElementById('copy-btn-label');
+      label.innerText = "تم نسخ الجملة بنجاح!";
+      setTimeout(() => {
+        label.innerText = "نسخ الجملة للحملة الإعلانية";
+      }, 2500);
+    });
+  }
+
+  // Fake Download
+  function downloadScript() {
+    alert("جارٍ إعداد ملف السيناريو الكامل بصيغة PDF تتضمن التوزيع الدرامي وشارات الإخراج...");
+  }
+</script></main></div></body></html>

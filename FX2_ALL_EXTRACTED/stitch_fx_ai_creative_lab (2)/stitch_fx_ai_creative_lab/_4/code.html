@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#121316", "outline": "#998f81", "on-secondary-fixed": "#241a00", "inverse-on-surface": "#2f3033", "error-container": "#93000a", "surface-variant": "#343537", "on-tertiary": "#660700", "primary-fixed-dim": "#e3c281", "on-tertiary-fixed-variant": "#8d1607", "secondary": "#e9c349", "surface-container-lowest": "#0d0e10", "surface-bright": "#38393c", "primary": "#ffe1a7", "on-error-container": "#ffdad6", "tertiary-fixed": "#ffdad4", "inverse-surface": "#e3e2e5", "surface-container-low": "#1b1c1e", "on-error": "#690005", "background": "#121316", "surface-tint": "#e3c281", "primary-fixed": "#ffdea0", "surface-dim": "#121316", "error": "#ffb4ab", "tertiary-fixed-dim": "#ffb4a6", "tertiary-container": "#ffb6a9", "inverse-primary": "#735b24", "surface-container-highest": "#343537", "on-secondary": "#3c2f00", "on-tertiary-fixed": "#3f0300", "on-primary": "#402d00", "on-surface-variant": "#d0c5b5", "secondary-fixed-dim": "#e9c349", "surface-container-high": "#292a2c", "outline-variant": "#4d463a", "on-primary-fixed": "#261a00", "primary-container": "#e5c483", "on-secondary-fixed-variant": "#574500", "on-tertiary-container": "#9f2413", "on-primary-container": "#68501b", "on-secondary-container": "#342800", "on-primary-fixed-variant": "#5a430e", "on-surface": "#e3e2e5", "secondary-container": "#af8d11", "on-background": "#e3e2e5", "tertiary": "#ffdcd6", "secondary-fixed": "#ffe088", "surface-container": "#1f2022" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1.25rem", "space-lg": "2rem", "margin": "1.5rem", "margin-desktop": "4rem", "space-xl": "3.5rem", "space-xs": "0.375rem", "space-sm": "0.75rem", "gutter-desktop": "2.5rem", "gutter": "1.5rem" }, "fontFamily": { "label-sm": [ "IBM Plex Sans" ], "technical-mono": [ "Space Mono" ], "headline-lg-mobile": [ "Noto Serif" ], "headline-sm": [ "IBM Plex Sans" ], "display-hero": [ "Noto Serif" ], "display-hero-mobile": [ "Noto Serif" ], "body-sm": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-lg": [ "Noto Serif" ], "body-md": [ "IBM Plex Sans" ], "headline-md": [ "Noto Serif" ] }, "fontSize": { "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "technical-mono": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "38px", "letterSpacing": "0", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "30px", "fontWeight": "600" } ], "display-hero": [ "56px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero-mobile": [ "36px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-lg": [ "17px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "headline-lg": [ "38px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "500" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "26px", { "lineHeight": "36px", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><img alt="FX Atelier Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WHHwpZAn2XUWRGBEQdB562h1RlsPwPVnGKpf3criCubvMZMRg6-QGYFs39umnIwANTYkpfkXdeKEhAQiXlDiaeH2c56ngw2xcArg5lidp6hKeeATW6OkFpqZyR9AcPYL229uWinRHk0IaHAEN2wANFr02KeYvP5tHPDUPxBI7BCSPk0_TqLmpoJR1uRW4yAq4gb8eEGG_s39Pgnyw3XgEzx_W8hL4T5S9H--arumyZSpLZ2XdAqZVrIQ"/><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-primary">FX</span><span class="font-label-sm text-label-sm text-outline">|</span><span class="font-body-sm text-body-sm text-on-surface truncate">مختبر الإبداع والذكاء الاستراتيجي</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="font-technical-mono text-technical-mono text-secondary">مشروع: سرمد — عطر الصمت</span><span class="font-technical-mono text-technical-mono text-outline">/</span><span class="font-technical-mono text-technical-mono text-on-surface-variant truncate">رولس رويس × دار الطيب</span><span class="inline-block w-1 h-1 rounded-full bg-secondary ml-1"></span><span class="font-technical-mono text-technical-mono text-outline">CLAUDE 3.5 • 0.8ms</span></div></div></div><nav class="hidden xl:flex items-center bg-surface-container-low px-space-xs py-space-xs gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm flex items-center gap-space-xs" data-path="creative-brief" href="#"><span class="font-technical-mono text-technical-mono text-outline">01</span><span>الموجز الفني</span></a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm flex items-center gap-space-xs" data-path="strategic-vision" href="#"><span class="font-technical-mono text-technical-mono text-outline">02</span><span>الرؤية الاستراتيجية</span></a><a aria-current="page" class="px-space-md py-space-xs transition-colors font-body-sm flex items-center gap-space-xs bg-primary-container text-on-primary-container" data-path="creative-concept" href="#"><span class="font-technical-mono text-technical-mono text-outline">03</span><span>الفكرة الإبداعية</span></a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm flex items-center gap-space-xs" data-path="cinematic-script" href="#"><span class="font-technical-mono text-technical-mono text-outline">04</span><span>السيناريو واللوحات</span></a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden md:flex items-center bg-surface-container-low px-space-sm py-space-xs gap-space-xs"><span class="inline-flex h-2 w-2 rounded-full bg-secondary animate-pulse"></span><span class="font-body-sm text-body-sm text-primary">يبحث عن التوتر الإبداعي</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-technical-mono text-technical-mono text-on-surface-variant">1,420 / 8,000 TOKENS</span><span class="font-technical-mono text-technical-mono text-outline">OPENROUTER PROXY</span></div><div class="hidden sm:flex items-center bg-surface-container px-space-sm py-space-xs gap-space-xs text-on-surface-variant"><span class="font-technical-mono text-technical-mono text-outline">⌘K</span><span class="font-body-sm text-body-sm">الأرشيف</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed right-0 top-20 bottom-10 w-72 bg-surface-container-lowest/80 backdrop-blur-xl z-40 flex flex-col justify-between py-space-md shadow-[0_0_35px_-8px_rgba(212,175,55,0.08)]"><div class="px-space-md"><div class="flex items-center justify-between pb-space-sm"><span class="font-technical-mono text-technical-mono text-secondary uppercase">LATERAL ENGINES</span><span class="font-label-sm text-label-sm text-outline">محركات التفكير</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary"><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-provocation" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">01</span><span class="font-body-sm text-body-sm">الاستفزاز</span></div><span class="font-technical-mono text-technical-mono text-secondary">0.85</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-analogies" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">02</span><span class="font-body-sm text-body-sm">التناظر والتشبيه</span></div><span class="font-technical-mono text-technical-mono text-outline">0.40</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-stimulus" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">03</span><span class="font-body-sm text-body-sm">الحافز العشوائي</span></div><span class="font-technical-mono text-technical-mono text-outline">0.12</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-opposite" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">04</span><span class="font-body-sm text-body-sm">التفكير العكسي</span></div><span class="font-technical-mono text-technical-mono text-outline">0.65</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-reversal" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">05</span><span class="font-body-sm text-body-sm">قلب القيود</span></div><span class="font-technical-mono text-technical-mono text-secondary">0.92</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container-low p-space-sm flex flex-col gap-space-xs"><div class="flex items-center justify-between text-outline font-technical-mono text-technical-mono"><span>CALIBRATION</span><span>TENSION 92%</span></div><div class="w-full h-1 bg-surface-container-highest overflow-hidden"><div class="h-full bg-secondary w-11/12"></div></div></div></div></aside><div class="pr-72 pb-10"><main class="relative pt-20 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Top Atmospheric Scrim & Tactical Studio Header -->
+<section class="relative w-full px-gutter-desktop py-space-lg overflow-hidden bg-surface-container-lowest">
+<!-- Ambient Specular Halo -->
+<div class="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 left-10 w-72 h-72 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Metadata Breadcrumb & Phase Track -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-technical-mono text-technical-mono">
+<span class="px-space-xs py-0.5 bg-primary-container/20 text-primary font-bold">PHASE 03</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">تفجير الفكرة الإبداعية ومحركات التفكير الجانبي</span>
+<span class="text-outline">/</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+            يطور الفكرة ويستكشف زوايا السرد
+          </span>
+</div>
+<div class="flex items-center gap-space-xs font-technical-mono text-technical-mono text-outline">
+<span>LATERAL PROMPTING RUN: #842-SARMD</span>
+<span>•</span>
+<span class="text-primary">CONFIDENCE: 94.8%</span>
+</div>
+</div>
+<!-- Main Headline with Asymmetric Editorial Weight -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<span class="font-technical-mono text-technical-mono text-secondary tracking-widest uppercase">THE CONCEPT INCUBATOR</span>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-medium">
+            المختبر الإبداعي: تطوير واختيار المفهوم السينمائي الأكبر
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            معايرة مخرجات نماذج التفكير الجانبي لمواءمة إرث الفخامة الهادئة لدار رولس رويس مع البصمة العطرية الفردية لدار الطيب في عمل سينمائي هجين.
+          </p>
+</div>
+<!-- Lateral Engines Dial Readout Chips -->
+<div class="lg:col-span-4 flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded-none">
+<div class="flex items-center justify-between font-label-md text-label-md text-outline">
+<span>المحركات الجانبية النشطة</span>
+<span class="font-technical-mono text-technical-mono text-secondary">3 ENGINES CALIBRATED</span>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<div class="px-space-xs py-1 bg-surface-container-high flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">الاستفزاز:</span>
+<span class="font-technical-mono text-technical-mono text-primary font-bold">75%</span>
+</div>
+<div class="px-space-xs py-1 bg-surface-container-high flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">التناظر:</span>
+<span class="font-technical-mono text-technical-mono text-primary font-bold">90%</span>
+</div>
+<div class="px-space-xs py-1 bg-surface-container-high flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">قلب القيود:</span>
+<span class="font-technical-mono text-technical-mono text-primary font-bold">60%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAMPION CONCEPT SHOWCASE (Editorial Wide Master Negative) -->
+<section class="w-full px-gutter-desktop py-space-xl bg-surface">
+<div class="relative w-full bg-surface-container-lowest shadow-[0_10px_40px_rgba(0,0,0,0.8)] overflow-hidden">
+<!-- Architectural Framing Vertex Marks -->
+<span class="absolute top-3 right-3 text-secondary font-technical-mono text-technical-mono select-none">+</span>
+<span class="absolute top-3 left-3 text-secondary font-technical-mono text-technical-mono select-none">+</span>
+<span class="absolute bottom-3 right-3 text-secondary font-technical-mono text-technical-mono select-none">+</span>
+<span class="absolute bottom-3 left-3 text-secondary font-technical-mono text-technical-mono select-none">+</span>
+<!-- Slate Header Strip -->
+<div class="bg-surface-container-low px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center w-6 h-6 bg-secondary text-on-secondary font-technical-mono text-technical-mono font-bold">★</span>
+<span class="font-technical-mono text-technical-mono text-secondary tracking-widest uppercase">CHAMPION DIRECTORIAL CONCEPT — LOCKED &amp; APPROVED</span>
+</div>
+<div class="flex items-center gap-space-md font-technical-mono text-technical-mono text-outline">
+<span>APERTURE: 2.39:1 ANAMORPHIC</span>
+<span>•</span>
+<span class="text-on-surface-variant">SCENE REF: EXT. ARABIAN DESERT / DAWN</span>
+<span>•</span>
+<span class="text-primary font-bold">ROLL 01</span>
+</div>
+</div>
+<!-- Main Masterpiece Content Layout: Hero Frame + Narrative Script Deck -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-0">
+<!-- Cinematic Visual Widescreen Preview (7 Cols) -->
+<div class="xl:col-span-7 relative min-h-[460px] flex items-center justify-center overflow-hidden bg-surface-container-highest">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Cinematic ultra wide 2.39:1 shot of a black Rolls-Royce Ghost parked in the hyper-still Empty Quarter desert at dawn. In extreme foreground macro, an amber crystal perfume bottle of Sarmad stands on the hood, perfectly stationary with a single unbroken water droplet reflecting the quiet sky while an atmospheric muted dust storm churns in the far desert background without disturbing the vehicle. Deep chiaroscuro, warm champagne gold backlight, cinematic film grain, 70mm tone." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBC46SiJbtmpUAeM_L8qWqUMNoFbVVBrfERq1GK7og4Mq8d5zPwL-AWaJBbKvp2iU_lbNOSibT2nkGVpolH8HpuoaVS3BZ04Vg8vq3LWtnjoeCKL5VGpdck4gmlu5jYdSPSuTR3i8PGYjg0RDtzngWi2GSEEYDbJzLtHYVDc7bBonW-5rjMkKUft7rItFV90VtC13PB9jafSfBSuw0i3wOaj4ySgRNBhzjE4JREipwlwzUYXa1ymTLN')"></div>
+<!-- Subtle Dark Editorial Vignette -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/60"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Filmic Screen Overlays -->
+<div class="absolute top-space-md right-space-md flex flex-col gap-1 font-technical-mono text-technical-mono text-on-surface/80 bg-surface-container-lowest/80 backdrop-blur-md p-space-xs">
+<span>REC [●] 24.00 FPS</span>
+<span>SHUTTER: 1/48</span>
+<span>KODAK VISION3 500T</span>
+</div>
+<!-- Bottom Visual Legend -->
+<div class="absolute bottom-space-md right-space-md left-space-md flex items-end justify-between text-on-surface">
+<div class="flex flex-col gap-0.5">
+<span class="font-technical-mono text-technical-mono text-secondary">LOOKBOOK KEYFRAME A-01</span>
+<span class="font-headline-sm text-headline-sm text-primary drop-shadow-md">هدوء الأعماق: قطرة الماء والريح الصامتة</span>
+</div>
+<div class="px-space-sm py-1 bg-surface-container-high/90 text-primary font-technical-mono text-technical-mono">
+              ANAMORPHIC PROJECTION
+            </div>
+</div>
+</div>
+<!-- Editorial Concept Folio (5 Cols) -->
+<div class="xl:col-span-5 p-space-lg flex flex-col justify-between gap-space-lg bg-surface-container-lowest">
+<div class="flex flex-col gap-space-md">
+<!-- Concept Tagline & Super-Title -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-technical-mono text-technical-mono text-secondary uppercase tracking-widest">THE BIG IDEA / الفكرة الكبرى</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-semibold">
+                صدى السكون
+              </h2>
+<span class="font-technical-mono text-technical-mono text-outline">ECHOES OF ABSOLUTE STILLNESS</span>
+</div>
+<!-- Campaign Theme & Tagline -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">الشعار والحبكة الإعلانية</span>
+<p class="font-headline-md text-headline-md text-primary leading-tight font-normal">
+                «حين يصمت العالم، يتحدث سرمد.»
+              </p>
+</div>
+<!-- The Narrative Hook -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">الخطاف السردي (The Narrative Hook)</span>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                عاصفة رملية صامتة تتحرك في مرآة رولس رويس دون أن تهز قطرة ماء موضوعة فوق زجاجة عطر سرمد المستقرة فوق مقدمة المركبة. تباين عنيف بين سكون الداخل وضجيج الفناء الخارجي.
+              </p>
+</div>
+<!-- Key Message Block -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">الرسالة الجوهرية (Key Message)</span>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                السيادة الحقيقية لا تحتاج إلى صوت؛ إنها أثرٌ نقيّ يبقى في الذاكرة بعد أن يرحل الجميع ويصمت الحاضرون.
+              </p>
+</div>
+</div>
+<!-- Concept Attributes Metatags -->
+<div class="pt-space-md bg-surface-container-low/50 p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-technical-mono text-technical-mono text-outline">
+<span>SEMANTIC DENSITY</span>
+<span class="text-secondary">HIGH CHIAROSCURO</span>
+</div>
+<div class="flex flex-wrap gap-space-xs font-technical-mono text-technical-mono">
+<span class="px-space-xs py-0.5 bg-surface-container-high text-primary">LUXURY SILENCE</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-on-surface">V12 HERITAGE</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-secondary">AMBER ABSOLUTE</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-outline">ROYAL PATRONAGE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LATERAL CREATIVE MATRIX (Side-by-Side Alternate Directions) -->
+<section class="w-full px-gutter-desktop py-space-lg bg-surface">
+<div class="flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex flex-wrap items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-technical-mono text-technical-mono text-secondary">
+<span>COMPARATIVE MATRIX</span>
+<span>/</span>
+<span>مصفوفة الخيارات الإبداعية المتولدة</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-medium">
+            مقارنة المسارات الجانبية الثلاثة
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            قارن بين زوايا التناول السينمائي المشتقة من محركات التفكير الجانبي قبل الانتقال لتطوير السيناريو.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-technical-mono text-technical-mono text-outline">CALIBRATION RANGE:</span>
+<span class="px-space-sm py-1 bg-surface-container-low font-technical-mono text-technical-mono text-primary">3 DISTINCT TENSIONS</span>
+</div>
+</div>
+<!-- 3-Column Comparative Bento Deck -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md items-stretch">
+<!-- CARD 1: DIRECTION A -->
+<div class="group relative flex flex-col justify-between bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-md shadow-md">
+<div class="flex flex-col gap-space-md">
+<!-- Card Meta Top -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-technical-mono text-technical-mono text-outline">
+<span>DIR 01</span>
+<span>•</span>
+<span class="text-on-surface">المسار (أ)</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-highest font-technical-mono text-technical-mono text-outline">OPPOSITE</span>
+</div>
+<!-- Direction Media Preview -->
+<div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container-lowest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="Moody architectural interior of a minimalist brutalist villa in Muscat at twilight. Empty obsidian glass and polished marble surfaces reflect the fleeting shadow and silhouette of an unseen passing figure. An exquisite glass perfume flacon stands alone beside an ultra-clean rearview mirror reflecting golden dunes under moonlight. Deep shadows, cold bronze tones, quiet luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdYk5nHW55y16bBMbo-2FOBKdv-A71kTRpmSxqnxTHYasNw-1Gx4-3eluPgBrYGQ8Fp3LFLtacWV7BIC3WGTBNTLnXne6wVRrSIlXLMx5wg6qXLA4FuCItfBbqYY5pXS-Tkabm2DAh03Y4TQZtETZYwU5dMj6i55WV827daBRtCYaSamBpQT2k7Q-J63545IWoHVNcxxwl59uqtoSY4fU2Sl9ElFKOCZLxyUihq_OgzmttRPbtBYyy')"></div>
+<div class="absolute inset-0 bg-surface-container-lowest/30"></div>
+<div class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface-container-lowest/90 font-technical-mono text-technical-mono text-outline">
+                TENSION: INVISIBILITY
+              </div>
+</div>
+<!-- Title & Engine Tag -->
+<div class="flex flex-col gap-1">
+<span class="font-technical-mono text-technical-mono text-secondary">محرك التفكير العكسي (Opposite Thinking)</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-medium">الظل والسراب</h4>
+<span class="font-label-sm text-label-sm text-outline">THE ABSENT PROTAGONIST</span>
+</div>
+<!-- Narrative Premise -->
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              التركيز التام على اختفاء البطل بدلاً من ظهوره. لا نرى سائق السيارة ولا مستخدم العطر إطلاقاً، بل نكتشف هيبتهما من خلال ردات فعل العالم المحيط: انحناء حراس البوابات، انعكاسات الزجاج المعماري، وأثر الرائحة الباقي في المقعد الجلدي المصقول.
+            </p>
+<!-- Metrics Matrix Indicator -->
+<div class="bg-surface-container p-space-sm flex flex-col gap-space-xs">
+<div class="flex justify-between font-technical-mono text-technical-mono text-outline">
+<span>MYSTERY FACTOR</span>
+<span class="text-primary">88%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary/70 w-[88%]"></div>
+</div>
+</div>
+</div>
+<!-- Select Trigger -->
+<div class="pt-space-md mt-space-md">
+<button class="w-full py-space-xs px-space-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>تبديل واختيار هذا المسار</span>
+</button>
+</div>
+</div>
+<!-- CARD 2: DIRECTION B (SELECTED CHAMPION) -->
+<div class="relative flex flex-col justify-between bg-surface-container-high p-space-md shadow-2xl ring-1 ring-secondary/30">
+<!-- Selection Ribbon -->
+<div class="absolute -top-3 right-6 px-space-sm py-0.5 bg-secondary text-on-secondary font-technical-mono text-technical-mono font-bold tracking-wider uppercase">
+            SELECTED CHAMPION • الفكرة المعتمدة
+          </div>
+<div class="flex flex-col gap-space-md">
+<!-- Card Meta Top -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-xs font-technical-mono text-technical-mono text-secondary">
+<span>DIR 02</span>
+<span>•</span>
+<span class="font-bold">المسار (ب) - المعتمد</span>
+</div>
+<span class="px-space-xs py-0.5 bg-secondary/20 font-technical-mono text-technical-mono text-secondary font-bold">ANALOGY</span>
+</div>
+<!-- Direction Media Preview -->
+<div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container-lowest">
+<div class="w-full h-full bg-cover bg-center" data-alt="Macro cinematic composition matching the quiet luxury of Rolls-Royce craftsmanship. Mechanical close-up of a precision V12 engine component blending seamlessly into the golden liquid amber droplets inside the perfume atomizer of Sarmad. In the background, dramatic dawn desert horizons in ultra-fine 35mm grain with warm incandescent lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAT3WwDNakj_gDT7rZrvxHt9LZhLpaxR7Hs9Ha8BjbOFHBuHmxsn-ps0cai3m8IMO42GCve2rzHSDwmSph_OtLlQmzSoQvQAd4y7GQEeRTjpds1klr_QYGBJs-AsL5WnaKj6z_4YfA3jaJGBr71Gf9KtUmPKI5e4ZkB5rpZiTFqLF1qfMo_q_5B1oHTeXZ6U5LnSrJQK-hlOTclWp-tsOKnf-isDRIn2Qi7MPHVpl9Pu14_bweXkhed')"></div>
+<div class="absolute inset-0 bg-surface-container-lowest/20"></div>
+<div class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-secondary text-on-secondary font-technical-mono text-technical-mono font-bold">
+                TENSION: STILL RESILIENCE
+              </div>
+</div>
+<!-- Title & Engine Tag -->
+<div class="flex flex-col gap-1">
+<span class="font-technical-mono text-technical-mono text-secondary">محرك التناظر والتشبيه (Analogies Engine)</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold">صدى السكون</h4>
+<span class="font-label-sm text-label-sm text-outline">HARMONIC PARALLELISM</span>
+</div>
+<!-- Narrative Premise -->
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              تشبيه هندسي وفلسفي مباشر بين صمت محرك V12 الأسطوري لسيارة رولس رويس وصمت النوتات العميقة لعطر سرمد. كلاهما لا يصرخ لجذب الانتباه، لكن حضورهما يعيد ضبط إيقاع المكان والزمان بوقار ملكي ثابت.
+            </p>
+<!-- Metrics Matrix Indicator -->
+<div class="bg-surface-container-lowest p-space-sm flex flex-col gap-space-xs">
+<div class="flex justify-between font-technical-mono text-technical-mono text-secondary">
+<span>EMOTIONAL RESONANCE</span>
+<span class="font-bold">96%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary w-[96%]"></div>
+</div>
+</div>
+</div>
+<!-- Active State Block -->
+<div class="pt-space-md mt-space-md">
+<div class="w-full py-space-xs px-space-md bg-secondary text-on-secondary font-body-sm text-body-sm font-semibold flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>المسار قيد التنفيذ والتحضير</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: DIRECTION C -->
+<div class="group relative flex flex-col justify-between bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-md shadow-md">
+<div class="flex flex-col gap-space-md">
+<!-- Card Meta Top -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-technical-mono text-technical-mono text-outline">
+<span>DIR 03</span>
+<span>•</span>
+<span class="text-on-surface">المسار (ج)</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-highest font-technical-mono text-technical-mono text-outline">REVERSAL</span>
+</div>
+<!-- Direction Media Preview -->
+<div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container-lowest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="High-speed phantom 1000fps cinematic frame capturing a single breath exhaled into cold early dawn air across sand ripples. Fine golden dust particles suspended motionless in air around the iconic Spirit of Ecstasy ornament. Hyper-detailed fluid dynamics of perfume mist crystallizing against a dark luxury automotive backdrop." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiD4rqc1QR6vt4-cyA55ll5UyU5FtOX913jeRLMXlwFjOr0oRR5F_mN_ChNJUbg1mcEABQrtINhM_xADgjWBofjMBmL_Hu96lxknrL4wO58E5KcmVtJcMyHHSltUuLMtng5h8mH7lJmZcDXeKWzLvYRqaeGd_hElPtY8J49oFPEMbkRcxpzi_wheyiPE_ItYAkwUOurZm09wxwO9WVQrqu-yZO2CT6c7G0J4cpXb9nCOYtnjUj0uZ4')"></div>
+<div class="absolute inset-0 bg-surface-container-lowest/30"></div>
+<div class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface-container-lowest/90 font-technical-mono text-technical-mono text-outline">
+                TENSION: HYPER-CHRONO
+              </div>
+</div>
+<!-- Title & Engine Tag -->
+<div class="flex flex-col gap-1">
+<span class="font-technical-mono text-technical-mono text-secondary">محرك قلب القيود (Constraint Reversal)</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-medium">كسر الزمن</h4>
+<span class="font-label-sm text-label-sm text-outline">CHRONOS SUSPENSION</span>
+</div>
+<!-- Narrative Premise -->
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              تصوير الإعلان بالكامل بحركة فائقة البطء (1000 إطار/ثانية) لثلاث ثوانٍ حقيقية فقط تمثل شهيقاً واحداً للبطل لحظة ملامسة العطر لعنقه في قلب الصحراء، ممتدة على دقيقة سينمائية ساحرة ومجردة.
+            </p>
+<!-- Metrics Matrix Indicator -->
+<div class="bg-surface-container p-space-sm flex flex-col gap-space-xs">
+<div class="flex justify-between font-technical-mono text-technical-mono text-outline">
+<span>TEMPORAL TENSION</span>
+<span class="text-primary">91%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary/70 w-[91%]"></div>
+</div>
+</div>
+</div>
+<!-- Select Trigger -->
+<div class="pt-space-md mt-space-md">
+<button class="w-full py-space-xs px-space-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>تبديل واختيار هذا المسار</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CREATIVE RADAR & TENSION ANALYTICS -->
+<section class="w-full px-gutter-desktop py-space-lg bg-surface">
+<div class="p-space-lg bg-surface-container-low flex flex-col lg:flex-row items-center justify-between gap-space-lg shadow-lg">
+<div class="flex flex-col gap-space-xs max-w-xl">
+<div class="flex items-center gap-space-xs font-technical-mono text-technical-mono text-secondary">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span>CREATIVE ENGINE SYNTHESIS REPORT</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-medium">تحليل التوتر الإبداعي بين العطر والسيارة</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          تم دمج خاصية العزل الصوتي الفائق لمقصورة رولس رويس مع ثبات قاعدة العطر (العود الملكي واللبان الحوجري). التوليد استبعد 14 نمطاً مكرراً من الإعلانات الخليجية المعتادة لضمان أصالة المفهوم.
+        </p>
+</div>
+<!-- Live Inline SVG Diagnostic Metric Widget -->
+<div class="flex items-center gap-space-lg">
+<div class="flex flex-col items-center">
+<div class="relative w-20 h-20 flex items-center justify-center">
+<svg class="w-20 h-20 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="butt" stroke-width="3"></path>
+</svg>
+<span class="absolute font-technical-mono text-technical-mono text-primary font-bold">92%</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1">الأصالة الفنية</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="relative w-20 h-20 flex items-center justify-center">
+<svg class="w-20 h-20 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="84, 100" stroke-linecap="butt" stroke-width="3"></path>
+</svg>
+<span class="absolute font-technical-mono text-technical-mono text-primary font-bold">84%</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1">الربط التجاري</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="relative w-20 h-20 flex items-center justify-center">
+<svg class="w-20 h-20 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="98, 100" stroke-linecap="butt" stroke-width="3"></path>
+</svg>
+<span class="absolute font-technical-mono text-technical-mono text-primary font-bold">98%</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1">الجدوى السينمائية</span>
+</div>
+</div>
+</div>
+</section>
+<!-- REFINEMENT SLIDERS & PROMPT INJECTION DRAWER -->
+<section class="w-full px-gutter-desktop py-space-md bg-surface">
+<div class="bg-surface-container-lowest p-space-md flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-technical-mono text-technical-mono text-secondary">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>PROMPT SYNTHESIS CONSOLE</span>
+</div>
+<div class="font-technical-mono text-technical-mono text-outline">
+          PROMPT WEIGHT: 1.45 • SEED: 940219
+        </div>
+</div>
+<!-- Editorial Script Input Preview -->
+<div class="relative bg-surface-container-high p-space-md flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-outline uppercase font-semibold">تعديل التوجيه الإبداعي المباشر (Directorial Prompt Override)</label>
+<p class="font-headline-sm text-headline-sm text-primary font-normal leading-relaxed">
+          "ركز على التضاد الشديد بين سكون مقصورة السيارة وعصف الطبيعة الرملية، مع إبراز انعكاسات الزجاج الذهبي لعطر سرمد عند أول شعاع فجر في الربع الخالي."
+        </p>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-technical-mono text-technical-mono">
+<span>ARABIC LUXURY LEXICON: ACTIVE</span>
+<span>TOKENS: 248 / 1024</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CREATIVE DIRECTOR CONTROL TOOLBAR (Directorial Execution Actions) -->
+<section class="sticky bottom-10 z-40 w-full px-gutter-desktop py-space-sm bg-surface-container-lowest/95 backdrop-blur-2xl shadow-[0_-8px_30px_rgba(0,0,0,0.7)]">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Secondary Refinement Controls -->
+<div class="flex flex-wrap items-center gap-space-sm w-full md:w-auto">
+<!-- Button: Regenerate -->
+<button class="px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-all flex items-center gap-space-xs" id="regen-btn">
+<span class="material-symbols-outlined text-secondary text-[18px]">autorenew</span>
+<span>إعادة التوليد بنبرة أكثر جرأة</span>
+</button>
+<!-- Button: Adjust Tension & Engines -->
+<button class="px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-all flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[18px]">instant_mix</span>
+<span>تعديل المعاملات الإبداعية</span>
+</button>
+<!-- Button: Lock & Confirm Track -->
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-container-highest text-primary font-body-sm text-body-sm transition-all flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock</span>
+<span>تثبيت المسار واعتماد الفكرة</span>
+</button>
+</div>
+<!-- Primary Grand Directorial Action Button -->
+<div class="w-full md:w-auto">
+<a class="w-full md:w-auto px-space-lg py-space-sm bg-primary-container hover:bg-primary text-on-primary-container font-headline-sm text-headline-sm font-semibold tracking-tight transition-all shadow-xl hover:shadow-primary-container/20 flex items-center justify-center gap-space-sm group" data-path="cinematic-script" href="#">
+<span>بناء وتوليد السيناريو السينمائي الكامل</span>
+<span class="material-symbols-outlined text-[22px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for Regenerate feedback
+  document.getElementById('regen-btn')?.addEventListener('click', function() {
+    const icon = this.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.classList.add('animate-spin');
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+      }, 1200);
+    }
+  });
+</script></main></div><footer class="fixed bottom-0 inset-x-0 h-10 z-50 bg-surface-container-lowest/95 backdrop-blur-md flex items-center justify-between px-gutter shadow-[0_-4px_20px_rgba(0,0,0,0.6)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-technical-mono text-technical-mono text-primary"><span class="text-outline">TC</span><span>00:02:14:18</span></div><div class="hidden sm:flex items-center gap-space-xs font-technical-mono text-technical-mono text-on-surface-variant"><span class="text-outline">FPS</span><span>24.00</span></div><div class="hidden md:flex items-center gap-space-xs font-technical-mono text-technical-mono text-on-surface-variant"><span class="text-outline">COLOR</span><span>P3-D65 / REC.709</span></div><div class="hidden lg:flex items-center gap-space-xs font-technical-mono text-technical-mono text-outline"><span>GRAIN: 35MM 400T</span></div></div><div class="flex items-center gap-space-md font-technical-mono text-technical-mono"><div class="flex items-center gap-space-xs text-outline"><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span><span>ATELIER SYNCHRONIZED</span></div><nav class="flex items-center gap-space-sm" data-active-classes="text-primary font-bold"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="export-pdf" href="#">PDF</a><span class="text-outline">/</span><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="export-deck" href="#">DECK</a><span class="text-outline">/</span><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="export-script" href="#">FINAL DRAFT</a></nav></div></footer></body></html>

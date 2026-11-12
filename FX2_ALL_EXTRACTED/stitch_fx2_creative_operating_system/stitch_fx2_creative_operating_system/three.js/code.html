@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_35 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_35" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_35');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js Interactive 3D Obsidian Basalt Weighted Cup
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || 360;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+camera.position.set(0, 1.8, 4.2);
+camera.lookAt(0, 0, 0);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.3;
+container.appendChild(renderer.domElement);
+
+// Lighting setup - Luxury Dark Amber Atmosphere (FX2 Theme)
+const ambientLight = new THREE.AmbientLight(0xfff1e6, 0.9);
+scene.add(ambientLight);
+
+const dirLight = new THREE.DirectionalLight(0xffffff, 1.4);
+dirLight.position.set(4, 6, 4);
+scene.add(dirLight);
+
+const rimLight = new THREE.DirectionalLight(0xf23827, 2.2); // FX2 Brand Accent
+rimLight.position.set(-4, -2, -3);
+scene.add(rimLight);
+
+const amberGlow = new THREE.PointLight(0xff7a33, 2.5, 10);
+amberGlow.position.set(0, 2.2, 0.5);
+scene.add(amberGlow);
+
+// Cup Root Group
+const cupGroup = new THREE.Group();
+scene.add(cupGroup);
+
+// Materials
+// Basalt dark matte textured ceramic
+const basaltMaterial = new THREE.MeshStandardMaterial({
+  color: 0x161719,
+  roughness: 0.65,
+  metalness: 0.15,
+});
+
+// Inner dark ceramic wall
+const innerBasaltMaterial = new THREE.MeshStandardMaterial({
+  color: 0x101113,
+  roughness: 0.35,
+  metalness: 0.1,
+});
+
+// Steaming Amber Liquid / Dark Roast Coffee Core
+const coffeeMaterial = new THREE.MeshStandardMaterial({
+  color: 0x1a0f0a,
+  roughness: 0.15,
+  metalness: 0.05,
+});
+
+// Accent Rim Ring (Precision milled chamfer)
+const accentRingMaterial = new THREE.MeshStandardMaterial({
+  color: 0xf23827,
+  roughness: 0.3,
+  metalness: 0.8,
+});
+
+// --- Constructing the 3D Obsidian Cup ---
+// 1. Outer Body (Slightly tapered architectural cylinder)
+const outerBodyGeo = new THREE.CylinderGeometry(1.08, 0.88, 1.7, 48, 1, true);
+const outerBody = new THREE.Mesh(outerBodyGeo, basaltMaterial);
+cupGroup.add(outerBody);
+
+// 2. Thick Weighted Base (High mass 450g foundation)
+const baseGeo = new THREE.CylinderGeometry(0.88, 0.82, 0.35, 48);
+const baseMesh = new THREE.Mesh(baseGeo, basaltMaterial);
+baseMesh.position.y = -0.85;
+cupGroup.add(baseMesh);
+
+// 3. Inner Chamber Cavity
+const innerCavityGeo = new THREE.CylinderGeometry(0.96, 0.78, 1.5, 48, 1, true);
+const innerCavity = new THREE.Mesh(innerCavityGeo, innerBasaltMaterial);
+innerCavity.position.y = 0.05;
+cupGroup.add(innerCavity);
+
+// 4. Smooth Rounded Lip / Rim
+const rimTorusGeo = new THREE.TorusGeometry(1.02, 0.06, 16, 48);
+const rimMesh = new THREE.Mesh(rimTorusGeo, basaltMaterial);
+rimMesh.rotation.x = Math.PI / 2;
+rimMesh.position.y = 0.85;
+cupGroup.add(rimMesh);
+
+// 5. Subtle Branding Accent Inlay Band near base
+const accentBandGeo = new THREE.CylinderGeometry(0.89, 0.87, 0.04, 48);
+const accentBand = new THREE.Mesh(accentBandGeo, accentRingMaterial);
+accentBand.position.y = -0.65;
+cupGroup.add(accentBand);
+
+// 6. Coffee Liquid Level (68°C thermal core)
+const liquidGeo = new THREE.CylinderGeometry(0.92, 0.92, 0.02, 48);
+const liquidMesh = new THREE.Mesh(liquidGeo, coffeeMaterial);
+liquidMesh.position.y = 0.45;
+cupGroup.add(liquidMesh);
+
+// 7. Base Weighted Ring Chamfer
+const baseChamferGeo = new THREE.TorusGeometry(0.82, 0.04, 16, 48);
+const baseChamfer = new THREE.Mesh(baseChamferGeo, basaltMaterial);
+baseChamfer.rotation.x = Math.PI / 2;
+baseChamfer.position.y = -1.02;
+cupGroup.add(baseChamfer);
+
+// Delicate Thermal Steam Particles
+const particleCount = 28;
+const steamGeo = new THREE.BufferGeometry();
+const steamPositions = new Float32Array(particleCount * 3);
+const steamVelocities = [];
+
+for (let i = 0; i < particleCount; i++) {
+  const angle = Math.random() * Math.PI * 2;
+  const radius = Math.random() * 0.45;
+  steamPositions[i * 3] = Math.cos(angle) * radius;
+  steamPositions[i * 3 + 1] = 0.5 + Math.random() * 0.9;
+  steamPositions[i * 3 + 2] = Math.sin(angle) * radius;
+  steamVelocities.push({
+    y: 0.008 + Math.random() * 0.012,
+    drift: (Math.random() - 0.5) * 0.003
+  });
+}
+steamGeo.setAttribute('position', new THREE.BufferAttribute(steamPositions, 3));
+
+const steamMat = new THREE.PointsMaterial({
+  color: 0xffaa66,
+  size: 0.065,
+  transparent: true,
+  opacity: 0.45,
+  blending: THREE.AdditiveBlending
+});
+const steamParticles = new THREE.Points(steamGeo, steamMat);
+cupGroup.add(steamParticles);
+
+// Gentle default tilt
+cupGroup.rotation.x = 0.22;
+cupGroup.rotation.y = -0.35;
+
+// Touch & Mouse Interaction (Rotate 3D model)
+let isDragging = false;
+let previousPointerPosition = { x: 0, y: 0 };
+let targetRotX = 0.22;
+let targetRotY = -0.35;
+let autoRotate = true;
+
+const onPointerDown = (e) => {
+  isDragging = true;
+  autoRotate = false;
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  previousPointerPosition = { x: clientX, y: clientY };
+};
+
+const onPointerMove = (e) => {
+  if (!isDragging) return;
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  const deltaX = clientX - previousPointerPosition.x;
+  const deltaY = clientY - previousPointerPosition.y;
+
+  targetRotY += deltaX * 0.012;
+  targetRotX = Math.max(-0.4, Math.min(0.8, targetRotX + deltaY * 0.01));
+
+  previousPointerPosition = { x: clientX, y: clientY };
+};
+
+const onPointerUp = () => {
+  isDragging = false;
+  // Slowly resume subtle auto-rotation after 2 seconds
+  setTimeout(() => {
+    if (!isDragging) autoRotate = true;
+  }, 2000);
+};
+
+container.addEventListener('mousedown', onPointerDown);
+window.addEventListener('mousemove', onPointerMove);
+window.addEventListener('mouseup', onPointerUp);
+
+container.addEventListener('touchstart', onPointerDown, { passive: true });
+window.addEventListener('touchmove', onPointerMove, { passive: true });
+window.addEventListener('touchend', onPointerUp);
+
+// Responsive Resizing
+const handleResize = () => {
+  const newWidth = container.clientWidth || window.innerWidth;
+  const newHeight = container.clientHeight || 360;
+  camera.aspect = newWidth / newHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(newWidth, newHeight);
+};
+window.addEventListener('resize', handleResize);
+
+// Animation Loop
+let clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
+
+  if (autoRotate) {
+    targetRotY += 0.007;
+  }
+
+  // Smooth damping interpolation
+  cupGroup.rotation.y += (targetRotY - cupGroup.rotation.y) * 0.08;
+  cupGroup.rotation.x += (targetRotX - cupGroup.rotation.x) * 0.08;
+
+  // Floating micro-breathing effect
+  cupGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.04;
+
+  // Animate steam particles rising
+  const pos = steamParticles.geometry.attributes.position.array;
+  for (let i = 0; i < particleCount; i++) {
+    pos[i * 3 + 1] += steamVelocities[i].y;
+    pos[i * 3] += steamVelocities[i].drift;
+    if (pos[i * 3 + 1] > 1.6) {
+      pos[i * 3 + 1] = 0.5;
+      const angle = Math.random() * Math.PI * 2;
+      const radius = Math.random() * 0.35;
+      pos[i * 3] = Math.cos(angle) * radius;
+      pos[i * 3 + 2] = Math.sin(angle) * radius;
+    }
+  }
+  steamParticles.geometry.attributes.position.needsUpdate = true;
+
+  // Pulsing amber thermal glow
+  amberGlow.intensity = 2.2 + Math.sin(elapsedTime * 2.5) * 0.6;
+
+  renderer.render(scene, camera);
+}
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_35 -->
+</body>
+</html>

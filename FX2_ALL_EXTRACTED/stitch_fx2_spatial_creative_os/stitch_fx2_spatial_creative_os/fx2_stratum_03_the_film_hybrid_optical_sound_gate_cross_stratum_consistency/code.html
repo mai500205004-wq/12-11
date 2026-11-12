@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-container":"#2a2a25","outline":"#ad8882","error":"#ffb4ab","surface-container-high":"#292a2c","background":"#121315","on-tertiary":"#31312c","surface-dim":"#121315","on-primary":"#690000","primary-fixed":"#ffdad4","secondary-fixed-dim":"#ffb4a1","inverse-primary":"#bf0904","on-tertiary-fixed":"#1c1c18","on-secondary-container":"#ffa58d","surface-container-low":"#1b1c1e","on-tertiary-fixed-variant":"#474742","tertiary-fixed-dim":"#c9c6c0","tertiary":"#c9c6c0","on-secondary-fixed-variant":"#881f00","surface-container":"#1f2022","surface-container-lowest":"#0d0e10","primary":"#ffb4a8","on-primary-fixed":"#410000","on-error":"#690005","secondary-fixed":"#ffdbd2","on-primary-container":"#5c0000","inverse-surface":"#e3e2e5","on-surface":"#e3e2e5","tertiary-container":"#92918b","secondary-container":"#912100","on-secondary":"#611300","outline-variant":"#5d403b","on-background":"#e3e2e5","tertiary-fixed":"#e5e2db","surface-tint":"#ffb4a8","inverse-on-surface":"#303033","on-primary-fixed-variant":"#930000","on-surface-variant":"#e6bdb7","primary-fixed-dim":"#ffb4a8","primary-container":"#ff5541","surface-container-highest":"#343537","on-error-container":"#ffdad6","on-secondary-fixed":"#3c0800","secondary":"#ffb4a1","surface":"#121315","surface-variant":"#343537","surface-bright":"#38393b","error-container":"#93000a"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-lg":"2rem","space-md":"1rem","margin-lg":"3.5rem","gutter-sm":"0.75rem","space-xl":"2.5rem","margin-sm":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","gutter":"1.25rem","margin":"2rem","space-xs":"0.25rem"},fontFamily:{"headline-sm":["Inter"],"label-sm":["JetBrains Mono"],"display-md-mobile":["Playfair Display"],"headline-md":["Playfair Display"],"label-md":["JetBrains Mono"],"display-md":["Playfair Display"],"body-lg":["Inter"],"code-timecode":["JetBrains Mono"],"body-md":["Inter"],"body-sm":["Inter"],"display-lg":["Playfair Display"],"headline-lg":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-lg":["Inter"]},fontSize:{"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"display-md-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"display-md":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"code-timecode":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_20px_48px_-8px_rgba(0,0,0,0.75)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low/40"><div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface">FX2 STRATA</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Archival Telemetry</span></div></div><div class="px-space-md pt-space-md"><div class="px-space-sm pb-space-xs flex items-center justify-between text-outline"><span class="font-label-sm text-label-sm uppercase tracking-widest">Strata Traversal</span><span class="font-code-timecode text-label-sm text-tertiary">4 LOCI</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-headline-sm"><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stratum-01-light-table" href="#"><span class="flex items-center gap-space-sm font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">filter_frames</span>01 Light Table</span><span class="font-code-timecode text-label-sm text-tertiary">Z: 0.00m</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stratum-02-glass-frames" href="#"><span class="flex items-center gap-space-sm font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">layers</span>02 Glass Frames</span><span class="font-code-timecode text-label-sm text-tertiary">Z: -120.0m</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stratum-03-film-hybrid" href="#"><span class="flex items-center gap-space-sm font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">movie</span>03 Film Hybrid</span><span class="font-code-timecode text-label-sm text-tertiary">Z: -240.0m</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="stratum-04-the-paper" href="#"><span class="flex items-center gap-space-sm font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] text-primary">description</span>04 The Paper</span><span class="font-code-timecode text-label-sm text-primary">-360.00m</span></a></nav></div><div class="px-space-md pt-space-lg"><div class="px-space-sm pb-space-xs flex items-center justify-between text-outline"><span class="font-label-sm text-label-sm uppercase tracking-widest">Inspection Modules</span><span class="font-code-timecode text-label-sm text-outline-variant">SYS-M</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-headline-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="bwf-sync-matrix" href="#"><span class="material-symbols-outlined text-[16px]">grid_view</span>BWF Sync Matrix</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="stem-topology" href="#"><span class="material-symbols-outlined text-[16px]">hub</span>Stem Topology</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="timereference-ledger" href="#"><span class="material-symbols-outlined text-[16px]">receipt_long</span>TimeReference Ledger</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="phase-subframe-drift" href="#"><span class="material-symbols-outlined text-[16px]">graphic_eq</span>Phase &amp; Sub-Frame Drift</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="take-quarantine-vault" href="#"><span class="material-symbols-outlined text-[16px]">shield_lock</span>Take Quarantine Vault</a></nav></div></div><div class="p-space-md bg-surface-container-lowest/80 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm uppercase">Master Ref</span><span class="font-code-timecode text-label-sm text-tertiary-fixed">48.000 kHz</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm uppercase">Pull-Down</span><span class="font-code-timecode text-label-sm text-tertiary-fixed">0.1% NTSC [OFF]</span></div><div class="pt-space-xs flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline">CLOCK: SMPTE ST 12-1</span><span class="h-1.5 w-1.5 rounded-full bg-primary animate-ping"></span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 z-40 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_20px_48px_-8px_rgba(0,0,0,0.75)] flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Core Engine</span><span class="font-code-timecode text-code-timecode font-semibold tracking-wider text-on-surface">FX2 CORE OS v4.0.2</span></div><div class="h-8 w-px bg-surface-container-highest"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Active Stratum</span><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-label-md text-on-surface">04 The Paper</span><span class="font-code-timecode text-label-sm text-secondary">(-360.00m)</span></div></div><div class="h-8 w-px bg-surface-container-highest"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Master Timecode</span><span class="font-code-timecode text-code-timecode font-semibold text-secondary-fixed tracking-widest">00:00:11:04 NDF</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-high"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">READ-ONLY AUDIT MODE // WRITE FORBIDDEN // REPOSITORY MUTATION LOCKED</span></div><div class="flex items-center gap-space-sm"><button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Audit Log Terminal"><span class="material-symbols-outlined text-[18px]">terminal</span></button><button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Telemetry Notifications"><span class="material-symbols-outlined text-[18px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Telemetry & Spatial Breadcrumb Ribbon -->
+<div class="w-full bg-surface-container-lowest px-margin py-space-md shadow-2xl relative overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md relative z-10">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-high">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Ascent Vector Active</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-timecode text-code-timecode text-secondary">
+<span class="text-tertiary">VECTOR:</span>
+<span>S04 [-360.00m]</span>
+<span class="material-symbols-outlined text-[16px] text-primary">north</span>
+<span class="text-on-surface font-bold">S03 [-240.00m]</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest hidden sm:block"></div>
+<div class="font-code-timecode text-label-md text-tertiary">
+          ANCHOR: <span class="text-on-surface font-semibold">COMMIT 9a2f1c8</span> [TK-03 APPROVED]
+        </div>
+<div class="font-code-timecode text-label-md text-outline">
+          VAULT-02: <span class="text-error font-semibold">7d18a4c</span> [TK-04 QUARANTINED]
+        </div>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm uppercase tracking-wider">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded bg-error-container/40 text-error">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>REPO MUTATION LOCKED</span>
+</div>
+<div class="px-space-md py-space-xs rounded bg-surface-container text-tertiary">
+<span>NO TAPE ENGRAVE // AUDIT-ONLY</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Page Header / Title Stage -->
+<div class="w-full bg-surface-container-low px-margin py-space-xl relative">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm text-outline font-label-sm text-label-sm uppercase tracking-widest">
+<span>Inspection Module</span>
+<span class="text-surface-container-highest">/</span>
+<span class="text-primary font-semibold">Cross-Stratum Consistency Audit</span>
+<span class="text-surface-container-highest">/</span>
+<span>EBU Tech 3285 v2 × 35mm Optical Photometry</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-baseline justify-between gap-space-md mt-space-xs">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Stratum 03 The Film Hybrid: Optical Sound Gate Audit
+          </h1>
+<p class="font-body-md text-body-md text-outline max-w-3xl mt-space-xs">
+            Ascending cross-verification of Kodak Vision3 5219 emulsion dyes, halation, and highlight roll-off parameters against Stratum 04 Broadcast Wave Format (BWF) stems A1–A4 under absolute vacuum boundary constraints.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<div class="bg-surface-container-high px-space-md py-space-sm rounded text-right">
+<span class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">Sound Gate Integrity</span>
+<span class="font-code-timecode text-headline-sm text-primary">100.0% COHERENT</span>
+</div>
+<div class="bg-surface-container-high px-space-md py-space-sm rounded text-right">
+<span class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">SMPTE Cal</span>
+<span class="font-code-timecode text-headline-sm text-secondary">24.00 fps NDF</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Layout -->
+<div class="w-full px-margin py-space-xl flex flex-col gap-space-xl max-w-7xl mx-auto">
+<!-- SECTION 01: OPTICAL-TO-ACOUSTIC PHYSICS & VACUUM CONTINUITY AUDIT -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">SEC_01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Optical-to-Acoustic Physics &amp; Vacuum Continuity</h2>
+</div>
+<span class="px-space-sm py-space-xs rounded bg-surface-container text-tertiary font-label-sm text-label-sm uppercase">Boundary Confirmed</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Visual Pipeline Boundary Card -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Optical Domain (Visual Only)</span>
+<span class="font-code-timecode text-label-sm text-outline">KODAK 5219</span>
+</div>
+<div class="h-44 w-full bg-cover bg-center rounded relative overflow-hidden" data-alt="Macro 35mm optical celluloid film strip cross section showing silver halide grain clusters, deep red anti-halation backing layer, and cyan soundtrack track under precision laboratory optical gate illumination with amber rim lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCE_jqqrPXUirgt0JDXiEyaV2DFIgsgdHhNt2_2NwkLVfIbDl1CvqWrRPkALtC3Ip9w5MfVaNBNCYhNBfP-TJC9zZ3DLIv_SblPuHyrq5d9M4-dLIbLTNwhr3J48J3Y2gS8H1fG9EuhHklucWhWKjFScIupc_CT2dyzBaF4fqVeDZLBRLFjQ-uQk2IeUFn3CabmPDn-BloH3Z0TBCuBZsdAeRfctSYak7fnGvf186b4')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between font-code-timecode text-label-sm text-on-surface">
+<span class="bg-surface-container-lowest/80 px-space-xs py-0.5 rounded">Halation Index: 1.84</span>
+<span class="bg-surface-container-lowest/80 px-space-xs py-0.5 rounded">Rem-Jet Dispersal: Complete</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs text-body-sm text-on-surface-variant pt-space-xs">
+<p>Visual halation, dye migration, and emulsion grain structures are <strong class="text-on-surface font-semibold">strictly visual phenomena</strong>. They occupy no acoustic bandwidth and exert 0.00 Hz phase/frequency modulation on optical sound gate sensors.</p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container px-space-md py-space-sm rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Modulation Cross-Leak</span>
+<span class="font-code-timecode text-label-sm text-primary font-bold">0.000 dB [ISOLATED]</span>
+</div>
+</div>
+<!-- Vacuum Acoustic Laws Card -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Acoustic Boundary Specification</span>
+<span class="font-code-timecode text-label-sm text-error bg-error-container/20 px-space-xs py-0.5 rounded">VACUUM: 0 Pa</span>
+</div>
+<!-- In-line Acoustic Pressure vs Transmission SVG Chart -->
+<div class="bg-surface-container-lowest p-space-md rounded flex flex-col gap-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>VACUUM PRESSURE GRADIENT</span>
+<span class="font-code-timecode text-primary">TRANSMISSION VELOCITY: 0 m/s</span>
+</div>
+<svg class="w-full h-16 text-primary" fill="none" viewbox="0 0 500 60">
+<path d="M 0 50 L 150 50 L 180 50 L 220 50 L 350 50 L 500 50" stroke="currentColor" stroke-dasharray="4 2" stroke-width="2"></path>
+<path d="M 0 50 Q 80 48, 120 15 T 160 50 L 500 50" fill="none" opacity="0.3" stroke="#ffb4a1" stroke-width="1.5"></path>
+<circle cx="140" cy="50" fill="currentColor" r="4"></circle>
+<text class="font-label-sm" fill="#e3e2e5" font-size="9" x="145" y="42">EXTERNAL SPACE: 0 Pa (ABSOLUTE SILENCE)</text>
+<line stroke="#5d403b" stroke-width="1" x1="280" x2="280" y1="10" y2="55"></line>
+<text class="font-label-sm" fill="#ffb4a1" font-size="9" x="290" y="24">SUIT INTERIOR ONLY (A1/A2/A3)</text>
+</svg>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm text-body-sm text-on-surface-variant">
+<div class="bg-surface-container p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-secondary uppercase block mb-1">PROHIBITED (PHYSICAL FALLACY)</span>
+                External explosion roar, thruster swoosh through open vacuum, cinematic space-wind, analog optical gate hiss introduced as aesthetic 'grain-sound'.
+              </div>
+<div class="bg-surface-container p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface uppercase block mb-1">PERMITTED (CONFINED TRANSDUCTION)</span>
+                Vance's suit-coupled helmet mic, physiological lung biosensors, direct mechanical bone-conduction of thruster solenoids through hull metal.
+              </div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>RULE ENFORCEMENT: ASTROPHYSICAL RIGOR v1.08</span>
+<span class="text-primary font-code-timecode font-semibold">ALL 0 Pa BREACHES SQUELCHED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02: SOUND GATE CLASSIFICATION TAXONOMY (SHOT-LEVEL NOT Z-LEVEL) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">SEC_02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Shot-Level Sound Taxonomy (Non-Z-Linear)</h2>
+</div>
+<span class="px-space-sm py-space-xs rounded bg-surface-container-high text-secondary font-label-sm text-label-sm">REJECT Z-DEPTH FALLACY</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-lg flex flex-col gap-space-md">
+<div class="p-space-md bg-surface-container rounded flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">warning</span>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="font-semibold text-primary">Taxonomic Clarification:</strong> Sound is never categorized as 'memory' or 'reality' by camera Z-depth coordinate. Stratum depth (-240.00m) is an archival stratum coordinate, not an acoustic envelope qualifier.
+            </p>
+</div>
+<span class="font-code-timecode text-label-sm text-tertiary whitespace-nowrap">METADATA DRIVEN</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Category Alpha -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-primary font-bold">CAT ALPHA</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm">DIRECT</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Objective Transducer</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+                Direct acoustic capture from Vance's internal helmet capsule microphone and respiration biosensors. Physical acoustic waves vibrating contained air mass.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between font-code-timecode text-label-sm text-outline">
+<span>LOCUS: SUIT_AIR</span>
+<span class="text-on-surface">STEM A1/A2</span>
+</div>
+</div>
+<!-- Category Beta -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-secondary font-bold">CAT BETA</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm">SOLID</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Mechanical Conduction</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+                Structure-borne micro-vents conducted mechanically via airframe titanium and Vance's suit chassis. Contact transmission through solids, zero open air.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between font-code-timecode text-label-sm text-outline">
+<span>LOCUS: STRUT_MET</span>
+<span class="text-on-surface">STEM A3</span>
+</div>
+</div>
+<!-- Category Gamma -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-tertiary font-bold">CAT GAMMA</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm">RF_DEMOD</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">RF Demodulation</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+                Electromagnetic carrier reception converted to electrical audio inside Vance's receiver transceiver. Features light-speed delay and synthetic sidetone floors.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between font-code-timecode text-label-sm text-outline">
+<span>LOCUS: RX_CIRCUIT</span>
+<span class="text-on-surface">STEM A4</span>
+</div>
+</div>
+<!-- Category Delta -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-error font-bold">CAT DELTA</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm">META_TAG</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Subjective / Memory</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+                Classified strictly via explicit take metadata payload flags (e.g. <span class="font-code-timecode text-label-sm text-primary">TK03_SPATIAL_VANCE_MEM</span>). Completely independent of spatial Z-coordinates.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between font-code-timecode text-label-sm text-outline">
+<span>LOCUS: PSYCHE_TAG</span>
+<span class="text-on-surface">DISCRETE BUS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: 4-STEM CONTINUITY & HARDWARE OFFSET MATRIX (A1-A4) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">SEC_03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">4-Stem Continuity &amp; Hardware Offset Matrix (A1–A4)</h2>
+</div>
+<div class="font-code-timecode text-label-sm text-tertiary">
+          FORMAT: EBU Tech 3285 v2 BWF // 24-bit 48.000 kHz
+        </div>
+</div>
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high font-label-sm text-label-sm uppercase tracking-wider text-outline">
+<tr>
+<th class="py-space-sm px-space-md">Stem ID</th>
+<th class="py-space-sm px-space-md">Channel Label &amp; Physics Designation</th>
+<th class="py-space-sm px-space-md">Acoustic Anchor</th>
+<th class="py-space-sm px-space-md text-right">Loudness Target</th>
+<th class="py-space-sm px-space-md text-right">Hardware Offset</th>
+<th class="py-space-sm px-space-md text-center">Audit Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Stem A1 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-code-timecode text-label-md text-primary font-bold">STEM A1</td>
+<td class="py-space-md px-space-md">
+<div class="font-headline-sm text-on-surface">Vance Principal Helmet Transducer</div>
+<div class="font-label-sm text-label-sm text-outline">Primary vocal diaphragm within hermetic pressure ring</div>
+</td>
+<td class="py-space-md px-space-md font-code-timecode text-label-sm text-secondary">435 Hz Formant</td>
+<td class="py-space-md px-space-md text-right font-code-timecode text-label-sm text-on-surface">-28.4 LUFS</td>
+<td class="py-space-md px-space-md text-right font-code-timecode text-label-sm text-tertiary">0 smp (Master Ref)</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-sm py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">LOCKED</span>
+</td>
+</tr>
+<!-- Stem A2 -->
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-code-timecode text-label-md text-primary font-bold">STEM A2</td>
+<td class="py-space-md px-space-md">
+<div class="font-headline-sm text-on-surface">Internal Respiration &amp; Biosensors</div>
+<div class="font-label-sm text-label-sm text-outline">Glottal airflow and piezoelectric chest band pulse telemetry</div>
+</td>
+<td class="py-space-md px-space-md font-code-timecode text-label-sm text-secondary">1.2 Hz Pulse / Lung</td>
+<td class="py-space-md px-space-md text-right font-code-timecode text-label-sm text-on-surface">-34.1 LUFS</td>
+<td class="py-space-md px-space-md text-right font-code-timecode text-label-sm text-tertiary">0 smp</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-sm py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">LOCKED</span>
+</td>
+</tr>
+<!-- Stem A3 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-code-timecode text-label-md text-secondary font-bold">STEM A3</td>
+<td class="py-space-md px-space-md">
+<div class="font-headline-sm text-secondary">Closed-Loop Thruster Micro-Vents</div>
+<div class="font-label-sm text-label-sm text-outline">Hull chassis direct mechanical transducer conduction</div>
+</td>
+<td class="py-space-md px-space-md font-code-timecode text-label-sm text-secondary">880 Hz Solenoid Impulse</td>
+<td class="py-space-md px-space-md text-right font-code-timecode text-label-sm text-on-surface">-22.0 LUFS</td>
+<td class="py-space-md px-space-md text-right font-code-timecode text-label-sm text-secondary font-bold">+12 smp (+0.25ms)</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-sm py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">UNSHIFTED (PRESERVED)</span>
+</td>
+</tr>
+<!-- Stem A4 -->
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-code-timecode text-label-md text-primary font-bold">STEM A4</td>
+<td class="py-space-md px-space-md">
+<div class="font-headline-sm text-on-surface">Radio Delay Carrier &amp; Void Tone</div>
+<div class="font-label-sm text-label-sm text-outline">RF Demodulator sub-synth bed with 35 Hz high-pass optical barrier</div>
+</td>
+<td class="py-space-md px-space-md font-code-timecode text-label-sm text-secondary">28 Hz Sub-Synth Bed</td>
+<td class="py-space-md px-space-md text-right font-code-timecode text-label-sm text-on-surface">-38.5 LUFS</td>
+<td class="py-space-md px-space-md text-right font-code-timecode text-label-sm text-tertiary">0 smp</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-sm py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">LOCKED</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Special Preservation Footnote -->
+<div class="p-space-md bg-surface-container-high flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">info</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-secondary">A3 Hardware Offset Integrity Protocol:</strong> The +12 sample (+0.25 ms / +0.006 frames) delay originates from physical hull transducer cable inductance. Zero silent re-alignment permitted; phase assessment flagged as awaiting sound supervisor mix audit.
+            </span>
+</div>
+<span class="font-code-timecode text-label-sm text-secondary font-bold whitespace-nowrap">PHASE LOCK VERIFIED</span>
+</div>
+</div>
+</section>
+<!-- SECTION 04: DIALOGUE BOUNDARY RECONCILIATION & SIMULATION DISAMBIGUATION -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">SEC_04</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Dialogue Boundary Reconciliation &amp; Simulation Disambiguation</h2>
+</div>
+<span class="px-space-sm py-space-xs rounded bg-error-container/30 text-error font-label-sm text-label-sm uppercase">Simulated Until DAW Confirmed</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Canonical Anchor Take 03 Card -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-lg shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-bold">Canonical Anchor: Take 03</span>
+</div>
+<span class="font-code-timecode text-label-sm text-secondary">COMMIT 9a2f1c8</span>
+</div>
+<!-- Dialogue Block Quote -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs">Spoken Delivery (Vance)</div>
+<p class="font-headline-md text-headline-md italic text-on-surface">
+                “We aren’t falling through space. We’re falling through memory.”
+              </p>
+</div>
+<!-- Timeline Frame Inspection Grid -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Dialogue In</span>
+<span class="font-code-timecode text-headline-sm text-primary mt-1">FR 1,068</span>
+<span class="font-code-timecode text-label-sm text-tertiary">00:00:44:12 NDF</span>
+<span class="font-code-timecode text-label-sm text-outline">SMP 2,136,000</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Last Audible Frame</span>
+<span class="font-code-timecode text-headline-sm text-secondary mt-1">FR 1,219</span>
+<span class="font-code-timecode text-label-sm text-tertiary">00:00:50:19 NDF</span>
+<span class="font-code-timecode text-label-sm text-outline">SMP 2,438,000</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Hard Boundary Out</span>
+<span class="font-code-timecode text-headline-sm text-error mt-1">FR 1,220</span>
+<span class="font-code-timecode text-label-sm text-tertiary">00:00:50:20 NDF</span>
+<span class="font-code-timecode text-label-sm text-outline">SMP 2,440,000</span>
+</div>
+</div>
+<!-- Pre-Dialogue Vacuum Spec -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high rounded font-code-timecode text-label-sm">
+<span class="text-outline">PRE-DIALOGUE PURE VACUUM FLOOR:</span>
+<span class="text-on-surface font-bold">800 FRAMES (00:00:00:00 → 00:00:33:08)</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-error font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">hourglass_empty</span>
+              MARKED AS SIMULATION-ONLY PENDING PHYSICAL WAVEFORM INSPECTION &amp; DAW CONFIRMATION
+            </span>
+</div>
+</div>
+<!-- Quarantined Take 04 & Sub-Vault 02 Card -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-lg shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-bold">Cold Quarantine Isolation</span>
+</div>
+<span class="font-code-timecode text-label-sm text-outline">SUB-VAULT 02</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-code-timecode text-label-sm text-error">TAKE 04 DRAFT 04.3</span>
+<span class="font-code-timecode text-label-sm text-outline">HASH: 7d18a4c</span>
+</div>
+<p class="font-body-md text-body-md italic text-outline line-through mt-space-xs">
+                “We aren’t descending through the dark. The dark is descending through us.”
+              </p>
+<div class="mt-space-xs font-label-sm text-label-sm text-error uppercase">
+                REASON: NON-CANONICAL SCRIPT MUTATION DETECTED
+              </div>
+</div>
+<div class="space-y-space-xs text-body-sm text-outline">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5">check_circle</span>
+<span>Isolated physically from S03 optical soundgate prints.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5">check_circle</span>
+<span>Reversion hash verified against Stratum 04 archival paper ledger.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5">check_circle</span>
+<span>Optical dye mask permanently barred from emulsion printing.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container rounded text-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Quarantine Status: SECURE // ZERO REPO LEAK</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05: OPTICAL SOUND GATE FAILURE CONDITIONS & VIOLATION MATRIX -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">SEC_05</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Failure Vector &amp; Violation Intercept Matrix</h2>
+</div>
+<span class="font-code-timecode text-label-sm text-primary">5 VECTORS MONITORED // 0 BREACHES</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Failure Vector 01 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-outline">FV-01</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">CLEAN / ENFORCED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Vacuum Acoustic Transmission</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+              External acoustic propagation through open void. Intercepted: System immediately attenuates any exterior sound generator to $-\infty\text{ dB}$ at $0\text{ Pa}$.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-timecode text-label-sm text-secondary">THRESHOLD: 0 Pa ABSOLUTE</div>
+</div>
+<!-- Failure Vector 02 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-outline">FV-02</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">CLEAN / REJECTED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Halation / Grain Audio Bleed</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+              Visual halation or 5219 celluloid grain mapped to audio high-frequency distortion, flutter, or tape noise. Intercepted: Audio stems decoupled from visual shaders.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-timecode text-label-sm text-secondary">MODULATION: NULL (0.00%)</div>
+</div>
+<!-- Failure Vector 03 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-outline">FV-03</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">CLEAN / PROTECTED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Stem A3 Silent Offset Re-alignment</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+              Unilateral zero-shift of Stem A3's +12-sample hardware delay. Intercepted: Offset locked in BWF chunk manifest; alterations trigger pipeline checksum error.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-timecode text-label-sm text-secondary">OFFSET: +12 SAMPLES LOCKED</div>
+</div>
+<!-- Failure Vector 04 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-outline">FV-04</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">CLEAN / BARRED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Visual Emulation Law Violation</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+              Attempting to bypass acoustic physics under the guise of Technicolor 3-strip or film LUT nostalgia. Intercepted: Stylistic visual look never overrides physics.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-timecode text-label-sm text-secondary">PHYSICS PRECEDENCE: TIER 0</div>
+</div>
+<!-- Failure Vector 05 -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-outline">FV-05</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">CLEAN / AMENDMENT LOGGED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Simulated Decay as Physical Proof</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+              Treating algorithmic dialogue reverb tail decay (Fr 1219) as physically measured audio evidence before DAW inspection. Intercepted: Tagged simulation-only.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-timecode text-label-sm text-secondary">VERIFICATION: DAW PENDING</div>
+</div>
+<!-- System Architecture Summary Box -->
+<div class="bg-surface-container-high p-space-lg rounded-xl shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Fail-Safe Gate Enforcement</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Zero-Tolerance Optical Gate</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+              All 5 failure vectors are monitored in real time during telemetry ascent. If any node breaches acoustic continuity, optical burn-in is instantly aborted.
+            </p>
+</div>
+<div class="mt-space-md flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-tertiary">DAEMON: S03_AUDIT_V4</span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 06: CROSS-STRATUM AUDIT SCORECARD & DOCUMENTATION-ONLY CORRECTION LEDGER -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">SEC_06</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Cross-Stratum Scorecard &amp; Documentation-Only Ledger</h2>
+</div>
+<span class="font-code-timecode text-label-sm text-secondary">7/7 VERIFICATION CHECKPOINTS PASS</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Verification Scorecard Checkpoints -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-lg shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-semibold">Audit Checkpoints (S01 → S04)</span>
+<span class="font-label-sm text-label-sm text-outline">STATUS</span>
+</div>
+<div class="space-y-space-xs">
+<!-- CS-01 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">CS-01</span>
+<span class="font-body-sm text-body-sm text-on-surface">Optical-to-Acoustic Independence</span>
+</div>
+<span class="font-code-timecode text-label-sm text-primary font-bold">PASS</span>
+</div>
+<!-- CS-02 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">CS-02</span>
+<span class="font-body-sm text-body-sm text-on-surface">Vacuum Acoustic Boundary (0 Pa External Squelch)</span>
+</div>
+<span class="font-code-timecode text-label-sm text-primary font-bold">PASS</span>
+</div>
+<!-- CS-03 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">CS-03</span>
+<span class="font-body-sm text-body-sm text-on-surface">Shot-Level Sound Taxonomy (Alpha–Delta Categories)</span>
+</div>
+<span class="font-code-timecode text-label-sm text-primary font-bold">PASS</span>
+</div>
+<!-- CS-04 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">CS-04</span>
+<span class="font-body-sm text-body-sm text-on-surface">Stems A1–A4 Complete Preservation &amp; Target LUFS</span>
+</div>
+<span class="font-code-timecode text-label-sm text-primary font-bold">PASS</span>
+</div>
+<!-- CS-05 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">CS-05</span>
+<span class="font-body-sm text-body-sm text-on-surface">Stem A3 +12 Sample Retention (Unshifted)</span>
+</div>
+<span class="font-code-timecode text-label-sm text-primary font-bold">PASS</span>
+</div>
+<!-- CS-06 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">CS-06</span>
+<span class="font-body-sm text-body-sm text-on-surface">Dialogue Boundary Simulation Flag (Fr 1068 / 1219 / 1220)</span>
+</div>
+<span class="font-code-timecode text-label-sm text-primary font-bold">PASS</span>
+</div>
+<!-- CS-07 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-label-sm text-primary font-bold">CS-07</span>
+<span class="font-body-sm text-body-sm text-on-surface">Design Approval vs Physical Audio Validation Decoupling</span>
+</div>
+<span class="font-code-timecode text-label-sm text-primary font-bold">PASS</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>CORE REGULATORY COMPLIANCE: 100%</span>
+<span class="text-secondary font-code-timecode">EBU-R128 / SMPTE ST 12-1</span>
+</div>
+</div>
+<!-- Documentation-Only Correction Ledger -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-lg shadow-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Documentation-Only Ledger</span>
+<span class="font-code-timecode text-label-sm text-outline">NO CODE RE-OPEN</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+              The following items require archival commentary amendments in the manifest schema rather than creative pipeline alterations:
+            </p>
+<div class="space-y-space-sm mt-space-xs">
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<span class="font-code-timecode text-label-sm text-secondary font-bold">NOTE 01 // A3 Mix-Pass Supervisor Flag</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Annotate Stem A3 (+12 samples) as pending final acoustic sign-off during final dub stage. Keep samples intact.
+                </span>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<span class="font-code-timecode text-label-sm text-secondary font-bold">NOTE 02 // Simulation Boundary Marker</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Append disclaimer to Frame 1,219 tail annotation explicitly identifying waveform as render-simulated.
+                </span>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<span class="font-code-timecode text-label-sm text-secondary font-bold">NOTE 03 // Sub-Vault 02 Cross-Reference</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Register quarantine receipt for Take 04 (Commit 7d18a4c) in S04 manuscript ledger appendix.
+                </span>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-high rounded text-center font-code-timecode text-label-sm text-on-surface">
+            IMMUTABLE REPOSITORY STATE ENFORCED
+          </div>
+</div>
+</div>
+</section>
+<!-- Global Inspection Actions & Navigation Dock -->
+<div class="w-full bg-surface-container-lowest p-space-lg rounded-xl shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-md py-space-sm rounded bg-surface-container font-label-md text-label-md text-outline">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>AUDIT CHECK-SUM: 9a2f1c8-S03-STABLE</span>
+</div>
+<div class="hidden md:flex items-center gap-space-xs font-code-timecode text-label-sm text-tertiary">
+<span>LATENCY: 0.00ms</span>
+<span>•</span>
+<span>NODES: 4 STRATA SYNCED</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all shadow-md" id="exportManifestBtn">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Manifest (.json)</span>
+</button>
+<a class="flex items-center gap-space-xs px-space-md py-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all shadow-md" href="#">
+<span class="material-symbols-outlined text-[16px]">south</span>
+<span>Descend S04 (-360m)</span>
+</a>
+<a class="flex items-center gap-space-xs px-space-md py-space-sm rounded bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-lg" href="#">
+<span class="material-symbols-outlined text-[16px]">north</span>
+<span>Ascend S02 (-120m)</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Micro-Interactions Script -->
+<script>
+    document.getElementById('exportManifestBtn')?.addEventListener('click', function() {
+      const manifest = {
+        audit_version: "4.0.2",
+        stratum: "03 The Film Hybrid",
+        z_coordinate: "-240.00m",
+        ascent_vector: "S04_TO_S03",
+        canonical_anchor: "Commit 9a2f1c8 (Take 03)",
+        quarantine_hash: "7d18a4c (Take 04 Sub-Vault 02)",
+        audio_stems: {
+          A1: { name: "Vance Principal Helmet", offset_samples: 0, lufs: -28.4 },
+          A2: { name: "Internal Respiration", offset_samples: 0, lufs: -34.1 },
+          A3: { name: "Closed-Loop Thruster Micro-Vents", offset_samples: 12, lufs: -22.0, status: "UNSHIFTED_PRESERVED" },
+          A4: { name: "Radio Delay Carrier Wave", offset_samples: 0, lufs: -38.5, hpf_hz: 35 }
+        },
+        dialogue_timeline: {
+          take: "Take 03",
+          dialogue_in_frame: 1068,
+          last_audible_frame: 1219,
+          hard_out_frame: 1220,
+          pre_dialogue_vacuum_frames: 800,
+          status: "SIMULATION_ONLY_PENDING_DAW_VERIFICATION"
+        },
+        checkpoints: {
+          CS_01: "PASS",
+          CS_02: "PASS",
+          CS_03: "PASS",
+          CS_04: "PASS",
+          CS_05: "PASS",
+          CS_06: "PASS",
+          CS_07: "PASS"
+        },
+        audit_timestamp: new Date().toISOString()
+      };
+      
+      const blob = new Blob([JSON.stringify(manifest, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = "FX2_S03_Optical_Sound_Gate_Audit_Manifest.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</div></main></div></body></html>
