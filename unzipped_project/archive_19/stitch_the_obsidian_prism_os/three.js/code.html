@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_2 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_2" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_2');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js interactive 3D particle constellation and chromatic dispersion prism core
+const container = document.getElementById('three-prism-container') || document.body;
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 2000);
+camera.position.set(0, 0, 800);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+container.appendChild(renderer.domElement);
+
+// Constellation Nodes in Background (Layer 1)
+const nodeCount = 90;
+const nodeGeometry = new THREE.BufferGeometry();
+const nodePositions = new Float32Array(nodeCount * 3);
+const nodeSizes = new Float32Array(nodeCount);
+
+for (let i = 0; i < nodeCount; i++) {
+  nodePositions[i * 3] = (Math.random() - 0.5) * 1600;
+  nodePositions[i * 3 + 1] = (Math.random() - 0.5) * 900;
+  nodePositions[i * 3 + 2] = -400 + (Math.random() - 0.5) * 600; // Deep z-axis
+  nodeSizes[i] = Math.random() * 3.5 + 1.5;
+}
+nodeGeometry.setAttribute('position', new THREE.BufferAttribute(nodePositions, 3));
+nodeGeometry.setAttribute('size', new THREE.BufferAttribute(nodeSizes, 1));
+
+const nodeMaterial = new THREE.PointsMaterial({
+  color: 0x94a3b8,
+  size: 3,
+  transparent: true,
+  opacity: 0.38,
+  blending: THREE.AdditiveBlending
+});
+const pointCloud = new THREE.Points(nodeGeometry, nodeMaterial);
+scene.add(pointCloud);
+
+// Geometric Optical Prism Monolith in Midground
+const prismGroup = new THREE.Group();
+const prismGeo = new THREE.ConeGeometry(80, 160, 3);
+const wireGeo = new THREE.WireframeGeometry(prismGeo);
+const wireMat = new THREE.LineBasicMaterial({
+  color: 0xf23827,
+  transparent: true,
+  opacity: 0.45,
+  linewidth: 1.5
+});
+const prismWire = new THREE.LineSegments(wireGeo, wireMat);
+prismGroup.add(prismWire);
+
+// Inner crystalline core
+const innerCoreGeo = new THREE.OctahedronGeometry(45, 0);
+const coreMat = new THREE.MeshPhongMaterial({
+  color: 0x12141a,
+  emissive: 0x3d0d08,
+  specular: 0xf23827,
+  shininess: 90,
+  wireframe: false,
+  transparent: true,
+  opacity: 0.82
+});
+const innerCore = new THREE.Mesh(innerCoreGeo, coreMat);
+prismGroup.add(innerCore);
+
+// Ambient and kinetic light beams
+const redLight = new THREE.PointLight(0xf23827, 4.5, 900);
+redLight.position.set(0, 0, 100);
+scene.add(redLight);
+
+const ambientLight = new THREE.AmbientLight(0x22242b, 1.2);
+scene.add(ambientLight);
+
+scene.add(prismGroup);
+
+// Interactive mouse inertia
+let mouseX = 0;
+let mouseY = 0;
+let targetX = 0;
+let targetY = 0;
+
+window.addEventListener('mousemove', (e) => {
+  mouseX = (e.clientX - window.innerWidth / 2) * 0.4;
+  mouseY = (e.clientY - window.innerHeight / 2) * 0.4;
+});
+
+// Render loop with spatial camera inertia & oscillation
+let clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
+
+  targetX += (mouseX - targetX) * 0.04;
+  targetY += (mouseY - targetY) * 0.04;
+
+  prismGroup.rotation.y = elapsedTime * 0.3 + (targetX * 0.001);
+  prismGroup.rotation.x = Math.sin(elapsedTime * 0.4) * 0.15 + (targetY * 0.001);
+  innerCore.rotation.y = -elapsedTime * 0.5;
+
+  camera.position.x = targetX * 0.3;
+  camera.position.y = -targetY * 0.3;
+  camera.lookAt(0, 0, 0);
+
+  // Subtle constellation breathing
+  pointCloud.rotation.y = elapsedTime * 0.015;
+  pointCloud.rotation.z = Math.sin(elapsedTime * 0.02) * 0.05;
+
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_2 -->
+</body>
+</html>

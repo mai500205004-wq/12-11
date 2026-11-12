@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#31312c", "on-secondary": "#611300", "tertiary-fixed-dim": "#c9c6c0", "inverse-primary": "#bf0904", "tertiary": "#c9c6c0", "surface-bright": "#38393b", "primary-fixed": "#ffdad4", "primary": "#ffb4a8", "surface-container-low": "#1b1c1e", "on-tertiary-fixed-variant": "#474742", "surface-variant": "#343537", "on-tertiary-fixed": "#1c1c18", "primary-fixed-dim": "#ffb4a8", "error": "#ffb4ab", "secondary-container": "#912100", "surface-dim": "#121315", "on-primary-fixed": "#410000", "background": "#121315", "secondary": "#ffb4a1", "error-container": "#93000a", "tertiary-container": "#92918b", "on-error": "#690005", "surface": "#121315", "outline-variant": "#5d403b", "inverse-surface": "#e3e2e5", "outline": "#ad8882", "surface-tint": "#ffb4a8", "on-secondary-fixed": "#3c0800", "on-secondary-container": "#ffa58d", "on-surface-variant": "#e6bdb7", "on-tertiary-container": "#2a2a25", "on-surface": "#e3e2e5", "surface-container-lowest": "#0d0e10", "on-error-container": "#ffdad6", "on-background": "#e3e2e5", "surface-container": "#1f2022", "on-primary": "#690000", "on-secondary-fixed-variant": "#881f00", "primary-container": "#ff5541", "secondary-fixed": "#ffdbd2", "on-primary-fixed-variant": "#930000", "inverse-on-surface": "#303033", "surface-container-highest": "#343537", "on-primary-container": "#5c0000", "secondary-fixed-dim": "#ffb4a1", "tertiary-fixed": "#e5e2db", "surface-container-high": "#292a2c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.25rem", "margin": "2rem", "gutter-sm": "0.75rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-lg": "2rem", "margin-lg": "3.5rem", "space-xl": "2.5rem", "margin-sm": "1rem", "space-md": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "display-md": [ "Playfair Display" ], "label-sm": [ "JetBrains Mono" ], "body-lg": [ "Inter" ], "display-md-mobile": [ "Playfair Display" ], "headline-sm": [ "Inter" ], "code-timecode": [ "JetBrains Mono" ], "headline-md": [ "Playfair Display" ], "display-lg-mobile": [ "Playfair Display" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "display-lg": [ "Playfair Display" ], "label-md": [ "JetBrains Mono" ], "headline-lg": [ "Playfair Display" ], "label-lg": [ "Inter" ] }, "fontSize": { "display-md": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-md-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "code-timecode": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "display-lg": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "label-lg": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-24 px-space-md flex flex-col justify-center bg-surface-container-low"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-headline-sm text-headline-sm text-on-surface tracking-widest uppercase">FX2 // STRATUM</span></div><div class="flex items-center justify-between mt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">VAULT CONTROL DAEMON</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container-highest text-primary font-bold">SEC-L5</span></div></div><div class="px-space-md pt-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest block mb-space-xs">STRATA SELECTION</span><div class="flex flex-col gap-0.5"><div class="px-space-sm py-1.5 rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors cursor-pointer"><span class="font-label-sm text-label-sm">01 Light Table</span><span class="font-label-sm text-label-sm opacity-50">+12.0m</span></div><div class="px-space-sm py-1.5 rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors cursor-pointer"><span class="font-label-sm text-label-sm">02 Glass Frames</span><span class="font-label-sm text-label-sm opacity-50">+00.0m</span></div><div class="px-space-sm py-1.5 rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors cursor-pointer"><span class="font-label-sm text-label-sm">03 Film Hybrid</span><span class="font-label-sm text-label-sm opacity-50">-140.0m</span></div><div class="px-space-sm py-1.5 rounded bg-surface-container-high text-primary flex items-center justify-between"><span class="font-label-sm text-label-sm font-semibold">04 The Paper / Sub-02</span><span class="font-label-sm text-label-sm">-360.0m</span></div></div></div><div class="px-space-md pt-space-lg"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest block mb-space-xs">INSPECTION MODULES</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a aria-current="page" class="px-space-sm py-space-sm transition-colors flex items-center justify-between bg-primary-container text-on-primary-container font-semibold rounded" data-path="take-quarantine-vault" href="#"><span class="font-label-md text-label-md">Take Quarantine Vault</span><span class="font-label-sm text-label-sm px-1 py-0.2 bg-secondary-container text-on-secondary-container rounded">AUDIT</span></a><a class="px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-between" data-path="bwf-sync-matrix" href="#"><span class="font-label-md text-label-md">BWF Sync Matrix</span><span class="font-label-sm text-label-sm opacity-60">192k</span></a><a class="px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-between" data-path="timereference-ledger" href="#"><span class="font-label-md text-label-md">TimeReference Ledger</span><span class="font-label-sm text-label-sm opacity-60">LTC/SMPTE</span></a><a class="px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-between" data-path="phase-subframe-drift" href="#"><span class="font-label-md text-label-md">Phase &amp; Sub-Frame Drift</span><span class="font-label-sm text-label-sm opacity-60">±0.02ms</span></a><a class="px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-between" data-path="cryptographic-isolation-daemon" href="#"><span class="font-label-md text-label-md">Crypto Isolation Daemon</span><span class="font-label-sm text-label-sm opacity-60">ED25519</span></a></nav></div></div><div class="p-space-md bg-surface-container-lowest"><div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SUB-VAULT 02 STATUS</span><span class="font-label-sm text-label-sm text-primary font-bold">ENGAGED</span></div><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">INTEGRITY CHECK</span><span class="font-label-sm text-label-sm text-on-surface font-code-timecode">SHA3-512 OK</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-space-xs"><div class="bg-primary-container h-full w-full"></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-24 bg-surface-container-lowest/90 backdrop-blur-xl z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-7 bg-secondary-container px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm tracking-widest text-on-secondary-container font-semibold uppercase">⚠ READ-ONLY AUDIT MODE // WRITE FORBIDDEN // REPOSITORY MUTATION LOCKED</span></div><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-on-secondary-container tracking-wider font-code-timecode">EPOCH-LOCK: ACTIVE</span><span class="font-label-sm text-label-sm text-on-secondary-container tracking-wider font-code-timecode">SIG: VERIFIED</span></div></div><div class="h-[68px] w-full px-space-md flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">STRATUM ELEVATION</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-display-md">Z = -360.00m <span class="font-body-sm text-body-sm text-on-surface-variant font-label-sm">Sub-Vault 02</span></span></div><div class="h-8 w-px bg-surface-container-highest"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SMPTE TIMECODE</span><span class="font-code-timecode text-code-timecode text-primary font-bold">00:00:11:04 NDF</span></div><div class="h-8 w-px bg-surface-container-highest"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">LEDGER ANCHOR</span><span class="font-code-timecode text-code-timecode text-on-surface">9a2f1c8 <span class="font-label-sm text-label-sm text-tertiary">[Tk-03]</span></span></div></div><div class="flex items-center gap-space-md"><div class="px-space-sm py-1 rounded bg-surface-container-high flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="font-label-sm text-label-sm text-on-surface uppercase">QUARANTINE ENFORCED</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- FORENSIC INCIDENT & GATE BANNER -->
+<div class="px-gutter-lg pt-space-lg pb-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-space-sm">
+<!-- Breadcrumb and Epoch telemetry -->
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="text-primary font-bold">GATE EXT-05</span>
+<span>//</span>
+<span>STRATUM 04 (THE PAPER)</span>
+<span>//</span>
+<span class="text-tertiary">SUB-VAULT 02: CRYPTOGRAPHIC ISOLATION AUDIT</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant">
+<span>COORDINATE: <strong class="text-on-surface font-code-timecode">[Z = -360.00m]</strong></span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-highest"></span>
+<span>CLOCK: <strong class="text-on-surface font-code-timecode">2028-10-31T23:59:14.082Z</strong></span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="text-secondary font-bold">MUTATION-LOCKED</span>
+</div>
+</div>
+<!-- Severe Status Alert Banner -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-md">GATE EXT-05 AUDIT VERDICT: PENDING</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">HARDWARE BLOCKED</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm">SPECIFICATION RATIFIED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Cryptographic Isolation protocol specifications are fully mathematically ratified, but <strong class="text-secondary">Host Isolation Hardware is physically unmounted</strong>. Read-only presentation enforced. Zero repository mutations permitted.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-end lg:self-center shrink-0">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CANONICAL ANCHOR</span>
+<span class="font-code-timecode text-code-timecode text-primary">Tk-03 :: 9a2f1c8</span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">ISOLATION CLASS</span>
+<span class="font-label-md text-label-md text-tertiary">SEVERED QUARANTINE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN FORENSIC AUDIT BODY -->
+<div class="px-gutter-lg py-space-lg flex flex-col gap-space-xl">
+<!-- SECTION 01: QUARANTINED RECORDS DUAL INSPECTOR -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">01 // QUARANTINED RECORDS DUAL INSPECTOR</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">COMPUTED PARTITION MATRIX</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>CANONICAL IMMUTABILITY MANDATE ACTIVE</span>
+</div>
+</div>
+<!-- Comparative Dual Inspection Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- CARD 04.A -->
+<div class="p-space-lg rounded bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-md">
+<!-- Card Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">RECORD 04.A</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">BRANCH: <code class="text-tertiary font-code-timecode">adr-alt-04</code></span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-bold">UNVERIFIED CLAIM</span>
+</div>
+<!-- Commit Pointer and Origin -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">GIT REF POINTER</span>
+<span class="font-code-timecode text-code-timecode text-primary">commit 4e91b2c</span>
+</div>
+<!-- Provenance Metadata Block -->
+<div class="flex flex-col gap-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">HISTORICAL PROVENANCE</span>
+<div class="p-space-sm rounded bg-surface-container text-on-surface font-body-sm text-body-sm">
+                Stage 4 ADR Pickup Session B (2028-10-24). Documented actor claims ADR room re-record pass with director presence.
+              </div>
+</div>
+<!-- Dialogue Mutation Box -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary font-bold">QUARANTINED MUTATION DIALOGUE</span>
+<span class="text-on-surface-variant">SEVERED CUTSHEET</span>
+</div>
+<div class="p-space-md rounded bg-surface-container-highest flex flex-col gap-1">
+<p class="font-display-md text-headline-sm text-on-surface-variant line-through opacity-80 italic">
+                  “We aren't descending through the dark. We're descending through what remains.”
+                </p>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary mt-1">
+<span class="material-symbols-outlined text-[13px]">block</span>
+<span>UNAUTHORIZED DRAFT VARIANT — SEVERED FROM CONCEPT B</span>
+</div>
+</div>
+</div>
+<!-- Forensic Integrity Diagnostic -->
+<div class="flex flex-col gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between py-1 bg-surface-container-lowest px-space-sm rounded">
+<span>LINEAGE STATUS:</span>
+<span class="text-on-surface">Severed from Concept B / Isolated from cutsheets</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-lowest px-space-sm rounded">
+<span>DISK INTEGRITY:</span>
+<span class="text-secondary">Short ref only — NO 256-bit hash verified</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-lowest px-space-sm rounded">
+<span>MXF AUDIO PAYLOAD:</span>
+<span class="text-tertiary">Blob unattached (Orphan ref in branch index)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">ISOLATION LOCK ID: #Q4A-4E91</span>
+<span class="text-primary font-code-timecode">[STATUS: STRICT QUARANTINE]</span>
+</div>
+</div>
+<!-- CARD 04.B -->
+<div class="p-space-lg rounded bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-md">
+<!-- Card Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">RECORD 04.B</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">BRANCH: <code class="text-tertiary font-code-timecode">scratch-mutation-02</code></span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-bold">UNVERIFIED CLAIM</span>
+</div>
+<!-- Commit Pointer and Origin -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">GIT REF POINTER</span>
+<span class="font-code-timecode text-code-timecode text-primary">commit 7d18a4c</span>
+</div>
+<!-- Provenance Metadata Block -->
+<div class="flex flex-col gap-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">HISTORICAL PROVENANCE</span>
+<div class="p-space-sm rounded bg-surface-container text-on-surface font-body-sm text-body-sm">
+                Sound Editor personal scratchpad cadence test (2028-10-29). Synthesizer bed timing run with temporary voice guide.
+              </div>
+</div>
+<!-- Dialogue Mutation Box -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary font-bold">QUARANTINED MUTATION DIALOGUE</span>
+<span class="text-on-surface-variant">ZERO PARENTAGE</span>
+</div>
+<div class="p-space-md rounded bg-surface-container-highest flex flex-col gap-1">
+<p class="font-display-md text-headline-sm text-on-surface-variant line-through opacity-80 italic">
+                  “We aren't descending through the dark. The dark is descending through us.”
+                </p>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary mt-1">
+<span class="material-symbols-outlined text-[13px]">block</span>
+<span>UNAUTHORIZED DRAFT VARIANT — SCRATCHPAD CADENCE MUTATION</span>
+</div>
+</div>
+</div>
+<!-- Forensic Integrity Diagnostic -->
+<div class="flex flex-col gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between py-1 bg-surface-container-lowest px-space-sm rounded">
+<span>LINEAGE STATUS:</span>
+<span class="text-on-surface">Scratchpad mutation / Zero canonical parentage</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-lowest px-space-sm rounded">
+<span>DISK INTEGRITY:</span>
+<span class="text-secondary">Short ref only — NO crypto signature packet</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-lowest px-space-sm rounded">
+<span>MXF AUDIO PAYLOAD:</span>
+<span class="text-tertiary">Unverified 48kHz guide scratch / Untagged BWF</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">ISOLATION LOCK ID: #Q4B-7D18</span>
+<span class="text-primary font-code-timecode">[STATUS: STRICT QUARANTINE]</span>
+</div>
+</div>
+</div>
+<!-- Invariance Mandate Anchor Callout -->
+<div class="p-space-md rounded bg-surface-container-highest flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container-lowest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">CANONICAL IMMUTABILITY MANDATE // ANCHOR RECORD</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-md">
+              Canonical Take 03: “We aren't falling through space. We're falling through memory.”
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+              Ref Pointer: <code class="text-tertiary font-code-timecode">commit 9a2f1c8</code> • Neither quarantined candidate (04.A or 04.B) may replace, merge with, or alter canonical Take 03.
+            </span>
+</div>
+</div>
+<div class="px-space-md py-space-xs rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider shrink-0 text-center">
+          INVARIANCE ENFORCED
+        </div>
+</div>
+</div>
+<!-- SECTION 02: REQUIRED CORRECTIONS & FORENSIC DISAMBIGUATION MATRIX -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded bg-secondary"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">02 // FORENSIC DISAMBIGUATION MATRIX</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SPECIFICATION vs. PHYSICAL REALITY AUDIT</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">5 CRITICAL VECTOR DELTAS DETECTED</span>
+</div>
+<!-- Disambiguation Data Grid -->
+<div class="flex flex-col gap-space-xs">
+<!-- ROW 01 -->
+<div class="p-space-md rounded bg-surface-container-low grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<div class="md:col-span-3 flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">VECTOR 01</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Short Ref vs. Cryptographic Hash</span>
+</div>
+<div class="md:col-span-4 p-space-sm rounded bg-surface-container font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-on-surface-variant uppercase text-[9px] tracking-wider">Specified UI Representation</span>
+<span class="text-on-surface">Short 7-char Git pointers (<code class="text-tertiary">4e91b2c</code>, <code class="text-tertiary">7d18a4c</code>) displayed in ledger headers.</span>
+</div>
+<div class="md:col-span-5 p-space-sm rounded bg-surface-container-lowest font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-secondary uppercase text-[9px] tracking-wider font-bold">Physical Verification Reality</span>
+<span class="text-on-surface-variant">Short refs are truncated pointers, NOT full SHA-256 or SHA-1 hashes. Zero preimage-resistant hash digests computed from immutable storage blobs on disk.</span>
+</div>
+</div>
+<!-- ROW 02 -->
+<div class="p-space-md rounded bg-surface-container-low grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<div class="md:col-span-3 flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">VECTOR 02</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">UUID vs. SMPTE 330M UMID</span>
+</div>
+<div class="md:col-span-4 p-space-sm rounded bg-surface-container font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-on-surface-variant uppercase text-[9px] tracking-wider">Specified UI Representation</span>
+<span class="text-on-surface">Pseudo-unique string tokens in JSON manifests (<code class="text-tertiary">uuid-v4:91c0...</code>) formatted as identifiers.</span>
+</div>
+<div class="md:col-span-5 p-space-sm rounded bg-surface-container-lowest font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-secondary uppercase text-[9px] tracking-wider font-bold">Physical Verification Reality</span>
+<span class="text-on-surface-variant">A standard UUID is NOT a 32-byte or 64-byte SMPTE 330M Universal Material Identifier (UMID) compliant with broadcast MXF container bitstreams.</span>
+</div>
+</div>
+<!-- ROW 03 -->
+<div class="p-space-md rounded bg-surface-container-low grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<div class="md:col-span-3 flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">VECTOR 03</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">UI Lock Icon vs. OS/Hardware Blocker</span>
+</div>
+<div class="md:col-span-4 p-space-sm rounded bg-surface-container font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-on-surface-variant uppercase text-[9px] tracking-wider">Specified UI Representation</span>
+<span class="text-on-surface">CSS/SVG lock badge <code class="text-tertiary">[LOCKED // READ-ONLY]</code> rendered in browser document tree.</span>
+</div>
+<div class="md:col-span-5 p-space-sm rounded bg-surface-container-lowest font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-secondary uppercase text-[9px] tracking-wider font-bold">Physical Verification Reality</span>
+<span class="text-on-surface-variant">A DOM lock glyph does NOT constitute an enforced OS kernel lock (<code class="text-tertiary">chattr +i</code>) or physical hardware write-diode storage controller.</span>
+</div>
+</div>
+<!-- ROW 04 -->
+<div class="p-space-md rounded bg-surface-container-low grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<div class="md:col-span-3 flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">VECTOR 04</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Metadata Field vs. Asymmetric Signature</span>
+</div>
+<div class="md:col-span-4 p-space-sm rounded bg-surface-container font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-on-surface-variant uppercase text-[9px] tracking-wider">Specified UI Representation</span>
+<span class="text-on-surface">Textual metadata labels: “Approved: Supervising Sound Editor” in visual cards.</span>
+</div>
+<div class="md:col-span-5 p-space-sm rounded bg-surface-container-lowest font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-secondary uppercase text-[9px] tracking-wider font-bold">Physical Verification Reality</span>
+<span class="text-on-surface-variant">A text placeholder is NOT a verified asymmetric cryptographic signature (e.g. Ed25519 or RSA-4096 detached signature block).</span>
+</div>
+</div>
+<!-- ROW 05 -->
+<div class="p-space-md rounded bg-surface-container-low grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<div class="md:col-span-3 flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">VECTOR 05</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Simulated Log vs. Append-Only Ledger</span>
+</div>
+<div class="md:col-span-4 p-space-sm rounded bg-surface-container font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-on-surface-variant uppercase text-[9px] tracking-wider">Specified UI Representation</span>
+<span class="text-on-surface">Client-side audit log rows displayed in mock feed component.</span>
+</div>
+<div class="md:col-span-5 p-space-sm rounded bg-surface-container-lowest font-label-sm text-label-sm flex flex-col gap-0.5">
+<span class="text-secondary uppercase text-[9px] tracking-wider font-bold">Physical Verification Reality</span>
+<span class="text-on-surface-variant">A browser list is NOT an append-only, tamper-evident Merkle-tree ledger anchored to write-once optical/storage media (WORM).</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 03: ISOLATION PROTOCOL CONTROL LEDGER -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded bg-tertiary"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">03 // ISOLATION PROTOCOL CONTROL LEDGER</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">FOUR-TIER EVIDENCE CLASSIFICATION</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary">DESIGNED</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary-fixed">DOCUMENTED</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container">UNVERIFIED</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container">BLOCKED</span>
+</div>
+</div>
+<!-- Master Control Ledger Table -->
+<div class="rounded bg-surface-container-low overflow-hidden shadow-sm">
+<div class="grid grid-cols-12 px-space-md py-space-sm bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<div class="col-span-1">ID</div>
+<div class="col-span-4">CONTROL NAME &amp; SPECIFICATION</div>
+<div class="col-span-5">TECHNICAL IMPLEMENTATION BASELINE</div>
+<div class="col-span-2 text-right">EVIDENCE STATUS</div>
+</div>
+<div class="flex flex-col">
+<!-- 01 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-01</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Canonical &amp; Quarantined Branch Separation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Isolated git branch references for experimental variants</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-tertiary">
+              Branches <code class="text-on-surface">adr-alt-04</code> and <code class="text-on-surface">scratch-mutation-02</code> decoupled from master
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-tertiary-fixed font-label-sm text-label-sm font-bold">DOCUMENTED</span>
+</div>
+</div>
+<!-- 02 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-lowest hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-02</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Read-Only Presentation Layer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">UI presentation prohibitions and disabled edit surfaces</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-tertiary">
+              Form inputs, buttons, and mutation handlers set to static read-only presentation in DOM
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm font-bold">DESIGNED</span>
+</div>
+</div>
+<!-- 03 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-03</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Prevention of Accidental Promotion</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Merge-gating rules and automated PR merge prohibition</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-tertiary">
+              Automated PR gating specifications ratified in repo rules; physical CI unmounted
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm font-bold">DESIGNED</span>
+</div>
+</div>
+<!-- 04 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-lowest hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-04</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Provenance &amp; Audit-History Visibility</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Historical lineage tracking with actor timestamps</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-tertiary">
+              Lineage notes recorded in Stratum 04 archival sheets; telemetry logs unmounted
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-tertiary-fixed font-label-sm text-label-sm font-bold">DOCUMENTED</span>
+</div>
+</div>
+<!-- 05 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-05</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Record Identity &amp; Version Tracking</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deterministic commit references across take history</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-tertiary">
+              Commit tags (<code class="text-on-surface">4e91b2c</code>, <code class="text-on-surface">7d18a4c</code>, <code class="text-on-surface">9a2f1c8</code>) tracked in manifest files
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-tertiary-fixed font-label-sm text-label-sm font-bold">DOCUMENTED</span>
+</div>
+</div>
+<!-- 06 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-lowest hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-06</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cryptographic Hash Verification (SHA-256)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Preimage-resistant hashing of raw take audio blobs</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-secondary">
+              Zero physical hash tools or computed digest on disk; only short Git ref strings exist
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">UNVERIFIED</span>
+</div>
+</div>
+<!-- 07 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-07</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Digital Signature &amp; Asymmetric Authority</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ed25519/GPG cryptographic signing of release assets</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-secondary">
+              No PKI keystores mounted; no cryptographic signature blocks present in asset envelope
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">UNVERIFIED</span>
+</div>
+</div>
+<!-- 08 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-lowest hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-08</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Physical Hardware Write-Blocking (Diode/WORM)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hardware-enforced unidirectional read-only storage bus</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-error">
+              Host hardware lacks physical optical write-diodes; storage uses conventional R/W NVMe
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">BLOCKED</span>
+</div>
+</div>
+<!-- 09 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-09</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">OS Immutable Kernel Attributes (chattr +i)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Filesystem-level kernel attribute lock flags</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-error">
+              Host OS root execution context unmounted; filesystem attribute flags unverified
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">BLOCKED</span>
+</div>
+</div>
+<!-- 10 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-lowest hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-10</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Immutable Append-Only Audit Daemon</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Merkle daemon streaming tamper records to remote syslog</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-error">
+              Continuous daemon uninstalled on current audit node; logs simulated in browser session
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">BLOCKED</span>
+</div>
+</div>
+<!-- 11 -->
+<div class="grid grid-cols-12 px-space-md py-3 items-center bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="col-span-1 font-code-timecode text-code-timecode text-on-surface-variant">CTL-11</div>
+<div class="col-span-4 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Incident &amp; Rollback Recovery Protocols</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Standardized restoration runbook to baseline Take 03</span>
+</div>
+<div class="col-span-5 font-label-sm text-label-sm text-tertiary">
+              Runbook ratified in Stratum 04 master operational specs (Doc Ref: RB-S04-TK03)
+            </div>
+<div class="col-span-2 flex justify-end">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-tertiary-fixed font-label-sm text-label-sm font-bold">DOCUMENTED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 04: SYSTEM CONFLICTS & ARCHIVAL BOUNDARY FINDINGS -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- CONFLICT 01 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">CONFLICT 01</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">warning</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-md">Attribution Discrepancy</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Record 04.A is noted in production ADR logs as a formal “director-approved pickup session”, but Sound Editor scratchpad notes claim this was an early temp-track exploration never heard by the director.
+          </p>
+</div>
+<div class="mt-space-md p-space-xs rounded bg-surface-container font-label-sm text-label-sm text-tertiary flex items-center justify-between">
+<span>SOURCE AMBIGUITY:</span>
+<span class="font-bold text-on-surface">UNRESOLVED LOG DELTA</span>
+</div>
+</div>
+<!-- CONFLICT 02 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">CONFLICT 02</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">alt_route</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-md">Storage Layer Ambiguity</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Virtualized git commit trees are cited across manifests, but underlying physical <code class="text-on-surface font-code-timecode">.git/objects</code> pack-files are unverified on this local audit filesystem slice.
+          </p>
+</div>
+<div class="mt-space-md p-space-xs rounded bg-surface-container font-label-sm text-label-sm text-tertiary flex items-center justify-between">
+<span>PACK FILE STATUS:</span>
+<span class="font-bold text-secondary">LOOSE POINTER ONLY</span>
+</div>
+</div>
+<!-- BOUNDARY FINDING -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">ARCHIVAL BOUNDARY</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-display-md">Physical Cryptographic Isolation Finding</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Physical Cryptographic Isolation cannot be completed in this software design environment due to the absolute absence of hardware write-blockers, host PKI keystores, and write-once immutable media.
+          </p>
+</div>
+<div class="mt-space-md p-space-xs rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center justify-between font-bold">
+<span>FORMAL VERDICT:</span>
+<span>PHYSICALLY UNVERIFIED</span>
+</div>
+</div>
+</div>
+<!-- SECTION 05: GATE EXT-05 VERDICT & CLOSURE BOUNDARY -->
+<div class="p-space-lg rounded bg-surface-container-lowest flex flex-col gap-space-lg shadow-xl">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">FORMAL CLOSURE DETERMINATION</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-display-md">
+            Gate EXT-05 :: Cryptographic Isolation Audit Report
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Specification is conformed and ratified. Physical cryptographic isolation is unmounted and hardware-blocked.
+          </p>
+</div>
+<!-- Metric Rings / Ratios -->
+<div class="flex items-center gap-space-lg shrink-0">
+<div class="flex flex-col items-center">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">100%</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">SPECIFICATION RATIFIED</span>
+</div>
+<div class="h-10 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col items-center">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">0%</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">PHYSICAL HARDWARE</span>
+</div>
+</div>
+</div>
+<!-- Visual Telemetry Terminal Bar -->
+<div class="p-space-md rounded bg-surface-container-low font-code-timecode text-code-timecode text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-tertiary">
+<span>&gt; SHA3-512 ROOT: a7f891bca440284e90117bc01... [VALIDATED IN SCHEMA]</span>
+<span class="text-secondary">[PHYSICAL DIODE MISSING]</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>&gt; REPOSITORY MUTATION: LOCKED // PERMISSION BITMASK 0444 // KERNEL IMMUTABILITY UNCONFIGURED</span>
+<span class="text-tertiary">RO-PASS</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>&gt; CANONICAL TAKE 03 PERSISTENCE: 100% INVARIANT // COMMITS 4e91b2c &amp; 7d18a4c STRICTLY SEVERED</span>
+<span class="text-primary font-bold">SECURED</span>
+</div>
+</div>
+<!-- Action Boundary -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Read-only audit environment. Export produces cryptographically signed architectural report.</span>
+</div>
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial px-space-md py-space-sm rounded bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-2" onclick="downloadSpecReport()" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>EXPORT SPECIFICATION REPORT</span>
+</button>
+<button class="flex-1 sm:flex-initial px-space-md py-space-sm rounded bg-surface-container-highest text-on-surface-variant opacity-60 font-label-lg text-label-lg cursor-not-allowed flex items-center justify-center gap-2" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>ASCEND TO MASTER GATE LEDGER</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function downloadSpecReport() {
+      const banner = document.createElement('div');
+      banner.className = 'fixed bottom-6 right-6 z-50 p-space-md rounded bg-surface-container-highest text-on-surface shadow-xl flex items-center gap-space-sm';
+      banner.innerHTML = '<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span><span class="font-label-sm text-label-sm">SPECIFICATION REPORT GENERATED (GATE EXT-05 RATIFIED)</span>';
+      document.body.appendChild(banner);
+      setTimeout(() => {
+        banner.remove();
+      }, 3500);
+    }
+  </script>
+</div></main></div></body></html>

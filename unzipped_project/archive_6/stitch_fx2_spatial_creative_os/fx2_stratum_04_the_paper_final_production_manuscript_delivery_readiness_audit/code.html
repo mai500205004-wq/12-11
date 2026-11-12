@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#ffdad6","secondary-container":"#912100","inverse-surface":"#e3e2e5","outline-variant":"#5d403b","surface":"#121315","inverse-on-surface":"#303033","error-container":"#93000a","error":"#ffb4ab","background":"#121315","on-secondary-fixed":"#3c0800","surface-tint":"#ffb4a8","on-tertiary-fixed":"#1c1c18","primary-fixed-dim":"#ffb4a8","on-primary-fixed":"#410000","inverse-primary":"#bf0904","surface-container-highest":"#343537","surface-container-low":"#1b1c1e","surface-variant":"#343537","surface-container-lowest":"#0d0e10","primary":"#ffb4a8","on-primary-fixed-variant":"#930000","surface-bright":"#38393b","on-surface-variant":"#e6bdb7","primary-fixed":"#ffdad4","on-secondary-fixed-variant":"#881f00","secondary-fixed":"#ffdbd2","tertiary-fixed":"#e5e2db","on-tertiary-fixed-variant":"#474742","surface-dim":"#121315","secondary-fixed-dim":"#ffb4a1","on-background":"#e3e2e5","surface-container":"#1f2022","on-surface":"#e3e2e5","surface-container-high":"#292a2c","on-error":"#690005","tertiary-container":"#92918b","primary-container":"#ff5541","on-secondary":"#611300","on-primary-container":"#5c0000","outline":"#ad8882","tertiary":"#c9c6c0","on-primary":"#690000","tertiary-fixed-dim":"#c9c6c0","on-secondary-container":"#ffa58d","secondary":"#ffb4a1","on-tertiary-container":"#2a2a25","on-tertiary":"#31312c"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","gutter-sm":"0.75rem","gutter-lg":"2rem","margin-lg":"3.5rem","space-sm":"0.5rem","margin-sm":"1rem","space-xs":"0.25rem","space-md":"1rem","margin":"2rem","gutter":"1.25rem","space-xl":"2.5rem"},fontFamily:{"body-md":["Inter"],"body-sm":["Inter"],"display-md-mobile":["Playfair Display"],"headline-lg":["Playfair Display"],"display-md":["Playfair Display"],"headline-md":["Playfair Display"],"code-timecode":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"label-lg":["Inter"],"label-md":["JetBrains Mono"],"headline-sm":["Inter"],"display-lg":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"body-lg":["Inter"]},fontSize:{"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"display-md-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-md":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"0em",fontWeight:"500"}],"code-timecode":["14px",{lineHeight:"18px",letterSpacing:"0.08em",fontWeight:"600"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"500"}],"label-lg":["13px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"500"}],"headline-sm":["18px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-gutter flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded bg-primary-container"></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">FX2 // DESCENT</span></div><span class="font-label-sm text-label-sm text-tertiary px-space-xs py-0.5 rounded bg-surface-container-high">S-04</span></div><div class="px-gutter py-space-sm"><span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider block mb-space-xs">Strata Traversal</span><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-bold"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stratum-01-light-table" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-tertiary">01</span><span class="font-label-md text-label-md">Light Table</span></div><span class="font-label-sm text-label-sm text-tertiary font-code-timecode">Z: 0.00m</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stratum-02-glass-frames" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-tertiary">02</span><span class="font-label-md text-label-md">Glass Frames</span></div><span class="font-label-sm text-label-sm text-tertiary font-code-timecode">Z: -120.00m</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stratum-03-film-hybrid" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-tertiary">03</span><span class="font-label-md text-label-md">Film Hybrid</span></div><span class="font-label-sm text-label-sm text-tertiary font-code-timecode">Z: -240.00m</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs rounded transition-colors bg-surface-container-high text-primary font-bold" data-path="stratum-04-the-paper" href="#"><div class="flex items-center gap-space-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md">The Paper</span></div><span class="font-label-sm text-label-sm text-primary font-code-timecode">Z: -360.00m</span></a></nav></div><div class="px-gutter py-space-sm"><span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider block mb-space-xs">Inspection Modules</span><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-bold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cutsheet-integrity" href="#"><span class="material-symbols-outlined text-[16px]">straighten</span><span class="font-label-md text-label-md">Cutsheet Integrity</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="manuscript-editor" href="#"><span class="material-symbols-outlined text-[16px]">edit_note</span><span class="font-label-md text-label-md">Manuscript Editor</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dialogue-lineage" href="#"><span class="material-symbols-outlined text-[16px]">record_voice_over</span><span class="font-label-md text-label-md">Dialogue &amp; Lineage</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cross-stratum-inheritance" href="#"><span class="material-symbols-outlined text-[16px]">layers</span><span class="font-label-md text-label-md">Cross-Stratum</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="export-contracts" href="#"><span class="material-symbols-outlined text-[16px]">receipt_long</span><span class="font-label-md text-label-md">Export Contracts</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="readiness-report" href="#"><span class="material-symbols-outlined text-[16px]">fact_check</span><span class="font-label-md text-label-md">Readiness Report</span></a></nav></div></div><div class="p-gutter bg-surface-container-lowest/60 flex flex-col gap-space-xs"><div class="flex items-center justify-between font-label-sm text-label-sm text-tertiary"><span>HEAD: [9a2f1c8]</span><span>QUAR: [7d18a4c]</span></div><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-tertiary">SAFETY PREVIEW</span><span class="text-primary-container uppercase font-bold tracking-wider">LOCKED</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-gutter"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface">Stratum 04 // The Paper</span><span class="font-code-timecode text-code-timecode text-primary">(Z: -360.00m)</span></div><span class="font-label-sm text-label-sm text-tertiary">100% Cotton Rag Cellulose / Manuscript V4.2</span></div><div class="h-6 w-px bg-surface-container-highest"></div><nav class="hidden lg:flex items-center gap-space-sm" data-active-classes="bg-surface-container-high text-on-surface font-bold"><a aria-current="page" class="px-space-sm py-space-xs rounded transition-colors bg-surface-container-high text-on-surface font-bold" data-path="stratum-04-the-paper" href="#">Overview</a><a class="font-label-lg text-label-lg px-space-sm py-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="manuscript-editor" href="#">Script Sheet</a><a class="font-label-lg text-label-lg px-space-sm py-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="export-contracts" href="#">Ledger</a><a class="font-label-lg text-label-lg px-space-sm py-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="readiness-report" href="#">Audit Matrix</a></nav></div><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-md"><div class="flex flex-col items-end"><span class="font-label-sm text-label-sm text-tertiary uppercase">SMPTE TIME</span><span class="font-code-timecode text-code-timecode text-on-surface">00:00:11:04 NDF</span></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-[16px] text-primary-container">lock</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Preview</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Stratum Traversal Banner & Telemetry Anchor -->
+<section class="w-full bg-surface-container-lowest px-margin-lg py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm text-primary-container px-space-xs py-0.5 rounded bg-surface-container-high tracking-widest uppercase">Z = -360.00m // TERMINUS PLANE</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-timecode">STRATUM 04 // THE PAPER</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary">SUBSTRATE: 100% COTTON RAG CELLULOSE / TYPEWRITER 04.2</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Final Production Manuscript &amp; Delivery Audit</h1>
+<p class="font-body-sm text-body-sm text-tertiary">Authoritative immutable inspection ledger across visual direction, dialogue lineage, physical cuts-sheet continuity, and AAF downstream delivery contracts.</p>
+</div>
+<!-- Live Vector Ascent Controls -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<a class="flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-container text-on-surface px-space-md py-space-xs rounded transition-colors group" data-path="stratum-03-film-hybrid" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary group-hover:-translate-y-0.5 transition-transform">arrow_upward</span>
+<span class="font-label-md text-label-md">ASCEND S-03 FILM HYBRID (-240m)</span>
+</a>
+<a class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-bright text-tertiary hover:text-on-surface px-space-md py-space-xs rounded transition-colors group" data-path="stratum-01-light-table" href="#">
+<span class="material-symbols-outlined text-[16px] group-hover:-translate-y-0.5 transition-transform">vertical_align_top</span>
+<span class="font-label-md text-label-md">DIRECT ASCENT S-01 (0.00m)</span>
+</a>
+</div>
+</div>
+<!-- Security & Vault Status Badges -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">AUDIT REPOSITORY STATE</span>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="w-2 h-2 rounded bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface uppercase">SAFETY ARMED // READ-ONLY</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">CANONICAL HEAD COMMIT</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-code-timecode text-code-timecode text-primary">SHA: 9a2f1c8</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container px-1 rounded">RATIFIED</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">SUB-VAULT QUARANTINE</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-code-timecode text-code-timecode text-secondary">SHA: 7d18a4c</span>
+<span class="font-label-sm text-label-sm text-secondary-container bg-surface-container px-1 rounded">COLD CELL</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">BASE SMPTE TC</span>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-code-timecode text-code-timecode text-on-surface">00:00:11:04 NDF (24.00)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Inspection Body -->
+<div class="px-margin-lg py-space-xl flex flex-col gap-space-xl">
+<!-- SECTION 01: CONTINUOUS CUTSHEET INTEGRITY (SCENE 04 AUDIT) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Section 01 // Field Master</span>
+<span class="font-label-sm text-label-sm text-tertiary">• Cutsheet Completeness 100%</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Continuous Cutsheet Integrity: Scene 04 Technical Ledger</h2>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface font-code-timecode">10 / 10 MANDATORY FIELDS VERIFIED</span>
+</div>
+</div>
+<!-- Bento Grid Cutsheet Card -->
+<div class="bg-surface-container-low rounded-lg p-space-lg flex flex-col gap-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container p-space-md rounded">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container-highest flex items-center justify-center font-headline-sm text-headline-sm text-primary">04</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">CONTINUOUS SEQUENCE SLUG</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">EXT. TOTAL VACUUM — THE DESCENT THROUGH SILENCE</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">SMPTE IN / OUT</span>
+<span class="font-code-timecode text-code-timecode text-primary">00:00:11:04 — 00:01:42:18</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">NET DURATION</span>
+<span class="font-code-timecode text-code-timecode text-on-surface">00:01:31:14 (91.42s)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">CANONICAL CONTINUITY</span>
+<span class="font-label-md text-label-md text-primary-container uppercase">UNINTERRUPTED</span>
+</div>
+</div>
+</div>
+<!-- 3-Column Technical Breakdown -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Visual Direction & Action -->
+<div class="bg-surface-container-lowest p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[16px] text-primary">videocam</span>
+<span class="font-label-sm text-label-sm uppercase">Visual Direction &amp; Action</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              Single uninterrupted 91-second camera dolly forward along Vance’s vertical axis of descent into total vacuum. Gold visor reflects earth rim flattening and vanishing into deep obsidian.
+            </p>
+<div class="bg-surface-container p-space-xs rounded text-tertiary font-body-sm text-body-sm">
+<span class="text-on-surface font-label-md">Subject:</span> Vance floats detached from dorsal umbilical. Microscopic cold-gas thruster vents every 14.2 seconds. Zero spatial agitation.
+            </div>
+</div>
+<!-- Camera & Photochemical Pipeline -->
+<div class="bg-surface-container-lowest p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[16px] text-primary">camera</span>
+<span class="font-label-sm text-label-sm uppercase">Optical &amp; Photochemical Spec</span>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex justify-between py-0.5"><span class="text-tertiary">Lens:</span> <span class="font-code-timecode text-on-surface">Spherical 50mm Prime T1.1</span></li>
+<li class="flex justify-between py-0.5"><span class="text-tertiary">Perspective:</span> <span class="font-code-timecode text-on-surface">Natural 1:1 Locked Dolly</span></li>
+<li class="flex justify-between py-0.5"><span class="text-tertiary">Halation:</span> <span class="text-on-surface">Kodak Vision3 5219 Photochemical</span></li>
+<li class="flex justify-between py-0.5"><span class="text-tertiary">Solar Bounce:</span> <span class="text-on-surface">High-contrast directional solar</span></li>
+<li class="flex justify-between py-0.5"><span class="text-tertiary">Dye Bleed:</span> <span class="text-primary font-code-timecode">0.00% (Synthetic Bleed Void)</span></li>
+</ul>
+</div>
+<!-- Acoustic Spectrum & Sound Design -->
+<div class="bg-surface-container-lowest p-space-md rounded flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[16px] text-primary">graphic_eq</span>
+<span class="font-label-sm text-label-sm uppercase">Acoustic Containment</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              Absolute exterior vacuum (0.0 dB ambient transmission). Transduction restricted exclusively to Vance's internal helmet cavity.
+            </p>
+<div class="flex flex-col gap-1 mt-auto">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-tertiary">Internal Respiration Formant</span>
+<span class="font-code-timecode text-primary">435 Hz Peak</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[68%]"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-tertiary pt-1">
+<span>Integrated BWF Loudness</span>
+<span class="font-code-timecode text-on-surface">-28.4 LUFS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Canonical Dialogue Excerpt & Bedrock Lineage -->
+<div class="bg-surface-container-lowest p-space-md rounded flex flex-col lg:flex-row gap-space-md items-start lg:items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">CANONICAL RATIFIED DIALOGUE (LINEAGE: BRF-84-ALPHA → CONCEPT B)</span>
+<blockquote class="font-headline-md text-headline-md text-on-surface italic tracking-normal">
+              “We aren't falling through space. We're falling through memory.”
+            </blockquote>
+<span class="font-label-md text-label-md text-primary font-code-timecode">VANCE (V.O. / HELMET CAVITY) — INTAKE SMPTE: 00:00:44:12</span>
+</div>
+<div class="flex flex-col items-start lg:items-end gap-1">
+<span class="font-label-sm text-label-sm text-tertiary">EMOTIONAL CORE &amp; BEAT</span>
+<span class="font-body-sm text-body-sm text-on-surface bg-surface-container px-space-sm py-1 rounded">Metaphysical surrender; acceptance of isolation as infinite canvas</span>
+<span class="font-label-sm text-label-sm text-primary font-code-timecode">ZERO CONTINUITY CLASH DETECTED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02: CANONICAL DIALOGUE & QUARANTINE BRANCH AUDIT -->
+<section class="flex flex-col gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Section 02 // Dialogue Lineage</span>
+<span class="font-label-sm text-label-sm text-tertiary">• Divergence Forensic Matrix</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Spoken Anchor vs. Quarantined Branch Reconciliation</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Canonical Side -->
+<div class="bg-surface-container-low rounded-lg p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wide">CANONICAL ANCHOR (TAKE 03)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-code-timecode bg-surface-container px-space-xs py-0.5 rounded">COMMIT: 9a2f1c8</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded">
+<span class="font-label-sm text-label-sm text-tertiary uppercase block mb-1">Spoken Line (Intact)</span>
+<p class="font-headline-md text-headline-md text-on-surface">“We aren't falling through space. We're falling through memory.”</p>
+</div>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between py-1 bg-surface-container/40 px-space-xs rounded">
+<span class="text-tertiary">Lineage Origin</span>
+<span class="font-code-timecode text-on-surface">BRF-84-ALPHA → Concept B → Sc 04 → Take 03</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container/40 px-space-xs rounded">
+<span class="text-tertiary">Acoustic Formant</span>
+<span class="font-code-timecode text-primary">435 Hz Primary Resonator</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container/40 px-space-xs rounded">
+<span class="text-tertiary">BWF Telemetry</span>
+<span class="font-code-timecode text-on-surface">-28.4 LUFS (Dry Cavity)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container/40 px-space-xs rounded">
+<span class="text-tertiary">Ledger Status</span>
+<span class="text-primary font-label-md uppercase">IMMUTABLE RATIFIED CANON</span>
+</div>
+</div>
+<div class="mt-auto pt-space-xs flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+<span>Write lock enforced. No upstream modifications permitted.</span>
+</div>
+</div>
+<!-- Quarantined Side -->
+<div class="bg-surface-container-low rounded-lg p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wide">QUARANTINED DRAFT (TAKE 04.3)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-code-timecode bg-surface-container px-space-xs py-0.5 rounded">COMMIT: 7d18a4c</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded">
+<span class="font-label-sm text-label-sm text-secondary uppercase block mb-1">Divergent Variant (Frozen)</span>
+<p class="font-headline-md text-headline-md text-secondary line-through opacity-80">“We aren't descending through the dark. The dark is descending through us.”</p>
+</div>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between py-1 bg-surface-container/40 px-space-xs rounded">
+<span class="text-tertiary">Isolation Location</span>
+<span class="font-code-timecode text-secondary">Sub-Vault 02 / Cold Quarantine Storage</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container/40 px-space-xs rounded">
+<span class="text-tertiary">Rejection Reason</span>
+<span class="text-on-surface">Bedrock Concept B Contradiction (Tone Deflection)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container/40 px-space-xs rounded">
+<span class="text-tertiary">Merge Permissions</span>
+<span class="font-code-timecode text-secondary font-bold">NULLIFIED // WRITE-REVOKED</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container/40 px-space-xs rounded">
+<span class="text-tertiary">Purge Strategy</span>
+<span class="text-tertiary font-label-md uppercase">ZERO PURGE (Strict Archive Retention)</span>
+</div>
+</div>
+<div class="mt-auto pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span>Historical record preserved. Merging permanently disconnected.</span>
+</div>
+</div>
+</div>
+<!-- Forensics Integrity Attestation -->
+<div class="bg-surface-container-lowest p-space-md rounded flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary text-[24px]">gavel</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface uppercase">FORENSIC SYNTHESIS VERIFICATION STATEMENT</span>
+<span class="font-body-sm text-body-sm text-tertiary">Zero automated algorithmic rewriting or hallucinated dialogue merges detected across Stratum 04. Spoken delivery adheres strictly to Bedrock Mandate 01 with complete historical lineage auditability.</span>
+</div>
+</div>
+</section>
+<!-- SECTION 03: MANUSCRIPT EDITING EXPERIENCE & INTERACTION AUDIT -->
+<section class="flex flex-col gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Section 03 // Affordance Ledger</span>
+<span class="font-label-sm text-label-sm text-tertiary">• UI Interaction &amp; Simulation Specification</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Manuscript Editing Suite: Interactive Control Verification</h2>
+</div>
+<div class="bg-surface-container-low rounded-lg overflow-x-auto shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-highest text-tertiary font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-space-sm px-space-md">Interface Control / Region</th>
+<th class="py-space-sm px-space-md">Technical Affordance</th>
+<th class="py-space-sm px-space-md">Simulated User Outcome</th>
+<th class="py-space-sm px-space-md">Disk / Git Safety Level</th>
+<th class="py-space-sm px-space-md text-right">Verification Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="py-space-sm px-space-md font-label-md text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">edit_document</span>
+<span>Editable Scene Content Wrapper</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-code-timecode">ContentEditable (DOM Tree)</td>
+<td class="py-space-sm px-space-md text-tertiary">Allows typographic typing, cursor displacement, and line-split testing within the cotton cellulose container.</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm text-primary font-code-timecode bg-surface-container px-space-xs py-0.5 rounded">PREVIEW STAGING (NO DISK WRITE)</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-sm text-label-sm text-primary uppercase">VERIFIED ACTIVE</span>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest/60 hover:bg-surface-container transition-colors">
+<td class="py-space-sm px-space-md font-label-md text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">swap_horiz</span>
+<span>Scene Selection &amp; Traversal</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-code-timecode">Indexed Slug Rail Router</td>
+<td class="py-space-sm px-space-md text-tertiary">Jumps between S01, S02, S03, and S04 cut-sheet blocks without page reload; preserves cursor SMPTE timestamp.</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm text-tertiary font-code-timecode bg-surface-container px-space-xs py-0.5 rounded">READ ONLY ROUTING</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-sm text-label-sm text-primary uppercase">VERIFIED ACTIVE</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="py-space-sm px-space-md font-label-md text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">record_voice_over</span>
+<span>Dialogue HUD &amp; Regeneration</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-code-timecode">Spectral Scrub &amp; Formant Pin</td>
+<td class="py-space-sm px-space-md text-tertiary">Adjusts delivery cadence simulator; locks 435Hz helmet resonance band while previewing alternate pacing.</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm text-secondary font-code-timecode bg-surface-container px-space-xs py-0.5 rounded">SIMULATION HARNESS</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-sm text-label-sm text-primary uppercase">VERIFIED ACTIVE</span>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest/60 hover:bg-surface-container transition-colors">
+<td class="py-space-sm px-space-md font-label-md text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">vertical_split</span>
+<span>Original vs. Variant Splitter</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-code-timecode">SplitPane Differential Canvas</td>
+<td class="py-space-sm px-space-md text-tertiary">Enables side-by-side visual diff against Take 04.3 Cold Quarantine branch with live strikethrough overlays.</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm text-tertiary font-code-timecode bg-surface-container px-space-xs py-0.5 rounded">IN-MEMORY DIFF ONLY</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-sm text-label-sm text-primary uppercase">VERIFIED ACTIVE</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="py-space-sm px-space-md font-label-md text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">history</span>
+<span>Accept / Reject / Version Stack</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-code-timecode">Ephemeral In-Memory Revert Stack</td>
+<td class="py-space-sm px-space-md text-tertiary">Allows staging proposed script amendments; clicking 'Accept' prompts security warning that repo is in audit lock.</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm text-primary-container font-code-timecode bg-surface-container px-space-xs py-0.5 rounded">WRITE COMMAND LATCHED</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-sm text-label-sm text-primary uppercase">VERIFIED ACTIVE</span>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest/60 hover:bg-surface-container transition-colors">
+<td class="py-space-sm px-space-md font-label-md text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">undo</span>
+<span>Undo / Redo &amp; Unsaved Change Bar</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-code-timecode">Delta History Event Listener</td>
+<td class="py-space-sm px-space-md text-tertiary">Rolls back in-session preview changes; displays top-level amber amber indicator if current draft diverges from 9a2f1c8.</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-sm text-label-sm text-primary font-code-timecode bg-surface-container px-space-xs py-0.5 rounded">CLIENT LOCAL CACHE</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-sm text-label-sm text-primary uppercase">VERIFIED ACTIVE</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="text-tertiary font-body-sm text-body-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span>Notice: All interactive controls operate within an isolated sandboxed preview engine. Commits to the canonical git repository remain strictly barred while in Stratum 04 Safety Mode.</span>
+</div>
+</section>
+<!-- SECTION 04: CROSS-STRATUM INHERITANCE VERIFICATION -->
+<section class="flex flex-col gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Section 04 // Vector Cohesion</span>
+<span class="font-label-sm text-label-sm text-tertiary">• 5 of 5 Core Vectors Locked</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Cross-Stratum Inheritance Matrix</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-sm">
+<!-- Pillar 01 -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col justify-between gap-space-md shadow-sm">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">VECTOR 01</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">100% PASS</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface mt-1">Lineage Vector</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-2">Anchored strictly to Concept B (The Architecture of Silence). Zero concept deflection.</p>
+</div>
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>BEDROCK INTACT</span>
+</div>
+</div>
+<!-- Pillar 02 -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col justify-between gap-space-md shadow-sm">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">VECTOR 02</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">100% PASS</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface mt-1">Spoken Anchor</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-2">Take 03 Vance Principal locked across S01 through S04 timelines. No synthetic voiceover.</p>
+</div>
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>AUDIO RATIFIED</span>
+</div>
+</div>
+<!-- Pillar 03 -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col justify-between gap-space-md shadow-sm">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">VECTOR 03</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">100% PASS</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface mt-1">Delivery Master</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-2">2.39:1 Cinemascope Container. Top/bottom 7.95% matte verified across all cut-sheet clips.</p>
+</div>
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>FRAME CERTIFIED</span>
+</div>
+</div>
+<!-- Pillar 04 -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col justify-between gap-space-md shadow-sm">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">VECTOR 04</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">100% PASS</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface mt-1">Color Pipeline</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-2">ACEScc AP1 wide-gamut container paired with Kodak 2383 D65 print emulsion profile.</p>
+</div>
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>LUT ATTACHED</span>
+</div>
+</div>
+<!-- Pillar 05 -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col justify-between gap-space-md shadow-sm">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">VECTOR 05</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">100% PASS</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface mt-1">Creative Isolation</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-2">Technicolor 3-Strip emulation restricted strictly to S03 memory frames; 0.00% bleed into S04.</p>
+</div>
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>ZERO S-04 BLEED</span>
+</div>
+</div>
+</div>
+<!-- Technical Parameter Separation Breakdown -->
+<div class="bg-surface-container-lowest p-space-md rounded flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">TECHNICAL SPECIFICATION DECOUPLING VERIFIED</span>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md text-body-sm text-body-sm mt-1">
+<div>
+<span class="text-tertiary block font-label-sm">Primary Sensor Capture</span>
+<span class="font-code-timecode text-on-surface">Alexa LF Spherical 4.5K</span>
+</div>
+<div>
+<span class="text-tertiary block font-label-sm">Emulation Film Gauge</span>
+<span class="font-code-timecode text-on-surface">65mm 5-Perf Photochemical</span>
+</div>
+<div>
+<span class="text-tertiary block font-label-sm">Projection Standard</span>
+<span class="font-code-timecode text-on-surface">2.39:1 Cinemascope DCI</span>
+</div>
+<div>
+<span class="text-tertiary block font-label-sm">Master Color Space</span>
+<span class="font-code-timecode text-on-surface">ACEScc AP1 Working Space</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05: EXPORT READINESS & CONTRACT SPECIFICATIONS -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Section 05 // Post-Production Contracts</span>
+<span class="font-label-sm text-label-sm text-tertiary">• Handoff Payload Payloads</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Downstream Export Payloads &amp; Interchange Specifications</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-space-sm py-1 rounded">INTERFACE SIMULATION HARNESS</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Payload 01: Final Draft (.fdx) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-code-timecode">CONTRACT A // .FDX</span>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container px-space-xs py-0.5 rounded">READY</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Final Draft (FDX 12)</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Schema: Final Draft XML v12. Preserves Scene 04 slug headings, character voiceover formatting, parentheticals, and revision coloring (Blue Rev 04.2).</p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-code-timecode text-label-sm text-tertiary mt-2">
+              Payload: FX2_STRATUM04_SCENE04_CANONICAL.fdx (48.2 KB)
+            </div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md py-space-xs px-space-sm rounded flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span>DOWNLOAD STAGED FDX SPEC</span>
+</button>
+</div>
+<!-- Payload 02: Avid TXT Marker List -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-code-timecode">CONTRACT B // .TXT</span>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container px-space-xs py-0.5 rounded">READY</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Avid Marker Interchange</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Format: Avid Media Composer tab-delimited dialogue marker file. Timecode-anchored to 00:00:11:04 NDF, 24 fps, mapped with BWF tape association tags.</p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-code-timecode text-label-sm text-tertiary mt-2">
+              Payload: FX2_AVID_MARKERS_SC04_NDF.txt (14.6 KB)
+            </div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md py-space-xs px-space-sm rounded flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span>DOWNLOAD MARKER CONTRACT</span>
+</button>
+</div>
+<!-- Payload 03: Avid AAF Interchange -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-code-timecode">CONTRACT C // .AAF</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-space-xs py-0.5 rounded">SPEC VALIDATED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Avid AAF Master Handoff</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Schema: Advanced Authoring Format OP-Atom. 24fps MXF track linking, uncompressed 24-bit 48kHz audio tracks A1-A4 with SMPTE synchronization.</p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-code-timecode text-label-sm text-secondary mt-2">
+              Gap: Requires external shared storage mount / Avid MediaFiles check.
+            </div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md py-space-xs px-space-sm rounded flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+<span>INSPECT AAF CONTRACT SCHEMA</span>
+</button>
+</div>
+</div>
+<!-- Simulation Disclaimer -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">notification_important</span>
+<span>Explicit Disclaimer: Export actions execute mock serialized schema validation routines. Binary file assembly and Avid Media Composer interop harnesses require active hardware control room bridging.</span>
+</div>
+</section>
+<!-- SECTION 06: FINAL PRODUCTION READINESS REPORT (EXECUTIVE SCORECARD) -->
+<section class="flex flex-col gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Section 06 // Executive Scorecard</span>
+<span class="font-label-sm text-label-sm text-tertiary">• 6 Domain Readiness Audit</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Final Delivery Readiness Ledger</h2>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-lg flex flex-col gap-space-lg shadow-sm">
+<!-- Readiness Ring and Summary Stat -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-lg bg-surface-container p-space-md rounded">
+<div class="flex items-center gap-space-lg">
+<div class="relative w-24 h-24 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="100, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline-md text-headline-md text-on-surface font-bold leading-none">100%</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">PASS</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">OVERALL AUDIT CLASSIFICATION</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">RATIFIED FOR PRINCIPAL PHOTOGRAPHY</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-1">All six production vectors meet or exceed ISO/SMPTE studio specifications with zero unresolved blockers.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-tertiary">AUDIT DISPOSITION</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">READY TO STAGE</span>
+</div>
+</div>
+</div>
+<!-- 6 Diagnostic Categories -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Continuous Cutsheet [PASS]</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-1">10 of 10 technical fields complete. 0 duplicated tokens. Camera dolly velocity continuous.</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Editing Affordances [PASS]</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-1">Interface controls evaluated with predictable simulation outcomes. Write commands sandboxed.</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Dialogue Lineage [PASS]</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-1">Take 03 ratified as immutable canon. Divergent Take 04 safely locked in cold quarantine sub-vault.</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Cross-Stratum Inheritance [PASS]</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-1">5 core pillars validated without downstream contamination. Optical, sensor, and color pipelines decoupled.</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Export Contracts [PASS]</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-1">FDX, Avid Markers, and AAF schema contracts defined and validated with explicit simulation labels.</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Accessibility &amp; Layout [PASS]</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-1">WCAG AAA contrast adherence, serif/sans/mono font system compliance, reduced motion compatibility.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 07: FOOTER & SAFETY WATERMARK -->
+<footer class="w-full bg-surface-container-lowest rounded-lg p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">SAFETY WATERMARK AUDIT LOCK</span>
+<span class="font-code-timecode text-label-md text-on-surface">SYSTEM: READ-ONLY AUDIT MODE // WRITE FORBIDDEN // NON-DESTRUCTIVE REPO LOCKED</span>
+<span class="font-label-sm text-label-sm text-primary mt-0.5">HEAD SHA: 9a2f1c83401b — SIGNED BY BEDROCK SUPERVISOR</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md py-space-xs px-space-md rounded flex items-center gap-space-xs transition-colors" id="export-pdf-report-btn">
+<span class="material-symbols-outlined text-[16px] text-primary">picture_as_pdf</span>
+<span>EXPORT READINESS REPORT (.MD / PDF)</span>
+</button>
+<a class="bg-primary hover:bg-primary-fixed-dim text-on-primary font-label-md text-label-md py-space-xs px-space-md rounded flex items-center gap-space-xs transition-colors shadow-sm" data-path="stratum-03-film-hybrid" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span>ASCEND S-03 FILM HYBRID (-240m)</span>
+</a>
+</div>
+</footer>
+</div>
+</div>
+<script>
+  // Inline vanilla JS for micro-interactions & feedback simulation
+  document.addEventListener('DOMContentLoaded', () => {
+    const reportBtn = document.getElementById('export-pdf-report-btn');
+    if (reportBtn) {
+      reportBtn.addEventListener('click', () => {
+        const originalText = reportBtn.innerHTML;
+        reportBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>COMPILING MANUSCRIPT LEDGER...</span>';
+        setTimeout(() => {
+          reportBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">check</span><span>STAGED REPORT READY (SIMULATION)</span>';
+          setTimeout(() => {
+            reportBtn.innerHTML = originalText;
+          }, 3000);
+        }, 800);
+      });
+    }
+  });
+</script></main></div></body></html>

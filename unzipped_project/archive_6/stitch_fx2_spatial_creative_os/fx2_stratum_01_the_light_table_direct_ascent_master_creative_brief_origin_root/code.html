@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#2a2a25", "secondary-fixed-dim": "#ffb4a1", "on-secondary": "#611300", "surface-tint": "#ffb4a8", "surface-container-high": "#292a2c", "surface-container-low": "#1b1c1e", "primary": "#ffb4a8", "on-primary-container": "#5c0000", "surface": "#121315", "on-background": "#e3e2e5", "surface-container-highest": "#343537", "on-secondary-fixed": "#3c0800", "error": "#ffb4ab", "surface-variant": "#343537", "secondary": "#ffb4a1", "secondary-fixed": "#ffdbd2", "on-tertiary": "#31312c", "primary-fixed-dim": "#ffb4a8", "on-primary": "#690000", "on-secondary-container": "#ffa58d", "on-secondary-fixed-variant": "#881f00", "on-error": "#690005", "on-tertiary-fixed-variant": "#474742", "surface-bright": "#38393b", "tertiary-fixed": "#e5e2db", "on-surface-variant": "#e6bdb7", "inverse-primary": "#bf0904", "on-error-container": "#ffdad6", "outline": "#ad8882", "on-primary-fixed": "#410000", "primary-fixed": "#ffdad4", "tertiary": "#c9c6c0", "surface-container": "#1f2022", "surface-dim": "#121315", "inverse-on-surface": "#303033", "on-surface": "#e3e2e5", "error-container": "#93000a", "on-primary-fixed-variant": "#930000", "background": "#121315", "secondary-container": "#912100", "inverse-surface": "#e3e2e5", "tertiary-fixed-dim": "#c9c6c0", "tertiary-container": "#92918b", "surface-container-lowest": "#0d0e10", "on-tertiary-fixed": "#1c1c18", "primary-container": "#ff5541", "outline-variant": "#5d403b" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-lg": "3.5rem", "gutter": "1.25rem", "gutter-lg": "2rem", "margin": "2rem", "gutter-sm": "0.75rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "margin-sm": "1rem", "space-sm": "0.5rem", "space-md": "1rem" }, fontFamily: { "display-md": ["Playfair Display"], "display-md-mobile": ["Playfair Display"], "label-sm": ["JetBrains Mono"], "display-lg": ["Playfair Display"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Playfair Display"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "headline-md": ["Playfair Display"], "label-lg": ["Inter"], "label-md": ["JetBrains Mono"], "display-lg-mobile": ["Playfair Display"], "code-timecode": ["JetBrains Mono"] }, fontSize: { "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "display-md-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }], "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "code-timecode": ["14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-4 px-3 shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="flex flex-col gap-6"><div class="px-3 pt-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm tracking-widest uppercase text-tertiary">SYSTEM ARCHITECTURE</span><span class="font-label-sm text-label-sm text-primary">v2.8.4</span></div><div class="font-headline-md text-headline-md text-on-surface tracking-tight mt-1">STRATA VECTORS</div></div><div><div class="px-3 pb-2 font-label-sm text-label-sm tracking-widest uppercase text-outline">Primary Traversal</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-bold"><a aria-current="page" class="flex items-center justify-between px-3 py-2 rounded transition-colors bg-surface-container-high text-primary font-bold" data-path="light-table" href="#"><div class="flex flex-col"><span class="font-label-md text-label-md">01 Light Table</span><span class="font-label-sm text-label-sm text-tertiary">Base Reticle</span></div><span class="font-code-timecode text-code-timecode text-tertiary">Z: 0.00m</span></a><a class="flex items-center justify-between px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="glass-frames" href="#"><div class="flex flex-col"><span class="font-label-md text-label-md">02 Glass Frames</span><span class="font-label-sm text-label-sm text-tertiary">Refraction Layer</span></div><span class="font-code-timecode text-code-timecode text-tertiary">Z: -120.00m</span></a><a class="flex items-center justify-between px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="film-hybrid" href="#"><div class="flex flex-col"><span class="font-label-md text-label-md">03 Film Hybrid</span><span class="font-label-sm text-label-sm text-tertiary">Grain Emulsion</span></div><span class="font-code-timecode text-code-timecode text-tertiary">Z: -240.00m</span></a><a class="flex items-center justify-between px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="the-paper" href="#"><div class="flex flex-col"><span class="font-label-md text-label-md">04 The Paper</span><span class="font-label-sm text-label-sm text-tertiary">Draft Script Surface</span></div><span class="font-code-timecode text-code-timecode text-tertiary">Z: -360.00m</span></a></nav></div><div><div class="px-3 pb-2 font-label-sm text-label-sm tracking-widest uppercase text-outline">Inspection Modules</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-bold"><a class="flex items-center justify-between px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="three-way-matrix" href="#"><span class="font-label-md text-label-md">Three-Way Matrix</span><span class="material-symbols-outlined text-outline text-[16px]">grid_view</span></a><a class="flex items-center justify-between px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="provenance-dag" href="#"><span class="font-label-md text-label-md">Provenance DAG</span><span class="material-symbols-outlined text-outline text-[16px]">account_tree</span></a><a class="flex items-center justify-between px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="telemetry" href="#"><span class="font-label-md text-label-md">Telemetry</span><span class="material-symbols-outlined text-outline text-[16px]">analytics</span></a><a class="flex items-center justify-between px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="quarantine-audit" href="#"><span class="font-label-md text-label-md">Quarantine Audit</span><span class="material-symbols-outlined text-outline text-[16px]">security</span></a></nav></div></div><div class="p-3 bg-surface-container-low rounded flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">RENDER BUFFER</span><span class="font-code-timecode text-code-timecode text-primary">94.2%</span></div><div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container w-[94.2%]"></div></div><div class="flex items-center justify-between font-label-sm text-label-sm text-tertiary pt-1"><span>CELLULOID-08</span><span>SMPTE 24FPS</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 flex items-center justify-between px-6 shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex items-center gap-6"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">FX2 // THE DESCENT</span></div><div class="h-4 w-px bg-surface-container-highest"></div><div class="flex items-center gap-2 font-label-md text-label-md text-outline"><span class="hover:text-on-surface transition-colors">STRATA</span><span class="text-surface-variant">/</span><span class="text-on-surface font-medium">ACTIVE DEEP CANVASES</span><span class="ml-2 px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-tertiary">Z: -240.00m</span></div></div><div class="flex items-center gap-5"><div class="flex items-center gap-2 px-3 py-1 bg-surface-container-low rounded"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-code-timecode text-code-timecode text-primary">00:00:11:04 NDF</span></div><div class="flex items-center gap-2 px-2.5 py-1 rounded bg-secondary-container text-on-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px]">lock</span><span>[7d18a4c COLD QUARANTINE]</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-margin"><div class="flex flex-col w-full pb-16">
+<!-- Ambient Origin Field Layer -->
+<div class="relative w-full overflow-hidden">
+<!-- Diffuse Substrate Underglow Simulation -->
+<div class="absolute -top-40 left-1/4 w-[720px] h-[360px] bg-primary-container/10 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-20 right-10 w-[420px] h-[280px] bg-surface-tint/5 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- 1. Ascent Arrival Confirmation Banner -->
+<div class="w-full bg-surface-container-lowest/90 backdrop-blur-md rounded-lg p-space-md mb-gutter shadow-2xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded bg-primary-container/20 flex items-center justify-center shrink-0 text-primary-container shadow-inner">
+<span class="material-symbols-outlined text-[20px]">north_east</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold">DIRECT ASCENT EXECUTED</span>
+<span class="text-surface-variant font-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-tertiary">Z = 0.00m (ORIGIN ROOT RESTORED)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant tracking-wider">MOTION INERTIA: 0.00ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+            Master Creative Brief and Origin Root inspection environment restored. Complete lineage preserved:
+            <span class="font-code-timecode text-code-timecode text-primary font-semibold ml-1">BRF-84-ALPHA ➔ Concept B ➔ Scene 04 ➔ Take 03 [9a2f1c8]</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-auto shrink-0">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">CANONICAL GROUND TRUTH</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+</div>
+<!-- 2. Main Title & Origin Header (No double H1, bespoke typography interplay) -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-gutter-lg pb-space-lg">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm tracking-widest uppercase">STRATUM S-01 // ROOT BASELINE</span>
+<span class="font-code-timecode text-code-timecode text-tertiary">DOLLY: [0.00, 0.00, 0.00m]</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">
+          Master Creative Brief <span class="font-display-md text-tertiary italic">&amp; Root Bedrock</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 leading-relaxed">
+          The foundational bedrock of <span class="text-on-surface font-medium">FX2: The Descent</span>. Illuminated on high-luminance frosted quartz substrate. All downstream strata—Glass Frames, Film Hybrid, Paper Manuscript—anchor immutably to this origin coordinate.
+        </p>
+</div>
+<!-- Telemetry Pill Stack -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-2 min-w-[280px] shadow-lg">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline uppercase">Substrate State</span>
+<span class="text-primary font-code-timecode">Frosted Quartz 5500K</span>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline uppercase">Canonical Head</span>
+<span class="text-on-surface font-code-timecode">9a2f1c8 (Take 03)</span>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline uppercase">Security Enclave</span>
+<span class="text-secondary font-label-sm">7d18a4c [COLD QUARANTINE]</span>
+</div>
+</div>
+</div>
+<!-- Visual Anchor: Master Light Table Surface with Physical Aperture Reticles -->
+<div class="relative w-full bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl mb-margin-lg">
+<!-- Backlit Quartz Grid Surface -->
+<div class="absolute inset-0 bg-[radial-gradient(#343537_1px,transparent_1px)] [background-size:24px_24px] opacity-25"></div>
+<!-- Top Illuminated Calibration Rail -->
+<div class="relative z-10 w-full h-10 bg-surface-container-high/90 px-space-lg flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>BACKLIT DIFFUSER ACTIVE</span>
+</div>
+<span class="text-surface-variant font-label-sm">|</span>
+<span class="font-label-sm text-label-sm text-tertiary">SPECTRAL ILLUMINATION: D50 (1800 cd/m²)</span>
+</div>
+<div class="flex items-center gap-4 font-code-timecode text-code-timecode text-outline">
+<span>APERTURE: 2.39:1 CINEMASCOPE</span>
+<span class="text-primary">TC 00:00:11:04</span>
+</div>
+</div>
+<!-- Main Dual-Inspector Layout inside the Light Table -->
+<div class="relative z-10 p-gutter grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- 3. Master Creative Brief [BRF-84-ALPHA] (Columns 1-7) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="bg-surface-container/70 backdrop-blur-xl rounded-xl p-gutter shadow-xl relative overflow-hidden">
+<!-- Quartz Glass Specular Accent -->
+<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<div class="flex items-start justify-between gap-space-md pb-space-md">
+<div>
+<span class="font-label-sm text-label-sm tracking-widest text-primary uppercase">DOCUMENT CLASSIFICATION</span>
+<div class="font-headline-md text-headline-md text-on-surface mt-1">BRF-84-ALPHA // ORIGIN SEED #4120</div>
+<div class="font-label-sm text-label-sm text-tertiary mt-0.5 uppercase tracking-wide">STATUS: IMMUTABLE ANCESTOR ROOT DIRECTIVE</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[28px] opacity-70">fingerprint</span>
+</div>
+<!-- Narrative Core Blockquote on Textured Substrate -->
+<div class="my-space-md p-space-md bg-surface-container-low/90 rounded-lg shadow-inner">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1">Narrative Core Thesis</span>
+<p class="font-display-md text-display-md-mobile text-on-surface italic leading-snug">
+                “Vance inside the unmeasured vacuum, detached from dorsal umbilical. The descent through silence and memory.”
+              </p>
+</div>
+<!-- Foundational Creative Mandates Grid -->
+<div class="flex flex-col gap-space-sm mt-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Foundational Creative Mandates</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Mandate 01 -->
+<div class="bg-surface-container-low p-space-md rounded-md flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">01. ABSOLUTE VACUUM</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">volume_off</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Zero acoustic transmission through external space. All acoustic reality is strictly internal (respiration, telemetry hum, radio delay).
+                  </p>
+</div>
+<!-- Mandate 02 -->
+<div class="bg-surface-container-low p-space-md rounded-md flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">02. OPTICAL INTEGRITY</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">camera</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Grounded in photochemical physics: Kodak Vision3 5219 halation profile, fine silver grain clumping, sensitometric shoulder roll-off.
+                  </p>
+</div>
+<!-- Mandate 03 -->
+<div class="bg-surface-container-low p-space-md rounded-md flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">03. PHILOSOPHICAL CENTER</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">psychology</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    The descent is not spatial traversal; it is the non-linear collapse of memory in extreme isolation. Space expands as thoughts contract.
+                  </p>
+</div>
+<!-- Mandate 04 -->
+<div class="bg-surface-container-low p-space-md rounded-md flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">04. CANONICAL TAKE ANCHOR</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Take 03 Vance Principal Cut is locked as authoritative canon. Any deviating performance branches are relegated to cold quarantine.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Authenticity Micro-Seal -->
+<div class="mt-space-lg pt-space-md flex items-center justify-between text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>CRYPTOGRAPHIC HASH: 4120f-ba84-alpha-root-0000</span>
+</div>
+<span>ORIGIN TIMESTAMP: 2024.11.02 // 04:18 Z</span>
+</div>
+</div>
+<!-- Photochemical & Production Telemetry Ribbon -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">ASPECT RATIO</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">2.39 : 1</span>
+<span class="font-body-sm text-body-sm text-tertiary">Anamorphic Prime 50mm</span>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">COLOR PIPELINE</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">ACEScc AP1</span>
+<span class="font-body-sm text-body-sm text-tertiary">Kodak 2383 Print LUT</span>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">SAMPLING CHROMA</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">16-BIT UNCOMP</span>
+<span class="font-body-sm text-body-sm text-tertiary">EXR Dual Exposure Float</span>
+</div>
+</div>
+</div>
+<!-- Right Side: 5. Canonical Take 03 vs Quarantined Take 04 & Visual Verification (Columns 8-12) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Key Visual Frame Placeholder (The Light Table Slide) -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-2xl relative">
+<div class="relative w-full aspect-video overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Cinematic 35mm film still of astronaut Vance floating in deep space untethered. Dark obsidian void with warm golden rim light on the helmet visor showing a subtle reflection of childhood home. Highly detailed Kodak Vision3 500T 5219 film grain, soft halation around the suit highlights, rich cinematic shadows and deep contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWjyVyoPjd4A-lXv7meuwxQT0CsZfgPj8cTbX6SaKryzYxrTBqowr9CUkiMzlT3E6pD3RaDyObYftTXy5WfYVUmvLUyk23Ue0_GGBDREMA_DexETD8SQv-bSMaBgerltpuIKk7RFvUM87RXplKt3-X45vFf1CWWRTLGEePI4j7aRCtxLoPlYDQ5vnfAgCuDpI320mDHWVVogVjcxivP48besuEmc3xcsU9jV6uNxJ9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Reticle Overlay -->
+<div class="absolute inset-0 pointer-events-none p-space-md flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-code-timecode text-code-timecode text-primary">SCENE 04 // TK 03</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-label-sm text-label-sm text-tertiary">100% PROVENANCE VERIFIED</span>
+</div>
+<div class="flex justify-between items-end">
+<div class="font-code-timecode text-code-timecode text-on-surface bg-surface-container-lowest/70 px-2 py-1 rounded">
+                    00:00:11:04
+                  </div>
+<span class="material-symbols-outlined text-primary text-[24px]">center_focus_strong</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">SLIDE ID: SLD-4120-C</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">CANONICAL ANCHOR POS</span>
+</div>
+</div>
+<!-- Canonical vs Quarantined Comparison Deck -->
+<div class="bg-surface-container/70 backdrop-blur-xl rounded-xl p-space-md flex flex-col gap-space-md shadow-xl">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Branch Discrepancy Matrix</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary font-label-sm text-label-sm font-bold">1 CONFLICT ISOLATED</span>
+</div>
+<!-- Take 03: Canonical Head -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Take 03 // Canonical Master</span>
+</div>
+<span class="font-code-timecode text-code-timecode text-primary">9a2f1c8</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic pl-6 mt-1">
+                “We aren't falling through space. We're falling through memory.”
+              </p>
+<div class="flex items-center gap-3 pl-6 mt-1 font-label-sm text-label-sm text-tertiary">
+<span>Vance Principal Delivery</span>
+<span>•</span>
+<span class="text-primary">Approved Verbatim</span>
+</div>
+</div>
+<!-- Take 04: Quarantined Rogue Branch -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex flex-col gap-1.5 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">gpp_maybe</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Take 04 (Draft 04.3) // Altered</span>
+</div>
+<span class="font-code-timecode text-code-timecode text-outline">7d18a4c</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-through italic pl-6 mt-1 opacity-70">
+                “We aren't descending through the dark. The dark is descending through us.”
+              </p>
+<div class="flex items-center gap-2 pl-6 mt-1">
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary font-label-sm text-label-sm font-bold">QUARANTINED</span>
+<span class="font-body-sm text-body-sm text-outline">Held in cold vacuum chamber. Write privileges disabled.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Downstream Lineage & Strata Convergence Map -->
+<div class="w-full bg-surface-container-low rounded-xl p-gutter mb-margin-lg shadow-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-gutter">
+<div>
+<span class="font-label-sm text-label-sm tracking-widest text-primary uppercase">DOWNSTREAM HIERARCHY</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Strata Convergence Vector [Z-Axis Lineage]</h2>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span>ORIGIN: 0.00m</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+<span>TERMINUS: -360.00m</span>
+</div>
+</div>
+<!-- Strata Traversal Map Pipeline -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- S-01 (Current Root) -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex flex-col justify-between shadow-lg relative">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-code-timecode text-code-timecode text-primary font-bold">S-01 [0.00m]</span>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">CURRENT VIEW</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">The Light Table</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Frosted quartz diffuser bed. Host of Master Creative Brief BRF-84-ALPHA and authoritative genesis parameters.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-sm text-label-sm text-tertiary">
+<span>Substrate: Quartz</span>
+<span class="text-primary font-bold">100% Locked</span>
+</div>
+</div>
+<!-- S-02 (Glass Frames) -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-colors group cursor-pointer shadow-md">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-code-timecode text-code-timecode text-outline group-hover:text-primary transition-colors">S-02 [-120.00m]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-tertiary">CONVERGED</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">Glass Frames</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Concept B “Architecture of Silence” spatial framing. Three-way difference matrix verified against S-01.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-sm text-label-sm text-tertiary">
+<span>Refractive Index: 1.52</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:translate-y-0.5 transition-transform">south</span>
+</div>
+</div>
+<!-- S-03 (Film Hybrid) -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-colors group cursor-pointer shadow-md">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-code-timecode text-code-timecode text-outline group-hover:text-primary transition-colors">S-03 [-240.00m]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-tertiary">EMULSION</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">Film Hybrid</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Kodak Vision3 500T 5219 emulsion registers, optical color halation, and D-Log E 0.82γ sensitometric roll-off.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-sm text-label-sm text-tertiary">
+<span>3-Strip Grain Clumping</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:translate-y-0.5 transition-transform">south</span>
+</div>
+</div>
+<!-- S-04 (The Paper) -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between hover:bg-surface-container-high transition-colors group cursor-pointer shadow-md">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-code-timecode text-code-timecode text-outline group-hover:text-primary transition-colors">S-04 [-360.00m]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-tertiary">TERMINUS</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">The Paper</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Continuous Cutsheet 04.2 printed on heavy rag cellulose. Vance typewriter cues and tactile stage annotations.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-sm text-label-sm text-tertiary">
+<span>Substrate: Cellulose</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:translate-y-0.5 transition-transform">south</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. Traversal Deck & Safety System Action Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-gutter flex flex-col lg:flex-row items-center justify-between gap-gutter shadow-2xl">
+<div class="flex items-center gap-space-md w-full lg:w-auto">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">swap_vert</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">DIRECT DESCENT DISPATCH</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-tertiary font-label-sm text-label-sm">CALIBRATED DOLLY</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+            SAFETY STATUS: ARMED // WRITE FORBIDDEN // NON-DESTRUCTIVE INTERFACE PREVIEW ONLY
+          </p>
+</div>
+</div>
+<!-- Descent Action Triggers -->
+<div class="flex flex-wrap items-center gap-space-sm w-full lg:w-auto justify-end">
+<button class="px-space-md py-2.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-lg text-label-lg transition-all flex items-center gap-2 shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_downward</span>
+<span>DESCEND TO S-02 (-120m)</span>
+</button>
+<button class="px-space-md py-2.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-lg text-label-lg transition-all flex items-center gap-2 shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_downward</span>
+<span>DESCEND TO S-03 (-240m)</span>
+</button>
+<button class="px-space-md py-2.5 bg-primary hover:bg-primary-container text-on-primary rounded font-label-lg text-label-lg font-bold transition-all flex items-center gap-2 shadow-lg active:scale-95">
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+<span>DESCEND TO TERMINUS S-04 (-360m)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic client interaction micro-interaction for Strata cards and audio cues
+  document.querySelectorAll('[data-path]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      // Non-destructive smooth state indicator
+      console.log('Dispatching spatial coordinate change...');
+    });
+  });
+</script></main></div></body></html>

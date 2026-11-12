@@ -1,0 +1,594 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#7df4ff","error-container":"#93000a","on-surface-variant":"#b9cacb","on-error":"#690005","tertiary-fixed-dim":"#ffb95f","surface-container-low":"#181c24","on-background":"#dfe2ee","surface-bright":"#353942","error":"#ffb4ab","on-tertiary":"#472a00","on-tertiary-fixed-variant":"#653e00","primary-container":"#00f0ff","surface-variant":"#31353e","on-error-container":"#ffdad6","surface-container":"#1c2028","on-tertiary-container":"#855300","primary-fixed-dim":"#00dbe9","surface-container-highest":"#31353e","tertiary":"#fff3ea","on-secondary-fixed-variant":"#2f2ebe","surface":"#0f131c","secondary-fixed":"#e1e0ff","on-primary-fixed":"#002022","background":"#0f131c","on-secondary":"#1000a9","on-primary-fixed-variant":"#004f54","inverse-surface":"#dfe2ee","on-secondary-container":"#b0b2ff","outline":"#849495","tertiary-container":"#ffd19c","secondary-fixed-dim":"#c0c1ff","on-secondary-fixed":"#07006c","secondary-container":"#3131c0","secondary":"#c0c1ff","outline-variant":"#3b494b","primary":"#dbfcff","surface-container-high":"#262a33","surface-dim":"#0f131c","surface-tint":"#00dbe9","surface-container-lowest":"#0a0e16","on-primary-container":"#006970","on-surface":"#dfe2ee","inverse-on-surface":"#2c3039","tertiary-fixed":"#ffddb8","on-primary":"#00363a","inverse-primary":"#006970","on-tertiary-fixed":"#2a1700"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"1rem","margin-md":"1.5rem","space-xs":"0.25rem","space-md":"0.75rem","gutter-lg":"1.5rem","space-lg":"1.25rem","space-xl":"2rem","margin-lg":"2.5rem","space-sm":"0.5rem","gutter":"1rem"},fontFamily:{"headline-sm":["Inter"],"body-sm":["Inter"],"display-hero-mobile":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"badge-micro":["JetBrains Mono"],"code-stream":["JetBrains Mono"],"body-md":["Inter"],"telemetry-label":["JetBrains Mono"],"body-lg":["Inter"],"display-hero":["Inter"]},fontSize:{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"display-hero-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"500"}],"badge-micro":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"600"}],"code-stream":["12px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"telemetry-label":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"display-hero":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 h-16 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/30"><div class="w-full h-16 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="TextFX Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xp28OyPZcr8bl1ybnvviyAxlTUD6TExGaqXxeTeH3aWyD0fAR41LDBIx05yqmkwlvtrC4Mk2MGbJRH80cGErfK2Qq5O1cxayRtt9qNPzPjGEBT_paN3OuZPC2YMDuNgLSuzXhT1t0q45oLdlEBEJ7kuhmWjdPbeV-p8E-s0Kjeyy4HjFb6JzyVIKCD9xgwQ4EQYc35SwAJWESac57qXTFbJaxm_CN_nIsuwafldVEPwp0IToEzzP15JWY"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold hidden sm:inline">TextFX</span></div><div class="h-4 w-px bg-outline-variant/40 mx-space-xs hidden md:block"></div><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded border border-outline-variant/40"><span class="font-telemetry-label text-telemetry-label text-on-surface-variant uppercase tracking-wider">ENV:</span><button class="font-code-stream text-code-stream text-primary hover:text-primary-fixed transition-colors flex items-center gap-1" type="button">Production v1.2<span class="material-symbols-outlined text-[14px]">expand_more</span></button></div><div class="hidden lg:flex items-center gap-space-sm bg-surface-container-low px-space-sm py-1 rounded border border-outline-variant/40"><div class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(0,240,255,0.6)] animate-pulse"></div><span class="font-telemetry-label text-telemetry-label text-on-surface-variant font-medium">OpenAI GPT-4</span><span class="font-badge-micro text-badge-micro px-1 py-0.5 rounded bg-surface-container-high text-primary-fixed">24ms</span></div></div><nav class="hidden xl:flex items-center gap-space-xs h-16" data-active-classes="bg-surface-container-high text-primary border-b-2 border-primary-container"><a class="h-full flex items-center px-space-md font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="creative-pipeline" href="#">Creative Pipeline</a><a class="h-full flex items-center px-space-md font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="lateral-engine" href="#">Lateral Engine</a><a class="h-full flex items-center px-space-md font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="trace-and-audit" href="#">Trace &amp; Audit</a><a aria-current="page" class="h-full flex items-center px-space-md font-body-sm transition-colors bg-surface-container-high text-primary border-b-2 border-primary-container" data-path="provider-config" href="#">Provider Config</a><a class="h-full flex items-center px-space-md font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="api-docs" href="#">API Docs</a></nav><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-space-xs"><button class="px-space-sm py-1.5 rounded font-code-stream text-code-stream text-on-surface bg-surface-container-high hover:bg-surface-variant hover:text-on-surface transition-colors border border-outline-variant/40 flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">file_download</span><span class="">Export Spec</span></button><button class="px-space-md py-1.5 rounded font-headline-sm text-body-sm font-semibold text-on-primary-fixed bg-primary-container hover:bg-primary-fixed shadow-[0_0_16px_rgba(0,240,255,0.35)] transition-all flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">play_arrow</span><span class="">Run Pipeline</span></button></div><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg border border-outline-variant/40" role="radiogroup" aria-label="Theme selection"><button type="button" class="flex items-center gap-1 px-space-xs py-1 rounded bg-surface-container-high text-primary shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" title="System preference (Auto)"><span class="material-symbols-outlined text-[14px]">desktop_windows</span><span class="font-telemetry-label text-telemetry-label hidden sm:inline">Auto</span></button><button type="button" class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/40 transition-colors flex items-center justify-center" title="Light mode"><span class="material-symbols-outlined text-[14px]">light_mode</span></button><button type="button" class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/40 transition-colors flex items-center justify-center" title="Dark mode"><span class="material-symbols-outlined text-[14px]">dark_mode</span></button></div><div class="h-4 w-px bg-outline-variant/40 mx-space-xs hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col items-end hidden 2xl:flex"><span class="font-telemetry-label text-telemetry-label text-on-surface leading-tight font-medium">Elena Vance</span><span class="font-badge-micro text-badge-micro text-on-surface-variant tracking-wider uppercase">Creative Director</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7uR4ILmqotpfJv8wzxAj3DY6x1khp9qvEtBdZJ7hoyA2cuTkT1tmj6_7cF53qAEidua15FpgH4pyHBvbaUmrWx8CYCRPZWObZGPGokkHfcmNCyZUkHZXkR8j1pIhRIT7cXGoIdi_E_5CMQDP5sh5zz5WRcbuEaDIAXHbsC9AIzVAGpxU26tpxgqbilYOLjI7vhA4xXTAvcjzMC0kO8zRI5igdgXxvt8C3yJiZEZvxXT_NNN1ZA80B"></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest/90 backdrop-blur-md border-r border-outline-variant/30 z-40 hidden md:flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md px-space-sm"><div class="px-space-sm py-space-xs"><div class="font-badge-micro text-badge-micro text-on-surface-variant uppercase tracking-widest">STUDIO WORKSPACES</div></div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary-container font-medium"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="creative-pipeline" href="#"><span class="material-symbols-outlined text-[18px]">schema</span><span class="font-body-sm text-body-sm">Creative Pipeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lateral-engine" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-body-sm text-body-sm">Lateral Engine</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="trace-and-audit" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span class="font-body-sm text-body-sm">Trace &amp; Audit</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded transition-colors bg-surface-container-high text-primary border-l-2 border-primary-container font-medium" data-path="provider-config" href="#"><span class="material-symbols-outlined text-[18px]">settings_input_component</span><span class="font-body-sm text-body-sm">Provider Config</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="api-docs" href="#"><span class="material-symbols-outlined text-[18px]">code</span><span class="font-body-sm text-body-sm">API Docs</span></a></nav></div><div class="px-space-sm"><div class="bg-surface-container-low p-space-sm rounded border border-outline-variant/30 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-telemetry-label text-telemetry-label uppercase">Inference Burn</span><span class="font-code-stream text-code-stream text-primary">42.4 t/s</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-2/3"></div></div><div class="flex items-center justify-between font-badge-micro text-badge-micro text-on-surface-variant"><span class="text-on-surface-variant">COST: $0.0412/run</span><span class="text-primary-fixed-dim">ONLINE</span></div></div></div></aside><div class="md:pl-64"><main class="relative w-full pt-16 bg-background min-h-screen text-on-surface"><div class="flex flex-col w-full">
+<!-- Sub-Header Architecture Control Strip -->
+<div class="w-full bg-surface-container-lowest px-gutter py-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-xl">
+<button class="px-space-md py-1 rounded-lg font-telemetry-label text-telemetry-label uppercase tracking-wider transition-all bg-primary-container text-on-primary-fixed shadow-sm" id="mode-prod" onclick="switchMode('prod')">
+          Production (Live API)
+        </button>
+<button class="px-space-md py-1 rounded-lg font-telemetry-label text-telemetry-label uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-all" id="mode-stage" onclick="switchMode('stage')">
+          Staging (Load Test)
+        </button>
+<button class="px-space-md py-1 rounded-lg font-telemetry-label text-telemetry-label uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="mode-mock" onclick="switchMode('mock')">
+<span class="">Local Mock</span>
+<span class="font-badge-micro text-badge-micro px-1 py-0.2 bg-surface-container-highest rounded text-primary">&lt;100ms</span>
+</button>
+</div>
+<div class="h-4 w-px bg-surface-variant hidden lg:block"></div>
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(0,240,255,0.8)]"></span>
+<span class="font-telemetry-label text-telemetry-label text-on-surface">Circuit Breaker: <span class="text-primary-fixed-dim">Nominal</span></span>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">0 TRIPPED</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-code-stream text-code-stream text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">swap_vert</span>
+<span class="">Gateway Routing: <span class="text-on-surface font-medium">Automatic Latency-Weighted</span></span>
+</div>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-telemetry-label text-telemetry-label uppercase tracking-wider flex items-center gap-1.5 transition-colors" onclick="pingAllProviders()">
+<span class="material-symbols-outlined text-[14px]" id="ping-all-icon">refresh</span>
+<span class="">Ping Cluster</span>
+</button>
+</div>
+</div>
+<div class="w-full px-gutter py-space-xl flex flex-col gap-space-xl">
+<!-- Top Telemetry Row -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-telemetry-label text-telemetry-label uppercase">Global Ingress</span>
+<span class="material-symbols-outlined text-[18px] text-primary">alt_route</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-primary">99.98%</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">UPTIME · 30-DAY WINDOW</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-telemetry-label text-telemetry-label uppercase">Median Latency</span>
+<span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">speed</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface">31.4 ms</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">AVG ACROSS ALL ADAPTERS</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-telemetry-label text-telemetry-label uppercase">Cost Burn Accrued</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">account_balance_wallet</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-tertiary">$63.18 <span class="text-on-surface-variant font-code-stream text-body-sm font-normal">/ $150.00</span></div>
+<span class="font-badge-micro text-badge-micro text-tertiary-fixed-dim">42.1% CONSUMED (RESETS IN 12D)</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-telemetry-label text-telemetry-label uppercase">Airgap Scaffold</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-secondary">Local Ready</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">VLLM / 11434 DAEMON ACTIVE</span>
+</div>
+</div>
+</div>
+<!-- Provider Configuration Cards Grid -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-telemetry-label text-telemetry-label uppercase text-primary">Section 01 //</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Configured Provider Adapters</h2>
+</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant uppercase tracking-wider">3 Providers Integrated</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: Google Vertex AI -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-md">
+<!-- Header status row -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px] text-primary-container">cloud_sync</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">Google Vertex AI</h3>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">GEMINI 1.5 ARCHITECTURE</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-highest">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_6px_rgba(0,240,255,0.7)] animate-pulse"></div>
+<span class="font-badge-micro text-badge-micro text-primary-fixed uppercase font-medium">Connected</span>
+</div>
+</div>
+<!-- Metadata parameters -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-space-xs font-code-stream text-code-stream text-on-surface-variant">
+<div class="flex justify-between">
+<span class="">GCP Project:</span>
+<span class="text-on-surface font-medium">textfx-production-cloud</span>
+</div>
+<div class="flex justify-between">
+<span class="">Region Target:</span>
+<span class="text-on-surface font-medium">us-central1</span>
+</div>
+<div class="flex justify-between">
+<span class="">Credentials:</span>
+<span class="text-primary-fixed-dim font-medium">Application Default (ADC)</span>
+</div>
+</div>
+<!-- Model selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-telemetry-label text-telemetry-label uppercase text-on-surface-variant">Engine Model Variant</label>
+<div class="relative">
+<select class="w-full bg-surface-container-high text-on-surface font-code-stream text-code-stream px-space-sm py-2 rounded-lg appearance-none focus:outline-none focus:bg-surface-variant">
+<option selected="">gemini-1.5-pro (Lateral Synthesis &amp; Analogies)</option>
+<option>gemini-1.5-flash (Low-latency rapid brainstorm)</option>
+<option>gemini-ultra-experimental (Deep Conceptual Drift)</option>
+</select>
+<span class="material-symbols-outlined text-[16px] absolute right-2.5 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">Recommended for high-dimensional metaphor generation.</span>
+</div>
+<!-- Parameters Sliders -->
+<div class="flex flex-col gap-space-sm bg-surface-container-high/40 p-space-sm rounded-lg">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-telemetry-label text-telemetry-label text-on-surface-variant">
+<span class="">Temperature (Drift)</span>
+<span class="font-code-stream text-code-stream text-primary font-medium" id="gemini-temp-val">0.75</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" max="1" min="0" oninput="document.getElementById('gemini-temp-val').textContent = this.value" step="0.05" type="range" value="0.75">
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-telemetry-label text-telemetry-label text-on-surface-variant">
+<span class="">Max Tokens Window</span>
+<span class="font-code-stream text-code-stream text-primary font-medium">2048</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" max="8192" min="256" step="256" type="range" value="2048">
+</div>
+</div>
+</div>
+<!-- Card Footer with Ping Action -->
+<div class="mt-space-lg pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+<span class="font-code-stream text-code-stream text-on-surface" id="gemini-latency">28ms</span>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant font-code-stream text-code-stream text-on-surface flex items-center gap-1 transition-colors" onclick="pingProvider('gemini-latency')">
+<span class="">Test Ping</span>
+<span class="material-symbols-outlined text-[14px]">send</span>
+</button>
+</div>
+</div>
+<!-- Card 2: OpenAI -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-md">
+<!-- Header status row -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px] text-secondary">neurology</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">OpenAI Engine</h3>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">GPT-4 / SCRIPT REFINEMENT</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-highest">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_6px_rgba(0,240,255,0.7)] animate-pulse"></div>
+<span class="font-badge-micro text-badge-micro text-primary-fixed uppercase font-medium">Connected</span>
+</div>
+</div>
+<!-- API Key Row with Secret Mask -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-telemetry-label text-telemetry-label uppercase text-on-surface-variant">API Authorization Token</label>
+<div class="flex items-center bg-surface-container-lowest px-space-sm py-1.5 rounded-lg">
+<span class="font-code-stream text-code-stream text-on-surface flex-1" id="openai-key">sk-live-••••••••••••••••••••9xK2</span>
+<button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors" onclick="toggleKeyMask('openai-key')" title="Toggle visibility">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Model selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-telemetry-label text-telemetry-label uppercase text-on-surface-variant">Deployed Model Checkpoint</label>
+<div class="relative">
+<select class="w-full bg-surface-container-high text-on-surface font-code-stream text-code-stream px-space-sm py-2 rounded-lg appearance-none focus:outline-none focus:bg-surface-variant">
+<option selected="">gpt-4o-2024-08-06 (Multimodal Scriptwriter)</option>
+<option>gpt-4o-mini (Cost-optimized rapid branch)</option>
+<option>gpt-4-turbo (Deterministic baseline)</option>
+</select>
+<span class="material-symbols-outlined text-[16px] absolute right-2.5 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Quota & Fallback Management -->
+<div class="bg-surface-container-high/40 p-space-sm rounded-lg flex flex-col gap-space-sm">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="font-telemetry-label text-telemetry-label uppercase">Monthly Token Budget</span>
+<span class="font-code-stream text-code-stream text-tertiary-fixed-dim">$63.18 / $150.00</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full w-[42%]"></div>
+</div>
+<div class="flex items-center justify-between font-badge-micro text-badge-micro text-on-surface-variant">
+<span class="">TIER 5 ACCOUNT</span>
+<span class="text-tertiary">HARD CEILING ENFORCED</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-telemetry-label text-telemetry-label text-on-surface font-medium">Pipeline Priority</span>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">Primary for Script &amp; Cadence</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary-fixed font-code-stream text-code-stream">Rank #1</span>
+</div>
+</div>
+<!-- Card Footer with Ping Action -->
+<div class="mt-space-lg pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+<span class="font-code-stream text-code-stream text-on-surface" id="openai-latency">36ms</span>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant font-code-stream text-code-stream text-on-surface flex items-center gap-1 transition-colors" onclick="pingProvider('openai-latency')">
+<span class="">Test Ping</span>
+<span class="material-symbols-outlined text-[14px]">send</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Local Models & Airgapped Scaffold -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-md">
+<!-- Header status row -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px] text-secondary">dns</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">Local Scaffold</h3>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">/FX/LOCAL_MODELS · STANDBY</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-highest">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary-fixed shadow-[0_0_6px_rgba(225,224,255,0.7)]"></div>
+<span class="font-badge-micro text-badge-micro text-secondary-fixed uppercase font-medium">Ready</span>
+</div>
+</div>
+<!-- Endpoint Configuration -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-telemetry-label text-telemetry-label uppercase text-on-surface-variant">Daemon Host Endpoint</label>
+<div class="flex items-center bg-surface-container-lowest px-space-sm py-1.5 rounded-lg">
+<input class="bg-transparent font-code-stream text-code-stream text-on-surface w-full focus:outline-none" type="text" value="http://localhost:11434">
+<span class="font-badge-micro text-badge-micro text-primary-fixed bg-surface-container px-1 py-0.5 rounded">OLLAMA</span>
+</div>
+</div>
+<!-- Active Weight Selection -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-telemetry-label text-telemetry-label uppercase text-on-surface-variant">Quantized Weights</label>
+<div class="relative">
+<select class="w-full bg-surface-container-high text-on-surface font-code-stream text-code-stream px-space-sm py-2 rounded-lg appearance-none focus:outline-none focus:bg-surface-variant">
+<option selected="">Llama-3-8B-Instruct-Q4_K_M (4.9 GB VRAM)</option>
+<option>Mistral-7B-Lateral-v0.2 (5.2 GB VRAM)</option>
+<option>Phi-3-Mini-4k-Instruct-GGUF (2.3 GB VRAM)</option>
+</select>
+<span class="material-symbols-outlined text-[16px] absolute right-2.5 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Airgap Toggle Module -->
+<div class="bg-surface-container-high/40 p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-telemetry-label text-telemetry-label text-on-surface font-medium">Airgapped Mode</span>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">Sever external web sockets / strict local bus</span>
+</div>
+<button class="w-11 h-6 bg-surface-container-highest rounded-full p-0.5 transition-colors relative flex items-center" id="airgap-toggle" onclick="toggleAirgap()">
+<div class="w-5 h-5 rounded-full bg-outline transform transition-transform" id="airgap-thumb"></div>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex justify-between font-code-stream text-code-stream text-on-surface-variant">
+<span class="">Compute Device:</span>
+<span class="text-on-surface">Apple Silicon MPS / unified (36GB)</span>
+</div>
+</div>
+<!-- Card Footer with Ping Action -->
+<div class="mt-space-lg pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+<span class="font-code-stream text-code-stream text-on-surface" id="local-latency">11ms</span>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant font-code-stream text-code-stream text-on-surface flex items-center gap-1 transition-colors" onclick="pingProvider('local-latency')">
+<span class="">Test Ping</span>
+<span class="material-symbols-outlined text-[14px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Interactive Gateway & REST Pipeline Tester -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Left Column: Interactive Endpoint Explorer & cURL Studio -->
+<div class="xl:col-span-7 bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-telemetry-label text-telemetry-label uppercase text-primary">Section 02 //</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">REST API Integration Gateway</h2>
+</div>
+<div class="flex items-center gap-1 font-badge-micro text-badge-micro bg-surface-container-high px-space-sm py-1 rounded text-primary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="">PORT 4002 LISTENING</span>
+</div>
+</div>
+<!-- Endpoint selection pills -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<button class="px-space-sm py-1 rounded-lg font-code-stream text-code-stream bg-primary-container text-on-primary-fixed font-medium" id="btn-ep-full" onclick="selectEndpoint('full')">
+            POST /api/full-pipeline
+          </button>
+<button class="px-space-sm py-1 rounded-lg font-code-stream text-code-stream bg-surface-container text-on-surface-variant hover:text-on-surface" id="btn-ep-insight" onclick="selectEndpoint('insight')">
+            POST /api/insight
+          </button>
+<button class="px-space-sm py-1 rounded-lg font-code-stream text-code-stream bg-surface-container text-on-surface-variant hover:text-on-surface" id="btn-ep-concept" onclick="selectEndpoint('concept')">
+            POST /api/concept
+          </button>
+<button class="px-space-sm py-1 rounded-lg font-code-stream text-code-stream bg-surface-container text-on-surface-variant hover:text-on-surface" id="btn-ep-script" onclick="selectEndpoint('script')">
+            POST /api/script
+          </button>
+</div>
+<!-- Interactive payload editor -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-label text-telemetry-label uppercase text-on-surface-variant">Request Payload Spec (JSON)</span>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">LATERAL ANCHOR: SEED-412</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg font-code-stream text-code-stream text-primary flex flex-col gap-2 overflow-x-auto">
+<div class="text-on-surface-variant">{</div>
+<div class="pl-4 flex flex-col gap-1">
+<div class=""><span class="text-on-surface-variant">"endpoint":</span> <span class="text-tertiary-fixed-dim" id="json-ep-val">"/api/full-pipeline"</span>,</div>
+<div class=""><span class="text-on-surface-variant">"brief":</span> <span class="text-tertiary">"Increase daily hydration cadence for high-focus corporate office workers"</span>,</div>
+<div class=""><span class="text-on-surface-variant">"temperature":</span> <span class="text-primary-fixed">0.78</span>,</div>
+<div class=""><span class="text-on-surface-variant">"lateral_axis":</span> <span class="text-on-surface">"Metaphoric Density vs Immediate Utility"</span>,</div>
+<div class=""><span class="text-on-surface-variant">"target_stages":</span> <span class="text-on-surface-variant">[</span><span class="text-primary">"INSIGHT"</span>, <span class="text-primary">"LATERAL_DRIFT"</span>, <span class="text-primary">"SYNTHESIS"</span><span class="text-on-surface-variant">]</span></div>
+</div>
+<div class="text-on-surface-variant">}</div>
+</div>
+</div>
+<!-- cURL Terminal snippet -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-label text-telemetry-label uppercase text-on-surface-variant">Executable cURL Generator</span>
+<button class="font-telemetry-label text-telemetry-label text-primary hover:text-primary-fixed flex items-center gap-1 transition-colors" onclick="copyCurl()">
+<span class="material-symbols-outlined text-[14px]" id="copy-icon">content_copy</span>
+<span id="copy-text" class="">Copy Shell Command</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg font-code-stream text-code-stream text-on-surface overflow-x-auto select-all">
+<span class="text-primary-fixed">curl</span> -X POST http://localhost:4002/api/full-pipeline \<br>
+            &nbsp;&nbsp;-H <span class="text-tertiary">"Content-Type: application/json"</span> \<br>
+            &nbsp;&nbsp;-H <span class="text-tertiary">"Authorization: Bearer tfx_live_sec_892k39a0"</span> \<br>
+            &nbsp;&nbsp;-d <span class="text-on-surface-variant">'{"brief":"Increase daily hydration cadence for high-focus corporate office workers","stages":["insight","concept","script"]}'</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-badge-micro text-badge-micro">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+<span class="">SIGNED WITH MUTUAL TLS 1.3</span>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary-container hover:bg-primary-fixed text-on-primary-fixed font-headline-sm text-body-sm font-semibold transition-all shadow-sm flex items-center gap-1.5" onclick="executeTestCall()">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span class="">Execute Test Call</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Environment Audit & Persistence Adapters -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Environment Variables Checklist -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-telemetry-label text-telemetry-label uppercase text-primary">Section 03 //</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Environment Manifest</h2>
+</div>
+<span class="font-badge-micro text-badge-micro text-primary-fixed bg-surface-container-high px-space-xs py-0.5 rounded">4 / 4 PASSED</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span class="font-code-stream text-code-stream text-on-surface">OPENAI_API_KEY</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">sk-...9xK2 [RESOLVED]</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span class="font-code-stream text-code-stream text-on-surface">GOOGLE_CLOUD_PROJECT</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">textfx-prod [RESOLVED]</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span class="font-code-stream text-code-stream text-on-surface">VERTEX_MODEL</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">gemini-1.5-pro [LOCKED]</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span class="font-code-stream text-code-stream text-on-surface">PORT</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">4002 (TCP DUAL-STACK)</span>
+</div>
+</div>
+</div>
+<!-- Persistence & Webhook Targets -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-telemetry-label text-telemetry-label uppercase text-primary">Section 04 //</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Persistence &amp; Webhooks</h2>
+</div>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">3 SINKS ENABLED</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- PostgreSQL Primary -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-label text-telemetry-label text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">database</span>
+<span class="">Primary DB (PostgreSQL 16)</span>
+</span>
+<span class="font-badge-micro text-badge-micro text-primary-fixed">POOL: 10/20</span>
+</div>
+<div class="flex items-center justify-between font-code-stream text-code-stream text-on-surface-variant">
+<span class="truncate pr-2">postgresql://postgres:••••••••@localhost:5432/textfx</span>
+<button class="text-primary hover:text-primary-fixed text-[11px] font-telemetry-label uppercase transition-colors">Test</button>
+</div>
+</div>
+<!-- Dev Fallback SQLite -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-label text-telemetry-label text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">storage</span>
+<span class="">Local Dev Fallback (SQLite 3)</span>
+</span>
+<span class="font-badge-micro text-badge-micro text-on-surface-variant">STANDBY</span>
+</div>
+<span class="font-code-stream text-code-stream text-on-surface-variant">sqlite:///tmp/textfx_ephemeral.db</span>
+</div>
+<!-- Google Sheets Real-time Sync -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-label text-telemetry-label text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">table_chart</span>
+<span class="">Sheets Sync Target (Creatives Sync)</span>
+</span>
+<span class="font-badge-micro text-badge-micro text-primary-fixed">ACTIVE (30s)</span>
+</div>
+<span class="font-code-stream text-code-stream text-on-surface-variant truncate">spreadsheets/d/1X9_JkQz.../edit#gid=0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Banner Modal Toast -->
+<div class="fixed bottom-6 right-6 bg-surface-container-highest/95 backdrop-blur-md px-space-md py-space-sm rounded-xl border border-primary-container/30 shadow-2xl flex items-center gap-space-sm transform translate-y-24 opacity-0 transition-all pointer-events-none z-50" id="toast">
+<span class="material-symbols-outlined text-[18px] text-primary" id="toast-icon">check_circle</span>
+<span class="font-code-stream text-code-stream text-on-surface" id="toast-msg">Configuration saved</span>
+</div>
+</div>
+<script>
+  function switchMode(mode) {
+    const modes = ['prod', 'stage', 'mock'];
+    modes.forEach(m => {
+      const el = document.getElementById(`mode-${m}`);
+      if (m === mode) {
+        el.className = "px-space-md py-1 rounded-lg font-telemetry-label text-telemetry-label uppercase tracking-wider transition-all bg-primary-container text-on-primary-fixed shadow-sm";
+      } else {
+        el.className = "px-space-md py-1 rounded-lg font-telemetry-label text-telemetry-label uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-all";
+      }
+    });
+    showToast(`Gateway Mode switched to: ${mode.toUpperCase()}`);
+  }
+
+  function pingProvider(targetId) {
+    const el = document.getElementById(targetId);
+    el.textContent = "testing...";
+    setTimeout(() => {
+      const randMs = Math.floor(Math.random() * 25) + 15;
+      el.textContent = `${randMs}ms`;
+      showToast(`Health check verified: ${randMs}ms`);
+    }, 400);
+  }
+
+  function pingAllProviders() {
+    const icon = document.getElementById('ping-all-icon');
+    icon.classList.add('animate-spin');
+    setTimeout(() => {
+      pingProvider('gemini-latency');
+      pingProvider('openai-latency');
+      pingProvider('local-latency');
+      icon.classList.remove('animate-spin');
+      showToast('All 3 cluster endpoints healthy');
+    }, 300);
+  }
+
+  let isKeyMasked = true;
+  function toggleKeyMask(keyId) {
+    const el = document.getElementById(keyId);
+    if (isKeyMasked) {
+      el.textContent = "sk-live-9281a8b3c94982k192837499xK2";
+      isKeyMasked = false;
+    } else {
+      el.textContent = "sk-live-••••••••••••••••••••9xK2";
+      isKeyMasked = true;
+    }
+  }
+
+  let isAirgapped = false;
+  function toggleAirgap() {
+    isAirgapped = !isAirgapped;
+    const btn = document.getElementById('airgap-toggle');
+    const thumb = document.getElementById('airgap-thumb');
+    if (isAirgapped) {
+      btn.classList.remove('bg-surface-container-highest');
+      btn.classList.add('bg-primary-container');
+      thumb.classList.remove('bg-outline');
+      thumb.classList.add('bg-on-primary-fixed', 'translate-x-5');
+      showToast('AIRGAP ACTIVE: All outbound traffic locked to local scaffold');
+    } else {
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-surface-container-highest');
+      thumb.classList.remove('bg-on-primary-fixed', 'translate-x-5');
+      thumb.classList.add('bg-outline');
+      showToast('AIRGAP RELEASED: Outbound external APIs permitted');
+    }
+  }
+
+  function selectEndpoint(name) {
+    const eps = ['full', 'insight', 'concept', 'script'];
+    eps.forEach(ep => {
+      const btn = document.getElementById(`btn-ep-${ep}`);
+      if (ep === name) {
+        btn.className = "px-space-sm py-1 rounded-lg font-code-stream text-code-stream bg-primary-container text-on-primary-fixed font-medium";
+      } else {
+        btn.className = "px-space-sm py-1 rounded-lg font-code-stream text-code-stream bg-surface-container text-on-surface-variant hover:text-on-surface";
+      }
+    });
+    document.getElementById('json-ep-val').textContent = `"/api/${name === 'full' ? 'full-pipeline' : name}"`;
+  }
+
+  function copyCurl() {
+    const copyText = document.getElementById('copy-text');
+    const copyIcon = document.getElementById('copy-icon');
+    copyText.textContent = "Copied to Clipboard!";
+    copyIcon.textContent = "done";
+    setTimeout(() => {
+      copyText.textContent = "Copy Shell Command";
+      copyIcon.textContent = "content_copy";
+    }, 1800);
+    showToast('cURL snippet ready in clipboard');
+  }
+
+  function executeTestCall() {
+    showToast('POST /api/full-pipeline dispatched [200 OK] (182ms)');
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-msg');
+    toastMsg.textContent = msg;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2800);
+  }
+</script></main></div>
+
+</body></html>

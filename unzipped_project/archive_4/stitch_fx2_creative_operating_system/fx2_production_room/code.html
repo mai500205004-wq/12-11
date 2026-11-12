@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#ffdbcf","on-surface-variant":"#e6bdb7","tertiary-container":"#92908d","on-error":"#690005","on-tertiary-fixed-variant":"#474744","background":"#121315","surface-tint":"#ffb4a8","surface-variant":"#343537","on-tertiary":"#31302e","on-primary-fixed-variant":"#930000","inverse-surface":"#e3e2e5","surface-container-highest":"#343537","on-primary-fixed":"#410000","secondary":"#ffb59a","primary":"#ffb4a8","inverse-on-surface":"#303033","on-surface":"#e3e2e5","on-secondary-fixed":"#380d00","primary-container":"#ff5541","primary-fixed-dim":"#ffb4a8","on-error-container":"#ffdad6","on-background":"#e3e2e5","surface-container-high":"#292a2c","on-secondary-container":"#fffbff","on-tertiary-fixed":"#1c1c19","on-primary":"#690000","error":"#ffb4ab","tertiary-fixed-dim":"#c9c6c2","tertiary-fixed":"#e5e2de","surface-container":"#1f2022","on-tertiary-container":"#2a2a27","surface-container-lowest":"#0d0e10","inverse-primary":"#bf0904","surface-bright":"#38393b","surface":"#121315","error-container":"#93000a","secondary-container":"#cd4700","surface-container-low":"#1b1c1e","outline-variant":"#5d403b","primary-fixed":"#ffdad4","surface-dim":"#121315","on-secondary-fixed-variant":"#802a00","outline":"#ad8882","on-secondary":"#5b1b00","secondary-fixed-dim":"#ffb59a","on-primary-container":"#5c0000","tertiary":"#c9c6c2"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.25rem","space-md":"1rem","margin":"2.5rem","space-xl":"2.5rem","margin-mobile":"1rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem"},"fontFamily":{"display-hero-mobile":["Syne"],"display-hero":["Syne"],"headline-lg":["Syne"],"headline-xl-mobile":["Syne"],"headline-xl":["Syne"],"lens-tag":["JetBrains Mono"],"body-lg":["Inter"],"headline-sm":["Syne"],"body-sm":["Inter"],"headline-md":["Syne"],"telemetry-code":["JetBrains Mono"],"label-caps":["JetBrains Mono"],"body-md":["Inter"]},"fontSize":{"display-hero-mobile":["40px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"800"}],"display-hero":["72px",{"lineHeight":"76px","letterSpacing":"-0.04em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"700"}],"lens-tag":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"telemetry-code":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl"><div class="h-24 w-full flex flex-col justify-between"><div class="h-14 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="FX2 Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WzqFdCgScox7yAibjRdxoZ5uoKqcr-P0zme2_9tEUc_8N1m3O_Fm1ff5m5Lpxdecp--GPKhcQRVghW6_whmYVEqEOMqmoE419hDcQlJ56YQ8u4GGeToF4k5ocfzHjrXu5M56xETfHxd5kYrK7Wfn22qEQubQB0N1YHzCG5wh8XbvkBDVCpxshJZaFWyougx-1BFvMQNpHuD99aMKMmFm442Bh7JfW28THnJUVNGRnVwg"/><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps text-primary-container tracking-wider uppercase">FX2 // OS</span><span class="font-telemetry-code text-telemetry-code text-on-surface-variant">DR KAIF COFFEE // Launch Campaign (v2.4)</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-md font-telemetry-code text-telemetry-code text-on-surface-variant"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low"><span class="text-primary">LOC</span><span>AR / EN</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low"><span class="text-primary">CORE</span><span>Claude 3.7 / FX-Kernel</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low"><span class="text-primary">MEM</span><span>34 Nodes</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low"><span class="text-primary">RES</span><span>12 Evidence</span></div></div><button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest hover:text-on-surface transition-colors cursor-pointer"><span class="font-label-caps text-label-caps uppercase">Brief Anchor</span><span class="font-telemetry-code text-telemetry-code text-primary">DR KAIF COFFEE | Launch Campaign | Young Professionals</span><span class="material-symbols-outlined text-primary text-[14px]">arrow_drop_down</span></button><button class="text-on-surface-variant hover:text-on-surface transition-colors p-space-xs"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-10 w-full px-gutter bg-surface-container-low/60 flex items-center justify-between"><nav class="flex items-center gap-space-xs h-full" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs" data-path="chamber-discovery" href="#"><span class="font-telemetry-code text-[10px] opacity-60">01</span>DISCOVERY (Chamber)</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs" data-path="arena-concepts" href="#"><span class="font-telemetry-code text-[10px] opacity-60">02</span>CONCEPTS (Arena)</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs" data-path="lab-evolution" href="#"><span class="font-telemetry-code text-[10px] opacity-60">03</span>EVOLUTION (Lab)</a><a aria-current="page" class="px-space-md py-space-xs uppercase transition-colors flex items-center gap-space-xs bg-primary-container text-on-primary-container font-semibold" data-path="room-production" href="#"><span class="font-telemetry-code text-[10px] opacity-60">04</span>PRODUCTION (Room)</a></nav><div class="hidden md:flex items-center gap-space-md font-telemetry-code text-[11px] text-on-surface-variant"><span class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>SYSTEM SYNCHRONIZED</span><span class="font-lens-tag text-lens-tag text-on-surface-variant">// METABOLISM PIPELINE ACTIVE</span></div></div></div></header><main class="w-full pt-24 min-h-screen bg-surface-container-lowest text-on-surface"><div class="flex flex-col w-full">
+<!-- Master Workspace Cockpit Control Strip -->
+<section class="w-full bg-surface-container-low px-gutter py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps text-primary">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>PRODUCTION LAB // PIPELINE STAGE 04</span>
+</div>
+<span class="text-on-surface-variant/40 font-telemetry-code text-[11px]">//</span>
+<div class="flex items-center gap-space-xs font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span>ARTIFACT:</span>
+<span class="text-on-surface font-semibold">TVC_MASTER_SCRIPT_v4.2.sh</span>
+</div>
+<span class="text-on-surface-variant/40 font-telemetry-code text-[11px] hidden lg:inline">//</span>
+<div class="hidden lg:flex items-center gap-space-xs font-lens-tag text-lens-tag px-space-xs py-0.5 bg-surface-container text-tertiary">
+<span>TARGET RESOLUTION: 4K ANAMORPHIC (2.39:1)</span>
+</div>
+</div>
+<!-- Rapid Executable Pipeline Controls -->
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors cursor-pointer" id="btn-export-bible">
+<span class="material-symbols-outlined text-[14px] text-primary">picture_as_pdf</span>
+<span>Export Bible (PDF)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors cursor-pointer" id="btn-shot-list">
+<span class="material-symbols-outlined text-[14px] text-primary">format_list_numbered</span>
+<span>Shot List</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container hover:bg-surface-container-high text-secondary font-label-caps text-label-caps uppercase transition-colors cursor-pointer" id="btn-arabic-toggle">
+<span class="material-symbols-outlined text-[14px]">translate</span>
+<span id="arabic-label">Arabic Localization [AR-SA]</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-1 bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase font-bold hover:brightness-110 active:scale-95 transition-all shadow-md cursor-pointer" id="btn-copy-md">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copy-status">Copy Markdown</span>
+</button>
+</div>
+</section>
+<!-- 3-Column Production Grid Workbench -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter p-gutter">
+<!-- ========================================== -->
+<!-- COLUMN 1: SOURCE LINEAGE & STRATEGIC HERITAGE (Cols 1-3) -->
+<!-- ========================================== -->
+<aside class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Panel Header Bar -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-primary text-[15px]">account_tree</span>
+<span>CHAMBER LINEAGE ARCHIVE</span>
+</div>
+<span class="font-telemetry-code text-[10px] text-primary-container">NODE: DK-882</span>
+</div>
+<!-- Card: Source Insight -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-sm relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/5 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-lens-tag text-lens-tag text-primary uppercase tracking-widest">// SOURCE INSIGHT</span>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">CONFIDENCE 98.4%</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface leading-tight">
+          “People don’t drink coffee for energy. They drink it to regain <span class="text-primary font-bold">control</span>.”
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Validated via 1,420 ethnographies across Riyadh, Dubai, and London financial centers. Caffeine is psychological sovereignty, not metabolic fuel.
+        </p>
+<div class="pt-space-xs flex items-center gap-space-xs font-telemetry-code text-[11px] text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>ORIGIN: Chamber-01 Discovery Node</span>
+</div>
+</div>
+<!-- Card: Source Concept Mutation -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="font-lens-tag text-lens-tag text-secondary uppercase tracking-widest">// GENOME MUTATION</span>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">v2.3 STABLE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">The Sovereign Minute</h3>
+<div class="p-space-xs bg-surface-container font-telemetry-code text-[11px] text-secondary-fixed">
+          HYBRIDIZED NOISE-VACUUM MATRIX
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Aggressive collision between oppressive sonic brutalism and hyper-tactile, meditative sensory liberation upon ritual engagement.
+        </p>
+</div>
+<!-- Card: Core Creative Device -->
+<div class="bg-surface-container p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[16px]">equalizer</span>
+<span class="font-lens-tag text-lens-tag text-primary-container uppercase tracking-wider">CORE CREATIVE DEVICE</span>
+</div>
+<h4 class="font-headline-sm text-[16px] text-on-surface">The Sound Vacuum Transition</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Binary acoustic shear: shifting instantaneously from 120dB polyphonic corporate chatter to an absolute, unadulterated dead-vacuum acoustic space at 0:27s.
+        </p>
+<!-- Live Audio Spectrum Visualization (SVG Graphic) -->
+<div class="mt-space-xs p-space-xs bg-surface-container-lowest flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-code text-[10px] text-on-surface-variant">
+<span>CACALPHONY (120dB)</span>
+<span class="text-primary-container">VACUUM (-∞dB)</span>
+</div>
+<svg class="w-full h-10 text-primary-container" fill="none" viewbox="0 0 280 40">
+<path d="M0 20 L15 6 L30 34 L45 2 L60 38 L75 8 L90 32 L105 4 L120 36 L135 12 L145 28 L150 20 L280 20" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path>
+<circle class="animate-ping" cx="150" cy="20" fill="currentColor" r="3.5"></circle>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.3" x1="150" x2="150" y1="0" y2="40"></line>
+</svg>
+<div class="flex justify-between font-telemetry-code text-[9px] text-on-surface-variant/70">
+<span>00:00:00</span>
+<span class="text-primary font-bold">T-CUT: 00:00:27</span>
+<span>00:00:60</span>
+</div>
+</div>
+</div>
+<!-- Card: Audience Resonance Vector -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs">
+<span class="font-lens-tag text-lens-tag text-tertiary uppercase">// TARGET RESONANCE COHORT</span>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-sm text-[15px] text-on-surface">Tier-1 High Output Archetype</span>
+<span class="px-space-xs py-0.5 bg-primary/10 text-primary font-telemetry-code text-[10px]">INDEX: 99.1</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Managing directors, founders, lead architects, quantitative strategists. Consumed by asymmetric cognitive demands; perpetually starved of cognitive territorial borders.
+        </p>
+</div>
+<!-- Campaign Lineage Node Tree Mini-Card -->
+<div class="bg-surface-container-lowest p-space-sm flex flex-col gap-1 font-telemetry-code text-[11px] text-on-surface-variant">
+<div class="text-primary font-label-caps text-label-caps uppercase">// SYNAPSE PROVENANCE</div>
+<div class="flex items-center gap-space-xs"><span class="text-primary">•</span> Chamber 01 → Insight #12 (Control Rituals)</div>
+<div class="flex items-center gap-space-xs"><span class="text-primary">•</span> Arena 02 → Concept Mutation #4 (“The Citadel”)</div>
+<div class="flex items-center gap-space-xs"><span class="text-primary">•</span> Lab 03 → Audio-Drop Genome Merge (Pass)</div>
+</div>
+</aside>
+<!-- ========================================== -->
+<!-- COLUMN 2: HERO SCRIPT DIRECTOR EDITOR (Cols 4-8) -->
+<!-- ========================================== -->
+<main class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- Film Script Dossier Header -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold">
+              CANONICAL CUT
+            </span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">CAMPAIGN TVC 60s // HERO COMMERCIAL</span>
+</div>
+<span class="font-telemetry-code text-[11px] text-primary">TIMECODE: 00:01:00:00</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight uppercase mt-space-xs">
+          THE FIRST SIXTY SECONDS OF SOVEREIGNTY
+        </h1>
+<div class="flex flex-wrap items-center gap-space-md font-telemetry-code text-telemetry-code text-on-surface-variant pt-space-xs">
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-semibold">WRITTEN FOR:</span>
+<span>Dr Kaif Coffee International</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-semibold">DIRECTOR SPEC:</span>
+<span>A. Al-Mansoor (DOP: Greig Fraser look)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-semibold">ASPECT:</span>
+<span>2.39:1 Anamorphic</span>
+</div>
+</div>
+</div>
+<!-- Director Script Table Scene Container -->
+<div class="flex flex-col gap-space-md" id="script-container">
+<!-- SCENE 01 -->
+<article class="bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all">
+<header class="p-space-sm bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 bg-surface-container-highest text-primary font-label-caps text-[11px] font-bold">SCENE 01</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface font-semibold">INT. GLASS TOWER - 08:24 AM</span>
+</div>
+<div class="flex items-center gap-space-xs font-telemetry-code text-[11px] text-on-surface-variant">
+<span>EST. RUNTIME: 0:14s</span>
+<span class="material-symbols-outlined text-[14px] text-primary">videocam</span>
+</div>
+</header>
+<div class="p-space-md grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Scene Thumbnail/Visual Reference -->
+<div class="md:col-span-4 flex flex-col gap-space-xs">
+<div class="w-full h-32 relative overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="High-contrast cinematic close-up of designer dress shoes walking briskly through a polished titanium and glass skyscraper floor in Riyadh, fluorescent light streaks reflecting off marble, motion blur conveying panic and speed, 35mm grain, color graded in deep charcoal and cold steel with subtle ambient light flare." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOA8DB2CkiGAYVwDzDkHOUlkNAOkgxAxuzYFh2dQd3BLuJ9qtjLZ056VhLvcNpQ-XefH4xvAWP7vWnNPtvv0ZQnftbCVx03oc-6kGNIztebEbMDnh-iK193nHls0p4bKbXLAb2Ud9OoQLJlcZ8zI8VjfUdTpg8aA2DtlOR6n_2splwL9X8Jjlko5JluIUVaV3pxPvI6eCUF86FKIgN4CY8Cf-pzMXtbOw4-1pMXiwM"/>
+<div class="absolute bottom-1 left-1 px-1 bg-surface-container-lowest/80 font-telemetry-code text-[9px] text-primary">SHOT 1.1 / TRACKING</div>
+</div>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">LENS: 40mm Cooke Anamorphic // T2.0</span>
+</div>
+<!-- Scene Details -->
+<div class="md:col-span-8 flex flex-col gap-space-sm">
+<div>
+<span class="font-lens-tag text-lens-tag text-primary uppercase">// VISUAL BLOCK</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+                  Handheld tight tracking shot pinned to Omar’s shoes accelerating down the atrium corridor. Elevator chimes collide. Forty smartphones buzz simultaneously on boardroom surfaces. Light flares distort across polarized glass partitions.
+                </p>
+</div>
+<div>
+<span class="font-lens-tag text-lens-tag text-secondary uppercase">// AUDIO MATRIX [PRE-VACUUM]</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Piercing audio cacophony of Slack ping cascades, Bloomberg terminal tickers, and elevator warning tones boosted aggressively to 120dB. Low rumble of HVAC engines simulating physical claustrophobia.
+                </p>
+</div>
+<div class="bg-surface-container-lowest p-space-xs flex items-center justify-between font-telemetry-code text-[11px] text-on-surface-variant">
+<span>DIALOGUE / VO: <strong class="text-on-surface">(None)</strong></span>
+<span class="text-secondary-fixed">ATMOSPHERE: HIGH ENTROPY</span>
+</div>
+</div>
+</div>
+</article>
+<!-- SCENE 02 -->
+<article class="bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all">
+<header class="p-space-sm bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 bg-surface-container-highest text-primary font-label-caps text-[11px] font-bold">SCENE 02</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface font-semibold">INT. CORNER OFFICE DESK - 08:26 AM</span>
+</div>
+<div class="flex items-center gap-space-xs font-telemetry-code text-[11px] text-on-surface-variant">
+<span>EST. RUNTIME: 0:13s</span>
+<span class="material-symbols-outlined text-[14px] text-primary">videocam</span>
+</div>
+</header>
+<div class="p-space-md grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Scene Thumbnail -->
+<div class="md:col-span-4 flex flex-col gap-space-xs">
+<div class="w-full h-32 relative overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Chiaroscuro studio shot of an executive male hand resting over a sleek matte black Dr Kaif coffee canister on a dark slate desk, dramatic side rim light capturing rich amber and vermilion reflections on the brushed metal rim, atmospheric haze, ultra-fine texture, 8k cinematic still." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjbWLmvwFRceFbNGjvCck-drXkxKxhSxlcnCGoo8OJi4N-k52-DSvmqBGJUKc1UTHazmu4Gj6zqKOPviBSZUUeFrt3464a_f6ysH9Q3e5E6pl843y1gO-RqxJZDR0zxiwXGlR7rJh9IM52-gsSUIY3rNhHruQP9-5dGOgGMqZPoF-vlNqaTvBkusd2RwG48yH_AAwg78M1BXWs_T5d1iwGp0dCQH9ml-DLvkihcXxB"/>
+<div class="absolute bottom-1 left-1 px-1 bg-surface-container-lowest/80 font-telemetry-code text-[9px] text-primary">SHOT 2.1 / MACRO ECU</div>
+</div>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">LENS: 90mm Macro Cine Prime // T2.8</span>
+</div>
+<!-- Scene Details -->
+<div class="md:col-span-8 flex flex-col gap-space-sm">
+<div>
+<span class="font-lens-tag text-lens-tag text-primary uppercase">// VISUAL BLOCK</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+                  Omar shuts the heavy soundproof glass door. He unwraps the Dr Kaif matte black canister. Extreme macro on his thumb unlatching the lid: the mechanical metal-on-metal click triggers a microscopic high-frequency optical flare.
+                </p>
+</div>
+<!-- VO Segment Highlight Card -->
+<div class="p-space-sm bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-lens-tag text-lens-tag text-primary-container uppercase font-bold">// VOICEOVER [WHISPER INTIMACY]</span>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">INTIMATE REVERB: 0%</span>
+</div>
+<blockquote class="font-headline-sm text-headline-sm text-on-surface italic">
+                  “They can purchase your hours. But they cannot touch this minute.”
+                </blockquote>
+<div class="font-body-md text-[13px] text-secondary font-medium hidden" id="ar-translation-02">
+                  “بإمكانهم شراء ساعاتك. لكنهم لن يمسوا هذه الدقيقة أبداً.”
+                </div>
+</div>
+<div class="flex items-center gap-space-sm font-telemetry-code text-[11px] text-on-surface-variant">
+<span>SOUND: MECHANICAL CLICK DISSOLVES REVERB</span>
+</div>
+</div>
+</div>
+</article>
+<!-- SCENE 03 -->
+<article class="bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all">
+<header class="p-space-sm bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 bg-primary-container text-on-primary-container font-label-caps text-[11px] font-bold">SCENE 03 [PIVOT]</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface font-semibold">INT. THE SIP - 08:27 AM</span>
+</div>
+<div class="flex items-center gap-space-xs font-telemetry-code text-[11px] text-primary">
+<span>EST. RUNTIME: 0:21s</span>
+<span class="material-symbols-outlined text-[14px]">graphic_eq</span>
+</div>
+</header>
+<div class="p-space-md grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Scene Thumbnail -->
+<div class="md:col-span-4 flex flex-col gap-space-xs">
+<div class="w-full h-32 relative overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Phantom Flex 4K capture at 1000fps of a viscous, golden amber Dr Kaif espresso stream falling into an obsidian black porcelain cup, micro bubbles bursting in glorious hyper-detail, back-lit with a razor-sharp warm beam cutting through an pitch-black room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt3VTwzoBzi1gWMEm9TSOvWCfkTqvgaYav0yXMKqgVRnqoK3BbLSS0yU5Dbjlh6HgoJfdnFXrWAddWT8H5JJxX61hyDuhdyEOY2O4eJUMA03fV78vDAqxKKETOKdv6GwEatGy2h2ru-cYnVt4hmeqQ7We7Lp4qkqHP2yBV1xParRISIBRIbD0OFzRoj-X93_vypmSBJqOOaCyZZuELwCeC-pI2YjnqbmmvaKSlKqM5"/>
+<div class="absolute bottom-1 left-1 px-1 bg-primary-container text-on-primary-container font-telemetry-code text-[9px] font-bold">HIGH-SPEED 1000 FPS</div>
+</div>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">RIG: Phantom 4K Flex // Bolt Cinebot</span>
+</div>
+<!-- Scene Details -->
+<div class="md:col-span-8 flex flex-col gap-space-sm">
+<div>
+<span class="font-lens-tag text-lens-tag text-primary uppercase">// VISUAL BLOCK</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+                  Extreme slow motion 1000fps espresso stream swirling like liquid bronze. The porcelain touches Omar’s lips. His eyelids close. Camera glides effortlessly into absolute blackness behind his profile.
+                </p>
+</div>
+<div>
+<span class="font-lens-tag text-lens-tag text-primary-container uppercase font-bold">// THE TRANSITION CUT (AUDIO SHEAR)</span>
+<p class="font-body-sm text-body-sm text-primary font-semibold mt-0.5">
+                  ALL CITY AND DIGITAL NOISE INSTANTLY SNAPS OFF. A deep sub-bass vacuum thump (24Hz). Dead silence. Only Omar’s measured, steady heartbeat resonating slowly.
+                </p>
+</div>
+<div class="p-space-xs bg-surface-container font-telemetry-code text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>MIX SPEC: Dolby Atmos Binaural Spatial Bed</span>
+<span class="text-primary font-bold">PULSE: 54 BPM</span>
+</div>
+</div>
+</div>
+</article>
+<!-- SCENE 04 -->
+<article class="bg-surface-container-low overflow-hidden hover:bg-surface-container transition-all">
+<header class="p-space-sm bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 bg-surface-container-highest text-primary font-label-caps text-[11px] font-bold">SCENE 04</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface font-semibold">SUPER / TITLE CARD - 08:28 AM</span>
+</div>
+<div class="flex items-center gap-space-xs font-telemetry-code text-[11px] text-on-surface-variant">
+<span>EST. RUNTIME: 0:12s</span>
+<span class="material-symbols-outlined text-[14px] text-primary">tv</span>
+</div>
+</header>
+<div class="p-space-md flex flex-col gap-space-md">
+<!-- Grand Prix Title Graphic Mockup -->
+<div class="w-full bg-surface-container-lowest p-space-lg flex flex-col items-center justify-center text-center gap-space-xs relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">// END ROLLER FRAME</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-wider uppercase font-extrabold">
+                DR KAIF. SOVEREIGN TERRITORY.
+              </h2>
+<div class="font-headline-md text-headline-md text-secondary font-bold hidden" id="ar-translation-04">
+                د. كيف. سيادةٌ لا تُمس.
+              </div>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant mt-space-xs">
+                Available at Reserve Boutiques &amp; Direct-to-Sanctuary Dispatch.
+              </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md font-telemetry-code text-telemetry-code">
+<div class="p-space-xs bg-surface-container text-on-surface-variant flex flex-col gap-0.5">
+<span class="text-primary font-semibold">TYPOGRAPHY LOCKUP</span>
+<span>Syne Heavy Condensed / Tracking +0.18em / Color: Optic Bone</span>
+</div>
+<div class="p-space-xs bg-surface-container text-on-surface-variant flex flex-col gap-0.5">
+<span class="text-primary font-semibold">SONIC OUTRO</span>
+<span>Single acoustic cello bow harmonic reverberating into infinite decay.</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- ========================================== -->
+<!-- COLUMN 3: PRODUCTION INTELLIGENCE & DIRECTOR NOTES (Cols 9-12) -->
+<!-- ========================================== -->
+<aside class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Panel Header Bar -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps text-on-surface">
+<span class="material-symbols-outlined text-primary text-[15px]">psychology</span>
+<span>DIRECTOR PRODUCTION INTEL</span>
+</div>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">SPEC_v1.0</span>
+</div>
+<!-- Narrative Strategy Card (3-Act Escalation) -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-sm">
+<span class="font-lens-tag text-lens-tag text-primary uppercase">// NARRATIVE STRATEGY</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The 3-Act Escalation Breakdown</h4>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<!-- Act 1 -->
+<div class="p-space-xs bg-surface-container flex flex-col gap-0.5">
+<div class="flex items-center justify-between font-telemetry-code text-[11px]">
+<span class="text-primary font-bold">ACT I: THE CAGE (00:00 - 00:20)</span>
+<span class="text-on-surface-variant">SENSORY ASSAULT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Establish hyper-stimulus overload. Omar as captive to collective enterprise urgency.
+            </p>
+</div>
+<!-- Act 2 -->
+<div class="p-space-xs bg-surface-container flex flex-col gap-0.5">
+<div class="flex items-center justify-between font-telemetry-code text-[11px]">
+<span class="text-primary-container font-bold">ACT II: THE SEVERANCE (00:21 - 00:34)</span>
+<span class="text-on-surface-variant">THE PIVOT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Deliberate deceleration. The packaging acts as a physical boundary stone carving out autonomous space.
+            </p>
+</div>
+<!-- Act 3 -->
+<div class="p-space-xs bg-surface-container flex flex-col gap-0.5">
+<div class="flex items-center justify-between font-telemetry-code text-[11px]">
+<span class="text-secondary font-bold">ACT III: THE CITADEL (00:35 - 00:60)</span>
+<span class="text-on-surface-variant">ABSOLUTE REIGN</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The first sip. Sensory vacuum. Omar operates from invulnerable mental architecture.
+            </p>
+</div>
+</div>
+</div>
+<!-- Psychological Turn Analysis Gauge -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-lens-tag text-lens-tag text-secondary uppercase">// EMOTIONAL TURN VECTOR</span>
+<span class="font-telemetry-code text-[10px] text-primary">T: 00:00:34</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Second 0:34 Psychological Pivot</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Shift vector: from visceral, cortisol-fueled anxiety directly into crystalline dominance.
+        </p>
+<!-- Inline Metric Gauge SVG -->
+<div class="p-space-sm bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex justify-between font-telemetry-code text-[10px]">
+<span class="text-on-surface-variant">PANIC STATE (0:00)</span>
+<span class="text-primary-container font-bold">SOVEREIGNTY (0:60)</span>
+</div>
+<svg class="w-full h-6" fill="none" viewbox="0 0 240 24">
+<rect fill="#1b1c1e" height="8" rx="0" width="240" y="8"></rect>
+<rect fill="#ff5541" height="8" rx="0" width="186" y="8"></rect>
+<!-- Pivot line -->
+<line stroke="#ffb4a8" stroke-width="2" x1="136" x2="136" y1="0" y2="24"></line>
+</svg>
+<div class="flex justify-between font-telemetry-code text-[9px] text-on-surface-variant">
+<span>Cortisol High</span>
+<span class="text-primary font-semibold">← PIVOT MOMENT →</span>
+<span>Alpha Wave Lock</span>
+</div>
+</div>
+</div>
+<!-- Visual Direction & Lighting Specs -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-sm">
+<span class="font-lens-tag text-lens-tag text-tertiary uppercase">// VISUAL DIRECTION &amp; LIGHTING</span>
+<h4 class="font-headline-sm text-[16px] text-on-surface">Chiaroscuro Obsidian Palettes</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          High-contrast chiaroscuro. Raw obsidian shadows with saturated amber crema accents piercing the frame. 35mm anamorphic grain with subtle gate-weave.
+        </p>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs font-telemetry-code text-[10px]">
+<div class="p-space-xs bg-surface-container text-on-surface-variant">
+<span class="text-primary font-bold block">KEY LIGHT</span>
+            Arri SkyPanel S360 through unbleached muslin
+          </div>
+<div class="p-space-xs bg-surface-container text-on-surface-variant">
+<span class="text-primary font-bold block">SHADOW RATIO</span>
+            16:1 Dramatic falloff into deep zero-lux void
+          </div>
+<div class="p-space-xs bg-surface-container text-on-surface-variant">
+<span class="text-primary font-bold block">COLOR TEMP</span>
+            Dual: 5600K office cold / 2800K coffee crema
+          </div>
+<div class="p-space-xs bg-surface-container text-on-surface-variant">
+<span class="text-primary font-bold block">POST-LUT</span>
+            Kodak 5219 Emulation + custom FX2-Amber node
+          </div>
+</div>
+</div>
+<!-- Talent & Casting Specs -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-sm">
+<span class="font-lens-tag text-lens-tag text-primary uppercase">// TALENT &amp; CASTING SPEC</span>
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 bg-surface-container-lowest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Black and white portrait headshot of a middle eastern executive male in his late 30s with intense focused dark eyes, sculpted jawline, slight stubble, calm posture, and dignified cinematic intensity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw9ClSh1VovH0EBNzArEkAN4BYAuHQ3ekbLPWcPrB55FCFbWvf9MWSakCgmQz6KL11AnnTzhF581UeHgRfWZF9pqXq2qn5bQG-5QW7YQtuN0zYPvMMGjucOdRH8Hk81OTyrAdq7Pu5wL0h83zl8eWObzkcjViWJap4YGsEJEBy1qWmS2cXSbET2HFKoqlCgIMLL-0NvOXGTte0TTKLWSnXLU72wPlaFL4hVQWrtq2k"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] text-on-surface">Role: Omar (Lead)</span>
+<span class="font-telemetry-code text-[11px] text-on-surface-variant">Age: 34-42 // Presence: Unshakable</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Requires stoic restraint over theatricality. Authentic mental fatigue that morphs visibly into calibrated stillness rather than superficial euphoria.
+        </p>
+</div>
+<!-- Director Approval Seal -->
+<div class="p-space-sm bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-telemetry-code text-[11px]">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="text-on-surface font-semibold">DIRECTOR GREENLIT</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container">SIGN-OFF 100%</span>
+</div>
+</aside>
+</div>
+<!-- Bottom Global Production Telemetry Ribbon -->
+<section class="w-full bg-surface-container-lowest p-gutter flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-md font-telemetry-code text-telemetry-code text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="text-primary font-bold">STAGE:</span>
+<span class="text-on-surface">CANONICAL SCRIPT COMMITTED</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-primary font-bold">TOTAL ASSETS:</span>
+<span class="text-on-surface">4 Scenes // 1 Voiceover Stem // 1 Hero Audio Drop</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-primary font-bold">NEXT HANDOFF:</span>
+<span class="text-on-surface">Production House (Riyadh / London Shoot Unit)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container text-on-surface hover:bg-surface-container-high font-label-caps text-label-caps uppercase transition-colors cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>Return to Cockpit</span>
+</button>
+</div>
+</section>
+<!-- Client-side Interactive Logic for Fast Execution -->
+<script>
+    // Copy Markdown functionality
+    const btnCopy = document.getElementById('btn-copy-md');
+    const copyStatus = document.getElementById('copy-status');
+    
+    const scriptMarkdown = `# CAMPAIGN TVC 60s // HERO COMMERCIAL
+## THE FIRST SIXTY SECONDS OF SOVEREIGNTY
+
+### SCENE 01: INT. GLASS TOWER - 08:24 AM
+**VISUAL**: Handheld tight tracking shot following Omar's shoes. Elevator dings, phones buzz simultaneously. 
+**SOUND**: Piercing audio cacophony of Slack notifications amplified to 120dB.
+**DIALOGUE / VO**: (None)
+
+### SCENE 02: INT. CORNER OFFICE DESK - 08:26 AM
+**VISUAL**: He unwraps Dr Kaif matte black canister. The click of the lid triggers a high-frequency cut.
+**VO (WHISPER)**: "They can purchase your hours. But they cannot touch this minute."
+
+### SCENE 03: INT. THE SIP - 08:27 AM
+**VISUAL**: Extreme slow motion 1000fps espresso stream. Pure vacuum silence.
+**AUDIO**: All city and digital noise instantly snaps off. Only Omar's steady heartbeat (54 BPM).
+
+### SCENE 04: SUPER / TITLE CARD - 08:28 AM
+**TEXT ON SCREEN**: "DR KAIF. SOVEREIGN TERRITORY."
+**AUDIO**: Single acoustic cello bow harmonic into decay.
+`;
+
+    btnCopy.addEventListener('click', () => {
+      navigator.clipboard.writeText(scriptMarkdown).then(() => {
+        copyStatus.innerText = 'COPIED TO CLIPBOARD!';
+        btnCopy.classList.remove('bg-primary-container', 'text-on-primary-container');
+        btnCopy.classList.add('bg-primary', 'text-on-primary');
+        setTimeout(() => {
+          copyStatus.innerText = 'Copy Markdown';
+          btnCopy.classList.add('bg-primary-container', 'text-on-primary-container');
+          btnCopy.classList.remove('bg-primary', 'text-on-primary');
+        }, 2200);
+      });
+    });
+
+    // Arabic Localization Toggle
+    const btnArabic = document.getElementById('btn-arabic-toggle');
+    const arLabel = document.getElementById('arabic-label');
+    const ar02 = document.getElementById('ar-translation-02');
+    const ar04 = document.getElementById('ar-translation-04');
+    let isArabicActive = false;
+
+    btnArabic.addEventListener('click', () => {
+      isArabicActive = !isArabicActive;
+      if (isArabicActive) {
+        ar02.classList.remove('hidden');
+        ar04.classList.remove('hidden');
+        arLabel.innerText = 'Arabic Active [ON]';
+        btnArabic.classList.add('bg-secondary', 'text-on-secondary');
+        btnArabic.classList.remove('bg-surface-container', 'text-secondary');
+      } else {
+        ar02.classList.add('hidden');
+        ar04.classList.add('hidden');
+        arLabel.innerText = 'Arabic Localization [AR-SA]';
+        btnArabic.classList.remove('bg-secondary', 'text-on-secondary');
+        btnArabic.classList.add('bg-surface-container', 'text-secondary');
+      }
+    });
+
+    // Toast triggers for secondary action buttons
+    document.getElementById('btn-export-bible').addEventListener('click', () => {
+      const orig = document.getElementById('btn-export-bible').innerHTML;
+      document.getElementById('btn-export-bible').innerHTML = '<span class="material-symbols-outlined text-[14px] animate-spin">sync</span> Compiling PDF...';
+      setTimeout(() => {
+        document.getElementById('btn-export-bible').innerHTML = orig;
+      }, 1500);
+    });
+
+    document.getElementById('btn-shot-list').addEventListener('click', () => {
+      const orig = document.getElementById('btn-shot-list').innerHTML;
+      document.getElementById('btn-shot-list').innerHTML = '<span class="material-symbols-outlined text-[14px]">done</span> Shot List Ready';
+      setTimeout(() => {
+        document.getElementById('btn-shot-list').innerHTML = orig;
+      }, 1500);
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-md px-gutter mt-auto"><div class="w-full flex flex-col md:flex-row items-center justify-between gap-space-sm font-telemetry-code text-telemetry-code text-on-surface-variant"><div class="flex items-center gap-space-md"><span>FX2 CREATIVE OPERATING SYSTEM [KERNEL v2.4]</span><span>STATUS // 200 OK</span></div><div class="flex items-center gap-space-md"><span class="hover:text-on-surface transition-colors cursor-pointer">METABOLISM REPOSITORIES</span><span class="hover:text-on-surface transition-colors cursor-pointer">SYSTEM TELEMETRY</span><span>© 2025 FX2 WORKSPACE</span></div></div></footer></body></html>

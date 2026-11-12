@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#121316", "outline": "#998f81", "on-secondary-fixed": "#241a00", "inverse-on-surface": "#2f3033", "error-container": "#93000a", "surface-variant": "#343537", "on-tertiary": "#660700", "primary-fixed-dim": "#e3c281", "on-tertiary-fixed-variant": "#8d1607", "secondary": "#e9c349", "surface-container-lowest": "#0d0e10", "surface-bright": "#38393c", "primary": "#ffe1a7", "on-error-container": "#ffdad6", "tertiary-fixed": "#ffdad4", "inverse-surface": "#e3e2e5", "surface-container-low": "#1b1c1e", "on-error": "#690005", "background": "#121316", "surface-tint": "#e3c281", "primary-fixed": "#ffdea0", "surface-dim": "#121316", "error": "#ffb4ab", "tertiary-fixed-dim": "#ffb4a6", "tertiary-container": "#ffb6a9", "inverse-primary": "#735b24", "surface-container-highest": "#343537", "on-secondary": "#3c2f00", "on-tertiary-fixed": "#3f0300", "on-primary": "#402d00", "on-surface-variant": "#d0c5b5", "secondary-fixed-dim": "#e9c349", "surface-container-high": "#292a2c", "outline-variant": "#4d463a", "on-primary-fixed": "#261a00", "primary-container": "#e5c483", "on-secondary-fixed-variant": "#574500", "on-tertiary-container": "#9f2413", "on-primary-container": "#68501b", "on-secondary-container": "#342800", "on-primary-fixed-variant": "#5a430e", "on-surface": "#e3e2e5", "secondary-container": "#af8d11", "on-background": "#e3e2e5", "tertiary": "#ffdcd6", "secondary-fixed": "#ffe088", "surface-container": "#1f2022" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1.25rem", "space-lg": "2rem", "margin": "1.5rem", "margin-desktop": "4rem", "space-xl": "3.5rem", "space-xs": "0.375rem", "space-sm": "0.75rem", "gutter-desktop": "2.5rem", "gutter": "1.5rem" }, "fontFamily": { "label-sm": [ "IBM Plex Sans" ], "technical-mono": [ "Space Mono" ], "headline-lg-mobile": [ "Noto Serif" ], "headline-sm": [ "IBM Plex Sans" ], "display-hero": [ "Noto Serif" ], "display-hero-mobile": [ "Noto Serif" ], "body-sm": [ "IBM Plex Sans" ], "body-lg": [ "IBM Plex Sans" ], "label-md": [ "IBM Plex Sans" ], "headline-lg": [ "Noto Serif" ], "body-md": [ "IBM Plex Sans" ], "headline-md": [ "Noto Serif" ] }, "fontSize": { "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "technical-mono": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "38px", "letterSpacing": "0", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "30px", "fontWeight": "600" } ], "display-hero": [ "56px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero-mobile": [ "36px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-lg": [ "17px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "headline-lg": [ "38px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "500" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "26px", { "lineHeight": "36px", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><img alt="FX Atelier Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WHHwpZAn2XUWRGBEQdB562h1RlsPwPVnGKpf3criCubvMZMRg6-QGYFs39umnIwANTYkpfkXdeKEhAQiXlDiaeH2c56ngw2xcArg5lidp6hKeeATW6OkFpqZyR9AcPYL229uWinRHk0IaHAEN2wANFr02KeYvP5tHPDUPxBI7BCSPk0_TqLmpoJR1uRW4yAq4gb8eEGG_s39Pgnyw3XgEzx_W8hL4T5S9H--arumyZSpLZ2XdAqZVrIQ"/><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-primary">FX</span><span class="font-label-sm text-label-sm text-outline">|</span><span class="font-body-sm text-body-sm text-on-surface truncate">مختبر الإبداع والذكاء الاستراتيجي</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="font-technical-mono text-technical-mono text-secondary">مشروع: سرمد — عطر الصمت</span><span class="font-technical-mono text-technical-mono text-outline">/</span><span class="font-technical-mono text-technical-mono text-on-surface-variant truncate">رولس رويس × دار الطيب</span><span class="inline-block w-1 h-1 rounded-full bg-secondary ml-1"></span><span class="font-technical-mono text-technical-mono text-outline">CLAUDE 3.5 • 0.8ms</span></div></div></div><nav class="hidden xl:flex items-center bg-surface-container-low px-space-xs py-space-xs gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm flex items-center gap-space-xs" data-path="creative-brief" href="#"><span class="font-technical-mono text-technical-mono text-outline">01</span><span>الموجز الفني</span></a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm flex items-center gap-space-xs" data-path="strategic-vision" href="#"><span class="font-technical-mono text-technical-mono text-outline">02</span><span>الرؤية الاستراتيجية</span></a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm flex items-center gap-space-xs" data-path="creative-concept" href="#"><span class="font-technical-mono text-technical-mono text-outline">03</span><span>الفكرة الإبداعية</span></a><a aria-current="page" class="px-space-md py-space-xs transition-colors font-body-sm flex items-center gap-space-xs bg-primary-container text-on-primary-container" data-path="cinematic-script" href="#"><span class="font-technical-mono text-technical-mono text-outline">04</span><span>السيناريو واللوحات</span></a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden md:flex items-center bg-surface-container-low px-space-sm py-space-xs gap-space-xs"><span class="inline-flex h-2 w-2 rounded-full bg-secondary animate-pulse"></span><span class="font-body-sm text-body-sm text-primary">يبحث عن التوتر الإبداعي</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-technical-mono text-technical-mono text-on-surface-variant">1,420 / 8,000 TOKENS</span><span class="font-technical-mono text-technical-mono text-outline">OPENROUTER PROXY</span></div><div class="hidden sm:flex items-center bg-surface-container px-space-sm py-space-xs gap-space-xs text-on-surface-variant"><span class="font-technical-mono text-technical-mono text-outline">⌘K</span><span class="font-body-sm text-body-sm">الأرشيف</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed right-0 top-20 bottom-10 w-72 bg-surface-container-lowest/80 backdrop-blur-xl z-40 flex flex-col justify-between py-space-md shadow-[0_0_35px_-8px_rgba(212,175,55,0.08)]"><div class="px-space-md"><div class="flex items-center justify-between pb-space-sm"><span class="font-technical-mono text-technical-mono text-secondary uppercase">LATERAL ENGINES</span><span class="font-label-sm text-label-sm text-outline">محركات التفكير</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary"><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-provocation" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">01</span><span class="font-body-sm text-body-sm">الاستفزاز</span></div><span class="font-technical-mono text-technical-mono text-secondary">0.85</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-analogies" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">02</span><span class="font-body-sm text-body-sm">التناظر والتشبيه</span></div><span class="font-technical-mono text-technical-mono text-outline">0.40</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-stimulus" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">03</span><span class="font-body-sm text-body-sm">الحافز العشوائي</span></div><span class="font-technical-mono text-technical-mono text-outline">0.12</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-opposite" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">04</span><span class="font-body-sm text-body-sm">التفكير العكسي</span></div><span class="font-technical-mono text-technical-mono text-outline">0.65</span></a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center justify-between" data-path="engine-reversal" href="#"><div class="flex items-center gap-space-sm"><span class="font-technical-mono text-technical-mono text-outline">05</span><span class="font-body-sm text-body-sm">قلب القيود</span></div><span class="font-technical-mono text-technical-mono text-secondary">0.92</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container-low p-space-sm flex flex-col gap-space-xs"><div class="flex items-center justify-between text-outline font-technical-mono text-technical-mono"><span>CALIBRATION</span><span>TENSION 92%</span></div><div class="w-full h-1 bg-surface-container-highest overflow-hidden"><div class="h-full bg-secondary w-11/12"></div></div></div></div></aside><div class="pr-72 pb-10"><main class="relative pt-20 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Top Archival Production Slate Ribbon -->
+<section class="w-full bg-surface-container-lowest px-gutter-desktop py-space-md shadow-2xl relative overflow-hidden">
+<!-- Atmospheric subtle ambient aura -->
+<div class="absolute -top-24 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 left-10 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-0.5 bg-surface-container-high text-secondary font-technical-mono text-technical-mono tracking-widest uppercase">STAGE // 04</span>
+<span class="font-label-sm text-label-sm text-outline">السيناريو الإخراجي واللوحات البصرية</span>
+<span class="text-outline-variant font-technical-mono text-technical-mono">•</span>
+<div class="flex items-center gap-space-xs text-primary font-technical-mono text-technical-mono">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span>DIRECTORIAL MASTERCUT MASTER NEGATIVE</span>
+</div>
+</div>
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero text-primary tracking-tight mt-1">
+          سرمد: صدى السكون
+        </h1>
+<div class="flex items-center gap-space-md text-on-surface-variant font-headline-sm text-headline-sm">
+<span>فيلم سينمائي نخبوي — ٦٠ ثانية</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface font-body-md text-body-md">تحالف: رولس رويس × دار الطيب</span>
+</div>
+</div>
+<!-- Action Suite & Director View Switchers -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<!-- Interactive View Selector Tabs -->
+<div class="flex items-center bg-surface-container-low p-1 gap-1">
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary-container font-body-sm text-body-sm transition-all flex items-center gap-space-xs" id="tab-storyboard" onclick="switchView('storyboard')">
+<span class="material-symbols-outlined text-[16px]">view_carousel</span>
+<span>لوحة المشاهد (Storyboard)</span>
+</button>
+<button class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-body-sm text-body-sm flex items-center gap-space-xs" id="tab-screenplay" onclick="switchView('screenplay')">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>النص الإخراجي (Screenplay)</span>
+</button>
+<button class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-body-sm text-body-sm flex items-center gap-space-xs" id="tab-sound" onclick="switchView('sound')">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+<span>الهندسة الصوتية (Spatial Audio)</span>
+</button>
+</div>
+<!-- Export Monolith Trigger -->
+<div class="relative group">
+<button class="w-full sm:w-auto px-space-md py-space-xs bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors hover:bg-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">movie_edit</span>
+<span>تصدير الحزمة الإخراجية</span>
+<span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+<div class="absolute left-0 mt-1 w-64 bg-surface-container-high shadow-2xl invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all z-50 flex flex-col">
+<a class="px-space-md py-space-sm hover:bg-surface-container-highest text-on-surface flex items-center justify-between font-body-sm text-body-sm" href="#">
+<span>تصدير سيناريو سينمائي (FDX)</span>
+<span class="font-technical-mono text-technical-mono text-secondary">FINAL DRAFT</span>
+</a>
+<a class="px-space-md py-space-sm hover:bg-surface-container-highest text-on-surface flex items-center justify-between font-body-sm text-body-sm" href="#">
+<span>الحقيبة الإخراجية الشاملة (Deck)</span>
+<span class="font-technical-mono text-technical-mono text-secondary">PRINT PDF</span>
+</a>
+<a class="px-space-md py-space-sm hover:bg-surface-container-highest text-on-surface flex items-center justify-between font-body-sm text-body-sm" href="#">
+<span>قائمة التلوين والمونتاج (EDL/XML)</span>
+<span class="font-technical-mono text-technical-mono text-outline">DAVINCI</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Director Metadata Technical Ribbon -->
+<div class="mt-space-md pt-space-sm grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-space-md text-on-surface-variant">
+<div class="flex flex-col gap-0.5">
+<span class="font-technical-mono text-technical-mono text-outline">DIRECTOR MODEL</span>
+<span class="font-label-md text-label-md text-primary">FX Creative Core 4.2</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-technical-mono text-technical-mono text-outline">ASPECT RATIO</span>
+<span class="font-label-md text-label-md text-on-surface">2.39:1 Anamorphic DCI</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-technical-mono text-technical-mono text-outline">OPTICS SPECIFICATION</span>
+<span class="font-label-md text-label-md text-on-surface">Cooke Anamorphic /i FF+</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-technical-mono text-technical-mono text-outline">COLOR LAB EMULSION</span>
+<span class="font-label-md text-label-md text-secondary">Kodak Vision3 5219 Warm</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-technical-mono text-technical-mono text-outline">SOUND PROTOCOL</span>
+<span class="font-label-md text-label-md text-on-surface">Dolby Atmos 7.1.4 Spatial</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-technical-mono text-technical-mono text-outline">STATUS // ENGINE</span>
+<div class="flex items-center gap-space-xs text-secondary font-technical-mono text-technical-mono">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+<span>APPROVED • 100% READY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Scrubbing Master Film Strip Tape & Master Timeline Bar -->
+<section class="w-full bg-surface-container-high px-gutter-desktop py-space-sm sticky top-20 z-30 shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-technical-mono text-technical-mono">
+<div class="flex items-center gap-space-md">
+<span class="text-primary font-bold">TC MASTER 00:00:00:00</span>
+<span class="hidden sm:inline text-outline-variant">►►</span>
+<span class="text-secondary">SCENE-BY-SCENE SCRUBBER</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>TOTAL RUNTIME: 00:01:00:00</span>
+<span class="text-primary font-bold">24.00 FPS</span>
+</div>
+</div>
+<!-- Segmented Timecode Bar with Shot Proportions -->
+<div class="relative w-full h-8 bg-surface-container-lowest flex items-stretch overflow-hidden select-none">
+<!-- Scene 1: 12s = 20% -->
+<a class="group relative w-1/5 bg-surface-container hover:bg-surface-bright transition-colors flex items-center justify-between px-space-xs" href="#scene-01">
+<div class="flex flex-col">
+<span class="font-technical-mono text-technical-mono text-secondary group-hover:text-primary">SC 01</span>
+<span class="text-[10px] text-outline font-technical-mono leading-none">00:00 - 00:12</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface truncate hidden md:inline">الأفق المتجمد</span>
+<div class="h-full w-0.5 bg-outline-variant absolute left-0 top-0"></div>
+</a>
+<!-- Scene 2: 16s = 26.6% -->
+<a class="group relative w-[26.66%] bg-surface-container-low hover:bg-surface-bright transition-colors flex items-center justify-between px-space-xs" href="#scene-02">
+<div class="flex flex-col">
+<span class="font-technical-mono text-technical-mono text-secondary group-hover:text-primary">SC 02</span>
+<span class="text-[10px] text-outline font-technical-mono leading-none">00:12 - 00:28</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface truncate hidden md:inline">طقس السكون المعماري</span>
+<div class="h-full w-0.5 bg-outline-variant absolute left-0 top-0"></div>
+</a>
+<!-- Scene 3: 18s = 30% -->
+<a class="group relative w-[30%] bg-surface-container hover:bg-surface-bright transition-colors flex items-center justify-between px-space-xs" href="#scene-03">
+<div class="flex flex-col">
+<span class="font-technical-mono text-technical-mono text-secondary group-hover:text-primary">SC 03</span>
+<span class="text-[10px] text-outline font-technical-mono leading-none">00:28 - 00:46</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface truncate hidden md:inline">الانطلاق الصامت</span>
+<div class="h-full w-0.5 bg-outline-variant absolute left-0 top-0"></div>
+</a>
+<!-- Scene 4: 14s = 23.33% -->
+<a class="group relative w-[23.33%] bg-surface-container-low hover:bg-surface-bright transition-colors flex items-center justify-between px-space-xs" href="#scene-04">
+<div class="flex flex-col">
+<span class="font-technical-mono text-technical-mono text-secondary group-hover:text-primary">SC 04</span>
+<span class="text-[10px] text-outline font-technical-mono leading-none">00:46 - 01:00</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface truncate hidden md:inline">الخاتمة والأثر الخالد</span>
+</a>
+</div>
+</div>
+</section>
+<!-- VIEW CONTAINER 1: STORYBOARD TIMELINE (Default View) -->
+<div class="w-full px-gutter-desktop py-space-xl flex flex-col gap-space-xl" id="view-storyboard">
+<!-- ============================================== -->
+<!-- SCENE 01 -->
+<!-- ============================================== -->
+<article class="relative flex flex-col bg-surface-container-low shadow-2xl transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(233,195,73,0.15)]" id="scene-01">
+<!-- Sprocket perforation accents for authentic film stock feel -->
+<div class="w-full h-3 bg-surface-container-lowest flex items-center justify-between px-space-md opacity-40">
+<div class="flex gap-4">
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+</div>
+<span class="font-technical-mono text-[9px] text-outline">KODAK 5219 • 35MM EASTMAN FOOTAGE 0481</span>
+<div class="flex gap-4">
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+</div>
+</div>
+<!-- Scene Header Ribbon -->
+<div class="p-space-md bg-surface-container flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="px-space-sm py-1 bg-surface-container-highest text-primary font-technical-mono text-technical-mono font-bold">SCENE 01 / TAKE 04</span>
+<h2 class="font-headline-md text-headline-md text-primary">الأفق المتجمد في الفجر</h2>
+<span class="text-outline font-technical-mono text-technical-mono">EXT. RED DESERT DAWN — 05:14 AM</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary font-technical-mono text-technical-mono">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>00:00:00 — 00:12:00 (١٢ ثانية)</span>
+</div>
+<span class="px-space-sm py-0.5 bg-surface-container-highest text-outline font-technical-mono text-technical-mono">ASPECT 2.39:1</span>
+</div>
+</div>
+<!-- Dual Column Layout: Cinematic Canvas & Editorial Script Desk -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Cinematic 2.39:1 Frame with Anamorphic Crop -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md flex flex-col justify-center">
+<div class="relative w-full aspect-[2.39/1] overflow-hidden group shadow-inner">
+<!-- 4 Corner Precision Brackets -->
+<span class="absolute top-2 right-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute top-2 left-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute bottom-2 right-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute bottom-2 left-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic wide anamorphic shot 2.39:1 of a bespoke dark graphite Rolls Royce standing motionless on cold crimson red desert sand dunes at pre-dawn twilight. Subtle warm brass horizon gradient glowing in deep dusk, soft morning mist, hyper-detailed metallic reflections on the car's body, moody chiaroscuro lighting, shot on 35mm film Kodak Vision3 5219 warm emulsion with soft grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKNlf9YJEoBXwg4I7VEv5Y9GXLs5T7Po9GQV2BqwPWb4Wxjw7smgX52hRwwLlsdfkw0ctXYTZ-8SH0vGmHhYgmhKYwSJOsbtoPX3L19LTwFnpJKJ0fu3cJSGag4KTaXfOrNSRxnxTNvFad8ccfjbYXzgDeN07wEPeMpnYVIzk30oTF3BP18jUxrQ_f2MUref869RspM35VSBlDg_4WeQJXWl2S23xY4o1tWZkxoPZA0QiBwEbwm5iv"/>
+<!-- Realtime Frame Overlay Information -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex flex-col justify-between p-space-sm opacity-90">
+<div class="flex justify-between items-center text-primary-fixed-dim font-technical-mono text-[10px]">
+<span>CAM: ULTRA-WIDE 35MM COOKE /i</span>
+<span>F/2.0 • ISO 320 • SHUTTER 180°</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="px-space-xs py-0.5 bg-surface-container-lowest/80 text-secondary font-technical-mono text-[10px]">FRAME 001 / TRACKING SLATE</span>
+<span class="text-on-surface font-body-sm text-[11px]">لقطة تتبع أرضية ٥٠ سم فوق رمال الربع الخالي الباردة</span>
+</div>
+</div>
+</div>
+<!-- Shot Metadata Sub-bar -->
+<div class="mt-space-sm flex items-center justify-between text-outline font-technical-mono text-technical-mono px-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="text-secondary">LENS: Cooke FF+ 35mm T2.3</span>
+<span>•</span>
+<span>CAMERA: Arri Alexa 65 Widescreen</span>
+</div>
+<span>DEPTH: ∞ (Infinity Focus)</span>
+</div>
+</div>
+<!-- Director's Script Breakdown Column -->
+<div class="lg:col-span-5 p-space-lg flex flex-col justify-between gap-space-md bg-surface-container-low">
+<!-- Breakdown Units -->
+<div class="flex flex-col gap-space-md">
+<!-- Visual & Action -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+<span>الفعل البصري وحركة المشهد</span>
+</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                تقف السيارة ككتلة نحتية معمارية مهيبة مصقولة وسط سكون صحراوي مطلق قبل طلوع الشمس. ينعكس الأفق النحاسي الخافت على المعدن الداكن بانسيابية تخطف الأنفاس، بلا أدنى اهتزاز أو ريح عاصفة.
+              </p>
+</div>
+<!-- Voiceover Script Slate -->
+<div class="bg-surface-container p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase">التعليق الصوتي (VOICEOVER)</span>
+<span class="font-technical-mono text-technical-mono text-outline">AT 00:08 (بعد ٨ ثوانٍ صمت)</span>
+</div>
+<blockquote class="font-display-hero-mobile text-headline-sm text-primary-fixed italic font-normal leading-relaxed">
+                "الضجيجُ حيلةُ مَن يخشى أن يُنسى..."
+              </blockquote>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">
+                نبرة وقورة، همس جهوري عميق مسجل بميكروفونات Neumann U87 على مسافة ٥ سم.
+              </span>
+</div>
+<!-- Acoustic Architecture -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+<span>المشهد الصوتي والموسيقى التصويرية</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                سكون تام ورياح بالغة النعومة، مع نبضات تردد تحت صوتي (Sub-bass drone at 32Hz) يتسلل إلى لاوعي المشاهد لفرض هيبة الصمت.
+              </p>
+</div>
+</div>
+<!-- Director's Tactical Annotation -->
+<div class="pt-space-sm bg-surface-container-high/50 p-space-sm flex items-center justify-between">
+<span class="font-technical-mono text-technical-mono text-outline">CALIBRATION SCORE</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-technical-mono text-technical-mono text-secondary">TENSION: 0.94</span>
+<span class="text-outline">/</span>
+<span class="font-technical-mono text-technical-mono text-primary">POETRY: 0.98</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- ============================================== -->
+<!-- SCENE 02 -->
+<!-- ============================================== -->
+<article class="relative flex flex-col bg-surface-container-low shadow-2xl transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(233,195,73,0.15)]" id="scene-02">
+<!-- Sprocket tape accent -->
+<div class="w-full h-3 bg-surface-container-lowest flex items-center justify-between px-space-md opacity-40">
+<div class="flex gap-4">
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+</div>
+<span class="font-technical-mono text-[9px] text-outline">KODAK 5219 • 35MM EASTMAN FOOTAGE 0482</span>
+<div class="flex gap-4">
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+</div>
+</div>
+<!-- Scene Header Ribbon -->
+<div class="p-space-md bg-surface-container flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="px-space-sm py-1 bg-surface-container-highest text-primary font-technical-mono text-technical-mono font-bold">SCENE 02 / TAKE 02</span>
+<h2 class="font-headline-md text-headline-md text-primary">طقس السكون المعماري</h2>
+<span class="text-outline font-technical-mono text-technical-mono">INT. PHANTOM CABIN &amp; ATELIER — 05:18 AM</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary font-technical-mono text-technical-mono">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>00:12:00 — 00:28:00 (١٦ ثانية)</span>
+</div>
+<span class="px-space-sm py-0.5 bg-surface-container-highest text-outline font-technical-mono text-technical-mono">MACRO ANAMORPHIC</span>
+</div>
+</div>
+<!-- Dual Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Cinematic 2.39:1 Frame with Anamorphic Crop -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md flex flex-col justify-center">
+<div class="relative w-full aspect-[2.39/1] overflow-hidden group shadow-inner">
+<!-- 4 Corner Precision Brackets -->
+<span class="absolute top-2 right-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute top-2 left-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute bottom-2 right-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute bottom-2 left-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic macro anamorphic shot 2.39:1 of a luxury monolithic perfume bottle carved from matte black basalt stone and brushed champagne brass. Suspended micro-mist droplets glistening in a dramatic golden ray of light inside a shadowy, sumptuous cabin interior. Hand in charcoal cashmere wool touching the flacon, shallow depth of field, Cooke 85mm anamorphic lens flare." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3YDj7yvhdP76aiC8cullsONXVTycmsIwthPVBxihZP-Ep0GnS3-yzroPt68d-Le-FjMhs2C3YU86LNFOsPfjqaiUNffKp9Ns6GRHYnQJ9U1pLUOcgNGu-mAaRfTjwTfrybCOakYPaOTgLPBhwbOSWKmaCG9RJfJbm94zFntt91bFZOWsezws7yqxPy38SHY5x97T_rFTvvCnH3D5joT1lh6M5FTFfx_Khiuvtw4_ERG0rbODFRBay"/>
+<!-- Realtime Frame Overlay Information -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex flex-col justify-between p-space-sm opacity-90">
+<div class="flex justify-between items-center text-primary-fixed-dim font-technical-mono text-[10px]">
+<span>CAM: MACRO ANAMORPHIC 85MM T1.9</span>
+<span>F/1.9 • RACK FOCUS • PRISM FLARE</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="px-space-xs py-0.5 bg-surface-container-lowest/80 text-secondary font-technical-mono text-[10px]">FRAME 289 / RACK FOCUS PUSH</span>
+<span class="text-on-surface font-body-sm text-[11px]">رذاذ عطري فائق الدقة معلق في هواء الظلال الذهبية</span>
+</div>
+</div>
+</div>
+<!-- Shot Metadata Sub-bar -->
+<div class="mt-space-sm flex items-center justify-between text-outline font-technical-mono text-technical-mono px-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="text-secondary">LENS: Cooke Anamorphic Macro 85mm</span>
+<span>•</span>
+<span>LIGHTING: Single 4K HMI Beam w/ Velvet Neg</span>
+</div>
+<span>APERTURE: T1.9</span>
+</div>
+</div>
+<!-- Director's Script Breakdown Column -->
+<div class="lg:col-span-5 p-space-lg flex flex-col justify-between gap-space-md bg-surface-container-low">
+<!-- Breakdown Units -->
+<div class="flex flex-col gap-space-md">
+<!-- Visual & Action -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+<span>الفعل البصري وتصميم الإضاءة</span>
+</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                يُفتح الباب بهدوء هيدروليكي لا يُسمع. يدٌ ترتدي معطف كشمير أسود تلمس زجاجة عطر «سرمد» المنحوتة من البازلت الأسود والذهب المطفي. ينطلق رذاذ خفيف مجهري يعلق في حزمة ضوء فجرية دافئة تتسلل للداخل.
+              </p>
+</div>
+<!-- Voiceover Script Slate -->
+<div class="bg-surface-container p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase">التعليق الصوتي (VOICEOVER)</span>
+<span class="font-technical-mono text-technical-mono text-outline">AT 00:19 (صوت دافئ متزن)</span>
+</div>
+<blockquote class="font-display-hero-mobile text-headline-sm text-primary-fixed italic font-normal leading-relaxed">
+                "...أمّا السيادة، فتُقاسُ بحجمِ الصمتِ الذي تصنعهُ حينَ تعبُر."
+              </blockquote>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">
+                نقاء صوتي مطلق بدون أي صدى اصطناعي؛ تعبير عن الثقة المتناهية التي لا تطلب مصادقة أحد.
+              </span>
+</div>
+<!-- Acoustic Architecture -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+<span>المشهد الصوتي والموسيقى التصويرية</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                انطلاق وتر تشيلو منفرد بنغمة ميكروتونية دقيقة (Solo Microtonal Cello in C#) تمتد كشعاع ضوء أفقي، يتخللها صوت رذاذ العطر المتلاشي بنعومة فائقة.
+              </p>
+</div>
+</div>
+<!-- Director's Tactical Annotation -->
+<div class="pt-space-sm bg-surface-container-high/50 p-space-sm flex items-center justify-between">
+<span class="font-technical-mono text-technical-mono text-outline">SENSORY METRIC</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-technical-mono text-technical-mono text-secondary">TACTILE RICHNESS: 99%</span>
+<span class="text-outline">/</span>
+<span class="font-technical-mono text-technical-mono text-primary">LUXURY DENSITY</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- ============================================== -->
+<!-- SCENE 03 -->
+<!-- ============================================== -->
+<article class="relative flex flex-col bg-surface-container-low shadow-2xl transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(233,195,73,0.15)]" id="scene-03">
+<!-- Sprocket tape accent -->
+<div class="w-full h-3 bg-surface-container-lowest flex items-center justify-between px-space-md opacity-40">
+<div class="flex gap-4">
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+</div>
+<span class="font-technical-mono text-[9px] text-outline">KODAK 5219 • 35MM EASTMAN FOOTAGE 0483</span>
+<div class="flex gap-4">
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+</div>
+</div>
+<!-- Scene Header Ribbon -->
+<div class="p-space-md bg-surface-container flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="px-space-sm py-1 bg-surface-container-highest text-primary font-technical-mono text-technical-mono font-bold">SCENE 03 / TAKE 06</span>
+<h2 class="font-headline-md text-headline-md text-primary">الانطلاق الصامت واختفاء العالم</h2>
+<span class="text-outline font-technical-mono text-technical-mono">EXT. HIGHWAY TO METROPOLIS — DUSK TO NIGHT</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary font-technical-mono text-technical-mono">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>00:28:00 — 00:46:00 (١٨ ثانية)</span>
+</div>
+<span class="px-space-sm py-0.5 bg-surface-container-highest text-outline font-technical-mono text-technical-mono">DYNAMIC MOTION</span>
+</div>
+</div>
+<!-- Dual Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Cinematic 2.39:1 Frame with Anamorphic Crop -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md flex flex-col justify-center">
+<div class="relative w-full aspect-[2.39/1] overflow-hidden group shadow-inner">
+<!-- 4 Corner Precision Brackets -->
+<span class="absolute top-2 right-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute top-2 left-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute bottom-2 right-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute bottom-2 left-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic dynamic tracking shot 2.39:1 at 45-degree narrow shutter angle, extreme low-angle beside spinning wheels of a sleek midnight black luxury vehicle gliding ghost-like on asphalt desert highway. Architectural city skyline lights shimmering in the distant background, dramatic streak flares, hyper-sharp sand particles dancing in the slipstream, dark chiaroscuro elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFdcErQ9HoLS8nBiV8KeK9RBujtYuAYg9c_j8XoGlZrH-YhmukYB38SCWFx3hGyHz_E8mYv05gPU3zDFpom9iy1XzgFlIcrjNRYV852trO8FBgr3XlTr75rrRz48WY8z-VdvTomAAF0Suunrai74A_Nv7pK9nO9V4hWpsylFH23gZkemR3M6ujDsCn1sT8hYI94Syt3JmVn4nBUoCVO7LEVc1T4eAvhE0ZwA6HFRdD4fbraQzdnXCR"/>
+<!-- Realtime Frame Overlay Information -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex flex-col justify-between p-space-sm opacity-90">
+<div class="flex justify-between items-center text-primary-fixed-dim font-technical-mono text-[10px]">
+<span>CAM: PURSUIT VEHICLE RUSSIAN ARM</span>
+<span>SHUTTER 45° • HIGH KINETIC FIDELITY</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="px-space-xs py-0.5 bg-surface-container-lowest/80 text-secondary font-technical-mono text-[10px]">FRAME 672 / HIGH VELOCITY</span>
+<span class="text-on-surface font-body-sm text-[11px]">انطلاق انسيابي شبحي يبتلع أضواء المدينة الصاخبة</span>
+</div>
+</div>
+</div>
+<!-- Shot Metadata Sub-bar -->
+<div class="mt-space-sm flex items-center justify-between text-outline font-technical-mono text-technical-mono px-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="text-secondary">RIG: MotoCrane Ultra + Scorpio Head</span>
+<span>•</span>
+<span>SPEED: 120 KM/H GLIDE</span>
+</div>
+<span>STABILIZATION: 3-Axis Active Gyro</span>
+</div>
+</div>
+<!-- Director's Script Breakdown Column -->
+<div class="lg:col-span-5 p-space-lg flex flex-col justify-between gap-space-md bg-surface-container-low">
+<!-- Breakdown Units -->
+<div class="flex flex-col gap-space-md">
+<!-- Visual & Action -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+<span>الفعل البصري والحركة الديناميكية</span>
+</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                تنطلق السيارة بانسيابية شبحية ساحرة دون أي اهتزاز بدني أو صوت ميكانيكي. تخترق شريان المدينة الصاخبة ليلاً كظل أنيق يبتلع الضوء. قطع سريع على المرآة الخلفية: نظرة هادئة وحاسمة لا تلتفت للوراء.
+              </p>
+</div>
+<!-- Voiceover Script Slate -->
+<div class="bg-surface-container p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-outline"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">الحوار (DIALOGUE)</span>
+<span class="font-technical-mono text-technical-mono text-secondary">PURE NON-VERBAL</span>
+</div>
+<blockquote class="font-display-hero-mobile text-headline-sm text-on-surface-variant italic font-normal leading-relaxed">
+                [لا يوجد صوت بشري — لغة العيون والهندسة فقط]
+              </blockquote>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">
+                الرسالة تصل عبر التباين الفاضح بين صخب المدينة المعزول تماماً وسكينة قمرة القيادة.
+              </span>
+</div>
+<!-- Acoustic Architecture -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+<span>المشهد الصوتي والموسيقى التصويرية</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                تداخل استثنائي بين العزل الصوتي فائق الهندسة (Acoustic Foam Dead-Room) وموسيقى أوركسترالية تتصاعد بنعومة مخملية بالغة دون إزعاج.
+              </p>
+</div>
+</div>
+<!-- Director's Tactical Annotation -->
+<div class="pt-space-sm bg-surface-container-high/50 p-space-sm flex items-center justify-between">
+<span class="font-technical-mono text-technical-mono text-outline">SPATIAL ATTENUATION</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-technical-mono text-technical-mono text-secondary">CABIN NOISE: -48dB</span>
+<span class="text-outline">/</span>
+<span class="font-technical-mono text-technical-mono text-primary">PURE ISOLATION</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- ============================================== -->
+<!-- SCENE 04 -->
+<!-- ============================================== -->
+<article class="relative flex flex-col bg-surface-container-low shadow-2xl transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(233,195,73,0.15)]" id="scene-04">
+<!-- Sprocket tape accent -->
+<div class="w-full h-3 bg-surface-container-lowest flex items-center justify-between px-space-md opacity-40">
+<div class="flex gap-4">
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+</div>
+<span class="font-technical-mono text-[9px] text-outline">KODAK 5219 • 35MM EASTMAN FOOTAGE 0484</span>
+<div class="flex gap-4">
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+<span class="w-2 h-1.5 bg-surface-bright"></span>
+</div>
+</div>
+<!-- Scene Header Ribbon -->
+<div class="p-space-md bg-surface-container flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="px-space-sm py-1 bg-surface-container-highest text-primary font-technical-mono text-technical-mono font-bold">SCENE 04 / TAKE 01</span>
+<h2 class="font-headline-md text-headline-md text-primary">الخاتمة والأثر الخالد</h2>
+<span class="text-outline font-technical-mono text-technical-mono">VOID INT. THE MONOLITHIC ZENITH — 01:00 RESOLUTION</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary font-technical-mono text-technical-mono">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>00:46:00 — 01:00:00 (١٤ ثانية)</span>
+</div>
+<span class="px-space-sm py-0.5 bg-surface-container-highest text-secondary font-technical-mono text-technical-mono">RESOLUTION</span>
+</div>
+</div>
+<!-- Dual Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Cinematic 2.39:1 Frame with Anamorphic Crop -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md flex flex-col justify-center">
+<div class="relative w-full aspect-[2.39/1] overflow-hidden group shadow-inner">
+<!-- 4 Corner Precision Brackets -->
+<span class="absolute top-2 right-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute top-2 left-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute bottom-2 right-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<span class="absolute bottom-2 left-2 text-secondary font-technical-mono text-technical-mono z-20 opacity-80">+</span>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic final resolve frame 2.39:1 widescreen, extreme close-up of a sculpted obsidian and satin gold perfume flacon hovering in obsidian pitch-black darkness. Warm champagne refraction caustic light rays illuminating the Arabic typography carving 'سرمد'. Slow graceful focus falloff into total velvet blackness, luxury brand title card elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXaiJOe10noZhjNLyhmUdt8m1gdbhRhfm8JRWJYqVr_XtiLDt-nOdeuW4swmWzCdT0tdU2ujfzGEz-BYcxAtTepqk1fecp661VuURrpYjEHOINXqdkc3AFQnozBZzynZ2nxYvheVMUKqfYzdyty9SMVfg5pAm0z-jbVQZaAAncQN6ePR9oMcjBFtjWHeOHXAvmAbYPYap1g0sL8LCACKY_fUBFpmiBy10tGstI-6ea8c-odI6yP57Y"/>
+<!-- Realtime Frame Overlay Information -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex flex-col justify-between p-space-sm opacity-90">
+<div class="flex justify-between items-center text-primary-fixed-dim font-technical-mono text-[10px]">
+<span>CAM: EXTREME CLOSE-UP 100MM MACRO</span>
+<span>SLOW PULL FOCUS TO ABYSS</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="px-space-xs py-0.5 bg-surface-container-lowest/80 text-secondary font-technical-mono text-[10px]">FRAME 1104 / FINAL SLATE</span>
+<span class="text-primary font-headline-sm text-headline-sm">سرمد — عطر الصمت المطلق</span>
+</div>
+</div>
+</div>
+<!-- Shot Metadata Sub-bar -->
+<div class="mt-space-sm flex items-center justify-between text-outline font-technical-mono text-technical-mono px-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="text-secondary">RESOLVE: Gold Leaf Emulsion Grade</span>
+<span>•</span>
+<span>COLOR SPACE: DCI-P3 Rec.2020</span>
+</div>
+<span>MASTER NEGATIVE COMPLETE</span>
+</div>
+</div>
+<!-- Director's Script Breakdown Column -->
+<div class="lg:col-span-5 p-space-lg flex flex-col justify-between gap-space-md bg-surface-container-low">
+<!-- Breakdown Units -->
+<div class="flex flex-col gap-space-md">
+<!-- Visual & Action -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+<span>الفعل البصري والخاتمة الأيقونية</span>
+</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                تقترب الكاميرا ببطء مهيب من عنق الزجاجة، ثم تسحب التركيز تدريجياً ليتلاشى العالم في سواد مخملي كثيف. ينبثق شعار الذهب المطفي بهدوء لا متناهٍ: «سرمد — عطر الصمت المطلق».
+              </p>
+</div>
+<!-- Voiceover Script Slate -->
+<div class="bg-surface-container p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase">العبارة الختامية (PAYOFF LINE)</span>
+<span class="font-technical-mono text-technical-mono text-outline">AT 00:52</span>
+</div>
+<blockquote class="font-display-hero-mobile text-headline-sm text-primary-fixed italic font-normal leading-relaxed">
+                "سرمد. حين ينتهي الحديثُ.. تبدأ الهيمنة."
+              </blockquote>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-space-xs">
+                تُلقى بوقار إمبراطوري يترك صدى فكرياً مدوياً يدوم طويلاً بعد انتهاء الفيلم.
+              </span>
+</div>
+<!-- Acoustic Architecture -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+<span>المشهد الصوتي والموسيقى التصويرية</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                نغمة رنين بيانو منفردة (Grand Steinway Solo Note - A0) تضرب برقة وتضمحل ببطء استثنائي على مدار ٨ ثوانٍ حتى بلوغ السكون المطلق.
+              </p>
+</div>
+</div>
+<!-- Director's Tactical Annotation -->
+<div class="pt-space-sm bg-surface-container-high/50 p-space-sm flex items-center justify-between">
+<span class="font-technical-mono text-technical-mono text-outline">FINAL BRAND RESONANCE</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-technical-mono text-technical-mono text-secondary">IMPACT: 100/100</span>
+<span class="text-outline">/</span>
+<span class="font-technical-mono text-technical-mono text-primary">CULT STATUS</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- VIEW CONTAINER 2: SCREENPLAY MODE (Hidden by default, switched via JS) -->
+<div class="hidden w-full px-gutter-desktop py-space-xl flex-col items-center" id="view-screenplay">
+<div class="w-full max-w-4xl bg-surface-container-lowest p-space-xl shadow-2xl relative font-technical-mono">
+<!-- Archival Paper Watermark Accent -->
+<div class="absolute top-6 left-6 text-outline-variant text-[11px]">
+        DRAFT: ATELIER DIRECTORIAL SHOOTING SCRIPT • V4.2 FINAL
+      </div>
+<div class="border-b border-outline-variant/30 pb-space-md mb-space-lg text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary">سرمد: صدى السكون</h2>
+<p class="font-body-sm text-body-sm text-outline mt-1">تأليف وإخراج: الذكاء الاستراتيجي FX Atelier بالتعاون مع رولس رويس</p>
+</div>
+<div class="flex flex-col gap-space-lg text-on-surface text-body-md">
+<!-- Screenplay scene 1 -->
+<div class="flex flex-col gap-space-xs">
+<p class="text-secondary font-bold">1. خارجي. صحراء حمراء فسيحة — فجر بارد (00:00 - 00:12)</p>
+<p class="text-on-surface-variant leading-relaxed">
+            الظلام ينسحب ببطء. الأفق يشتعل بنحاس خافت. سيارة رولس رويس فانتوم تقف شامخة كصخرة منسية في قلب الرمال الساكنة. لا رياح. لا صوت. 
+          </p>
+<div class="w-2/3 mx-auto text-center my-space-xs">
+<p class="text-primary font-bold">صوت الراوي (خلف الكادر)</p>
+<p class="italic text-on-surface">"الضجيجُ حيلةُ مَن يخشى أن يُنسى..."</p>
+</div>
+</div>
+<!-- Screenplay scene 2 -->
+<div class="flex flex-col gap-space-xs">
+<p class="text-secondary font-bold">2. داخلي. قمرة القيادة الفارهة — نفس اللحظة (00:12 - 00:28)</p>
+<p class="text-on-surface-variant leading-relaxed">
+            الباب يُغلق بانسجام تام. يد ترتدي كشمير أسود تحيط بزجاجة عطر سرمد المصنوعة من البازلت الأسود. ضغطة بطيئة تطلق سحابة رذاذ دقيقة تسبح في هواء الفخامة المعتمة.
+          </p>
+<div class="w-2/3 mx-auto text-center my-space-xs">
+<p class="text-primary font-bold">صوت الراوي (خلف الكادر)</p>
+<p class="italic text-on-surface">"...أمّا السيادة، فتُقاسُ بحجمِ الصمتِ الذي تصنعهُ حينَ تعبُر."</p>
+</div>
+</div>
+<!-- Screenplay scene 3 -->
+<div class="flex flex-col gap-space-xs">
+<p class="text-secondary font-bold">3. خارجي / داخلي. طريق المدينة المضيء — ليل (00:28 - 00:46)</p>
+<p class="text-on-surface-variant leading-relaxed">
+            السيارة تقطع الطريق السريع بانسيابية كاملة كشبح يبتلع الأضواء الصفراء والصاخبة. داخل القمرة: صمت مطبق. نظرة عين واحدة هادئة في المرآة الخلفية تكفي لنقل الشعور بالسطوة التامة.
+          </p>
+</div>
+<!-- Screenplay scene 4 -->
+<div class="flex flex-col gap-space-xs">
+<p class="text-secondary font-bold">4. داخلي. العدم الأسود المطلق — نهاية الفيلم (00:46 - 01:00)</p>
+<p class="text-on-surface-variant leading-relaxed">
+            الزجاجة تطفو وحيدة وسط حزمة ضوء مائل ينكسر على الحجر والذهب. الظلام يعود ببطء.
+          </p>
+<div class="w-2/3 mx-auto text-center my-space-xs">
+<p class="text-primary font-bold">صوت الراوي (خلف الكادر)</p>
+<p class="italic text-on-surface">"سرمد. حين ينتهي الحديثُ.. تبدأ الهيمنة."</p>
+</div>
+<p class="text-center text-secondary font-bold mt-space-md">— قطع إلى السواد التام —</p>
+</div>
+</div>
+</div>
+</div>
+<!-- VIEW CONTAINER 3: SOUND DESIGN TIMELINE (Hidden by default, switched via JS) -->
+<div class="hidden w-full px-gutter-desktop py-space-xl flex-col gap-space-lg" id="view-sound">
+<div class="bg-surface-container-low p-space-lg shadow-xl">
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">المصفوفة الصوتية الفراغية (Dolby Atmos 7.1.4)</h2>
+<p class="font-body-sm text-body-sm text-outline">تصميم الترددات تحت الصوتية وتوزيع الطبقات النغمية للفيلم</p>
+</div>
+<div class="flex items-center gap-space-md font-technical-mono text-technical-mono">
+<span class="text-secondary">SAMPLE RATE: 96kHz / 24-BIT</span>
+<span class="text-primary">LUFS TARGET: -23.0 LKFS</span>
+</div>
+</div>
+<!-- Audio Track Lanes Mockup -->
+<div class="flex flex-col gap-space-sm">
+<!-- Track 1: Sub Bass & Drones -->
+<div class="bg-surface-container-lowest p-space-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="w-48 shrink-0 flex flex-col">
+<span class="font-technical-mono text-technical-mono text-primary">01. SUB-BASS DRONE</span>
+<span class="text-[10px] text-outline font-technical-mono">32Hz Sine Wave • Tactile feel</span>
+</div>
+<div class="flex-1 h-8 bg-surface-container flex items-center px-2 relative overflow-hidden">
+<div class="absolute inset-y-0 right-0 w-3/4 bg-primary/20"></div>
+<!-- Frequency line SVG inline -->
+<svg class="w-full h-4 text-primary" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0,10 Q10,2 20,10 T40,10 T60,5 T80,15 T100,10" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+</div>
+<span class="w-24 text-left font-technical-mono text-technical-mono text-secondary">-12 dBFS</span>
+</div>
+<!-- Track 2: Microtonal Cello -->
+<div class="bg-surface-container-lowest p-space-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="w-48 shrink-0 flex flex-col">
+<span class="font-technical-mono text-technical-mono text-secondary">02. SOLO CELLO C#</span>
+<span class="text-[10px] text-outline font-technical-mono">Acoustic Microtonal Sustained</span>
+</div>
+<div class="flex-1 h-8 bg-surface-container flex items-center px-2 relative overflow-hidden">
+<div class="absolute inset-y-0 right-1/4 w-1/2 bg-secondary/20"></div>
+<svg class="w-full h-4 text-secondary" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0,10 L25,10 Q35,0 50,10 T75,10 L100,10" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+</div>
+<span class="w-24 text-left font-technical-mono text-technical-mono text-secondary">-6 dBFS</span>
+</div>
+<!-- Track 3: Voiceover U87 Stem -->
+<div class="bg-surface-container-lowest p-space-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="w-48 shrink-0 flex flex-col">
+<span class="font-technical-mono text-technical-mono text-primary-fixed">03. VOICEOVER STEM</span>
+<span class="text-[10px] text-outline font-technical-mono">Neumann U87 • Dry Proximity</span>
+</div>
+<div class="flex-1 h-8 bg-surface-container flex items-center px-2 relative overflow-hidden">
+<div class="absolute inset-y-0 right-[15%] w-12 bg-primary-fixed/30"></div>
+<div class="absolute inset-y-0 right-[40%] w-16 bg-primary-fixed/30"></div>
+<div class="absolute inset-y-0 right-[85%] w-14 bg-primary-fixed/30"></div>
+<span class="font-technical-mono text-[9px] text-outline z-10">DISCRETE VOICEOVER BLOCKS</span>
+</div>
+<span class="w-24 text-left font-technical-mono text-technical-mono text-primary">-3 dBFS</span>
+</div>
+<!-- Track 4: Steinway Piano Resolving Tone -->
+<div class="bg-surface-container-lowest p-space-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="w-48 shrink-0 flex flex-col">
+<span class="font-technical-mono text-technical-mono text-outline">04. STEINWAY RESOLVE</span>
+<span class="text-[10px] text-outline font-technical-mono">A0 27.5Hz Key Decay (8 sec)</span>
+</div>
+<div class="flex-1 h-8 bg-surface-container flex items-center px-2 relative overflow-hidden">
+<div class="absolute inset-y-0 right-[76%] w-[24%] bg-outline/20"></div>
+<svg class="w-full h-4 text-outline" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0,10 L76,10 Q80,2 100,10" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+</div>
+<span class="w-24 text-left font-technical-mono text-technical-mono text-outline">-9 dBFS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Directorial Assurance & AI Certification Footer Section -->
+<section class="w-full bg-surface-container px-gutter-desktop py-space-lg shadow-inner">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">الاعتماد الإخراجي مكتمل ومصادق عليه</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            تمت موازنة النبض البصري، وتوليف حوارات الصمت، وضبط التناغم بين رولس رويس ودار الطيب بنسبة كمال ١٠٠٪.
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface transition-colors font-body-sm text-body-sm flex items-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>إعادة معايرة التوتر</span>
+</a>
+<a class="px-space-lg py-space-sm bg-primary-container hover:bg-primary-fixed text-on-primary-container transition-all font-headline-sm text-headline-sm flex items-center gap-space-xs font-semibold shadow-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">movie_filter</span>
+<span>الانتقال لمرحلة الإنتاج النهائي</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function switchView(viewName) {
+    const views = ['storyboard', 'screenplay', 'sound'];
+    const activeClass = ['bg-primary-container', 'text-on-primary-container'];
+    const inactiveClass = ['text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container'];
+
+    views.forEach(v => {
+      const container = document.getElementById(`view-${v}`);
+      const tab = document.getElementById(`tab-${v}`);
+
+      if (v === viewName) {
+        if (container) {
+          container.classList.remove('hidden');
+          container.classList.add('flex');
+        }
+        if (tab) {
+          tab.classList.remove(...inactiveClass);
+          tab.classList.add(...activeClass);
+        }
+      } else {
+        if (container) {
+          container.classList.add('hidden');
+          container.classList.remove('flex');
+        }
+        if (tab) {
+          tab.classList.remove(...activeClass);
+          tab.classList.add(...inactiveClass);
+        }
+      }
+    });
+  }
+</script></main></div><footer class="fixed bottom-0 inset-x-0 h-10 z-50 bg-surface-container-lowest/95 backdrop-blur-md flex items-center justify-between px-gutter shadow-[0_-4px_20px_rgba(0,0,0,0.6)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-technical-mono text-technical-mono text-primary"><span class="text-outline">TC</span><span>00:02:14:18</span></div><div class="hidden sm:flex items-center gap-space-xs font-technical-mono text-technical-mono text-on-surface-variant"><span class="text-outline">FPS</span><span>24.00</span></div><div class="hidden md:flex items-center gap-space-xs font-technical-mono text-technical-mono text-on-surface-variant"><span class="text-outline">COLOR</span><span>P3-D65 / REC.709</span></div><div class="hidden lg:flex items-center gap-space-xs font-technical-mono text-technical-mono text-outline"><span>GRAIN: 35MM 400T</span></div></div><div class="flex items-center gap-space-md font-technical-mono text-technical-mono"><div class="flex items-center gap-space-xs text-outline"><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span><span>ATELIER SYNCHRONIZED</span></div><nav class="flex items-center gap-space-sm" data-active-classes="text-primary font-bold"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="export-pdf" href="#">PDF</a><span class="text-outline">/</span><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="export-deck" href="#">DECK</a><span class="text-outline">/</span><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="export-script" href="#">FINAL DRAFT</a></nav></div></footer></body></html>

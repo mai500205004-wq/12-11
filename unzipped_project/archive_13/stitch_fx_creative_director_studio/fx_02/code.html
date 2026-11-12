@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-bright":"#38393e","surface-container-high":"#292a2e","error":"#ffb4ab","inverse-primary":"#845400","primary-container":"#ffb347","surface-container-highest":"#343439","primary-fixed":"#ffddb6","on-secondary-fixed-variant":"#7f2b00","surface-variant":"#343439","on-secondary":"#591c00","secondary-container":"#953604","background":"#121317","surface-tint":"#ffb95a","on-error":"#690005","tertiary-fixed":"#ffe088","outline-variant":"#524535","on-tertiary":"#3c2f00","secondary-fixed-dim":"#ffb598","error-container":"#93000a","inverse-on-surface":"#2f3035","on-primary-fixed":"#2a1800","on-primary-container":"#704700","secondary-fixed":"#ffdbce","on-secondary-container":"#ffba9f","on-error-container":"#ffdad6","on-background":"#e3e2e8","primary-fixed-dim":"#ffb95a","secondary":"#ffb598","surface":"#121317","inverse-surface":"#e3e2e8","tertiary-fixed-dim":"#e9c349","surface-container-low":"#1a1b20","on-tertiary-fixed-variant":"#574500","on-tertiary-container":"#624d00","surface-container-lowest":"#0d0e12","on-surface-variant":"#d6c3b0","outline":"#9f8e7c","primary":"#ffd7a9","tertiary":"#ffdb70","on-tertiary-fixed":"#241a00","on-primary-fixed-variant":"#643f00","on-surface":"#e3e2e8","surface-dim":"#121317","on-primary":"#462a00","tertiary-container":"#e4be45","surface-container":"#1f1f24","on-secondary-fixed":"#370e00"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"3.5rem","margin":"1.25rem","space-xl":"3rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","gutter-desktop":"2.5rem","gutter":"1.5rem","space-lg":"1.75rem"},"fontFamily":{"body-lg":["JetBrains Mono"],"body-md":["JetBrains Mono"],"display-hero":["Bodoni Moda"],"body-sm":["JetBrains Mono"],"headline-lg":["Bodoni Moda"],"display-hero-mobile":["Bodoni Moda"],"headline-md-mobile":["Bodoni Moda"],"headline-sm":["Bodoni Moda"],"label-action":["JetBrains Mono"],"slate-mono":["JetBrains Mono"],"headline-lg-mobile":["Bodoni Moda"],"headline-md":["Bodoni Moda"]},"fontSize":{"body-lg":["15px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["72px",{"lineHeight":"80px","letterSpacing":"-0.02em","fontWeight":"400"}],"body-sm":["11px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"400"}],"headline-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.015em","fontWeight":"400"}],"display-hero-mobile":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md-mobile":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"500"}],"label-action":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}],"slate-mono":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"500"}],"headline-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md select-none"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 w-full px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-md"><div class="w-9 h-9 bg-surface-container-high flex items-center justify-center"><span class="font-headline-sm text-headline-sm text-primary">FX</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-slate-mono text-slate-mono text-primary">FX // المخرج الإبداعي التوليدي</span><span class="text-outline font-slate-mono text-slate-mono">|</span><span class="font-slate-mono text-slate-mono text-on-surface-variant">SCENE 01: THE INCEPTION</span></div><span class="font-slate-mono text-slate-mono text-outline">DIRECTOR'S ATELIER EDITION</span></div></div><div class="hidden xl:flex items-center px-space-md py-space-xs bg-surface-container-lowest"><span class="font-slate-mono text-slate-mono text-primary-fixed">TC 00:14:28:12</span><span class="mx-space-xs text-outline font-slate-mono text-slate-mono">•</span><span class="font-slate-mono text-slate-mono text-on-surface-variant">24.00 FPS</span><span class="mx-space-xs text-outline font-slate-mono text-slate-mono">•</span><span class="font-slate-mono text-slate-mono text-tertiary">RAW 8K</span></div></div><nav class="hidden lg:flex items-center bg-surface-container-lowest p-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-action text-label-action"><a class="px-space-md py-space-xs font-label-action text-label-action text-on-surface-variant hover:text-on-surface transition-colors" data-path="insight-and-tension" href="#">01. البصيرة والتوتر الإنساني</a><span class="text-outline-variant font-slate-mono text-slate-mono">/</span><a class="px-space-md py-space-xs font-label-action text-label-action text-on-surface-variant hover:text-on-surface transition-colors" data-path="creative-concept-and-mirror" href="#">02. المفهوم التحويلي</a><span class="text-outline-variant font-slate-mono text-slate-mono">/</span><a class="px-space-md py-space-xs font-label-action text-label-action text-on-surface-variant hover:text-on-surface transition-colors" data-path="production-script-and-arc" href="#">03. السيناريو السينمائي</a><span class="text-outline-variant font-slate-mono text-slate-mono">/</span><a class="px-space-md py-space-xs font-label-action text-label-action text-on-surface-variant hover:text-on-surface transition-colors" data-path="camera-and-lighting-simulation" href="#">04. المحاكاة البصرية</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high"><span class="w-1.5 h-1.5 bg-primary"></span><span class="font-slate-mono text-slate-mono text-primary">المرآة العكسية: نشط</span></div><button class="flex items-center justify-center p-space-xs bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="الصوت المحيطي"><span class="material-symbols-outlined text-[18px]">graphic_eq</span></button><button class="px-space-sm py-space-xs bg-surface-container-high font-slate-mono text-slate-mono text-on-surface-variant hover:text-on-surface transition-colors">ع / EN</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-lowest z-40 flex flex-col pt-20 pb-space-lg"><div class="px-space-lg mb-space-md flex items-center justify-between"><span class="font-slate-mono text-slate-mono text-outline uppercase">غرفة التحكم الإخراجي</span><span class="font-slate-mono text-slate-mono text-primary">SYS.OK</span></div><nav class="flex-1 px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container"><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="insight-and-tension" href="#"><span class="font-body-sm text-body-sm">البصيرة والتوتر الإنساني</span><span class="font-slate-mono text-slate-mono">01</span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="creative-concept-and-mirror" href="#"><span class="font-body-sm text-body-sm">المفهوم والمرآة العكسية</span><span class="font-slate-mono text-slate-mono">02</span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="production-script-and-arc" href="#"><span class="font-body-sm text-body-sm">السيناريو والسرد الدرامي</span><span class="font-slate-mono text-slate-mono">03</span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="camera-and-lighting-simulation" href="#"><span class="font-body-sm text-body-sm">محاكاة الكاميرا والإضاءة</span><span class="font-slate-mono text-slate-mono">04</span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="shot-list-and-storyboard" href="#"><span class="font-body-sm text-body-sm">لوحة المشاهد والتتابع</span><span class="font-slate-mono text-slate-mono">05</span></a><a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="production-telemetry" href="#"><span class="font-body-sm text-body-sm">قياسات الإنتاج والنماذج</span><span class="font-slate-mono text-slate-mono">06</span></a></nav><div class="px-space-md mt-auto"><div class="p-space-md bg-surface-container-low"><div class="flex justify-between items-center mb-space-xs"><span class="font-slate-mono text-slate-mono text-outline">استهلاك الريندر والتوليد</span><span class="font-slate-mono text-slate-mono text-primary">68%</span></div><div class="w-full h-1 bg-surface-container-highest"><div class="h-1 bg-primary w-2/3"></div></div></div></div></aside><div class="pr-72"><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Navigation & Stage Breadcrumb Bar -->
+<div class="w-full bg-surface-container-lowest px-margin-desktop py-space-md">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<!-- Progression & Stage Markers -->
+<div class="flex items-center gap-space-lg flex-wrap">
+<a class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-slate-mono text-slate-mono" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+<span>العودة إلى 01. كشف البصيرة والتوتر الإنساني</span>
+</a>
+<div class="h-3 w-px bg-surface-container-high hidden sm:block"></div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-slate-mono text-slate-mono text-primary uppercase">المرحلة الحالية: 02 // المفهوم والتحول الاستعاري</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-slate-mono text-slate-mono">
+<span>التالي:</span>
+<span class="text-on-surface">03. السيناريو والسرد الدرامي</span>
+</div>
+</div>
+<!-- Director's Atelier Telemetry Ledger -->
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high">
+<span class="font-slate-mono text-slate-mono text-outline">ENGINE //</span>
+<span class="font-slate-mono text-slate-mono text-primary font-bold">DIALECTIC PROVOCATION v4.2</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high">
+<span class="font-slate-mono text-slate-mono text-outline">ARCHETYPE //</span>
+<span class="font-slate-mono text-slate-mono text-on-surface">المتمرد السيادي [THE REBEL]</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high">
+<span class="font-slate-mono text-slate-mono text-outline">OPTICS //</span>
+<span class="font-slate-mono text-slate-mono text-tertiary">2.39:1 HAWK 35MM T1.5</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high">
+<span class="font-slate-mono text-slate-mono text-outline">TENSION //</span>
+<span class="font-slate-mono text-slate-mono text-primary-fixed">94.6%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Concept & Dialectic Architecture Banner -->
+<div class="w-full bg-surface-container-low px-margin-desktop py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-end">
+<!-- Primary Editorial Title & Concept Philosophy -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-space-xs bg-primary text-on-primary font-slate-mono text-slate-mono uppercase font-bold">MASTER CONCEPT APPROVED</span>
+<span class="font-slate-mono text-slate-mono text-outline">LOG_ID: EXP-OBLIVION-884</span>
+<span class="text-outline font-slate-mono text-slate-mono">•</span>
+<span class="font-slate-mono text-slate-mono text-on-surface-variant">حملة العطر الفاحم الفاخر</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-none">
+          طَقْسُ المَحْوِ
+        </h1>
+<p class="font-slate-mono text-slate-mono text-primary-fixed tracking-widest uppercase">
+          THE OBSIDIAN SHIELD CAMPAIGN // DECONSTRUCTED SEDUCTION
+        </p>
+<div class="p-space-lg bg-surface-container mt-space-sm">
+<p class="font-headline-sm text-headline-sm text-primary italic leading-relaxed">
+            “لا تَتَعَطّرْ لِتُرى، بَل لِتَخْتَفِي في عَيْنِ العَاصِفَة... حِينَ يَصِيرُ العِطْرُ دِرْعًا خَرَسَانِيًّا يَمْحُو الضَّجِيج.”
+          </p>
+<div class="mt-space-md flex flex-wrap items-center justify-between gap-space-md pt-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              إسقاط كلي لنمطية الإغراء العاطفي الكلاسيكي في إعلانات الرفاهية؛ العطر هنا ليس مصيدة للآخرين بل حصن وجودي منيع ضد تلوث الهويات والضوضاء المعاصرة.
+            </p>
+<div class="flex items-center gap-space-xs font-slate-mono text-slate-mono text-outline">
+<span class="w-1.5 h-1.5 bg-primary"></span>
+<span>PARADIGM: ANTI-NARCISSISM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Synthesis Metric Gauge -->
+<div class="lg:col-span-4 flex flex-col gap-space-md bg-surface-container p-space-lg">
+<div class="flex justify-between items-center">
+<span class="font-slate-mono text-slate-mono text-outline">DIALECTIC HARMONICS</span>
+<span class="font-slate-mono text-slate-mono text-primary">SYNTHESIS: 9.8/10</span>
+</div>
+<!-- Inline Visual Audio/Harmonic SVG -->
+<div class="w-full py-space-sm flex items-center justify-center bg-surface-container-lowest">
+<svg class="w-full h-16 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 320 64">
+<path class="opacity-90" d="M0 32 Q 20 5, 40 32 T 80 32 T 120 10 T 160 54 T 200 32 T 240 18 T 280 46 T 320 32" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="1.5"></path>
+<path class="opacity-40" d="M0 32 Q 30 58, 60 32 T 120 32 T 180 58 T 240 12 T 300 48 T 320 32" stroke="currentColor" stroke-dasharray="3 3" stroke-width="0.75"></path>
+<line class="opacity-30" stroke="currentColor" stroke-width="1" x1="160" x2="160" y1="0" y2="64"></line>
+<circle cx="160" cy="54" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-center">
+<div class="bg-surface-container-high p-space-sm">
+<div class="font-slate-mono text-slate-mono text-outline">قوة التصادم الجدلي</div>
+<div class="font-slate-mono text-body-lg text-primary font-bold">98.2 dB</div>
+</div>
+<div class="bg-surface-container-high p-space-sm">
+<div class="font-slate-mono text-slate-mono text-outline">احتمال الصدمة البصرية</div>
+<div class="font-slate-mono text-body-lg text-tertiary font-bold">HIGH (0.91)</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-slate-mono text-slate-mono text-on-surface-variant">المرآة جاهزة للمعالجة التوليدية اللحظية. انقر للتبديل بين الأطروحة ونقيضها أدناه.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- THE SIGNATURE FEATURE: THE INTERACTIVE IDEA MIRROR -->
+<div class="w-full px-margin-desktop py-space-xl bg-surface">
+<!-- Mirror Header & Interactive Mode Controller -->
+<div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">swap_horiz</span>
+<span class="font-slate-mono text-slate-mono text-primary font-bold uppercase tracking-wider">مرآة الفكرة العكسية // THE DIALECTIC REALITY SHIFTER</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          الصراع الجدلي: اختبار الفكرة في مرآة نقيضها التام
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          لا يولد الإبداع الاستثنائي من التماسك الهادئ، بل من تصادم أطروحة كبرى مع نقيضها الصارخ. اختبر الإدراك البصري والسردي عند تحويل المفهوم 180 درجة.
+        </p>
+</div>
+<!-- Mode Switcher Controls -->
+<div class="flex items-center p-space-xs bg-surface-container-lowest">
+<button class="px-space-md py-space-xs font-label-action text-label-action bg-primary text-on-primary transition-all" id="view-split-btn" onclick="setMirrorMode('split')">
+          عرض الانشطار المزدوج [SPLIT 50/50]
+        </button>
+<button class="px-space-md py-space-xs font-label-action text-label-action text-on-surface-variant hover:text-on-surface transition-all" id="view-thesis-btn" onclick="setMirrorMode('thesis')">
+          الأطروحة: المَحْو [A]
+        </button>
+<button class="px-space-md py-space-xs font-label-action text-label-action text-on-surface-variant hover:text-on-surface transition-all" id="view-antithesis-btn" onclick="setMirrorMode('antithesis')">
+          النقيض: الانفجار [B]
+        </button>
+</div>
+</div>
+<!-- The Dual Mirror Canvas -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md relative transition-all" id="mirror-stage">
+<!-- Central Optical Reticle (A/B Collision Node) -->
+<div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none items-center justify-center">
+<div class="w-12 h-12 bg-surface-container-lowest text-primary flex items-center justify-center shadow-2xl">
+<span class="material-symbols-outlined text-[20px]">all_inclusive</span>
+</div>
+</div>
+<!-- SIDE A: THE CORE THESIS (المحو والتلاشي الجمالي) -->
+<div class="flex flex-col bg-surface-container-low transition-all" id="side-thesis">
+<!-- Frame Slate Header -->
+<div class="px-space-lg py-space-md bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 bg-primary"></span>
+<span class="font-slate-mono text-slate-mono text-on-surface font-bold uppercase">الجانب أ // الأطروحة الأصلية [THESIS]</span>
+</div>
+<span class="font-slate-mono text-slate-mono text-primary">POLARITY: NEGATIVE VOID (-1.0)</span>
+</div>
+<!-- Cinematic Moodboard Image & Slate Overlay -->
+<div class="relative w-full h-80 overflow-hidden bg-surface-container-lowest">
+<div class="w-full h-full bg-cover bg-center" data-alt="Brutalist monolithic concrete wall bathed in cinematic low-key tungsten light, fine dark smoke billowing in slow motion, solitary silhouette of an anonymous figure draped in severe charcoal wool coat, 35mm film grain, moody shadows, desaturated charcoal with warm tungsten rim light, atmospheric luxury cinema" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_WED5yEagm4J7d7a3ZAdEHUdCU5a26BpdyxTt_U-Py4ZIbzV10NijzPiKPG1ts9RR-Ws_Ry9qfo_W_2Eblm255kIHd1-0Bo4RBCPYibTfoiRfjy95wOgoX3pBXjmDxD7G5gmmmgPEz60XPASbOTMthgZRtCaIUv0iq0EriIl8sKSRSYscXWKpPMPKhp77qD7xZSxwLSuncG068xtqF9NSpDPoj7Gv0D3wf4t0d2DqFXIKDck6mQzp')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<!-- Camera Spec Slate Overlay -->
+<div class="absolute top-space-md right-space-md bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-space-xs">
+<span class="font-slate-mono text-slate-mono text-primary">SCENE 01-A // EXT. BRUTALIST QUARRY - DAWN</span>
+</div>
+<div class="absolute bottom-space-md left-space-md right-space-md flex justify-between items-end">
+<div>
+<span class="font-slate-mono text-slate-mono text-outline">THEMATIC FREQUENCY</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">المَحْو، الصَّمْت، والاخْتِفَاء الجَمَالِي</div>
+</div>
+<span class="font-slate-mono text-slate-mono text-tertiary">ISO 800 • T2.0 • 5000K</span>
+</div>
+</div>
+<!-- Dialectic Dissection Details -->
+<div class="p-space-lg flex flex-col gap-space-md flex-1 justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-outline font-slate-mono text-slate-mono">
+<span class="material-symbols-outlined text-[15px]">shield</span>
+<span>الاستعارة الجوهرية // METAPHOR</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">
+              العطر بوصفه عباءة رصاصية تحجب الضوء. الصمت المطبق كأعلى درجات الهيبة والسيادة.
+            </p>
+</div>
+<div class="p-space-md bg-surface-container">
+<div class="font-slate-mono text-slate-mono text-outline mb-space-xs">النبضة الإخراجية البصرية // CORE SCENE BEAT:</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              شخصية أحادية تقف في باحة رخامية مظلمة تسكب ماءً أسود كالثلج على جمرات ملتهبة. يتصاعد دخان كربون رمادي يبتلع الكاميرا تمامًا حتى يتبقى فقط طنين التردد المنخفض (Sub-bass).
+            </p>
+</div>
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-highest p-space-sm">
+<span class="font-slate-mono text-slate-mono text-outline block">الإضاءة</span>
+<span class="font-body-sm text-body-sm text-on-surface">Chiaroscuro حاد</span>
+</div>
+<div class="bg-surface-container-highest p-space-sm">
+<span class="font-slate-mono text-slate-mono text-outline block">حركة الكاميرا</span>
+<span class="font-body-sm text-body-sm text-on-surface">Dolly زاحف بطيء</span>
+</div>
+<div class="bg-surface-container-highest p-space-sm">
+<span class="font-slate-mono text-slate-mono text-outline block">التأثير الشعوري</span>
+<span class="font-body-sm text-body-sm text-primary">سكينة مهيبة وعزلة</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SIDE B: THE POLAR ANTITHESIS (الانفجار الحسي الفاضح) -->
+<div class="flex flex-col bg-surface-container-low transition-all" id="side-antithesis">
+<!-- Frame Slate Header -->
+<div class="px-space-lg py-space-md bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 bg-secondary"></span>
+<span class="font-slate-mono text-slate-mono text-on-surface font-bold uppercase">الجانب ب // النقيض المطلق [ANTITHESIS]</span>
+</div>
+<span class="font-slate-mono text-slate-mono text-secondary">POLARITY: HYPER-SURPLUS (+1.0)</span>
+</div>
+<!-- Cinematic Moodboard Image & Slate Overlay -->
+<div class="relative w-full h-80 overflow-hidden bg-surface-container-lowest">
+<div class="w-full h-full bg-cover bg-center" data-alt="Hyper-kinetic explosion of fine gold dust and shattered reflective glass shards frozen in 1000fps ultra-slow-motion, intense amber fire strobe lighting, raw human hand shattering an obsidian mirror, cinematic high-contrast anamorphic lens flare in warm ochre, violent tactile luxury editorial" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGtsExc7-fyBH4bEfdzkmFmq2en-nGVayxVepF8cwDTiTPBtOrNCBMr6qW1h6vRYU81h6ePp7qd36kuiYfW_D6UCNCviytWSixDqbGPIziy0Fca_5vNkYXJNIGB520BOFqYcjzxx-n3R_d5VDFv9ypxyHpwzkKm-6630ducqDo7zM8dQAb0vLS45tTCCIfE1nWl5DVkBZQDyi70vU9k812tbqjXMElj9kpqgIZc-25gd42sCsCE18t')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<!-- Camera Spec Slate Overlay -->
+<div class="absolute top-space-md right-space-md bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-space-xs">
+<span class="font-slate-mono text-slate-mono text-secondary">SCENE 01-B // INT. MIRROR VAULT - ZERO HOUR</span>
+</div>
+<div class="absolute bottom-space-md left-space-md right-space-md flex justify-between items-end">
+<div>
+<span class="font-slate-mono text-slate-mono text-outline">THEMATIC FREQUENCY</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">الانْفِجَار الحِسِّي، الفَضِيحَة، والكَشْف الصَّارِخ</div>
+</div>
+<span class="font-slate-mono text-slate-mono text-secondary">ISO 3200 • T1.3 • 3200K TUNGSTEN</span>
+</div>
+</div>
+<!-- Dialectic Dissection Details -->
+<div class="p-space-lg flex flex-col gap-space-md flex-1 justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-outline font-slate-mono text-slate-mono">
+<span class="material-symbols-outlined text-[15px]">bolt</span>
+<span>الاستعارة الجوهرية // METAPHOR</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">
+              العطر كصاعق متفجر يعرّي كل قناع. الضجيج العارم بوصفه انتصارًا حتميًا لا يقبل التواري.
+            </p>
+</div>
+<div class="p-space-md bg-surface-container">
+<div class="font-slate-mono text-slate-mono text-outline mb-space-xs">النبضة الإخراجية البصرية // CORE SCENE BEAT:</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              الشخصية تكسر مرآة رخامية بقبضة عارية في لقطة 1000 لقطة/ثانية؛ يتطاير مسحوق الذهب الخالص مع شظايا الزجاج العاكس مصحوبًا بانفجار أوركسترالي عنيف من الآلات الوترية المشدودة.
+            </p>
+</div>
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-highest p-space-sm">
+<span class="font-slate-mono text-slate-mono text-outline block">الإضاءة</span>
+<span class="font-body-sm text-body-sm text-on-surface">Strobe متوهج عنيف</span>
+</div>
+<div class="bg-surface-container-highest p-space-sm">
+<span class="font-slate-mono text-slate-mono text-outline block">حركة الكاميرا</span>
+<span class="font-body-sm text-body-sm text-on-surface">Whip Pan واهتزاز يدوي</span>
+</div>
+<div class="bg-surface-container-highest p-space-sm">
+<span class="font-slate-mono text-slate-mono text-outline block">التأثير الشعوري</span>
+<span class="font-body-sm text-body-sm text-secondary">صدمة عاطفية وانكشاف</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- The Dialectic Synthesis Box (Director's Synthesis) -->
+<div class="mt-space-md p-space-lg bg-surface-container-high flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-slate-mono text-slate-mono text-primary font-bold uppercase">توليفة المخرج الجدلية // SYNTHESIS VERDICT:</span>
+<span class="font-slate-mono text-slate-mono text-on-surface-variant">THE COLLISION RESULT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+            اعتماد الأطروحة (المحو) كأساس للسرد والرمزية البصرية، مع دمج لحظة النقيض (الانفجار الذهبي) في ذروة الثانية 0:24 ككسر حتمي يحقق المفاجأة القصوى لدى المشاهد.
+          </p>
+</div>
+</div>
+<button class="px-space-md py-space-sm bg-surface-container-lowest hover:bg-surface-container text-primary font-slate-mono text-slate-mono shrink-0 transition-colors">
+        [ دمج الأطروحتين في خيار هجين FUSION ]
+      </button>
+</div>
+</div>
+<!-- LATERAL THINKING RE-GENERATION ENGINE SUITE -->
+<div class="w-full px-margin-desktop py-space-xl bg-surface-container-low">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-slate-mono text-slate-mono text-outline uppercase">محرك التفكير الجانبي // LATERAL RE-FORGE MATRIX</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-space-xs">
+            إعادة صياغة المفهوم عبر محركات التفكير التوليدية
+          </h3>
+</div>
+<span class="font-slate-mono text-slate-mono text-on-surface-variant">اختر نموذج التفكير لإعادة سبك الأطروحة والسيناريو فورياً</span>
+</div>
+<!-- Engine Switcher Buttons Grid -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-xs bg-surface-container-lowest p-space-xs">
+<button class="flex flex-col items-start p-space-md bg-primary text-on-primary text-right transition-all">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="font-slate-mono text-slate-mono text-on-primary-container">01</span>
+<span class="w-1.5 h-1.5 bg-on-primary"></span>
+</div>
+<span class="font-label-action text-label-action font-bold">الاستفزاز الراديكالي</span>
+<span class="font-slate-mono text-slate-mono text-on-primary-container mt-space-xs">نشط حاليًا [PROVOKE]</span>
+</button>
+<button class="flex flex-col items-start p-space-md bg-surface-container hover:bg-surface-container-high text-on-surface text-right transition-all">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="font-slate-mono text-slate-mono text-outline">02</span>
+</div>
+<span class="font-label-action text-label-action font-bold">التناظر والاستعارة</span>
+<span class="font-slate-mono text-slate-mono text-outline mt-space-xs">ANALOGY DISCOVERY</span>
+</button>
+<button class="flex flex-col items-start p-space-md bg-surface-container hover:bg-surface-container-high text-on-surface text-right transition-all">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="font-slate-mono text-slate-mono text-outline">03</span>
+</div>
+<span class="font-label-action text-label-action font-bold">الحافز العشوائي</span>
+<span class="font-slate-mono text-slate-mono text-outline mt-space-xs">RANDOM INJECTION</span>
+</button>
+<button class="flex flex-col items-start p-space-md bg-surface-container hover:bg-surface-container-high text-on-surface text-right transition-all">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="font-slate-mono text-slate-mono text-outline">04</span>
+</div>
+<span class="font-label-action text-label-action font-bold">التفكير المعكوس</span>
+<span class="font-slate-mono text-slate-mono text-outline mt-space-xs">INVERSION ENGINE</span>
+</button>
+<button class="flex flex-col items-start p-space-md bg-surface-container hover:bg-surface-container-high text-on-surface text-right transition-all col-span-2 md:col-span-1">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="font-slate-mono text-slate-mono text-outline">05</span>
+</div>
+<span class="font-label-action text-label-action font-bold">قلب القيود</span>
+<span class="font-slate-mono text-slate-mono text-outline mt-space-xs">CONSTRAINT REVERSAL</span>
+</button>
+</div>
+<!-- Rhetorical Calibration Dials -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop pt-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center font-slate-mono text-slate-mono">
+<span class="text-outline">كثافة الاستعارة البلاغية [METAPHOR DENSITY]</span>
+<span class="text-primary font-bold">88%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-1 bg-primary w-[88%]"></div>
+</div>
+<span class="font-slate-mono text-slate-mono text-on-surface-variant">تجريد شعري مكثف يتطلب تأملاً بصرياً عميقاً</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center font-slate-mono text-slate-mono">
+<span class="text-outline">مؤشر الصدمة والقطيعة [SHOCK INDEX]</span>
+<span class="text-secondary font-bold">92%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-1 bg-secondary w-[92%]"></div>
+</div>
+<span class="font-slate-mono text-slate-mono text-on-surface-variant">انتهاك جذري لمسلمات إعلانات العطور التجارية</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center font-slate-mono text-slate-mono">
+<span class="text-outline">درجة الرسمية والأبهة [RITUAL SOLEMNITY]</span>
+<span class="text-tertiary font-bold">65%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-1 bg-tertiary w-[65%]"></div>
+</div>
+<span class="font-slate-mono text-slate-mono text-on-surface-variant">طقس تأملي صوفي مغلف بطابع صناعي صارم</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SUPPORTING CREATIVE ARCHITECTURE (The Pillars & Craft Blueprint) -->
+<div class="w-full px-margin-desktop py-space-xl bg-surface">
+<div class="flex flex-col gap-space-lg">
+<div>
+<span class="font-slate-mono text-slate-mono text-primary uppercase">ركائز الهندسة الإبداعية // CREATIVE ARCHITECTURE</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-space-xs">
+          تشريح التحول الإدراكي والجماليات السينمائية
+        </h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Pillar 1: Cognitive Shift -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-slate-mono text-slate-mono text-outline">PILLAR 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">
+              التحول الإدراكي الجذري
+            </h4>
+<div class="flex flex-col gap-space-sm my-space-md">
+<div class="p-space-sm bg-surface-container">
+<span class="font-slate-mono text-slate-mono text-outline block">المسار النمطي [FROM]:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">الإغراء المبتذل، لفت الانتباه، التودد للآخر، والتأكيد السطحي على الوجود.</span>
+</div>
+<div class="p-space-sm bg-surface-container-high">
+<span class="font-slate-mono text-slate-mono text-primary block">التحول الاستعاري [TO]:</span>
+<span class="font-body-sm text-body-sm text-primary-fixed">السيادة المطلقة، الاختفاء التام، حصانة الذات ضد التطفل، والصمت كقوة قصوى.</span>
+</div>
+</div>
+</div>
+<span class="font-slate-mono text-slate-mono text-outline">TARGET: الحضور عبر التلاشي</span>
+</div>
+<!-- Pillar 2: Metaphor & Production Strategy -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-slate-mono text-slate-mono text-outline">PILLAR 02</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">architecture</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">
+              استراتيجية الاستعارة والمواد
+            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              اصطدام جمالي بين بروتالية الخرسانة المظلمة (Brutalist Architecture) وبخار الكيمياء الخيميائية القديمة. زجاجة العطر لا تظهر كقطعة زجاجية، بل كحجر أوبسيديان منحوت من صهارة بركانية باردة.
+            </p>
+<div class="mt-space-md flex flex-wrap gap-space-xs">
+<span class="px-space-sm py-space-xs bg-surface-container font-slate-mono text-slate-mono text-on-surface">RAW CONCRETE</span>
+<span class="px-space-sm py-space-xs bg-surface-container font-slate-mono text-slate-mono text-on-surface">OBSIDIAN GLASS</span>
+<span class="px-space-sm py-space-xs bg-surface-container font-slate-mono text-slate-mono text-primary">TUNGSTEN DUST</span>
+</div>
+</div>
+<span class="font-slate-mono text-slate-mono text-outline mt-space-md">TACTILITY: حجر ومعدن وبخار بارد</span>
+</div>
+<!-- Pillar 3: Sonic Cue & Temporal Arc -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-slate-mono text-slate-mono text-outline">PILLAR 03</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">graphic_eq</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">
+              الهندسة الصوتية والمونتاج
+            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              غياب تام للموسيقى الترويجية التقليدية. الاعتماد على طنين عميق لتردد 32Hz (Sub-bass drone) ينقطع فجأة في الثانية 0:24 ليحل محله صمت مفرغ من الهواء، متبوعاً بصوت استنشاق معدني نقي ووحيد.
+            </p>
+<div class="p-space-sm bg-surface-container mt-space-md">
+<div class="flex justify-between items-center font-slate-mono text-slate-mono text-outline mb-space-xs">
+<span>SONIC CURVE</span>
+<span class="text-secondary">32Hz → SILENCE → BREATH</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-1 bg-secondary w-3/4"></div>
+</div>
+</div>
+</div>
+<span class="font-slate-mono text-slate-mono text-outline mt-space-md">MIX: DOLBY ATMOS 7.1.4</span>
+</div>
+</div>
+</div>
+</div>
+<!-- DIRECTOR'S MASTER COMMAND DECK & TRANSITION TO SCRIPT -->
+<div class="w-full px-margin-desktop py-space-xl bg-surface-container-lowest">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<!-- Status & Versioning Metadata -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-slate-mono text-slate-mono text-primary uppercase font-bold">READY FOR SCREENPLAY ARCHITECTURE</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">
+          المفهوم مصادق عليه إخراجيًا؛ الانتقال لتوليد مشاهد السيناريو
+        </p>
+<div class="flex items-center gap-space-md text-outline font-slate-mono text-slate-mono mt-space-xs">
+<span>ATELIER COMMITS: 04</span>
+<span>•</span>
+<span>LATERAL VARIATIONS STORED: 12</span>
+<span>•</span>
+<span>CONFIDENCE SCORE: 96.4%</span>
+</div>
+</div>
+<!-- Action Trigger Buttons -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md w-full lg:w-auto">
+<button class="px-space-lg py-space-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-action text-label-action transition-all text-center">
+          حفظ كمسودة بديلة [SAVE SLATE]
+        </button>
+<a class="px-space-xl py-space-md bg-primary hover:bg-primary-fixed text-on-primary font-label-action text-label-action font-bold transition-all shadow-[0_0_30px_rgba(255,179,71,0.25)] flex items-center justify-center gap-space-sm" href="#">
+<span>المصادقة على المفهوم وبناء السيناريو [03: THE SCRIPT ARC]</span>
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function setMirrorMode(mode) {
+    const stage = document.getElementById('mirror-stage');
+    const sideThesis = document.getElementById('side-thesis');
+    const sideAntithesis = document.getElementById('side-antithesis');
+    const splitBtn = document.getElementById('view-split-btn');
+    const thesisBtn = document.getElementById('view-thesis-btn');
+    const antithesisBtn = document.getElementById('view-antithesis-btn');
+
+    // Reset button states
+    [splitBtn, thesisBtn, antithesisBtn].forEach(btn => {
+      btn.className = "px-space-md py-space-xs font-label-action text-label-action text-on-surface-variant hover:text-on-surface transition-all";
+    });
+
+    if (mode === 'split') {
+      splitBtn.className = "px-space-md py-space-xs font-label-action text-label-action bg-primary text-on-primary transition-all";
+      stage.className = "grid grid-cols-1 lg:grid-cols-2 gap-space-md relative transition-all";
+      sideThesis.style.display = "flex";
+      sideAntithesis.style.display = "flex";
+    } else if (mode === 'thesis') {
+      thesisBtn.className = "px-space-md py-space-xs font-label-action text-label-action bg-primary text-on-primary transition-all";
+      stage.className = "grid grid-cols-1 gap-space-md relative transition-all";
+      sideThesis.style.display = "flex";
+      sideAntithesis.style.display = "none";
+    } else if (mode === 'antithesis') {
+      antithesisBtn.className = "px-space-md py-space-xs font-label-action text-label-action bg-secondary text-on-secondary transition-all";
+      stage.className = "grid grid-cols-1 gap-space-md relative transition-all";
+      sideThesis.style.display = "none";
+      sideAntithesis.style.display = "flex";
+    }
+  }
+</script></main></div></body></html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#ffdad4","on-surface-variant":"#e6bdb7","on-secondary-container":"#ffa58d","error":"#ffb4ab","surface-container-highest":"#343537","on-surface":"#e3e2e5","on-primary-container":"#5c0000","on-tertiary":"#31312c","inverse-on-surface":"#303033","surface-variant":"#343537","surface":"#121315","inverse-surface":"#e3e2e5","tertiary-fixed-dim":"#c9c6c0","outline":"#ad8882","on-error":"#690005","on-background":"#e3e2e5","on-tertiary-fixed-variant":"#474742","background":"#121315","on-tertiary-fixed":"#1c1c18","on-primary":"#690000","surface-bright":"#38393b","primary":"#ffb4a8","surface-dim":"#121315","outline-variant":"#5d403b","surface-container-lowest":"#0d0e10","on-secondary-fixed":"#3c0800","on-tertiary-container":"#2a2a25","primary-fixed-dim":"#ffb4a8","surface-container":"#1f2022","surface-tint":"#ffb4a8","secondary":"#ffb4a1","surface-container-high":"#292a2c","secondary-fixed":"#ffdbd2","inverse-primary":"#bf0904","on-secondary":"#611300","tertiary":"#c9c6c0","primary-container":"#ff5541","tertiary-container":"#92918b","on-primary-fixed":"#410000","tertiary-fixed":"#e5e2db","error-container":"#93000a","on-error-container":"#ffdad6","on-primary-fixed-variant":"#930000","secondary-fixed-dim":"#ffb4a1","surface-container-low":"#1b1c1e","on-secondary-fixed-variant":"#881f00","secondary-container":"#912100"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.25rem","margin":"2rem","space-xs":"0.25rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-lg":"3.5rem","space-md":"1rem","gutter-sm":"0.75rem","space-lg":"1.5rem","margin-sm":"1rem","gutter-lg":"2rem"},"fontFamily":{"body-sm":["Inter"],"headline-lg":["Playfair Display"],"headline-sm":["Inter"],"label-sm":["JetBrains Mono"],"label-lg":["Inter"],"body-lg":["Inter"],"display-md-mobile":["Playfair Display"],"code-timecode":["JetBrains Mono"],"headline-md":["Playfair Display"],"body-md":["Inter"],"label-md":["JetBrains Mono"],"display-md":["Playfair Display"],"display-lg":["Playfair Display"],"display-lg-mobile":["Playfair Display"]},"fontSize":{"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"display-md-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"code-timecode":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"display-md":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrAJ5JxpS8pCqVvXR9uCRPEPRgnXKA-OD1FY08i2r5NJeELl7cFloG7vRYatgUI3oTDjwE-0u4sSBbp05BAMVgeR0mWh7KzI-TQcYARSnIiIIjOKPhI8MNGXYl5vqpR_sxI45mrNAyGYK7XSY62WTLKmrt2ul3oGhiS8Nc1ec1P5Y2gFVE-ut_-TOMyRo4dXbkbfTN-QicxQ0pFUHl4M92xHDJn6r1I8rFtOPdqykWcgcw"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">FX2 // THE DESCENT</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">PROJECT 84: THE OBSIDIAN ARCHIVE</span></div><div class="hidden xl:flex items-center gap-space-xs ml-space-md px-space-sm py-space-xs bg-surface-container-low rounded"><span class="font-label-sm text-label-sm text-tertiary-container uppercase mr-space-xs">Z-AXIS</span><span class="font-label-sm text-label-sm text-on-surface px-space-xs py-0.5 rounded bg-surface-container">-01 LIGHT TABLE</span><span class="font-label-sm text-label-sm text-tertiary-container px-space-xs">-02 FRAMES</span><span class="font-label-sm text-label-sm text-tertiary-container px-space-xs">-03 FILM</span><span class="font-label-sm text-label-sm text-tertiary-container px-space-xs">-04 PAPER</span></div></div><div class="flex-1 max-w-xl mx-space-md hidden md:flex items-center bg-surface-container-low px-space-md py-space-xs rounded shadow-inner"><div class="flex items-center gap-space-xs text-on-surface-variant mr-space-sm"><span class="material-symbols-outlined text-primary text-base">adjust</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">APPLYING TO:</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">CONCEPT B / EMOTIONAL TRUTH</span></div><input class="flex-1 bg-transparent border-0 outline-none text-on-surface font-label-md text-label-md placeholder:text-tertiary-container" placeholder="EXECUTE SPATIAL PROMPT OR LATENT INTERPOLATION..." type="text"/><span class="font-code-timecode text-code-timecode text-tertiary-container text-xs">[SYM:98.4%]</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary uppercase">STABLE</span><span class="font-label-sm text-label-sm text-tertiary-container font-mono">14MS</span></div><div class="flex items-center gap-space-xs"><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-base">undo</span></button><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-base">redo</span></button></div><div class="px-space-sm py-space-xs bg-surface-container-low rounded font-label-sm text-label-sm text-tertiary font-mono">v4.2.1</div><button class="flex items-center gap-space-xs px-space-md py-space-xs bg-primary-container text-on-primary-container rounded font-label-lg text-label-lg uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors" type="button"><span class="material-symbols-outlined text-sm">center_focus_strong</span>CORE</button></div></div></header><main class="w-full pt-16 pb-20 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- TOP CONTEXT RIBBON: SPATIAL STRATUM CONTROLLER & ASCENT LINEAGE -->
+<section class="w-full bg-surface-container-lowest px-gutter-lg py-space-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<!-- Stratum Indicator -->
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded">
+<span class="material-symbols-outlined text-primary text-base">layers</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">STRATUM 04 // THE PAPER</span>
+<span class="font-code-timecode text-code-timecode text-on-surface text-xs bg-surface-container px-space-xs py-0.5 rounded">Z: -360.00m</span>
+</div>
+<!-- Ascent Traverse Vector -->
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-xs text-tertiary-container">arrow_upward</span>
+<span class="tracking-widest uppercase">REVERSE ASCENT VECTOR:</span>
+<a class="text-on-surface hover:text-primary transition-colors font-mono" href="#">Z: 0.00m LIGHT TABLE</a>
+</div>
+<!-- Lineage Breadcrumbs -->
+<div class="hidden lg:flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary-container">
+<span>/</span>
+<span class="text-tertiary">CONCEPT B: THE ARCHITECTURE OF SILENCE</span>
+<span>/</span>
+<span class="text-on-surface font-semibold">SCENE 04: THE THRESHOLD OF VISION</span>
+</div>
+</div>
+<!-- Active Physical Terminal Telemetry -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase font-semibold">CANONICAL MERGE LOCKED</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs font-code-timecode text-code-timecode text-tertiary text-xs bg-surface-container-low px-space-sm py-space-xs rounded">
+<span>COMMIT: 7d18a4c</span>
+<span class="text-tertiary-container">•</span>
+<span class="text-on-surface">SMPTE 00:00:11:04</span>
+</div>
+</div>
+</section>
+<!-- STRATUM 04 HEADER: MASTER MERGE CONFIRMATION & CANONICAL LOCK STATE -->
+<section class="w-full px-gutter-lg pt-space-lg pb-space-md bg-surface-container-low">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 bg-primary-container text-on-primary-container font-label-sm text-label-sm rounded uppercase tracking-wider font-semibold">COMMIT VERIFIED</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">DRAFT LEVEL: 04.3.00 // AAF SPEC V2.1</span>
+<span class="font-label-sm text-label-sm text-primary font-mono tracking-widest">[HASH: 7d18a4c0a87e2]</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-none mt-space-xs">
+          Master Merge Commit Confirmed
+        </h1>
+<p class="font-body-md text-body-md text-tertiary mt-space-xs">
+          Vance Take 04 promoted to Canonical Master Draft 04.3. Frame synchronization, optical sidecar calibration, and 48kHz acoustic interleaves verified against linear Avid Media Composer conformance registry.
+        </p>
+</div>
+<!-- Rollback / Branch Recovery Controls -->
+<div class="flex items-center gap-space-xs flex-wrap self-start lg:self-end">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-tertiary hover:text-on-surface transition-all rounded font-label-sm text-label-sm uppercase tracking-wider" type="button">
+<span class="material-symbols-outlined text-sm">history</span>
+          Rollback to Take 03
+        </button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-tertiary hover:text-on-surface transition-all rounded font-label-sm text-label-sm uppercase tracking-wider" type="button">
+<span class="material-symbols-outlined text-sm">replay</span>
+          Restore Detached Head
+        </button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-primary hover:text-primary-fixed transition-all rounded font-label-sm text-label-sm uppercase tracking-wider" type="button">
+<span class="material-symbols-outlined text-sm text-primary">fork_right</span>
+          Phylogenetic Fork
+        </button>
+</div>
+</div>
+</section>
+<!-- MAIN OPERATIONAL WORKSPACE (2-COLUMN DENSE MASTER TERMINAL) -->
+<div class="w-full px-gutter-lg py-space-lg grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- LEFT PANEL (7 COLS): DIALOGUE MATRIX, COMPARISON, & PROVENANCE GRAPH -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- TAKE 03 vs TAKE 04 COMPARISON CARD -->
+<div class="bg-surface-container-low rounded-lg p-space-lg shadow-xl relative overflow-hidden">
+<!-- Subtle Background Glow -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-space-md pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">compare_arrows</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Master Dialogue Conform &amp; Provenance</span>
+<span class="font-label-sm text-label-sm text-tertiary">PHYLOGENETIC LINEAGE DELTA // AUDIT TRAIL</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container rounded">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono font-medium">SHA-256 VALIDATED</span>
+</div>
+</div>
+<!-- Comparison Dual Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Baseline Card (Take 03) -->
+<div class="bg-surface-container-lowest p-space-md rounded flex flex-col justify-between relative opacity-85 hover:opacity-100 transition-opacity">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary-container font-mono tracking-widest">ORIGIN BASELINE // TAKE 03</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-tertiary font-label-sm text-label-sm rounded uppercase">ARCHIVED</span>
+</div>
+<div class="font-code-timecode text-code-timecode text-tertiary-container text-xs mt-space-xs">
+                COMMIT: 9a2f1c8 • SEED #4120
+              </div>
+<blockquote class="font-headline-md text-headline-md text-tertiary italic my-space-md leading-snug">
+                “We aren’t falling through space. We’re falling through memory.”
+              </blockquote>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-tertiary">
+<span>INTONATION CADENCE</span>
+<span class="font-mono text-tertiary-container">-1.42s TRAIL</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-tertiary">
+<span>LINEAGE DB STATUS</span>
+<span class="font-mono text-tertiary">READ-ONLY LOCKED</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded overflow-hidden mt-space-xs">
+<div class="bg-tertiary-container h-full w-3/4"></div>
+</div>
+</div>
+</div>
+<!-- Canonical Active Master Card (Take 04) -->
+<div class="bg-surface-container p-space-md rounded flex flex-col justify-between relative shadow-lg">
+<!-- Filament Indicator Line -->
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-primary-container"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-primary font-mono tracking-widest font-bold">CANONICAL MASTER // TAKE 04</span>
+</div>
+<span class="px-space-xs py-0.5 bg-primary-container text-on-primary-container font-label-sm text-label-sm rounded uppercase font-semibold">ACTIVE MASTER</span>
+</div>
+<div class="font-code-timecode text-code-timecode text-primary text-xs mt-space-xs">
+                COMMIT: 7d18a4c • SEED #4121 • DRAFT 04.3
+              </div>
+<blockquote class="font-headline-md text-headline-md text-on-surface italic my-space-md leading-snug">
+                “We aren’t descending through the dark. We’re descending through what remains.”
+              </blockquote>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface">
+<span class="text-tertiary">INTONATION CADENCE</span>
+<span class="font-mono text-primary font-bold">+0.00s ZERO-DRIFT</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface">
+<span class="text-tertiary">LINEAGE CONFORMANCE</span>
+<span class="font-mono text-on-surface font-semibold">CANONICAL ANCHORED</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded overflow-hidden mt-space-xs">
+<div class="bg-primary h-full w-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Cryptographic Lock Seal Banner -->
+<div class="mt-space-md p-space-sm bg-surface-container-lowest rounded flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base">lock</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-medium">Cryptographic Take Anchor:</span>
+<span class="font-code-timecode text-code-timecode text-tertiary text-xs">f07e9c18d94a821034f8bb64</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">SECURE HASH VERIFIED</span>
+</div>
+</div>
+<!-- SCRIPT & CELLULOID COMPOSITION TILES -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Visual Shot Celluloid Preview -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-mono">PLATE: FX2_SC04_TK04_LEICA50</span>
+<span class="font-code-timecode text-code-timecode text-primary text-xs">TC 00:00:11:04</span>
+</div>
+<div class="relative w-full aspect-video rounded overflow-hidden bg-surface-container-lowest group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-contrast dark cinema frame from an art-house film shot on Leica Noctilux 50mm, featuring an actor gazing into obsidian darkness with subtle warm amber rim light reflecting in eye, deep charcoal tones and 35mm celluloid grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZxGue2THN_HjFr9UjNnVlfqN1USTlD6xheQG-Z9v3doDH-ajp66PpAROfeJBiHiZlXFRHnQPlDh-3ZKO7LYFLI9CyvVZF6uR42ImoZ8nUR76JphQSusLpAQaS_3oTtja_6jb262WN--J78QnbVl8yguBsSNbs57xsV4_nQyXOsPYtJIlFlURtMGwGveVWCObzCpO8hr7yIv1u_ZpzEQYwVKfEMNqmzGNtu3PZ4G_3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<!-- Inset Optical Overlays -->
+<div class="absolute top-2 left-2 flex items-center gap-space-xs bg-surface-container-lowest/80 backdrop-blur-md px-space-xs py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">T1.2 LEICA NOCTILUX</span>
+</div>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-code-timecode text-code-timecode text-primary text-xs">
+              SMPTE NON-DROP 24.00
+            </div>
+</div>
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span>Color Profile: ARRI LogC3 / Rec.709 Sidecar</span>
+<span class="text-on-surface font-mono">4.2K RAW OPEN GATE</span>
+</div>
+</div>
+<!-- Script Reference Document View -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-mono">SCRIPT DRAFT 04.3 // VANCE CONFORM</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-mono">PAGE 44</span>
+</div>
+<div class="mt-space-sm p-space-md bg-surface-container-lowest rounded font-body-md text-body-md leading-relaxed text-tertiary flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">VANCE (V.O.)</span>
+<p class="text-on-surface font-headline-md text-headline-md italic leading-tight">
+                “We aren’t descending through the dark. We’re descending through what remains.”
+              </p>
+<span class="font-body-sm text-body-sm text-tertiary-container mt-space-xs">
+                (Beat. The obsidian chamber dissolves inward as the camera dollies past the threshold plane.)
+              </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm font-label-sm text-label-sm">
+<span class="text-tertiary">Avid ScriptSync Phonetic Match:</span>
+<span class="text-on-surface font-mono font-bold text-primary">100.0% CONVERGENCE</span>
+</div>
+</div>
+</div>
+<!-- METADATA & TELEMETRY LEDGER -->
+<div class="bg-surface-container-low rounded-lg p-space-md shadow-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-base">receipt_long</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Optical &amp; Acoustic Conformance Ledger</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">SMPTE ST 2067-2 / AAF SPEC</span>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-label-sm text-label-sm">
+<thead>
+<tr class="text-tertiary-container bg-surface-container-lowest">
+<th class="py-space-xs px-space-sm font-medium">CHANNEL / STEM</th>
+<th class="py-space-xs px-space-sm font-medium">DESCRIPTOR</th>
+<th class="py-space-xs px-space-sm font-medium">SAMPLE RATE</th>
+<th class="py-space-xs px-space-sm font-medium">TARGET LEVEL</th>
+<th class="py-space-xs px-space-sm font-medium text-right">DRIFT OFFSET</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-mono">
+<tr class="bg-surface-container-low/50 text-on-surface">
+<td class="py-space-xs px-space-sm font-semibold text-primary">A01-A02 (STEREO DIA)</td>
+<td class="py-space-xs px-space-sm">Vance Dialogue Master Take 04</td>
+<td class="py-space-xs px-space-sm text-tertiary">48,000 Hz / 24-bit BWF</td>
+<td class="py-space-xs px-space-sm text-tertiary">-32.0 LUFS Integr.</td>
+<td class="py-space-xs px-space-sm text-right text-primary font-bold">0.000 ms</td>
+</tr>
+<tr class="bg-surface-container-lowest text-on-surface">
+<td class="py-space-xs px-space-sm font-semibold text-tertiary">A03-A04 (FX ROOM)</td>
+<td class="py-space-xs px-space-sm">Obsidian Cavity Reverberation</td>
+<td class="py-space-xs px-space-sm text-tertiary">48,000 Hz / 24-bit BWF</td>
+<td class="py-space-xs px-space-sm text-tertiary">-28.4 LUFS Integr.</td>
+<td class="py-space-xs px-space-sm text-right text-tertiary">0.000 ms</td>
+</tr>
+<tr class="bg-surface-container-low/50 text-on-surface">
+<td class="py-space-xs px-space-sm font-semibold text-tertiary">V01 (PICTURE BASE)</td>
+<td class="py-space-xs px-space-sm">DNxHR HQX 12-bit Conformed Clip</td>
+<td class="py-space-xs px-space-sm text-tertiary">24.00 fps Strict NDF</td>
+<td class="py-space-xs px-space-sm text-tertiary">Full Data Range</td>
+<td class="py-space-xs px-space-sm text-right text-primary font-bold">0.00 frames</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL (5 COLS): 8-STAGE PREFLIGHT SUITE & AVID AAF DISPATCH -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- 8-STAGE PREFLIGHT DISPATCH SUITE -->
+<div class="bg-surface-container-low rounded-lg p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">fact_check</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Avid AAF Preflight Suite</span>
+<span class="font-label-sm text-label-sm text-tertiary">8-STAGE STRICT CONFORMANCE INSPECTOR</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container text-primary font-code-timecode text-code-timecode text-xs rounded">8/8 PASSED</span>
+</div>
+<!-- 8-Step Interactive Pipeline Ribbon -->
+<div class="flex flex-col gap-space-xs">
+<!-- Step 1 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-lowest rounded hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">1</span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">FORMAT COMPLIANCE</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-tertiary">Avid Media Composer 2024.x</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-lowest rounded hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">2</span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">VERSION TREE</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-tertiary font-mono">Draft 04.3 Master (v4.3.00)</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-lowest rounded hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">3</span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">SMPTE TIMECODE</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-tertiary font-mono">24.00fps Strict Non-Drop</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-lowest rounded hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">4</span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">DIALOGUE CADENCE</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-tertiary">Take 04 Lip-Sync Conformed</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-lowest rounded hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">5</span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">ACOUSTIC INTERLEAVING</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-tertiary font-mono">24-bit 48kHz BWF @ -32LUFS</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Step 6 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-lowest rounded hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">6</span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">OPTICAL METADATA</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-tertiary">Leica Noctilux 50mm / T1.2</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Step 7 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-lowest rounded hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">7</span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface">FRAME VALIDATION</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-tertiary font-mono">Zero-Drift Hash [100%]</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Step 8 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container rounded shadow-inner">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary-container flex items-center justify-center font-label-sm text-label-sm text-on-primary-container font-bold">8</span>
+<span class="font-label-sm text-label-sm font-medium text-primary">COMPILATION MANIFEST</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-on-surface font-mono font-bold">BINARY PACKAGING ARMED</span>
+<span class="material-symbols-outlined text-primary text-base animate-pulse">radio_button_checked</span>
+</div>
+</div>
+</div>
+<!-- DIAGNOSTIC STATE DRAWER -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<!-- Success Diagnostic -->
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">AAF Container Preflight Passed</span>
+<span class="font-body-sm text-body-sm text-tertiary">0 Frame drift confirmed across 264 frames. 4 Audio stems mapped directly into Avid track topology.</span>
+</div>
+</div>
+<!-- Non-Fatal Warning Diagnostic -->
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Non-Fatal Warning: Camera Log3G10 Sidecar</span>
+<span class="font-body-sm text-body-sm text-tertiary">Embedded 3D LUT sidecar detected; secondary color grading conform recommended upon Avid editorial ingest.</span>
+</div>
+</div>
+<!-- Safety Assertion Rule -->
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-sm mt-0.5">gavel</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider">Integrity Assertion Guard</span>
+<span class="font-body-sm text-body-sm text-tertiary-container">If timecode slip exceeds ±0.1 frames during dispatch phase, the transmission pipeline locks automatically.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FINAL DISPATCH CONSOLE CARD -->
+<div class="bg-surface-container-low rounded-lg p-space-lg shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">send_and_archive</span>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Avid AAF Master Dispatch</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">READY TO EMIT</span>
+</div>
+<!-- Target Destination Path -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Target Network RAID Volume</span>
+<div class="p-space-sm bg-surface-container-lowest rounded font-code-timecode text-code-timecode text-on-surface text-xs break-all select-all flex items-center justify-between">
+<span>/Volumes/CinemaRAID_01/Interchange/FX2_THE_DESCENT/AAF_MASTER/</span>
+<span class="material-symbols-outlined text-tertiary text-sm cursor-pointer hover:text-on-surface">content_copy</span>
+</div>
+</div>
+<!-- Interchange Bundle Breakdown -->
+<div class="p-space-sm bg-surface-container-lowest rounded flex flex-col gap-space-xs font-label-sm text-label-sm">
+<span class="text-tertiary-container uppercase tracking-wider font-semibold">Interchange Bundle Contents</span>
+<div class="flex items-center justify-between text-tertiary">
+<span>• Master AAF Sequence File</span>
+<span class="font-mono text-on-surface">FX2_SC04_CANONICAL_04.3.aaf</span>
+</div>
+<div class="flex items-center justify-between text-tertiary">
+<span>• Audio Stems (48kHz BWF)</span>
+<span class="font-mono text-on-surface">4 Interleaved Files</span>
+</div>
+<div class="flex items-center justify-between text-tertiary">
+<span>• Leica Optics Telemetry Track</span>
+<span class="font-mono text-on-surface">Cooke /i + SMPTE RDD-18</span>
+</div>
+<div class="flex items-center justify-between text-tertiary">
+<span>• ScriptSync Phonetic Locators</span>
+<span class="font-mono text-on-surface">Full Marker Sequence</span>
+</div>
+</div>
+<!-- Primary Action Button: Dispatch AAF -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full group relative flex items-center justify-center gap-space-sm py-space-md px-space-lg bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary rounded font-label-lg text-label-lg uppercase tracking-widest font-bold transition-all shadow-[0_0_24px_rgba(255,85,65,0.4)]" id="dispatchButton" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-on-primary-container group-hover:bg-on-primary animate-pulse"></span>
+<span>Arm &amp; Dispatch Avid AAF Master Package</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+<div class="hidden font-code-timecode text-code-timecode text-primary text-center text-xs py-space-xs animate-fade-in" id="dispatchFeedback">
+            [PACKAGE DISPATCHED TO RAID_01 // CRC32: 9A82D01 // HANDSHAKE CONFIRMED]
+          </div>
+</div>
+<!-- Secondary Auxiliary Actions -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs pt-space-xs font-label-sm text-label-sm">
+<button class="flex flex-col items-center justify-center p-space-xs bg-surface-container hover:bg-surface-bright rounded text-tertiary hover:text-on-surface transition-colors text-center" type="button">
+<span class="material-symbols-outlined text-sm mb-1">download</span>
+<span class="text-xs">Download Local Manifest</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs bg-surface-container hover:bg-surface-bright rounded text-tertiary hover:text-on-surface transition-colors text-center" type="button">
+<span class="material-symbols-outlined text-sm mb-1">description</span>
+<span class="text-xs">Export ScriptSync (.txt)</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs bg-surface-container hover:bg-surface-bright rounded text-tertiary hover:text-on-surface transition-colors text-center" type="button">
+<span class="material-symbols-outlined text-sm mb-1">code</span>
+<span class="text-xs">Raw XML Telemetry</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM METRIC TAPE / TELEMETRY STATUS -->
+<div class="w-full px-gutter-lg py-space-sm bg-surface-container-lowest flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span class="text-tertiary-container uppercase tracking-widest">INGEST STATUS:</span>
+<span class="text-on-surface font-mono">AVX-3 COMPATIBLE</span>
+<span class="hidden md:inline text-tertiary-container">|</span>
+<span class="hidden md:inline text-tertiary">RAID BANDWIDTH: 2.8 GB/s</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-timecode text-code-timecode text-primary text-xs">
+<span>Z-PLANE: -360.00m (THE PAPER)</span>
+<span>// PROVENANCE STAMP: 2025.10.14_03:42:19_EST</span>
+</div>
+</div>
+<!-- SCRIPT FOR DISPATCH BUTTON INTERACTION -->
+<script>
+    (function() {
+      const btn = document.getElementById('dispatchButton');
+      const feedback = document.getElementById('dispatchFeedback');
+      if (btn && feedback) {
+        btn.addEventListener('click', function() {
+          btn.classList.add('opacity-75', 'pointer-events-none');
+          btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-base">progress_activity</span><span>DISPATCHING VIA 10GbE FIBRE...</span>';
+          setTimeout(() => {
+            btn.innerHTML = '<span class="material-symbols-outlined text-base">done_all</span><span>DISPATCH COMPLETED &amp; ANCHORED</span>';
+            feedback.classList.remove('hidden');
+          }, 1200);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.7)]"><div class="h-20 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">SPATIAL DESCENT CONTROLLER</span><span class="font-code-timecode text-code-timecode text-primary">DOLLY: 04.28m // LAT: -18.24°</span></div><div class="hidden sm:flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary font-mono"><span class="px-space-xs py-0.5 bg-surface-container rounded">X: 1042.88</span><span class="px-space-xs py-0.5 bg-surface-container rounded">Y: -840.12</span><span class="px-space-xs py-0.5 bg-surface-container rounded">Z: -03.00</span></div></div><nav class="flex items-center bg-surface-container-low p-space-xs rounded gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded shadow-[0_0_12px_rgba(255,85,65,0.35)]"><a class="px-space-lg py-space-xs font-label-md text-label-md tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-all" data-path="discover" href="#">DISCOVER</a><a class="px-space-lg py-space-xs font-label-md text-label-md tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-all" data-path="invent" href="#">INVENT</a><a class="px-space-lg py-space-xs font-label-md text-label-md tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-all" data-path="evolve" href="#">EVOLVE</a><a class="px-space-lg py-space-xs font-label-md text-label-md tracking-wider uppercase text-on-surface-variant hover:text-on-surface transition-all" data-path="produce" href="#">PRODUCE</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-lg">grain</span></button><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-lg">foggy</span></button><button class="p-space-xs text-tertiary hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-lg">hdr_auto</span></button></div><div class="h-6 w-px bg-surface-container-high"></div><span class="font-label-sm text-label-sm text-tertiary tracking-widest uppercase">AMBIENT: OBSIDIAN VOID</span></div></div></footer></body></html>

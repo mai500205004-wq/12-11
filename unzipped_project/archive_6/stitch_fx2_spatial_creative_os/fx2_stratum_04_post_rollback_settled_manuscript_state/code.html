@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#0d0e10","primary":"#ffb4a8","on-secondary-container":"#ffa58d","surface-container-high":"#292a2c","on-primary-fixed":"#410000","on-tertiary-fixed-variant":"#474742","error":"#ffb4ab","primary-fixed-dim":"#ffb4a8","tertiary-fixed-dim":"#c9c6c0","inverse-on-surface":"#303033","on-primary":"#690000","secondary-fixed-dim":"#ffb4a1","secondary-container":"#912100","on-tertiary":"#31312c","on-secondary-fixed":"#3c0800","inverse-surface":"#e3e2e5","surface-container":"#1f2022","error-container":"#93000a","secondary":"#ffb4a1","on-primary-fixed-variant":"#930000","secondary-fixed":"#ffdbd2","on-error-container":"#ffdad6","inverse-primary":"#bf0904","background":"#121315","tertiary-fixed":"#e5e2db","on-error":"#690005","outline":"#ad8882","surface-tint":"#ffb4a8","primary-container":"#ff5541","surface-dim":"#121315","on-tertiary-fixed":"#1c1c18","outline-variant":"#5d403b","surface-variant":"#343537","surface-container-low":"#1b1c1e","tertiary":"#c9c6c0","on-surface-variant":"#e6bdb7","on-surface":"#e3e2e5","tertiary-container":"#92918b","on-background":"#e3e2e5","surface-bright":"#38393b","on-primary-container":"#5c0000","on-secondary":"#611300","on-tertiary-container":"#2a2a25","primary-fixed":"#ffdad4","surface-container-highest":"#343537","surface":"#121315","on-secondary-fixed-variant":"#881f00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"2rem","gutter":"1.25rem","space-xs":"0.25rem","gutter-sm":"0.75rem","space-lg":"1.5rem","margin-sm":"1rem","space-xl":"2.5rem","space-md":"1rem","margin-lg":"3.5rem","gutter-lg":"2rem","space-sm":"0.5rem"},fontFamily:{"body-md":["Inter"],"display-lg-mobile":["Playfair Display"],"display-md":["Playfair Display"],"label-lg":["Inter"],"display-md-mobile":["Playfair Display"],"body-sm":["Inter"],"headline-md":["Playfair Display"],"code-timecode":["JetBrains Mono"],"label-md":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-sm":["Inter"],"headline-lg":["Playfair Display"],"body-lg":["Inter"],"display-lg":["Playfair Display"]},fontSize:{"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-md":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-md-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"code-timecode":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-16 w-full px-margin flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">PROJECT 84: THE OBSIDIAN ARCHIVE</span></div><div class="h-4 w-px bg-surface-variant hidden lg:block"></div><div class="hidden lg:flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Stratum</span><span class="font-code-timecode text-code-timecode text-primary">04 / THE PAPER</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Depth</span><span class="font-code-timecode text-code-timecode text-on-surface">Z = -360.00m</span></div></div></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-space-md py-space-xs rounded"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" data-path="spatial-light-table" href="#">Spatial Light Table</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" data-path="celluloid-exposures" href="#">Celluloid Exposures</a><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-label-lg text-label-lg px-space-md py-space-xs rounded" data-path="stratum-script-drafts" href="#">Script Drafts</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" data-path="descent-telemetry" href="#">Descent Telemetry</a></nav><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-md"><div class="bg-surface-container-low px-space-md py-space-xs rounded flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SMPTE</span><span class="font-code-timecode text-code-timecode text-primary-fixed">02:14:38:19</span></div><div class="hidden sm:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="font-label-sm text-label-sm text-on-surface uppercase">ENGAGED</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- 1. PERSISTENT SPATIAL ASCENT & ROLLBACK STATUS BANNER -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-sm shadow-xl">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-primary-container/20 px-space-sm py-0.5 rounded">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-code-timecode text-label-sm text-primary uppercase">SETTLED BASELINE RESTORATION COMPLETE</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">// CANONICAL HEAD RESTORED TO TAKE 03</span>
+<div class="h-3 w-px bg-surface-variant hidden md:block"></div>
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm">
+<span class="text-tertiary">HEAD:</span>
+<span class="text-primary-fixed bg-surface-container px-space-xs rounded">Take 03 [9a2f1c8]</span>
+<span class="text-on-surface-variant font-body-sm">(Author: Human Editorial / Vance Cut, Seed #4120, SMPTE: 00:00:11:04)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="hidden xl:flex items-center gap-space-xs bg-surface-container px-space-sm py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px] text-secondary">shield_locked</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase">QUARANTINED: detached/vance-take04-draft04.3</span>
+<span class="font-code-timecode text-label-sm text-on-surface-variant">[7d18a4c]</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-sm px-space-sm py-1 rounded transition-colors flex items-center gap-1 shadow-sm" id="btn-restore-branch">
+<span class="material-symbols-outlined text-[14px] text-primary">restore</span>
+          RESTORE TAKE 04
+        </button>
+<button class="bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-sm px-space-sm py-1 rounded transition-all shadow-sm" id="btn-open-ledger">
+          AUDIT LEDGER
+        </button>
+</div>
+</div>
+</section>
+<!-- MAIN EDITORIAL SPATIAL STAGE -->
+<div class="w-full px-margin py-space-md grid grid-cols-1 xl:grid-cols-16 gap-gutter-lg">
+<!-- 2. STRATUM NAVIGATION & SEQUENCE RAIL (LEFT 3 COLS) -->
+<aside class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Stratum Depth Ladder -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">vertical_align_top</span>
+<span class="font-label-md text-label-md tracking-wider">ASCENT AXIS</span>
+</div>
+<span class="font-code-timecode text-label-sm text-on-surface-variant">Z: -360.00m</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-space-xs font-label-sm text-label-sm">
+<div class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container-lowest text-on-surface-variant opacity-60">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>01 // Light Table</span>
+<span class="font-code-timecode text-label-sm">0.00m</span>
+</div>
+<div class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container-lowest text-on-surface-variant opacity-60">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>02 // Glass Frames</span>
+<span class="font-code-timecode text-label-sm">-120.00m</span>
+</div>
+<div class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container-lowest text-on-surface-variant opacity-60">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>03 // Film Hybrid</span>
+<span class="font-code-timecode text-label-sm">-240.00m</span>
+</div>
+<div class="flex items-center justify-between px-space-sm py-2 rounded bg-surface-container-highest text-primary shadow-sm font-label-md">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>04 // The Paper</span>
+<span class="font-code-timecode text-label-sm text-primary">-360.00m</span>
+</div>
+</div>
+</div>
+<!-- Sequence Rail -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md text-on-surface tracking-wider uppercase">SEQUENCE REEL</span>
+<span class="font-code-timecode text-label-sm text-primary">SCENE 01-04</span>
+</div>
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+<!-- Scene 01 -->
+<div class="bg-surface-container-lowest p-space-sm rounded transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-tertiary">SC. 01</span>
+<span class="font-code-timecode text-label-sm text-on-surface-variant">00:03.5s</span>
+</div>
+<div class="font-headline-sm text-[13px] text-on-surface mt-0.5 truncate">The Monolith Incline</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-1 rounded">COMMITTED</span>
+<span class="font-code-timecode text-label-sm text-tertiary">00:00:00:00</span>
+</div>
+</div>
+<!-- Scene 02 -->
+<div class="bg-surface-container-lowest p-space-sm rounded transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-tertiary">SC. 02</span>
+<span class="font-code-timecode text-label-sm text-on-surface-variant">00:03.5s</span>
+</div>
+<div class="font-headline-sm text-[13px] text-on-surface mt-0.5 truncate">Refraction of Cold Dust</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-1 rounded">IN REVIEW</span>
+<span class="font-code-timecode text-label-sm text-tertiary">00:00:03:12</span>
+</div>
+</div>
+<!-- Scene 03 -->
+<div class="bg-surface-container-lowest p-space-sm rounded transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-tertiary">SC. 03</span>
+<span class="font-code-timecode text-label-sm text-on-surface-variant">00:03.6s</span>
+</div>
+<div class="font-headline-sm text-[13px] text-on-surface mt-0.5 truncate">Acoustic Resonance</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1 rounded">EDITING</span>
+<span class="font-code-timecode text-label-sm text-tertiary">00:00:07:00</span>
+</div>
+</div>
+<!-- Scene 04 Active Restored Baseline -->
+<div class="bg-surface-container-high p-space-sm rounded shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<div class="flex items-center justify-between">
+<span class="font-code-timecode text-label-sm text-primary font-bold">SC. 04</span>
+<span class="font-code-timecode text-label-sm text-primary">00:03.4s</span>
+</div>
+<div class="font-headline-sm text-[13px] text-on-surface mt-0.5 truncate">The Threshold of Vision</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-primary-container bg-primary-container px-1 rounded uppercase">RESTORED CANON</span>
+<span class="font-code-timecode text-label-sm text-primary-fixed">10:14 → 14:00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Exposure Telemetry Tile -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">OPTICAL RIG SPECS</span>
+<div class="flex items-center justify-between font-code-timecode text-label-sm pt-space-xs">
+<span class="text-tertiary">OPTIC</span>
+<span class="text-on-surface font-semibold">Leica Noctilux 50mm</span>
+</div>
+<div class="flex items-center justify-between font-code-timecode text-label-sm">
+<span class="text-tertiary">APERTURE</span>
+<span class="text-primary-fixed">T1.1 (f/0.95 ASPH)</span>
+</div>
+<div class="flex items-center justify-between font-code-timecode text-label-sm">
+<span class="text-tertiary">SHUTTER</span>
+<span class="text-on-surface">172.8° (1/50 sec)</span>
+</div>
+<div class="flex items-center justify-between font-code-timecode text-label-sm">
+<span class="text-tertiary">ISO BASE</span>
+<span class="text-on-surface">EI 800 (Dual 3200)</span>
+</div>
+</div>
+</aside>
+<!-- 3. MANUSCRIPT SURFACE (CENTER-LEFT 8 COLS) -->
+<main class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Manuscript Sheet Container -->
+<article class="bg-surface-container-low rounded-xl p-space-lg lg:p-space-xl shadow-2xl relative overflow-hidden flex flex-col gap-space-lg">
+<!-- Subtle illuminated watermarking -->
+<div class="absolute -right-8 -top-8 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Draft Header and Slate Telemetry -->
+<header class="flex flex-col gap-space-sm pb-space-md bg-surface-container-lowest/40 p-space-md rounded-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<span class="font-code-timecode text-label-sm text-primary uppercase tracking-widest">CONTINUOUS DRAFT 04.2 // CANONICAL ROLLBACK</span>
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary-fixed">TAKE 03</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">SEED #4120</span>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            EXT. OBSIDIAN VOID - CONTINUOUS
+          </h2>
+<div class="flex flex-wrap items-center gap-x-space-lg gap-y-space-xs font-code-timecode text-label-sm text-tertiary pt-space-xs">
+<div><span class="text-on-surface-variant">IN:</span> 00:00:10:14</div>
+<div><span class="text-on-surface-variant">OUT:</span> 00:00:14:00</div>
+<div><span class="text-on-surface-variant">DUR:</span> 00:03.10f</div>
+<div><span class="text-on-surface-variant">T-STOP:</span> T1.1</div>
+<div><span class="text-on-surface-variant">COLOR:</span> ARRI LogC4</div>
+</div>
+</header>
+<!-- Scene Visual Direction -->
+<section class="flex flex-col gap-space-sm text-on-surface font-body-lg text-body-lg leading-relaxed">
+<p class="text-on-surface-variant italic">
+            The spatial camera suspends along the negative vertical plane. The zero-point abyss swallows perimeter light. Dust particles catch the extreme fringe of the Noctilux front element, dissolving into soft, chromatic crimson halos before reaching the iris.
+          </p>
+<p>
+            VANCE tilts his helmet vis-à-vis the camera axis. Through tinted polycarbonate, his pupils dilate against absolute nothingness. He does not panic; his lungs expand slowly against the pressurized flight ring.
+          </p>
+</section>
+<!-- Character Restored Dialogue Box -->
+<div class="my-space-sm p-space-lg bg-surface-container-lowest rounded-xl shadow-inner relative flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg text-primary tracking-widest uppercase">VANCE</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(barely breaking the seal of the diaphragm, whisper)</span>
+</div>
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-sm py-0.5 rounded uppercase font-semibold">
+              RESTORED BASELINE // 1:1 CANON
+            </span>
+</div>
+<!-- Verbatim Restored Line in Editorial Serif -->
+<blockquote class="font-display-lg text-display-md text-on-surface italic pl-space-md leading-tight">
+            “We aren’t falling through space. We’re falling through memory.”
+          </blockquote>
+<div class="flex flex-wrap items-center justify-between text-on-surface-variant font-code-timecode text-label-sm pt-space-xs">
+<div class="flex items-center gap-space-md">
+<span>MIC: SANKEN COS-11D (SUB-COLLAR)</span>
+<span>POLARITY: IN-PHASE</span>
+</div>
+<span class="text-primary-fixed">LUFS: -28.4 | PEAK: -12.1dB</span>
+</div>
+</div>
+<!-- Beat Mapping & Waveform Visualizer -->
+<section class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">BEAT PHASING &amp; TEMPORAL METRICS</span>
+<span class="font-code-timecode text-label-sm text-primary">TOTAL: 3.40 SEC</span>
+</div>
+<!-- Interactive Beat Sequence Grid -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-tertiary">
+<span>BEAT 01</span>
+<span class="font-code-timecode text-primary-fixed">1.2s</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface mt-1">SILENCE</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5">Suspension of respiration</div>
+</div>
+<div class="bg-surface-container-high p-space-sm rounded shadow-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-primary">
+<span>BEAT 02</span>
+<span class="font-code-timecode text-primary-fixed">1.4s</span>
+</div>
+<div class="font-label-md text-label-md text-primary mt-1">UTTERANCE</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5">Vocal cord micro-friction</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-tertiary">
+<span>BEAT 03</span>
+<span class="font-code-timecode text-primary-fixed">0.8s</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface mt-1">DECAY</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5">Acoustic cavity absorption</div>
+</div>
+</div>
+<!-- Inline Waveform Graphic -->
+<div class="w-full h-14 bg-surface-container-lowest rounded mt-space-xs p-2 flex items-center justify-center relative overflow-hidden">
+<svg class="w-full h-full text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 600 48">
+<path d="M0,24 L40,24 L60,23 L80,24 L100,24 L130,22 L160,25 L180,24 L210,24 
+                       L220,16 L230,32 L240,10 L250,38 L260,6 L270,42 L280,12 L290,36 L300,8 L310,40 L320,18 L330,30 L340,14 L350,34 L360,20 L370,28 L380,22 L390,26 L400,24
+                       L430,25 L460,23 L490,24 L520,24 L560,24 L600,24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path>
+</svg>
+<div class="absolute left-[36%] top-0 bottom-0 w-px bg-primary-container shadow-[0_0_8px_#ff5541]"></div>
+<span class="absolute right-2 bottom-1 font-code-timecode text-[10px] text-tertiary">PLAYHEAD: 00:00:11:04</span>
+</div>
+</section>
+<!-- Script Production Cues -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs font-body-sm text-body-sm">
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+<span>CUE 4A // PHYSICAL ACTION</span>
+</div>
+<p class="text-on-surface-variant text-[13px] leading-relaxed">
+              Camera dolly pulls back 0.45m along Z-axis at constant 0.12m/s. Subject head pitch matches coordinate rotation by +1.5 degrees. Keep eye reflection within safe optical quadrant 3.
+            </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+<span>CUE 4B // SPECTRAL DRIFT</span>
+</div>
+<p class="text-on-surface-variant text-[13px] leading-relaxed">
+              Background ambient void drone dips 8dB at word “space”. Reverb tail snaps to helmet internal geometry. Sub-harmonic pulse triggers at 28Hz on final syllable.
+            </p>
+</div>
+</div>
+<!-- Celluloid Master Preview Frame -->
+<figure class="w-full rounded-xl overflow-hidden shadow-2xl relative bg-surface-container-lowest">
+<div class="aspect-video w-full relative">
+<img class="w-full h-full object-cover" data-alt="Cinematic frame capture from an auteur sci-fi film. Vance, an astronaut in a dark matte helmet, floats against an endless obsidian void. Anamorphic lens flare with subtle crimson fringing on the rim light. Intense emotional introspection in his eyes, high contrast, shallow depth of field, 35mm film grain texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPmz0zsGsgXzRI_NiKnFQxvpPpbcItoreYzexUJq7VKQ38RcALGXQgrs2jlhEiz7qdSU8_34whNAO2cN9W6fo3TMidgFrxjMgjJ_vNms6Nb9e93d1cWqIKeQKrkyk4TfM2lr_plTbxi5HKJUyAT1CWJuVDWgKyzjtr4D8o9N8XtMBSx3SaS1VuAR66FYg4K6THKdpgrL5FAkgwPOyI9wD1csyVpz31iH8ZT_TVg39Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30 pointer-events-none"></div>
+<!-- Frame Overlay Telemetry -->
+<div class="absolute top-space-sm left-space-sm bg-surface-container-lowest/80 backdrop-blur px-space-sm py-0.5 rounded font-code-timecode text-label-sm text-primary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              REC MON // SDI-01
+            </div>
+<div class="absolute bottom-space-sm right-space-sm bg-surface-container-lowest/90 backdrop-blur px-space-sm py-0.5 rounded font-code-timecode text-label-sm text-on-surface flex items-center gap-space-sm">
+<span class="text-tertiary">TC:</span>
+<span>00:00:11:04</span>
+<span class="text-primary font-bold">[TAKE 03]</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 backdrop-blur px-space-sm py-0.5 rounded font-code-timecode text-[11px] text-tertiary">
+              LEICA NOCTILUX 50mm f/0.95 | COLOR: DCI-P3 D65
+            </div>
+</div>
+<figcaption class="p-space-sm flex items-center justify-between text-on-surface-variant font-code-timecode text-label-sm">
+<span>FRAME RENDER ID: RNDR-9A2F1C-SC04-P01</span>
+<span class="text-primary-fixed">1:1 BIT-EXACT RESTORED SOURCE</span>
+</figcaption>
+</figure>
+</article>
+</main>
+<!-- 4 & 5. RIGHT SIDEBAR: DIRECTOR INSPECTOR & DETACHED RECOVERY (RIGHT 5 COLS) -->
+<aside class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- 4. DIRECTOR'S INSPECTOR — RESTORED TO TAKE 03 METRICS -->
+<section class="bg-surface-container-low p-space-md lg:p-space-lg rounded-xl shadow-lg flex flex-col gap-space-md">
+<header class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">DIRECTOR’S METRICS</h3>
+</div>
+<span class="bg-primary/20 text-primary px-space-xs py-0.5 rounded font-code-timecode text-label-sm">TAKE 03 CANONICAL</span>
+</header>
+<!-- Metric Gauges -->
+<div class="flex flex-col gap-space-md">
+<!-- Emotional Intensity -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface">Emotional Intensity</span>
+<span class="font-code-timecode text-primary-fixed">74%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 74%;"></div>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant text-[11px]">
+<span>Restrained Panic / Introspective Grief</span>
+<span class="text-tertiary">Take 04 was 88% Nihilism</span>
+</div>
+</div>
+<!-- Character Voice Purity -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface">Character Voice Purity</span>
+<span class="font-code-timecode text-primary-fixed">98%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 98%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Vance Human Origin Cut // Tactile resonance</span>
+</div>
+<!-- Subtext Encryption -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface">Subtext Encryption</span>
+<span class="font-code-timecode text-primary-fixed">68%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 68%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Human vulnerability vs machine resignation</span>
+</div>
+</div>
+<!-- Technical Telemetry Data Table -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs font-code-timecode text-label-sm">
+<div class="flex justify-between py-1">
+<span class="text-tertiary">ACOUSTIC SCHEMA</span>
+<span class="text-on-surface">28Hz SUB-BASS HUM</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-tertiary">REVERB TAIL</span>
+<span class="text-primary-fixed">0.4s (Warm Cavity)</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-tertiary">FORMANT ANCHOR</span>
+<span class="text-on-surface">435 Hz (Vocal Lock)</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-tertiary">DYNAMIC RANGE</span>
+<span class="text-on-surface">-28.4 LUFS BWF</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-tertiary">OPTICAL CA GUARD</span>
+<span class="text-primary">0.02% Strict Drift</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-tertiary">SMPTE SYNC REF</span>
+<span class="text-primary-fixed">00:00:11:04</span>
+</div>
+</div>
+</section>
+<!-- 5. DETACHED BRANCH INSPECTOR & RECOVERY POOL -->
+<section class="bg-surface-container-low p-space-md lg:p-space-lg rounded-xl shadow-lg flex flex-col gap-space-md">
+<header class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">call_split</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">DETACHED RECOVERY POOL</h3>
+</div>
+<span class="bg-secondary/20 text-secondary px-space-xs py-0.5 rounded font-label-sm text-label-sm uppercase">ISOLATED</span>
+</header>
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-code-timecode text-label-sm">
+<span class="text-on-surface-variant">BRANCH REF:</span>
+<span class="text-secondary-fixed">vance-take04-draft04.3</span>
+</div>
+<div class="flex items-center justify-between font-code-timecode text-label-sm">
+<span class="text-tertiary">COMMIT:</span>
+<span class="text-tertiary">7d18a4c [Seed #4892]</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded mt-space-xs flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">QUARANTINED TAKE 04 LINE:</span>
+<blockquote class="font-display-md text-[15px] text-tertiary italic leading-snug">
+              “We aren’t descending through the dark. We’re descending through what remains.”
+            </blockquote>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">AUDIT SAFE • ZERO DATA LOSS GUARANTEE</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-sm py-2 rounded transition-colors flex items-center justify-center gap-1 shadow-sm" id="btn-compare-diff">
+<span class="material-symbols-outlined text-[16px]">difference</span>
+            COMPARE DIFF
+          </button>
+<button class="bg-secondary hover:bg-secondary-fixed text-on-secondary font-label-md text-label-sm py-2 rounded transition-colors flex items-center justify-center gap-1 shadow-sm" id="btn-restore-candidate">
+<span class="material-symbols-outlined text-[16px]">history</span>
+            RESTORE TAKE 04
+          </button>
+</div>
+</section>
+<!-- Studio Director Notes Callout -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-md text-label-md uppercase">VANCE CUT CERTIFICATION</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Rollback to Take 03 anchors emotional weight into human memory rather than abstract cosmic despair. Pacing preserved across all four downstream editorial tracks.
+        </p>
+</div>
+</aside>
+</div>
+<!-- 6. AVID AAF INTERCHANGE & CONFORMANCE LEDGER (BOTTOM SECTION) -->
+<section class="w-full px-margin py-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-primary-container animate-pulse"></div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AVID AAF CONFORMANCE &amp; DISPATCH STATUS</h3>
+<span class="font-code-timecode text-label-sm text-on-surface-variant">INTERCHANGE ENGINE V4.8 // AVID MEDIA COMPOSER LINK</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="bg-primary/20 text-primary font-label-sm text-label-sm px-space-sm py-1 rounded">BROADCAST REVOCATION SENT</span>
+<span class="bg-secondary/20 text-secondary font-label-sm text-label-sm px-space-sm py-1 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            STATION 03 ACK: PENDING (POLL: 12s)
+          </span>
+<span class="bg-surface-container-highest text-tertiary-fixed font-code-timecode text-label-sm px-space-sm py-1 rounded">LEDGER: 100% VERIFIED</span>
+</div>
+</div>
+<!-- State Alert Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px] mt-0.5">sync_problem</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary">AAF Draft 04.3: SUPERSEDED-PENDING-CONFIRMATION</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] mt-0.5">
+              Avid Station 03 local cache hold — Supersede broadcast token <code class="font-code-timecode text-secondary-fixed">AAF_REV_SUPERSEDE_04.3_TO_03.1</code> in flight. Awaiting remote conform acknowledgement.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto">
+<button class="w-full md:w-auto bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-sm px-space-md py-2 rounded transition-colors flex items-center justify-center gap-1.5 shadow-sm" id="btn-retransmit">
+<span class="material-symbols-outlined text-[16px]">cell_tower</span>
+            RE-TRANSMIT TOKEN
+          </button>
+</div>
+</div>
+<!-- Interchange Staged Package Breakdown -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">STAGED AAF ARCHIVE</span>
+<span class="font-code-timecode text-label-sm text-primary font-semibold">FX2_SC04_CANONICAL_03.1_RESTORED.aaf</span>
+<span class="font-body-sm text-body-sm text-tertiary text-[11px] mt-1">SMPTE 24.00fps True Cinema // Exact Pull-List</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">INTERLEAVED STEMS</span>
+<span class="font-code-timecode text-label-sm text-on-surface font-semibold">4 Tracks @ -28.4 LUFS</span>
+<span class="font-body-sm text-body-sm text-tertiary text-[11px] mt-1">435Hz resonance anchor + 28Hz sub-bass</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">COLOR METADATA SIDECAR</span>
+<span class="font-code-timecode text-label-sm text-on-surface font-semibold">Leica Noctilux 50mm Profile</span>
+<span class="font-body-sm text-body-sm text-tertiary text-[11px] mt-1">ACEScc 1.3 / D65 White point profile lock</span>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs font-code-timecode text-label-sm text-tertiary">
+<span>PACKET SIZE: 1.84 GB</span>
+<span>•</span>
+<span>CHECKSUM: 9a2f1c84120</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-sm px-space-md py-2 rounded transition-colors flex items-center gap-1.5 shadow-sm" id="btn-download-manifest">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+            DOWNLOAD AAF MANIFEST
+          </button>
+<button class="bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-sm px-space-md py-2 rounded transition-colors flex items-center gap-1.5 shadow-sm" id="btn-view-ledger">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+            VIEW ATOMIC LEDGER
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SPATIAL DESCENT CONTROLLER (PERSISTENT BOTTOM HUD) -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-sm shadow-2xl mt-space-sm">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-sm">
+<!-- Coordinate Metrics -->
+<div class="flex flex-wrap items-center gap-space-md font-code-timecode text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="text-tertiary">DOLLY:</span>
+<span class="text-on-surface">04.28m</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-tertiary">LAT:</span>
+<span class="text-on-surface">-18.24°</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-tertiary">COORDS:</span>
+<span class="text-primary">X: 1042.88  Y: -840.12  Z: -360.00m</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-xs py-0.5 rounded">
+<span class="text-on-surface-variant">STRATUM:</span>
+<span class="text-primary-fixed font-bold">THE PAPER</span>
+</div>
+</div>
+<!-- Operational Mode Selector -->
+<div class="flex items-center gap-1 bg-surface-container p-0.5 rounded font-label-md text-label-sm">
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors">DISCOVER</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors">INVENT</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors">EVOLVE</button>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-semibold shadow-sm">PRODUCE</button>
+</div>
+<!-- Hash & Clock Status -->
+<div class="flex items-center gap-space-md font-code-timecode text-label-sm">
+<div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant">
+<span class="text-tertiary">HASH:</span>
+<span class="text-[11px]">SHA256: 9a2f1c84120...bc14</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded">
+<span class="text-primary-container material-symbols-outlined text-[14px]">timer</span>
+<span class="text-primary-fixed">00:00:11:04</span>
+</div>
+</div>
+</div>
+</section>
+<!-- DIFF MODAL OVERLAY (Controlled via micro-interaction JS) -->
+<dialog class="fixed inset-0 bg-black/80 backdrop-blur-md p-0 m-auto rounded-xl w-11/12 max-w-4xl shadow-2xl text-on-surface bg-surface-container-low border-0" id="diff-modal">
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">difference</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">BRANCH COMPARISON DIFF</h4>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1" id="btn-close-modal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Canonical Take 03 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md text-primary">
+<span>TAKE 03 (CANONICAL RESTORED)</span>
+<span class="font-code-timecode text-label-sm">[9a2f1c8]</span>
+</div>
+<p class="font-display-md text-[18px] text-on-surface italic p-space-sm bg-surface-container rounded">
+            “We aren’t falling through space. We’re falling through memory.”
+          </p>
+<ul class="font-code-timecode text-label-sm text-tertiary flex flex-col gap-1">
+<li>• Focus: Human vulnerability, somatic grief</li>
+<li>• Audio: 435 Hz resonant vocal formant</li>
+<li>• Shutter: 172.8° smooth cadence</li>
+</ul>
+</div>
+<!-- Detached Take 04 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md text-secondary">
+<span>TAKE 04 (QUARANTINED HEAD)</span>
+<span class="font-code-timecode text-label-sm">[7d18a4c]</span>
+</div>
+<p class="font-display-md text-[18px] text-on-surface-variant italic p-space-sm bg-surface-container rounded">
+            “We aren’t descending through the dark. We’re descending through what remains.”
+          </p>
+<ul class="font-code-timecode text-label-sm text-tertiary flex flex-col gap-1">
+<li>• Focus: Cold cosmic nihility</li>
+<li>• Audio: 512 Hz elevated pitch filter</li>
+<li>• Shutter: 90° strobed detachment</li>
+</ul>
+</div>
+</div>
+<div class="flex justify-end gap-space-sm pt-space-sm">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-sm px-space-md py-2 rounded" id="btn-modal-close">
+          DISMISS DIFF
+        </button>
+</div>
+</div>
+</dialog>
+<!-- MICRO-INTERACTIONS SCRIPT -->
+<script>
+    (function initSpatialHud() {
+      const modal = document.getElementById('diff-modal');
+      const compareBtn = document.getElementById('btn-compare-diff');
+      const closeBtn1 = document.getElementById('btn-close-modal');
+      const closeBtn2 = document.getElementById('btn-modal-close');
+      const retransmitBtn = document.getElementById('btn-retransmit');
+      const restoreTake04 = document.getElementById('btn-restore-candidate');
+      const restoreBranch = document.getElementById('btn-restore-branch');
+
+      if (compareBtn && modal) {
+        compareBtn.addEventListener('click', () => modal.showModal());
+      }
+
+      const closeModal = () => modal && modal.close();
+      if (closeBtn1) closeBtn1.addEventListener('click', closeModal);
+      if (closeBtn2) closeBtn2.addEventListener('click', closeModal);
+
+      if (retransmitBtn) {
+        retransmitBtn.addEventListener('click', function() {
+          const original = this.innerHTML;
+          this.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> TRANSMITTING...';
+          this.disabled = true;
+          setTimeout(() => {
+            this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> TOKEN SENT';
+            setTimeout(() => {
+              this.innerHTML = original;
+              this.disabled = false;
+            }, 2500);
+          }, 1200);
+        });
+      }
+
+      const confirmRestore = () => {
+        alert('HEAD SAFETY PROTOCOL: Quarantined branch detached/vance-take04-draft04.3 remains safe in ledger. Take 03 is locked as canonical master.');
+      };
+
+      if (restoreTake04) restoreTake04.addEventListener('click', confirmRestore);
+      if (restoreBranch) restoreBranch.addEventListener('click', confirmRestore);
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.6)] py-space-md"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sub-Surface Axis</span><span class="font-code-timecode text-code-timecode text-tertiary">VECTOR-04 // STABILIZED</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Pressure</span><span class="font-code-timecode text-code-timecode text-tertiary">42.8 BAR</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Luminescence</span><span class="font-code-timecode text-code-timecode text-tertiary">12.4%</span></div></div><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Descent Controller Active</span><div class="h-1.5 w-32 bg-surface-container-high rounded overflow-hidden"><div class="h-full bg-primary-container w-[72%]"></div></div><span class="font-code-timecode text-code-timecode text-primary">72% DTH</span></div><div class="flex items-center gap-space-lg"><span class="font-code-timecode text-code-timecode text-on-surface-variant text-[11px]">© OBSIDIAN SPATIAL OS // STRATUM 04</span><span class="font-label-sm text-label-sm text-tertiary uppercase">CORE REV. 84.40</span></div></div></footer></body></html>
