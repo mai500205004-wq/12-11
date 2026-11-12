@@ -1,0 +1,589 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-primary":"#93ccff","tertiary-fixed-dim":"#68dba9","on-surface":"#0F172A","outline-variant":"#E2E8F0","surface-dim":"#f1f5f9","on-tertiary-fixed-variant":"#005137","primary":"#0284c7","on-tertiary":"#ffffff","on-surface-variant":"#334155","surface-container-low":"#FFFFFF","surface-bright":"#FFFFFF","surface-container-lowest":"#FFFFFF","on-secondary-container":"#fefcff","secondary":"#2563EB","primary-container":"#0284c7","on-primary-fixed":"#001d31","on-primary-fixed-variant":"#004b73","tertiary-container":"#059669","on-background":"#0F172A","on-secondary":"#ffffff","background":"#F8FAFC","on-primary-container":"#ffffff","on-error":"#ffffff","on-error-container":"#991b1b","tertiary":"#059669","secondary-fixed-dim":"#93c5fd","on-primary":"#ffffff","tertiary-fixed":"#a7f3d0","surface-variant":"#F1F5F9","outline":"#94A3B8","on-tertiary-fixed":"#064e3b","primary-fixed":"#bae6fd","inverse-surface":"#0F172A","surface-tint":"#0284c7","on-secondary-fixed-variant":"#1e40af","secondary-container":"#3B82F6","error":"#dc2626","surface-container":"#FFFFFF","primary-fixed-dim":"#7dd3fc","on-tertiary-container":"#ffffff","surface-container-high":"#F8FAFC","error-container":"#fee2e2","secondary-fixed":"#dbeafe","inverse-on-surface":"#f8fafc","surface":"#FFFFFF","surface-container-highest":"#E2E8F0","on-secondary-fixed":"#1e3a8a"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.375rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.5rem","space-xl":"1.5rem","gutter":"1rem","space-xs":"0.25rem","margin":"1.5rem","space-lg":"1rem","space-md":"0.75rem","margin-mobile":"1rem","gutter-mobile":"0.75rem"},fontFamily:{"headline-lg":["Geist"],"label-md":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"label-xs":["JetBrains Mono"],"body-md":["Geist"],"headline-xl":["Geist"],"headline-xl-mobile":["Geist"],"body-lg":["Geist"],"headline-md":["Geist"],"body-sm":["Geist"],"code-stream":["JetBrains Mono"],"telemetry-label":["JetBrains Mono"],"badge-micro":["JetBrains Mono"]},fontSize:{"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"label-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"700"}],"badge-micro":["10px",{"lineHeight":"13px","letterSpacing":"0.05em","fontWeight":"600"}],"code-stream":["12px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"400"}],"telemetry-label":["11px",{"lineHeight":"15px","letterSpacing":"0.04em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 h-16 bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm"><div class="w-full h-16 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="TextFX Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xp28OyPZcr8bl1ybnvviyAxlTUD6TExGaqXxeTeH3aWyD0fAR41LDBIx05yqmkwlvtrC4Mk2MGbJRH80cGErfK2Qq5O1cxayRtt9qNPzPjGEBT_paN3OuZPC2YMDuNgLSuzXhT1t0q45oLdlEBEJ7kuhmWjdPbeV-p8E-s0Kjeyy4HjFb6JzyVIKCD9xgwQ4EQYc35SwAJWESac57qXTFbJaxm_CN_nIsuwafldVEPwp0IToEzzP15JWY"><span class="font-headline-md text-headline-md text-slate-900 tracking-tight font-bold hidden sm:inline">TextFX</span></div><div class="h-4 w-px bg-slate-200 mx-space-xs hidden md:block"></div><div class="hidden md:flex items-center gap-space-xs bg-slate-50 px-space-sm py-1 rounded border border-slate-200"><span class="font-telemetry-label text-telemetry-label text-slate-500 uppercase tracking-wider">ENV:</span><button class="font-code-stream text-code-stream text-sky-700 hover:text-sky-800 transition-colors flex items-center gap-1 font-semibold" type="button">Production v1.2<span class="material-symbols-outlined text-[14px]">expand_more</span></button></div><div class="hidden lg:flex items-center gap-space-sm bg-slate-50 px-space-sm py-1 rounded border border-slate-200"><div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] animate-pulse"></div><span class="font-telemetry-label text-telemetry-label text-slate-700 font-medium">OpenAI GPT-4</span><span class="font-badge-micro text-badge-micro px-1 py-0.5 rounded bg-slate-200 text-slate-700 font-semibold">24ms</span></div></div><nav class="hidden xl:flex items-center gap-space-xs h-16" data-active-classes="bg-sky-50 text-sky-700 border-b-2 border-sky-600"><a class="h-full flex items-center px-space-md font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors font-medium" data-path="creative-pipeline" href="#">Creative Pipeline</a><a class="h-full flex items-center px-space-md font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors font-medium" data-path="lateral-engine" href="#">Lateral Engine</a><a class="h-full flex items-center px-space-md font-body-sm text-body-sm text-sky-700 font-semibold border-b-2 border-sky-600 bg-sky-50/50" data-path="trace-and-audit" href="#">Trace &amp; Audit</a><a class="h-full flex items-center px-space-md font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors font-medium" data-path="provider-config" href="#">Provider Config</a><a class="h-full flex items-center px-space-md font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors font-medium" data-path="api-docs" href="#">API Docs</a></nav><div class="flex items-center gap-space-sm"><div class="flex items-center bg-slate-100 p-0.5 rounded border border-slate-200" role="group" aria-label="Theme toggle"><button type="button" class="px-1.5 py-1 rounded bg-white text-sky-700 shadow-xs flex items-center gap-1 font-telemetry-label text-badge-micro font-semibold transition-colors" title="System theme (Auto)" aria-label="System theme"><span class="material-symbols-outlined text-[14px] text-sky-700">desktop_windows</span><span class="hidden sm:inline">Auto</span></button><button type="button" class="p-1 rounded text-slate-500 hover:text-slate-800 transition-colors flex items-center justify-center" title="Light theme" aria-label="Light theme"><span class="material-symbols-outlined text-[14px] text-amber-600">light_mode</span></button><button type="button" class="p-1 rounded text-slate-500 hover:text-slate-800 transition-colors flex items-center justify-center" title="Dark theme" aria-label="Dark theme"><span class="material-symbols-outlined text-[14px]">dark_mode</span></button></div><div class="hidden sm:flex items-center gap-space-xs"><button class="px-space-sm py-1.5 rounded font-code-stream text-code-stream text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-900 transition-colors border border-slate-300 flex items-center gap-1.5 font-medium" type="button"><span class="material-symbols-outlined text-[16px]">file_download</span><span class="">Export Spec</span></button><button class="px-space-md py-1.5 rounded font-headline-md text-body-sm font-semibold text-white bg-sky-600 hover:bg-sky-700 shadow-sm transition-all flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">play_arrow</span><span class="">Run Pipeline</span></button></div><div class="h-4 w-px bg-slate-200 mx-space-xs hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col items-end hidden 2xl:flex"><span class="font-telemetry-label text-telemetry-label text-slate-900 leading-tight font-semibold">Elena Vance</span><span class="font-badge-micro text-badge-micro text-slate-500 tracking-wider uppercase">Creative Director</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-sky-500/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7uR4ILmqotpfJv8wzxAj3DY6x1khp9qvEtBdZJ7hoyA2cuTkT1tmj6_7cF53qAEidua15FpgH4pyHBvbaUmrWx8CYCRPZWObZGPGokkHfcmNCyZUkHZXkR8j1pIhRIT7cXGoIdi_E_5CMQDP5sh5zz5WRcbuEaDIAXHbsC9AIzVAGpxU26tpxgqbilYOLjI7vhA4xXTAvcjzMC0kO8zRI5igdgXxvt8C3yJiZEZvxXT_NNN1ZA80B"></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-white border-r border-slate-200 z-40 hidden md:flex flex-col justify-between py-space-md shadow-sm"><div class="flex flex-col gap-space-md px-space-sm"><div class="px-space-sm py-space-xs"><div class="font-badge-micro text-badge-micro text-slate-500 uppercase tracking-widest font-semibold">STUDIO WORKSPACES</div></div><nav class="flex flex-col gap-1" data-active-classes="bg-sky-50 text-sky-700 border-l-2 border-sky-600 font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors font-medium" data-path="creative-pipeline" href="#"><span class="material-symbols-outlined text-[18px]">schema</span><span class="font-body-sm text-body-sm">Creative Pipeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors font-medium" data-path="lateral-engine" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-body-sm text-body-sm">Lateral Engine</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded bg-sky-50 text-sky-800 border-l-2 border-sky-600 transition-colors font-semibold shadow-xs" data-path="trace-and-audit" href="#"><span class="material-symbols-outlined text-[18px] text-sky-600">analytics</span><span class="font-body-sm text-body-sm">Trace &amp; Audit</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors font-medium" data-path="provider-config" href="#"><span class="material-symbols-outlined text-[18px]">settings_input_component</span><span class="font-body-sm text-body-sm">Provider Config</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors font-medium" data-path="api-docs" href="#"><span class="material-symbols-outlined text-[18px]">code</span><span class="font-body-sm text-body-sm">API Docs</span></a></nav></div><div class="px-space-sm"><div class="bg-slate-50 p-space-sm rounded-lg border border-slate-200 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-slate-600"><span class="font-telemetry-label text-telemetry-label uppercase text-slate-500 font-semibold">Inference Burn</span><span class="font-code-stream text-code-stream text-sky-700 font-semibold">42.4 t/s</span></div><div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden"><div class="bg-sky-600 h-full w-2/3 rounded-full"></div></div><div class="flex items-center justify-between font-badge-micro text-badge-micro text-slate-500 font-medium"><span class="">COST: $0.0412/run</span><span class="text-emerald-700 font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>ONLINE</span></div></div></div></aside><div class="md:pl-64"><main class="relative w-full pt-16 bg-[#F8FAFC] min-h-screen text-slate-900"><div class="flex flex-col w-full">
+<!-- Sub-Header Status Line & Quick Controls -->
+<div class="w-full bg-white px-gutter py-space-sm flex flex-wrap items-center justify-between gap-space-md border-b border-slate-200 shadow-xs">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-label text-telemetry-label text-slate-500 uppercase font-semibold">SUBSYSTEM:</span>
+<span class="font-code-stream text-code-stream text-sky-700 font-bold">Trace &amp; Audit Governance</span>
+</div>
+<div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)] animate-ping"></span>
+<span class="font-badge-micro text-badge-micro text-emerald-700 font-bold uppercase tracking-wider">Telemetry Stream Active</span>
+</div>
+<div class="hidden xl:flex items-center gap-space-xs">
+<span class="font-telemetry-label text-telemetry-label text-slate-500">SESSION:</span>
+<span class="font-code-stream text-code-stream text-slate-700 font-medium">sess_prod_0994x_eu</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-slate-100 rounded-lg p-0.5 border border-slate-200">
+<button class="px-space-sm py-1 font-telemetry-label text-telemetry-label rounded bg-white text-sky-700 shadow-xs font-semibold" type="button">Live Monitor</button>
+<button class="px-space-sm py-1 font-telemetry-label text-telemetry-label rounded text-slate-600 hover:text-slate-900 transition-colors font-medium" type="button">Historical Logs</button>
+<button class="px-space-sm py-1 font-telemetry-label text-telemetry-label rounded text-slate-600 hover:text-slate-900 transition-colors font-medium" type="button">Compliance Rules</button>
+</div>
+<div class="h-4 w-px bg-slate-200 hidden sm:block"></div>
+<button class="px-space-sm py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-code-stream text-code-stream flex items-center gap-1 border border-slate-300 transition-colors font-medium" type="button">
+<span class="material-symbols-outlined text-[14px] text-slate-600">tune</span>
+<span class="">Thresholds: 0.70</span>
+</button>
+</div>
+</div>
+<div class="p-gutter lg:p-gutter-lg flex flex-col gap-space-lg">
+<!-- Row 1: KPI Telemetry Tiles -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Strategic Audit Score -->
+<div class="relative bg-white rounded-lg p-space-md border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-telemetry-label text-telemetry-label uppercase text-slate-500 font-bold">Avg Strategic Audit Score</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-hero text-display-hero text-[#0F172A] tracking-tight font-extrabold">0.84</span>
+<span class="font-code-stream text-code-stream text-slate-500">/ 1.00</span>
+</div>
+</div>
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold uppercase">PASSED</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xs">
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex">
+<div class="bg-emerald-600 h-full rounded-full" style="width: 84%"></div>
+</div>
+<div class="flex justify-between items-center text-slate-600 font-badge-micro text-badge-micro font-medium">
+<span class="">Pass Threshold: &gt;= 0.70</span>
+<span class="text-emerald-700 font-bold">+4.2% vs 24h</span>
+</div>
+</div>
+</div>
+<!-- Metric 2: Rework & Governance Loop Rate -->
+<div class="relative bg-white rounded-lg p-space-md border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-telemetry-label text-telemetry-label uppercase text-slate-500 font-bold">Rework Loop Rate</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-hero text-display-hero text-amber-700 tracking-tight font-extrabold">14.2%</span>
+<span class="font-code-stream text-code-stream text-slate-500">of runs</span>
+</div>
+</div>
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200 font-bold uppercase">AUTO-REMEDIATE</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xs">
+<!-- Sparkline Mini Visualization -->
+<svg class="w-full h-5 text-amber-600" fill="none" preserveAspectRatio="none" viewBox="0 0 100 20">
+<path d="M0,14 L15,10 L30,16 L45,8 L60,12 L75,6 L90,11 L100,7" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0,14 L15,10 L30,16 L45,8 L60,12 L75,6 L90,11 L100,7 L100,20 L0,20 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+<div class="flex justify-between items-center text-slate-600 font-badge-micro text-badge-micro font-medium">
+<span class="">Orchestrator self-healing</span>
+<span class="text-emerald-700 font-bold">-2.1% loop churn</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: End-to-End Latency P95 -->
+<div class="relative bg-white rounded-lg p-space-md border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-telemetry-label text-telemetry-label uppercase text-slate-500 font-bold">End-to-End Latency P95</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-hero text-display-hero text-[#0F172A] tracking-tight font-extrabold">3.8<span class="font-headline-md text-headline-md text-slate-500 ml-0.5 font-semibold">s</span></span>
+</div>
+</div>
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 uppercase font-semibold">TARGET: &lt;5s</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-1 font-badge-micro text-badge-micro text-slate-500 font-medium">
+<span class="text-sky-700 font-code-stream font-bold">Mock 82ms</span>
+<span class="">•</span>
+<span class="text-slate-800 font-code-stream font-medium">GPT-4 3.2s</span>
+<span class="">•</span>
+<span class="text-slate-800 font-code-stream font-medium">Vertex 2.9s</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex">
+<div class="bg-sky-600 h-full" style="width: 15%"></div>
+<div class="bg-blue-600 h-full" style="width: 50%"></div>
+<div class="bg-indigo-400 h-full" style="width: 35%"></div>
+</div>
+</div>
+</div>
+<!-- Metric 4: Token Consumption -->
+<div class="relative bg-white rounded-lg p-space-md border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-telemetry-label text-telemetry-label uppercase text-slate-500 font-bold">Token Consumption</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-hero text-display-hero text-blue-800 tracking-tight font-extrabold">1,840</span>
+<span class="font-code-stream text-code-stream text-slate-500">avg tokens</span>
+</div>
+</div>
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 font-bold uppercase">OPTIMAL</span>
+</div>
+<div class="mt-space-md flex justify-between items-center font-telemetry-label text-telemetry-label text-slate-600">
+<span class="flex items-center gap-1 text-blue-700 font-code-stream font-bold">
+<span class="material-symbols-outlined text-[14px]">payments</span>
+            $0.038 est. cost
+          </span>
+<span class="font-badge-micro text-badge-micro text-slate-500 uppercase font-semibold">Per Synthesized Run</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Visual Concept Studio Scrim & Active Context Header -->
+<div class="w-full bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm flex flex-col lg:flex-row items-stretch">
+<!-- Media Ambient Scrim Backdrop -->
+<div class="relative lg:w-80 min-h-[140px] flex-shrink-0 bg-slate-100 overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-200">
+<div class="bg-cover bg-center w-full h-full opacity-85" data-alt="High-contrast architectural photograph of a glass bottle of mineral water placed precisely on an obsidian studio workbench next to a sleek digital soundboard with soft cyan LED strip lighting and atmospheric moisture haze in a minimalist studio environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJZCOCqihi1ZnfN8WX6IpyJGNVeP4sHFqLWoWlwBuudWczDGG_AlqLQho-UN9lCJD9dDVthC3EU1Lwny5nI2mzM0LDCTrjJW3RpHj9Az2IMvtk19Fs8xFoFo6ZDxX0tU3jxUb0Sdmjn4iz3d4TzDVwBSLUBQoQ61uIzHA6FmUDFRPzVQ7zhdFMgTFaSANeKE2owzpPjgF-AP8WXFKXHrfVvzq4pW8whMQLHYXhPKjJOy7In7uKLcKL')"></div>
+<div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-white via-white/20 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm">
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-white/95 text-sky-800 shadow-xs border border-slate-200 uppercase tracking-wider font-bold">Active Run Context</span>
+</div>
+</div>
+<!-- Detail Brief Descriptor Strip -->
+<div class="p-space-md lg:p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-[#0F172A]">Run ID #FX-9842</span>
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold tracking-widest uppercase border border-emerald-200">PROD-CERTIFIED</span>
+<span class="font-telemetry-label text-telemetry-label text-slate-500 font-medium">v1.2.4-hotfix</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-stream text-code-stream text-slate-500 font-medium">
+<span class="material-symbols-outlined text-[16px] text-sky-600">schedule</span>
+<span class="">Execution timestamp: 2025-05-18T14:32:09.112Z</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="bg-slate-50 rounded-lg p-space-sm flex flex-col border border-slate-200">
+<span class="font-telemetry-label text-telemetry-label uppercase text-slate-500 font-semibold">Brief Goal</span>
+<span class="font-body-md text-body-md text-slate-900 font-semibold truncate mt-0.5">Increase hydration for office workers</span>
+</div>
+<div class="bg-slate-50 rounded-lg p-space-sm flex flex-col border border-slate-200">
+<span class="font-telemetry-label text-telemetry-label uppercase text-slate-500 font-semibold">Governing Archetype</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+<span class="font-body-md text-body-md text-blue-900 font-bold">The Sage</span>
+<span class="font-badge-micro text-badge-micro text-slate-500 font-medium">(Wisdom, Clarity)</span>
+</div>
+</div>
+<div class="bg-slate-50 rounded-lg p-space-sm flex flex-col border border-slate-200">
+<span class="font-telemetry-label text-telemetry-label uppercase text-slate-500 font-semibold">Remediation Status</span>
+<span class="font-body-md text-body-md text-emerald-700 font-semibold mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+              Auto-Remediated (Iter 2)
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 3: Main Analytical Tri-Split / Dual Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- MAIN LEFT: Strategic Auditor Governance Inspector (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Quality Radar & Checklist Module -->
+<div class="bg-white rounded-lg p-space-lg border border-slate-200 shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-xs border-b border-slate-100">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-sky-600 text-[22px]">verified_user</span>
+<h2 class="font-headline-sm text-headline-sm text-slate-900 font-bold">Strategic Quality Dimension Vector</h2>
+</div>
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono font-semibold">WEIGHTED: 4 DIMENSIONS</span>
+</div>
+<!-- Radar Matrix & Interactive Progress Bar Deck -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center">
+<!-- Inline SVG Polygon Radar / Spider Chart -->
+<div class="md:col-span-5 flex flex-col items-center justify-center p-space-sm bg-slate-50 rounded-lg border border-slate-200">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<svg class="w-full h-full" viewBox="0 0 160 160">
+<!-- Background grid polygons -->
+<polygon class="text-slate-200" fill="none" points="80,20 140,80 80,140 20,80" stroke="currentColor" stroke-width="1"></polygon>
+<polygon class="text-slate-200" fill="none" points="80,40 120,80 80,120 40,80" stroke="currentColor" stroke-width="1"></polygon>
+<polygon class="text-slate-200" fill="none" points="80,60 100,80 80,100 60,80" stroke="currentColor" stroke-width="1"></polygon>
+<!-- Axes -->
+<line class="text-slate-200" stroke="currentColor" stroke-dasharray="2,2" stroke-width="1" x1="80" x2="80" y1="20" y2="140"></line>
+<line class="text-slate-200" stroke="currentColor" stroke-dasharray="2,2" stroke-width="1" x1="20" x2="140" y1="80" y2="80"></line>
+<!-- Dimension Data Area (0.89 Top, 0.92 Right, 0.85 Bottom, 0.78 Left) -->
+<polygon fill="rgba(2, 132, 199, 0.18)" points="80,26.6 135.2,80 80,131 33.2,80" stroke="#0284c7" stroke-width="2.2"></polygon>
+<!-- Iteration 1 overlay ghost -->
+<polygon fill="none" opacity="0.8" points="80,42 125,80 80,118 52,80" stroke="#f59e0b" stroke-dasharray="3,3" stroke-width="1.5"></polygon>
+<!-- Vertices dots -->
+<circle cx="80" cy="26.6" fill="#0284c7" r="3.5"></circle>
+<circle cx="135.2" cy="80" fill="#0284c7" r="3.5"></circle>
+<circle cx="80" cy="131" fill="#0284c7" r="3.5"></circle>
+<circle cx="33.2" cy="80" fill="#f59e0b" r="3.5"></circle>
+</svg>
+<span class="absolute top-1 font-badge-micro text-badge-micro text-slate-600 font-bold">Divergence</span>
+<span class="absolute right-1 font-badge-micro text-badge-micro text-slate-600 font-bold">Alignment</span>
+<span class="absolute bottom-1 font-badge-micro text-badge-micro text-slate-600 font-bold">Resonance</span>
+<span class="absolute left-1 font-badge-micro text-badge-micro text-slate-600 font-bold">Arc</span>
+</div>
+<div class="flex items-center gap-space-md mt-space-xs font-badge-micro text-badge-micro font-semibold">
+<span class="flex items-center gap-1 text-sky-800">
+<span class="w-2.5 h-1 bg-sky-600 inline-block rounded"></span> Final (Iter 2)
+                </span>
+<span class="flex items-center gap-1 text-amber-700">
+<span class="w-2.5 h-1 bg-amber-500 inline-block rounded"></span> Initial (Iter 1)
+                </span>
+</div>
+</div>
+<!-- Quantitative Score Breakdown -->
+<div class="md:col-span-7 flex flex-col gap-space-md">
+<!-- Criterion 1 -->
+<div class="bg-slate-50 rounded-lg p-space-sm flex flex-col gap-1 border border-slate-200">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-slate-800 font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-sky-600">lightbulb</span>
+                    Originality &amp; Lateral Divergence
+                  </span>
+<div class="flex items-center gap-2">
+<span class="font-code-stream text-code-stream text-sky-700 font-bold">0.89</span>
+<span class="font-badge-micro text-badge-micro px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">PASSED</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+<div class="bg-sky-600 h-full rounded-full" style="width: 89%"></div>
+</div>
+</div>
+<!-- Criterion 2 -->
+<div class="bg-slate-50 rounded-lg p-space-sm flex flex-col gap-1 border border-slate-200">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-slate-800 font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-sky-600">target</span>
+                    Strategic Alignment to Brief
+                  </span>
+<div class="flex items-center gap-2">
+<span class="font-code-stream text-code-stream text-sky-700 font-bold">0.92</span>
+<span class="font-badge-micro text-badge-micro px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">PASSED</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+<div class="bg-sky-600 h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<!-- Criterion 3 -->
+<div class="bg-slate-50 rounded-lg p-space-sm flex flex-col gap-1 border border-slate-200">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-slate-800 font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-sky-600">psychology</span>
+                    Archetype Resonance (The Sage)
+                  </span>
+<div class="flex items-center gap-2">
+<span class="font-code-stream text-code-stream text-sky-700 font-bold">0.85</span>
+<span class="font-badge-micro text-badge-micro px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">PASSED</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+<div class="bg-sky-600 h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<!-- Criterion 4 (Warning) -->
+<div class="bg-slate-50 rounded-lg p-space-sm flex flex-col gap-1 border border-slate-200">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-slate-800 font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-amber-600">waves</span>
+                    Emotional Arc Consistency
+                  </span>
+<div class="flex items-center gap-2">
+<span class="font-code-stream text-code-stream text-amber-700 font-bold">0.78</span>
+<span class="font-badge-micro text-badge-micro px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 font-bold border border-amber-200">AUTO-TUNED</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Auditor Verdict & Orchestrator Loop History -->
+<div class="bg-white rounded-lg p-space-lg border border-slate-200 shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-slate-100">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-sky-700 text-[22px]">gavel</span>
+<h3 class="font-headline-sm text-headline-sm text-slate-900 font-bold">Auditor Verdict &amp; Rework Loop Record</h3>
+</div>
+<div class="flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 px-space-sm py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-code-stream text-code-stream text-emerald-800 font-bold">Status: Concluded</span>
+</div>
+</div>
+<!-- Highlight Verdict Banner -->
+<div class="bg-emerald-50/60 border border-emerald-200 rounded-lg p-space-md flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center flex-shrink-0 text-white shadow-xs">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-telemetry-label text-telemetry-label uppercase text-emerald-800 font-bold">Formal Resolution</span>
+<span class="font-headline-sm text-headline-sm text-emerald-950 font-bold">"APPROVED for Client Presentation"</span>
+<span class="font-body-sm text-body-sm text-emerald-800 font-medium">Confidence index: 96.4% • Zero prompt safety policy violations</span>
+</div>
+</div>
+<button class="hidden sm:flex px-space-md py-2 rounded font-headline-md text-body-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm transition-colors items-center gap-1.5" type="button">
+<span class="">Push to Deck</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Step-by-Step Rework Loop Trace -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<span class="font-telemetry-label text-telemetry-label uppercase text-slate-500 font-bold">Remediation Iteration Ledger</span>
+<!-- Iteration 1: Rejected -->
+<div class="bg-slate-50 rounded-lg p-space-md flex flex-col gap-space-xs border border-slate-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-rose-100 text-rose-800 uppercase font-mono font-bold border border-rose-200">Iteration 1</span>
+<span class="font-code-stream text-code-stream text-slate-800 font-semibold">Initial Synthesis Composite</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-label text-telemetry-label text-slate-500">Composite Score:</span>
+<span class="font-code-stream text-code-stream text-rose-700 font-bold">0.68 / 1.00</span>
+<span class="font-badge-micro text-badge-micro text-rose-700 uppercase font-bold">(REWORK)</span>
+</div>
+</div>
+<div class="bg-rose-50/70 border border-rose-200 rounded p-space-sm font-code-stream text-code-stream text-rose-900 mt-1">
+<span class="font-bold text-rose-800">Directive [Orchestrator]:</span> "Deepen emotional vulnerability in Beat 1. Current copy presents sterile statistics rather than human resonance for desk fatigue."
+              </div>
+</div>
+<!-- Iteration 2: Approved -->
+<div class="bg-slate-50 rounded-lg p-space-md flex flex-col gap-space-xs border border-slate-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-badge-micro text-badge-micro px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-mono font-bold border border-emerald-200">Iteration 2</span>
+<span class="font-code-stream text-code-stream text-slate-800 font-semibold">Targeted Cognitive Refinement</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-label text-telemetry-label text-slate-500">Composite Score:</span>
+<span class="font-code-stream text-code-stream text-emerald-700 font-bold">0.82 / 1.00</span>
+<span class="font-badge-micro text-badge-micro text-emerald-800 uppercase font-bold">(PASSED)</span>
+</div>
+</div>
+<div class="bg-emerald-50/70 border border-emerald-200 rounded p-space-sm font-code-stream text-code-stream text-emerald-900 mt-1">
+<span class="font-bold text-emerald-800">Remediation Confirmed:</span> "Beat 1 refactored from 'Drink 2.5L water' to 'The dry tongue of 3 PM screen glare'. Emotional vulnerability parameter satisfied."
+              </div>
+</div>
+</div>
+<!-- Secondary visual: Creative Director Note -->
+<div class="p-space-md rounded-lg bg-sky-50 border border-sky-200 flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-sky-200 flex items-center justify-center flex-shrink-0 text-sky-800">
+<span class="material-symbols-outlined text-[18px]">rate_review</span>
+</div>
+<div class="flex flex-col">
+<span class="font-telemetry-label text-telemetry-label text-sky-900 uppercase font-bold">Auditor Persona Vector</span>
+<p class="font-body-sm text-body-sm text-sky-950 mt-0.5 leading-relaxed">
+                Evaluated against the global corporate brief parameters and 'The Sage' persona. Auto-orchestrator resolved beat cadence divergence within 1,160ms compute delta.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN RIGHT: Raw Execution Trace & Immutable Context Viewer (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Action Utility Toolbar -->
+<div class="bg-white rounded-lg p-space-sm border border-slate-200 shadow-sm flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-1.5 font-badge-micro text-badge-micro text-slate-600">
+<span class="material-symbols-outlined text-[16px] text-sky-600">data_object</span>
+<span class="uppercase font-semibold">CONTEXT IMMUTABILITY HASH:</span>
+<span class="font-code-stream text-sky-700 font-bold">#e3b0c442</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-telemetry-label text-telemetry-label flex items-center gap-1 border border-slate-200 transition-colors font-medium" id="btn-replay" type="button">
+<span class="material-symbols-outlined text-[14px]">replay</span>
+<span class="">Replay</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-telemetry-label text-telemetry-label flex items-center gap-1 border border-slate-200 transition-colors font-medium" id="btn-copy-sentry" type="button">
+<span class="material-symbols-outlined text-[14px]">bug_report</span>
+<span class="">Copy Sentry</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-sky-600 text-white hover:bg-sky-700 font-telemetry-label text-telemetry-label font-bold flex items-center gap-1 transition-colors shadow-xs" id="btn-download-json" type="button">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span class="">JSON</span>
+</button>
+</div>
+</div>
+<!-- Interactive JSON Tree Viewer (StrategicContext Schema) -->
+<div class="bg-white rounded-lg p-space-md border border-slate-200 shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-sm border-b border-slate-100">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-sky-600">terminal</span>
+<span class="font-telemetry-label text-telemetry-label uppercase text-slate-600 font-bold">StrategicContext Payload</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-badge-micro text-badge-micro px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-medium">Schema v2.3</span>
+<button class="font-badge-micro text-badge-micro text-sky-700 hover:underline font-bold" id="toggle-json-expand" type="button">Collapse All</button>
+</div>
+</div>
+<!-- Code Stream Slab (Clean light editor theme) -->
+<div class="w-full bg-[#F8FAFC] border border-slate-200 rounded-lg p-space-md font-code-stream text-code-stream overflow-x-auto max-h-72 select-text mt-3">
+<div class="font-mono leading-relaxed text-slate-800">
+<div class="text-slate-900 font-bold">{</div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"briefId"</span>: <span class="text-emerald-700">"FX-9842"</span>,</div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"objective"</span>: <span class="text-emerald-700">"Increase hydration for office workers"</span>,</div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"archetype"</span>: <span class="text-blue-700">"The Sage"</span>,</div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"language"</span>: <span class="text-emerald-700">"en-US"</span>,</div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"iteration"</span>: <span class="text-indigo-600 font-bold">2</span>,</div>
+<div class="pl-4">
+<span class="text-sky-700 font-semibold">"insight"</span>: {
+                <div class="pl-4"><span class="text-sky-700 font-semibold">"tension"</span>: <span class="text-emerald-700">"Desk fatigue mistaken for mental exhaustion"</span>,</div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"vectorScore"</span>: <span class="text-indigo-600 font-bold">0.912</span></div>
+                }
+              </div>
+<div class="pl-4">
+<span class="text-sky-700 font-semibold">"concept"</span>: {
+                <div class="pl-4"><span class="text-sky-700 font-semibold">"title"</span>: <span class="text-emerald-700">"The Ritual Pause"</span>,</div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"creativeMechanism"</span>: <span class="text-emerald-700">"Hydration as mindful cognitive reset"</span></div>
+                }
+              </div>
+<div class="pl-4">
+<span class="text-sky-700 font-semibold">"audit"</span>: {
+                <div class="pl-4"><span class="text-sky-700 font-semibold">"verdict"</span>: <span class="text-emerald-700 font-bold">"APPROVED"</span>,</div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"finalScore"</span>: <span class="text-indigo-600 font-bold">0.82</span>,</div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"loops"</span>: <span class="text-indigo-600 font-bold">1</span></div>
+                }
+              </div>
+<div class="pl-4"><span class="text-sky-700 font-semibold">"traceRef"</span>: <span class="text-emerald-700">"trc_019a9f9842"</span></div>
+<div class="text-slate-900 font-bold">}</div>
+</div>
+</div>
+</div>
+<!-- Chronological Waterflow Execution Timeline -->
+<div class="bg-white rounded-lg p-space-md border border-slate-200 shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-slate-100">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-sky-600">waterfall_chart</span>
+<h3 class="font-headline-sm text-headline-sm text-slate-900 font-bold">Chronological Trace Waterflow</h3>
+</div>
+<span class="font-badge-micro text-badge-micro text-slate-600 font-mono font-semibold">00:04.280 TOTAL</span>
+</div>
+<!-- Timeline items -->
+<div class="flex flex-col relative pl-6 gap-space-md before:content-[''] before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-px before:bg-slate-200">
+<!-- Step 1 -->
+<div class="relative flex flex-col gap-0.5 group">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-sky-600 ring-4 ring-white"></span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-badge-micro text-badge-micro text-sky-800 font-mono font-bold">00:00.000</span>
+<span class="font-code-stream text-code-stream text-slate-900 font-bold">[Express API]</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-slate-500 font-mono font-medium">18ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-600 font-medium">Ingest payload &amp; validate schema (Zod validation 200 OK)</p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col gap-0.5 group">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-sky-600 ring-4 ring-white"></span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-badge-micro text-badge-micro text-sky-800 font-mono font-bold">00:00.018</span>
+<span class="font-code-stream text-code-stream text-slate-900 font-bold">[Orchestrator]</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-slate-500 font-mono font-medium">6ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-600 font-medium">Spawn StrategicContext <code class="text-sky-700 font-mono text-badge-micro font-bold">(id: ctx_9842_prod)</code></p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col gap-0.5 group">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-sky-600 ring-4 ring-white"></span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-badge-micro text-badge-micro text-sky-800 font-mono font-bold">00:00.024</span>
+<span class="font-code-stream text-code-stream text-slate-900 font-bold">[LateralAgent]</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-slate-500 font-mono font-medium">1396ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-600 font-medium">Dispatched 5 cognitive threads to Google Vertex AI / OpenAI</p>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col gap-0.5 group">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-sky-600 ring-4 ring-white"></span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-badge-micro text-badge-micro text-sky-800 font-mono font-bold">00:01.420</span>
+<span class="font-code-stream text-code-stream text-slate-900 font-bold">[ConceptMapper]</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-slate-500 font-mono font-medium">980ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-600 font-medium">Synthesized concept <span class="text-slate-900 font-semibold">'The Ritual Pause'</span></p>
+</div>
+<!-- Step 5 -->
+<div class="relative flex flex-col gap-0.5 group">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-sky-600 ring-4 ring-white"></span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-badge-micro text-badge-micro text-sky-800 font-mono font-bold">00:02.400</span>
+<span class="font-code-stream text-code-stream text-slate-900 font-bold">[ScriptWriter]</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-slate-500 font-mono font-medium">720ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-600 font-medium">Rendered 3-beat script narrative and sensory dialogue tags</p>
+</div>
+<!-- Step 6 (Rework Loop Event) -->
+<div class="relative flex flex-col gap-0.5 group">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-amber-500 ring-4 ring-white"></span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-badge-micro text-badge-micro text-amber-800 font-mono font-bold">00:03.120</span>
+<span class="font-code-stream text-code-stream text-amber-800 font-bold">[StrategicAuditor]</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-amber-700 font-mono font-bold">1160ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-600 font-medium">Scored iteration 1 (0.68) → <span class="text-amber-700 font-bold">Triggered Rework Loop Directive</span></p>
+</div>
+<!-- Step 7 -->
+<div class="relative flex flex-col gap-0.5 group">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-emerald-600 ring-4 ring-white shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-badge-micro text-badge-micro text-emerald-800 font-mono font-bold">00:04.280</span>
+<span class="font-code-stream text-code-stream text-emerald-700 font-bold">[AutonomousOrchestrator]</span>
+</div>
+<span class="font-badge-micro text-badge-micro text-emerald-700 font-mono font-bold">200 OK</span>
+</div>
+<p class="font-body-sm text-body-sm text-emerald-800 font-semibold">Final audit approval (0.82) → Stream completed and serialized</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Interactive micro-actions for Trace & Audit Console
+  document.getElementById('btn-copy-sentry')?.addEventListener('click', function() {
+    const text = JSON.stringify({
+      runId: 'FX-9842',
+      session: 'sess_prod_0994x_eu',
+      auditScore: 0.82,
+      remediationRounds: 1,
+      latency: 4280
+    }, null, 2);
+    navigator.clipboard?.writeText(text).then(() => {
+      const orig = this.innerHTML;
+      this.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span><span>Copied!</span>';
+      setTimeout(() => this.innerHTML = orig, 1800);
+    });
+  });
+
+  document.getElementById('btn-download-json')?.addEventListener('click', function() {
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify({
+      briefId: "FX-9842",
+      objective: "Increase hydration for office workers",
+      archetype: "The Sage",
+      iteration: 2,
+      finalScore: 0.82,
+      approved: true,
+      timestamp: new Date().toISOString()
+    }, null, 2));
+    const dlAnchor = document.createElement('a');
+    dlAnchor.setAttribute("href", dataStr);
+    dlAnchor.setAttribute("download", "textfx_trace_FX9842.json");
+    dlAnchor.click();
+  });
+
+  document.getElementById('btn-replay')?.addEventListener('click', function() {
+    const orig = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined text-[14px] animate-spin">refresh</span><span>Replaying...</span>';
+    setTimeout(() => {
+      this.innerHTML = '<span class="material-symbols-outlined text-[14px]">done_all</span><span>Verified (0.82)</span>';
+      setTimeout(() => this.innerHTML = orig, 2000);
+    }, 1200);
+  });
+</script></main></div>
+
+</body></html>

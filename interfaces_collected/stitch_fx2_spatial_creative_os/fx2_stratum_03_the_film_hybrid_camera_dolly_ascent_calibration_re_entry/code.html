@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-container":"#ffa58d","surface-container-high":"#292a2c","tertiary-fixed":"#e5e2db","outline":"#ad8882","on-background":"#e3e2e5","on-primary-fixed":"#410000","inverse-on-surface":"#303033","tertiary":"#c9c6c0","tertiary-fixed-dim":"#c9c6c0","on-tertiary-container":"#2a2a25","secondary-fixed-dim":"#ffb4a1","inverse-surface":"#e3e2e5","primary-fixed-dim":"#ffb4a8","surface-tint":"#ffb4a8","on-error-container":"#ffdad6","background":"#121315","surface-container":"#1f2022","surface-dim":"#121315","surface-variant":"#343537","on-primary-fixed-variant":"#930000","secondary":"#ffb4a1","surface-container-lowest":"#0d0e10","on-secondary":"#611300","on-primary-container":"#5c0000","secondary-container":"#912100","tertiary-container":"#92918b","secondary-fixed":"#ffdbd2","on-surface-variant":"#e6bdb7","outline-variant":"#5d403b","primary-container":"#ff5541","on-tertiary-fixed-variant":"#474742","on-secondary-fixed":"#3c0800","primary":"#ffb4a8","surface-container-highest":"#343537","surface-bright":"#38393b","surface-container-low":"#1b1c1e","inverse-primary":"#bf0904","on-error":"#690005","error":"#ffb4ab","surface":"#121315","on-tertiary":"#31312c","on-tertiary-fixed":"#1c1c18","error-container":"#93000a","primary-fixed":"#ffdad4","on-primary":"#690000","on-secondary-fixed-variant":"#881f00","on-surface":"#e3e2e5"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","margin":"2rem","margin-sm":"1rem","space-md":"1rem","gutter":"1.25rem","space-lg":"1.5rem","margin-lg":"3.5rem","space-xs":"0.25rem","gutter-lg":"2rem","gutter-sm":"0.75rem","space-xl":"2.5rem"},"fontFamily":{"headline-lg":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-sm":["JetBrains Mono"],"label-lg":["Inter"],"headline-sm":["Inter"],"display-md-mobile":["Playfair Display"],"body-lg":["Inter"],"headline-md":["Playfair Display"],"display-lg":["Playfair Display"],"label-md":["JetBrains Mono"],"code-timecode":["JetBrains Mono"],"body-md":["Inter"],"body-sm":["Inter"],"display-md":["Playfair Display"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-md-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"code-timecode":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"display-md":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}]}}}};</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">FX2 Descent</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Project 84 / Harness</span></div></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-primary tracking-wider">REC</span></div></div><div class="px-space-lg py-space-sm"><div class="px-space-sm py-space-xs bg-surface-container-low rounded flex items-center justify-between"><span class="font-label-sm text-label-sm text-tertiary uppercase">Base Commit</span><span class="font-label-sm text-label-sm text-on-surface">9a2f1c8 <span class="text-secondary">(Tk 03)</span></span></div></div><div class="mt-space-md px-space-sm"><span class="px-space-md font-label-sm text-label-sm uppercase tracking-widest text-tertiary-container block mb-space-xs">Stratum Traversal Vectors</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_16px_rgba(242,56,39,0.35)]"><a class="group flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="s-01-light-table" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-primary">01</span><span class="font-body-md text-body-md tracking-tight">Light Table</span></div><span class="font-label-sm text-label-sm text-tertiary group-hover:text-on-surface">Z = +0.00m</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="s-02-glass-frames" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-primary">02</span><span class="font-body-md text-body-md tracking-tight">Glass Frames</span></div><span class="font-label-sm text-label-sm text-tertiary group-hover:text-on-surface">Z = -120.00m</span></a><a aria-current="page" class="group flex items-center justify-between px-space-md py-space-sm rounded transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_16px_rgba(242,56,39,0.35)]" data-path="s-03-film-hybrid" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-primary">03</span><span class="font-body-md text-body-md tracking-tight">Film Hybrid</span></div><span class="font-label-sm text-label-sm text-tertiary group-hover:text-on-surface">Z = -240.00m</span></a><a class="group flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="s-04-the-paper" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-primary">04</span><span class="font-body-md text-body-md tracking-tight">The Paper</span></div><span class="font-label-sm text-label-sm text-tertiary group-hover:text-on-surface">Z = -360.00m</span></a></nav></div><div class="mt-space-lg px-space-sm"><span class="px-space-md font-label-sm text-label-sm uppercase tracking-widest text-tertiary-container block mb-space-xs">Inspection Modules</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_16px_rgba(242,56,39,0.35)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dolly-telemetry-engine" href="#"><span class="font-body-md text-body-md tracking-tight">Dolly Telemetry</span><span class="font-label-sm text-label-sm px-space-xs rounded bg-surface-container-low text-secondary">6-AXIS</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stage-quarantine-matrix" href="#"><span class="font-body-md text-body-md tracking-tight">Branch Quarantine</span><span class="font-label-sm text-label-sm text-error">7d18a4c</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="spatial-light-array" href="#"><span class="font-body-md text-body-md tracking-tight">Spatial Optics</span><span class="font-label-sm text-label-sm text-tertiary">RAW</span></a></nav></div></div><div class="p-space-md bg-surface-container-lowest/60 m-space-sm rounded"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-tertiary uppercase">Vector Engine Status</span><span class="font-label-sm text-label-sm text-primary">LOCKED</span></div><div class="w-full h-1 bg-surface-container-high rounded overflow-hidden"><div class="w-3/4 h-full bg-primary-container"></div></div><div class="flex justify-between items-center mt-space-xs font-label-sm text-label-sm text-tertiary"><span class="font-code-timecode text-code-timecode">35mm f/1.4</span><span>T-STOP 1.8</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded"><span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wide">Active Breadcrumb:</span><span class="font-label-sm text-label-sm text-on-surface">S-04 The Paper [Z: -360.00m]</span><span class="font-label-sm text-label-sm text-primary">▲</span><span class="font-label-sm text-label-sm text-on-surface-variant">S-03 Film Hybrid [Z: -240.00m]</span></div><div class="hidden xl:flex items-center gap-space-sm px-space-sm py-1 bg-surface-container-low rounded"><span class="font-label-sm text-label-sm text-tertiary uppercase">Dolly Vector:</span><span class="font-label-sm text-label-sm text-secondary font-code-timecode text-code-timecode">X:+12.42 Y:-08.10 Z:-310.22</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim">SPD: 0.84m/s</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-high/80 px-space-md py-1 rounded"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-code-timecode text-code-timecode text-on-surface tracking-wider">SMPTE: 00:00:11:04</span></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm"><span class="font-mono">BRANCH</span><span class="font-mono font-bold">7d18a4c [QUARANTINE]</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 min-h-screen bg-background w-full"><div class="flex flex-col w-full">
+<!-- Spatial Ascent Ribbon & Telemetry Bar -->
+<section class="w-full px-margin-lg pt-space-lg pb-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-space-md">
+<!-- Breadcrumb Ascent Chain -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm tracking-wider text-tertiary">
+<span class="text-tertiary-container uppercase">Ascent Vector:</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary">S-04 The Paper [-360.00m]</span>
+<span class="text-primary-container">──▲──</span>
+<span class="px-space-sm py-0.5 rounded bg-primary-container text-on-primary-container font-semibold shadow-md flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest animate-ping"></span>
+            S-03 Film Hybrid [-240.00m] SETTLED
+          </span>
+<span class="text-tertiary-container">────</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary opacity-70">S-02 Glass Frames [-120.00m]</span>
+<span class="text-tertiary-container">────</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary opacity-50">S-01 Light Table [0.00m]</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="px-space-sm py-1 rounded bg-surface-container-high/80 text-secondary font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">motion_sensor_idle</span>
+<span>SMOOTH KINEMATIC TRANSITION // REDUCED MOTION PREFERENCE RESPECTED</span>
+</div>
+<div class="px-space-sm py-1 rounded bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm">
+            VELOCITY: 0.00 m/s
+          </div>
+</div>
+</div>
+<!-- Real-time Settled Telemetry Array -->
+<div class="grid grid-cols-2 md:grid-cols-6 gap-space-xs bg-surface-container-low p-space-sm rounded-lg shadow-sm">
+<div class="flex flex-col px-space-sm py-1 bg-surface-container-lowest/60 rounded">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Spatial Stratum</span>
+<span class="font-code-timecode text-code-timecode text-primary font-bold">Z: -240.00m</span>
+</div>
+<div class="flex flex-col px-space-sm py-1 bg-surface-container-lowest/60 rounded">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Dolly Pitch</span>
+<span class="font-code-timecode text-code-timecode text-on-surface">12.40° TILT</span>
+</div>
+<div class="flex flex-col px-space-sm py-1 bg-surface-container-lowest/60 rounded">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Index of Refraction</span>
+<span class="font-code-timecode text-code-timecode text-secondary font-semibold">η = 1.490</span>
+<span class="font-label-sm text-[9px] text-tertiary">OPTICAL GELATIN</span>
+</div>
+<div class="flex flex-col px-space-sm py-1 bg-surface-container-lowest/60 rounded">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Lineage Reference</span>
+<span class="font-code-timecode text-code-timecode text-on-surface">9a2f1c8 (Tk 03)</span>
+</div>
+<div class="flex flex-col px-space-sm py-1 bg-surface-container-lowest/60 rounded">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Emulsion Base</span>
+<span class="font-label-sm text-label-sm text-primary-container font-bold">EASTMAN 5219</span>
+</div>
+<div class="flex flex-col px-space-sm py-1 bg-surface-container-lowest/60 rounded">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Optical Substrate</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed">NITROCELLULOSE 65mm</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Restored Cutsheet Re-entry Banner -->
+<section class="w-full px-margin-lg py-space-sm bg-surface-container">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm p-space-md rounded bg-surface-container-low shadow-md">
+<div class="flex items-center gap-space-md">
+<div class="w-9 h-9 rounded bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container text-[20px]">assignment_turned_in</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">EXIT COMPARISON EXECUTED: Returned to canonical cutsheet state.</span>
+<span class="font-body-sm text-body-sm text-tertiary">Base 5219 confirmed as Master Creative Reference. Push +2 preserved in isolated recoverable candidate buffer.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-surface-container-highest text-secondary-fixed">
+          CANONICAL REVISION: TAKES 01-03 LOCKED
+        </span>
+<button class="px-space-md py-1.5 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5" id="openBufferDrawer">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<span>Inspect Push +2 Buffer</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Primary Canvas Split: Filmstrip Inspection vs Emulsion Calibrations -->
+<section class="w-full px-margin-lg py-space-xl">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg items-start">
+<!-- Left Column: Celluloid Viewport & Kodak Edge Keymark Rail (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- Celluloid Master Monitor Container -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-2xl relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-on-surface tracking-widest font-semibold uppercase">Celluloid Emulsion Projection</span>
+<span>// 65MM 5-PERF INTERMEDIATE</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-timecode text-code-timecode text-secondary">4120+04</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary-fixed">LATENT CODE: 849-01</span>
+</div>
+</div>
+<!-- The Filmstrip Frame with Kodak Perforations and Keyline Margins -->
+<div class="relative bg-surface-container-lowest rounded-lg p-space-sm flex flex-col gap-space-xs">
+<!-- Upper Perforations & Kodak Markings -->
+<div class="flex items-center justify-between px-space-sm py-1 bg-surface-container-low rounded-t">
+<div class="flex gap-4">
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+</div>
+<div class="font-label-sm text-label-sm tracking-widest text-primary-fixed-dim select-none font-bold">
+                EASTMAN SAFETY FILM 5219 •• 1984 KODAK ••
+              </div>
+<div class="flex gap-4">
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+</div>
+</div>
+<!-- Main Film Frame Content Area -->
+<div class="relative aspect-[16/9] w-full bg-surface-container-highest rounded overflow-hidden shadow-2xl flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-85" data-alt="Cinematic 65mm analog film still inside a dark master control room. A solitary director stands before illuminated floating glass telemetry panels. Rich red halation bleeds through specular reflections on the director's visor. Organic dense 5219 celluloid film grain, deep obsidian shadows, warm amber and ember rim lighting, moody auteur editorial atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuYHnocw1Y43MfVgFrHmZBf-alroIgnIaLpHs6Mj_BdXkVHSd7RVTHbo8VDNdNQh7xSoeO4W3omZ9_sZYOYDZXdmDM9Bn_9JXl_9cDwmwQ7NEITGqxz3rRxvm-7eP2KDYSJBjsfFEnvZWMya5p6AwiAb2cn3ly6jUpwwfl14xe9NtqVssr-6XutxiB4icnyA3F30TfwYL0bwbr031NPvlWb7AIPBk8eF1SCUFXmQJ5"/>
+<!-- Film Hybrid Grain & Halation Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-surface-container-lowest/40 pointer-events-none"></div>
+<!-- Reticle & Optical Crosshair -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
+<div class="w-24 h-24 rounded-full bg-transparent shadow-[0_0_0_1px_rgba(255,180,168,0.4)] flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+</div>
+</div>
+<!-- Live Viewport Overlays -->
+<div class="absolute top-space-md left-space-md flex flex-col gap-1">
+<span class="font-label-sm text-label-sm px-space-sm py-0.5 rounded bg-surface-container-lowest/90 text-primary-fixed tracking-widest">CALIBRATION RETICLE 03</span>
+<span class="font-code-timecode text-code-timecode text-on-surface drop-shadow-md">T-STOP: T/1.8 • 35mm PRIME</span>
+</div>
+<div class="absolute bottom-space-md left-space-md right-space-md flex items-end justify-between">
+<div class="px-space-md py-space-xs rounded bg-surface-container-lowest/90 backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-tertiary uppercase block">Active Master Take</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">TK 03 — MASTER CANONICAL</span>
+</div>
+<div class="px-space-md py-space-xs rounded bg-surface-container-lowest/90 backdrop-blur-md text-right">
+<span class="font-label-sm text-label-sm text-tertiary uppercase block">Specular Bloom</span>
+<span class="font-code-timecode text-code-timecode text-secondary font-bold">22.4% PEAK</span>
+</div>
+</div>
+</div>
+<!-- Lower Perforations & Edge Print -->
+<div class="flex items-center justify-between px-space-sm py-1 bg-surface-container-low rounded-b">
+<div class="flex gap-4">
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+</div>
+<div class="font-label-sm text-label-sm tracking-widest text-tertiary-fixed select-none">
+                Z-240M • STRATUM 03 • DESCENT CAMERA RIG 08 • ECN-2 PROCESS
+              </div>
+<div class="flex gap-4">
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block shadow-inner"></span>
+</div>
+</div>
+</div>
+<!-- Secondary Thumbnails: Film Strip Bracket Takes -->
+<div class="mt-space-md grid grid-cols-3 gap-space-sm">
+<div class="p-space-xs rounded bg-surface-container-low flex flex-col gap-1">
+<div class="h-16 w-full rounded bg-surface-container-high overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="Cinematic wide shot of deep underground brutalist spatial facility. Volumetric red safety emergency lights cutting through suspended particulate mist. 35mm grain texture, high contrast chiaroscuro." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF5DdyTmsAk9xFadqWcEA2TkXvuYN2W4qnRrKOz180_t0Y1aHEQkcqz0_Kx_VhrlRPZ10nTGRnQU4OVjUfXpkK02-IVXX-S3Zc3g4vedFxzDvo6jp_R5u_O8UdFcA3vltKekjkt74nWHT9F-tTnQR1MQhf39ZwpXg8IGpu_SzkJFvZasp3A8U13hF4nftFUGW51f6nytp87WQL6wW0Im4Put9XdNC7sg89xGPpSxyP"/>
+<span class="absolute bottom-1 right-1 font-label-sm text-[9px] px-1 rounded bg-surface-container-lowest text-tertiary">TK 01</span>
+</div>
+<div class="flex justify-between items-center px-1">
+<span class="font-label-sm text-label-sm text-tertiary">Z: -238.10m</span>
+<span class="font-label-sm text-[9px] text-tertiary">ARCHIVED</span>
+</div>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low flex flex-col gap-1">
+<div class="h-16 w-full rounded bg-surface-container-high overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="Cinematic medium shot of an antique optical lens prism reflecting abstract ruby red laser grids. Film grain, razor sharp focus plane, 5219 Kodak color science." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtsoT1WqAbZk7_XMBPLEvBiq5FxDb2Wbko9huyX2kSuOOgQOUDoTG9Poa9BkNjbu3u7WV2Z4n4zBZVOszMVdYT9SA1r49fwOpe852lskC-y1QYZ4oDIk9cV4kn2Y-qqGX7SDchDYFdloJQ9LgISMzjwr4gxYtDe_NvLIVLDaDjdelh7MhGoPNKih2EEiyh6iIamgBHOceTIa7Oav2KzZNqD7O0hNPjdPqpztK3qpsn"/>
+<span class="absolute bottom-1 right-1 font-label-sm text-[9px] px-1 rounded bg-surface-container-lowest text-tertiary">TK 02</span>
+</div>
+<div class="flex justify-between items-center px-1">
+<span class="font-label-sm text-label-sm text-tertiary">Z: -239.50m</span>
+<span class="font-label-sm text-[9px] text-tertiary">ARCHIVED</span>
+</div>
+</div>
+<div class="p-space-xs rounded bg-surface-container-high flex flex-col gap-1 shadow-md">
+<div class="h-16 w-full rounded bg-surface-container-highest overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Cinematic close-up portrait of film director in reflective smoked glass helmet. Deep obsidian background, intense red halation glow on carbon fiber rim. High fidelity celluloid texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9mIr37sVQeL_ush2QF_e4iE9EwjfcqNwjni8dO5AdegP32GegGcImALFQmQFkZucuSyYtx1aVqg7EPZnYFIeJzyJksBjcy92UDRSyMZT7XN6tHbjI5lb9xIak88vfc_ySjCNuk4KfzpyHhAwVA29H96zJoIGJgB_bp5zsrciJNMQtyLOx7m-aKmbRwRFhEWIM0W0E5DyOU-LejkyZJJvOLNiQFAW_OpaBRS6Ahv51"/>
+<span class="absolute bottom-1 right-1 font-label-sm text-[9px] px-1 rounded bg-primary-container text-on-primary-container font-bold">TK 03 [ACTIVE]</span>
+</div>
+<div class="flex justify-between items-center px-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">Z: -240.00m</span>
+<span class="font-label-sm text-[9px] text-secondary">SETTLED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Script Cutsheet Manuscript Card & Verbatim Lineage -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-6 bg-primary-container rounded-full"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary">Manuscript Cutsheet // Scene 04</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">The Architecture of Silence</h3>
+</div>
+</div>
+<div class="px-space-sm py-1 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm">
+              BRF-84-ALPHA ORIGIN [Z: 0.00m]
+            </div>
+</div>
+<!-- Verbatim Dialogue Display with Editorial Indentation -->
+<div class="my-space-md p-space-lg rounded-lg bg-surface-container-lowest/80 relative">
+<div class="font-label-sm text-label-sm uppercase text-secondary tracking-widest mb-space-xs">
+              CHARACTER A (RADIO INTERCOM FILTRATION)
+            </div>
+<blockquote class="font-headline-lg text-headline-lg italic text-primary-fixed tracking-tight">
+              “We aren’t falling through space. We’re falling through memory.”
+            </blockquote>
+<div class="mt-space-md flex flex-wrap items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span>SOUND VECTOR: 18Hz SUB-HARMONIC DRONE</span>
+<span>SCENE PACE: 24.000 FPS SYNC</span>
+<span class="text-on-surface-variant font-mono">DRAFT 04.1 CANONICAL</span>
+</div>
+</div>
+<!-- Provenance Lock & Branch Forking Audit -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-sm">
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface">Canonical Anchor: Concept B</span>
+</div>
+<span class="font-code-timecode text-code-timecode text-primary font-bold">9a2f1c8</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px]">lock</span>
+<span class="font-label-md text-label-md text-error">Detached Quarantined:</span>
+</div>
+<span class="font-code-timecode text-code-timecode text-error font-bold">7d18a4c (Draft 04.3)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Optical Grain Console & D-Log E Sensitometry (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Emulsion Grain & Sensitometry Deck -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[22px]">tune</span>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Optical Emulsion Calibration</h4>
+<span class="font-label-sm text-label-sm text-tertiary">RETAINED SPECIFICATION MATRIX</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-0.5 rounded bg-primary-container/20 text-primary-container font-semibold">
+              BASE 5219
+            </span>
+</div>
+<!-- Parameter Gauges Grid -->
+<div class="flex flex-col gap-space-md">
+<!-- Parameter 1: Grain Size -->
+<div class="flex flex-col gap-1 p-space-sm rounded bg-surface-container-lowest/80">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface">Organic Grain Particle Size</span>
+<span class="font-code-timecode text-code-timecode text-primary font-bold">1.42 µm</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container" style="width: 47%"></div>
+</div>
+<div class="flex justify-between text-tertiary font-label-sm text-[10px]">
+<span>0.80 µm (Fine)</span>
+<span>TARGET: 1.42 µm</span>
+<span>3.00 µm (Pushed)</span>
+</div>
+</div>
+<!-- Parameter 2: Midtone Density -->
+<div class="flex flex-col gap-1 p-space-sm rounded bg-surface-container-lowest/80">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface">Midtone Optical Density</span>
+<span class="font-code-timecode text-code-timecode text-secondary font-bold">0.68 D</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 58%"></div>
+</div>
+<div class="flex justify-between text-tertiary font-label-sm text-[10px]">
+<span>0.20 D</span>
+<span>CALIBRATED: 0.68 D</span>
+<span>1.20 D</span>
+</div>
+</div>
+<!-- Parameter 3: Red Halation Bleed -->
+<div class="flex flex-col gap-1 p-space-sm rounded bg-surface-container-lowest/80">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface">Remjet Red Halation Bleed</span>
+<span class="font-code-timecode text-code-timecode text-primary font-bold">3.84 px</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container" style="width: 42%"></div>
+</div>
+<div class="flex justify-between text-tertiary font-label-sm text-[10px]">
+<span>0.00 px (None)</span>
+<span>HALATION: 3.84 px</span>
+<span>8.00 px (Severe)</span>
+</div>
+</div>
+<!-- Parameter 4: Toe / Shoulder Gamma & Specular Bloom -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-lowest/80 flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Gamma Slope (γ)</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-code-timecode text-headline-sm text-on-surface font-bold">0.82</span>
+<span class="font-label-sm text-[10px] text-tertiary">γ TOE/SHLDR</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest/80 flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Visor Bloom</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-code-timecode text-headline-sm text-secondary font-bold">22.4%</span>
+<span class="font-label-sm text-[10px] text-tertiary">SPECULAR</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sensitometric D-Log E Characteristic Curve SVG Visualization -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Sensitometric D-Log E Curve</span>
+<div class="flex items-center gap-space-xs font-code-timecode text-[11px] text-tertiary">
+<span>D-Min: <span class="text-on-surface">0.14</span></span>
+<span>•</span>
+<span>D-Max: <span class="text-on-surface">2.44</span></span>
+<span>•</span>
+<span>γ: <span class="text-primary font-bold">0.82</span></span>
+</div>
+</div>
+<!-- Inline SVG Curve Chart -->
+<div class="w-full h-36 bg-surface-container-low/40 rounded flex items-center justify-center p-2 relative">
+<svg class="w-full h-full text-on-surface overflow-visible" fill="none" viewbox="0 0 320 120">
+<!-- Grid Lines -->
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.08" x1="20" x2="300" y1="10" y2="10"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.08" x1="20" x2="300" y1="40" y2="40"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.08" x1="20" x2="300" y1="70" y2="70"></line>
+<line stroke="currentColor" stroke-opacity="0.15" x1="20" x2="300" y1="100" y2="100"></line>
+<line stroke="currentColor" stroke-opacity="0.15" x1="20" x2="20" y1="10" y2="100"></line>
+<!-- Axes Labels -->
+<text fill="currentColor" fill-opacity="0.5" font-family="JetBrains Mono" font-size="8" x="18" y="112">LOG E</text>
+<text fill="currentColor" fill-opacity="0.5" font-family="JetBrains Mono" font-size="8" x="5" y="15">D</text>
+<!-- D-Min Line -->
+<line stroke="#92918b" stroke-width="1.5" x1="20" x2="60" y1="96" y2="96"></line>
+<!-- Main S-Curve (Base 5219 Canonical) -->
+<path d="M 60 96 C 100 96, 130 92, 160 60 C 190 28, 220 22, 280 20" stroke="#ff5541" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Candidate Push +2 Comparison Ghost Curve -->
+<path d="M 60 93 C 90 90, 115 75, 145 42 C 175 14, 210 12, 280 12" stroke="#ffa58d" stroke-dasharray="3 3" stroke-opacity="0.6" stroke-width="1.5"></path>
+<!-- Sampling Nodes -->
+<circle cx="160" cy="60" fill="#ff5541" r="3.5"></circle>
+<circle cx="145" cy="42" fill="#ffa58d" r="3"></circle>
+<!-- Curve Annotations -->
+<text fill="#ffb4a8" font-family="JetBrains Mono" font-size="8" x="170" y="64">BASE 5219 (γ 0.82)</text>
+<text fill="#ffa58d" font-family="JetBrains Mono" font-size="8" opacity="0.8" x="120" y="24">PUSH +2 (γ 1.15)</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-tertiary font-label-sm text-[10px]">
+<span class="flex items-center gap-1">
+<span class="w-2.5 h-0.5 bg-primary-container inline-block"></span>
+<span>Canonical Emulsion Slope</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="w-2.5 h-0.5 bg-secondary border-dashed inline-block"></span>
+<span>Isolated Push +2 Trace</span>
+</span>
+</div>
+</div>
+<!-- Recoverable Candidate Push +2 Drawer Badge -->
+<div class="p-space-md rounded-lg bg-surface-container-high/90 flex flex-col gap-space-xs shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-lowest text-secondary-fixed font-semibold tracking-wider">
+                CANDIDATE PUSH +2 BUFFER
+              </span>
+<span class="font-label-sm text-label-sm text-primary">ISOLATED // RECOVERABLE</span>
+</div>
+<p class="font-code-timecode text-code-timecode text-on-surface">
+              3.00 µm / 0.94 D / 6.20 px
+            </p>
+<div class="flex items-center justify-between pt-space-xs text-tertiary font-label-sm text-label-sm">
+<span>Ready for reinstatement if requested.</span>
+<button class="text-secondary hover:text-on-surface underline font-label-sm transition-colors">Compare Live</button>
+</div>
+</div>
+</div>
+<!-- Traversal Vectors & Nav Actions Deck -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary">Kinematic Traversal Controls</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<!-- Primary Ascent & Descent Buttons -->
+<div class="flex flex-col gap-space-sm">
+<a class="w-full px-space-md py-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-lg text-label-lg transition-all flex items-center justify-between group shadow-sm" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-bold text-[16px]">▲</span>
+<span>ASCEND TO S-02 GLASS FRAMES</span>
+</div>
+<span class="font-code-timecode text-code-timecode text-tertiary group-hover:text-primary transition-colors">-120.00m</span>
+</a>
+<a class="w-full px-space-md py-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-lg text-label-lg transition-all flex items-center justify-between group shadow-sm" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="text-secondary font-bold text-[16px]">▼</span>
+<span>DESCEND TO S-04 THE PAPER</span>
+</div>
+<span class="font-code-timecode text-code-timecode text-tertiary group-hover:text-secondary transition-colors">-360.00m</span>
+</a>
+<a class="w-full px-space-md py-space-sm rounded bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-label-lg text-label-lg font-bold transition-all flex items-center justify-between shadow-lg" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="text-[16px]">↑</span>
+<span>DIRECT ASCENT TO S-01 LIGHT TABLE</span>
+</div>
+<span class="font-code-timecode text-code-timecode text-on-primary-container">0.00m (BASE)</span>
+</a>
+</div>
+<!-- Non-Destructive Safety Status Indicator -->
+<div class="p-space-sm rounded bg-surface-container-lowest text-center">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wider">
+              SAFETY SYSTEM: ARMED // WRITE FORBIDDEN // INTERFACE DESIGN STATES ONLY
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Push +2 Inspect Drawer / Modal Backdrop (Interactive Script Component) -->
+<div class="fixed inset-0 bg-background/80 backdrop-blur-md z-50 hidden flex-col justify-end xl:justify-center items-center p-space-md" id="bufferDrawerModal">
+<div class="bg-surface-container-high w-full max-w-2xl rounded-xl p-space-xl shadow-2xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">inventory_2</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recoverable Push +2 Buffer State</h3>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface" id="closeBufferDrawer">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Candidate Spec Parameters</span>
+<div class="grid grid-cols-3 gap-space-sm text-center">
+<div class="p-2 bg-surface-container rounded">
+<span class="font-label-sm text-label-sm text-tertiary block">Grain Particle</span>
+<span class="font-code-timecode text-code-timecode text-primary font-bold">3.00 µm</span>
+</div>
+<div class="p-2 bg-surface-container rounded">
+<span class="font-label-sm text-label-sm text-tertiary block">Density Shift</span>
+<span class="font-code-timecode text-code-timecode text-secondary font-bold">0.94 D</span>
+</div>
+<div class="p-2 bg-surface-container rounded">
+<span class="font-label-sm text-label-sm text-tertiary block">Halation Bleed</span>
+<span class="font-code-timecode text-code-timecode text-primary font-bold">6.20 px</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-tertiary">
+        This candidate push was compiled during the Take 04 exploratory pass. It has been detached from master branch <span class="font-code-timecode text-code-timecode text-primary">9a2f1c8</span> and quarantined to prevent accidental overwrite of Scene 04 canonical manuscript metrics.
+      </p>
+<div class="flex items-center justify-end gap-space-md">
+<button class="px-space-md py-space-sm rounded bg-surface-container text-tertiary hover:text-on-surface font-label-md text-label-md" id="closeBufferDrawerSecondary">
+          Dismiss Drawer
+        </button>
+<button class="px-space-md py-space-sm rounded bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+          Clone to Isolated Workspace
+        </button>
+</div>
+</div>
+</div>
+<script>
+    (function initFilmHybridState() {
+      const modal = document.getElementById('bufferDrawerModal');
+      const openBtn = document.getElementById('openBufferDrawer');
+      const closeBtn = document.getElementById('closeBufferDrawer');
+      const closeBtnSecondary = document.getElementById('closeBufferDrawerSecondary');
+
+      if (openBtn && modal) {
+        openBtn.addEventListener('click', () => {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        });
+      }
+
+      function closeModal() {
+        if (modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (closeBtnSecondary) closeBtnSecondary.addEventListener('click', closeModal);
+    })();
+  </script>
+</div></main></div></body></html>

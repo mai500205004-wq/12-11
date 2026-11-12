@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: letter portrait;
+    margin: 18mm 18mm 18mm 18mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #121315;
+    background: #ffffff;
+    line-height: 1.45;
+    font-size: 9.5pt;
+    margin: 0;
+    padding: 0;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+  .header-band {
+    border-bottom: 2px solid #f23827;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .doc-title {
+    font-family: "Georgia", serif;
+    font-size: 18pt;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    color: #0d0e10;
+    margin: 0;
+  }
+  .doc-subtitle {
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #f23827;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #f4f4f5;
+    border: 1px solid #e4e4e7;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 8pt;
+  }
+  .meta-item strong {
+    display: block;
+    color: #52525b;
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  h2 {
+    font-family: "Georgia", serif;
+    font-size: 12pt;
+    border-bottom: 1px solid #d4d4d8;
+    padding-bottom: 4px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    color: #0d0e10;
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 {
+    font-size: 9.5pt;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #18181b;
+  }
+  p {
+    margin: 0 0 8px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+    font-size: 8pt;
+  }
+  th, td {
+    border: 1px solid #e4e4e7;
+    padding: 5px 7px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f4f4f5;
+    color: #27272a;
+    font-weight: 600;
+  }
+  .badge {
+    display: inline-block;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 6.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .badge-approved { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+  .badge-spec { background: #e0f2fe; color: #075985; border: 1px solid #bae6fd; }
+  .badge-blocker { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+  .badge-pending { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+  .badge-unverified { background: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+  .badge-unresolved { background: #ffedd5; color: #9a3412; border: 1px solid #fed7aa; }
+  
+  .callout-box {
+    border-left: 3px solid #f23827;
+    background: #fafafa;
+    border: 1px solid #e4e4e7;
+    border-left-width: 3px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    font-size: 8pt;
+  }
+  .scripture-quote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    font-size: 10pt;
+    color: #0d0e10;
+    padding: 6px 12px;
+    background: #fdf2f2;
+    border-left: 2px solid #f23827;
+    margin: 8px 0;
+  }
+  .footer {
+    border-top: 1px solid #e4e4e7;
+    padding-top: 6px;
+    font-size: 7pt;
+    color: #71717a;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+  ul {
+    margin: 0 0 8px 0;
+    padding-left: 18px;
+  }
+  li {
+    margin-bottom: 3px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- PAGE 1: EXECUTIVE SUMMARY & ARCHITECTURE -->
+  <div class="header-band">
+    <div>
+      <div class="doc-title">FX2 — THE DESCENT</div>
+      <div class="doc-subtitle">Master Production Handoff Specification & Derivative Audit Summary</div>
+    </div>
+    <div style="text-align: right; font-size: 7.5pt; color: #52525b;">
+      <div><strong>DOC REF:</strong> FX2-SPEC-HANDOFF-2028-REV4</div>
+      <div><strong>EXPORT TARGET:</strong> /exports/specifications/FX2_Handoff_Summary.pdf</div>
+    </div>
+  </div>
+
+  <div class="meta-grid">
+    <div class="meta-item">
+      <strong>Operational Mode</strong>
+      READ-ONLY AUDIT (Derivative Export)
+    </div>
+    <div class="meta-item">
+      <strong>Design Freeze</strong>
+      <span class="badge badge-approved">CONFIRMED // PRESERVED</span>
+    </div>
+    <div class="meta-item">
+      <strong>Canonical Repository</strong>
+      NO MUTATION (Write Locked)
+    </div>
+    <div class="meta-item">
+      <strong>Physical Delivery Status</strong>
+      <span class="badge badge-pending">EXTERNAL GATES PENDING</span>
+    </div>
+  </div>
+
+  <div class="callout-box">
+    <strong>MANDATORY HANDOFF NOTICE:</strong> This derivative document is a strict architectural, structural, and interaction design specification summary. It reflects the conformed design baseline under the ratified <strong>FX2 Design Freeze</strong>. It explicitly distinguishes between design-tier ratifications and physical production deliverables. <em>This document does not constitute proof of physical media generation, external Avid import success, stage acoustic sign-off, or hardware cryptographic immutability.</em>
+  </div>
+
+  <h2>1. Approved Spatial Operating Architecture & Continuum Model</h2>
+  <p>FX2 rejects conventional multi-page tabbed interfaces, disconnected sub-routes, and generic administrative sidebars in favor of <strong>The Descent</strong>: a single continuous z-axis spatial camera dolly journey traversing four functional creative strata.</p>
+  
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 18%;">Stratum & Elevation</th>
+        <th style="width: 22%;">System Designation</th>
+        <th style="width: 45%;">Functional Scope & Operational Focus</th>
+        <th style="width: 15%;">Design Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Stratum 01</strong><br>(Z = 0.00m)</td>
+        <td><strong>The Light Table</strong></td>
+        <td>Origin Brief (BRF-84-ALPHA), research dossier, 5 provocation lenses, creative territories, master external gate ledger.</td>
+        <td><span class="badge badge-approved">DESIGN APPROVED</span></td>
+      </tr>
+      <tr>
+        <td><strong>Stratum 02</strong><br>(Z = -120.00m)</td>
+        <td><strong>The Glass Frames</strong></td>
+        <td>Concept architecture, 3-way difference matrix, Concept B ("The Architecture of Silence") canonical DAG lineage, Concept A & C isolation.</td>
+        <td><span class="badge badge-approved">DESIGN APPROVED</span></td>
+      </tr>
+      <tr>
+        <td><strong>Stratum 03</strong><br>(Z = -240.00m)</td>
+        <td><strong>The Film Hybrid</strong></td>
+        <td>Photochemical & optical emulation, Kodak 5219 sensitometry, Cyan record isolation, optical soundhead track displacement (+26 fr / +52k smp).</td>
+        <td><span class="badge badge-approved">DESIGN APPROVED</span></td>
+      </tr>
+      <tr>
+        <td><strong>Stratum 04</strong><br>(Z = -360.00m)</td>
+        <td><strong>The Paper</strong></td>
+        <td>Production manuscript, Scene 04 boundaries, dialogue take lineage, BWF chunk schemas (EBU 3285), Avid AAF OP-Atom contracts.</td>
+        <td><span class="badge badge-approved">DESIGN APPROVED</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Canonical Lineage & Archival Governance</h2>
+  <p>The unbroken creative lineage originates at Stratum 01 and cascades directly into production deliverables without branch ambiguity:</p>
+  <ul>
+    <li><strong>Genesis Master Brief:</strong> <code>BRF-84-ALPHA</code> (Immutable origin anchor; zero retroactive changes).</li>
+    <li><strong>Canonical Concept:</strong> <strong>Concept B ("The Architecture of Silence")</strong> ratified as sole progenitor. Concepts A ("Kinetic Descent") and C ("The Dissolve") are preserved in read-only cold isolation.</li>
+    <li><strong>Canonical Dialogue Take:</strong> <strong>Take 03 (Commit <code>9a2f1c8</code>)</strong>.</li>
+  </ul>
+  
+  <div class="scripture-quote">
+    "We aren't falling through space. We're falling through memory."<br>
+    <span style="font-size: 7.5pt; color: #52525b; font-style: normal; font-family: sans-serif;">— Vance Principal Microphone (Stem A1) | Scene 04 | Canonical Take 03</span>
+  </div>
+
+  <h3>Quarantined Branch Partitions (Sub-Vault 02)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Quarantined Variant</th>
+        <th>Commit / Branch Ref</th>
+        <th>Spoken Text Snippet</th>
+        <th>Historical Origin</th>
+        <th>Archival Isolation Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Take 04.A</strong></td>
+        <td><code>4e91b2c</code> (adr-alt-04)</td>
+        <td><em>"We aren't descending through the dark. We're descending through what remains."</em></td>
+        <td>Stage 4 ADR Pickup Session B</td>
+        <td><span class="badge badge-approved">COLD QUARANTINE</span> (Separate Record)</td>
+      </tr>
+      <tr>
+        <td><strong>Take 04.B</strong></td>
+        <td><code>7d18a4c</code> (scratch-mut)</td>
+        <td><em>"We aren't descending through the dark. The dark is descending through us."</em></td>
+        <td>Sound Editor scratchpad cadence test</td>
+        <td><span class="badge badge-approved">COLD QUARANTINE</span> (Separate Record)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <span>FX2 — THE DESCENT | MASTER PRODUCTION HANDOFF SPECIFICATION</span>
+    <span>SECTION 1 & 2 // PAGE 1 OF 4</span>
+  </div>
+
+  <!-- PAGE 2: BRF-84-ALPHA AUDIT & CAMERA REVIEW -->
+  <div class="page-break"></div>
+
+  <div class="header-band">
+    <div>
+      <div class="doc-title">FX2 — THE DESCENT</div>
+      <div class="doc-subtitle">Phase 1 Evidence Dossier Audit & Phase 2 Camera Telemetry Review</div>
+    </div>
+    <div style="text-align: right; font-size: 7.5pt; color: #52525b;">
+      <div><strong>SECTION:</strong> AUDIT & TELEMETRY VERIFICATION</div>
+    </div>
+  </div>
+
+  <h2>3. BRF-84-ALPHA Evidence Dossier Audit Findings</h2>
+  <p>In accordance with strict evidentiary auditing standards, all claims and citations supporting Brief <code>BRF-84-ALPHA</code> have been inspected to verify whether underlying source documents exist, or if they represent directorial interpretations or generated hypotheses.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Dossier Evidence Claim</th>
+        <th style="width: 15%;">Assigned Tier</th>
+        <th style="width: 42%;">Evidentiary Reality & Source Availability</th>
+        <th style="width: 18%;">Audit Finding</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Apollo EVA Suit Acoustics</strong><br>(Helmet cavity resonance)</td>
+        <td>Tier B<br>(Interpretive)</td>
+        <td>Directorial acoustic model based on NASA biomedical telemetry transcripts. While Apollo missions are historical facts, the specific internal cavity transfer function is an artistic interpretation.</td>
+        <td><span class="badge badge-spec">INTERPRETIVE</span></td>
+      </tr>
+      <tr>
+        <td><strong>Kodak Vision3 5219 Sensitometry</strong><br>(D-Min, Gamma, Halation)</td>
+        <td>Tier A<br>(Verified Source)</td>
+        <td>Conforms to published Eastman Kodak Technical Data Sheet H-1-5219. Physical emulsion curve validated against manufacturer sensitometric standards.</td>
+        <td><span class="badge badge-approved">VERIFIED</span></td>
+      </tr>
+      <tr>
+        <td><strong>Ideal Vacuum Acoustic Law</strong><br>(v = √(K/ρ) → undefined)</td>
+        <td>Tier A<br>(Verified Source)</td>
+        <td>Fundamental acoustic continuum mechanics: ideal vacuum lacks a material elastic medium, rendering sound velocity undefined and external pressure 0 Pa.</td>
+        <td><span class="badge badge-approved">VERIFIED</span></td>
+      </tr>
+      <tr>
+        <td><strong>SMPTE Perceptual Timecode</strong><br>(Sub-frame consciousness)</td>
+        <td>Tier C<br>(Hypothesis)</td>
+        <td>Creative design hypothesis proposing human perceptual dilation during continuous descent. No peer-reviewed neuro-acoustic source document exists.</td>
+        <td><span class="badge badge-unverified">HYPOTHESIS</span></td>
+      </tr>
+      <tr>
+        <td><strong>Historical Acoustic Stems</strong><br>(Underlying field tapes)</td>
+        <td>Tier C<br>(Unmounted)</td>
+        <td>Physical field audio recordings referenced in ingest logs are unmounted; underlying raw files are physically unavailable on current storage nodes.</td>
+        <td><span class="badge badge-blocker">SOURCE MISSING</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. Continuous Z-Axis Camera Dolly Telemetry Review</h2>
+  <p>An audit of the continuous camera dolly system connecting Stratum 01 (Z = 0.00m) to Stratum 04 (Z = -360.00m) was performed to evaluate navigation integrity.</p>
+
+  <div class="callout-box">
+    <strong>TELEMETRY VERDICT: BLOCKED — TELEMETRY DATA NOT AVAILABLE (PHYSICAL MEASUREMENTS)</strong><br>
+    <em>Distinction:</em> The visual front-end displays smooth camera movement and visual cues. However, <strong>no actual hardware motion-control curve data (sampled Z-position vs. timestamp, physical motor velocities, or measured acceleration profiles) exists on the host.</strong> The curves present in the application are <strong>authored CSS/WebGL animation easing curves</strong> (cubic-bezier easing with pitch angle locked to -18.24°), not physically measured camera telemetry.
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Boundary Vector</th>
+        <th>Elevation Span</th>
+        <th>Authored Curve / Motion Profile</th>
+        <th>Observed Continuity & Visual Stability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Stratum 01 → 02</strong></td>
+        <td>Z = 0.00m to -120.00m</td>
+        <td>Ease-in-out cubic; optical pitch invariant at -18.24°.</td>
+        <td>Zero visual overshoot; smooth cross-fade from desk to frames.</td>
+      </tr>
+      <tr>
+        <td><strong>Stratum 02 → 03</strong></td>
+        <td>Z = -120.00m to -240.00m</td>
+        <td>S-curve acceleration; material translation to filmstrip.</td>
+        <td>Continuous single-camera perspective; no page refresh or tab break.</td>
+      </tr>
+      <tr>
+        <td><strong>Stratum 03 → 04</strong></td>
+        <td>Z = -240.00m to -360.00m</td>
+        <td>Damped deceleration settling at paper plane.</td>
+        <td>Clean landing at Scene 04 boundaries; zero interpolation jitter.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>5. Visual Identity & Master Color Pipeline Rigor</h2>
+  <ul>
+    <li><strong>Visual System:</strong> Obsidian Prism — Deep charcoal/obsidian surfaces (<code>#0d0e10</code>, <code>#121315</code>), razor <code>#38393b</code> structural lines, high-contrast monospace data telemetry, and crimson active indicators (<code>#f23827</code>).</li>
+    <li><strong>Working Color Space:</strong> <strong>ACEScc AP1</strong> (SMPTE ST 2065-1 / ST 2067-50).</li>
+    <li><strong>Distinct Separation of Stages:</strong>
+      <ol style="margin-top: 4px; padding-left: 18px;">
+        <li><em>Camera Input Device Transform (IDT):</em> Normalizes camera RAW to ACEScc AP1.</li>
+        <li><em>Grading & Look Management (LMT):</em> Creative color timing within AP1 wide gamut.</li>
+        <li><em>Output Device Transform (ODT):</em> Kodak 2383 D65 theatrical print emulation.</li>
+      </ol>
+    </li>
+    <li><strong>Technicolor 3-Strip Rule:</strong> Confined strictly to explicitly tagged subjective-memory/hallucination sequences (<code>PSYCHE_TAG</code>). It is strictly barred from automatically triggering based on Z-depth.</li>
+  </ul>
+
+  <div class="footer">
+    <span>FX2 — THE DESCENT | MASTER PRODUCTION HANDOFF SPECIFICATION</span>
+    <span>SECTION 3, 4 & 5 // PAGE 2 OF 4</span>
+  </div>
+
+  <!-- PAGE 3: SCENE 04 SPEC & GATE LEDGER -->
+  <div class="page-break"></div>
+
+  <div class="header-band">
+    <div>
+      <div class="doc-title">FX2 — THE DESCENT</div>
+      <div class="doc-subtitle">Phase 3 Discrepancies & Phase 4 Master External Gate Ledger</div>
+    </div>
+    <div style="text-align: right; font-size: 7.5pt; color: #52525b;">
+      <div><strong>SECTION:</strong> DISCREPANCIES & GATE STATUS</div>
+    </div>
+  </div>
+
+  <h2>6. Authoritative Resolution of Documentation Discrepancies</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Documentation Vector</th>
+        <th style="width: 45%;">Identified Discrepancy & Root Cause Analysis</th>
+        <th style="width: 30%;">Authoritative Resolution / Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Scene 04 Script Heading</strong></td>
+        <td>
+          Historical canonical script heading: <code>EXT. TOTAL VACUUM — THE DESCENT THROUGH SILENCE</code>.<br>
+          EXT-04 displayed heading: <code>INT. HELMET INTERIOR - CONTINUOUS [Z = -360.00M]</code>.
+        </td>
+        <td><span class="badge badge-unresolved">UNRESOLVED DISCREPANCY</span><br>Editorial perspective conflict (Exterior void vs. Interior helmet HUD). Marked UNRESOLVED; pending Director/Screenwriter reconciliation.</td>
+      </tr>
+      <tr>
+        <td><strong>Session Timestamp</strong></td>
+        <td>Activity log displays simulated timestamp <code>2028.11.04</code>. Current session environment operates in active calendar reality.</td>
+        <td><span class="badge badge-spec">SIMULATED ARTIFACT</span><br>Clarified as fictional in-universe telemetry stamp. Not a verified execution date.</td>
+      </tr>
+      <tr>
+        <td><strong>Stem A3 Delay Source</strong></td>
+        <td>Historical records attribute +12 sample (+0.25 ms) delay variously to Pyrotechnic Relay, Scorpio Harness, or Transducer Inductance.</td>
+        <td><span class="badge badge-unverified">UNVERIFIED ATTRIBUTION CONFLICT</span><br>Numerical offset preserved invariant at +12 smp; attribution remains unverified.</td>
+      </tr>
+      <tr>
+        <td><strong>Dialogue Tail (Fr 1220)</strong></td>
+        <td>Frame 1220 design cutoff benchmark vs. measured acoustic sample.</td>
+        <td><span class="badge badge-spec">DESIGN BENCHMARK ONLY</span><br>Barred from promotion to measured fact until DAW PCM waveform inspection.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>7. Master External Gate Ledger (Pre-Production Closure Boundary)</h2>
+  <p>Under the FX2 Design Freeze, all five pre-production external gates are formally consolidated. Specification readiness is 100% complete, while physical execution gates remain properly registered as pending.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 10%;">Gate</th>
+        <th style="width: 24%;">Subsystem Scope</th>
+        <th style="width: 20%;">Specification Status</th>
+        <th style="width: 22%;">Physical Input Reality</th>
+        <th style="width: 24%;">Formal Gate Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>EXT-01</strong></td>
+        <td>Physical BWF Ingest & Bitstream Verification</td>
+        <td><span class="badge badge-spec">SPEC READY</span> (EBU Tech 3285 v2)</td>
+        <td>Scorpio NVMe absent (0 bytes PCM)</td>
+        <td><span class="badge badge-blocker">PENDING — MEDIA INGEST BLOCKED</span></td>
+      </tr>
+      <tr>
+        <td><strong>EXT-02</strong></td>
+        <td>Dub Stage Acoustic & Supervisor Sign-Off</td>
+        <td><span class="badge badge-spec">SPEC READY</span> (8-point Atmos Rubric)</td>
+        <td>Mix Stage B idle; Supervisor unauthenticated</td>
+        <td><span class="badge badge-blocker">PENDING — ACOUSTIC SIGN-OFF BLOCKED</span></td>
+      </tr>
+      <tr>
+        <td><strong>EXT-03</strong></td>
+        <td>Avid AAF Interop & OP-Atom Validation</td>
+        <td><span class="badge badge-spec">SPEC READY</span> (SMPTE 377M / 390M)</td>
+        <td>AAF/MXF absent; Avid host uninstalled</td>
+        <td><span class="badge badge-blocker">PENDING — AVID INTEROP NOT VERIFIED</span></td>
+      </tr>
+      <tr>
+        <td><strong>EXT-04</strong></td>
+        <td>Final Script Formatting & Interchange Audit</td>
+        <td><span class="badge badge-spec">SPEC READY</span> (FDX XML / Avid TXT)</td>
+        <td>FDX and TXT files absent on disk staging</td>
+        <td><span class="badge badge-blocker">PENDING — SCRIPT EXPORT NOT VERIFIED</span></td>
+      </tr>
+      <tr>
+        <td><strong>EXT-05</strong></td>
+        <td>Sub-Vault 02 Cryptographic Isolation</td>
+        <td><span class="badge badge-spec">SPEC READY</span> (Cold Quarantine Rule)</td>
+        <td>Hardware write-blocker diode unverified</td>
+        <td><span class="badge badge-blocker">PENDING — ISOLATION NOT VERIFIED</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>8. Audio & Video Interchange Specifications</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Delivery Vector</th>
+        <th>Container / Format Spec</th>
+        <th>Clock & Sample Alignment</th>
+        <th>Design Spec vs. Physical Reality</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Editorial Video</strong></td>
+        <td>Avid OP-Atom MXF<br>Codec: <strong>DNxHR HQX 10-bit (4:2:2)</strong></td>
+        <td>24.000 fps NDF<br>Pixel Matrix: 4096x2160 DCI</td>
+        <td><span class="badge badge-spec">SPECIFICATION RATIFIED</span><br>(Binary file uncompiled on disk).</td>
+      </tr>
+      <tr>
+        <td><strong>Master Audio Stems</strong></td>
+        <td>4 Discrete Mono BWF WAVs<br>(EBU Tech 3285 v2 bext chunk)</td>
+        <td>48.000 kHz / 24-bit Linear PCM<br>Epoch: 187,200,000 smp</td>
+        <td><span class="badge badge-spec">SPECIFICATION RATIFIED</span><br>(Physical bitstream awaiting ingest).</td>
+      </tr>
+      <tr>
+        <td><strong>Avid Script Marker</strong></td>
+        <td>Tab-delimited TXT<br>(UTF-8 with BOM, CRLF)</td>
+        <td>7-column schema conforming to Scene 04 SMPTE bounds</td>
+        <td><span class="badge badge-spec">SPECIFICATION RATIFIED</span><br>(Payload staging empty).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <span>FX2 — THE DESCENT | MASTER PRODUCTION HANDOFF SPECIFICATION</span>
+    <span>SECTION 6, 7 & 8 // PAGE 3 OF 4</span>
+  </div>
+
+  <!-- PAGE 4: SCENE 04 TIMING & FINAL READINESS -->
+  <div class="page-break"></div>
+
+  <div class="header-band">
+    <div>
+      <div class="doc-title">FX2 — THE DESCENT</div>
+      <div class="doc-subtitle">Scene 04 Production Bounds & Final Acceptance Statement</div>
+    </div>
+    <div style="text-align: right; font-size: 7.5pt; color: #52525b;">
+      <div><strong>SECTION:</strong> PRODUCTION BOUNDS & READINESS</div>
+    </div>
+  </div>
+
+  <h2>9. Scene 04 Synchronous Loci & Timing Reference Matrix</h2>
+  <p>Scene 04 establishes the definitive temporal and sample coordinates connecting picture frame boundaries to discrete audio stem sample offsets:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Event Description</th>
+        <th>Frame Number</th>
+        <th>Timecode (24fps NDF)</th>
+        <th>Stems A1, A2, A4 Sample</th>
+        <th>Stem A3 Sample (+12 smp)</th>
+        <th>Verification Tier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Scene In Point</strong></td>
+        <td>Frame 268</td>
+        <td>00:00:11:04</td>
+        <td>187,736,000 smp</td>
+        <td>187,736,012 smp</td>
+        <td><span class="badge badge-approved">RATIFIED BENCHMARK</span></td>
+      </tr>
+      <tr>
+        <td><strong>Dialogue In (Vance)</strong></td>
+        <td>Frame 1,068</td>
+        <td>00:00:44:12</td>
+        <td>189,336,000 smp</td>
+        <td>189,336,012 smp</td>
+        <td><span class="badge badge-approved">RATIFIED BENCHMARK</span></td>
+      </tr>
+      <tr>
+        <td><strong>Last Audible Tail</strong></td>
+        <td>Frame 1,219</td>
+        <td>00:00:50:19</td>
+        <td>189,638,000 smp</td>
+        <td>189,638,012 smp</td>
+        <td><span class="badge badge-spec">DESIGN REFERENCE ONLY</span></td>
+      </tr>
+      <tr>
+        <td><strong>Exclusive Dialogue Cut</strong></td>
+        <td>Frame 1,220</td>
+        <td>00:00:50:20</td>
+        <td>189,640,000 smp</td>
+        <td>189,640,012 smp</td>
+        <td><span class="badge badge-spec">DESIGN REFERENCE ONLY</span></td>
+      </tr>
+      <tr>
+        <td><strong>Scene Out Boundary</strong></td>
+        <td>Frame 2,466</td>
+        <td>00:01:42:18</td>
+        <td>192,132,000 smp</td>
+        <td>192,132,012 smp</td>
+        <td><span class="badge badge-approved">RATIFIED BENCHMARK</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>10. Outstanding Technical Dependencies for Production Release</h2>
+  <ol>
+    <li><strong>Physical Scorpio Media Mount:</strong> Ingest of physical NVMe storage cartridge from Soundstage 04, extraction of <code>0x52494646</code> headers, and bitstream SHA-256 calculation.</li>
+    <li><strong>Dub Stage B Physical Acoustic Audition:</strong> Calibrated 7.1.4 Atmos audition by authorized Supervising Sound Editor to evaluate Stem A3 comb filtering and acoustic tail decay into vacuum squelch.</li>
+    <li><strong>Avid Media Composer Certification:</strong> Physical import of conformed OP-Atom essence and AAF sequences on Media Composer v2024.x to verify mob linkage and UMID resolution.</li>
+    <li><strong>Script Formatting Interchange Generation:</strong> Compilation and physical validation of <code>SC04_DESCENT_PRODUCTION_v03.fdx</code> and <code>SC04_DESCENT_AVID_SCRIPT_v03.txt</code>.</li>
+    <li><strong>Scene 04 Heading Editorial Determination:</strong> Formal sign-off on <code>EXT. TOTAL VACUUM</code> versus <code>INT. HELMET INTERIOR</code>.</li>
+  </ol>
+
+  <h2>11. Final Acceptance & Readiness Statement</h2>
+  
+  <div class="callout-box" style="border-left-color: #075985; background: #f0f9ff;">
+    <div style="font-size: 9pt; font-weight: bold; color: #0369a1; margin-bottom: 4px;">
+      PROJECT READINESS CLASSIFICATION: ARCHITECTURALLY RATIFIED // PRE-PRODUCTION PENDING
+    </div>
+    The design, user experience, spatial operating architecture, and technical specifications for <strong>FX2 — THE DESCENT</strong> are complete, cohesive, and formally frozen. Zero contradictions exist within the design tier. However, because external physical media ingest, dub stage acoustic sign-off, Avid interchange verification, and cryptographic isolation checks remain open, <strong>the project is NOT physically production-ready</strong>. Production execution may commence only upon systematic closure of Gates EXT-01 through EXT-05.
+  </div>
+
+  <table style="margin-top: 16px;">
+    <tbody>
+      <tr>
+        <td style="width: 50%;">
+          <strong>Design System Authority:</strong><br>
+          Obsidian Prism Architecture Group<br>
+          Status: <strong>FROZEN // CONFIRMED</strong><br>
+          Verification: <code>Commit 9a2f1c8 [Tk-03]</code>
+        </td>
+        <td style="width: 50%;">
+          <strong>Supervisory Production Authority:</strong><br>
+          External Engineering & Editorial Gates<br>
+          Status: <strong>GATES EXT-01—05 OPEN (PENDING)</strong><br>
+          Audit Timestamp: <code>DERIVATIVE-EXPORT-SETTLED</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <span>FX2 — THE DESCENT | MASTER PRODUCTION HANDOFF SPECIFICATION</span>
+    <span>SECTION 9, 10 & 11 // PAGE 4 OF 4</span>
+  </div>
+
+</body>
+</html>

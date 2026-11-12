@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#002109", "outline": "#ad887e", "inverse-on-surface": "#313033", "surface": "#131316", "secondary": "#4ae176", "on-error-container": "#ffdad6", "on-primary-container": "#531100", "secondary-fixed-dim": "#4ae176", "on-surface": "#e5e1e5", "primary": "#ffb5a0", "on-background": "#e5e1e5", "inverse-surface": "#e5e1e5", "on-error": "#690005", "surface-container-highest": "#353437", "surface-tint": "#ffb5a0", "error-container": "#93000a", "on-primary-fixed-variant": "#862200", "surface-variant": "#353437", "on-primary": "#5f1500", "secondary-container": "#00b954", "surface-container-low": "#1c1b1e", "primary-fixed-dim": "#ffb5a0", "on-primary-fixed": "#3b0900", "surface-container-lowest": "#0e0e10", "primary-container": "#ff5721", "secondary-fixed": "#6bff8f", "error": "#ffb4ab", "surface-dim": "#131316", "tertiary-fixed-dim": "#c7c7c0", "tertiary": "#c7c7c0", "tertiary-container": "#91918b", "on-secondary-container": "#004119", "background": "#131316", "surface-container": "#201f22", "primary-fixed": "#ffdbd1", "surface-bright": "#39393b", "on-secondary": "#003915", "tertiary-fixed": "#e4e3dc", "on-surface-variant": "#e6bdb2", "on-secondary-fixed-variant": "#005321", "outline-variant": "#5d4038", "on-tertiary": "#30312c", "inverse-primary": "#b02f00", "on-tertiary-fixed": "#1b1c18", "on-tertiary-fixed-variant": "#464742", "on-tertiary-container": "#292a26", "surface-container-high": "#2a2a2c" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin-desktop": "2.5rem", "gutter": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "body-script": [ "JetBrains Mono" ], "display-xl-mobile": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "display-xl": [ "Space Grotesk" ], "body-lg": [ "IBM Plex Sans" ], "label-caps": [ "Space Grotesk" ], "body-md": [ "IBM Plex Sans" ], "mono-telemetry": [ "JetBrains Mono" ], "title-sm": [ "Space Grotesk" ] }, "fontSize": { "body-script": [ "13px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-xl-mobile": [ "36px", { "lineHeight": "40px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "36px", { "lineHeight": "42px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-xl": [ "56px", { "lineHeight": "60px", "letterSpacing": "-0.04em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-caps": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "mono-telemetry": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" } ], "title-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-container-highest"><div class="h-16 w-full px-space-md flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-space-sm"><div class="h-8 w-8 bg-primary-container text-on-primary-container flex items-center justify-center font-label-caps text-label-caps font-bold tracking-widest">FX</div><div class="flex flex-col"><span class="font-mono-telemetry text-mono-telemetry text-on-surface tracking-wider uppercase">PRJ-8042 // SYNTHETIC DAWN</span><div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps text-on-surface-variant">V4.2.0</span><span class="text-surface-container-highest">/</span><span class="font-mono-telemetry text-mono-telemetry text-secondary flex items-center gap-1"><span class="inline-block w-1.5 h-1.5 bg-secondary"></span>ENGINE: LIVE (LATERAL 5/5)</span></div></div></div></div><nav class="hidden xl:flex items-center h-full" data-active-classes="bg-surface-container text-on-surface border-b-2 border-primary-container"><a aria-current="page" class="h-full px-space-md flex items-center gap-space-xs font-mono-telemetry transition-colors bg-surface-container text-on-surface border-b-2 border-primary-container" data-path="brief" href="#"><span class="text-primary font-bold">[01]</span><span>BRIEF / الملخص</span></a><span class="text-surface-container-highest font-mono-telemetry text-mono-telemetry">→</span><a class="h-full px-space-md flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="strategic-insight" href="#"><span class="text-primary font-bold">[02]</span><span>STRATEGIC INSIGHT / الرؤية</span></a><span class="text-surface-container-highest font-mono-telemetry text-mono-telemetry">→</span><a class="h-full px-space-md flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="creative-concept" href="#"><span class="text-primary font-bold">[03]</span><span>CONCEPT / المفهوم</span></a><span class="text-surface-container-highest font-mono-telemetry text-mono-telemetry">→</span><a class="h-full px-space-md flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="cinematic-script" href="#"><span class="text-primary font-bold">[04]</span><span>SCRIPT / السيناريو</span></a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden md:flex items-center bg-surface-container-low px-space-sm py-1 border border-surface-container-highest gap-space-xs"><span class="font-label-caps text-label-caps text-on-surface-variant">CHAOS DIAL</span><span class="font-mono-telemetry text-mono-telemetry text-primary font-bold">0.82</span><span class="w-1 h-3 bg-secondary"></span></div><button class="px-space-sm py-1 bg-surface-container-low text-on-surface font-mono-telemetry text-mono-telemetry border border-surface-container-highest hover:bg-surface-container hover:text-on-surface transition-colors" type="button">EN | عربي</button><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 border border-surface-container-highest"><span class="w-2 h-2 bg-secondary animate-pulse"></span><span class="font-mono-telemetry text-mono-telemetry text-on-surface">STREAM: ACTIVE</span></div><button class="bg-primary-container text-on-primary-container px-space-md py-1 font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-colors uppercase" type="button">EXPORT REEL</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 pb-12 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command Telemetry Header -->
+<section class="w-full bg-surface-container-lowest px-margin md:px-margin-desktop py-space-md border-b border-surface-container-highest">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 bg-surface-container font-mono-telemetry text-mono-telemetry text-secondary border border-secondary/30">
+<span class="w-1.5 h-1.5 bg-secondary animate-pulse"></span>
+            STATUS: INGESTION COMPLETE &amp; ANCHORED
+          </span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary">STG-01-PARSE-OK</span>
+<span class="text-surface-container-highest">/</span>
+<span class="font-mono-telemetry text-mono-telemetry text-primary-container">ARABIC/LATIN DUAL-LEXICON ACTIVE</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-on-surface uppercase tracking-tight">
+          STAGE 01 // CREATIVE DECONSTRUCTION &amp; BRIEF
+        </h1>
+<p class="font-headline-md text-headline-md text-tertiary font-medium">
+          تفكيك الملخص الإبداعي // THE ARCHITECTURAL SYNTAX OF SILENCE
+        </p>
+</div>
+<!-- Quick Session Badges -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="px-space-sm py-1 bg-surface-container-low border border-surface-container-highest flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-tertiary">SESSION TOKEN</span>
+<span class="font-mono-telemetry text-mono-telemetry text-primary">#AQ-2025-GCC-990</span>
+</div>
+<button class="px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-mono-telemetry text-mono-telemetry flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px] text-secondary">sync</span>
+          CACHE: WARM
+        </button>
+</div>
+</div>
+<!-- Telemetry Strip -->
+<div class="mt-space-md grid grid-cols-2 md:grid-cols-4 gap-px bg-surface-container-highest border border-surface-container-highest">
+<div class="bg-surface-container-lowest p-space-sm flex flex-col">
+<span class="font-label-caps text-label-caps text-tertiary">CLIENT MANDATE</span>
+<span class="font-mono-telemetry text-mono-telemetry text-on-surface font-semibold truncate">AUDI Q-SERIES // VORS跃RUNG</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm flex flex-col">
+<span class="font-label-caps text-label-caps text-tertiary">CAMPAIGN TITLE</span>
+<span class="font-mono-telemetry text-mono-telemetry text-primary truncate">SILENT HORIZON (الأفق الصامت)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm flex flex-col">
+<span class="font-label-caps text-label-caps text-tertiary">TARGET DEMOGRAPHIC</span>
+<span class="font-mono-telemetry text-mono-telemetry text-on-surface font-semibold truncate">ULTRA-AFFLUENT NEO-PIONEERS</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm flex flex-col">
+<span class="font-label-caps text-label-caps text-tertiary">TERRITORIAL RADIUS</span>
+<span class="font-mono-telemetry text-mono-telemetry text-secondary font-semibold truncate">GCC &amp; GLOBAL LEVANT (MENA)</span>
+</div>
+</div>
+</section>
+<!-- Main Asymmetric Workspace Layout -->
+<div class="w-full px-margin md:px-margin-desktop py-space-lg grid grid-cols-1 xl:grid-cols-12 gap-gutter-desktop">
+<!-- LEFT COLUMN: Client Narrative & Semantic Parser (7 Columns) -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- Monolithic Terminal Viewer: Raw Brief Stream -->
+<div class="bg-surface-container-lowest border border-surface-container-highest flex flex-col">
+<!-- Terminal Bar Header -->
+<div class="px-space-md py-space-sm bg-surface-container border-b border-surface-container-highest flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 bg-primary-container"></span>
+<span class="font-label-caps text-label-caps text-on-surface">RAW CLIENT TRANSMISSION // DUAL-CORE STREAM</span>
+</div>
+<div class="flex items-center gap-2 font-mono-telemetry text-mono-telemetry">
+<span class="text-tertiary">SHA-256: <span class="text-on-surface">c49e...88b</span></span>
+<span class="text-surface-container-highest">|</span>
+<span class="text-secondary">UNALTERED</span>
+</div>
+</div>
+<!-- Semantic Tag Ribbon -->
+<div class="px-space-md py-space-xs bg-surface-container-low border-b border-surface-container-highest flex flex-wrap items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-tertiary">EXTRACTED ENTITIES:</span>
+<span class="px-2 py-0.5 bg-surface text-primary border border-primary/30 font-mono-telemetry text-mono-telemetry">
+            [CULTURAL TENSION: 01]
+          </span>
+<span class="px-2 py-0.5 bg-surface text-secondary border border-secondary/30 font-mono-telemetry text-mono-telemetry">
+            [BRAND HERITAGE: 84%]
+          </span>
+<span class="px-2 py-0.5 bg-surface text-error border border-error/30 font-mono-telemetry text-mono-telemetry">
+            [FORBIDDEN ORTHODOXIES: 4 IDENTIFIED]
+          </span>
+<div class="ml-auto flex items-center gap-1.5 px-2 py-0.5 bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold">
+            AUDACITY SCORE: 94/100
+          </div>
+</div>
+<!-- Terminal Content & Highlighted Script -->
+<div class="p-space-lg flex flex-col gap-space-md font-body-script text-body-script text-on-surface leading-relaxed">
+<div class="relative pl-space-md border-l-2 border-primary-container bg-surface-container-low/40 p-space-md">
+<span class="absolute top-2 right-2 font-mono-telemetry text-mono-telemetry text-tertiary">ENG / SOURCE</span>
+<p class="text-on-surface font-body-lg text-body-lg">
+              "The luxury SUV market is saturated with <mark class="bg-primary/20 text-primary-fixed px-1">artificial bravado and digital noise</mark>. Every competitor attempts to shout louder with hyper-stylized aggression and faux-technological circus lighting. We seek an uncompromising counter-narrative of <mark class="bg-secondary/20 text-secondary-fixed px-1 font-bold">absolute atmospheric silence</mark>. The Audi Q-Series is not an intrusion on the landscape—it is an monolithic observatory within it."
+            </p>
+</div>
+<div class="relative pr-space-md border-r-2 border-secondary bg-surface-container-low/40 p-space-md text-right" dir="rtl">
+<span class="absolute top-2 left-2 font-mono-telemetry text-mono-telemetry text-tertiary" dir="ltr">ARA / المخطوط</span>
+<p class="text-on-surface font-headline-md text-headline-md font-normal leading-loose">
+              "سوق السيارات الفارهة مشبع بالضجيج الاصطناعي والاستعراض الرقمي. نبحث عن <span class="text-secondary font-bold underline decoration-secondary decoration-1 underline-offset-4">سردية مضادة من الصمت الجوي المطلق</span>. لا يطلب كبار النخبة الجدد في الخليج المزيد من الصخب، بل يبحثون عن العزلة الرصينة والهيبة المعمارية في قلب الفراغ الشاسع."
+            </p>
+</div>
+<!-- Parser Execution Log Footnote -->
+<div class="pt-space-sm border-t border-surface-container-highest flex items-center justify-between font-mono-telemetry text-mono-telemetry text-tertiary">
+<span>SYNTACTIC WEIGHT: HEAVY // DEVIATION: +4.8σ</span>
+<div class="flex items-center gap-space-sm">
+<button class="hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">content_copy</span> COPY TOKENS
+              </button>
+<button class="hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">tune</span> CALIBRATE
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Strategic Visual Anchor: The Rub' al Khali Architectural Study -->
+<div class="border border-surface-container-highest bg-surface-container-low overflow-hidden">
+<div class="px-space-md py-space-xs bg-surface-container border-b border-surface-container-highest flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface">SEMANTIC VISUALIZATION REFERENCE // REF-8042-A</span>
+<span class="font-mono-telemetry text-mono-telemetry text-secondary">LATENT RECONSTRUCTION</span>
+</div>
+<div class="relative w-full h-72">
+<img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700" data-alt="Monolithic architectural black luxury SUV sculpted with stark razor-sharp lines parked on the wind-swept obsidian black sand dunes of Rub al Khali at twilight. Cinematic moody noir atmosphere, intense directional low-angle warm vermilion ambient light contrasting with cold slate-grey shadows, mist and dust haze, hyper-detailed minimalist brutalist visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-Qwdfv0VrXrjdylEyXKKl6sQQdmEytupzqon8PXI-zKDz_f6A_vJ8hJwWKiGqzP7izgpAfjzJXqDoFDpHB-hkNqsZ179er4YLuPslW2LCrLDAEhJgi6o91wCInF7xmoluWRaQp06nwqzPWHij8dSto67EOmC0RSmzrJe4wtaTEPy9rITL2d04HxiNTDG27Rs6aVCUNYgMaWS4v5TrGxirtLgSvcT4PwqjxhoQi8cd2_EexaDLsum3Lg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between font-mono-telemetry text-mono-telemetry">
+<div>
+<p class="text-primary font-bold">ATMOSPHERIC STUDY // SHOT-001</p>
+<p class="text-tertiary text-[10px]">RUB' AL KHALI 22.4589° N, 53.9984° E | ELEVATION: 110M</p>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-lowest/90 border border-primary/40 text-primary-fixed">RAW FIDELITY: 99.4%</span>
+</div>
+</div>
+</div>
+<!-- Editable Brief Parameters Matrix -->
+<div class="border border-surface-container-highest bg-surface-container-lowest">
+<div class="px-space-md py-space-sm bg-surface-container border-b border-surface-container-highest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">hub</span>
+<span class="font-label-caps text-label-caps text-on-surface">DECONSTRUCTED PARAMETER MATRIX (قابل للتعديل)</span>
+</div>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary">[4 CORES DEFINED]</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-surface-container-highest">
+<!-- Parameter 01 -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between hover:bg-surface-container-low transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-primary">[AXIS 01] CORE TENSION</span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary group-hover:text-on-surface">EDITABLE</span>
+</div>
+<textarea class="w-full bg-surface-container border border-surface-container-highest p-2 font-mono-telemetry text-mono-telemetry text-on-surface focus:outline-none focus:border-primary-container resize-none" rows="3">Hyper-connectivity induces claustrophobia. The target seeks isolation not as escape, but as supreme executive sovereignty.</textarea>
+</div>
+<div class="mt-space-xs pt-space-xs border-t border-surface-container-highest/60 flex items-center justify-between text-tertiary font-mono-telemetry text-[10px]">
+<span>CONFIDENCE: 98.2%</span>
+<span class="text-secondary">LOCKED</span>
+</div>
+</div>
+<!-- Parameter 02 -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between hover:bg-surface-container-low transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-error">[AXIS 02] BRAND TABOOS</span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary group-hover:text-on-surface">STRICT</span>
+</div>
+<textarea class="w-full bg-surface-container border border-surface-container-highest p-2 font-mono-telemetry text-mono-telemetry text-on-surface focus:outline-none focus:border-error resize-none" rows="3">NO dynamic drone racing cuts. NO corporate sustainability virtue-signaling buzzwords. NO generic city neon skylines at 2 AM.</textarea>
+</div>
+<div class="mt-space-xs pt-space-xs border-t border-surface-container-highest/60 flex items-center justify-between text-tertiary font-mono-telemetry text-[10px]">
+<span>REJECTION FILTER: ON</span>
+<span class="text-error">3 ACTIVE CLAUSES</span>
+</div>
+</div>
+<!-- Parameter 03 -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between hover:bg-surface-container-low transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-secondary">[AXIS 03] UNFAIR ADVANTAGE</span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary group-hover:text-on-surface">TACTICAL</span>
+</div>
+<textarea class="w-full bg-surface-container border border-surface-container-highest p-2 font-mono-telemetry text-mono-telemetry text-on-surface focus:outline-none focus:border-secondary resize-none" rows="3">Audi Acoustic Glass Capsule + Vorsprung Silent Electric Propulsion. Total sensory dampening creates a mobile sensory deprivation temple.</textarea>
+</div>
+<div class="mt-space-xs pt-space-xs border-t border-surface-container-highest/60 flex items-center justify-between text-tertiary font-mono-telemetry text-[10px]">
+<span>TECHNICAL COUPLING: AUDI LABS</span>
+<span class="text-secondary">PROVEN</span>
+</div>
+</div>
+<!-- Parameter 04 -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col justify-between hover:bg-surface-container-low transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-tertiary-fixed">[AXIS 04] EMOTIONAL DESTINATION</span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary group-hover:text-on-surface">REFINED</span>
+</div>
+<textarea class="w-full bg-surface-container border border-surface-container-highest p-2 font-mono-telemetry text-mono-telemetry text-on-surface focus:outline-none focus:border-tertiary-fixed resize-none" rows="3">Architectural serenity under extreme elements. The driver feels like an observer hovering above reality rather than battling the terrain.</textarea>
+</div>
+<div class="mt-space-xs pt-space-xs border-t border-surface-container-highest/60 flex items-center justify-between text-tertiary font-mono-telemetry text-[10px]">
+<span>RESONANCE COEFFICIENT: 9.1</span>
+<span class="text-tertiary-fixed">OPTIMAL</span>
+</div>
+</div>
+</div>
+<!-- Quick Regeneration Command Triggers -->
+<div class="px-space-md py-space-sm bg-surface-container-low border-t border-surface-container-highest flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<button class="px-space-md py-1.5 bg-surface-container border border-surface-container-highest hover:border-primary text-on-surface font-label-caps text-label-caps flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[14px] text-primary">restart_alt</span>
+              RESCAN SEMANTICS
+            </button>
+<button class="px-space-md py-1.5 bg-surface-container border border-surface-container-highest hover:border-primary-container text-on-surface font-label-caps text-label-caps flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[14px] text-primary-container">bolt</span>
+              INJECT TENSION MULTIPLIER (x2.5)
+            </button>
+</div>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary">LATENCY: 42ms // INFERENCE COST: 110 TKS</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: The 5 Lateral Thinking Engines Ingestion Console (5 Columns) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Lateral Engine Control Deck -->
+<div class="border border-surface-container-highest bg-surface-container-lowest">
+<!-- Deck Header -->
+<div class="px-space-md py-space-sm bg-surface-container border-b border-surface-container-highest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-on-surface">LATERAL THINKING ENGINES (المحركات الجانبية الخمسة)</span>
+</div>
+<span class="font-mono-telemetry text-mono-telemetry text-secondary font-bold">5/5 ACTIVE</span>
+</div>
+<!-- Interactive Divergence Dial (Kinetic Noir Spec) -->
+<div class="p-space-md bg-surface-container-low border-b border-surface-container-highest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-tertiary">DIVERGENCE CALIBRATION DIAL</span>
+<span class="font-mono-telemetry text-mono-telemetry text-primary font-bold">LEVEL: 8.4 / 10.0 [RADICAL UNORTHODOXY]</span>
+</div>
+<div class="w-full flex items-center gap-2">
+<span class="font-mono-telemetry text-[10px] text-tertiary">SAFE</span>
+<div class="relative flex-1 h-3 bg-surface-container border border-surface-container-highest flex items-center px-0.5">
+<div class="h-2 bg-gradient-to-r from-secondary via-primary to-primary-container" style="width: 84%;"></div>
+<div class="absolute h-4 w-1.5 bg-on-surface -ml-0.5 shadow-sm" style="left: 84%;"></div>
+</div>
+<span class="font-mono-telemetry text-[10px] text-primary-container font-bold">CHAOS</span>
+</div>
+<div class="flex justify-between font-mono-telemetry text-[9px] text-tertiary tracking-widest px-1">
+<span>| 0.0</span>
+<span>| 2.5</span>
+<span>| 5.0</span>
+<span>| 7.5</span>
+<span>| 10.0 |</span>
+</div>
+</div>
+<!-- The 5 Ingested Engine Modules -->
+<div class="divide-y divide-surface-container-highest">
+<!-- Engine 01 -->
+<div class="p-space-md bg-surface-container-lowest hover:bg-surface-container-low transition-colors border-l-2 border-primary-container">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="font-mono-telemetry text-mono-telemetry text-primary font-bold">[01 PROVOCATION]</span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary">الاستفزاز الفكري</span>
+</div>
+<button class="font-mono-telemetry text-mono-telemetry text-secondary hover:text-on-surface" type="button">[ON]</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              "Silence as high-frequency intimidation. Power in the Levant and Gulf does not yell; it dominates the room by whispering."
+            </p>
+<div class="mt-2 flex items-center gap-space-xs">
+<span class="font-mono-telemetry text-[10px] text-tertiary">VECTOR: SOCIAL PARADOX</span>
+<span class="text-surface-container-highest">/</span>
+<span class="font-mono-telemetry text-[10px] text-primary">DRIFT: 0.88</span>
+</div>
+</div>
+<!-- Engine 02 -->
+<div class="p-space-md bg-surface-container-lowest hover:bg-surface-container-low transition-colors border-l-2 border-secondary">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="font-mono-telemetry text-mono-telemetry text-secondary font-bold">[02 ANALOGIES]</span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary">التناظر المعرفي</span>
+</div>
+<button class="font-mono-telemetry text-mono-telemetry text-secondary hover:text-on-surface" type="button">[ON]</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              "Brutalist architecture vs. Soundproof recording vaults. A vehicle engineered like the bunker beneath Abbey Road dropped onto basalt plains."
+            </p>
+<div class="mt-2 flex items-center gap-space-xs">
+<span class="font-mono-telemetry text-[10px] text-tertiary">VECTOR: CROSS-DOMAIN ACOUSTICS</span>
+<span class="text-surface-container-highest">/</span>
+<span class="font-mono-telemetry text-[10px] text-secondary">DRIFT: 0.72</span>
+</div>
+</div>
+<!-- Engine 03 -->
+<div class="p-space-md bg-surface-container-lowest hover:bg-surface-container-low transition-colors border-l-2 border-primary">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="font-mono-telemetry text-mono-telemetry text-primary font-bold">[03 RANDOM STIMULUS]</span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary">المحفز العشوائي</span>
+</div>
+<button class="font-mono-telemetry text-mono-telemetry text-secondary hover:text-on-surface" type="button">[ON]</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              "Obsidian mirror in an unexpected desert dust storm. Zero reflection of sunlight, total absorption of external turmoil."
+            </p>
+<div class="mt-2 flex items-center gap-space-xs">
+<span class="font-mono-telemetry text-[10px] text-tertiary">VECTOR: MINERAL MYSTICISM</span>
+<span class="text-surface-container-highest">/</span>
+<span class="font-mono-telemetry text-[10px] text-primary">DRIFT: 0.94</span>
+</div>
+</div>
+<!-- Engine 04 -->
+<div class="p-space-md bg-surface-container-lowest hover:bg-surface-container-low transition-colors border-l-2 border-surface-container-highest">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary-fixed font-bold">[04 OPPOSITE THINKING]</span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary">التفكير المعاكس</span>
+</div>
+<button class="font-mono-telemetry text-mono-telemetry text-secondary hover:text-on-surface" type="button">[ON]</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              "What if top speed is portrayed exclusively through zero motion? The world outside blurs at 200 km/h, while water in a glass inside remains flat."
+            </p>
+<div class="mt-2 flex items-center gap-space-xs">
+<span class="font-mono-telemetry text-[10px] text-tertiary">VECTOR: INERTIAL ARREST</span>
+<span class="text-surface-container-highest">/</span>
+<span class="font-mono-telemetry text-[10px] text-tertiary-fixed">DRIFT: 0.81</span>
+</div>
+</div>
+<!-- Engine 05 -->
+<div class="p-space-md bg-surface-container-lowest hover:bg-surface-container-low transition-colors border-l-2 border-primary-container">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="font-mono-telemetry text-mono-telemetry text-primary-container font-bold">[05 CONSTRAINT REVERSAL]</span>
+<span class="font-mono-telemetry text-mono-telemetry text-tertiary">عكس القيود</span>
+</div>
+<button class="font-mono-telemetry text-mono-telemetry text-secondary hover:text-on-surface" type="button">[ON]</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              "Zero spoken dialogue. Zero cinematic soundtrack strings. Pure hyper-real audio foley: pressurized seals, desert wind harmonics, breathing."
+            </p>
+<div class="mt-2 flex items-center gap-space-xs">
+<span class="font-mono-telemetry text-[10px] text-tertiary">VECTOR: SONIC REDUCTIONISM</span>
+<span class="text-surface-container-highest">/</span>
+<span class="font-mono-telemetry text-[10px] text-primary-container">DRIFT: 0.96</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-time AI Reasoning Trace Box -->
+<div class="border border-surface-container-highest bg-surface-container-lowest flex flex-col font-mono-telemetry">
+<div class="px-space-md py-space-xs bg-surface-container border-b border-surface-container-highest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[14px]">psychology</span>
+<span class="text-label-caps font-label-caps text-on-surface">AI REASONING TRACE // LATENT DECOMPOSITION</span>
+</div>
+<span class="text-[10px] text-secondary animate-pulse">STREAMING LIVE</span>
+</div>
+<div class="p-space-md text-mono-telemetry text-tertiary flex flex-col gap-2 bg-surface-container-lowest/90">
+<div class="flex items-start gap-2">
+<span class="text-primary-container">&gt;&gt;</span>
+<p class="text-on-surface">
+              Synthesizing conflicting signals between <span class="text-primary font-bold">German engineering austerity</span> and <span class="text-secondary font-bold">Bedouin spatial majesty</span>...
+            </p>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-tertiary">&gt;&gt;</span>
+<p>
+              Applying anti-cliché filters: Auto-purged 7 trope constructs (e.g., 'Falcon metaphor', 'Neon Burj Khalifa reflection', 'Exhaust rev soundbite').
+            </p>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-tertiary">&gt;&gt;</span>
+<p class="text-secondary">
+              Convergence achieved: Narrative anchor shifts from "Conquering the terrain" to "Becoming the sanctuary within it".
+            </p>
+</div>
+<div class="pt-2 border-t border-surface-container-highest flex items-center justify-between text-[10px] text-tertiary">
+<span>TOKENS ALLOCATED: 1,420</span>
+<span>ENTROPY: 0.44 NOIR</span>
+</div>
+</div>
+</div>
+<!-- Secondary Telemetry Micro-Card -->
+<div class="p-space-md bg-surface-container-low border border-surface-container-highest flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface">CROSS-CULTURAL AUDIT PASSED</div>
+<div class="font-mono-telemetry text-mono-telemetry text-tertiary">GCC Dialectal Nuances &amp; Luxury Taboo Clearance</div>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container text-secondary font-mono-telemetry text-[11px] border border-secondary/20">
+          STATUS: 100% OK
+        </span>
+</div>
+</div>
+</div>
+<!-- Bottom Command Anchor (Bar & High-Impact Action) -->
+<section class="w-full bg-surface-container-lowest border-t-2 border-surface-container-highest px-margin md:px-margin-desktop py-space-lg mt-space-md">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Left Secondary Commands -->
+<div class="flex flex-wrap items-center gap-space-sm w-full md:w-auto">
+<button class="px-space-md py-2.5 bg-surface-container border border-surface-container-highest hover:bg-surface-container-high hover:border-tertiary text-on-surface font-label-caps text-label-caps transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+          EXPORT DECONSTRUCTED BRIEF [PDF / JSON]
+        </button>
+<button class="px-space-md py-2.5 bg-surface-container border border-surface-container-highest hover:bg-surface-container-high hover:border-error text-on-surface font-label-caps text-label-caps transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">add_moderator</span>
+          ADD CUSTOM TABOO RULE
+        </button>
+</div>
+<!-- Right High-Impact Vermilion CTA -->
+<div class="flex items-center gap-space-md w-full md:w-auto justify-end">
+<div class="hidden xl:flex flex-col text-right font-mono-telemetry text-mono-telemetry">
+<span class="text-tertiary">READY TO ADVANCE</span>
+<span class="text-secondary">STAGE 02: STRATEGIC INSIGHT</span>
+</div>
+<button class="w-full md:w-auto px-space-xl py-3.5 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-caps text-label-caps font-bold transition-all duration-150 flex items-center justify-center gap-3 active:scale-95" type="button">
+<span class="tracking-widest">SYNTHESIZE STRATEGIC INSIGHTS →</span>
+<span class="px-1.5 py-0.5 bg-on-primary-container text-primary-container font-mono-telemetry text-mono-telemetry font-bold">
+            ⌘ + ENTER
+          </span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Micro-interaction keyboard shortcut trigger [⌘ + Enter]
+  document.addEventListener('keydown', function(event) {
+    if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
+      const activeBtn = document.querySelector('button.bg-primary-container');
+      if (activeBtn) {
+        activeBtn.classList.add('scale-95', 'bg-primary');
+        setTimeout(() => {
+          activeBtn.classList.remove('scale-95', 'bg-primary');
+        }, 150);
+      }
+    }
+  });
+</script></main><footer class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl border-t border-surface-container-highest"><div class="h-10 w-full px-space-md flex items-center justify-between font-mono-telemetry text-mono-telemetry text-on-surface-variant"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="text-on-surface">LATENT TOKENS:</span><span class="text-secondary font-bold">142,890 / 2M</span></div><span class="text-surface-container-highest">|</span><div class="flex items-center gap-space-xs"><span class="text-on-surface">TEMP:</span><span class="text-primary font-bold">0.74 NOIR</span></div><span class="text-surface-container-highest">|</span><div class="hidden sm:flex items-center gap-space-xs text-on-surface-variant"><span>THREAD:</span><span class="text-on-surface truncate max-w-xs">#th-8042-cinematic-arc-divergence</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-sm font-label-caps text-label-caps"><span class="bg-surface-container-high px-1 py-0.5 text-on-surface">⌘K SWITCHER</span><span class="bg-surface-container-high px-1 py-0.5 text-on-surface">⌥R REGENERATE</span><span class="bg-surface-container-high px-1 py-0.5 text-on-surface">⇧SPACE NEXT</span></div><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 bg-secondary"></span><span>SYNCED</span></div></div></div></footer></body></html>

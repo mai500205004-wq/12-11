@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #090a0c;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Calibrated Haute Horlogerie Motion Curves */
+    :root {
+      --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-satin: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    @keyframes breatheGlow {
+      0%, 100% {
+        box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.9), 0 0 16px -4px rgba(255, 85, 65, 0.10);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+      50% {
+        box-shadow: 0 28px 65px -12px rgba(0, 0, 0, 0.96), 0 0 32px -2px rgba(255, 85, 65, 0.24);
+        border-color: rgba(255, 180, 168, 0.24);
+      }
+    }
+
+    @keyframes ambientAuraPulse {
+      0%, 100% {
+        opacity: 0.65;
+        transform: translate(-50%, 0) scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1.08);
+      }
+    }
+
+    @keyframes ambientDriftAmber {
+      0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.95);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.12);
+      }
+    }
+
+    .ambient-glow-primary {
+      animation: ambientAuraPulse 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+    }
+
+    .ambient-glow-secondary {
+      animation: ambientDriftAmber 12s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+    }
+
+    .card-breathing {
+      animation: breatheGlow 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+    }
+
+    /* Silky Satin Pill Transitions */
+    .lens-tab {
+      transition: background-color 700ms var(--ease-luxury),
+                  color 700ms var(--ease-luxury),
+                  border-color 700ms var(--ease-luxury),
+                  box-shadow 700ms var(--ease-luxury),
+                  transform 700ms var(--ease-luxury);
+      will-change: transform, box-shadow, border-color, background-color;
+    }
+
+    .lens-active {
+      background-color: rgba(255, 255, 255, 0.08) !important;
+      color: #f2f1f4 !important;
+      border-color: rgba(255, 180, 168, 0.45) !important;
+      box-shadow: 0 0 24px -3px rgba(242, 56, 39, 0.35) !important;
+      transform: scale(1.02);
+    }
+
+    .shimmer-layer {
+      background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.08) 50%, transparent 80%);
+      transform: translateX(-100%);
+      transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .shimmer-layer {
+      transform: translateX(100%);
+    }
+
+    /* Content Swap Kinetics */
+    .content-transition {
+      transition: opacity 650ms var(--ease-luxury),
+                  transform 650ms var(--ease-luxury),
+                  filter 650ms var(--ease-luxury);
+      will-change: opacity, transform, filter;
+    }
+    .content-fade-out {
+      opacity: 0;
+      transform: translateY(6px);
+      filter: blur(3px);
+    }
+
+    .telemetry-meta-transition {
+      transition: opacity 650ms var(--ease-luxury), transform 650ms var(--ease-luxury);
+    }
+
+    /* CTA Rim Flare Dynamics */
+    .cta-container {
+      transition: transform 700ms var(--ease-luxury), box-shadow 800ms var(--ease-luxury);
+    }
+    .cta-glow-rim {
+      transition: opacity 800ms var(--ease-luxury);
+    }
+    .cta-inner {
+      transition: background-color 800ms var(--ease-luxury);
+    }
+
+    /* Cinematic Parallax Container */
+    .parallax-viewport {
+      perspective: 1000px;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+    .parallax-img-canvas {
+      will-change: transform;
+      transform: translate3d(0, 0, 0) scale(1.15);
+      transform-origin: center center;
+    }
+
+    /* Modal Kinetics */
+    #lens-modal-overlay {
+      transition: opacity 600ms var(--ease-luxury), visibility 600ms var(--ease-luxury);
+    }
+    #lens-modal-sheet {
+      transition: transform 700ms var(--ease-luxury), opacity 700ms var(--ease-luxury);
+    }
+
+    /* Matrix Lens Interactive Switching */
+    .matrix-tab-btn {
+      transition: all 450ms var(--ease-luxury);
+      position: relative;
+    }
+    .matrix-tab-btn.active {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border-color: rgba(255, 180, 168, 0.45);
+      box-shadow: 0 0 20px -3px rgba(255, 85, 65, 0.28);
+      transform: scale(1.02);
+    }
+    .matrix-fade-node {
+      transition: opacity 350ms var(--ease-luxury), transform 350ms var(--ease-luxury);
+      will-change: opacity, transform;
+    }
+    .matrix-fade-out {
+      opacity: 0 !important;
+      transform: translateY(5px) scale(0.98);
+    }
+    .matrix-metric-bar {
+      transition: width 600ms var(--ease-luxury);
+      will-change: width;
+    }
+  </style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Geist:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;family=Syne:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#090a0c",
+            "surface-low": "#111215",
+            "surface-card": "#15161a",
+            primary: "#ffb4a8",
+            "primary-container": "#ff5541",
+            secondary: "#ffb59a",
+            "secondary-amber": "#ff9254",
+            "on-surface": "#f2f1f4",
+            "on-surface-subtle": "#8f9098",
+            "on-surface-muted": "#565860",
+            border: "rgba(255, 255, 255, 0.06)",
+            "border-glow": "rgba(255, 85, 65, 0.25)"
+          },
+          fontFamily: {
+            serif: ["'Cormorant Garamond'", "serif"],
+            headline: ["Syne", "sans-serif"],
+            body: ["Geist", "sans-serif"],
+            mono: ["'JetBrains Mono'", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#090a0c] font-body text-on-surface antialiased selection:bg-primary-container/30">
+<!-- Subtle Atmospheric Noir Glows with Meditative Whisper-Quiet Motion -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="ambient-glow-primary absolute -top-32 left-1/2 -translate-x-1/2 w-[460px] h-[340px] bg-gradient-to-b from-[#ff5541]/12 via-[#ff9254]/5 to-transparent rounded-full blur-[110px] will-change-transform"></div><div class="absolute top-[28%] left-1/2 -translate-x-1/2 w-80 h-48 bg-[#ff5541]/5 rounded-full blur-[90px]"></div><div class="ambient-glow-secondary absolute top-[48%] -right-28 w-80 h-80 bg-[#cd4700]/7 rounded-full blur-[120px] will-change-transform"></div><div class="ambient-glow-primary absolute bottom-16 -left-20 w-72 h-72 bg-[#ff5541]/6 rounded-full blur-[100px] will-change-transform"></div></div>
+<!-- Ultra-Minimalist Top Bar -->
+<header class="fixed top-0 w-full z-40 pt-safe bg-[#090a0c]/70 backdrop-blur-2xl border-b border-white/[0.04] transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<div class="h-16 px-6 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline tracking-[0.22em] text-sm text-on-surface font-semibold">FX2</span>
+<span class="w-[1px] h-3 bg-white/10"></span>
+<span class="font-mono text-[10px] tracking-[0.25em] text-on-surface-subtle uppercase">DR KAIF</span>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Settings" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-subtle hover:text-on-surface transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<span class="material-symbols-outlined text-[17px] font-light">tune</span>
+</button>
+<div class="w-7 h-7 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-on-surface-subtle text-[11px] font-mono">
+          K
+        </div>
+</div>
+</div>
+</header>
+<!-- Main Scroll View -->
+<main class="relative z-10 w-full min-h-screen pt-20 pb-28 flex flex-col"><div class="flex flex-col w-full">
+<!-- Interactive Capstone Ambient Beam Overlay -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute -top-40 right-1/2 translate-x-1/2 w-[340px] h-[340px] bg-secondary-container/10 rounded-full blur-[120px]"></div>
+<div class="absolute top-[42%] -left-32 w-64 h-64 bg-primary-container/10 rounded-full blur-[100px]"></div>
+</div>
+<div class="relative z-10 flex flex-col gap-space-lg px-margin-mobile">
+<!-- 1. Executive Header & Phase Status -->
+<section class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#ff5541]"></span>
+<span class="font-label-xs text-label-xs uppercase text-primary tracking-[0.22em]">Stage 05 // 05</span>
+<span class="font-label-xs text-label-xs text-outline-variant">/</span>
+<span class="font-label-xs text-label-xs text-secondary tracking-[0.18em]">Final Studio</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant bg-surface-container px-space-xs py-[2px] rounded-full">REV 4.9.1</span>
+</div>
+<div class="flex flex-col">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight uppercase">Executive Command</h1>
+<p class="font-label-md text-label-md text-on-surface-variant tracking-wider uppercase mt-[2px]">Master Production &amp; Global Synchronization</p>
+</div>
+<!-- Live Gating Banner & Convergence Meter -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-low shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">lock_open</span>
+<span class="font-label-xs text-label-xs uppercase text-primary tracking-widest">Executive Gating: Active</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary-fixed-dim tracking-wider uppercase">T-Minus 18 Days</span>
+</div>
+<div class="flex flex-col gap-[6px]">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Overall System Harmony</span>
+<span class="font-label-md text-label-md text-primary font-semibold">99.2%</span>
+</div>
+<!-- Atmospheric Dual Gauge Bar -->
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-gradient-to-r from-secondary-container via-primary-container to-secondary rounded-full" style="width: 99.2%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-xs text-label-xs tracking-wider">HARMONIC PHASE: COHERENT</span>
+<span class="font-label-xs text-label-xs tracking-wider text-secondary">3/3 VECTORS SIGNED</span>
+</div>
+</div>
+</section>
+<!-- 2. Master Orchestration Timeline & Milestone Tracker -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">timeline</span>
+<h2 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Master Orchestration</h2>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">4 PHASES GATED</span>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded-xl">
+<!-- Milestone 1 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-title-md text-title-md text-on-surface">Phase 01: Basalt Monolith Fabrication</span>
+</div>
+<span class="font-label-xs text-label-xs text-primary px-space-xs py-[2px] rounded bg-surface-container-highest">100%</span>
+</div>
+<div class="flex items-center justify-between pl-6 text-on-surface-variant">
+<span class="font-label-xs text-label-xs">12 Altars CNC Carved &amp; Acoustic Damped</span>
+<span class="font-label-xs text-label-xs text-primary">VERIFIED</span>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary animate-pulse">radio_button_checked</span>
+<span class="font-title-md text-title-md text-on-surface">Phase 02: Obsidian Core Sensor QA &amp; NFC</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary px-space-xs py-[2px] rounded bg-surface-container-highest">94%</span>
+</div>
+<div class="flex items-center justify-between pl-6 text-on-surface-variant">
+<span class="font-label-xs text-label-xs">4,700/5,000 Verified on Thermal Rig</span>
+<span class="font-label-xs text-label-xs text-secondary">CALIBRATING</span>
+</div>
+<!-- Micro progress line -->
+<div class="ml-6 h-1 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">hdr_auto</span>
+<span class="font-title-md text-title-md text-on-surface">Phase 03: Arri Alexa 65 Void Cinema Mix</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary px-space-xs py-[2px] rounded bg-surface-container-highest">88%</span>
+</div>
+<div class="flex items-center justify-between pl-6 text-on-surface-variant">
+<span class="font-label-xs text-label-xs">Episodic Master Reel Dolby Atmos Stem Lock</span>
+<span class="font-label-xs text-label-xs text-secondary">FINAL PASS</span>
+</div>
+<!-- Micro progress line -->
+<div class="ml-6 h-1 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+<!-- Milestone 4 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-outline">schedule</span>
+<span class="font-title-md text-title-md text-on-surface">Phase 04: Synchronized Global Drop</span>
+</div>
+<span class="font-label-xs text-label-xs text-outline px-space-xs py-[2px] rounded bg-surface-container-highest">T-18D</span>
+</div>
+<div class="flex items-center justify-between pl-6 text-on-surface-variant">
+<span class="font-label-xs text-label-xs">Tokyo, London, Zurich, Dubai Shrines</span>
+<span class="font-label-xs text-label-xs text-outline">GATED LOCK</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Tripartite Production Command Hub -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary-container">hub</span>
+<h2 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Tripartite Command Hub</h2>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">RELEASE VECTOR 3/3</span>
+</div>
+<!-- Vector 01: Architectural Sanctuary -->
+<article class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-md">
+<div class="relative w-full h-44 overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-80" data-alt="Monolithic volcanic basalt coffee altar in Tokyo minimalist gallery with warm amber spot lighting, clean architectural concrete voids, ultra high resolution luxury aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7n5SZTMPpBjq9I7A_r8kCSVtmOwpjHZaL1q0YY6lW3yzMqLepuhQ_dQ2Ugb2LhUlmptkOCDnTFKJNXmjn4pZ2vWxoCXKjixHEIwII6D3CvwEwNhSG3jOQ_2ilii07y7PHktAeZMWSp-_x_9BsDBtNDowi8GIVGBS2jqzjD4OS1D0r3Fotf5dmmYUOmG442M6N2emER4rCLAIYli_EGAgXmtZve07nLPY2FEWBqbu9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-xs py-[2px] rounded bg-surface-container-lowest/80 backdrop-blur font-label-xs text-label-xs text-primary uppercase">Vector 01</span>
+<span class="px-space-xs py-[2px] rounded bg-surface-container-lowest/80 backdrop-blur font-label-xs text-label-xs text-on-surface uppercase">Architectural</span>
+</div>
+<div class="absolute bottom-space-xs left-space-sm">
+<span class="font-label-xs text-label-xs text-secondary tracking-widest uppercase">The Modular Acoustic Altar</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm p-space-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-md text-body-md text-on-surface">12 Flagship Shrines Prepped</span>
+<span class="font-label-xs text-label-xs text-primary font-medium">READY FOR ASSEMBLY</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-xs bg-surface-container rounded-lg flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Noise Damping</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">-34dB Calibrated</span>
+</div>
+<div class="p-space-xs bg-surface-container rounded-lg flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Thermal Floor</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Underfloor Basalt</span>
+</div>
+</div>
+<button class="flex items-center justify-between w-full px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-xs text-label-xs uppercase tracking-wider transition-all" onclick="toggleDrawer('drawer-vector-01')" type="button">
+<span>Inspect Site Schematics &amp; BIM</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</button>
+</div>
+<!-- Inline Expandable Detail Drawer -->
+<div class="hidden flex-col gap-space-xs p-space-md bg-surface-container-lowest text-on-surface" id="drawer-vector-01">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-xs text-label-xs text-primary uppercase">Site Distribution Index</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">12 Nodes Online</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Tokyo Ginza Sanctuary acoustic envelope sealed. Zurich Bahnhofstrasse spatial layout cleared with zero reflections at 120Hz resonance.
+          </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="px-space-xs py-[2px] rounded bg-surface-container-high font-label-xs text-label-xs text-on-surface">TOKYO: VERIFIED</span>
+<span class="px-space-xs py-[2px] rounded bg-surface-container-high font-label-xs text-label-xs text-on-surface">LONDON: VERIFIED</span>
+<span class="px-space-xs py-[2px] rounded bg-surface-container-high font-label-xs text-label-xs text-on-surface">DUBAI: VERIFIED</span>
+</div>
+</div>
+</article>
+<!-- Vector 02: Physical Precision Hardware -->
+<article class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-md">
+<div class="relative w-full h-44 overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-80" data-alt="Matte black obsidian ceramic double-walled smart vessel on a dark brushed titanium calibration stand with subtle glowing red LED edge reflection, high end industrial hardware studio photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZgQRaCnD3KxkFKhRDYgNyIptPV_myWZPrEpu9o0dGi19RzqcXF1LImkuRltEMZoErhxuj4VQAnxqV5KizDgp0-ZMarOSJSa-ppD0ZQPt0BEcEjDcHttqmjWt0ctiPzlB1GeFMYYThCxrbRitm084dd97kapMlbOE9m9rosT1j_9iJGMLckNluYh_G0BdjILKEMzP8OVVP4_ZB9ZODFE4y4I-uAxSRl-c4K_t6JtCx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-xs py-[2px] rounded bg-surface-container-lowest/80 backdrop-blur font-label-xs text-label-xs text-primary uppercase">Vector 02</span>
+<span class="px-space-xs py-[2px] rounded bg-surface-container-lowest/80 backdrop-blur font-label-xs text-label-xs text-on-surface uppercase">Hardware</span>
+</div>
+<div class="absolute bottom-space-xs left-space-sm">
+<span class="font-label-xs text-label-xs text-secondary tracking-widest uppercase">Obsidian Core Series 01</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm p-space-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-md text-body-md text-on-surface">Limited Run: 5,000 Serialized Units</span>
+<span class="font-label-xs text-label-xs text-secondary font-medium">94% CALIBRATED</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-xs bg-surface-container rounded-lg flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Thermal Peak</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">68.0°C Plateau Lock</span>
+</div>
+<div class="p-space-xs bg-surface-container rounded-lg flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Crypto NFC</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">5,000 Minted</span>
+</div>
+</div>
+<button class="flex items-center justify-between w-full px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-xs text-label-xs uppercase tracking-wider transition-all" onclick="toggleDrawer('drawer-vector-02')" type="button">
+<span>Inspect Serial Runs &amp; Yield</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</button>
+</div>
+<!-- Inline Expandable Detail Drawer -->
+<div class="hidden flex-col gap-space-xs p-space-md bg-surface-container-lowest text-on-surface" id="drawer-vector-02">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-xs text-label-xs text-primary uppercase">Yield Telemetry Pass</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Batch #01 to #10</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Zero micro-fissure rate recorded over 12-hour thermal cycling tests. Dual NFC cryptographic pairings matched with Ethereum ERC-721 receipts.
+          </p>
+</div>
+</article>
+<!-- Vector 03: Transmedia Cinema Release -->
+<article class="flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-md">
+<div class="relative w-full h-44 overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-80" data-alt="Cinematic frame from high contrast dark film showing an actor holding a steaming black cup against dark rain washed architectural glass with amber neon glow, anamorphic lens flare" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB31GRBYeTNPqhzYyDUuc074_L6k71MSBkBgymbvolpRpyFjFFPt3_P7Ar8y7HJXMxtfCfMXxUW4k95SnYsa_s5nTnMlISR5oe-MqAXVuENYfKXN1O4ZexRdoHaHFJFk89bpdLmjewVeqXLJaKwB4Of5uL334knNdU9nCKjBuEoQv3B5sxOB0777Yxamq-2_Ml2cIT1XgBITM4M0SfJty7oZEp7KexZBHIBeE0mdcI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-xs py-[2px] rounded bg-surface-container-lowest/80 backdrop-blur font-label-xs text-label-xs text-primary uppercase">Vector 03</span>
+<span class="px-space-xs py-[2px] rounded bg-surface-container-lowest/80 backdrop-blur font-label-xs text-label-xs text-on-surface uppercase">Cinema</span>
+</div>
+<div class="absolute bottom-space-xs left-space-sm">
+<span class="font-label-xs text-label-xs text-secondary tracking-widest uppercase">Phantom Echo (6-Part Archive)</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm p-space-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-md text-body-md text-on-surface">4K HDR Dolby Atmos Master</span>
+<span class="font-label-xs text-label-xs text-primary font-medium">COLOR LOCKED</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-xs bg-surface-container rounded-lg flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Target Reach</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">4.8M Connoisseurs</span>
+</div>
+<div class="p-space-xs bg-surface-container rounded-lg flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Sound Mix</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">7.1.4 Void Stems</span>
+</div>
+</div>
+<button class="flex items-center justify-between w-full px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-xs text-label-xs uppercase tracking-wider transition-all" onclick="toggleDrawer('drawer-vector-03')" type="button">
+<span>Preview Episode 01 Cut &amp; Metadata</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</button>
+</div>
+<!-- Inline Expandable Detail Drawer -->
+<div class="hidden flex-col gap-space-xs p-space-md bg-surface-container-lowest text-on-surface" id="drawer-vector-03">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-xs text-label-xs text-primary uppercase">DCI-P3 Color Encoding</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Arri RAW 3:2</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Episode 01 ("The Silence of Roast") certified for Apple TV 4K, IMAX private screening rooms, and curated festival previews.
+          </p>
+</div>
+</article>
+</section>
+<!-- 4. Executive Asset Vault & Export / Hand-off Suite -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">inventory_2</span>
+<h2 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Executive Asset Vault</h2>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">4 PACKAGES READY</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Vault Item 1 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-primary">apartment</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Architectural BIM / CAD Master</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">REVIT .IFC // 1.48 GB</span>
+</div>
+</div>
+<button class="px-space-sm py-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-xs text-label-xs uppercase tracking-wider transition-colors shrink-0" onclick="triggerDownload(this, 'BIM Package')" type="button">
+            SYNC
+          </button>
+</div>
+<!-- Vault Item 2 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">precision_manufacturing</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Hardware Tooling Spec (V2.4)</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">STEP / GD&amp;T // 840 MB</span>
+</div>
+</div>
+<button class="px-space-sm py-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest text-secondary font-label-xs text-label-xs uppercase tracking-wider transition-colors shrink-0" onclick="triggerDownload(this, 'Hardware Specs')" type="button">
+            SYNC
+          </button>
+</div>
+<!-- Vault Item 3 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-primary">movie_filter</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">DCI-P3 Color LUT &amp; Soundtrack</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">ProRes 4444 XQ // 14.2 GB</span>
+</div>
+</div>
+<button class="px-space-sm py-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-xs text-label-xs uppercase tracking-wider transition-colors shrink-0" onclick="triggerDownload(this, 'Cinema Stems')" type="button">
+            SYNC
+          </button>
+</div>
+<!-- Vault Item 4 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Investor &amp; CapEx Audit Memo</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">256-BIT ENCRYPTED PDF</span>
+</div>
+</div>
+<button class="px-space-sm py-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-xs text-label-xs uppercase tracking-wider transition-colors shrink-0" onclick="triggerDownload(this, 'CapEx Audit')" type="button">
+            SYNC
+          </button>
+</div>
+</div>
+</section>
+<!-- 5. Live Studio Telemetry & Operational Health -->
+<section class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-low shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">monitor_heart</span>
+<h2 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Live System Telemetry</h2>
+</div>
+<span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+          REALTIME
+        </span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Capital Deployed</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold mt-1">$1.84M</span>
+<span class="font-label-xs text-label-xs text-primary">87.6% Allocated</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Brand Moat Index</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold mt-1">98.4%</span>
+<span class="font-label-xs text-label-xs text-secondary">Fortified</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Market Heat</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold mt-1">94.7%</span>
+<span class="font-label-xs text-label-xs text-primary">Pre-Orders Hot</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-primary">verified</span>
+<span class="font-label-xs text-label-xs tracking-wider uppercase text-on-surface">Status: All Vectors Synchronized</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">IGNITION READY</span>
+</div>
+</section>
+<!-- 6. Primary Capstone CTA: Global Launch Ignition -->
+<section class="flex flex-col gap-space-xs pt-space-xs pb-space-lg">
+<button class="relative overflow-hidden w-full py-space-md px-space-lg rounded-xl bg-gradient-to-r from-primary-container via-secondary-container to-primary-container text-on-secondary-container font-headline-lg-mobile text-title-lg uppercase tracking-wider shadow-[0_0_28px_rgba(242,56,39,0.4)] active:scale-[0.98] transition-all flex items-center justify-center gap-space-sm group" id="btn-authorize-ignition" onclick="openIgnitionConfirm()" type="button">
+<span class="material-symbols-outlined text-[22px] group-hover:rotate-12 transition-transform">rocket_launch</span>
+<span>Authorize Global Ignition</span>
+</button>
+<span class="font-label-xs text-label-xs text-center text-on-surface-variant uppercase tracking-widest">Requires Executive ECD Multi-Sig Approval</span>
+</section>
+</div>
+<!-- Interactive Modal: Executive Multi-Sig Ignition Dialog -->
+<div class="fixed inset-0 z-50 pointer-events-none opacity-0 invisible transition-all duration-300 flex items-center justify-center p-space-md" id="modal-ignition">
+<div class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-md" onclick="closeIgnitionConfirm()"></div>
+<div class="relative z-10 w-full max-w-sm bg-surface-container-low rounded-2xl p-space-lg flex flex-col gap-space-md shadow-2xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">warning</span>
+<span class="font-label-xs text-label-xs text-primary uppercase tracking-widest font-semibold">Security Confirmation</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeIgnitionConfirm()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-lg-mobile text-title-lg text-on-surface uppercase">Ignite Global Drop?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          This seals all 12 architectural sites, releases serial firmware to 5,000 Obsidian units, and publishes the cinema archive worldwide.
+        </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 text-on-surface-variant">
+<span class="font-label-xs text-label-xs text-secondary font-mono">AUTH TOKEN: FX2-05-KAIF-SIGMA</span>
+<span class="font-label-xs text-label-xs">MULTI-SIG: 2/2 SIGNATURES PRESENT</span>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-space-sm rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md uppercase tracking-wider font-semibold shadow-md active:scale-95 transition-all" onclick="executeLaunch()" type="button">
+          Confirm Final Ignition
+        </button>
+<button class="w-full py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-all" onclick="closeIgnitionConfirm()" type="button">
+          Abort &amp; Hold
+        </button>
+</div>
+</div>
+</div>
+<script>
+    function toggleDrawer(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        if (el.classList.contains('hidden')) {
+          el.classList.remove('hidden');
+          el.classList.add('flex');
+        } else {
+          el.classList.add('hidden');
+          el.classList.remove('flex');
+        }
+      }
+    }
+
+    function triggerDownload(button, label) {
+      const original = button.innerText;
+      button.innerText = 'SYNCED';
+      button.classList.remove('text-primary', 'text-secondary', 'text-on-surface');
+      button.classList.add('text-secondary-fixed-dim', 'bg-surface-container-highest');
+      setTimeout(() => {
+        button.innerText = original;
+        button.classList.remove('text-secondary-fixed-dim', 'bg-surface-container-highest');
+        button.classList.add('text-primary');
+      }, 2500);
+    }
+
+    function openIgnitionConfirm() {
+      const modal = document.getElementById('modal-ignition');
+      if (modal) {
+        modal.classList.remove('invisible', 'pointer-events-none', 'opacity-0');
+        modal.classList.add('pointer-events-auto', 'opacity-100');
+      }
+    }
+
+    function closeIgnitionConfirm() {
+      const modal = document.getElementById('modal-ignition');
+      if (modal) {
+        modal.classList.add('invisible', 'pointer-events-none', 'opacity-0');
+        modal.classList.remove('pointer-events-auto', 'opacity-100');
+      }
+    }
+
+    function executeLaunch() {
+      const btn = document.getElementById('btn-authorize-ignition');
+      closeIgnitionConfirm();
+      if (btn) {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[22px] animate-spin">sync</span><span>GLOBAL IGNITION INITIATED</span>';
+        btn.classList.remove('from-primary-container', 'via-secondary-container', 'to-primary-container');
+        btn.classList.add('bg-secondary-container');
+      }
+    }
+  </script>
+</div></main>
+<!-- Feather-Light Bottom Navigation Chrome -->
+<nav class="fixed bottom-0 w-full z-40 pb-safe bg-[#090a0c]/80 backdrop-blur-2xl border-t border-white/[0.04] transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<div class="h-16 px-8 flex items-center justify-between max-w-lg mx-auto">
+<!-- Discovery (Active) -->
+<a class="flex flex-col items-center gap-1 text-primary transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" href="#">
+<span class="material-symbols-outlined text-[20px] font-light">explore</span>
+<span class="font-mono text-[9px] tracking-[0.2em] uppercase font-medium">Discovery</span>
+</a>
+<!-- Concepts -->
+<a class="flex flex-col items-center gap-1 text-on-surface-muted hover:text-on-surface transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" href="#">
+<span class="material-symbols-outlined text-[20px] font-light">lightbulb</span>
+<span class="font-mono text-[9px] tracking-[0.2em] uppercase font-normal">Concepts</span>
+</a>
+<!-- Evolution -->
+<a class="flex flex-col items-center gap-1 text-on-surface-muted hover:text-on-surface transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" href="#">
+<span class="material-symbols-outlined text-[20px] font-light">grain</span>
+<span class="font-mono text-[9px] tracking-[0.2em] uppercase font-normal">Evolution</span>
+</a>
+<!-- Production -->
+<a class="flex flex-col items-center gap-1 text-on-surface-muted hover:text-on-surface transition-colors duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" href="#">
+<span class="material-symbols-outlined text-[20px] font-light">precision_manufacturing</span>
+<span class="font-mono text-[9px] tracking-[0.2em] uppercase font-normal">Studio</span>
+</a>
+</div>
+</nav>
+<!-- Expanded Lens Modal (Haute Horlogerie Immersive Exploration View) -->
+<div aria-hidden="true" class="fixed inset-0 z-50 pointer-events-none opacity-0 invisible flex flex-col justify-end transition-all" id="lens-modal-overlay">
+<!-- Backdrop with Dark Blur & Atmospheric Ambient Ember Glow -->
+<div class="absolute inset-0 bg-[#060708]/85 backdrop-blur-2xl transition-opacity duration-700" id="modal-backdrop-tap">
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-gradient-to-b from-primary-container/15 via-[#cd4700]/8 to-transparent rounded-full blur-[130px] pointer-events-none"></div>
+</div>
+<!-- Modal Sheet Container -->
+<div class="relative w-full max-w-lg mx-auto h-[813px] max-h-[880px] bg-[#0d0e12]/95 border-t border-x border-white/10 rounded-t-[32px] shadow-[0_-25px_80px_rgba(0,0,0,0.95)] flex flex-col overflow-hidden transform translate-y-full will-change-transform pb-safe pointer-events-auto" id="lens-modal-sheet">
+<!-- Top Grab Bar & Luxury Close Action Header -->
+<div class="relative pt-3 pb-3 px-6 flex items-center justify-between border-b border-white/[0.05] shrink-0 bg-[#0d0e12]/90 backdrop-blur-xl z-20">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-mono text-[10px] tracking-[0.25em] text-secondary uppercase font-medium" id="modal-lens-telemetry">
+          LENS 02 / TACTICAL ARMOR
+        </span>
+</div>
+<!-- Handle bar indicator for mobile sheet -->
+<div class="absolute left-1/2 -translate-x-1/2 top-2.5 w-10 h-1 rounded-full bg-white/20"></div>
+<!-- Tactile Close Button -->
+<button aria-label="Close Modal" class="w-8 h-8 rounded-full bg-white/[0.04] border border-white/10 hover:border-primary/40 flex items-center justify-center text-on-surface-subtle hover:text-white transition-all duration-300 active:scale-90" id="modal-close-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Scrollable Deep-Dive Content -->
+<div class="flex-1 overflow-y-auto no-scrollbar px-6 pt-5 pb-8 flex flex-col gap-7">
+<!-- Hero Imagery Canvas with Cinematic Glow -->
+<div class="relative w-full h-64 rounded-2xl overflow-hidden border border-white/10 bg-black shadow-2xl shrink-0 group">
+<img alt="Cinematic lens breakdown" class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]" id="modal-hero-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT_NuDY0RCrX6Z_cAxMu7dMjCp0AUhUWu6Hc4-ZG6DaHJD2lkjod7jrg6unWbuF8l4vcoi7-wV424xoYHqu5En3ikwgun7Z2WMgRvUa9y0kooVCFr7BGl8pSTfrRxWMsiLxZanKDhAXsItzLgfFY2daVOZU00SLYZ2gHygI6BFJIIuCVKmCTWTQMeDQrZIGd1wepQr2xiYeMoObkK8wiWBQM5Ti7K-1Ei6kDdFjqlu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0d0e12] via-[#0d0e12]/30 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-4 left-5 right-5 flex items-end justify-between pointer-events-none">
+<div>
+<span class="inline-block font-mono text-[9px] tracking-[0.25em] text-primary uppercase px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10" id="modal-tag-badge">
+              TACTICAL ARMOR
+            </span>
+</div>
+<span class="font-mono text-[9px] tracking-[0.2em] text-white/50 uppercase">DEEP VECTOR INTEL</span>
+</div>
+</div>
+<!-- Provocation Core -->
+<div class="flex flex-col gap-2.5">
+<span class="font-mono text-[9px] tracking-[0.3em] uppercase text-secondary/80 font-medium">CORE PARADIGM SHIFT</span>
+<h2 class="font-serif italic text-3xl text-white font-normal leading-snug tracking-[-0.01em]" id="modal-headline">
+          "Coffee as personal armor."
+        </h2>
+<p class="font-body text-[14px] leading-relaxed text-on-surface-subtle font-light mt-1" id="modal-paradigm-text">
+          Holding the warm, weighted ceramic with both hands as a physical shield—carving out an unassailable ten-minute sanctuary in high-intensity corporate environments.
+        </p>
+</div>
+<!-- Behavioral Tension Breakdown -->
+<div class="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">balance</span>
+<span class="font-mono text-[10px] tracking-[0.25em] uppercase text-on-surface font-medium">BEHAVIORAL TENSION &amp; SHIFT</span>
+</div>
+<p class="font-body text-[13px] leading-relaxed text-on-surface-subtle font-light" id="modal-tension-text">
+          Modern professionals are constantly accessible, overstimulated, and stripped of boundaries. The coffee mug serves as a socially sanctioned fortress: you cannot interrupt someone while they are cradling a hot vessel with closed body posture.
+        </p>
+</div>
+<!-- Sensory Architecture Grid -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-mono text-[10px] tracking-[0.25em] uppercase text-on-surface-muted">SENSORY ARCHITECTURE</span>
+<span class="font-mono text-[9px] tracking-widest text-primary/70">STUDIO CALIBRATION</span>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Card 1: Tactile Ritual -->
+<div class="p-4 rounded-xl bg-white/[0.015] border border-white/[0.05] flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 border border-primary/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[17px]">pan_tool</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono text-[10px] tracking-wider text-on-surface uppercase font-medium">Tactile Ritual</span>
+<span class="font-body text-[12.5px] text-on-surface-subtle" id="modal-sensory-tactile">Two-Hand Ceramic Embrace: High thermal-mass textured porcelain with grounded weight distribution.</span>
+</div>
+</div>
+<!-- Card 2: Acoustic Signature -->
+<div class="p-4 rounded-xl bg-white/[0.015] border border-white/[0.05] flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-secondary-amber/10 border border-secondary-amber/20 flex items-center justify-center shrink-0 text-secondary-amber">
+<span class="material-symbols-outlined text-[17px]">graphic_eq</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono text-[10px] tracking-wider text-on-surface uppercase font-medium">Acoustic Signature</span>
+<span class="font-body text-[12.5px] text-on-surface-subtle" id="modal-sensory-acoustic">Null Coma / White Thermal Hiss: Damped solid resonance when placed on timber or slate table.</span>
+</div>
+</div>
+<!-- Card 3: Olfactory Demarcation -->
+<div class="p-4 rounded-xl bg-white/[0.015] border border-white/[0.05] flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-[#cd4700]/15 border border-[#cd4700]/30 flex items-center justify-center shrink-0 text-[#ffb59a]">
+<span class="material-symbols-outlined text-[17px]">air</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono text-[10px] tracking-wider text-on-surface uppercase font-medium">Olfactory Demarcation</span>
+<span class="font-body text-[12.5px] text-on-surface-subtle" id="modal-sensory-aroma">Deep roasted cacao and smoked cedar steam creating a 2-foot perimeter of contemplation.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Actionable Provocations for Dr. Kaif Studio -->
+<div class="p-5 rounded-2xl bg-gradient-to-b from-[#1a1b22] to-[#121318] border border-primary/20 flex flex-col gap-3 shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-mono text-[10px] tracking-[0.25em] uppercase text-white font-medium">CREATIVE SPARK PROVOCATION</span>
+</div>
+<p class="font-body text-[13px] leading-relaxed text-on-surface font-light italic" id="modal-spark-text">
+          "تصميم أواني وعبوات د. كيف بكتلة ووزن يشبهان الدروع التكتيكية الفاخرة لتعزيز شعور الأمان والسيطرة."
+        </p>
+<div class="pt-2 flex items-center justify-between border-t border-white/[0.06] text-on-surface-muted font-mono text-[9px] tracking-wider uppercase">
+<span>DR KAIF PIPELINE</span>
+<span class="text-secondary/90">STATUS : CALIBRATED</span>
+</div>
+</div>
+<!-- Modal Bottom Direct Actions -->
+<div class="pt-2 flex flex-col gap-2.5">
+<button class="w-full h-12 rounded-full bg-gradient-to-r from-primary-container to-secondary-amber text-white font-headline text-[12px] tracking-[0.22em] uppercase font-semibold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,85,65,0.3)] active:scale-[0.98] transition-transform" id="modal-commit-btn">
+<span>Inject Lens Into Concept Arena</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="w-full h-11 rounded-full bg-white/[0.03] border border-white/10 hover:border-white/20 text-on-surface-subtle hover:text-white font-mono text-[10px] tracking-[0.2em] uppercase transition-colors" id="modal-dismiss-btn">
+          Return to Overview
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function initMonteCarloEngine(){
+  const openBtn = document.getElementById('open-monte-carlo-btn');
+  const modal = document.getElementById('monte-carlo-modal');
+  const sheet = document.getElementById('monte-carlo-sheet');
+  const closeBtn = document.getElementById('close-monte-carlo-btn');
+  const dismissBtn = document.getElementById('dismiss-monte-carlo-btn');
+  const confirmBtn = document.getElementById('confirm-scenario-btn');
+  const scrim = document.getElementById('monte-carlo-scrim');
+
+  const recalcBtn = document.getElementById('recalc-monte-carlo-btn');
+  const recalcSpinner = document.getElementById('recalc-spinner');
+  const recalcIcon = document.getElementById('recalc-icon');
+  const recalcText = document.getElementById('recalc-btn-text');
+
+  // Metrics elements
+  const meanYield = document.getElementById('mc-mean-yield');
+  const downsideFloor = document.getElementById('mc-downside-floor');
+  const upsideYield = document.getElementById('mc-upside-yield');
+  const profitProb = document.getElementById('mc-profit-prob');
+
+  // Curve and SVG elements
+  const curveArea = document.getElementById('mc-curve-area');
+  const curveStroke = document.getElementById('mc-curve-stroke');
+  const peakLine = document.getElementById('mc-peak-line');
+  const peakDot = document.getElementById('mc-peak-dot');
+  const p95Line = document.getElementById('mc-p95-line');
+  const p05Line = document.getElementById('mc-p05-line');
+  const ciBand = document.getElementById('mc-ci-band');
+
+  // Badges over curve
+  const badgeP50 = document.getElementById('mc-badge-p50');
+  const badgeP95 = document.getElementById('mc-badge-p95');
+  const badgeP05 = document.getElementById('mc-badge-p05');
+  const axisMedian = document.getElementById('mc-axis-median');
+
+  // Stress Multiplier interactive controls
+  const stressSlider = document.getElementById('stress-slider');
+  const stressValDisplay = document.getElementById('stress-val-display');
+  const stressBadge = document.getElementById('stress-badge');
+  const stressBadgePip = document.getElementById('stress-badge-pip');
+  const stressMeterIcon = document.getElementById('stress-meter-icon');
+  const stressGlowAccent = document.getElementById('stress-glow-accent');
+  const stressPresetBtns = document.querySelectorAll('.stress-preset-btn');
+  const scenarioImpactVals = document.querySelectorAll('.scenario-impact-val');
+  const compoundRiskTag = document.getElementById('compound-risk-tag');
+  const compoundRiskBar = document.getElementById('compound-risk-bar');
+
+  // Baseline calibration values
+  const BASELINE = {
+    mean: 32.8,
+    downside: 14.2,
+    upside: 58.4,
+    profitProb: 98.7,
+    compoundDeflect: -0.8
+  };
+
+  let currentStress = 1.0;
+  let randomOffset = 0;
+
+  function recalculateWithStress(stress, offset = 0) {
+    currentStress = parseFloat(stress);
+
+    // Dynamic calculations responding to stress intensity
+    // P95 Downside Floor drops sharply under black-swan stress (down to +2.4% or +4.1%)
+    const downDelta = (currentStress - 1.0) * 11.2;
+    const calcDown = Math.max(1.8, (BASELINE.downside - downDelta + offset * 0.3)).toFixed(1);
+
+    // Mean net yield softens under high stress
+    const meanDelta = (currentStress - 1.0) * 8.4;
+    const calcMean = (BASELINE.mean - meanDelta + offset).toFixed(1);
+
+    // Upside dampens under extreme friction
+    const upDelta = (currentStress - 1.0) * 6.2;
+    const calcUp = (BASELINE.upside - upDelta + offset * 1.2).toFixed(1);
+
+    // Probability of profit
+    const probDelta = (currentStress - 1.0) * 5.8;
+    const calcProb = Math.min(99.8, Math.max(89.2, (BASELINE.profitProb - probDelta + offset * 0.1))).toFixed(1);
+
+    // Update DOM metrics
+    if (meanYield) meanYield.textContent = `+${calcMean}%`;
+    if (downsideFloor) downsideFloor.textContent = `+${calcDown}%`;
+    if (upsideYield) upsideYield.textContent = `+${calcUp}%`;
+    if (profitProb) profitProb.textContent = `${calcProb}%`;
+
+    // Dynamic Stress Badge & Styling
+    let badgeText = `${currentStress.toFixed(1)}x NOMINAL`;
+    let glowOpacity = '0.15';
+    let pipColor = '#2b99d3';
+    let badgeBorder = 'border-white/10';
+    let badgeTextColor = 'text-white';
+    let meterRotate = 'rotate-0';
+
+    if (currentStress < 0.8) {
+      badgeText = `${currentStress.toFixed(1)}x BENIGN`;
+      pipColor = '#88ceff';
+      glowOpacity = '0.08';
+      meterRotate = '-rotate-45';
+    } else if (currentStress <= 1.15) {
+      badgeText = `${currentStress.toFixed(1)}x NOMINAL`;
+      pipColor = '#2b99d3';
+      glowOpacity = '0.15';
+      meterRotate = 'rotate-0';
+    } else if (currentStress <= 1.7) {
+      badgeText = `${currentStress.toFixed(1)}x ELEVATED`;
+      pipColor = '#ff9254';
+      glowOpacity = '0.35';
+      badgeBorder = 'border-[#ff9254]/40';
+      badgeTextColor = 'text-[#ffb59a]';
+      meterRotate = 'rotate-45';
+    } else {
+      badgeText = `${currentStress.toFixed(1)}x BLACK SWAN`;
+      pipColor = '#ff5541';
+      glowOpacity = '0.65';
+      badgeBorder = 'border-[#ff5541]/60 shadow-[0_0_12px_rgba(255,85,65,0.4)]';
+      badgeTextColor = 'text-[#ff5541]';
+      meterRotate = 'rotate-90';
+    }
+
+    if (stressValDisplay) {
+      stressValDisplay.textContent = badgeText;
+      stressValDisplay.className = `${badgeTextColor} transition-colors duration-300`;
+    }
+    if (stressBadgePip) {
+      stressBadgePip.style.backgroundColor = pipColor;
+    }
+    if (stressBadge) {
+      stressBadge.className = `flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#1b1c20] ${badgeBorder} transition-all duration-300 font-mono text-[10.5px] font-bold`;
+    }
+    if (stressGlowAccent) {
+      stressGlowAccent.style.opacity = glowOpacity;
+    }
+    if (stressMeterIcon) {
+      stressMeterIcon.style.transform = meterRotate === 'rotate-0' ? 'rotate(0deg)' : meterRotate === '-rotate-45' ? 'rotate(-40deg)' : meterRotate === 'rotate-45' ? 'rotate(45deg)' : 'rotate(90deg)';
+      stressMeterIcon.style.color = pipColor;
+    }
+
+    // Dynamic Bell Curve adjustment
+    // High stress pushes peak leftward (lower yield) and flattens/stretches downside tail
+    const peakX = Math.round(210 - (currentStress - 1.0) * 35);
+    const p95X = Math.round(Math.max(40, 105 - (currentStress - 1.0) * 45));
+    const p05X = Math.round(Math.min(370, 315 - (currentStress - 1.0) * 15));
+    const peakY = Math.round(14 + (currentStress - 1.0) * 10); // slightly flatter peak
+
+    const pathD = `M 20 110 C 60 110, ${p95X} 102, ${peakX - 50} 78 C ${peakX - 25} 52, ${peakX - 12} ${peakY}, ${peakX} ${peakY} C ${peakX + 15} ${peakY}, ${peakX + 35} 58, ${p05X - 30} 82 C ${p05X} 102, 350 110, 380 110`;
+    const areaD = `${pathD} Z`;
+
+    if (curveStroke) curveStroke.setAttribute('d', pathD);
+    if (curveArea) curveArea.setAttribute('d', areaD);
+    if (peakLine) {
+      peakLine.setAttribute('x1', peakX);
+      peakLine.setAttribute('x2', peakX);
+      peakLine.setAttribute('y1', peakY);
+    }
+    if (peakDot) {
+      peakDot.setAttribute('cx', peakX);
+      peakDot.setAttribute('cy', peakY);
+    }
+    if (p95Line) {
+      p95Line.setAttribute('x1', p95X);
+      p95Line.setAttribute('x2', p95X);
+    }
+    if (p05Line) {
+      p05Line.setAttribute('x1', p05X);
+      p05Line.setAttribute('x2', p05X);
+    }
+    if (ciBand) {
+      ciBand.setAttribute('x', p95X);
+      ciBand.setAttribute('width', Math.max(20, p05X - p95X));
+    }
+
+    // Update curve label badges
+    if (badgeP50) {
+      badgeP50.textContent = `P50: +${calcMean}%`;
+      badgeP50.style.left = `${(peakX / 400) * 100}%`;
+    }
+    if (badgeP95) {
+      badgeP95.textContent = `P95: +${calcDown}%`;
+      badgeP95.style.left = `${(p95X / 400) * 100}%`;
+    }
+    if (badgeP05) {
+      badgeP05.textContent = `P05: +${calcUp}%`;
+      badgeP05.style.left = `${(p05X / 400) * 100}%`;
+    }
+    if (axisMedian) {
+      axisMedian.textContent = `+${Math.round(calcMean)}% (Median)`;
+    }
+
+    // Dynamic Scenario Impact Recalculation
+    const scenarioCards = document.querySelectorAll('.stress-card');
+    scenarioCards.forEach(card => {
+      const baseVal = parseFloat(card.dataset.baseImpact);
+      const valEl = card.querySelector('.scenario-impact-val');
+      if (valEl && !isNaN(baseVal)) {
+        if (baseVal < 0) {
+          // Negative shocks worsen with stress
+          const shock = (baseVal * currentStress).toFixed(1);
+          valEl.textContent = `${shock}% NET MARGIN`;
+        } else {
+          // Positive upside dampens under high friction or scales
+          const mult = currentStress > 1.0 ? Math.max(0.7, 1.0 - (currentStress - 1.0) * 0.25) : 1.1;
+          const upside = (baseVal * mult).toFixed(1);
+          valEl.textContent = `+${upside}% ${card.dataset.category === 'demand' ? 'NET YIELD' : 'NET MARGIN'}`;
+        }
+      }
+    });
+
+    // Compound Deflection calculation
+    const compoundDeflection = (BASELINE.compoundDeflect * currentStress * 1.35).toFixed(1);
+    if (compoundRiskTag) {
+      compoundRiskTag.textContent = `${compoundDeflection}% NET MARGIN ATTENUATION`;
+    }
+    if (compoundRiskBar) {
+      const riskBarWidth = Math.min(96, Math.max(25, 45 + currentStress * 22));
+      compoundRiskBar.style.width = `${riskBarWidth}%`;
+    }
+  }
+
+  // Slider event listener
+  if (stressSlider) {
+    stressSlider.addEventListener('input', (e) => {
+      const val = parseFloat(e.target.value);
+      // Unset preset buttons
+      stressPresetBtns.forEach(b => {
+        b.classList.remove('active', 'bg-[#ff5541]/15', 'border-primary/40', 'text-primary', 'font-semibold', 'shadow-[0_0_8px_rgba(255,85,65,0.2)]');
+        b.classList.add('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+      });
+      recalculateWithStress(val, randomOffset);
+    });
+  }
+
+  // Preset buttons
+  stressPresetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      stressPresetBtns.forEach(b => {
+        b.classList.remove('active', 'bg-[#ff5541]/15', 'border-primary/40', 'text-primary', 'font-semibold', 'shadow-[0_0_8px_rgba(255,85,65,0.2)]');
+        b.classList.add('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+      });
+      btn.classList.add('active', 'bg-[#ff5541]/15', 'border-primary/40', 'text-primary', 'font-semibold', 'shadow-[0_0_8px_rgba(255,85,65,0.2)]');
+      btn.classList.remove('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+
+      const presetStress = parseFloat(btn.dataset.stress);
+      if (stressSlider) stressSlider.value = presetStress;
+      recalculateWithStress(presetStress, randomOffset);
+    });
+  });
+
+  // Filter chips in stress test
+  const chipBtns = document.querySelectorAll('.stress-chip-btn');
+  const stressCards = document.querySelectorAll('.stress-card');
+  const activeCountTag = document.getElementById('stress-active-count');
+
+  chipBtns.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chipBtns.forEach(c => {
+        c.classList.remove('active', 'bg-surface-container-high', 'border-primary/30', 'text-white', 'shadow-sm');
+        c.classList.add('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+      });
+      chip.classList.add('active', 'bg-surface-container-high', 'border-primary/30', 'text-white', 'shadow-sm');
+      chip.classList.remove('bg-surface-container', 'border-white/[0.04]', 'text-on-surface-variant');
+
+      const cat = chip.dataset.cat;
+      let count = 0;
+      stressCards.forEach(card => {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = 'flex';
+          count++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (activeCountTag) {
+        activeCountTag.textContent = `${count} ACTIVE SCENARIO${count !== 1 ? 'S' : ''}`;
+      }
+    });
+  });
+
+  // Re-run Monte Carlo Simulation button
+  if (recalcBtn) {
+    recalcBtn.addEventListener('click', () => {
+      if (recalcSpinner) recalcSpinner.style.display = 'inline-block';
+      if (recalcIcon) recalcIcon.style.display = 'none';
+      if (recalcText) recalcText.textContent = 'SIMULATING 10,000 PATHWAYS...';
+      recalcBtn.classList.add('opacity-75');
+
+      setTimeout(() => {
+        randomOffset = parseFloat((Math.random() * 2.4 - 1.2).toFixed(1));
+        recalculateWithStress(currentStress, randomOffset);
+
+        if (recalcSpinner) recalcSpinner.style.display = 'none';
+        if (recalcIcon) recalcIcon.style.display = 'inline-block';
+        if (recalcText) recalcText.textContent = 'RE-RUN 10,000 RUN ITERATIONS';
+        recalcBtn.classList.remove('opacity-75');
+      }, 550);
+    });
+  }
+
+  // Modal open / close handlers
+  function openModal(e) {
+    if (e) e.stopPropagation();
+    modal.classList.remove('invisible', 'pointer-events-none', 'opacity-0');
+    modal.classList.add('pointer-events-auto', 'opacity-100');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => {
+      sheet.classList.remove('translate-y-full', 'sm:translate-y-8');
+      sheet.classList.add('translate-y-0');
+    });
+  }
+
+  function closeModal() {
+    sheet.classList.remove('translate-y-0');
+    sheet.classList.add('translate-y-full', 'sm:translate-y-8');
+    modal.classList.remove('opacity-100');
+    modal.classList.add('opacity-0');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      modal.classList.add('invisible', 'pointer-events-none');
+      modal.classList.remove('pointer-events-auto');
+    }, 300);
+  }
+
+  if (openBtn) openBtn.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (dismissBtn) dismissBtn.addEventListener('click', closeModal);
+  if (scrim) scrim.addEventListener('click', closeModal);
+
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', () => {
+      confirmBtn.classList.add('scale-95');
+      setTimeout(() => {
+        confirmBtn.classList.remove('scale-95');
+        closeModal();
+      }, 200);
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('invisible')) {
+      closeModal();
+    }
+  });
+
+  // Initial calculation run
+  recalculateWithStress(1.0, 0);
+})();
+</script>
+</body></html>
