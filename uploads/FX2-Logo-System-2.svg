@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+<title id="title">FX2 — Creative Intelligence Logo System</title>
+<desc id="desc">Editable vector identity sheet with primary logo, compact mark, TEXTFX heritage lockup, and three experience identifiers.</desc>
+<defs>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8E7B2"/><stop offset=".48" stop-color="#C69A48"/><stop offset="1" stop-color="#8B642B"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A98BFF"/><stop offset="1" stop-color="#5869E8"/></linearGradient>
+  <linearGradient id="stage" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A78"/><stop offset="1" stop-color="#A33D75"/></linearGradient>
+  <style>
+    .bg{fill:#0A0B10}.panel{fill:#11141D;stroke:#262B38;stroke-width:1.5}.muted{fill:#81899B;font-family:Arial,sans-serif;letter-spacing:3px}.white{fill:#F5F2EB;font-family:Arial,sans-serif}.gold{fill:url(#gold)}.thin{font-weight:300}.bold{font-weight:700}
+  </style>
+</defs>
+<rect class="bg" width="1600" height="1100"/>
+<text x="90" y="78" class="muted" font-size="17">FX2 / IDENTITY SYSTEM</text>
+<text x="1510" y="78" text-anchor="end" class="muted" font-size="14">MASTER VECTOR STUDY · 01</text>
+<path d="M90 105H1510" stroke="#2A2F3B"/>
+
+<!-- Primary lockup -->
+<rect class="panel" x="90" y="145" width="1420" height="420" rx="20"/>
+<g transform="translate(190 235)">
+  <path d="M0 8H74L116 62L74 116H0L42 62Z" fill="none" stroke="url(#gold)" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M98 8H172L214 62L172 116H98L140 62Z" fill="none" stroke="url(#gold)" stroke-width="9" stroke-linejoin="round" opacity=".88"/>
+  <path d="M54 62H160" stroke="#F5F2EB" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="160" cy="62" r="8" fill="#F5F2EB"/>
+</g>
+<text x="455" y="345" class="white bold" font-size="160" letter-spacing="-10">FX<tspan class="gold">2</tspan></text>
+<text x="470" y="405" class="muted" font-size="22" letter-spacing="8">CREATIVE INTELLIGENCE</text>
+<path d="M470 445H1160" stroke="#343846"/>
+<text x="470" y="485" class="white thin" font-size="24">From Text to Thought. From Thought to Creation.</text>
+<text x="1460" y="530" text-anchor="end" class="muted" font-size="13">PRIMARY HORIZONTAL SIGNATURE</text>
+
+<!-- Secondary cards -->
+<rect class="panel" x="90" y="600" width="445" height="250" rx="18"/>
+<text x="125" y="645" class="muted" font-size="14">01 / COMPACT MARK</text>
+<g transform="translate(205 690) scale(.88)">
+  <path d="M0 8H74L116 62L74 116H0L42 62Z" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M98 8H172L214 62L172 116H98L140 62Z" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M54 62H160" stroke="#F5F2EB" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="160" cy="62" r="9" fill="#F5F2EB"/>
+</g>
+<text x="125" y="820" class="muted" font-size="12">APP ICON · FAVICON · AVATAR</text>
+
+<rect class="panel" x="565" y="600" width="445" height="250" rx="18"/>
+<text x="600" y="645" class="muted" font-size="14">02 / HERITAGE LOCKUP</text>
+<text x="600" y="730" class="white thin" font-size="47" letter-spacing="1">TEXTFX</text>
+<path d="M600 750H930" stroke="#343846"/>
+<text x="600" y="810" class="white bold" font-size="62" letter-spacing="-3">FX<tspan class="gold">2</tspan></text>
+<text x="760" y="802" class="muted" font-size="13">EVOLVED FROM</text>
+
+<rect class="panel" x="1040" y="600" width="470" height="250" rx="18"/>
+<text x="1075" y="645" class="muted" font-size="14">03 / EXPERIENCE IDENTIFIERS</text>
+<g transform="translate(1080 690)">
+  <rect x="0" y="0" width="10" height="35" rx="5" fill="url(#gold)"/><text x="28" y="25" class="white" font-size="22">THE ATELIER</text>
+  <rect x="0" y="58" width="10" height="35" rx="5" fill="url(#violet)"/><text x="28" y="83" class="white" font-size="22">NEURAL LAB</text>
+  <rect x="0" y="116" width="10" height="35" rx="5" fill="url(#stage)"/><text x="28" y="141" class="white" font-size="22">DIRECTOR’S STAGE</text>
+</g>
+
+<path d="M90 900H1510" stroke="#2A2F3B"/>
+<text x="90" y="955" class="muted" font-size="14">CORE PALETTE</text>
+<g transform="translate(90 980)">
+  <rect width="220" height="42" rx="8" fill="#0A0B10" stroke="#596071"/><text x="18" y="27" class="white" font-size="13">OBSIDIAN · #0A0B10</text>
+  <rect x="245" width="220" height="42" rx="8" fill="#C69A48"/><text x="263" y="27" fill="#101116" font-family="Arial" font-size="13">SIGNATURE GOLD · #C69A48</text>
+  <rect x="490" width="220" height="42" rx="8" fill="#7C69E8"/><text x="508" y="27" fill="#FFFFFF" font-family="Arial" font-size="13">NEURAL · #7C69E8</text>
+  <rect x="735" width="220" height="42" rx="8" fill="#C45C82"/><text x="753" y="27" fill="#FFFFFF" font-family="Arial" font-size="13">STAGE · #C45C82</text>
+</g>
+<text x="1510" y="1060" text-anchor="end" class="muted" font-size="12">DIRECTION: PREMIUM · INTELLIGENT · MODULAR</text>
+</svg>

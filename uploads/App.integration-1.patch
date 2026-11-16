@@ -1,0 +1,33 @@
+diff --git a/unzipped_project/archive_1/FX2-main/Fxfx-main/app/src/App.tsx b/unzipped_project/archive_1/FX2-main/Fxfx-main/app/src/App.tsx
+--- a/unzipped_project/archive_1/FX2-main/Fxfx-main/app/src/App.tsx
++++ b/unzipped_project/archive_1/FX2-main/Fxfx-main/app/src/App.tsx
+@@ -7,5 +7,6 @@
+ import AgentSaaSPanel from './components/AgentSaaSPanel'
+ import BrowserAgentPanel, { type BrowserAttachment } from './components/BrowserAgentPanel'
+ import GatewayMetricsPanel from './components/GatewayMetricsPanel'
+ import { backendFetch } from './backend-fetch'
++import FX2ExperienceHub, { type FX2World } from './FX2ExperienceHub'
+ 
+@@ -675,4 +676,10 @@
+   const goTo = (r: React.RefObject<HTMLElement | null>) =>
+     r.current?.scrollIntoView({ behavior:'smooth', block:'start' })
+ 
++  const navigateWorld = (world: FX2World) => {
++    if (world === 'atelier') return goTo(briefRef)
++    if (world === 'neural-lab') return goTo(insight ? insightRef : briefRef)
++    return goTo(script ? scriptRef : concept ? conceptRef : briefRef)
++  }
++
+   const stepState = (i: number) => {
+@@ -814,3 +820,11 @@
+       <main className="main" role="main">
+ 
++        <FX2ExperienceHub
++          lang={lang}
++          hasInsight={!!insight}
++          hasConcept={!!concept}
++          hasScript={!!script}
++          onNavigate={navigateWorld}
++        />
++
+         {/* ── Pipeline ───────────────────────────────────────── */}

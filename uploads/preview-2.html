@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>FX2 — Three Experience Worlds</title>
+<link rel="stylesheet" href="app/src/fx2-experience-hub.css">
+<style>
+  :root{--bg:#080808;--surface:#151515;--text:#f5f0e8;--text-soft:rgba(245,240,232,.75);--muted:#8c877f;--line:rgba(201,168,76,.2);--font-display:Georgia,serif;--font-mono:ui-monospace,monospace}
+  *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -15%,rgba(201,168,76,.08),transparent 55%),var(--bg);color:var(--text);font-family:system-ui,sans-serif}
+  .preview-shell{width:min(1120px,calc(100% - 48px));margin:0 auto;padding:38px 0 70px}
+  .preview-top{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:18px;color:#8d8982;font:10px/1.5 var(--font-mono);letter-spacing:.16em}
+  .preview-top strong{color:#c9a84c;font-size:14px}.preview-pill{border:1px solid rgba(201,168,76,.3);padding:7px 12px}
+  .fx2-hub{margin-top:0}.fx2-world-card{min-height:332px}.fx2-world-card h3{font-family:Georgia,serif}.fx2-world-card.is-active{outline:1px solid color-mix(in srgb,var(--accent) 25%,transparent);outline-offset:0}
+  .fx2-hub-footer{margin-top:20px}.preview-note{margin-top:25px;color:#777;font-size:11px;line-height:1.7}
+  @media(max-width:640px){.preview-shell{width:calc(100% - 28px);padding-top:22px}.preview-top{align-items:flex-start}.fx2-world-card{min-height:0}}
+</style>
+</head>
+<body>
+<main class="preview-shell">
+  <div class="preview-top"><span><strong>FX2</strong> / CREATIVE INTELLIGENCE</span><span class="preview-pill">واجهة تجريبية مستقلة</span></div>
+  <section class="fx2-hub" aria-labelledby="hub-title">
+    <div class="fx2-hub-heading">
+      <div>
+        <div class="fx2-hub-brand"><span>FX2</span><i></i>CREATIVE INTELLIGENCE</div>
+        <h2 id="hub-title">ثلاثة عوالم. عقل إبداعي واحد.</h2>
+        <p>كل عالم له طريقته في التفكير وصناعة النتيجة. اختر المساحة التي تحتاجها الآن.</p>
+      </div>
+      <div class="fx2-hub-signature">فكّر أبعد. اصنع ما لم يأتِ بعد.</div>
+    </div>
+    <div class="fx2-world-grid">
+      <button type="button" class="fx2-world-card fx2-world-card--atelier is-active" data-world="atelier" aria-pressed="true">
+        <div class="fx2-world-art fx2-world-art--atelier" aria-hidden="true"><div class="fx2-art-atelier"><span class="atelier-sheet atelier-sheet--back"></span><span class="atelier-sheet atelier-sheet--mid"></span><span class="atelier-sheet atelier-sheet--front"><i></i><i></i><i></i></span><span class="atelier-orbit"></span></div></div>
+        <div class="fx2-world-card-meta"><span>01 / THE ATELIER</span><span class="fx2-world-dot"></span></div>
+        <h3>المشغل الإبداعي</h3>
+        <p class="fx2-world-description">ابدأ من الملخص. اكتشف التوتر الخفي. حوّله إلى اتجاه إبداعي واضح.</p>
+        <div class="fx2-world-card-footer"><span class="fx2-world-state">من الملخص إلى الفكرة</span><span class="fx2-world-action">ادخل المشغل <b>↗</b></span></div>
+      </button>
+      <button type="button" class="fx2-world-card fx2-world-card--neural-lab" data-world="neural-lab" aria-pressed="false">
+        <div class="fx2-world-art fx2-world-art--neural-lab" aria-hidden="true"><div class="fx2-art-neural"><span class="neural-ring neural-ring--one"></span><span class="neural-ring neural-ring--two"></span><span class="neural-node neural-node--a"></span><span class="neural-node neural-node--b"></span><span class="neural-node neural-node--c"></span><span class="neural-node neural-node--d"></span><span class="neural-core"></span></div></div>
+        <div class="fx2-world-card-meta"><span>02 / NEURAL LAB</span><span class="fx2-world-dot"></span></div>
+        <h3>مختبر التفكير</h3>
+        <p class="fx2-world-description">اكسر الافتراضات، اربط إشارات بعيدة، واختبر زوايا لم تظهر من قبل.</p>
+        <div class="fx2-world-card-footer"><span class="fx2-world-state">بانتظار أول بصيرة</span><span class="fx2-world-action">ابدأ التجربة <b>↗</b></span></div>
+      </button>
+      <button type="button" class="fx2-world-card fx2-world-card--director-stage" data-world="director-stage" aria-pressed="false">
+        <div class="fx2-world-art fx2-world-art--director-stage" aria-hidden="true"><div class="fx2-art-stage"><span class="stage-beam"></span><span class="stage-frame stage-frame--back"></span><span class="stage-frame stage-frame--front"></span><span class="stage-floor"></span><span class="stage-marker"></span></div></div>
+        <div class="fx2-world-card-meta"><span>03 / DIRECTOR'S STAGE</span><span class="fx2-world-dot"></span></div>
+        <h3>خشبة المخرج</h3>
+        <p class="fx2-world-description">حوّل المفهوم إلى مشهد، وإيقاع، ولغة إنتاج سينمائية.</p>
+        <div class="fx2-world-card-footer"><span class="fx2-world-state">ابدأ من الفكرة</span><span class="fx2-world-action">ادخل غرفة الإنتاج <b>↗</b></span></div>
+      </button>
+    </div>
+    <div class="fx2-hub-footer"><span>العالم النشط</span><strong id="active-world-name">THE ATELIER</strong><span class="fx2-hub-footer-line"></span><span id="selection-note">تم اختيار المشغل الإبداعي — معاينة فقط، دون اتصال بالمحركات</span></div>
+  </section>
+  <p class="preview-note">هذه المعاينة تعرض الهوية البصرية وسلوك تحديد العالم فقط. عند دمج المكوّن في التطبيق، ستنتقل الأزرار إلى تدفّق Brief / Insight / Concept / Script الموجود بالفعل.</p>
+</main>
+<script>
+  const labels={atelier:['THE ATELIER','تم اختيار المشغل الإبداعي'], 'neural-lab':['NEURAL LAB','تم اختيار مختبر التفكير'], 'director-stage':["DIRECTOR'S STAGE",'تم اختيار خشبة المخرج']};
+  document.querySelectorAll('[data-world]').forEach(button=>button.addEventListener('click',()=>{
+    document.querySelectorAll('[data-world]').forEach(card=>{const selected=card===button;card.classList.toggle('is-active',selected);card.setAttribute('aria-pressed',String(selected));});
+    const value=labels[button.dataset.world];document.getElementById('active-world-name').textContent=value[0];document.getElementById('selection-note').textContent=value[1]+' — معاينة فقط، دون اتصال بالمحركات';
+  }));
+</script>
+</body>
+</html>
